@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>all the spite — spiteware.ai</title>
+<meta name="description" content="Every app in the spiteware.ai catalog. Search by what it replaces, filter by tag, sort by pettiness.">
+<meta name="theme-color" content="#FFE600">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23FFE600'/><text x='32' y='46' font-size='40' font-family='Arial Black,sans-serif' font-weight='900' text-anchor='middle' fill='%23111'>$</text><line x1='10' y1='54' x2='54' y2='10' stroke='%23FF3E9A' stroke-width='9'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <span>★ <b data-apps>—</b> apps listed. all free.</span><span>★ spiteware.ai has made <b>$0.00</b> so far</span><span>★ built by people who read the pricing page and said "no"</span><span>★ no free trial. just free.</span><span>★ "upgrade to Pro" is not a feature</span><span>★ "seat-based pricing" is a hate crime</span><span>★ vibe coded. spite powered.</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="./" aria-label="spiteware.ai home">
+      <span class="logo__stack" aria-hidden="true"><span>SPITE</span><span>WARE</span></span>
+      <em aria-hidden="true">.ai</em>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="./#submit">Submit your spiteware</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="sec catalog">
+    <div class="wrap">
+      <div class="sec__head">
+        <h2>All <span data-apps>—</span> grudges <span class="tag">and counting</span></h2>
+        <div class="sec__sub">every app · every victim · every price we didn't pay</div>
+      </div>
+      <div class="filters">
+        <input class="search" id="q" type="search" placeholder="search apps, victims, builders…" autocomplete="off" aria-label="Search">
+        <select class="sort" id="sort" aria-label="Sort">
+          <option value="spite">most petty first</option>
+          <option value="new">newest first</option>
+          <option value="price">priciest victim first</option>
+          <option value="name">a to z</option>
+        </select>
+      </div>
+      <div class="tagbar" id="tags"></div>
+      <div class="grid" id="grid"></div>
+      <p class="none" id="none" hidden>Nothing matches. Either nobody has been that petty yet, or you should <a href="./#submit">submit it</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="counter" title="You are visitor number…">
+      <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
+      <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
+    </div>
+    <div class="foot__meta">
+      this site was shamelessly vibe coded by <a href="https://github.com/alkait">@alkait</a><br>
+      no cookies · no tracking · no pricing page · <a href="https://github.com/alkait/spiteware.ai">source on github</a>
+    </div>
+    <div class="badges">
+      <span class="badge">Best viewed in any browser</span>
+      <span class="badge badge--blue">0 bytes of fonts</span>
+      <span class="badge badge--pink">Made with rage</span>
+      <span class="badge badge--green">Y2K compliant</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+SW.ready(apps => {
+  const q=document.getElementById('q'), sort=document.getElementById('sort'), grid=document.getElementById('grid'), tagbar=document.getElementById('tags'), none=document.getElementById('none');
+  const params=new URLSearchParams(location.search);
+  let tag=params.get('tag')||''; q.value=params.get('q')||''; sort.value=params.get('sort')||'spite';
+  const counts={}; apps.forEach(a=>(a.tags||[]).forEach(t=>counts[t]=(counts[t]||0)+1)); if(apps.some(a=>a.vibe_coded)) counts['vibe coded']=apps.filter(a=>a.vibe_coded).length;
+  const price=a=>{const m=/\$([\d.,]+)\/(mo|yr)/.exec(a.replaces.price||''); if(!m) return 0; const v=+m[1].replace(/,/g,''); return m[2]==='yr'?v/12:v;};
+  const sorters={spite:(a,b)=>(b.spite_score-a.spite_score)||(b.added>a.added?1:-1), new:(a,b)=>b.added>a.added?1:b.added<a.added?-1:0, price:(a,b)=>price(b)-price(a), name:(a,b)=>a.name.localeCompare(b.name)};
+  function renderTags(){ tagbar.innerHTML=[['',`all · ${apps.length}`],...Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([t,n])=>[t,`${t} · ${n}`])].map(([t,l])=>`<button class="tagbtn${t===tag?' is-on':''}" data-t="${SW.esc(t)}">${SW.esc(l)}</button>`).join(''); }
+  function apply(){
+    const s=q.value.trim().toLowerCase();
+    let list=apps.filter(a=>!tag||(tag==='vibe coded'?a.vibe_coded:(a.tags||[]).includes(tag)));
+    if(s) list=list.filter(a=>[a.name,a.tagline,a.replaces.name,a.builder.name,a.grudge.quote,...(a.tags||[])].join(' ').toLowerCase().includes(s));
+    list.sort(sorters[sort.value]||sorters.spite);
+    grid.innerHTML=list.map(SW.card).join(''); none.hidden=list.length>0;
+    const u=new URLSearchParams(); if(s)u.set('q',q.value.trim()); if(tag)u.set('tag',tag); if(sort.value!=='spite')u.set('sort',sort.value);
+    history.replaceState(null,'',u.toString()?`?${u}`:location.pathname);
+  }
+  tagbar.addEventListener('click',e=>{const b=e.target.closest('[data-t]'); if(!b) return; tag=(b.dataset.t===tag)?'':b.dataset.t; renderTags(); apply();});
+  q.addEventListener('input',apply); sort.addEventListener('change',apply);
+  renderTags(); apply();
+});
+</script>
+</body>
+</html>

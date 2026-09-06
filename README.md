@@ -2,7 +2,7 @@
 
 A catalog of apps people built out of spite because a paid tool asked for money it didn't deserve.
 
-- `index.html` — the whole site. No build step, no dependencies.
+- `index.html` — home page, top 6 by spite score. `apps.html` — full catalog with search, tags, and sort. `style.css` and `site.js` are shared. No build step, no dependencies.
 - `data/apps.json` — the listings. Hand-edited. The page renders from it.
 - `data/rejected.json` — names the morning agent must not resurface.
 - `criteria.md` — what counts as spiteware. The agent scores against it.
