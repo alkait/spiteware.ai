@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "name": "PiNozCam for Moonraker",
+    "url": "https://github.com/DrAlexLiu/moonraker-pinozcam",
+    "rejected": "2026-09-06"
+  },
+  {
+    "name": "ENZO",
+    "url": "https://github.com/theguysudo/ENZO",
+    "rejected": "2026-09-06"
+  }
+]

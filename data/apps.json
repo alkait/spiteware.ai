@@ -5,13 +5,25 @@
     "url": "https://futurepost.app/",
     "icon": "📬",
     "tagline": "Write a letter to your future self. Free forever, no ads, no premium tier waiting to ambush you.",
-    "replaces": { "name": "FutureMe", "price": "$9/yr", "source": "https://www.openwhenitstime.com/blog/is-futureme-free" },
+    "replaces": {
+      "name": "FutureMe",
+      "price": "$9/yr",
+      "source": "https://www.openwhenitstime.com/blog/is-futureme-free"
+    },
     "grudge": {
       "quote": "I've used FutureMe since I was 16. After the acquisition they added paid tiers. So I built a free-forever alternative.",
       "source": "https://news.ycombinator.com/item?id=45744680"
     },
-    "builder": { "name": "Ayush Soni", "handle": "mrayushsoni", "url": "https://news.ycombinator.com/user?id=mrayushsoni" },
-    "tags": ["letters", "web", "ios"],
+    "builder": {
+      "name": "Ayush Soni",
+      "handle": "mrayushsoni",
+      "url": "https://news.ycombinator.com/user?id=mrayushsoni"
+    },
+    "tags": [
+      "letters",
+      "web",
+      "ios"
+    ],
     "vibe_coded": false,
     "spite_score": 9,
     "added": "2026-09-06"
@@ -22,13 +34,25 @@
     "url": "https://gitforms-landing.vercel.app/",
     "icon": "📮",
     "tagline": "A contact form that files submissions as GitHub Issues. No database, no server, no monthly bill.",
-    "replaces": { "name": "Formspree", "price": "$15/mo", "source": "https://splitforms.com/formspree-pricing" },
+    "replaces": {
+      "name": "Formspree",
+      "price": "$15/mo",
+      "source": "https://splitforms.com/formspree-pricing"
+    },
     "grudge": {
       "quote": "Why pay €300/year for this?",
       "source": "https://news.ycombinator.com/item?id=46304199"
     },
-    "builder": { "name": "Luigi Greco", "handle": "lgreco", "url": "https://news.ycombinator.com/user?id=lgreco" },
-    "tags": ["forms", "github", "one thing"],
+    "builder": {
+      "name": "Luigi Greco",
+      "handle": "lgreco",
+      "url": "https://news.ycombinator.com/user?id=lgreco"
+    },
+    "tags": [
+      "forms",
+      "github",
+      "one thing"
+    ],
     "vibe_coded": false,
     "spite_score": 9,
     "added": "2026-09-06"
@@ -39,13 +63,25 @@
     "url": "https://chromewebstore.google.com/detail/sanctuary/caglhejjfpldaooehhlakcdniokjgflh",
     "icon": "🧘",
     "tagline": "A site blocker with scheduling, time tracking and a calm block screen. Every feature the freemium ones lock away, for free.",
-    "replaces": { "name": "Freedom", "price": "$8.99/mo", "source": "https://rtriv.io/en/blog/freedom-app-review" },
+    "replaces": {
+      "name": "Freedom",
+      "price": "$8.99/mo",
+      "source": "https://rtriv.io/en/blog/freedom-app-review"
+    },
     "grudge": {
       "quote": "Site blockers on Chrome all run based on a freemium model, and I've always been annoyed by how I couldn't find one that had quite all of the features I need.",
       "source": "https://news.ycombinator.com/item?id=48030779"
     },
-    "builder": { "name": "Chronox", "handle": "chungusman", "url": "https://news.ycombinator.com/user?id=chungusman" },
-    "tags": ["focus", "chrome", "open source"],
+    "builder": {
+      "name": "Chronox",
+      "handle": "chungusman",
+      "url": "https://news.ycombinator.com/user?id=chungusman"
+    },
+    "tags": [
+      "focus",
+      "chrome",
+      "open source"
+    ],
     "vibe_coded": true,
     "spite_score": 9,
     "added": "2026-09-06"
@@ -56,13 +92,25 @@
     "url": "https://timleland.com/pxlshot/",
     "icon": "📸",
     "tagline": "Native Mac screenshots with markup, redaction and sharing. No subscription, no account, no analytics.",
-    "replaces": { "name": "CleanShot X", "price": "$8/mo", "source": "https://www.stackscored.com/pricing/screen-recording/cleanshot-x/" },
+    "replaces": {
+      "name": "CleanShot X",
+      "price": "$8/mo",
+      "source": "https://www.stackscored.com/pricing/screen-recording/cleanshot-x/"
+    },
     "grudge": {
       "quote": "The screenshot tool I always wanted. No subscription or account.",
       "source": "https://news.ycombinator.com/item?id=49023137"
     },
-    "builder": { "name": "Tim Leland", "handle": "TimLeland", "url": "https://timleland.com/" },
-    "tags": ["screenshots", "macos", "native"],
+    "builder": {
+      "name": "Tim Leland",
+      "handle": "TimLeland",
+      "url": "https://timleland.com/"
+    },
+    "tags": [
+      "screenshots",
+      "macos",
+      "native"
+    ],
     "vibe_coded": false,
     "spite_score": 7,
     "added": "2026-09-06"
@@ -73,15 +121,114 @@
     "url": "https://github.com/zachlatta/freeflow",
     "icon": "🎙️",
     "tagline": "Mac dictation with AI cleanup and voice editing. MIT licensed. Bring a free API key and never pay a monthly fee.",
-    "replaces": { "name": "Wispr Flow", "price": "$15/mo", "source": "https://zackproser.com/blog/wisprflow-pricing-guide-2026" },
+    "replaces": {
+      "name": "Wispr Flow",
+      "price": "$15/mo",
+      "source": "https://zackproser.com/blog/wisprflow-pricing-guide-2026"
+    },
     "grudge": {
       "quote": "Free alternative to Wispr Flow, Superwhisper, and Monologue.",
       "source": "https://news.ycombinator.com/item?id=47040375"
     },
-    "builder": { "name": "Zach Latta", "handle": "zachlatta", "url": "https://github.com/zachlatta" },
-    "tags": ["dictation", "macos", "open source"],
+    "builder": {
+      "name": "Zach Latta",
+      "handle": "zachlatta",
+      "url": "https://github.com/zachlatta"
+    },
+    "tags": [
+      "dictation",
+      "macos",
+      "open source"
+    ],
     "vibe_coded": false,
     "spite_score": 7,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "lag-writer",
+    "name": "lag-writer",
+    "url": "https://github.com/Kryhr/lag-writer",
+    "icon": "✍️",
+    "tagline": "A writing assistant that trails a few words behind you, fixing typos and apostrophes. Runs from a single HTML file. Grammarly wanted $12 a month for the apostrophes.",
+    "replaces": {
+      "name": "Grammarly Pro",
+      "price": "$12/mo",
+      "source": "https://www.grammarly.com/plans"
+    },
+    "grudge": {
+      "quote": "Built because the real ones cost money.",
+      "source": "https://github.com/Kryhr/lag-writer"
+    },
+    "builder": {
+      "name": "Kryhr",
+      "handle": "Kryhr",
+      "url": ""
+    },
+    "tags": [
+      "writing",
+      "web",
+      "local"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "sageling",
+    "name": "Sageling",
+    "url": "https://sageling.ai/",
+    "icon": "🧙",
+    "tagline": "A local AI assistant for Mac running Qwen 3.5 in-process. Free, private, and it doesn't run out at 3pm like the $20 plans do.",
+    "replaces": {
+      "name": "ChatGPT Plus",
+      "price": "$20/mo",
+      "source": "https://tldv.io/blog/chatgpt-pricing/"
+    },
+    "grudge": {
+      "quote": "I don't wanna pay a bunch of money for it, and the $20 plans run out real fast.",
+      "source": "https://news.ycombinator.com/item?id=49569136"
+    },
+    "builder": {
+      "name": "Kirill Klimuk",
+      "handle": "kirillklimuk",
+      "url": ""
+    },
+    "tags": [
+      "ai",
+      "macos",
+      "local"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "locan",
+    "name": "Locan",
+    "url": "https://locan.ai",
+    "icon": "📍",
+    "tagline": "Seven local SEO checks that rank trackers charge $39 a month to run against public Google data. No account, no card, no \"upgrade to see the rest\".",
+    "replaces": {
+      "name": "BrightLocal Track",
+      "price": "$39/mo",
+      "source": "https://localdominator.co/brightlocal-pricing-guide/"
+    },
+    "grudge": {
+      "quote": "The pattern that annoyed me most: owners paying monthly for 'rank trackers' and 'GBP optimizers' that just resell public Google Places data behind a subscription.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1w8xpcy/i_opensourced_the_free_local_seo_tools_we_built/"
+    },
+    "builder": {
+      "name": "vaitko",
+      "handle": "vaitko",
+      "url": ""
+    },
+    "tags": [
+      "seo",
+      "web",
+      "open source"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
     "added": "2026-09-06"
   }
 ]
