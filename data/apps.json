@@ -230,5 +230,266 @@
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-06"
+  },
+  {
+    "slug": "spliit",
+    "name": "Spliit",
+    "url": "https://spliit.app/",
+    "icon": "🧾",
+    "tagline": "Split the bill with friends, unlimited expenses, no account, no ads. Splitwise wanted $4.99 a month to let you log a fourth expense today.",
+    "replaces": {
+      "name": "Splitwise Pro",
+      "price": "$4.99/mo",
+      "source": "https://www.areweeven.com/blog/splitwise-free-vs-pro-2026"
+    },
+    "grudge": {
+      "quote": "Splitwise now only allows to enter 3 expenses per day for free accounts. I thought it was time to offer a free and open source alternative.",
+      "source": "https://news.ycombinator.com/item?id=38939514"
+    },
+    "builder": {
+      "name": "Sebastien Castiel",
+      "handle": "scastiel",
+      "url": "https://github.com/spliit-app/spliit"
+    },
+    "tags": [
+      "finance",
+      "expenses",
+      "open-source"
+    ],
+    "vibe_coded": true,
+    "spite_score": 9,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "tabia",
+    "name": "Tabia",
+    "url": "https://daxaur.github.io/tabia/",
+    "icon": "♟️",
+    "tagline": "Drill your chess openings with spaced repetition, Stockfish in the browser, no account. The only paywall is the one it was built to escape.",
+    "replaces": {
+      "name": "Chessreps Membership",
+      "price": "$34.99/yr",
+      "source": "https://www.chessreps.com/plans"
+    },
+    "grudge": {
+      "quote": "After wanting to explore more lines I came across the paywall behind it, which left me with one option: To build the open-source version myself and finally its here: Tabia.",
+      "source": "https://news.ycombinator.com/item?id=48576468"
+    },
+    "builder": {
+      "name": "daxaur",
+      "handle": "daxaur",
+      "url": "https://github.com/daxaur"
+    },
+    "tags": [
+      "chess",
+      "learning",
+      "browser"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "reframed",
+    "name": "Reframed",
+    "url": "https://reframed.dev",
+    "icon": "🎬",
+    "tagline": "Screen Studio wants $20 a month for zoom-on-click. Reframed does the zooms, captions and webcam bubble for the price of a brew install.",
+    "replaces": {
+      "name": "Screen Studio Monthly",
+      "price": "$20/mo",
+      "source": "https://screen.studio/"
+    },
+    "grudge": {
+      "quote": "Getting cursor-tracking zoom effects, auto-captions, or webcam overlays on top of that usually means paying for a proprietary app.",
+      "source": "https://github.com/jkuri/reframed"
+    },
+    "builder": {
+      "name": "jkuri",
+      "handle": "kundi",
+      "url": "https://github.com/jkuri"
+    },
+    "tags": [
+      "screen-recording",
+      "macos",
+      "video"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "open-photo-ai",
+    "name": "Open Photo AI",
+    "url": "https://github.com/vegidio/open-photo-ai",
+    "icon": "🖼️",
+    "tagline": "Topaz swapped your perpetual license for $39 a month; Open Photo AI swapped that for an AGPL repo that upscales just fine.",
+    "replaces": {
+      "name": "Topaz Photo Personal",
+      "price": "$39/mo",
+      "source": "https://www.topazlabs.com/topaz-photo"
+    },
+    "grudge": {
+      "quote": "Recently, however, Topaz Labs switched to a subscription-based licensing model, which I strongly dislike.",
+      "source": "https://news.ycombinator.com/item?id=47298274"
+    },
+    "builder": {
+      "name": "vegidio",
+      "handle": "vegidio",
+      "url": "https://github.com/vegidio"
+    },
+    "tags": [
+      "photo",
+      "upscaling",
+      "desktop"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "form81",
+    "name": "Form81",
+    "url": "https://form81.com/",
+    "icon": "📋",
+    "tagline": "Typeform charges $29 a month and still caps your free responses at ten; Form81 charges nothing and forgot to add a cap.",
+    "replaces": {
+      "name": "Typeform Basic",
+      "price": "$29/mo",
+      "source": "https://www.typeform.com/pricing/"
+    },
+    "grudge": {
+      "quote": "Most online form builders claim to be free, but their free tier is usually very limited - with unremovable branding, response limits, and many other restrictions.",
+      "source": "https://news.ycombinator.com/item?id=47262865"
+    },
+    "builder": {
+      "name": "sh_tomer",
+      "handle": "sh_tomer",
+      "url": ""
+    },
+    "tags": [
+      "forms",
+      "surveys",
+      "web"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "openstrap-edge",
+    "name": "OpenStrap Edge",
+    "url": "https://openstrap.github.io/edge/",
+    "icon": "⌚",
+    "tagline": "WHOOP sells you a band, then charges $199 a year for permission to read it. OpenStrap reads it anyway, on your phone, for free.",
+    "replaces": {
+      "name": "WHOOP One membership",
+      "price": "$199/yr",
+      "source": "https://trackervs.com/pricing/whoop-pricing/"
+    },
+    "grudge": {
+      "quote": "Your strap doesn't stop working when the subscription does. Only the app goes dark.",
+      "source": "https://openstrap.github.io/edge/"
+    },
+    "builder": {
+      "name": "OpenStrap (one person, unnamed)",
+      "handle": "abdulsaheel123",
+      "url": "https://github.com/OpenStrap/edge"
+    },
+    "tags": [
+      "wearables",
+      "health",
+      "open-source"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "theseolabs",
+    "name": "TheSEOLabs",
+    "url": "https://www.theseolabs.com/",
+    "icon": "🔍",
+    "tagline": "Ahrefs charges $129 a month to tell you what people type into Google. TheSEOLabs tells you for free, no account, no credit meter.",
+    "replaces": {
+      "name": "Ahrefs Lite",
+      "price": "$129/mo",
+      "source": "https://ahrefs.com/pricing"
+    },
+    "grudge": {
+      "quote": "I've always found SEO tools like Ahrefs and SEMrush to be incredibly useful but prohibitively expensive for many users.",
+      "source": "https://news.ycombinator.com/item?id=41548313"
+    },
+    "builder": {
+      "name": "damienl",
+      "handle": "damienl",
+      "url": ""
+    },
+    "tags": [
+      "seo",
+      "keywords",
+      "web"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "fovea",
+    "name": "Fovea",
+    "url": "https://github.com/cw12574/fovea",
+    "icon": "🎥",
+    "tagline": "Screen Studio wants $29 a month to zoom in on your cursor. Fovea does it on Windows for the price of an npm install.",
+    "replaces": {
+      "name": "Screen Studio Monthly",
+      "price": "$29/mo",
+      "source": "https://www.docsie.io/vs/screen-studio-vs-cap-pricing/"
+    },
+    "grudge": {
+      "quote": "Tried a couple of products but they pissed me off (heavy, slow, expensive, didn't let you use all the features).",
+      "source": "https://news.ycombinator.com/item?id=49026781"
+    },
+    "builder": {
+      "name": "Chris",
+      "handle": "cwbuilds",
+      "url": "https://github.com/cw12574"
+    },
+    "tags": [
+      "screen-recording",
+      "windows",
+      "open-source"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-06"
+  },
+  {
+    "slug": "makemycvfree",
+    "name": "MakeMyCVFree",
+    "url": "https://makemycvfree.com/",
+    "icon": "📄",
+    "tagline": "Type your whole career into Resume.io and it holds the PDF hostage for $29.95. MakeMyCVFree just hands it over.",
+    "replaces": {
+      "name": "Resume.io Subscription",
+      "price": "$29.95/4 weeks",
+      "source": "https://resume.io/pricing"
+    },
+    "grudge": {
+      "quote": "I noticed a terrible trend in the career tools space: \"free\" resume builders that let you spend an hour typing out your work history, only to hide the final PDF export behind a $15/month subscription.",
+      "source": "https://news.ycombinator.com/item?id=47144540"
+    },
+    "builder": {
+      "name": "MD Mohseen",
+      "handle": "mdmohseenraees",
+      "url": ""
+    },
+    "tags": [
+      "resume",
+      "career",
+      "client-side"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-06"
   }
 ]

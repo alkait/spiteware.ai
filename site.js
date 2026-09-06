@@ -24,6 +24,8 @@
     SW.apps = apps;
     document.querySelectorAll('[data-apps]').forEach(el=>el.textContent=apps.length.toLocaleString('en-US'));
     document.querySelectorAll('[data-from-apps]').forEach(el=>el.dataset.count=apps.length);
+    const victims = new Set(apps.map(a=>(a.replaces?.name||'').trim().toLowerCase()).filter(Boolean)).size;
+    document.querySelectorAll('[data-from-victims]').forEach(el=>el.dataset.count=victims);
     subs.forEach(fn=>fn(apps));
   }).catch(()=>{ const g=$('#grid'); if(g) g.innerHTML='<div class="card"><h3>No spite loaded</h3><p>data/apps.json failed to load. Are you opening this from file://? Serve it over http.</p></div>'; });
 
