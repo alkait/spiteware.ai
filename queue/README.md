@@ -1,19 +1,32 @@
 # Morning queue
 
-One file per run: `queue/YYYY-MM-DD.md`. Each candidate is a block like this. Flip `status` to `approve`, `edit`, or `reject`, fix any copy, then run the merge step.
+One JSON file per run: `queue/YYYY-MM-DD.json`. Review it in the desk, not by hand:
 
 ```
-## FuturePost                              status: pending   score: 9/10
-url:       https://futurepost.app/
-replaces:  FutureMe · $9/yr   (source: https://...)
-builder:   Ayush Soni (@mrayushsoni)
-grudge:    "I've used FutureMe since I was 16. After the acquisition they added paid tiers."
-           source: https://news.ycombinator.com/item?id=45744680
-tagline:   Write a letter to your future self. Free forever, no ads, no premium tier waiting to ambush you.
-tags:      letters, web, ios
-vibe:      no
-icon:      📬
-why:       explicit grudge (3) · price verified (2) · solo (2) · one thing (1) · not vibe coded (0) · +1 title says "greed"
+python3 scripts/review.py 4322    # then open http://localhost:4322/
 ```
 
-Merge moves `approve` blocks into `data/apps.json`, `reject` blocks into `data/rejected.json`, and leaves `pending` and `edit` blocks in place.
+The desk shows each candidate as the live card with its evidence, lets you edit any text inline, and has Approve, Reject, and Merge buttons. Merge moves approved candidates into `data/apps.json`, rejected names into `data/rejected.json`, and leaves pending ones in the queue. Push to publish.
+
+Schema:
+
+```json
+{
+  "run": "2026-09-06",
+  "swept": "hn (48h), reddit rss, github, last30days",
+  "raw_hits": 39, "triaged": 13,
+  "candidates": [{
+    "slug": "lag-writer", "name": "lag-writer", "status": "pending", "spite_score": 8,
+    "url": "https://github.com/Kryhr/lag-writer", "icon": "✍️",
+    "tagline": "one line in the site voice",
+    "replaces": {"name": "Grammarly Pro", "price": "$12/mo", "source": "https://www.grammarly.com/plans", "note": ""},
+    "grudge": {"quote": "builder's words, verbatim", "source": "https://..."},
+    "builder": {"name": "Kryhr", "handle": "Kryhr", "url": ""},
+    "tags": ["writing", "web"], "vibe_coded": false,
+    "why": "score breakdown", "added": "2026-09-06"
+  }],
+  "dropped": ["Name: one-line reason"]
+}
+```
+
+`raw-YYYY-MM-DD.json` files are the unfiltered sweep output and are git-ignored.

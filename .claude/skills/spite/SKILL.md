@@ -29,18 +29,21 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
 
 5. **Score** each against the table in `criteria.md`. Apply the automatic rejects. Drop anything under 6.
 
-6. **Draft cards** into `queue/YYYY-MM-DD.md` using exactly the block format in `queue/README.md`. Every block starts `status: pending`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Include a `why:` line with the score breakdown. Put a short header at the top: date, sources swept, raw hit count, survivors.
+6. **Draft cards** into `queue/YYYY-MM-DD.json` using exactly the schema in `queue/README.md`. Every candidate starts `"status": "pending"`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Fill `why` with the score breakdown. Put dropped candidates with one-line reasons in the `dropped` array.
 
-7. **Report** to the user in under 150 words: how many hits, how many survived, the top three by score with one line each, and the queue file path. Say plainly if a source failed.
+7. **Open the review desk.** Check `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4322/`. If it isn't 200, start `(nohup python3 scripts/review.py 4322 >/dev/null 2>&1 &)`. Never use pkill in this repo's shell; it kills the session. Then open http://localhost:4322/ in the browser. The user approves, rejects, and edits there.
+
+8. **Report** to the user in under 150 words: how many hits, how many survived, the top three by score with one line each, and that the review desk is open. Say plainly if a source failed.
 
 Never fabricate a quote, a price, or a builder. If verification fails, drop the candidate and say why in the report.
 
 ## Mode: merge (`/spite merge [file]`)
 
-1. Default file is today's `queue/YYYY-MM-DD.md`; if it doesn't exist, the most recent one.
-2. Run `python3 scripts/merge.py <file>` and show its output.
-3. Run `python3 -c "import json;json.load(open('data/apps.json'))"` to confirm the JSON is valid.
-4. Do not commit or push. Tell the user what was merged and that a push will publish it.
+The review desk has a Merge button that does the same thing. This mode is for when the user decides in chat instead ("approve X, reject Y"): set those statuses in the queue JSON, then:
+
+1. Run `python3 scripts/merge.py` (defaults to the newest queue file) and show its output.
+2. Run `python3 -c "import json;json.load(open('data/apps.json'))"` to confirm the JSON is valid.
+3. Commit and push only if the user asks. A push publishes to GitHub Pages.
 
 ## Mode: status (`/spite status`)
 
