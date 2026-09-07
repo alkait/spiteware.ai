@@ -111,6 +111,8 @@
   .card__meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:2px dashed #ccc;font-family:var(--mono);font-size:12px}
   .chips{display:flex;flex-wrap:wrap;gap:6px}
   .chip{font-family:var(--mono);font-size:11px;text-transform:uppercase;background:var(--yellow);border:2px solid var(--ink);padding:2px 7px}
+  .dry{grid-column:1/-2;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:200px;padding:40px 20px;border:var(--bw) dashed var(--ink);background:#fff;font-family:var(--display);font-weight:900;font-size:26px;letter-spacing:-.02em}
+  .dry small{font-family:var(--mono);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.1em;opacity:.6;display:block;margin-top:8px}
   .card--more{background:var(--ink);color:var(--yellow);justify-content:center;align-items:center;text-align:center;min-height:200px;font-family:var(--display);font-weight:900;font-size:26px;letter-spacing:-.02em}
   .card--more:hover{box-shadow:9px 9px 0 var(--pink)!important}
   .card--more small{font-family:var(--mono);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--paper);display:block;margin-top:8px}

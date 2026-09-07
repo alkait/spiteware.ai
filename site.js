@@ -54,11 +54,16 @@
     subs.forEach(fn=>fn(apps));
   }).catch(()=>{ const g=$('#grid'); if(g) g.innerHTML='<div class="card"><h3>No spite loaded</h3><p>data/apps.json failed to load. Are you opening this from file://? Serve it over http.</p></div>'; });
 
-  // Home grid: top 6 by spite, then a "see all" card
+  // Home grid: this week's additions, best spite first, then a "see all" card
   const grid = $('#grid');
   if (grid && grid.dataset.limit) SW.ready(apps => {
-    const top = SW.sortSpite(apps).slice(0, +grid.dataset.limit);
-    grid.innerHTML = top.map(SW.card).join('') +
+    // "this week" means the real last 7 days, so the section empties out after a dry
+    // week rather than calling month-old apps fresh. Best spite first inside the window.
+    const since = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+    const fresh = apps.filter(a => a.added >= since);
+    const top = SW.sortSpite(fresh).slice(0, +grid.dataset.limit);
+    const quiet = `<div class="dry">Nobody got mad this week.<small>the all-time pettiest are one click away →</small></div>`;
+    grid.innerHTML = (top.length ? top.map(SW.card).join('') : quiet) +
       `<a class="card card--more" href="apps.html"><div>see all ${apps.length} grudges →<small>updated whenever someone gets mad</small></div></a>`;
   });
 
