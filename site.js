@@ -12,6 +12,21 @@
                        "images","learning","marketing","productivity","travel","utilities","video","writing"]],
   ];
 
+  // Nav: a link to a section of the page you're on takes the marker while that
+  // section is in the URL (#submit), otherwise the page's own link keeps it.
+  const nav = $('nav[aria-label="Main"]');
+  if (nav) {
+    const links = [...nav.querySelectorAll('a')];
+    const dflt = links.find(a => a.hasAttribute('aria-current'));
+    const path = p => p.replace(/index\.html$/, '');
+    const syncNav = () => {
+      const here = links.find(a => a.hash && a.hash === location.hash && path(a.pathname) === path(location.pathname));
+      links.forEach(a => a === (here || dflt) ? a.setAttribute('aria-current', a === here ? 'true' : 'page')
+                                             : a.removeAttribute('aria-current'));
+    };
+    addEventListener('hashchange', syncNav); syncNav();
+  }
+
   // Marquee: duplicate content so it loops seamlessly
   const t = $('#ticker'); if (t) t.innerHTML += t.innerHTML;
 

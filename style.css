@@ -36,6 +36,8 @@
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:6px}
   nav a{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:8px 12px;border:var(--bw) solid transparent}
   nav a:hover{border-color:var(--ink);background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}
+  nav a[aria-current]{border-bottom-color:var(--pink)}
+  nav a[aria-current]:hover{border-color:var(--ink);border-bottom-color:var(--pink)}
   @media (max-width:560px){nav a{padding:8px 8px;font-size:12px}}
 
   /* ---------- buttons ---------- */
