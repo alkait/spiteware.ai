@@ -69,6 +69,42 @@
       `<a class="card card--more" href="apps.html"><div>see all ${apps.length} grudges →<small>updated whenever someone gets mad</small></div></a>`;
   });
 
+  // Hall of petty fame: one random open-source grudge, with the builder's GitHub avatar.
+  // Only apps with a repo can appear — that is where the avatar comes from.
+  const spot = $('#spotcard');
+  if (spot) SW.ready(apps => {
+    const pool = apps.filter(a => a.repo);
+    const hues = ['var(--pink)','var(--yellow)','var(--blue)','var(--green)','var(--orange)','var(--purple)'];
+    const draw = () => {
+      const a = pool[Math.floor(Math.random() * pool.length)];
+      const who = a.repo.split('/')[0];
+      const price = (a.replaces.price || '').split(' ')[0];
+      const quote = esc(a.grudge.quote).replace(/(\$[\d.,]+(?:\s*\/\s*\w+)?)/, '<em>$1</em>');
+      spot.innerHTML = `
+      <div class="spot__face">
+        <img src="https://github.com/${esc(who)}.png?size=420" alt="" width="210" height="210">
+        <span class="spot__at">@${esc(who)}</span>
+      </div>
+      <div>
+        <p class="spot__q">\u201c${quote}\u201d</p>
+        <div class="spot__meta">
+          ${a.replaces.name ? `<span class="spot__kills">replaces <s>${esc(a.replaces.name)}${price ? ' · ' + esc(price) : ''}</s></span>` : ''}
+          <a class="spot__go" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.name)} \u2192</a>
+        </div>
+      </div>`;
+      // a deleted GitHub org 404s; fall back to an initial tile rather than a broken image
+      spot.querySelector('img').addEventListener('error', function () {
+        const d = document.createElement('div');
+        d.className = 'av-fb';
+        d.style.background = hues[who.length % hues.length];
+        d.textContent = who[0].toUpperCase();
+        this.replaceWith(d);
+      });
+    };
+    $('#spotroll').addEventListener('click', draw);
+    draw();
+  });
+
   // Visitor counter (placeholder until backend exists): seed + per-browser increment
   const odo = $('#odo');
   if (odo) {

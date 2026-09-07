@@ -40,6 +40,27 @@
   nav a[aria-current]:hover{border-color:var(--ink);border-bottom-color:var(--pink)}
   @media (max-width:560px){nav a{padding:8px 8px;font-size:12px}}
 
+  /* ---------- spotlight (hall of petty fame) ---------- */
+  .spot__card{display:grid;grid-template-columns:230px 1fr;gap:38px;align-items:center;margin-top:30px;
+    background:var(--ink);color:var(--paper);border:var(--bw) solid var(--ink);box-shadow:var(--shadow);padding:38px 40px}
+  .spot__face{position:relative;justify-self:center}
+  .spot__face img,.spot__face .av-fb{display:block;width:210px;height:210px;border-radius:50%;border:var(--bw) solid var(--paper);
+    background:var(--paper);box-shadow:10px 10px 0 var(--pink);object-fit:cover}
+  .spot__face .av-fb{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:900;font-size:76px;color:var(--ink)}
+  .spot__at{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%) rotate(-2deg);white-space:nowrap;
+    background:var(--yellow);color:var(--ink);border:var(--bw) solid var(--ink);
+    font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding:5px 9px}
+  .spot__q{font-family:var(--display);font-weight:900;font-size:clamp(24px,3.4vw,42px);line-height:1.12;letter-spacing:-.02em;margin:0}
+  .spot__q em{font-style:normal;background:var(--yellow);color:var(--ink);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .spot__meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:22px}
+  .spot__kills{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:#fff;color:var(--ink);border:var(--bw) solid #fff;padding:6px 10px}
+  .spot__kills s{color:var(--pink)}
+  .spot__go{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--yellow);text-decoration:none;border-bottom:2px solid var(--yellow);padding-bottom:2px}
+  .spot__roll{margin-top:22px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;background:#fff;color:var(--ink);
+    border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:9px 14px;cursor:pointer}
+  .spot__roll:hover{background:var(--yellow)}
+  @media (max-width:720px){ .spot__card{grid-template-columns:1fr;gap:34px;padding:26px} }
+
   /* ---------- buttons ---------- */
   .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:900;font-size:15px;letter-spacing:-.01em;text-decoration:none;text-transform:uppercase;
     padding:14px 20px;border:var(--bw) solid var(--ink);background:var(--yellow);color:var(--ink);box-shadow:var(--shadow);cursor:pointer;transition:transform .08s,box-shadow .08s}

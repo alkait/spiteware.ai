@@ -24,6 +24,7 @@
       "writing"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-06"
@@ -53,6 +54,7 @@
       "forms"
     ],
     "open_source": true,
+    "repo": "Luigigreco/gitforms",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -82,6 +84,7 @@
       "productivity"
     ],
     "open_source": true,
+    "repo": "Hkattelu/Sanctuary",
     "vibe_coded": true,
     "spite_score": 10,
     "added": "2026-09-06"
@@ -111,6 +114,7 @@
       "images"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-06"
@@ -140,6 +144,7 @@
       "dictation"
     ],
     "open_source": true,
+    "repo": "zachlatta/freeflow",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -170,6 +175,7 @@
       "writing"
     ],
     "open_source": true,
+    "repo": "Kryhr/lag-writer",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -200,6 +206,7 @@
       "ai"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-06"
@@ -229,6 +236,7 @@
       "marketing"
     ],
     "open_source": true,
+    "repo": "vaitko/locan-tools",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -258,6 +266,7 @@
       "finance"
     ],
     "open_source": true,
+    "repo": "spliit-app/spliit",
     "vibe_coded": true,
     "spite_score": 10,
     "added": "2026-09-06"
@@ -287,6 +296,7 @@
       "learning"
     ],
     "open_source": true,
+    "repo": "daxaur/tabia",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -316,6 +326,7 @@
       "video"
     ],
     "open_source": true,
+    "repo": "jkuri/reframed",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -345,6 +356,7 @@
       "images"
     ],
     "open_source": true,
+    "repo": "vegidio/open-photo-ai",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -374,6 +386,7 @@
       "forms"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-06"
@@ -402,6 +415,7 @@
       "health"
     ],
     "open_source": true,
+    "repo": "openstrap/edge",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -431,6 +445,7 @@
       "marketing"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-06"
@@ -460,6 +475,7 @@
       "video"
     ],
     "open_source": true,
+    "repo": "cw12574/fovea",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -490,6 +506,7 @@
       "career"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-06"
@@ -519,6 +536,7 @@
       "video"
     ],
     "open_source": true,
+    "repo": "wassgha/rescript",
     "vibe_coded": true,
     "spite_score": 10,
     "added": "2026-09-07"
@@ -548,6 +566,7 @@
       "dev-tools"
     ],
     "open_source": true,
+    "repo": "houseoffoss/eztest",
     "vibe_coded": true,
     "spite_score": 10,
     "added": "2026-09-07"
@@ -577,6 +596,7 @@
       "dev-tools"
     ],
     "open_source": true,
+    "repo": "jemiluv8/wakana",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -606,6 +626,7 @@
       "ai"
     ],
     "open_source": true,
+    "repo": "meetbryce/open-source-slack-ai",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -635,6 +656,7 @@
       "learning"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": true,
     "spite_score": 5,
     "added": "2026-09-07"
@@ -664,6 +686,7 @@
       "dictation"
     ],
     "open_source": true,
+    "repo": "EpicenterHQ/epicenter",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -693,6 +716,7 @@
       "travel"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 6,
     "added": "2026-09-07"
@@ -722,6 +746,7 @@
       "games"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": true,
     "spite_score": 5,
     "added": "2026-09-07"
@@ -751,6 +776,7 @@
       "productivity"
     ],
     "open_source": true,
+    "repo": "croffasia/itsaplan",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -780,6 +806,7 @@
       "utilities"
     ],
     "open_source": true,
+    "repo": "Nabilhassan12345/BloomDisk",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -810,6 +837,7 @@
       "dictation"
     ],
     "open_source": true,
+    "repo": "ahmedlhanafy/yapper",
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -839,6 +867,7 @@
       "utilities"
     ],
     "open_source": true,
+    "repo": "k7cfo/remove-your-data",
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
@@ -868,6 +897,7 @@
       "utilities"
     ],
     "open_source": true,
+    "repo": "silentg33k/chalkboard-installer",
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
@@ -896,6 +926,7 @@
       "writing"
     ],
     "open_source": true,
+    "repo": "pi22by7/flowrite",
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
@@ -925,6 +956,7 @@
       "health"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 3,
     "added": "2026-09-07"
@@ -954,6 +986,7 @@
       "productivity"
     ],
     "open_source": true,
+    "repo": "xinbenlv/three-line-calendar",
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
@@ -983,6 +1016,7 @@
       "finance"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 3,
     "added": "2026-09-07"
@@ -1012,6 +1046,7 @@
       "productivity"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 3,
     "added": "2026-09-07"
@@ -1040,6 +1075,7 @@
       "marketing"
     ],
     "open_source": true,
+    "repo": "NomaDamas/auto-hongmyungbo",
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
@@ -1069,6 +1105,7 @@
       "games"
     ],
     "open_source": false,
+    "repo": "",
     "vibe_coded": false,
     "spite_score": 3,
     "added": "2026-09-07"
@@ -1098,6 +1135,7 @@
       "ai"
     ],
     "open_source": true,
+    "repo": "robert-mcdermott/phlox-gw",
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
