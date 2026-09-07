@@ -3,40 +3,7 @@
   "swept": "hn show hn, 3 years, 20 grudge phrases, 8 parallel verifiers",
   "raw_hits": 2254,
   "triaged": 477,
-  "candidates": [
-    {
-      "slug": "phenixcode",
-      "name": "PhenixCode",
-      "status": "pending",
-      "spite_score": 7,
-      "url": "https://github.com/nesall/phenixcode",
-      "icon": "🔥",
-      "tagline": "Copilot Chat wants $10 a month to read your code in its cloud; PhenixCode reads it on your own machine for the low price of nothing.",
-      "replaces": {
-        "name": "GitHub Copilot Pro",
-        "price": "$10/mo",
-        "source": "https://github.com/features/copilot/plans",
-        "note": ""
-      },
-      "grudge": {
-        "quote": "GitHub Copilot is excellent but requires a subscription and sends your code to the cloud.",
-        "source": "https://news.ycombinator.com/item?id=46107701"
-      },
-      "builder": {
-        "name": "nesall",
-        "handle": "nesall",
-        "url": "https://github.com/nesall"
-      },
-      "tags": [
-        "coding",
-        "ai",
-        "local"
-      ],
-      "vibe_coded": false,
-      "why": "grudge (2, stated but mild) · price verified primary (2) · solo (2, 'Solo dev here') · one thing (1); MIT, local models or BYO API key, no paid tier. Borderline: self-hosted server + UI rather than a one-click app",
-      "added": "2026-09-06"
-    }
-  ],
+  "candidates": [],
   "dropped": [
     "Rescript: NEAR MISS, fails gate 3 by the letter. Grudge is perfect (\"Descript costs $24/mo, so I built this over a single weekend with Fable!\", solo wassgha, no account, no pricing page) but the repo relicensed from MIT to PolyForm Noncommercial 1.0.0 and getrescript.com FAQ says free \"for noncommercial use\" with commercial licensing and \"potential future server-based paid features\". That is the \"free for personal use\" string criteria.md forbids. Override candidate if you relax that clause; Descript Hobbyist is $24/mo billed monthly per descript.com/pricing.",
     "EmbedPDF: open-core. Grudge only \"Acrobat is heavy, closed, and pricey\"; repo now ships cloudpdf/server under Fair Core License requiring a paid CloudPDF license key, and embedpdf.com has an /enterprise page. Also primarily an SDK.",

@@ -8,5 +8,20 @@
     "name": "ENZO",
     "url": "https://github.com/theguysudo/ENZO",
     "rejected": "2026-09-06"
+  },
+  {
+    "name": "JustFYI",
+    "url": "https://justfyi.app",
+    "rejected": "2026-09-07"
+  },
+  {
+    "name": "PhenixCode",
+    "url": "https://github.com/nesall/phenixcode",
+    "rejected": "2026-09-07"
+  },
+  {
+    "name": "n8n-as-code",
+    "url": "https://github.com/EtienneLescot/n8n-as-code",
+    "rejected": "2026-09-07"
   }
 ]

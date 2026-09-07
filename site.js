@@ -7,9 +7,10 @@
   const t = $('#ticker'); if (t) t.innerHTML += t.innerHTML;
 
   // Card renderer shared by the home grid and the catalog
+  SW.victim = a => { const r=a.replaces||{}; const n=(r.name||'').trim(), p=(r.price||'').trim(); return esc(n&&p ? `${n} · ${p}` : n ? n : p ? `a paywall · ${p}` : 'a paywall'); };
   SW.card = a => `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
     <div class="card__top"><div class="card__icon">${esc(a.icon||'🔧')}</div>
-      <div class="kills">replaces<s>${esc(a.replaces.name)} · ${esc(a.replaces.price)}</s></div></div>
+      <div class="kills">replaces<s>${SW.victim(a)}</s></div></div>
     <h3>${esc(a.name)}</h3><p>${esc(a.tagline)}</p>
     <blockquote class="card__grudge">“${esc(a.grudge.quote)}”</blockquote>
     <div class="chips">${(a.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}${a.vibe_coded?'<span class="chip chip--vibe">vibe coded</span>':''}</div>

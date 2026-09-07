@@ -297,8 +297,8 @@
     "tagline": "Screen Studio wants $20 a month for zoom-on-click. Reframed does the zooms, captions and webcam bubble for the price of a brew install.",
     "replaces": {
       "name": "Screen Studio Monthly",
-      "price": "$20/mo",
-      "source": "https://screen.studio/"
+      "price": "$29/mo",
+      "source": "https://www.screenkite.com/blog/screen-studio-subscription-free-alternative"
     },
     "grudge": {
       "quote": "Getting cursor-tracking zoom effects, auto-captions, or webcam overlays on top of that usually means paying for a proprietary app.",
@@ -491,5 +491,614 @@
     "vibe_coded": false,
     "spite_score": 7,
     "added": "2026-09-06"
+  },
+  {
+    "slug": "rescript",
+    "name": "Rescript",
+    "url": "https://wassgha.github.io/rescript",
+    "icon": "✂️",
+    "tagline": "Descript wanted $24 a month to delete words from a video; a weekend and a browser tab turned out to be cheaper.",
+    "replaces": {
+      "name": "Descript",
+      "price": "$24/person/mo (Hobbyist, monthly billing)",
+      "source": "https://www.descript.com/pricing"
+    },
+    "grudge": {
+      "quote": "Descript costs $24/mo, so I built this over a single weekend with Fable!",
+      "source": "https://news.ycombinator.com/item?id=49065779"
+    },
+    "builder": {
+      "name": "wassgha",
+      "handle": "wassimgr",
+      "url": "https://github.com/wassgha"
+    },
+    "tags": [
+      "video",
+      "transcription",
+      "local-first"
+    ],
+    "vibe_coded": true,
+    "spite_score": 10,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "eztest",
+    "name": "EZTest",
+    "url": "https://github.com/houseoffoss/eztest",
+    "icon": "🧪",
+    "tagline": "Test management is a spreadsheet with a login. Testiny charges $19 a seat for it; EZTest charges nothing.",
+    "replaces": {
+      "name": "Testiny",
+      "price": "$19.48/user/mo",
+      "source": "https://www.testiny.io/pricing/"
+    },
+    "grudge": {
+      "quote": "They charge $20 per user per month but barely do anything worthwhile.",
+      "source": "https://news.ycombinator.com/item?id=46196201"
+    },
+    "builder": {
+      "name": "Philip Moses and Kavin",
+      "handle": "philipmoses",
+      "url": "https://github.com/houseoffoss"
+    },
+    "tags": [
+      "testing",
+      "self-hosted",
+      "open-source"
+    ],
+    "vibe_coded": true,
+    "spite_score": 9,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "wakana",
+    "name": "Wakana",
+    "url": "https://wakana.io",
+    "icon": "⏱️",
+    "tagline": "WakaTime charges $14 a month to show you your own keystrokes; Wakana shows them back for free.",
+    "replaces": {
+      "name": "WakaTime",
+      "price": "$14/mo (Premium, monthly billing)",
+      "source": "https://wakatime.com/pricing"
+    },
+    "grudge": {
+      "quote": "I built an open source alternative to wakatime because I don't think a wakatime premium should cost more than a Github copilot subscription.",
+      "source": "https://news.ycombinator.com/item?id=43469783"
+    },
+    "builder": {
+      "name": "jemiluv8",
+      "handle": "jemiluv8",
+      "url": ""
+    },
+    "tags": [
+      "dev-tools",
+      "time-tracking",
+      "self-hosted"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "open-source-slack-ai",
+    "name": "Open-Source Slack AI",
+    "url": "https://github.com/meetbryce/open-source-slack-ai",
+    "icon": "🧵",
+    "tagline": "Slack AI's thread summaries come bundled with the $18-a-seat plan; this one comes bundled with a git clone.",
+    "replaces": {
+      "name": "Slack AI",
+      "price": "$18/user/mo (Business+ plan, monthly billing, includes Slack AI)",
+      "source": "https://slack.com/pricing"
+    },
+    "grudge": {
+      "quote": "The official Slack AI product looks great, but with limited access and add-on pricing, I decided to open-source the version I built.",
+      "source": "https://news.ycombinator.com/item?id=40309448"
+    },
+    "builder": {
+      "name": "Bryce York",
+      "handle": "meetbryce",
+      "url": "https://bryceyork.com/free-open-source-slack-ai/"
+    },
+    "tags": [
+      "slack",
+      "summaries",
+      "byo-key"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "free-kids-typing-games",
+    "name": "Free Kids Typing Games",
+    "url": "https://free-kids-typing-games.com",
+    "icon": "⌨️",
+    "tagline": "Every kids' typing site wanted either ad money or your money, so a dad and ChatGPT built one that wants neither.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "My kids are surprisingly keen to learn to type, and I couldn't find any thing out there which was A) Free without adverts B) Worked well on mobile/tablets C) Was clutter free and easy to use",
+      "source": "https://news.ycombinator.com/item?id=46255894"
+    },
+    "builder": {
+      "name": "Alan01252",
+      "handle": "Alan01252",
+      "url": "https://github.com/Alan01252/free-kids-typing-games.com"
+    },
+    "tags": [
+      "typing",
+      "kids",
+      "education"
+    ],
+    "vibe_coded": true,
+    "spite_score": 8,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "whispering",
+    "name": "Whispering",
+    "url": "https://github.com/EpicenterHQ/epicenter",
+    "icon": "🎙️",
+    "tagline": "Press a key, talk, get text. Wispr Flow wants $15 a month for that; Whispering wants an API key and nothing else.",
+    "replaces": {
+      "name": "Wispr Flow",
+      "price": "$15/user/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I built Whispering because I believe transcription is too fundamental a tool to be locked behind paywalls.",
+      "source": "https://news.ycombinator.com/item?id=44490741"
+    },
+    "builder": {
+      "name": "Braden Wong",
+      "handle": "braden-w",
+      "url": "https://github.com/braden-w"
+    },
+    "tags": [
+      "dictation",
+      "transcription",
+      "local-first"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "minimum-viable-expat",
+    "name": "Minimum Viable Expat",
+    "url": "https://minimumviableexpat.com/",
+    "icon": "🧳",
+    "tagline": "Cost-of-living comparisons for 230 cities, minus the $19.99 membership and the extra features nobody asked for.",
+    "replaces": {
+      "name": "Nomad List",
+      "price": "$19.99 one-time (Lite)",
+      "source": "https://nomads.com/"
+    },
+    "grudge": {
+      "quote": "I wanted a version of Nomad List that was free and didn't feel overbuilt, so I made Minimum Viable Expat.",
+      "source": "https://news.ycombinator.com/item?id=47477490"
+    },
+    "builder": {
+      "name": "minviex",
+      "handle": "minviex",
+      "url": ""
+    },
+    "tags": [
+      "travel",
+      "cost of living",
+      "expat"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "just-minesweeper",
+    "name": "JustMinesweeper",
+    "url": "https://www.justminesweeper.com/",
+    "icon": "💣",
+    "tagline": "Windows 98 minesweeper with all the mines and none of the app-store ads.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "he was complaining how the apps stores only have minesweeper games with ads.",
+      "source": "https://news.ycombinator.com/item?id=45253173"
+    },
+    "builder": {
+      "name": "Marcio (mnfjorge)",
+      "handle": "mnfjorge",
+      "url": "https://github.com/mnfjorge"
+    },
+    "tags": [
+      "game",
+      "pwa",
+      "open-source"
+    ],
+    "vibe_coded": true,
+    "spite_score": 8,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "its-a-plan",
+    "name": "It's a Plan",
+    "url": "https://github.com/croffasia/itsaplan",
+    "icon": "📋",
+    "tagline": "Linear bills per seat; It's a Plan runs on your own server, where the seats are free and the AI agents take tickets too.",
+    "replaces": {
+      "name": "Linear",
+      "price": "$10/user/mo",
+      "source": "https://linear.app/pricing"
+    },
+    "grudge": {
+      "quote": "You run all of it on your own server, on your own database, with your own API keys — no per-seat fees, no lock-in.",
+      "source": "https://github.com/croffasia/itsaplan"
+    },
+    "builder": {
+      "name": "Andrii Poluosmak",
+      "handle": "Croffasia",
+      "url": "https://github.com/croffasia"
+    },
+    "tags": [
+      "project-management",
+      "self-hosted",
+      "open-source"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "bloomdisk",
+    "name": "BloomDisk",
+    "url": "https://github.com/Nabilhassan12345/BloomDisk",
+    "icon": "🌸",
+    "tagline": "Paid Mac disk analyzers charge ten bucks to draw a pie chart; BloomDisk draws the same sunburst for free and never phones home.",
+    "replaces": {
+      "name": "DaisyDisk",
+      "price": "$9.99 one-time",
+      "source": "https://daisydiskapp.com/"
+    },
+    "grudge": {
+      "quote": "It runs entirely on your computer — no account, no cloud, no subscription.",
+      "source": "https://github.com/Nabilhassan12345/BloomDisk/blob/main/docs/USER_GUIDE.md"
+    },
+    "builder": {
+      "name": "Nabil Hassan",
+      "handle": "nabilhassan",
+      "url": "https://github.com/Nabilhassan12345"
+    },
+    "tags": [
+      "macos",
+      "disk",
+      "utility"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "yapper",
+    "name": "Yapper",
+    "url": "https://github.com/ahmedlhanafy/yapper",
+    "icon": "🎙️",
+    "tagline": "Local Whisper dictation for your Mac; the $8.49 a month stays in your pocket.",
+    "replaces": {
+      "name": "Superwhisper",
+      "price": "$8.49/mo (Pro)",
+      "source": "https://superwhisper.com/"
+    },
+    "grudge": {
+      "quote": "Built a free alternative to Superwhisper.",
+      "source": "https://news.ycombinator.com/item?id=47427360"
+    },
+    "builder": {
+      "name": "Ahmed Elhanafy",
+      "handle": "ahmedlhanafy",
+      "url": "https://github.com/ahmedlhanafy"
+    },
+    "tags": [
+      "dictation",
+      "macos",
+      "whisper"
+    ],
+    "vibe_coded": false,
+    "spite_score": 7,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "remove-your-data",
+    "name": "remove-your-data",
+    "url": "https://github.com/k7cfo/remove-your-data",
+    "icon": "🧹",
+    "tagline": "Paid data-broker removal services file the same free forms you could, then bill you monthly; this repo hands the forms to your agent.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I signed up for a paid service to get my phone, addresses, and vehicles off the public internet. It didn't work.",
+      "source": "https://news.ycombinator.com/item?id=49493881"
+    },
+    "builder": {
+      "name": "k7peak",
+      "handle": "k7peak",
+      "url": "https://github.com/k7cfo"
+    },
+    "tags": [
+      "privacy",
+      "agent-skill",
+      "open-source"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "chalkboard",
+    "name": "Chalkboard",
+    "url": "https://github.com/silentg33k/chalkboard-installer",
+    "icon": "📺",
+    "tagline": "A Raspberry Pi wall display that costs exactly zero dollars a month, which is apparently a radical feature now.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I got tired of subscription-based wall displays and locked ecosystems, so I built my own.",
+      "source": "https://news.ycombinator.com/item?id=47834659"
+    },
+    "builder": {
+      "name": "silentg33k",
+      "handle": "g_33_k",
+      "url": "https://github.com/silentg33k"
+    },
+    "tags": [
+      "raspberry-pi",
+      "wall-display",
+      "self-hosted"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "flowrite",
+    "name": "Flowrite",
+    "url": "https://github.com/pi22by7/flowrite",
+    "icon": "🎤",
+    "tagline": "Songwriting apps wanted a subscription to hold your lyrics; Flowrite holds them offline, ad-free, AGPL, on every platform you own.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I built this because I was tired of songwriting apps with subscriptions and ads interrupting my creative flow.",
+      "source": "https://news.ycombinator.com/item?id=44574573"
+    },
+    "builder": {
+      "name": "Piyush (pi22by7)",
+      "handle": "pi_22by7",
+      "url": "https://github.com/pi22by7"
+    },
+    "tags": [
+      "songwriting",
+      "writing",
+      "open-source"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "budgie-diet",
+    "name": "Budgie Diet",
+    "url": "https://apps.apple.com/gb/app/budgie-diet/id6670401868",
+    "icon": "🐦",
+    "tagline": "Every calorie app wants an account, an ad break, and a subscription; Budgie wants your HealthKit data and nothing else.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I didn't like most dieting apps because they either relied too much on fixed calorie targets (rather than flexing with actual activity), didn't help budget calorie intake throughout the day, were far too complicated and fiddly to add food into, required signing up for yet another account, or were stuffed full of ads.",
+      "source": "https://news.ycombinator.com/item?id=48784666"
+    },
+    "builder": {
+      "name": "Joe Baldwin (JBNorwich)",
+      "handle": "PurestGuava",
+      "url": "https://github.com/JBNorwich/BudgieSource"
+    },
+    "tags": [
+      "diet",
+      "ios",
+      "health"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "three-line-calendar",
+    "name": "3-Line Calendar",
+    "url": "https://threelinecal.apps.zzn.im/",
+    "icon": "⌚",
+    "tagline": "Your next three events on your wrist, with no in-app purchase hiding behind any of them.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "But most of them either ask you to pay, make you sign in, harvest your data, or trick you into some in-app purchase.",
+      "source": "https://news.ycombinator.com/item?id=48923423"
+    },
+    "builder": {
+      "name": "Z. Victor Zhou",
+      "handle": "xinbenlv",
+      "url": "https://github.com/xinbenlv/three-line-calendar"
+    },
+    "tags": [
+      "calendar",
+      "apple watch",
+      "widget"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "sharkshimi",
+    "name": "Sharkshimi",
+    "url": "https://www.sharkshimi.com/",
+    "icon": "🦈",
+    "tagline": "Crypto arbitrage finders sell you a subscription to find arbitrage. Sharkshimi skips the toll booth and the login.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Existing platforms are either behind paywalls, subscriptions, tiered-systems, or authentication and authorization systems...",
+      "source": "https://news.ycombinator.com/item?id=43936094"
+    },
+    "builder": {
+      "name": "MattELab",
+      "handle": "MattELab",
+      "url": "https://x.com/MattELabRND"
+    },
+    "tags": [
+      "crypto",
+      "finance",
+      "web"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "deep-focus",
+    "name": "Deep Focus",
+    "url": "https://chromewebstore.google.com/detail/deep-focus/mlhnngnmkedglhmebnphkhchodpmodfb",
+    "icon": "🍅",
+    "tagline": "A Pomodoro timer, site blocker and rain sounds that never ask you to sign up, sign in, or upgrade.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I got tired of productivity tools constantly asking me to sign up, pay monthly, or deal with annoying UIs.",
+      "source": "https://news.ycombinator.com/item?id=43872133"
+    },
+    "builder": {
+      "name": "sundanc",
+      "handle": "sundanc",
+      "url": "https://github.com/sundanc"
+    },
+    "tags": [
+      "productivity",
+      "chrome-extension",
+      "focus"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "auto-hongmyungbo",
+    "name": "Auto Hongmyungbo",
+    "url": "https://github.com/NomaDamas/auto-hongmyungbo",
+    "icon": "📣",
+    "tagline": "One rough draft in, a LinkedIn, X and Threads post out, and the only subscription is your own API key.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Paid tools are expensive, and free ones are too limited.",
+      "source": "https://news.ycombinator.com/item?id=47177445"
+    },
+    "builder": {
+      "name": "minsing-jin",
+      "handle": "minsingjin",
+      "url": "https://github.com/minsing-jin"
+    },
+    "tags": [
+      "social",
+      "marketing",
+      "open-source"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "rank-and-run",
+    "name": "Rank & Run",
+    "url": "https://www.rankandrun.app/",
+    "icon": "🃏",
+    "tagline": "Somebody put a card game behind a price tag, so now the whole table plays free in a browser tab.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "No free version of this card game existed, so I made one",
+      "source": "https://news.ycombinator.com/item?id=49296795"
+    },
+    "builder": {
+      "name": "xthreadmaker",
+      "handle": "xthreadmaker",
+      "url": ""
+    },
+    "tags": [
+      "game",
+      "cards",
+      "multiplayer"
+    ],
+    "vibe_coded": false,
+    "spite_score": 6,
+    "added": "2026-09-07"
+  },
+  {
+    "slug": "phlox-gw",
+    "name": "Phlox-GW",
+    "url": "https://robert-mcdermott.github.io/phlox-gw/",
+    "icon": "🚪",
+    "tagline": "Every open-source LLM gateway sells you the governance half. This one ships it all, Apache-2.0, and promises no enterprise tier, ever.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most open-source LLM gateways publish the proxy and paywall the governance.",
+      "source": "https://robert-mcdermott.github.io/phlox-gw/"
+    },
+    "builder": {
+      "name": "Robert McDermott",
+      "handle": "mcdermott",
+      "url": "https://github.com/robert-mcdermott"
+    },
+    "tags": [
+      "llm",
+      "self-hosted",
+      "gateway"
+    ],
+    "vibe_coded": false,
+    "spite_score": 5,
+    "added": "2026-09-07"
   }
 ]

@@ -23,11 +23,11 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
 
 4. **Verify each survivor**, in parallel where possible:
    - Fetch the app's own site. Look for a pricing section, trial, seat cap, "Pro", "Team", "Enterprise". Any of these fails hard gate 3. Note "bring your own key" as allowed.
-   - Fetch the HN or Reddit discussion. Find the builder's own words for the grudge. Copy one sentence verbatim. No quote, no grudge, fails hard gate 1.
-   - Identify the victim tool. Fetch its pricing page. Record plan name, monthly price, and URL. If the pricing page is unreachable, use a dated 2026 secondary source and mark it `(secondary)`.
+   - Fetch the HN or Reddit discussion, and the README or site if needed. Find the builder's own words for the grudge. Copy one sentence verbatim. No quote, no grudge, fails hard gate 1.
+   - If the builder names the tool they're reacting to, record it, and fetch its pricing page for plan name, price, and URL. If unreachable, use a dated 2026 secondary source and set note `secondary`. Never guess a victim or a price; leave the field empty instead.
    - Note builder name and handle, solo or team, license, and whether the builder says AI or vibe coding was used.
 
-5. **Score** each against the table in `criteria.md`. Apply the automatic rejects. Drop anything under 6.
+5. **Score** each against the table in `criteria.md`. Apply the automatic rejects. Everything that passes both gates goes to the queue; the score is for sorting.
 
 6. **Draft cards** into `queue/YYYY-MM-DD.json` using exactly the schema in `queue/README.md`. Every candidate starts `"status": "pending"`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Fill `why` with the score breakdown. Put dropped candidates with one-line reasons in the `dropped` array.
 

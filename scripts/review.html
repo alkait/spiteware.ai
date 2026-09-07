@@ -67,7 +67,7 @@ function row(run,c){
   <a class="card" href="${esc(c.url)}" target="_blank" rel="noopener" onclick="if(event.target.isContentEditable)event.preventDefault()">
     <span class="state state--${esc(c.status)}">${esc(c.status)}</span>
     <div class="card__top"><div class="card__icon" contenteditable data-k="icon">${esc(c.icon)}</div>
-      <div class="kills">replaces<s><span contenteditable data-k="replaces.name">${esc(c.replaces.name)}</span> · <span contenteditable data-k="replaces.price">${esc(c.replaces.price)}</span></s></div></div>
+      <div class="kills">replaces<s><span contenteditable data-k="replaces.name">${esc(c.replaces.name||'')||'(victim?)'}</span> · <span contenteditable data-k="replaces.price">${esc(c.replaces.price||'')||'(price?)'}</span></s></div></div>
     <h3 contenteditable data-k="name">${esc(c.name)}</h3><p contenteditable data-k="tagline">${esc(c.tagline)}</p>
     <blockquote class="card__grudge">“<span contenteditable data-k="grudge.quote">${esc(c.grudge.quote)}</span>”</blockquote>
     <div class="chips"><span class="chip" contenteditable data-k="tags">${esc(c.tags.join(', '))}</span>${c.vibe_coded?'<span class="chip chip--vibe">vibe coded</span>':''}</div>
