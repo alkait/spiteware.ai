@@ -23,8 +23,9 @@
       "web",
       "writing"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 9,
+    "spite_score": 6,
     "added": "2026-09-06"
   },
   {
@@ -51,8 +52,9 @@
       "web",
       "forms"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 9,
+    "spite_score": 8,
     "added": "2026-09-06"
   },
   {
@@ -77,11 +79,11 @@
     },
     "tags": [
       "browser-extension",
-      "open-source",
       "productivity"
     ],
+    "open_source": true,
     "vibe_coded": true,
-    "spite_score": 9,
+    "spite_score": 10,
     "added": "2026-09-06"
   },
   {
@@ -108,8 +110,9 @@
       "macos",
       "images"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 6,
     "added": "2026-09-06"
   },
   {
@@ -134,11 +137,11 @@
     },
     "tags": [
       "macos",
-      "open-source",
       "dictation"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 8,
     "added": "2026-09-06"
   },
   {
@@ -166,6 +169,7 @@
       "local-first",
       "writing"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -195,8 +199,9 @@
       "local-first",
       "ai"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 6,
     "added": "2026-09-06"
   },
   {
@@ -221,11 +226,11 @@
     },
     "tags": [
       "web",
-      "open-source",
       "marketing"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 8,
     "added": "2026-09-06"
   },
   {
@@ -250,11 +255,11 @@
     },
     "tags": [
       "web",
-      "open-source",
       "finance"
     ],
+    "open_source": true,
     "vibe_coded": true,
-    "spite_score": 9,
+    "spite_score": 10,
     "added": "2026-09-06"
   },
   {
@@ -281,6 +286,7 @@
       "web",
       "learning"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -309,6 +315,7 @@
       "macos",
       "video"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -337,6 +344,7 @@
       "desktop",
       "images"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-06"
@@ -365,8 +373,9 @@
       "web",
       "forms"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 8,
+    "spite_score": 6,
     "added": "2026-09-06"
   },
   {
@@ -390,11 +399,11 @@
       "url": "https://github.com/OpenStrap/edge"
     },
     "tags": [
-      "open-source",
       "health"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 8,
     "added": "2026-09-06"
   },
   {
@@ -421,8 +430,9 @@
       "web",
       "marketing"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 6,
     "added": "2026-09-06"
   },
   {
@@ -447,11 +457,11 @@
     },
     "tags": [
       "windows",
-      "open-source",
       "video"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 8,
     "added": "2026-09-06"
   },
   {
@@ -479,8 +489,9 @@
       "local-first",
       "career"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 6,
     "added": "2026-09-06"
   },
   {
@@ -507,6 +518,7 @@
       "local-first",
       "video"
     ],
+    "open_source": true,
     "vibe_coded": true,
     "spite_score": 10,
     "added": "2026-09-07"
@@ -532,12 +544,12 @@
       "url": "https://github.com/houseoffoss"
     },
     "tags": [
-      "open-source",
       "self-hosted",
       "dev-tools"
     ],
+    "open_source": true,
     "vibe_coded": true,
-    "spite_score": 9,
+    "spite_score": 10,
     "added": "2026-09-07"
   },
   {
@@ -564,6 +576,7 @@
       "self-hosted",
       "dev-tools"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -592,6 +605,7 @@
       "byo-key",
       "ai"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -620,8 +634,9 @@
       "web",
       "learning"
     ],
+    "open_source": false,
     "vibe_coded": true,
-    "spite_score": 8,
+    "spite_score": 5,
     "added": "2026-09-07"
   },
   {
@@ -648,6 +663,7 @@
       "local-first",
       "dictation"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-07"
@@ -676,8 +692,9 @@
       "web",
       "travel"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 8,
+    "spite_score": 6,
     "added": "2026-09-07"
   },
   {
@@ -702,11 +719,11 @@
     },
     "tags": [
       "web",
-      "open-source",
       "games"
     ],
+    "open_source": false,
     "vibe_coded": true,
-    "spite_score": 8,
+    "spite_score": 5,
     "added": "2026-09-07"
   },
   {
@@ -730,12 +747,12 @@
       "url": "https://github.com/croffasia"
     },
     "tags": [
-      "open-source",
       "self-hosted",
       "productivity"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 8,
     "added": "2026-09-07"
   },
   {
@@ -762,8 +779,9 @@
       "macos",
       "utilities"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 8,
     "added": "2026-09-07"
   },
   {
@@ -791,8 +809,9 @@
       "local-first",
       "dictation"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 7,
+    "spite_score": 8,
     "added": "2026-09-07"
   },
   {
@@ -816,12 +835,12 @@
       "url": "https://github.com/k7cfo"
     },
     "tags": [
-      "open-source",
       "privacy",
       "utilities"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 5,
     "added": "2026-09-07"
   },
   {
@@ -848,8 +867,9 @@
       "self-hosted",
       "utilities"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 5,
     "added": "2026-09-07"
   },
   {
@@ -873,11 +893,11 @@
       "url": "https://github.com/pi22by7"
     },
     "tags": [
-      "open-source",
       "writing"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 5,
     "added": "2026-09-07"
   },
   {
@@ -904,8 +924,9 @@
       "ios",
       "health"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 3,
     "added": "2026-09-07"
   },
   {
@@ -932,8 +953,9 @@
       "ios",
       "productivity"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 5,
     "added": "2026-09-07"
   },
   {
@@ -960,8 +982,9 @@
       "web",
       "finance"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 3,
     "added": "2026-09-07"
   },
   {
@@ -988,8 +1011,9 @@
       "browser-extension",
       "productivity"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 3,
     "added": "2026-09-07"
   },
   {
@@ -1013,11 +1037,11 @@
       "url": "https://github.com/minsing-jin"
     },
     "tags": [
-      "open-source",
       "marketing"
     ],
+    "open_source": true,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 5,
     "added": "2026-09-07"
   },
   {
@@ -1044,8 +1068,9 @@
       "web",
       "games"
     ],
+    "open_source": false,
     "vibe_coded": false,
-    "spite_score": 6,
+    "spite_score": 3,
     "added": "2026-09-07"
   },
   {
@@ -1072,6 +1097,7 @@
       "self-hosted",
       "ai"
     ],
+    "open_source": true,
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"

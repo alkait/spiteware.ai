@@ -81,23 +81,25 @@ SW.ready(apps => {
   const q=document.getElementById('q'), sort=document.getElementById('sort'), grid=document.getElementById('grid'), tagbar=document.getElementById('tags'), none=document.getElementById('none');
   const params=new URLSearchParams(location.search);
   let tag=params.get('tag')||''; q.value=params.get('q')||''; sort.value=params.get('sort')||'spite';
-  const counts={}; apps.forEach(a=>(a.tags||[]).forEach(t=>counts[t]=(counts[t]||0)+1)); if(apps.some(a=>a.vibe_coded)) counts['vibe coded']=apps.filter(a=>a.vibe_coded).length;
+  const counts={}; apps.forEach(a=>(a.tags||[]).forEach(t=>counts[t]=(counts[t]||0)+1));
+  SW.DERIVED.forEach(([t,f])=>{const n=apps.filter(f).length; if(n) counts[t]=n;});
   const price=a=>{const m=/\$([\d.,]+)\/(mo|yr)/.exec(a.replaces.price||''); if(!m) return 0; const v=+m[1].replace(/,/g,''); return m[2]==='yr'?v/12:v;};
   const sorters={spite:(a,b)=>(b.spite_score-a.spite_score)||(b.added>a.added?1:-1), new:(a,b)=>b.added>a.added?1:b.added<a.added?-1:0, price:(a,b)=>price(b)-price(a), name:(a,b)=>a.name.localeCompare(b.name)};
   const btn=(t,l)=>`<button class="tagbtn${t===tag?' is-on':''}" data-t="${SW.esc(t)}">${SW.esc(l)}</button>`;
   const row=(label,ts)=>ts.length?`<div class="tagrow"><span class="tagrow__l">${SW.esc(label)}</span><span class="tagrow__b">${ts.map(t=>btn(t,`${t} · ${counts[t]}`)).join('')}</span></div>`:'';
   // Anything in the data that isn't in SW.FACETS still gets a button, so no app is unreachable.
-  const known=new Set(SW.FACETS.flatMap(([,ts])=>ts).concat('vibe coded'));
+  const known=new Set(SW.FACETS.flatMap(([,ts])=>ts).concat(SW.DERIVED.map(([t])=>t)));
   const stray=Object.keys(counts).filter(t=>!known.has(t)).sort();
   function renderTags(){
     tagbar.innerHTML=`<div class="tagrow">${btn('',`all · ${apps.length}`)}</div>`
       + SW.FACETS.map(([label,ts],i)=>row(label,ts.filter(t=>counts[t])
-          .concat(i===1&&counts['vibe coded']?['vibe coded']:[]))).join('')
+          .concat(i===1?SW.DERIVED.map(([t])=>t).filter(t=>counts[t]):[]))).join('')
       + row('off the list',stray);
   }
   function apply(){
     const s=q.value.trim().toLowerCase();
-    let list=apps.filter(a=>!tag||(tag==='vibe coded'?a.vibe_coded:(a.tags||[]).includes(tag)));
+    const derived=Object.fromEntries(SW.DERIVED);
+    let list=apps.filter(a=>!tag||(derived[tag]?derived[tag](a):(a.tags||[]).includes(tag)));
     if(s) list=list.filter(a=>[a.name,a.tagline,a.replaces.name,a.builder.name,a.grudge.quote,...(a.tags||[])].join(' ').toLowerCase().includes(s));
     list.sort(sorters[sort.value]||sorters.spite);
     grid.innerHTML=list.map(SW.card).join(''); none.hidden=list.length>0;

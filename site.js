@@ -5,9 +5,11 @@
 
   // Tag vocabulary — mirrors the closed list in criteria.md. Rows render in this order,
   // so a tag keeps its spot on the bar as the catalog grows.
+  // Derived from booleans on each app, not from typed tags.
+  SW.DERIVED = [['open-source', a => a.open_source], ['vibe coded', a => a.vibe_coded]];
   SW.FACETS = [
     ["where it runs", ["macos","ios","windows","web","desktop","browser-extension"]],
-    ["how it's free", ["open-source","self-hosted","local-first","byo-key","privacy"]],
+    ["how it's free", ["self-hosted","local-first","byo-key","privacy"]],
     ["what it does",  ["ai","career","dev-tools","dictation","finance","forms","games","health",
                        "images","learning","marketing","productivity","travel","utilities","video","writing"]],
   ];
@@ -37,7 +39,7 @@
       <div class="kills">replaces<s>${SW.victim(a)}</s></div></div>
     <h3>${esc(a.name)}</h3><p>${esc(a.tagline)}</p>
     <blockquote class="card__grudge">“${esc(a.grudge.quote)}”</blockquote>
-    <div class="chips">${(a.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}${a.vibe_coded?'<span class="chip chip--vibe">vibe coded</span>':''}</div>
+    <div class="chips">${(a.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}${a.open_source?'<span class="chip">open-source</span>':''}${a.vibe_coded?'<span class="chip chip--vibe">vibe coded</span>':''}</div>
     <div class="card__meta"><span>by ${esc(a.builder.name)}</span><span title="spite score">🔥 ${esc(a.spite_score)}/10</span></div></a>`;
 
   SW.sortSpite = apps => apps.slice().sort((a,b)=>(b.spite_score-a.spite_score)||(b.added>a.added?1:-1));

@@ -25,9 +25,13 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
    - Fetch the app's own site. Look for a pricing section, trial, seat cap, "Pro", "Team", "Enterprise". Any of these fails hard gate 2. Note "bring your own key" as allowed.
    - Fetch the HN or Reddit discussion, and the README or site if needed. Find the builder's own words for the grudge. Copy one sentence verbatim. No quote, no grudge, fails hard gate 1.
    - If the builder names the tool they're reacting to, record it, and fetch its pricing page for plan name, price, and URL. If unreachable, use a dated 2026 secondary source and set note `secondary`. Never guess a victim or a price; leave the field empty instead.
-   - Note builder name and handle, solo or team, license, and whether the builder says AI or vibe coding was used.
+   - Note builder name and handle. Set `open_source` true if the project has a public
+     GitHub repo — the app's own URL or one linked from its landing page; that is the
+     whole test, no licence check. Set `vibe_coded` if the builder says AI or vibe
+     coding was used. Both are scored, and both drive their own filter button.
 
-5. **Score** each against the table in `criteria.md`. Apply the automatic rejects. Everything that passes both gates goes to the queue; the score is for sorting.
+5. **Score** each with `python3 scripts/score.py` after the queue is written — the score
+   is a pure function of the fields, so do not assign it by hand. Apply the automatic rejects. Everything that passes both gates goes to the queue; the score is for sorting.
 
 6. **Draft cards** into `queue/YYYY-MM-DD.json` using exactly the schema in `queue/README.md`. Every candidate starts `"status": "pending"`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Tag from the closed list in `criteria.md` — at most 3, never a word that isn't on it; `utilities` is the catch-all. Fill `why` with the score breakdown. Put dropped candidates with one-line reasons in the `dropped` array.
 

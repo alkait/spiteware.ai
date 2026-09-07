@@ -23,11 +23,15 @@ Record the paid tool the builder is reacting to when they name one, and its pric
 | Signal | Points |
 |---|---|
 | Grudge is explicit and quotable | 3 |
-| Victim named by the builder | 1 |
-| Victim price verified | 1 |
-| Solo builder or two people | 2 |
+| Open sourced | 2 |
 | Vibe coded or AI-assisted, stated by the builder | 2 |
-| Does one thing | 1 |
+| Victim named by the builder | 2 |
+| Victim price verified | 1 |
+
+**Open sourced** means there is a public GitHub repo. That is the whole test — no licence
+check. The repo does not have to be the app's own URL; a landing page linking to one counts.
+Record it as `open_source` in the card so the score stays a pure function of the data and
+cannot drift between runs.
 
 ## Tags (closed list — never invent one)
 
@@ -37,7 +41,7 @@ search, which covers name, tagline, victim, builder and quote. A tag exists so s
 can click it and get more than one app.
 
 - **platform** (0 or 1): `macos` `ios` `windows` `web` `desktop` `browser-extension`
-- **ethos** (0 to 2): `open-source` `self-hosted` `local-first` `byo-key` `privacy`
+- **ethos** (0 to 2): `self-hosted` `local-first` `byo-key` `privacy`
 - **what it does** (exactly 1): `ai` `career` `dev-tools` `dictation` `finance` `forms`
   `games` `health` `images` `learning` `marketing` `productivity` `travel` `utilities`
   `video` `writing`
@@ -46,7 +50,8 @@ Use `utilities` when nothing else fits — do not add a seventeenth category. If
 category is genuinely earning its keep (three or more apps stuck in `utilities` that
 belong together), say so in the run report and let the human add it here.
 
-Do not tag `vibe coded` — the site derives that button from the `vibe_coded` field.
+Do not tag `vibe coded` or `open-source` — the site derives those buttons from the
+`vibe_coded` and `open_source` fields.
 
 ## Voice for the card copy
 
