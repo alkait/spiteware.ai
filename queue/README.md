@@ -22,11 +22,13 @@ Schema:
     "replaces": {"name": "Grammarly Pro", "price": "$12/mo", "source": "https://www.grammarly.com/plans", "note": ""},
     "grudge": {"quote": "builder's words, verbatim", "source": "https://..."},
     "builder": {"name": "Kryhr", "handle": "Kryhr", "url": ""},
-    "tags": ["writing", "web"], "vibe_coded": false,
+    "tags": ["web", "local-first", "writing"], "vibe_coded": false,
     "why": "score breakdown", "added": "2026-09-06"
   }],
   "dropped": ["Name: one-line reason"]
 }
 ```
+
+`tags` must come from the closed list in `criteria.md` — at most 3, no invented words.
 
 `raw-YYYY-MM-DD.json` files are the unfiltered sweep output and are git-ignored.

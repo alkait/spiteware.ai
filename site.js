@@ -3,6 +3,15 @@
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   window.SW = { esc };
 
+  // Tag vocabulary — mirrors the closed list in criteria.md. Rows render in this order,
+  // so a tag keeps its spot on the bar as the catalog grows.
+  SW.FACETS = [
+    ["where it runs", ["macos","ios","windows","web","desktop","browser-extension"]],
+    ["how it's free", ["open-source","self-hosted","local-first","byo-key","privacy"]],
+    ["what it does",  ["ai","career","dev-tools","dictation","finance","forms","games","health",
+                       "images","learning","marketing","productivity","travel","utilities","video","writing"]],
+  ];
+
   // Marquee: duplicate content so it loops seamlessly
   const t = $('#ticker'); if (t) t.innerHTML += t.innerHTML;
 

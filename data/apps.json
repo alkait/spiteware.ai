@@ -20,9 +20,8 @@
       "url": "https://news.ycombinator.com/user?id=mrayushsoni"
     },
     "tags": [
-      "letters",
       "web",
-      "ios"
+      "writing"
     ],
     "vibe_coded": false,
     "spite_score": 9,
@@ -49,9 +48,8 @@
       "url": "https://news.ycombinator.com/user?id=lgreco"
     },
     "tags": [
-      "forms",
-      "github",
-      "one thing"
+      "web",
+      "forms"
     ],
     "vibe_coded": false,
     "spite_score": 9,
@@ -78,9 +76,9 @@
       "url": "https://news.ycombinator.com/user?id=chungusman"
     },
     "tags": [
-      "focus",
-      "chrome",
-      "open source"
+      "browser-extension",
+      "open-source",
+      "productivity"
     ],
     "vibe_coded": true,
     "spite_score": 9,
@@ -107,9 +105,8 @@
       "url": "https://timleland.com/"
     },
     "tags": [
-      "screenshots",
       "macos",
-      "native"
+      "images"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -136,9 +133,9 @@
       "url": "https://github.com/zachlatta"
     },
     "tags": [
-      "dictation",
       "macos",
-      "open source"
+      "open-source",
+      "dictation"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -165,9 +162,9 @@
       "url": ""
     },
     "tags": [
-      "writing",
       "web",
-      "local"
+      "local-first",
+      "writing"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -194,9 +191,9 @@
       "url": ""
     },
     "tags": [
-      "ai",
       "macos",
-      "local"
+      "local-first",
+      "ai"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -223,9 +220,9 @@
       "url": ""
     },
     "tags": [
-      "seo",
       "web",
-      "open source"
+      "open-source",
+      "marketing"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -252,9 +249,9 @@
       "url": "https://github.com/spliit-app/spliit"
     },
     "tags": [
-      "finance",
-      "expenses",
-      "open-source"
+      "web",
+      "open-source",
+      "finance"
     ],
     "vibe_coded": true,
     "spite_score": 9,
@@ -281,9 +278,8 @@
       "url": "https://github.com/daxaur"
     },
     "tags": [
-      "chess",
-      "learning",
-      "browser"
+      "web",
+      "learning"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -310,7 +306,6 @@
       "url": "https://github.com/jkuri"
     },
     "tags": [
-      "screen-recording",
       "macos",
       "video"
     ],
@@ -339,9 +334,8 @@
       "url": "https://github.com/vegidio"
     },
     "tags": [
-      "photo",
-      "upscaling",
-      "desktop"
+      "desktop",
+      "images"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -368,9 +362,8 @@
       "url": ""
     },
     "tags": [
-      "forms",
-      "surveys",
-      "web"
+      "web",
+      "forms"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -397,9 +390,8 @@
       "url": "https://github.com/OpenStrap/edge"
     },
     "tags": [
-      "wearables",
-      "health",
-      "open-source"
+      "open-source",
+      "health"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -426,9 +418,8 @@
       "url": ""
     },
     "tags": [
-      "seo",
-      "keywords",
-      "web"
+      "web",
+      "marketing"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -455,9 +446,9 @@
       "url": "https://github.com/cw12574"
     },
     "tags": [
-      "screen-recording",
       "windows",
-      "open-source"
+      "open-source",
+      "video"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -484,9 +475,9 @@
       "url": ""
     },
     "tags": [
-      "resume",
-      "career",
-      "client-side"
+      "web",
+      "local-first",
+      "career"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -513,9 +504,8 @@
       "url": "https://github.com/wassgha"
     },
     "tags": [
-      "video",
-      "transcription",
-      "local-first"
+      "local-first",
+      "video"
     ],
     "vibe_coded": true,
     "spite_score": 10,
@@ -542,9 +532,9 @@
       "url": "https://github.com/houseoffoss"
     },
     "tags": [
-      "testing",
+      "open-source",
       "self-hosted",
-      "open-source"
+      "dev-tools"
     ],
     "vibe_coded": true,
     "spite_score": 9,
@@ -571,9 +561,8 @@
       "url": ""
     },
     "tags": [
-      "dev-tools",
-      "time-tracking",
-      "self-hosted"
+      "self-hosted",
+      "dev-tools"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -600,9 +589,8 @@
       "url": "https://bryceyork.com/free-open-source-slack-ai/"
     },
     "tags": [
-      "slack",
-      "summaries",
-      "byo-key"
+      "byo-key",
+      "ai"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -629,9 +617,8 @@
       "url": "https://github.com/Alan01252/free-kids-typing-games.com"
     },
     "tags": [
-      "typing",
-      "kids",
-      "education"
+      "web",
+      "learning"
     ],
     "vibe_coded": true,
     "spite_score": 8,
@@ -658,9 +645,8 @@
       "url": "https://github.com/braden-w"
     },
     "tags": [
-      "dictation",
-      "transcription",
-      "local-first"
+      "local-first",
+      "dictation"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -687,9 +673,8 @@
       "url": ""
     },
     "tags": [
-      "travel",
-      "cost of living",
-      "expat"
+      "web",
+      "travel"
     ],
     "vibe_coded": false,
     "spite_score": 8,
@@ -716,9 +701,9 @@
       "url": "https://github.com/mnfjorge"
     },
     "tags": [
-      "game",
-      "pwa",
-      "open-source"
+      "web",
+      "open-source",
+      "games"
     ],
     "vibe_coded": true,
     "spite_score": 8,
@@ -745,9 +730,9 @@
       "url": "https://github.com/croffasia"
     },
     "tags": [
-      "project-management",
+      "open-source",
       "self-hosted",
-      "open-source"
+      "productivity"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -775,8 +760,7 @@
     },
     "tags": [
       "macos",
-      "disk",
-      "utility"
+      "utilities"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -803,9 +787,9 @@
       "url": "https://github.com/ahmedlhanafy"
     },
     "tags": [
-      "dictation",
       "macos",
-      "whisper"
+      "local-first",
+      "dictation"
     ],
     "vibe_coded": false,
     "spite_score": 7,
@@ -832,9 +816,9 @@
       "url": "https://github.com/k7cfo"
     },
     "tags": [
+      "open-source",
       "privacy",
-      "agent-skill",
-      "open-source"
+      "utilities"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -861,9 +845,8 @@
       "url": "https://github.com/silentg33k"
     },
     "tags": [
-      "raspberry-pi",
-      "wall-display",
-      "self-hosted"
+      "self-hosted",
+      "utilities"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -890,9 +873,8 @@
       "url": "https://github.com/pi22by7"
     },
     "tags": [
-      "songwriting",
-      "writing",
-      "open-source"
+      "open-source",
+      "writing"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -919,7 +901,6 @@
       "url": "https://github.com/JBNorwich/BudgieSource"
     },
     "tags": [
-      "diet",
       "ios",
       "health"
     ],
@@ -948,9 +929,8 @@
       "url": "https://github.com/xinbenlv/three-line-calendar"
     },
     "tags": [
-      "calendar",
-      "apple watch",
-      "widget"
+      "ios",
+      "productivity"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -977,9 +957,8 @@
       "url": "https://x.com/MattELabRND"
     },
     "tags": [
-      "crypto",
-      "finance",
-      "web"
+      "web",
+      "finance"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -1006,9 +985,8 @@
       "url": "https://github.com/sundanc"
     },
     "tags": [
-      "productivity",
-      "chrome-extension",
-      "focus"
+      "browser-extension",
+      "productivity"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -1035,9 +1013,8 @@
       "url": "https://github.com/minsing-jin"
     },
     "tags": [
-      "social",
-      "marketing",
-      "open-source"
+      "open-source",
+      "marketing"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -1064,9 +1041,8 @@
       "url": ""
     },
     "tags": [
-      "game",
-      "cards",
-      "multiplayer"
+      "web",
+      "games"
     ],
     "vibe_coded": false,
     "spite_score": 6,
@@ -1093,9 +1069,8 @@
       "url": "https://github.com/robert-mcdermott"
     },
     "tags": [
-      "llm",
       "self-hosted",
-      "gateway"
+      "ai"
     ],
     "vibe_coded": false,
     "spite_score": 5,

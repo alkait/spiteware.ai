@@ -22,14 +22,14 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
 3. **Triage.** Drop anything that is obviously not an app built against a paid tool: listicles, "best X alternatives" blog posts, job posts, questions, the paid tool itself. Keep everything that could plausibly be spiteware. Aim for 5 to 15 survivors.
 
 4. **Verify each survivor**, in parallel where possible:
-   - Fetch the app's own site. Look for a pricing section, trial, seat cap, "Pro", "Team", "Enterprise". Any of these fails hard gate 3. Note "bring your own key" as allowed.
+   - Fetch the app's own site. Look for a pricing section, trial, seat cap, "Pro", "Team", "Enterprise". Any of these fails hard gate 2. Note "bring your own key" as allowed.
    - Fetch the HN or Reddit discussion, and the README or site if needed. Find the builder's own words for the grudge. Copy one sentence verbatim. No quote, no grudge, fails hard gate 1.
    - If the builder names the tool they're reacting to, record it, and fetch its pricing page for plan name, price, and URL. If unreachable, use a dated 2026 secondary source and set note `secondary`. Never guess a victim or a price; leave the field empty instead.
    - Note builder name and handle, solo or team, license, and whether the builder says AI or vibe coding was used.
 
 5. **Score** each against the table in `criteria.md`. Apply the automatic rejects. Everything that passes both gates goes to the queue; the score is for sorting.
 
-6. **Draft cards** into `queue/YYYY-MM-DD.json` using exactly the schema in `queue/README.md`. Every candidate starts `"status": "pending"`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Fill `why` with the score breakdown. Put dropped candidates with one-line reasons in the `dropped` array.
+6. **Draft cards** into `queue/YYYY-MM-DD.json` using exactly the schema in `queue/README.md`. Every candidate starts `"status": "pending"`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Tag from the closed list in `criteria.md` — at most 3, never a word that isn't on it; `utilities` is the catch-all. Fill `why` with the score breakdown. Put dropped candidates with one-line reasons in the `dropped` array.
 
 7. **Open the review desk.** Check `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4322/`. If it isn't 200, start `(nohup python3 scripts/review.py 4322 >/dev/null 2>&1 &)`. Never use pkill in this repo's shell; it kills the session. Then open http://localhost:4322/ in the browser. The user approves, rejects, and edits there.
 

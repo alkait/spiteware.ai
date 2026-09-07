@@ -29,6 +29,25 @@ Record the paid tool the builder is reacting to when they name one, and its pric
 | Vibe coded or AI-assisted, stated by the builder | 2 |
 | Does one thing | 1 |
 
+## Tags (closed list — never invent one)
+
+Pick **at most 3**, only from this list. Nothing else is a tag. Anything else the app
+is about — chess, expat life, minesweeper, WHOOP straps — is already findable through
+search, which covers name, tagline, victim, builder and quote. A tag exists so somebody
+can click it and get more than one app.
+
+- **platform** (0 or 1): `macos` `ios` `windows` `web` `desktop` `browser-extension`
+- **ethos** (0 to 2): `open-source` `self-hosted` `local-first` `byo-key` `privacy`
+- **what it does** (exactly 1): `ai` `career` `dev-tools` `dictation` `finance` `forms`
+  `games` `health` `images` `learning` `marketing` `productivity` `travel` `utilities`
+  `video` `writing`
+
+Use `utilities` when nothing else fits — do not add a seventeenth category. If a new
+category is genuinely earning its keep (three or more apps stuck in `utilities` that
+belong together), say so in the run report and let the human add it here.
+
+Do not tag `vibe coded` — the site derives that button from the `vibe_coded` field.
+
 ## Voice for the card copy
 
 Sarcastic, revenge-flavored, friendly. Short sentences. The joke is always the price, never the person. Never mock the builder. Name the victim tool plainly when there is one. One line of tagline, one quote from the builder, done.
