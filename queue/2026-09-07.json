@@ -1,0 +1,26 @@
+{
+  "run": "2026-09-07",
+  "swept": "hn algolia show_hn 48h + supplementary grudge-phrase pass 72h, github search, reddit (FAILED - HTTP 429 on every sub, both json and rss), last30days 3d",
+  "raw_hits": 61,
+  "triaged": 15,
+  "candidates": [],
+  "dropped": [
+    "Say Toucan: perfect grudge (feedback board went $15 to $25 to $50/mo) but the builder ships a $2/mo paid tier — open-core, automatic reject",
+    "wifiqrly: sells $29/$59/$99 lifetime plans on its own site — fails gate 2",
+    "Byosynch: builder says outright 'This is a paid service' — fails gate 2; the Dropbox grudge was about CLI support and privacy, not price",
+    "Cucumbero: open source and vibe-coded, but the grudge is 'none of them did quite what I wanted' — a feature complaint, not a price one",
+    "Passport photo maker (tool.aijpjobs.com): core tool is free, but AI optimisation runs on paid credits — fails gate 2",
+    "Ontoplano: genuinely free AGPL, but the stated grudge is Google privacy and FOSS calendar nitpicks, not paying",
+    "Sol: 'now free and open source' is the builder giving up their own price, not a grudge against someone else's",
+    "PicFiddle: free with no sign-up, but no motivation statement anywhere — no grudge to quote",
+    "macos-free-pdf-toolkit: 'no upload, no subscription' is a tagline, not a grudge; README has no why-I-built-it",
+    "ArNega: same shape — 'no API keys, no subscriptions' as a feature bullet, no stated grudge",
+    "lumen-godot: grudge is vendor lock-in, and it happily rides your existing paid Codex/Claude/Gemini subscriptions",
+    "split-the-expenses: 'free alternative to Splitwise' in the description, 2 commits, no README, no quotable grudge",
+    "income-os: no grudge, thin README, reads as generated filler",
+    "Batcave: repo is a stub with only the tagline 'A cybersec student who is tired of paying subscriptions' — no app",
+    "Meaterm, Form4Watch, Doodle, OOFmode, tgdisk, Who Goes, jobneedle, coldreach, synergy-mcp: all advertise a free tier, one-time price, or paid plan",
+    "ansible-role-proxmox: Proxmox repo config, not an app",
+    "Expeditione, TsumeRush, Vitaslop, GameIndex, thesys-core, SpeedCam Estimator, Douyin archiver, talksmi: no price grudge"
+  ]
+}

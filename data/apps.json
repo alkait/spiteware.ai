@@ -1139,5 +1139,34 @@
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
+  },
+  {
+    "slug": "vodforge",
+    "name": "VODForge",
+    "url": "https://getvodforge.com/",
+    "icon": "🎞️",
+    "tagline": "Downloads YouTube at the quality the source actually has. Charging extra for 4K was always the punchline.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "My goal is to grow VODForge into a widely adopted free tool for people who do not want to deal with sketchy websites, CLI mess, or pay for things that you could ultimately do for free given time and effort.",
+      "source": "https://news.ycombinator.com/item?id=49590354"
+    },
+    "builder": {
+      "name": "coopernusbaum",
+      "handle": "coopernusbaum",
+      "url": "https://github.com/SnowfallHD/vodforge"
+    },
+    "tags": [
+      "desktop",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "spite_score": 5,
+    "added": "2026-09-07"
   }
 ]
