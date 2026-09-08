@@ -4,17 +4,34 @@
 Usage: python3 scripts/sweep.py [--hours 48] [--out queue/raw-YYYY-MM-DD.json]
 Prints a JSON list of raw hits, deduped against data/apps.json and data/rejected.json.
 """
-import json, re, sys, time, urllib.parse, urllib.request, datetime, pathlib
+import json, re, sys, time, collections, urllib.parse, urllib.request, urllib.error, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 UA = "spiteware.ai morning sweep (https://github.com/alkait/spiteware.ai)"
-PHRASES = [
-    "free alternative", "open source alternative", "tired of paying", "sick of paying", "refused to pay",
-    "no subscription", "paywall", "free tier", "free plan", "went paid", "now charges", "price increase",
-    "vibe coded", "built in a weekend", "why pay", "upgrade to pro", "so I built", "so I made",
-]
 SUBS = ["SideProject", "selfhosted", "opensource", "webdev", "macapps", "vibecoding", "ClaudeAI", "indiehackers"]
-GRUDGE_RE = re.compile(r"free alternative|tired of paying|sick of paying|refus\w+ to pay|no subscription|paywall|free tier|free plan|went paid|now charges|vibe.?coded|weekend|why pay|upgrade to pro|subscription|\$\d+/(mo|month|yr|year)", re.I)
+
+# A hint, not a gate. Show HN comes in whole (see hn() below) and this only ranks it;
+# on Reddit and GitHub it is still the filter, so it errs wide. Measured against the
+# grudge quotes already listed it recognises 40 of 41 — the one it misses ("I wanted a
+# version of Nomad List that was free") is the reminder that the agent reading the post
+# is the real detector, and everything here exists to get posts in front of it.
+GRUDGE_RE = re.compile(r"""
+  free\ alternative | open.source\ alternative | self.hosted\ alternative | free\ forever
+| tired\ of\ paying | sick\ of\ paying | refus\w+\ to\ pay | (don'?t|didn'?t|won'?t|wouldn'?t|not)\ (want\ to\ )?pay
+| instead\ of\ paying | without\ paying | why\ pay | worth\ paying | ask(s|ed)?\ (you\ )?to\ pay
+| wanna\ pay | pay(ing)?\ (for|monthly|yearly|a\ (lot|bunch)) | pay\ \$
+| subscription | paywall\w* | freemium | free\ (tier|plan|version) | paid\ (tier|plan|version|app)
+| pro\ (plan|tier|version) | upgrade\ to\ pro | premium\ (plan|tier|version)
+| paid\ (service|tool|product|software|option)
+| went\ paid | now\ charges | charge[sd]?\ \$ | price\ (hike|increase) | rais\w+\ (the|their)\ price
+| per.(user|seat|month) | seat.based | add.on\ pricing | contact\ sales | pricing\ page
+| cost[s]?\ money | costs?\ a\ fortune | expensive | overpriced | prohibitively
+| in.app\ purchase | lifetime\ deal | free\ trial | too\ limited | limited\ free
+| (with|without|full\ of|no)\ (ads|adverts|advertising)
+| enshittifi\w+ | rug\ ?pull
+| vibe.?coded | weekend
+| \$\d[\d.,]*\s*(/|per\ )\s*(mo|month|yr|year|user|seat)
+""", re.I | re.X)
 
 def get(url, timeout=20):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
@@ -32,21 +49,36 @@ def known():
         except Exception: pass
     return seen
 
-def hn(since):
+def hn(since, pages=8, per=200):
+    """Every Show HN in the window, not just the ones that used our words.
+
+    Keyword queries here were costing recall: a Show HN whose grudge reads
+    "prohibitively expensive" or "they added paid tiers" matched none of them and was
+    never seen. Show HN is small enough to take whole (a few hundred per 48h), so we
+    take it whole and let the agent triage. `matched` carries the regex hit when there
+    is one, purely so the likely ones sort to the top.
+    """
     out = {}
-    for p in PHRASES:
-        q = urllib.parse.quote(f'"{p}"')
-        url = f"https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&query={q}&numericFilters=created_at_i%3E{since}&hitsPerPage=50"
+    for page in range(pages):
+        url = (f"https://hn.algolia.com/api/v1/search_by_date?tags=show_hn"
+               f"&numericFilters=created_at_i%3E{since}&hitsPerPage={per}&page={page}")
         try:
-            for h in get(url).get("hits", []):
-                out[h["objectID"]] = {
-                    "source": "hn", "id": h["objectID"], "title": h.get("title"), "url": h.get("url"),
-                    "author": h.get("author"), "points": h.get("points") or 0,
-                    "text": (h.get("story_text") or "")[:1500], "posted": h.get("created_at"),
-                    "discussion": f"https://news.ycombinator.com/item?id={h['objectID']}", "matched": p,
-                }
+            r = get(url)
         except Exception as e:
-            print(f"hn {p!r}: {e}", file=sys.stderr)
+            print(f"hn page {page}: {e}", file=sys.stderr); break
+        hits = r.get("hits", [])
+        for h in hits:
+            body = h.get("story_text") or ""
+            m = GRUDGE_RE.search(f"{h.get('title') or ''} {body}")
+            out[h["objectID"]] = {
+                "source": "hn", "id": h["objectID"], "title": h.get("title"), "url": h.get("url"),
+                "author": h.get("author"), "points": h.get("points") or 0,
+                # untagged posts still get read, but they don't need to cost a page of context
+                "text": body[:1500 if m else 400], "posted": h.get("created_at"),
+                "discussion": f"https://news.ycombinator.com/item?id={h['objectID']}",
+                "matched": m.group(0).strip() if m else None,
+            }
+        if not hits or page + 1 >= r.get("nbPages", 0): break
         time.sleep(0.3)
     return list(out.values())
 
@@ -58,8 +90,16 @@ def reddit(since):
     for sub in SUBS:
         url = f"https://www.reddit.com/r/{sub}/new.rss?limit=100"
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": BUA})
-            with urllib.request.urlopen(req, timeout=20) as r: root = ET.fromstring(r.read())
+            # reddit 429s hard and often; a rate-limited sub looks exactly like a quiet
+            # one, so back off and retry rather than silently reading nothing all morning
+            for attempt in range(3):
+                try:
+                    req = urllib.request.Request(url, headers={"User-Agent": BUA})
+                    with urllib.request.urlopen(req, timeout=20) as r: root = ET.fromstring(r.read())
+                    break
+                except urllib.error.HTTPError as e:
+                    if e.code != 429 or attempt == 2: raise
+                    time.sleep(12 * (attempt + 1))
             for e in root.findall("a:entry", NS):
                 upd = e.findtext("a:updated", "", NS)
                 ts = datetime.datetime.fromisoformat(upd.replace("Z", "+00:00")).timestamp() if upd else 0
@@ -82,7 +122,9 @@ def reddit(since):
 
 def github(since_date):
     out = {}
-    for p in ["free alternative to", "no subscription", "tired of paying", "instead of paying", "without paying"]:
+    # GitHub search needs a term to search for, so this path stays keyword-bound.
+    for p in ["free alternative to", "no subscription", "tired of paying", "instead of paying",
+              "without paying", "free forever", "expensive", "paid alternative"]:
         q = urllib.parse.quote(f'"{p}" in:description created:>{since_date}')
         url = f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page=30"
         try:
@@ -109,11 +151,15 @@ def main():
     hits = hn(since) + reddit(since) + github(since_date)
     seen = known()
     fresh = [h for h in hits if not any(k and k in seen for k in [(h.get("url") or "").lower().rstrip("/"), (h.get("title") or "").lower()])]
-    fresh.sort(key=lambda h: -(h.get("points") or 0))
+    fresh.sort(key=lambda h: (h.get("matched") is None, -(h.get("points") or 0)))
     payload = {"swept_at": datetime.datetime.now(datetime.UTC).isoformat(), "hours": hours, "count": len(fresh), "hits": fresh}
     text = json.dumps(payload, indent=1, ensure_ascii=False)
     if out:
-        pathlib.Path(out).write_text(text); print(f"{len(fresh)} hits -> {out}", file=sys.stderr)
+        pathlib.Path(out).write_text(text)
+        by = collections.Counter(h["source"] for h in fresh)
+        hint = sum(1 for h in fresh if h.get("matched"))
+        print(f"{len(fresh)} hits ({hint} keyword-hinted) -> {out}", file=sys.stderr)
+        print("  " + "  ".join(f"{k}={v}" for k, v in by.most_common()), file=sys.stderr)
     else:
         print(text)
 

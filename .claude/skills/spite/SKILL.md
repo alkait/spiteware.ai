@@ -15,7 +15,11 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
    ```
    python3 scripts/sweep.py --hours ${HOURS:-48} --out queue/raw-$(date +%F).json
    ```
-   Read the output file. Each hit has title, url, author, points, text, discussion, matched phrase.
+   Read the output file. Each hit has title, url, author, points, text, discussion, and
+   `matched` — the phrase that hinted at it, or `null`. **`null` does not mean "skip".**
+   Every Show HN in the window is in there whether or not it used our words; the hinted
+   ones are just sorted first. Read the titles of the unhinted ones too — that is where
+   the grudges phrased in normal English live.
 
 2. **Sweep tier 2.** Run `/last30days` once with the topic: `free alternative apps built because of subscription pricing, indie developers, last few days`. Use `--days 3`. Collect every distinct app it names with a link. Add them to the hit list as `source: last30days`.
 

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>the rules — spiteware.ai</title>
+<meta name="description" content="How apps get found, checked and scored on spiteware.ai. Nothing here is paid for or boosted.">
+<meta name="theme-color" content="#FFE600">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23FFE600'/><text x='32' y='46' font-size='40' font-family='Arial Black,sans-serif' font-weight='900' text-anchor='middle' fill='%23111'>$</text><line x1='10' y1='54' x2='54' y2='10' stroke='%23FF3E9A' stroke-width='9'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <span>★ <b data-apps>—</b> apps listed. all free.</span><span>★ spiteware.ai has made <b>$0.00</b> so far</span><span>★ built by people who read the pricing page and said "no"</span><span>★ no free trial. just free.</span><span>★ "upgrade to Pro" is not a feature</span><span>★ "seat-based pricing" is a hate crime</span><span>★ vibe coded. spite powered.</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="./" aria-label="spiteware.ai home">
+      <span class="logo__stack" aria-hidden="true"><span>SPITE</span><span>WARE</span></span>
+      <em aria-hidden="true">.ai</em>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="rules.html" aria-current="page">Rules</a></li>
+        <li><a href="#submit">Submit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap doc">
+
+    <div class="doc__head">
+      <span class="kicker">the rules, in public</span>
+      <h1>Nobody <span class="hollow">pays</span> to be on this list.</h1>
+      <p class="doc__lede">No sponsors, no boosted spots, no favours. Here's exactly how an app gets found, checked and scored — and how yours gets in.</p>
+    </div>
+
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">01</span> Every morning, an agent goes looking for grudges</h2>
+      <p>An agent trawls the last 48 hours of everywhere people announce what they built — <b>Show HN</b>, <b>eight subreddits</b>, <b>brand-new GitHub repos</b>, and once a day a wider pass over <b>Reddit</b>, <b>X</b>, <b>YouTube</b> and the <b>open web</b>. It reads each catch properly: the post, the comments under it, the README, the app's own site. Most of them go back in the water.</p>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">02</span> Two gates. Fail either, you're out</h2>
+      <ol class="gates">
+        <li><span class="gates__n">Gate 1</span><div><b>A grudge, in their own words.</b>Quoted verbatim, linked to where they said it.</div></li>
+        <li><span class="gates__n">Gate 2</span><div><b>Free, with no strings.</b>No trial, no seat cap, no pricing page hiding anywhere.</div></li>
+      </ol>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">03</span> The spite score</h2>
+      <div class="tblwrap">
+      <table class="tbl">
+        <thead><tr><th>Signal</th><th>What it means</th><th>Points</th></tr></thead>
+        <tbody>
+          <tr><td>Grudge is explicit and quotable</td><td>A verbatim sentence from the builder, with a link</td><td class="pts">+3</td></tr>
+          <tr><td>Open sourced</td><td>There's a public GitHub repo. That's the whole test — no licence check</td><td class="pts">+2</td></tr>
+          <tr><td>Vibe coded</td><td>The builder said AI helped write it</td><td class="pts">+2</td></tr>
+          <tr><td>Victim named</td><td>The builder names the tool they refused to pay for</td><td class="pts">+2</td></tr>
+          <tr><td>Price verified</td><td>That tool's price was read off a real pricing page</td><td class="pts">+1</td></tr>
+        </tbody>
+        <tfoot><tr><td>Maximum · sorts the list, doesn't rate the app</td><td></td><td class="pts">10</td></tr></tfoot>
+      </table>
+      </div>
+      <p>A script recomputes it from the fields on each card, so it can't drift or be nudged by hand. The rules are in <a href="https://github.com/alkait/spiteware.ai/blob/main/criteria.md" target="_blank" rel="noopener">criteria.md</a>, the maths is thirty lines in <a href="https://github.com/alkait/spiteware.ai/blob/main/scripts/score.py" target="_blank" rel="noopener">score.py</a>, and every card with its sources is in <a href="data/apps.json">data/apps.json</a>.</p>
+    </section>
+
+
+
+
+  </div>
+
+  <section class="sec sec--ink" id="submit">
+    <div class="wrap submit">
+      <div>
+        <h2>Did we<br>miss you?</h2>
+        <p>The agent only finds people who posted about it. If you built something out of spite and told nobody, this is the part where you tell somebody.</p>
+        <p style="margin-top:20px"><a class="btn" href="mailto:alkait+spiteware@gmail.com?subject=I%20built%20it%20instead%20of%20paying%20%24" target="_blank" rel="noopener">Submit your spiteware →</a></p>
+        <p style="font-family:var(--mono);font-size:13px;color:#bbb;margin-top:10px">alkait+spiteware@gmail.com · wrong price or misquoted on a card that's already up? same address, it gets fixed</p>
+      </div>
+      <ol class="steps">
+        <li><div><b>The link</b><span>To the app, and the repo if there is one.</span></div></li>
+        <li><div><b>What it replaces</b><span>The tool you refused to pay, and what it wanted per month.</span></div></li>
+        <li><div><b>One sentence on why</b><span>In your own words. We quote it verbatim — that's gate one.</span></div></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="counter" title="You are visitor number…">
+      <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
+      <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
+    </div>
+    <div class="foot__meta">
+      this site was shamelessly vibe coded by <a href="https://github.com/alkait" target="_blank" rel="noopener">@alkait</a><br>
+      no cookies · no tracking · no pricing page · <a href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source on github</a>
+    </div>
+    <div class="badges">
+      <span class="badge">Best viewed in any browser</span>
+      <span class="badge badge--blue">0 bytes of fonts</span>
+      <span class="badge badge--pink">Made with rage</span>
+      <span class="badge badge--green">Y2K compliant</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

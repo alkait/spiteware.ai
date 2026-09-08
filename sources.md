@@ -4,8 +4,10 @@ Ordered by signal. Window: last 48 hours unless the run is catching up.
 
 ## Tier 1, no keys needed
 
-- **Hacker News (Algolia API)**: `https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&query=<phrase>&numericFilters=created_at_i><unix>`
-  Fetch the item with `/api/v1/items/<id>` to read the author's own comments.
+- **Hacker News (Algolia API)**: `https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&numericFilters=created_at_i><unix>&hitsPerPage=200&page=<n>`
+  No `query` — take **every** Show HN in the window and triage it. Phrase queries here
+  cost us the grudges worded any other way ("prohibitively expensive", "they added paid
+  tiers"). Fetch the item with `/api/v1/items/<id>` to read the author's own comments.
 - **Reddit JSON**: `https://www.reddit.com/r/<sub>/new.json?limit=100` for r/SideProject, r/selfhosted, r/opensource, r/webdev, r/macapps, r/vibecoding, r/ClaudeAI. Send a descriptive User-Agent.
 - **GitHub search**: `https://api.github.com/search/repositories?q=<phrase>+created:><date>&sort=stars`
 
@@ -19,20 +21,24 @@ Ordered by signal. Window: last 48 hours unless the run is catching up.
 
 ## Grudge phrases
 
-Search each of these against every tier 1 source:
+These are a **hint, not a gate**. Show HN arrives whole and these only sort it; on Reddit
+and GitHub they are still the filter, so keep them wide. Measured against the grudge
+quotes already listed, this vocabulary recognises 40 of 41 — the one it misses ("I wanted
+a version of Nomad List that was free") is the reminder that the agent reading the post is
+the real detector:
 
-- "free alternative to"
-- "tired of paying"
-- "sick of paying"
-- "refused to pay"
-- "no subscription"
-- "no paywall"
-- "killed the free tier" / "removed the free plan"
-- "went paid" / "now charges"
-- "vibe coded" + "free"
-- "built in a weekend" + "free"
-- "why pay"
-- "upgrade to pro"
+- refusing to pay: "tired of paying", "sick of paying", "refused to pay", "don't want to
+  pay", "wanna pay", "instead of paying", "why pay", "pay monthly", "pay $"
+- the pricing itself: "subscription", "paywalled", "freemium", "free tier", "paid tier",
+  "pro plan", "premium version", "went paid", "now charges", "price hike", "per seat",
+  "per user", "add-on pricing", "contact sales", "pricing page", "$14.99/mo"
+- the feeling: "expensive", "overpriced", "prohibitively", "costs money", "too limited",
+  "limited free", "with ads", "enshittification", "rug pull"
+- the build: "free alternative", "open source alternative", "self-hosted alternative",
+  "free forever", "vibe coded", "weekend"
+
+The live list is `GRUDGE_RE` in `scripts/sweep.py`. When a listed app's own words would not
+have matched it, add them.
 
 ## Verification, per candidate
 
