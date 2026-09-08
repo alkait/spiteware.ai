@@ -234,3 +234,64 @@
   .tbl tfoot .pts{background:var(--pink);color:#fff;font-family:var(--display);font-size:18px}
   /* the "what it means" column is explanation, not data — drop it before the table has to scroll */
   @media (max-width:560px){.tbl td:nth-child(2),.tbl th:nth-child(2){display:none}}
+
+  /* ---------- manifesto (loud on purpose: the rules page's opposite) ---------- */
+  .man{max-width:900px}
+  nav ul{flex-wrap:wrap;justify-content:flex-end}
+
+  .man-hero{background:var(--ink);color:var(--paper);border-bottom:var(--bw) solid var(--ink);
+    padding:clamp(44px,8vw,96px) 0 clamp(40px,7vw,84px)}
+  .man-hero .kicker{background:var(--yellow);color:var(--ink);transform:rotate(-1.5deg)}
+  .man-title{margin:0;text-transform:uppercase;line-height:.84;letter-spacing:-.045em;
+    font-size:clamp(44px,13vw,142px)}
+  .man-title span{display:block}
+  .man-title__the{font-size:.26em;letter-spacing:.24em;color:var(--pink);margin-bottom:.5em;line-height:1}
+  .man-title__a{color:var(--yellow)}
+  .man-title__b{color:var(--paper)}
+  @supports (-webkit-text-stroke:3px black){
+    .man-title__b{color:transparent;-webkit-text-stroke:clamp(2px,.55vw,5px) var(--paper)}
+  }
+  .man-open__a{font-family:var(--mono);font-size:clamp(14px,1.7vw,17px);text-transform:uppercase;letter-spacing:.1em;
+    color:#9a9a9a;margin:clamp(30px,4.5vw,48px) 0 14px;padding-top:16px;border-top:var(--bw) solid #3a3a3a}
+  .man-open__b{font-family:var(--display);font-weight:900;letter-spacing:-.03em;line-height:1.1;
+    font-size:clamp(24px,4.4vw,50px);margin:0;max-width:19ch;text-wrap:balance}
+  .man-rent{background:var(--pink);color:#fff;padding:0 .08em;
+    box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  /* the six theses */
+  .man-body{padding:clamp(30px,5vw,56px) 0 clamp(40px,6vw,72px)}
+  .theses{list-style:none;margin:0;padding:0;border-top:var(--bw) solid var(--ink);counter-reset:th}
+  .theses li{display:grid;grid-template-columns:auto 1fr;align-items:start;
+    gap:clamp(16px,3.5vw,42px);padding:clamp(24px,3.6vw,40px) 0;border-bottom:var(--bw) solid var(--ink)}
+  .theses__n{font-family:var(--display);font-weight:900;line-height:.8;letter-spacing:-.06em;
+    font-size:clamp(38px,7vw,84px);color:var(--pink)}
+  @supports (-webkit-text-stroke:2px black){
+    .theses__n{color:transparent;-webkit-text-stroke:clamp(1.5px,.28vw,3px) var(--ink);
+      transition:color .12s}
+    .theses li:hover .theses__n{color:var(--pink)}
+  }
+  .theses p{margin:0;font-family:var(--display);font-weight:900;letter-spacing:-.025em;line-height:1.16;
+    font-size:clamp(20px,2.9vw,33px);text-wrap:pretty}
+  .mk{padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone;
+    background:linear-gradient(var(--yellow),var(--yellow)) no-repeat;background-size:100% 66%;background-position:0 62%}
+  @media (max-width:560px){.theses li{grid-template-columns:1fr;gap:10px}}
+
+  /* the wall */
+  .wall{position:relative;overflow:hidden;border-top:var(--bw) solid var(--ink);
+    padding:clamp(54px,9vw,110px) 0;background-color:#151515;
+    background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='60'><rect width='120' height='60' fill='%23151515'/><g stroke='%23262626' stroke-width='3' fill='none'><path d='M0 1.5H120M0 30H120M0 58.5H120'/><path d='M0 0V30M60 0V30M120 0V30M30 30V60M90 30V60'/></g></svg>")}
+  .wall__crack{position:absolute;inset:0;width:100%;height:100%;opacity:.3;pointer-events:none}
+  .wall__poster{position:relative;max-width:660px;margin:0 auto;transform:rotate(-1.2deg);
+    background:var(--paper);border:var(--bw) solid var(--ink);box-shadow:14px 14px 0 var(--pink);
+    padding:clamp(28px,5vw,52px)}
+  .wall__lead{margin:0 0 10px;font-family:var(--mono);font-size:clamp(13px,1.6vw,15px);
+    text-transform:uppercase;letter-spacing:.1em;color:#555}
+  .wall__hit{font-size:clamp(34px,6.6vw,68px);line-height:.92;letter-spacing:-.04em;margin:0}
+  .wall__rule{border:0;border-top:var(--bw) dashed var(--ink);margin:clamp(24px,4vw,36px) 0}
+  .wall__cta{font-family:var(--display);font-weight:900;font-size:clamp(24px,4vw,40px);
+    line-height:.98;letter-spacing:-.03em;margin:0 0 22px}
+  .sticker--welcome{bottom:-20px;right:-14px;background:var(--ink);color:var(--yellow);transform:rotate(-4deg)}
+  @media (max-width:520px){
+    .wall__poster{transform:none;box-shadow:8px 8px 0 var(--pink)}
+    .sticker--welcome{right:auto;left:-8px;bottom:-22px;font-size:11px}
+  }
