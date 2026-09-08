@@ -38,7 +38,13 @@
   nav a:hover{border-color:var(--ink);background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}
   nav a[aria-current]{border-bottom-color:var(--pink)}
   nav a[aria-current]:hover{border-color:var(--ink);border-bottom-color:var(--pink)}
-  @media (max-width:560px){nav a{padding:8px 8px;font-size:12px}}
+  nav li{display:flex;align-items:center}
+  nav li+li::before{content:"";width:1px;height:13px;background:var(--ink);opacity:.22;margin-right:6px}
+  /* the nav wraps when it runs out of room; a wrapped row must not open with a divider */
+  @media (max-width:640px){nav li+li::before{display:none}}
+  .nav__n{display:inline-block;margin-left:5px;padding:1px 5px;background:var(--ink);color:#fff;
+    font-size:11px;font-weight:700;letter-spacing:.02em;vertical-align:1px}
+  @media (max-width:560px){nav a{padding:8px 8px;font-size:12px} .nav__n{font-size:10px;padding:1px 4px}}
 
   /* ---------- spotlight (hall of petty fame) ---------- */
   .spot__card{display:grid;grid-template-columns:230px 1fr;gap:38px;align-items:center;margin-top:30px;
