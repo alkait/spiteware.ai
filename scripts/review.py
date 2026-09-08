@@ -7,7 +7,11 @@ Approve / reject / edit write straight back to queue/*.json. Merge runs scripts/
 import json, sys, pathlib, http.server, urllib.parse, importlib.util
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-spec = importlib.util.spec_from_file_location("merge", ROOT / "scripts/merge.py"); M = importlib.util.module_from_spec(spec); spec.loader.exec_module(M)
+def load_merge():
+    """Re-read merge.py on every use. The desk stays up for days; loading it
+    once at startup silently serves whatever merge.py looked like back then."""
+    spec = importlib.util.spec_from_file_location("merge", ROOT / "scripts/merge.py")
+    M = importlib.util.module_from_spec(spec); spec.loader.exec_module(M); return M
 
 def queue_files():
     return sorted((p for p in (ROOT / "queue").glob("*.json") if not p.name.startswith("raw-")), reverse=True)
@@ -43,6 +47,7 @@ class H(http.server.SimpleHTTPRequestHandler):
                     if "grudge" in body: c["grudge"].update(body["grudge"])
             qf.write_text(json.dumps(q, indent=2, ensure_ascii=False) + "\n"); return self._json({"ok": True})
         if p == "/api/merge":
+            M = load_merge()
             res = [dict(M.merge(qf), file=qf.name) for qf in queue_files()]; return self._json({"ok": True, "results": res})
         self._json({"error": "unknown"}, 404)
 
