@@ -1168,5 +1168,62 @@
     "vibe_coded": false,
     "spite_score": 5,
     "added": "2026-09-07"
+  },
+  {
+    "slug": "openterminal",
+    "name": "OpenTerminal",
+    "url": "https://github.com/FrenchBen/OpenTerminal",
+    "icon": "📟",
+    "tagline": "Bloomberg wants $2,665 a month for a dark screen full of numbers. This is a dark screen full of numbers that runs on your laptop, off free public data, for nothing.",
+    "replaces": {
+      "name": "Bloomberg Terminal",
+      "price": "$2,665/mo",
+      "source": "https://costbench.com/software/financial-data-terminals/bloomberg-terminal/"
+    },
+    "grudge": {
+      "quote": "Real trading terminals cost $2,000+ a month. Most retail dashboards either lock the good stuff behind a paywall or run on a single flaky data source that breaks the moment you actually need it.",
+      "source": "https://github.com/FrenchBen/OpenTerminal#why-openterminal"
+    },
+    "builder": {
+      "name": "French Ben",
+      "handle": "FrenchBen",
+      "url": "https://github.com/FrenchBen"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "finance"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-08"
+  },
+  {
+    "slug": "intrivox",
+    "name": "Intrivox",
+    "url": "https://github.com/giriaryan694-a11y/Intrivox",
+    "icon": "🎯",
+    "tagline": "Burp Suite's Intruder costs $499 a year. Intrivox fuzzes the same requests for zero, and throws in eight themes Burp never offered.",
+    "replaces": {
+      "name": "Burp Suite Professional",
+      "price": "$499/yr",
+      "source": "https://portswigger.net/burp/pro"
+    },
+    "grudge": {
+      "quote": "Built as a free alternative to Burp Suite's Intruder module, Intrivox provides professional-grade fuzzing capabilities without the enterprise price tag.",
+      "source": "https://github.com/giriaryan694-a11y/Intrivox#a-free-open-source-alternative-to-burp-suite-intruder"
+    },
+    "builder": {
+      "name": "Aryan Giri",
+      "handle": "giriaryan694-a11y",
+      "url": "https://github.com/giriaryan694-a11y"
+    },
+    "tags": [
+      "desktop",
+      "dev-tools"
+    ],
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-08"
   }
 ]

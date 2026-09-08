@@ -1,0 +1,26 @@
+{
+  "run": "2026-09-08",
+  "swept": "hn (48h), reddit json + rss (mostly 429), github, last30days",
+  "raw_hits": 45,
+  "triaged": 12,
+  "candidates": [],
+  "dropped": [
+    "StringSync: perfect grudge ('tired of downloading guitar tuner apps only to find subscriptions') but the app is $1.49 once — not free, fails gate 2.",
+    "Optia: explicit grudge about SEO tools demanding a subscription, then ships Pro at $5/month from the same maker — open-core, automatic reject.",
+    "Qumra: names Loom and its pricing as the reason, but qumra.io sells Premium at $14.99/mo with a 7-day trial — open-core, automatic reject.",
+    "Local self-hosted trading bot (r/selfhosted, u/Puzzleheaded_Mix4357): best grudge of the day ('a deep hatred for monthly SaaS subscriptions') and names 3Commas and TradingView, but the post links no repo or site — nothing to verify against gate 2, and no name to list it under.",
+    "ANOTHER DUMB PROJECT (r/SideProject): '$35/mo to wait for cloud video upload queues' is a real grudge, but there is no link, no name, and no shipped build.",
+    "FoxTask: 'no subscription' is a feature bullet; the stated reason for building was tiredness of app-switching, not price — fails gate 1.",
+    "Hound Media Server: positioned against Plex and Stremio, but the Show HN and README argue features, never price — no grudge quote.",
+    "macos-free-pdf-toolkit: 'no upload, no subscription' is a tagline, not a stated reason for building — fails gate 1.",
+    "split-the-expenses: repo description says 'free alternative to Splitwise' and the README says nothing else — no grudge quote.",
+    "Batcave: repo is one line of profile text, no app, no grudge.",
+    "Cloudflare-ZeroTrust-Adblock-Updater: a script, not an app, and it needs a Cloudflare account and API token before it does anything.",
+    "Renewlet: a self-hosted subscription tracker with no grudge against any paid tool — ironic, not spiteware.",
+    "Meter Beater: free, open source and about subscription cost, but the builder never says a paid tool drove him to build it.",
+    "Sidstuga, StreamSnap, Gote, mdedit, Cucumbero, TsumeRush, Vitaslop, PermitSnag, PDF Measuring Tool, Keyclasp: shipped and free-ish, but every stated motivation is a features or UX complaint, never a price one.",
+    "JustFill, Tucky, NightDesk, ReviewMix, CallCash, Deesca, PicDraw, OurDateKeeper, OnTheRice, DateMeAgent, Namma Rush, Manhattan Safety Atlas, Gigantic Research: paid, freemium, or account-gated — matched a sweep phrase because they were selling one.",
+    "income-os, ai-video-bootcamp-2026, Automated-Pre-Market-SPY-QQQ, ansible-role-proxmox: scripts, curricula and config, not apps.",
+    "CosmoKit (via last30days): free iOS simulator tool, but no grudge and no named victim."
+  ]
+}
