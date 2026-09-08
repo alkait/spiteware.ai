@@ -1227,5 +1227,123 @@
     "vibe_coded": false,
     "spite_score": 8,
     "added": "2026-09-08"
+  },
+  {
+    "slug": "laberbacke",
+    "name": "Laberbacke",
+    "url": "https://github.com/till10k/Laberbacke-Releases",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow charges $15 a month to turn your voice into text. Laberbacke charges you Google's actual rate — about a dollar — and keeps every transcript on your Mac.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "Because you would pay $180 a year for something you can have for the price of a coffee — per year.",
+      "source": "https://github.com/till10k/Laberbacke-Releases#why-not-just-buy-wispr-flow"
+    },
+    "builder": {
+      "name": "till10k",
+      "handle": "till10k",
+      "url": "https://github.com/till10k"
+    },
+    "tags": [
+      "macos",
+      "byo-key",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-08"
+  },
+  {
+    "slug": "transcribe",
+    "name": "transcribe",
+    "url": "https://github.com/joshdaxelrod/transcribe",
+    "icon": "🎧",
+    "tagline": "Otter wanted eighty dollars a year from a freelance journalist. This runs Whisper on your own laptop and hands back the same interview transcripts for nothing.",
+    "replaces": {
+      "name": "Otter Pro",
+      "price": "$16.99/mo",
+      "source": "https://otter.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I used to pay for Otter (80 bucks a year as a freelance journalist, egad!) and then I used a wonderful service called Scroll that was free for journalists.",
+      "source": "https://github.com/joshdaxelrod/transcribe"
+    },
+    "builder": {
+      "name": "Josh Axelrod",
+      "handle": "joshdaxelrod",
+      "url": "https://github.com/joshdaxelrod"
+    },
+    "tags": [
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-08"
+  },
+  {
+    "slug": "lightmaker",
+    "name": "Lightmaker",
+    "url": "https://astro-softwares.github.io/Lightmaker/",
+    "icon": "💡",
+    "tagline": "Adobe rents you Lightroom at $11.99 a month to light a photo you already took. Lightmaker does it in a browser tab, for free, and never asks for the negative.",
+    "replaces": {
+      "name": "Adobe Lightroom",
+      "price": "$11.99/mo",
+      "source": "https://www.adobe.com/creativecloud/plans.html"
+    },
+    "grudge": {
+      "quote": "Add lights to your photos without paying for lights, or overpriced software!",
+      "source": "https://github.com/Astro-Softwares/Lightmaker"
+    },
+    "builder": {
+      "name": "Astro Softwares",
+      "handle": "Astro-Softwares",
+      "url": "https://github.com/Astro-Softwares"
+    },
+    "tags": [
+      "web",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "spite_score": 8,
+    "added": "2026-09-08"
+  },
+  {
+    "slug": "csvpreview",
+    "name": "CSV Preview",
+    "url": "https://csvpreview.com",
+    "icon": "📊",
+    "tagline": "Open a CSV online, hit a popup wanting your card before you can sort a column. CSV Preview does the sorting, filtering and editing in your own browser tab and never asks.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most of the tools were asking me to sign up, some of them allowed me to open CSV but then came a big popup asking for my credit card so that I can edit it or use some filters, and lot of them were sending CSV to server in case it was large.",
+      "source": "https://news.ycombinator.com/item?id=49605314"
+    },
+    "builder": {
+      "name": "anshulsahni",
+      "handle": "anshulsahni",
+      "url": "https://news.ycombinator.com/user?id=anshulsahni"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "spite_score": 3,
+    "added": "2026-09-08"
   }
 ]

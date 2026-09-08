@@ -1,8 +1,8 @@
 {
   "run": "2026-09-08",
-  "swept": "hn (48h), reddit json + rss (mostly 429), github, last30days",
-  "raw_hits": 45,
-  "triaged": 12,
+  "swept": "hn show hn (48h, all 228 triaged), reddit json (r/webdev + r/ClaudeAI 429'd), github, last30days (--days 3, 60 items; instagram + polymarket down)",
+  "raw_hits": 395,
+  "triaged": 27,
   "candidates": [],
   "dropped": [
     "StringSync: perfect grudge ('tired of downloading guitar tuner apps only to find subscriptions') but the app is $1.49 once — not free, fails gate 2.",
@@ -21,6 +21,28 @@
     "Sidstuga, StreamSnap, Gote, mdedit, Cucumbero, TsumeRush, Vitaslop, PermitSnag, PDF Measuring Tool, Keyclasp: shipped and free-ish, but every stated motivation is a features or UX complaint, never a price one.",
     "JustFill, Tucky, NightDesk, ReviewMix, CallCash, Deesca, PicDraw, OurDateKeeper, OnTheRice, DateMeAgent, Namma Rush, Manhattan Safety Atlas, Gigantic Research: paid, freemium, or account-gated — matched a sweep phrase because they were selling one.",
     "income-os, ai-video-bootcamp-2026, Automated-Pre-Market-SPY-QQQ, ansible-role-proxmox: scripts, curricula and config, not apps.",
-    "CosmoKit (via last30days): free iOS simulator tool, but no grudge and no named victim."
+    "CosmoKit (via last30days): free iOS simulator tool, but no grudge and no named victim.",
+    "Pia (trypia.app): best grudge of the run ('I didnt want to pay $50/month just to post on multiple accounts') but the site has a Pricing section at $0.02/post — not free, fails gate 2.",
+    "Bol: names Wispr Flow and ships free and offline, but '100% free, zero subscription' is a feature bullet, never a stated reason for building — fails gate 1.",
+    "RiftPDF: 'no uploads, no account, no subscription' is the opening tagline, not a grudge — same call as macos-free-pdf-toolkit.",
+    "Ultimate File Manager Pro: FOSS build is free, but the same maker ships a store build with Google Play billing — open-core, automatic reject.",
+    "Youtube-dowloader: the description is a real grudge about YouTube Premium, but the repo is 1 KB of README with no code in it.",
+    "TypeSeer: 'pay monthly' matched because it sells a licence — 14-day trial then Buy, fails gate 2.",
+    "DiskBuddy ($19), McKinley ($60), Mailward (Pricing page): all paid, matched the sweep because they were selling something.",
+    "minimo: free, open source and on-device, but the stated reason was privacy — 'without uploading private footage to a server' — not price.",
+    "Parchley: has a Pricing section that reads 'Free. There are no paid features', yet the stated problem was uploads and CLI hassle, never cost.",
+    "NotePadMac: 'no subscription' is a feature bullet; the reason given is that no Windows Notepad exists for Mac.",
+    "Dol: local-first notes syncing to your own CouchDB, free, but no grudge anywhere in the post or on the site.",
+    "Kado: open-source iOS habit tracker with an IAP that is purely a tip — free and quotable, but no price grudge.",
+    "Sol (macOS music player, 'now free and open source'): the builder deleted the GitHub repo mid-thread, nothing left to verify.",
+    "Caveat: self-hosted newsletter tool, but the stated motive is control over design and subscriber data, not price.",
+    "Ontoplano: FOSS life manager, no ads and no telemetry, but the grudge is against sharing data with Google — privacy, not cost.",
+    "Byosynch: Dropbox grudge, then the post says plainly 'This is a paid service, designed to finance continued development.'",
+    "Hazzel, Expose, BorderCut, repo2nb-cli, JarPeek, perlerbeads.net: free and plausible, but no price grudge in the README, the post or the site.",
+    "Sunshine following Plex (r/selfhosted): a GitHub issue about an existing project's direction, not a new app.",
+    "Paywalled-teleprompter post (r/vibecoding, via last30days): perfect grudge in the title — 'I got fed up with paywalled teleprompter apps, so I built my own voice-driven one' — but the post body is [removed] and names no app, so there is nothing to verify or list.",
+    "VoicePrompter (voiceprompter.app): free open-source web app, but the native apps cap you at 3 scripts and then charge — fails gate 2.",
+    "VoicePrompt (voiceprompt.live): free with no pricing anywhere, but the builders say 'We built this because we needed it ourselves' — the $10-15/month comparison is positioning, not a stated reason. Fails gate 1.",
+    "Free client-side image resizer, 4K YouTube thumbnail grabber, side-hustle tax calculator, FlatBB (all via last30days): free and shipped, but every post body is [removed] or carries no grudge."
   ]
 }
