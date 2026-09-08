@@ -301,3 +301,89 @@
     .wall__poster{transform:none;box-shadow:8px 8px 0 var(--pink)}
     .sticker--welcome{right:auto;left:-8px;bottom:-22px;font-size:11px}
   }
+
+  /* ================= mobile ================= */
+  /* The sticky header, the tag wall and the hero decorations are the three things
+     that don't survive a narrow screen unchanged. Everything else just reflows. */
+
+  /* anchors clear the sticky header instead of hiding under it */
+  section[id],[id]:target{scroll-margin-top:96px}
+
+  /* the menu button only exists once JS is running; without it the nav stays a
+     plain wrapping list, which is ugly but complete */
+  .menu__btn{display:none;align-items:center;gap:9px;font-family:var(--mono);font-size:13px;text-transform:uppercase;
+    letter-spacing:.08em;padding:11px 14px;background:var(--yellow);color:var(--ink);
+    border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);cursor:pointer;line-height:1}
+  header.is-open .menu__btn{background:var(--ink);color:var(--yellow);box-shadow:none;transform:translate(3px,3px)}
+  .menu__bars{position:relative;width:18px;height:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+  header.is-open .menu__bars{box-shadow:none;transform:rotate(45deg)}
+  header.is-open .menu__bars::after{content:"";position:absolute;inset:0;background:currentColor;transform:rotate(-90deg)}
+
+  @media (max-width:699px){
+    .js .menu__btn{display:inline-flex}
+    /* the nav drops out of the header as a full-width panel */
+    .js header nav{position:absolute;top:100%;left:0;right:0;display:none;background:var(--paper);
+      border-bottom:var(--bw) solid var(--ink);box-shadow:0 8px 0 rgba(17,17,17,.12)}
+    .js header.is-open nav{display:block}
+    .js header nav ul{flex-direction:column;flex-wrap:nowrap;gap:0;padding:10px 20px 16px}
+    .js header nav li{display:block}
+    .js header nav li+li::before{display:none}
+    .js header nav a{display:block;padding:14px 12px;font-size:14px;border:var(--bw) solid transparent}
+    .js header nav a[aria-current]{background:var(--yellow);border-color:var(--ink);box-shadow:3px 3px 0 var(--ink);border-bottom-color:var(--ink)}
+    .js .nav{padding:10px 0}
+  }
+
+  /* once the hero is one column the pink circle lands on the headline, not beside it */
+  @media (max-width:860px){ .blob--1{display:none} }
+  @media (max-width:700px){
+    /* the triangle is rotated, so its bounding box needs slack or the page scrolls sideways */
+    .blob--2{border-left-width:44px;border-right-width:44px;border-bottom-width:76px;right:12px;top:-58px}
+    .dict{transform:none;box-shadow:7px 7px 0 var(--blue);padding:22px}
+    .sticker--free{top:-14px;right:-4px;font-size:11px}
+    .sticker--new{bottom:-12px;left:-6px;font-size:11px}
+  }
+
+  /* 16px keeps iOS from zooming the page when a field takes focus */
+  @media (max-width:760px){ .search,.sort{font-size:16px} }
+  @media (max-width:560px){ .search,.sort{flex:1 1 100%} .sort{width:100%} }
+
+  /* the tag bar folds away on phones so the grid is the first thing below search */
+  .tagfold{margin-bottom:24px}
+  .tagfold>.tagbar{margin-bottom:0}
+  .tagfold__s{display:none}
+  @media (max-width:759px){
+    .tagfold{border:var(--bw) solid var(--ink);background:#fff;box-shadow:4px 4px 0 var(--ink)}
+    .tagfold__s{display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:13px 14px;cursor:pointer;list-style:none;font-family:var(--mono);font-size:13px;
+      text-transform:uppercase;letter-spacing:.06em}
+    .tagfold__s::-webkit-details-marker{display:none}
+    .tagfold__t::after{content:" ▾"}
+    .tagfold[open] .tagfold__t::after{content:" ▴"}
+    .tagfold__now{background:var(--yellow);border:2px solid var(--ink);padding:3px 8px;font-size:12px}
+    .tagfold[open] .tagfold__s{border-bottom:var(--bw) solid var(--ink)}
+    .tagfold>.tagbar{padding:14px}
+    .tagbtn{padding:10px 12px}
+  }
+
+  /* touch: no pointer means no hover, so the lifted states would stick after a tap */
+  @media (hover:none){
+    .card:hover,.card--more:hover,.card:nth-child(3n+1):hover,.card:nth-child(3n+2):hover,.card:nth-child(3n+3):hover
+      {transform:none;box-shadow:var(--shadow)!important}
+    .btn:hover{transform:none;box-shadow:var(--shadow)}
+    .card:active{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)!important}
+    .theses li:hover .theses__n{color:transparent}
+    .logo:hover em{transform:rotate(8deg)}
+  }
+
+  /* a link is a tap target too */
+  @media (max-width:700px){
+    .spot__go{display:inline-block;padding:12px 0}
+    .foot__meta{line-height:2.2}
+  }
+
+  /* smallest phones: buy back the gutters */
+  @media (max-width:360px){
+    .wrap{padding:0 14px}
+    .card{padding:16px}
+    .logo__stack span{padding:3px 6px}
+  }

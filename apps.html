@@ -23,7 +23,8 @@
       <span class="logo__stack" aria-hidden="true"><span>SPITE</span><span>WARE</span></span>
       <em aria-hidden="true">.ai</em>
     </a>
-    <nav aria-label="Main">
+    <button class="menu__btn" type="button" id="menubtn" aria-expanded="false" aria-controls="mainnav"><span class="menu__bars" aria-hidden="true"></span>Menu</button>
+    <nav aria-label="Main" id="mainnav">
       <ul>
         <li><a href="./">Home</a></li>
         <li><a href="apps.html" aria-current="page">Apps <span class="nav__n" data-apps>—</span></a></li>
@@ -51,7 +52,10 @@
           <option value="name">a to z</option>
         </select>
       </div>
-      <div class="tagbar" id="tags"></div>
+      <details class="tagfold" id="tagfold" open>
+        <summary class="tagfold__s"><span class="tagfold__t">Filter by tag</span><span class="tagfold__now" id="tagnow"></span></summary>
+        <div class="tagbar" id="tags"></div>
+      </details>
       <div class="grid" id="grid"></div>
       <p class="none" id="none" hidden>Nothing matches. Either nobody has been that petty yet, or you should <a href="./#submit">submit it</a>.</p>
     </div>
@@ -108,9 +112,14 @@ SW.ready(apps => {
     const u=new URLSearchParams(); if(s)u.set('q',q.value.trim()); if(tag)u.set('tag',tag); if(sort.value!=='spite')u.set('sort',sort.value);
     history.replaceState(null,'',u.toString()?`?${u}`:location.pathname);
   }
-  tagbar.addEventListener('click',e=>{const b=e.target.closest('[data-t]'); if(!b) return; tag=(b.dataset.t===tag)?'':b.dataset.t; renderTags(); apply();});
+  // The tag bar is a wall of buttons; on a phone it would bury the grid, so it folds away.
+  const fold=document.getElementById('tagfold'), now=document.getElementById('tagnow');
+  const wide=matchMedia('(min-width:760px)');
+  const syncFold=()=>{fold.open=wide.matches;}; syncFold(); wide.addEventListener('change',syncFold);
+  const label=()=>{now.textContent=tag?`${tag} · ${counts[tag]}`:`all · ${apps.length}`;};
+  tagbar.addEventListener('click',e=>{const b=e.target.closest('[data-t]'); if(!b) return; tag=(b.dataset.t===tag)?'':b.dataset.t; renderTags(); label(); apply(); if(!wide.matches) fold.open=false;});
   q.addEventListener('input',apply); sort.addEventListener('change',apply);
-  renderTags(); apply();
+  renderTags(); label(); apply();
 });
 </script>
 </body>

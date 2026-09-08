@@ -29,6 +29,19 @@
     addEventListener('hashchange', syncNav); syncNav();
   }
 
+  // Mobile menu: below 700px the nav is a panel behind a button. The button only
+  // exists once JS is here, so a no-JS phone still gets the plain wrapped nav.
+  const menuBtn = $('#menubtn'), header = $('header');
+  if (menuBtn && header) {
+    document.documentElement.classList.add('js');
+    const setOpen = v => { header.classList.toggle('is-open', v); menuBtn.setAttribute('aria-expanded', String(v)); };
+    menuBtn.addEventListener('click', () => setOpen(!header.classList.contains('is-open')));
+    // Tapping a link, hitting escape, or growing past the breakpoint all close it.
+    nav?.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
+    addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+    matchMedia('(min-width:700px)').addEventListener('change', () => setOpen(false));
+  }
+
   // Marquee: duplicate content so it loops seamlessly
   const t = $('#ticker'); if (t) t.innerHTML += t.innerHTML;
 
