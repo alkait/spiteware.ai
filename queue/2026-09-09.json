@@ -1,0 +1,28 @@
+{
+  "run": "2026-09-09",
+  "swept": "hn show hn (48h, all 275 triaged), reddit rss (r/SideProject + r/ClaudeAI only — selfhosted, opensource, webdev, macapps, vibecoding, indiehackers all 429'd), github, last30days (--days 3, 35 items; instagram 404, polymarket unreachable)",
+  "raw_hits": 340,
+  "triaged": 26,
+  "candidates": [],
+  "dropped": [
+    "Uttra: best grudge of the run — 'I built it because Wispr Flow is a subscription and sends your dictation to their servers, and I didn't want either' — and it names Wispr Flow, but it's $6.99 one-time on the App Store. Not free, fails gate 2.",
+    "Noralia (mintlane.io): 'paywalls creeping in' is a real stated reason and the landing page says free, but the Reddit post admits 'A small in-app upgrade unlocks a widget, longer predictions and a few extra functions' — open-core, automatic reject.",
+    "Dictámelo: MIT-licensed voice dictation tagged 'wispr-flow-alternative', but the same maker ships Pro at $4.99/month — open-core, automatic reject.",
+    "Octoweb: free, open source, no pricing anywhere, and 'No trial, no paid tier, no account to create' — but that is a stance, not a stated reason for building. The README argues keyboards vs mice, the HN post has no text and the author left no comments. Fails gate 1.",
+    "Crossposter: free, open source, and the FAQ contrasts it with Buffer and Hootsuite as 'a paid third-party service' — but the stated reason for building is 'to make it easier to share existing content across platforms'. Positioning, not a grudge. Same call as VoicePrompt yesterday.",
+    "StimuStop: genuinely free with an unusually honest no-paid-tier promise, but the site never says a paid app drove the build — fails gate 1.",
+    "PushSense (via last30days, TikTok): perfect grudge in the caption — 'Apparently I'd rather build an app than pay for another subscription' — but the app has no site, no repo and no store link anywhere, so there is nothing to verify against gate 2.",
+    "Felan: free open-source coding agent that 'aims to help people reduce their coding spend', but reducing token spend is the product's purpose, not a grudge against a paid tool.",
+    "Manymux: self-declared vibecoded terminal multiplexer, but the stated motivation is disliking herdr's UI — features, not price.",
+    "Readerbeam: builder explicitly asks for feedback on 'whether the one-time pricing model makes sense' — it's priced, fails gate 2.",
+    "MacTap, Hush, mdedit, PDF Measuring Tool, Manhattan Safety Atlas, Inbundly, Remarc: shipped and free-ish, but every stated motivation is friction or UX, never cost.",
+    "x-activity-cleaner, aashisrjl/toolbox, a-saeedia/vedits: 'no subscriptions' / 'no paid tiers' is a feature bullet in the repo description with no stated reason for building — fails gate 1.",
+    "clankerceo/watch: 'no account, no card, no subscription' then 'Free 7 days, then $5 once for a year' — fails gate 2.",
+    "bol, RiftPDF, Youtube-dowloader, Hound Media Server, Caveat, Gote, Qumra, Sol: already triaged and dropped on 2026-09-07 or 2026-09-08; nothing changed.",
+    "GridSweeper, StudoKart, Toku, AeroLink, rideweave-adjacent hardware repos: 'expensive' matched, but these are DIY hardware, marketplaces or abandoned stubs, not apps built against a paid tool.",
+    "free-finder: a list of free alternatives, not an app with a grudge — and a directory, not a tool.",
+    "Traklist, skrivant, impactrackr, Clean Space, lairner, RDLTR, prime-agent-studio, transcript.md: free plan plus a paid tier, or account-gated, or still a concept with no shipped build.",
+    "Roomantic, EndFrame, Rejourney, SiteTell, timelinescan, Posterlet, Nexconn, DepWarden, unfetch, Office42, MacDelta, Tangerine, Gremlord, i-hate-editing: matched a sweep phrase, but each is either selling something, account-gated, or carries no price grudge in the post, README or site.",
+    "r/ClaudeAI subscription threads (VAT billing, Max vs Astra, usage limits) and r/SideProject 'fully offline no subscription video editor': real complaints about price, but no shipped app to list."
+  ]
+}

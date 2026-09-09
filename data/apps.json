@@ -1345,5 +1345,35 @@
     "vibe_coded": false,
     "spite_score": 3,
     "added": "2026-09-08"
+  },
+  {
+    "slug": "chess-analytics",
+    "name": "Chess Analytics",
+    "url": "https://github.com/ridge-poll/chess",
+    "icon": "♟️",
+    "tagline": "Stockfish, your whole game history and a real dashboard, running on your own laptop — where nobody can put the good analysis behind a monthly plan.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Free, local chess analysis because subscriptions are expensive.",
+      "source": "https://github.com/ridge-poll/chess"
+    },
+    "builder": {
+      "name": "ridge-poll",
+      "handle": "ridge-poll",
+      "url": "https://github.com/ridge-poll"
+    },
+    "tags": [
+      "self-hosted",
+      "local-first",
+      "games"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "spite_score": 5,
+    "added": "2026-09-09"
   }
 ]
