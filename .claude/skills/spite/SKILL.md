@@ -31,15 +31,19 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
    - If the builder names the tool they're reacting to, record it, and fetch its pricing page for plan name, price, and URL. If unreachable, use a dated 2026 secondary source and set note `secondary`. Never guess a victim or a price; leave the field empty instead.
    - Note builder name and handle. Set `open_source` true if the project has a public
      GitHub repo — the app's own URL or one linked from its landing page; that is the
-     whole test, no licence check. Set `vibe_coded` if the builder says AI or vibe
-     coding was used. Both are scored, and both drive their own filter button.
+     whole test, no licence check. Record that repo as `owner/name` in `repo`; if the
+     app's own URL is a github.com link, derive it from there. `repo` is what
+     `scripts/star.py` stars, so an open-source app without it is a silent miss.
+     Set `vibe_coded` if the builder says AI or vibe coding was used. Both are scored,
+     and both drive their own filter button.
 
 5. **Score** each with `python3 scripts/score.py` after the queue is written — the score
    is a pure function of the fields, so do not assign it by hand. Apply the automatic rejects. Everything that passes both gates goes to the queue; the score is for sorting.
 
 6. **Draft cards** into `queue/YYYY-MM-DD.json` using exactly the schema in `queue/README.md`. Every candidate starts `"status": "pending"`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Tag from the closed list in `criteria.md` — at most 3, never a word that isn't on it; `utilities` is the catch-all. Fill `why` with the score breakdown. Put dropped candidates with one-line reasons in the `dropped` array.
 
-7. **Open the review desk.** Check `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4322/`. If it isn't 200, start `(nohup python3 scripts/review.py 4322 >/dev/null 2>&1 &)`. Never use pkill in this repo's shell; it kills the session. Then open http://localhost:4322/ in the browser. The user approves, rejects, and edits there.
+7. **Open the review desk.** Approving a candidate there also stars its `repo` from the
+   user's GitHub account, so `repo` must be filled in by step 4 or the star is skipped. Check `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4322/`. If it isn't 200, start `(nohup python3 scripts/review.py 4322 >/dev/null 2>&1 &)`. Never use pkill in this repo's shell; it kills the session. Then open http://localhost:4322/ in the browser. The user approves, rejects, and edits there.
 
 8. **Report** to the user in under 150 words: how many hits, how many survived, the top three by score with one line each, and that the review desk is open. Say plainly if a source failed.
 
@@ -51,7 +55,12 @@ The review desk has a Merge button that does the same thing. This mode is for wh
 
 1. Run `python3 scripts/merge.py` (defaults to the newest queue file) and show its output.
 2. Run `python3 -c "import json;json.load(open('data/apps.json'))"` to confirm the JSON is valid.
-3. Commit and push only if the user asks. A push publishes to GitHub Pages.
+3. Run `python3 scripts/star.py` to star the newly listed repos from the user's GitHub
+   account, and show its output. The desk stars on Approve, so this is the backstop for
+   the chat path and for any star that failed at the time. It reads `data/apps.json`,
+   not the queue, so re-running is free. Report any `RENAMED` or `UNRESOLVABLE` lines —
+   those are stale `repo` values to fix by hand, not noise.
+4. Commit and push only if the user asks. A push publishes to GitHub Pages.
 
 ## Mode: status (`/spite status`)
 

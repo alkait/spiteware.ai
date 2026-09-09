@@ -24,8 +24,8 @@
       "writing"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 6,
     "added": "2026-09-06"
   },
@@ -54,8 +54,8 @@
       "forms"
     ],
     "open_source": true,
-    "repo": "Luigigreco/gitforms",
     "vibe_coded": false,
+    "repo": "Luigigreco/gitforms",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -84,8 +84,8 @@
       "productivity"
     ],
     "open_source": true,
-    "repo": "Hkattelu/Sanctuary",
     "vibe_coded": true,
+    "repo": "Hkattelu/Sanctuary",
     "spite_score": 10,
     "added": "2026-09-06"
   },
@@ -114,8 +114,8 @@
       "images"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 6,
     "added": "2026-09-06"
   },
@@ -144,8 +144,8 @@
       "dictation"
     ],
     "open_source": true,
-    "repo": "zachlatta/freeflow",
     "vibe_coded": false,
+    "repo": "zachlatta/freeflow",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -175,8 +175,8 @@
       "writing"
     ],
     "open_source": true,
-    "repo": "Kryhr/lag-writer",
     "vibe_coded": false,
+    "repo": "Kryhr/lag-writer",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -206,8 +206,8 @@
       "ai"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 6,
     "added": "2026-09-06"
   },
@@ -236,8 +236,8 @@
       "marketing"
     ],
     "open_source": true,
-    "repo": "vaitko/locan-tools",
     "vibe_coded": false,
+    "repo": "vaitko/locan-tools",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -266,8 +266,8 @@
       "finance"
     ],
     "open_source": true,
-    "repo": "spliit-app/spliit",
     "vibe_coded": true,
+    "repo": "spliit-app/spliit",
     "spite_score": 10,
     "added": "2026-09-06"
   },
@@ -296,8 +296,8 @@
       "learning"
     ],
     "open_source": true,
-    "repo": "daxaur/tabia",
     "vibe_coded": false,
+    "repo": "daxaur/tabia",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -326,8 +326,8 @@
       "video"
     ],
     "open_source": true,
-    "repo": "jkuri/reframed",
     "vibe_coded": false,
+    "repo": "jkuri/reframed",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -356,8 +356,8 @@
       "images"
     ],
     "open_source": true,
-    "repo": "vegidio/open-photo-ai",
     "vibe_coded": false,
+    "repo": "vegidio/open-photo-ai",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -386,8 +386,8 @@
       "forms"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 6,
     "added": "2026-09-06"
   },
@@ -415,8 +415,8 @@
       "health"
     ],
     "open_source": true,
-    "repo": "openstrap/edge",
     "vibe_coded": false,
+    "repo": "openstrap/edge",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -445,8 +445,8 @@
       "marketing"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 6,
     "added": "2026-09-06"
   },
@@ -475,8 +475,8 @@
       "video"
     ],
     "open_source": true,
-    "repo": "cw12574/fovea",
     "vibe_coded": false,
+    "repo": "cw12574/fovea",
     "spite_score": 8,
     "added": "2026-09-06"
   },
@@ -506,8 +506,8 @@
       "career"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 6,
     "added": "2026-09-06"
   },
@@ -536,15 +536,15 @@
       "video"
     ],
     "open_source": true,
-    "repo": "wassgha/rescript",
     "vibe_coded": true,
+    "repo": "wassgha/rescript",
     "spite_score": 10,
     "added": "2026-09-07"
   },
   {
     "slug": "eztest",
     "name": "EZTest",
-    "url": "https://github.com/houseoffoss/eztest",
+    "url": "https://github.com/belsterns/eztest",
     "icon": "🧪",
     "tagline": "Test management is a spreadsheet with a login. Testiny charges $19 a seat for it; EZTest charges nothing.",
     "replaces": {
@@ -566,8 +566,8 @@
       "dev-tools"
     ],
     "open_source": true,
-    "repo": "houseoffoss/eztest",
     "vibe_coded": true,
+    "repo": "belsterns/eztest",
     "spite_score": 10,
     "added": "2026-09-07"
   },
@@ -596,8 +596,8 @@
       "dev-tools"
     ],
     "open_source": true,
-    "repo": "jemiluv8/wakana",
     "vibe_coded": false,
+    "repo": "jemiluv8/wakana",
     "spite_score": 8,
     "added": "2026-09-07"
   },
@@ -626,8 +626,8 @@
       "ai"
     ],
     "open_source": true,
-    "repo": "meetbryce/open-source-slack-ai",
     "vibe_coded": false,
+    "repo": "meetbryce/open-source-slack-ai",
     "spite_score": 8,
     "added": "2026-09-07"
   },
@@ -656,8 +656,8 @@
       "learning"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": true,
+    "repo": "",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -686,8 +686,8 @@
       "dictation"
     ],
     "open_source": true,
-    "repo": "EpicenterHQ/epicenter",
     "vibe_coded": false,
+    "repo": "EpicenterHQ/epicenter",
     "spite_score": 8,
     "added": "2026-09-07"
   },
@@ -716,8 +716,8 @@
       "travel"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 6,
     "added": "2026-09-07"
   },
@@ -746,8 +746,8 @@
       "games"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": true,
+    "repo": "",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -776,8 +776,8 @@
       "productivity"
     ],
     "open_source": true,
-    "repo": "croffasia/itsaplan",
     "vibe_coded": false,
+    "repo": "croffasia/itsaplan",
     "spite_score": 8,
     "added": "2026-09-07"
   },
@@ -806,8 +806,8 @@
       "utilities"
     ],
     "open_source": true,
-    "repo": "Nabilhassan12345/BloomDisk",
     "vibe_coded": false,
+    "repo": "Nabilhassan12345/BloomDisk",
     "spite_score": 8,
     "added": "2026-09-07"
   },
@@ -837,8 +837,8 @@
       "dictation"
     ],
     "open_source": true,
-    "repo": "ahmedlhanafy/yapper",
     "vibe_coded": false,
+    "repo": "ahmedlhanafy/yapper",
     "spite_score": 8,
     "added": "2026-09-07"
   },
@@ -867,8 +867,8 @@
       "utilities"
     ],
     "open_source": true,
-    "repo": "k7cfo/remove-your-data",
     "vibe_coded": false,
+    "repo": "k7cfo/remove-your-data",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -897,8 +897,8 @@
       "utilities"
     ],
     "open_source": true,
-    "repo": "silentg33k/chalkboard-installer",
     "vibe_coded": false,
+    "repo": "silentg33k/chalkboard-installer",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -926,8 +926,8 @@
       "writing"
     ],
     "open_source": true,
-    "repo": "pi22by7/flowrite",
     "vibe_coded": false,
+    "repo": "pi22by7/flowrite",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -956,8 +956,8 @@
       "health"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 3,
     "added": "2026-09-07"
   },
@@ -986,8 +986,8 @@
       "productivity"
     ],
     "open_source": true,
-    "repo": "xinbenlv/three-line-calendar",
     "vibe_coded": false,
+    "repo": "xinbenlv/three-line-calendar",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -1016,8 +1016,8 @@
       "finance"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 3,
     "added": "2026-09-07"
   },
@@ -1046,8 +1046,8 @@
       "productivity"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 3,
     "added": "2026-09-07"
   },
@@ -1075,8 +1075,8 @@
       "marketing"
     ],
     "open_source": true,
-    "repo": "NomaDamas/auto-hongmyungbo",
     "vibe_coded": false,
+    "repo": "NomaDamas/auto-hongmyungbo",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -1105,8 +1105,8 @@
       "games"
     ],
     "open_source": false,
-    "repo": "",
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 3,
     "added": "2026-09-07"
   },
@@ -1135,8 +1135,8 @@
       "ai"
     ],
     "open_source": true,
-    "repo": "robert-mcdermott/phlox-gw",
     "vibe_coded": false,
+    "repo": "robert-mcdermott/phlox-gw",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -1166,6 +1166,7 @@
     ],
     "open_source": true,
     "vibe_coded": false,
+    "repo": "SnowfallHD/vodforge",
     "spite_score": 5,
     "added": "2026-09-07"
   },
@@ -1196,6 +1197,7 @@
     ],
     "open_source": true,
     "vibe_coded": false,
+    "repo": "FrenchBen/OpenTerminal",
     "spite_score": 8,
     "added": "2026-09-08"
   },
@@ -1225,6 +1227,7 @@
     ],
     "open_source": true,
     "vibe_coded": false,
+    "repo": "giriaryan694-a11y/Intrivox",
     "spite_score": 8,
     "added": "2026-09-08"
   },
@@ -1255,6 +1258,7 @@
     ],
     "open_source": true,
     "vibe_coded": false,
+    "repo": "till10k/Laberbacke-Releases",
     "spite_score": 8,
     "added": "2026-09-08"
   },
@@ -1284,6 +1288,7 @@
     ],
     "open_source": true,
     "vibe_coded": false,
+    "repo": "joshdaxelrod/transcribe",
     "spite_score": 8,
     "added": "2026-09-08"
   },
@@ -1313,6 +1318,7 @@
     ],
     "open_source": true,
     "vibe_coded": false,
+    "repo": "Astro-Softwares/Lightmaker",
     "spite_score": 8,
     "added": "2026-09-08"
   },
@@ -1343,6 +1349,7 @@
     ],
     "open_source": false,
     "vibe_coded": false,
+    "repo": "",
     "spite_score": 3,
     "added": "2026-09-08"
   },
@@ -1373,6 +1380,7 @@
     ],
     "open_source": true,
     "vibe_coded": false,
+    "repo": "ridge-poll/chess",
     "spite_score": 5,
     "added": "2026-09-09"
   }

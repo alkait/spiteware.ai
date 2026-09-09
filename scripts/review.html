@@ -105,8 +105,12 @@ function collect(el){
   o.vibe_coded=$('[data-k="vibe_coded"]',el).checked; return o;
 }
 async function decide(run,c,patch){
-  await fetch('/api/decide',{method:'POST',body:JSON.stringify({file:run.file,slug:c.slug,...patch})});
-  toast(patch.status?`${c.name}: ${patch.status}`:`${c.name}: saved`); await load();
+  const r = await fetch('/api/decide',{method:'POST',body:JSON.stringify({file:run.file,slug:c.slug,...patch})});
+  // Approving stars the repo; say which way it went so a silent failure can't hide.
+  const st = (await r.json().catch(()=>({}))).star;
+  const note = st ? ({starred:' · ★ starred', already:' · ★ already starred', skipped:' · no repo to star',
+                      gone:' · ★ FAILED: repo not found', failed:' · ★ FAILED'})[st.state] || '' : '';
+  toast((patch.status?`${c.name}: ${patch.status}`:`${c.name}: saved`) + note); await load();
 }
 $('#merge').onclick=async()=>{ const r=await (await fetch('/api/merge',{method:'POST',body:'{}'})).json();
   const a=r.results.flatMap(x=>x.approved), j=r.results.flatMap(x=>x.rejected);

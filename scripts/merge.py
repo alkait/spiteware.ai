@@ -7,7 +7,7 @@ approve -> apps.json, reject -> rejected.json, pending/edit stay in the queue.
 import json, sys, pathlib, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FIELDS = ["slug", "name", "url", "icon", "tagline", "replaces", "grudge", "builder", "tags", "open_source", "vibe_coded", "spite_score", "added"]
+FIELDS = ["slug", "name", "url", "icon", "tagline", "replaces", "grudge", "builder", "tags", "open_source", "vibe_coded", "repo", "spite_score", "added"]
 
 def newest():
     files = sorted(p for p in (ROOT / "queue").glob("*.json") if not p.name.startswith("raw-"))

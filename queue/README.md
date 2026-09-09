@@ -8,6 +8,8 @@ python3 scripts/review.py 4322    # then open http://localhost:4322/
 
 The desk shows each candidate as the live card with its evidence, lets you edit any text inline, and has Approve, Reject, and Merge buttons. Merge moves approved candidates into `data/apps.json`, rejected names into `data/rejected.json`, and leaves pending ones in the queue. Push to publish.
 
+**Approve also stars.** Hitting Approve stars the candidate's `repo` from your GitHub account and reports the result in the toast; a candidate with no `repo` is skipped. Un-approving does not unstar. Merge stays a pure data operation, so if a star ever fails, `python3 scripts/star.py` re-runs the whole catalog idempotently and catches it.
+
 Schema:
 
 ```json
@@ -23,6 +25,7 @@ Schema:
     "grudge": {"quote": "builder's words, verbatim", "source": "https://..."},
     "builder": {"name": "Kryhr", "handle": "Kryhr", "url": ""},
     "tags": ["web", "local-first", "writing"], "open_source": true, "vibe_coded": false,
+    "repo": "Kryhr/lag-writer",
     "why": "score breakdown", "added": "2026-09-06"
   }],
   "dropped": ["Name: one-line reason"]
