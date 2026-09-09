@@ -46,8 +46,14 @@
   const t = $('#ticker'); if (t) t.innerHTML += t.innerHTML;
 
   // Card renderer shared by the home grid and the catalog
+  // `added` is a plain YYYY-MM-DD string. Slicing it beats new Date(): that parses as
+  // UTC midnight, so a negative-offset zone renders the day before — and on the 1st,
+  // the wrong month.
+  const MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  SW.month = d => /^\d{4}-\d{2}-\d{2}/.test(d||'') ? `${MON[+d.slice(5,7)-1]} ${d.slice(0,4)}` : '';
   SW.victim = a => { const r=a.replaces||{}; const n=(r.name||'').trim(), p=(r.price||'').trim(); return esc(n&&p ? `${n} · ${p}` : n ? n : p ? `a paywall · ${p}` : 'a paywall'); };
   SW.card = a => `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
+    ${a.added ? `<time class="card__date" datetime="${esc(a.added)}" title="added to the catalog">${SW.month(a.added)}</time>` : ''}
     <div class="card__top"><div class="card__icon">${esc(a.icon||'🔧')}</div>
       <div class="kills">replaces<s>${SW.victim(a)}</s></div></div>
     <h3>${esc(a.name)}</h3><p>${esc(a.tagline)}</p>
