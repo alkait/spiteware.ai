@@ -61,7 +61,8 @@
     <div class="chips">${(a.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}${a.open_source?'<span class="chip">open-source</span>':''}${a.vibe_coded?'<span class="chip chip--vibe">vibe coded</span>':''}</div>
     <div class="card__meta"><span>by ${esc(a.builder.name)}</span><span title="spite score">🔥 ${esc(a.spite_score)}/10</span></div></a>`;
 
-  SW.sortSpite = apps => apps.slice().sort((a,b)=>(b.spite_score-a.spite_score)||(b.added>a.added?1:-1));
+  // Newest first; spite score only breaks ties inside the same day.
+  SW.sortRecent = apps => apps.slice().sort((a,b)=>(b.added>a.added?1:b.added<a.added?-1:0)||(b.spite_score-a.spite_score));
 
   // Load the catalog once; pages subscribe via SW.ready(fn)
   const subs = [];
@@ -75,14 +76,14 @@
     subs.forEach(fn=>fn(apps));
   }).catch(()=>{ const g=$('#grid'); if(g) g.innerHTML='<div class="card"><h3>No spite loaded</h3><p>data/apps.json failed to load. Are you opening this from file://? Serve it over http.</p></div>'; });
 
-  // Home grid: this week's additions, best spite first, then a "see all" card
+  // Home grid: this week's additions, newest first, then a "see all" card
   const grid = $('#grid');
   if (grid && grid.dataset.limit) SW.ready(apps => {
     // "this week" means the real last 7 days, so the section empties out after a dry
-    // week rather than calling month-old apps fresh. Best spite first inside the window.
+    // week rather than calling month-old apps fresh. Newest first inside the window.
     const since = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
     const fresh = apps.filter(a => a.added >= since);
-    const top = SW.sortSpite(fresh).slice(0, +grid.dataset.limit);
+    const top = SW.sortRecent(fresh).slice(0, +grid.dataset.limit);
     const quiet = `<div class="dry">Nobody got mad this week.<small>the all-time pettiest are one click away →</small></div>`;
     grid.innerHTML = (top.length ? top.map(SW.card).join('') : quiet) +
       `<a class="card card--more" href="apps.html"><div>see all ${apps.length} grudges →<small>updated whenever someone gets mad</small></div></a>`;
