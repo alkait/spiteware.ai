@@ -1383,5 +1383,128 @@
     "repo": "ridge-poll/chess",
     "spite_score": 5,
     "added": "2026-09-09"
+  },
+  {
+    "slug": "localflow",
+    "name": "LocalFlow",
+    "url": "https://github.com/DatafyingTech/LocalFlow",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow charges $15 a month to type what you say. LocalFlow does it on your own GPU for nothing, word limit not included.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "The idea came from using Wispr Flow and wanting the same convenience without a subscription or the cloud.",
+      "source": "https://github.com/DatafyingTech/LocalFlow"
+    },
+    "builder": {
+      "name": "Kevin (Datafying Tech)",
+      "handle": "DatafyingTech",
+      "url": "https://github.com/DatafyingTech"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "DatafyingTech/LocalFlow",
+    "spite_score": 10,
+    "added": "2026-09-10"
+  },
+  {
+    "slug": "copywheel",
+    "name": "CopyWheel",
+    "url": "https://github.com/weselski/copywheel",
+    "icon": "🎡",
+    "tagline": "Radial wants €19.99 to put a wheel under your cursor. CopyWheel puts one there for free and does exactly one job with it.",
+    "replaces": {
+      "name": "Radial",
+      "price": "€19.99 one-time",
+      "source": "https://radial.appverge.net/"
+    },
+    "grudge": {
+      "quote": "Existing pie menus for macOS are either paid and closed source (Radial, PowerClick) or full automation platforms (Kando).",
+      "source": "https://github.com/weselski/copywheel"
+    },
+    "builder": {
+      "name": "",
+      "handle": "weselski",
+      "url": "https://github.com/weselski"
+    },
+    "tags": [
+      "macos",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "weselski/copywheel",
+    "spite_score": 10,
+    "added": "2026-09-10"
+  },
+  {
+    "slug": "dineforge-pos",
+    "name": "DineForge POS",
+    "url": "https://github.com/biswasdebraj/dineforge-pos",
+    "icon": "🍽️",
+    "tagline": "Restaurant POS software bills you every month to ring up a sandwich. DineForge rings it up on one Windows box, free, forever.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most restaurant POS software is a subscription: a monthly fee, a cloud dependency, and your sales data living on someone else's server.",
+      "source": "https://github.com/biswasdebraj/dineforge-pos"
+    },
+    "builder": {
+      "name": "Debraj Biswas",
+      "handle": "biswasdebraj",
+      "url": "https://github.com/biswasdebraj"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "biswasdebraj/dineforge-pos",
+    "spite_score": 7,
+    "added": "2026-09-10"
+  },
+  {
+    "slug": "byescreen",
+    "name": "ByeScreen",
+    "url": "https://apps.apple.com/app/id6802860364",
+    "icon": "🧹",
+    "tagline": "Phone cleaner apps want a subscription to delete your own screenshots. ByeScreen lets you swipe them into the bin for free.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The “phone cleaner” apps I tried wanted to also do duplicates, similar photos, blurry shots, and a subscription.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wcd690/byescreen_a_free_iphone_app_that_only_does_one/"
+    },
+    "builder": {
+      "name": "Artsiom Herchyk",
+      "handle": "LNxD_Tema",
+      "url": "https://www.reddit.com/user/LNxD_Tema"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-10"
   }
 ]
