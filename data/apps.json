@@ -1506,5 +1506,128 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-10"
+  },
+  {
+    "slug": "walkist",
+    "name": "Walkist",
+    "url": "https://github.com/alexec/Walkist",
+    "icon": "🥾",
+    "tagline": "Strava wants $59.99 a year to let you follow a line on a map. Walkist draws the line, walks you down it, and files the whole thing in Apple Health for nothing.",
+    "replaces": {
+      "name": "Strava Subscription",
+      "price": "$59.99/yr (Individual, billed annually)",
+      "source": "https://www.strava.com/subscribe"
+    },
+    "grudge": {
+      "quote": "Recording a walk and following a route are not premium features of a phone that already has a GPS in it.",
+      "source": "https://github.com/alexec/Walkist"
+    },
+    "builder": {
+      "name": "Alex Collins",
+      "handle": "alexec",
+      "url": "https://github.com/alexec"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "alexec/Walkist",
+    "spite_score": 10,
+    "added": "2026-09-12"
+  },
+  {
+    "slug": "openwinsidecar",
+    "name": "OpenWinSidecar",
+    "url": "https://github.com/julianmb/OpenWinSidecar",
+    "icon": "🖥️",
+    "tagline": "Windows second-screen apps want a subscription to borrow the iPad you already paid for. OpenWinSidecar streams a real extra monitor straight into Safari and bills you nothing.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I looked at what was available and didn't like the options — closed-source, subscription-priced, CPU-hungry, or all three — so I built my own.",
+      "source": "https://github.com/julianmb/OpenWinSidecar#why-this-exists"
+    },
+    "builder": {
+      "name": "Julian Beltran",
+      "handle": "julianmb",
+      "url": "https://github.com/julianmb"
+    },
+    "tags": [
+      "windows",
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "julianmb/OpenWinSidecar",
+    "spite_score": 5,
+    "added": "2026-09-12"
+  },
+  {
+    "slug": "kegel-trainer",
+    "name": "Kegel Trainer",
+    "url": "https://kegeltrainer.net/",
+    "icon": "⏱️",
+    "tagline": "Kegel apps slip an upsell in between reps. This one counts your holds in a browser tab and asks for nothing, your data included.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most of what’s currently out there seems to involve upsells and/or data collection.",
+      "source": "https://news.ycombinator.com/item?id=49655369"
+    },
+    "builder": {
+      "name": "",
+      "handle": "artmanja111",
+      "url": "https://news.ycombinator.com/user?id=artmanja111"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "artmanja/kegeltrainer",
+    "spite_score": 5,
+    "added": "2026-09-12"
+  },
+  {
+    "slug": "learningto-co",
+    "name": "learningto.co",
+    "url": "https://learningto.co/",
+    "icon": "🧠",
+    "tagline": "Interview prep wants a subscription before it'll help you land a salary. learningto.co hands over the data-structure drills first and never sends the invoice.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I couldn't afford interview prep, so I built a free alternative",
+      "source": "https://news.ycombinator.com/item?id=49643992"
+    },
+    "builder": {
+      "name": "",
+      "handle": "cdnsteve",
+      "url": "https://news.ycombinator.com/user?id=cdnsteve"
+    },
+    "tags": [
+      "web",
+      "career"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-12"
   }
 ]

@@ -1,0 +1,25 @@
+{
+  "run": "2026-09-12",
+  "swept": "hn show hn (48h, all 296 triaged), reddit rss (r/opensource, r/macapps, r/ClaudeAI 429'd; SideProject 28, selfhosted 13, vibecoding 7, indiehackers 2, webdev 1 read), github (44), last30days FAILED (skill not installed this session; substituted 3 web searches, listicles only)",
+  "raw_hits": 391,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "SolidPing: best grudge of the run — 'I loved Better Stack, and then the free plan kept getting thinner.' — and the AGPL self-host holds nothing back, but the same maker sells hosted Starter €5/mo, Pro €15/mo and Scale €45/mo on solidping.io/pricing. Open-core, same call as Inkvoice.",
+    "Trackd: 'built by someone tired of paying for subscriptions they forgot about', then Pro at $3.99/mo or $29.99/yr. Fails gate 2.",
+    "Kokoro Voice Studio (saytts.site): 'Most hosted TTS options come with heavy subscription paywalls', but the hosted site has a 30,000-character monthly quota and 'Unlimited Pro with VIP codes'. Fails gate 2.",
+    "Billia: free, no signup, no watermark — and 'A paid Pro tier with power features (recurring invoices, extra templates, client management) is planned for later'. Fails gate 2.",
+    "Numeris: 'No subscription' in the tagline, then a $29 one-time Full license after the first 1,000 users, source-available. Priced.",
+    "outbid.lol: 'I got tired of paying for useless directory links' — answered with a pay-to-win leaderboard. Priced by design.",
+    "OwlCAD: the Tinkercad ceiling is about features, and there's an optional paid AI generation feature. Fails both gates.",
+    "Cap Table (cap-table.io): a Puter Technologies Inc. product, Puter sign-in to save, no grudge.",
+    "Vantage golf GPS, Sheet Insights BI, AgenticCutter: Premium IAP $19.99/yr, $2.99 one-time, and €9.99/mo after a 7-day email trial.",
+    "iDid, Wikly, Light Converter, AppLocker, BrightVideo, OptiPress, Hopya, ytscript, kindlepipe: free, but 'no account, no subscription' is a feature line; no reason for building on the site, README or post. Fails gate 1.",
+    "MySamantha, WhatsAppGo, Syq, Micracode: the stated grievances are AI bloat, RAM use, rsync speed, and none — never price.",
+    "YZH Studio, gridmino, PCalen, s0lve.it image converter: AdMob-funded or no post text at all; no grudge.",
+    "Formesign, Bates numbering (speechtext.ai), CodePress, GeoSurge, Rayrun, SideNote Pro: company products or SaaS launches, not grudges.",
+    "cairn: 'no subscription for the core' in the GitHub description reads as open-core, and there's no grudge beside it.",
+    "r/selfhosted 'build a tool that will remain 100% FREE forever' thread, Portainer 3 dropping CE, Proxmox licence thread: discussions, not shipped apps.",
+    "VoicePop, Resonate, capclip, Inkvoice, Actual Plan, Ontoplano, BiNeuron, ePub Toolset, Hazzel, VoiceInk: triaged and dropped on an earlier run; nothing changed."
+  ]
+}
