@@ -25,3 +25,7 @@ python3 -m http.server 4321
 ```
 
 Then open http://localhost:4321/. Opening `index.html` from `file://` will not load the JSON.
+
+## License
+
+[MIT](LICENSE). The code and the catalog both. Fork it, mirror it, sell it — it would be difficult to run a site about people giving software away and then charge for this one.
