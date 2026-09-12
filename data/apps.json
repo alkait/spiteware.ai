@@ -1629,5 +1629,128 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-12"
+  },
+  {
+    "slug": "utter",
+    "name": "utter",
+    "url": "https://github.com/one-more-refactor/utter",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow wants $15 a month and still won't touch Linux. Utter holds a key, listens on Wayland, and keeps both your audio and your money at home.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "price": "$15/user/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "Paid dictation apps charge $10–15/month, and the good ones are macOS-only.",
+      "source": "https://github.com/one-more-refactor/utter"
+    },
+    "builder": {
+      "name": "one-more-refactor",
+      "handle": "one-more-refactor",
+      "url": "https://github.com/one-more-refactor"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "one-more-refactor/utter",
+    "spite_score": 10,
+    "added": "2026-09-12"
+  },
+  {
+    "slug": "opencapture",
+    "name": "OpenCapture",
+    "url": "https://github.com/nklowns/opencapture",
+    "icon": "📸",
+    "tagline": "GoFullPage charges $12 a year before it will let you crop your own screenshot. OpenCapture does the PDF export, the redaction and the retina capture for nothing.",
+    "replaces": {
+      "name": "GoFullPage Premium",
+      "price": "$12/yr",
+      "source": "https://tryhoverify.com/blog/gofullpage-vs-hoverify-screenshot-tools-compared/"
+    },
+    "grudge": {
+      "quote": "Most popular screen capture extensions have shifted toward aggressive freemium models—locking multi-page PDF exports, high-DPI captures, and redaction tools behind monthly subscriptions or collecting user browsing habits.",
+      "source": "https://github.com/nklowns/opencapture"
+    },
+    "builder": {
+      "name": "nklowns",
+      "handle": "nklowns",
+      "url": "https://github.com/nklowns"
+    },
+    "tags": [
+      "browser-extension",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "nklowns/opencapture",
+    "spite_score": 8,
+    "added": "2026-09-12"
+  },
+  {
+    "slug": "illusion",
+    "name": "Illusion",
+    "url": "https://illusion.quest/",
+    "icon": "✒️",
+    "tagline": "Vector studios now rent you a subscription, an account wall and a cloud that reads your files. Illusion draws beziers in the browser and exports print-ready PDF for free.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I got increasingly frustrated with modern creative software: forced monthly cloud subscriptions, heavy runtimes, account walls, tools that harvest your private project files, and creative software completely ignoring Linux and Android tablets.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wdtwna/i_spent_months_building_illusion_a_fast/"
+    },
+    "builder": {
+      "name": "bava32",
+      "handle": "bava32",
+      "url": "https://www.reddit.com/user/bava32"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "images"
+    ],
+    "open_source": false,
+    "vibe_coded": true,
+    "repo": "",
+    "spite_score": 5,
+    "added": "2026-09-12"
+  },
+  {
+    "slug": "scripthaul",
+    "name": "ScriptHaul",
+    "url": "https://scripthaul.com/",
+    "icon": "📜",
+    "tagline": "Every transcript tool says free and means freemium. ScriptHaul takes a whole channel, 500 videos a batch, no account, no credits, no clock.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "They all say \"free\", but it's more like freemium, y'know?",
+      "source": "https://www.reddit.com/r/SideProject/comments/1we0dc9/i_built_a_free_youtube_transcript_downloader_that/"
+    },
+    "builder": {
+      "name": "MajesticWhereas1685",
+      "handle": "MajesticWhereas1685",
+      "url": "https://www.reddit.com/user/MajesticWhereas1685"
+    },
+    "tags": [
+      "web",
+      "video"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-12"
   }
 ]
