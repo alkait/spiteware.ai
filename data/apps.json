@@ -1752,5 +1752,128 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-12"
+  },
+  {
+    "slug": "cutora",
+    "name": "Cutora",
+    "url": "https://github.com/Fayk3/Cutora",
+    "icon": "✂️",
+    "tagline": "Canva Pro wants a monthly fee to remove a background. Cutora does it in your browser and asks for nothing.",
+    "replaces": {
+      "name": "Canva Pro",
+      "price": "$12/mo",
+      "source": "https://www.canva.com/pricing/"
+    },
+    "grudge": {
+      "quote": "While Canva keeps useful tools behind Pro plans, Cutora keeps image editing simple, fast, and accessible.",
+      "source": "https://github.com/Fayk3/Cutora"
+    },
+    "builder": {
+      "name": "Fayke",
+      "handle": "Fayk3",
+      "url": "https://github.com/Fayk3"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Fayk3/Cutora",
+    "spite_score": 10,
+    "added": "2026-09-13"
+  },
+  {
+    "slug": "devnote",
+    "name": "devnote",
+    "url": "https://github.com/shubhscode/devnote",
+    "icon": "📓",
+    "tagline": "Inkdrop charges ten bucks a month to sync your Markdown. devnote syncs it through git and charges zero.",
+    "replaces": {
+      "name": "Inkdrop",
+      "price": "$9.98/mo",
+      "source": "https://www.inkdrop.app/pricing"
+    },
+    "grudge": {
+      "quote": "devnote exists so a ~$5/mo hosted-sync fee isn't the price of a good Markdown notebook.",
+      "source": "https://shubhscode.github.io/devnote/"
+    },
+    "builder": {
+      "name": "Subrahmanyam Bitra",
+      "handle": "shubhscode",
+      "url": "https://github.com/shubhscode"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "shubhscode/devnote",
+    "spite_score": 8,
+    "added": "2026-09-13"
+  },
+  {
+    "slug": "yazses",
+    "name": "YazSes",
+    "url": "https://github.com/MSKazemi/yazses",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow bills you every month for speech recognition that worked the first month. YazSes runs Whisper on your machine, once, forever.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "Dictation is a tool you use every working day for years, which makes a monthly fee an unusual shape of cost: you keep paying for speech recognition that already worked the first month.",
+      "source": "https://mskazemi.com/yazses/comparison.html"
+    },
+    "builder": {
+      "name": "Mohsen Seyedkazemi Ardebili",
+      "handle": "MSKazemi",
+      "url": "https://github.com/MSKazemi"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "MSKazemi/yazses",
+    "spite_score": 8,
+    "added": "2026-09-13"
+  },
+  {
+    "slug": "strongest",
+    "name": "Strongest",
+    "url": "https://apps.apple.com/us/app/strongest-free-workout-app/id6794647523",
+    "icon": "🏋️",
+    "tagline": "The good workout features were behind a paywall, so a 16-year-old learned to ship an iPhone app and gave them away.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "After months of tracking my workouts on subscription based apps I got annoyed and chose to create my own.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wenqha/im_16_and_created_a_completely_free_workout_app/"
+    },
+    "builder": {
+      "name": "Kayden Quintin",
+      "handle": "Appropriate-Scar865",
+      "url": "https://www.reddit.com/user/Appropriate-Scar865/"
+    },
+    "tags": [
+      "ios",
+      "health"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-13"
   }
 ]

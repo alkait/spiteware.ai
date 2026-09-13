@@ -1,0 +1,23 @@
+{
+  "run": "2026-09-13",
+  "swept": "hn show hn (48h, all 219 triaged), reddit rss (SideProject 27, vibecoding 12, webdev 4, opensource 1; selfhosted/macapps/ClaudeAI 429'd), github (30), last30days (3 days: reddit, hn, github, tiktok, x; 8 clusters, mostly noise)",
+  "raw_hits": 301,
+  "triaged": 26,
+  "candidates": [],
+  "dropped": [
+    "Opentracker (open source Pivotal Tracker): built because Broadcom shut Tracker down, not over price, and it's a Usero product (Pro $39/mo) — fails gates 1 and 2.",
+    "hyperindex-openinfra: 'Reverse-engineered a $800/mo indexing plan' is a great headline, but the repo and HN post never say why; README only calls itself 'a free, self-hosted alternative'. Terraform/Flux infra, not an app. Fails gate 1.",
+    "SubSweep, demoreel, AgenticCutter, Sheet Insights BI: pricing sections (Pro $9.99/mo; watermark caps; 7-day trial; $2.99 one-time). Fail gate 2.",
+    "LedgerShield: strong grudge ('fed up with personal finance apps demanding $10–$15/month subscriptions') but ships only as closed testing via a Google Group. Account before trying, automatic reject.",
+    "PhaseFit: grievance is MyFitnessPal's food database, not price, and no URL posted. Fails gate 1.",
+    "rechnungsprogramm-ohne-abo: 'no subscription' because it's a one-time purchase (Invozilla Solo via affiliate link), no code. Fails gate 2.",
+    "athenacut: binary-only repo, sibling app is a 40-day trial, no reason given. Fails both gates.",
+    "Portspan, Updog.link, OpenVurp: free and open, but no price grudge (self-hosting preference, finishing an old project, feature complaint).",
+    "resolve-autocut, memoself, 3DPrintTally, neversleeps, TubeMerger, Folio, DunyaPause: 'no subscription' taglines or feature/UX reasons, never a stated grudge against a paid tool. Fail gate 1.",
+    "asu: subscription usage meter, not a replacement for anything.",
+    "BWB: AI build prompt for a hacks library; live site is an ad-marketplace game. Not an app.",
+    "OmniDx Studio (#capcutalternative): 'free, no watermark' marketing, no stated reason, and the AI editor is a paid Creator tier ($19.99 once). Fails both gates.",
+    "DuckDisk, Photo Curator: free and open source, but built for workflow reasons (a WizTree-style table view; dreading photo culling), never over price. Fail gate 1.",
+    "Bates numbering, Billia, Light Converter, Hopya: already dropped in earlier runs."
+  ]
+}
