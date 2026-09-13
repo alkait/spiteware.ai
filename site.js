@@ -89,40 +89,75 @@
       `<a class="card card--more" href="apps.html"><div>see all ${apps.length} grudges →<small>updated whenever someone gets mad</small></div></a>`;
   });
 
-  // Hall of petty fame: one random open-source grudge, with the builder's GitHub avatar.
-  // Only apps with a repo can appear — that is where the avatar comes from.
-  const spot = $('#spotcard');
-  if (spot) SW.ready(apps => {
+  // Hall of spite: a deck of grudge cards in the hero. Only apps with a repo are dealt,
+  // because the builder's GitHub avatar is what makes the card. "Next" flings the top
+  // card off and deals a fresh one underneath, so the pile never runs out.
+  const deck = $('#deck'), deckN = $('#deckn'), deckBtn = $('#decknext');
+  if (deck) SW.ready(apps => {
     const pool = apps.filter(a => a.repo);
+    for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
     const hues = ['var(--pink)','var(--yellow)','var(--blue)','var(--green)','var(--orange)','var(--purple)'];
-    const draw = () => {
-      const a = pool[Math.floor(Math.random() * pool.length)];
+    const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const total = pool.length;
+    let idx = 0, shown = 0;
+
+    const make = a => {
       const who = a.repo.split('/')[0];
       const price = (a.replaces.price || '').split(' ')[0];
       const quote = esc(a.grudge.quote).replace(/(\$[\d.,]+(?:\s*\/\s*\w+)?)/, '<em>$1</em>');
-      spot.innerHTML = `
-      <div class="spot__face">
-        <img src="https://github.com/${esc(who)}.png?size=420" alt="" width="210" height="210">
-        <span class="spot__at">@${esc(who)}</span>
-      </div>
-      <div>
-        <p class="spot__q">\u201c${quote}\u201d</p>
-        <div class="spot__meta">
-          ${a.replaces.name ? `<span class="spot__kills">replaces <s>${esc(a.replaces.name)}${price ? ' · ' + esc(price) : ''}</s></span>` : ''}
-          <a class="spot__go" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.name)} \u2192</a>
+      const el = document.createElement('article');
+      el.className = 'gcard';
+      el.innerHTML = `
+        <div class="gcard__who">
+          <div class="gcard__pic">
+            <img class="gcard__av" src="https://github.com/${esc(who)}.png?size=320" alt="" width="150" height="150">
+            <span class="gcard__at">@${esc(who)}</span>
+          </div>
+          <div class="gcard__by"><b>${esc(a.builder.name)}</b>built ${esc(a.name)}<br>${SW.month(a.added)}</div>
         </div>
-      </div>`;
+        <p class="gcard__q">\u201c${quote}\u201d</p>
+        <div class="gcard__foot">
+          ${a.replaces.name ? `<span class="kills">replaces<s>${esc(a.replaces.name)}${price ? ' · ' + esc(price) : ''}</s></span>` : ''}
+          <a class="gcard__go" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.name)} \u2192</a>
+          <span class="gcard__score" title="spite score">\ud83d\udd25 ${esc(a.spite_score)}/10</span>
+        </div>`;
       // a deleted GitHub org 404s; fall back to an initial tile rather than a broken image
-      spot.querySelector('img').addEventListener('error', function () {
+      el.querySelector('img').addEventListener('error', function () {
         const d = document.createElement('div');
-        d.className = 'av-fb';
+        d.className = 'gcard__fb';
         d.style.background = hues[who.length % hues.length];
         d.textContent = who[0].toUpperCase();
         this.replaceWith(d);
       });
+      return el;
     };
-    $('#spotroll').addEventListener('click', draw);
-    draw();
+    const deal = () => make(pool[idx++ % total]);
+
+    // Three cards: the top one, then two peeking out behind it.
+    const cards = [deal(), deal(), deal()];
+    const layout = () => {
+      cards.forEach((c, i) => { c.className = 'gcard gcard--' + (i + 1); c.setAttribute('aria-hidden', i ? 'true' : 'false'); });
+      shown++;
+      deckN.textContent = `grudge ${((shown - 1) % total) + 1} / ${total}`;
+    };
+    deck.textContent = '';
+    cards.slice().reverse().forEach(c => deck.appendChild(c));
+    layout();
+
+    let busy = false;
+    deckBtn.addEventListener('click', () => {
+      if (busy) return;
+      const top = cards.shift();
+      const fresh = deal();
+      cards.push(fresh);
+      deck.insertBefore(fresh, deck.firstChild); // bottom of the pile
+      if (rm) { top.remove(); layout(); return; }
+      busy = true;
+      top.className = 'gcard gcard--out';
+      top.setAttribute('aria-hidden', 'true');
+      layout();
+      setTimeout(() => { top.remove(); busy = false; }, 380);
+    });
   });
 
   // Visitor counter (placeholder until backend exists): seed + per-browser increment

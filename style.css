@@ -46,26 +46,42 @@
     font-size:11px;font-weight:700;letter-spacing:.02em;vertical-align:1px}
   @media (max-width:560px){nav a{padding:8px 8px;font-size:12px} .nav__n{font-size:10px;padding:1px 4px}}
 
-  /* ---------- spotlight (hall of petty fame) ---------- */
-  .spot__card{display:grid;grid-template-columns:230px 1fr;gap:38px;align-items:center;margin-top:30px;
-    background:var(--ink);color:var(--paper);border:var(--bw) solid var(--ink);box-shadow:var(--shadow);padding:38px 40px}
-  .spot__face{position:relative;justify-self:center}
-  .spot__face img,.spot__face .av-fb{display:block;width:210px;height:210px;border-radius:50%;border:var(--bw) solid var(--paper);
-    background:var(--paper);box-shadow:10px 10px 0 var(--pink);object-fit:cover}
-  .spot__face .av-fb{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:900;font-size:76px;color:var(--ink)}
-  .spot__at{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%) rotate(-2deg);white-space:nowrap;
-    background:var(--yellow);color:var(--ink);border:var(--bw) solid var(--ink);
-    font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding:5px 9px}
-  .spot__q{font-family:var(--display);font-weight:900;font-size:clamp(24px,3.4vw,42px);line-height:1.12;letter-spacing:-.02em;margin:0}
-  .spot__q em{font-style:normal;background:var(--yellow);color:var(--ink);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-  .spot__meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:22px}
-  .spot__kills{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:#fff;color:var(--ink);border:var(--bw) solid #fff;padding:6px 10px}
-  .spot__kills s{color:var(--pink)}
-  .spot__go{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--yellow);text-decoration:none;border-bottom:2px solid var(--yellow);padding-bottom:2px}
-  .spot__roll{margin-top:22px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;background:#fff;color:var(--ink);
+  /* ---------- hall of spite: deck of grudge cards in the hero ---------- */
+  .deck{position:relative;justify-self:stretch;max-width:520px;width:100%;margin:0 auto}
+  .deck__stack{position:relative;height:500px;perspective:1200px}
+  .gcard{position:absolute;inset:0;background:#fff;border:var(--bw) solid var(--ink);box-shadow:var(--shadow);padding:24px 26px;
+    display:flex;flex-direction:column;gap:14px;transform-origin:50% 60%;will-change:transform;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1.1),opacity .35s}
+  .gcard--1{z-index:3;transform:rotate(0deg)}
+  .gcard--2{z-index:2;transform:translate(14px,10px) rotate(-4deg);background:var(--yellow)}
+  .gcard--3{z-index:1;transform:translate(-14px,20px) rotate(3deg);background:var(--pink)}
+  .gcard--2 > *,.gcard--3 > *{visibility:hidden}
+  .gcard--out{z-index:4;transform:translate(120%,-40px) rotate(18deg);opacity:0;pointer-events:none}
+  @media (prefers-reduced-motion:reduce){.gcard{transition:none}}
+  .gcard__who{display:flex;align-items:center;gap:22px}
+  .gcard__pic{position:relative;flex:none}
+  .gcard__av,.gcard__fb{width:150px;height:150px;border-radius:50%;border:var(--bw) solid var(--ink);box-shadow:8px 8px 0 var(--pink);object-fit:cover;background:var(--paper);flex:none}
+  .gcard__fb{display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:60px}
+  .gcard__at{position:absolute;left:50%;bottom:-12px;transform:translateX(-50%) rotate(-2deg);white-space:nowrap;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:var(--yellow);border:var(--bw) solid var(--ink);padding:4px 8px;display:inline-block}
+  .gcard__by{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;opacity:.65;line-height:1.5}
+  .gcard__by b{display:block;font-family:var(--display);font-size:20px;letter-spacing:-.02em;opacity:1;text-transform:none;line-height:1.1;margin-bottom:4px}
+  .gcard__q{font-family:var(--display);font-weight:900;font-size:clamp(21px,2.4vw,28px);line-height:1.14;letter-spacing:-.02em;margin:0;flex:1;
+    display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+  .gcard__q em{font-style:normal;background:var(--yellow);padding:0 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .gcard__foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;border-top:2px dashed #ccc;padding-top:12px}
+  .gcard__go{font-family:var(--display);font-weight:900;font-size:16px;text-decoration:none;border-bottom:3px solid var(--pink)}
+  .gcard__go:hover{background:var(--pink);color:#fff}
+  .gcard__score{font-family:var(--mono);font-size:12px}
+  .gcard .kills{text-align:left}
+  .deck__bar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .deck__n{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;background:var(--ink);color:var(--yellow);padding:6px 10px}
+  .deck__next{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;background:#fff;color:var(--ink);
     border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:9px 14px;cursor:pointer}
-  .spot__roll:hover{background:var(--yellow)}
-  @media (max-width:720px){ .spot__card{grid-template-columns:1fr;gap:34px;padding:26px} }
+  .deck__next:hover{background:var(--yellow)}
+  .deck__next:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+  .deck__label{position:absolute;top:-16px;left:-10px;z-index:5;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.04em;
+    padding:8px 12px;border:var(--bw) solid var(--ink);box-shadow:4px 4px 0 var(--ink);background:var(--green);transform:rotate(-6deg);line-height:1}
+  @media (max-width:480px){.deck__stack{height:540px} .gcard{padding:20px} .gcard__who{flex-direction:column;align-items:flex-start;gap:18px} .gcard__av,.gcard__fb{width:120px;height:120px}}
 
   /* ---------- buttons ---------- */
   .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:900;font-size:15px;letter-spacing:-.01em;text-decoration:none;text-transform:uppercase;
@@ -77,11 +93,11 @@
   .btn--ghost{background:var(--paper)}
 
   /* ---------- hero ---------- */
-  .hero{padding:clamp(40px,8vw,88px) 0 clamp(36px,6vw,64px);position:relative}
-  .hero__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-  @media (max-width:860px){.hero__grid{grid-template-columns:1fr}}
+  .hero{padding:clamp(40px,8vw,88px) 0 clamp(36px,6vw,64px);position:relative;overflow-x:hidden}
+  .hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  @media (max-width:860px){.hero__grid{grid-template-columns:1fr;gap:56px}}
   .kicker{display:inline-block;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.14em;background:var(--ink);color:var(--paper);padding:5px 10px;transform:rotate(-1.5deg);margin-bottom:18px}
-  h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,8.5vw,92px);line-height:.92;letter-spacing:-.04em;margin:0 0 20px;text-wrap:balance;position:relative;z-index:0}
+  h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,7.5vw,84px);line-height:.92;letter-spacing:-.04em;margin:0 0 20px;text-wrap:balance;position:relative;z-index:0}
   h1 .hl{position:relative;z-index:-1;padding:0 .1em;box-decoration-break:clone;-webkit-box-decoration-break:clone;background:linear-gradient(var(--yellow),var(--yellow)) no-repeat;background-size:100% 72%;background-position:0 70%}
   h1 .strike{position:relative;display:inline-block;color:var(--ink)}
   h1 .strike::after{content:"";position:absolute;left:-2%;right:-2%;top:48%;height:.16em;background:var(--pink);transform:rotate(-4deg)}
@@ -89,9 +105,10 @@
   .lede b{background:var(--pink);color:#fff;padding:0 5px}
   .cta{display:flex;flex-wrap:wrap;gap:14px}
 
-  /* dictionary card */
-  .dict{background:#fff;border:var(--bw) solid var(--ink);box-shadow:10px 10px 0 var(--blue);padding:26px 28px;transform:rotate(1.2deg);position:relative;font-family:Georgia,"Times New Roman",serif;max-width:520px;justify-self:end}
-  @media (max-width:860px){.dict{justify-self:start;transform:rotate(-1deg);margin-top:10px}}
+  /* dictionary card (its own section after the grid) */
+  .sec--dict .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+  @media (max-width:860px){.sec--dict .wrap{grid-template-columns:1fr}}
+  .dict{background:#fff;border:var(--bw) solid var(--ink);box-shadow:10px 10px 0 var(--blue);padding:26px 28px;transform:rotate(1.2deg);position:relative;font-family:Georgia,"Times New Roman",serif;max-width:560px;justify-self:start}
   .dict__word{font-size:clamp(30px,4vw,40px);font-weight:700;letter-spacing:-.01em;margin:0}
   .dict__word small{font-weight:400;font-size:.5em;font-style:italic;margin-left:6px}
   .dict__pron{font-family:var(--mono);font-size:15px;color:#555;margin:4px 0 14px}
@@ -108,8 +125,6 @@
   .blob{position:absolute;z-index:-1;pointer-events:none}
   .blob--1{width:160px;height:160px;background:var(--pink);border:var(--bw) solid var(--ink);border-radius:50%;top:20px;left:-60px}
   .blob--2{width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-bottom:120px solid var(--yellow);right:6%;top:-30px;transform:rotate(18deg);filter:drop-shadow(0 0 0 var(--ink))}
-  .blob--3{width:90px;height:90px;background:var(--blue);border:var(--bw) solid var(--ink);bottom:10px;left:42%;transform:rotate(22deg)}
-  @media (max-width:860px){.blob--3{display:none}}
 
   /* ---------- section headings ---------- */
   .sec{padding:clamp(40px,6vw,72px) 0}
@@ -378,7 +393,7 @@
 
   /* a link is a tap target too */
   @media (max-width:700px){
-    .spot__go{display:inline-block;padding:12px 0}
+    .gcard__go{display:inline-block;padding:12px 0}
     .foot__meta{line-height:2.2}
   }
 
