@@ -109,10 +109,10 @@
       el.className = 'gcard';
       el.innerHTML = `
         <div class="gcard__who">
-          <div class="gcard__pic">
+          <a class="gcard__pic" href="https://github.com/${esc(who)}" target="_blank" rel="noopener" title="@${esc(who)} on GitHub">
             <img class="gcard__av" src="https://github.com/${esc(who)}.png?size=320" alt="" width="150" height="150">
             <span class="gcard__at">@${esc(who)}</span>
-          </div>
+          </a>
           <div class="gcard__by"><b>${esc(a.builder.name)}</b>built ${esc(a.name)}<br>${SW.month(a.added)}</div>
         </div>
         <p class="gcard__q">\u201c${quote}\u201d</p>

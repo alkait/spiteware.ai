@@ -59,7 +59,10 @@
   .gcard--out{z-index:4;transform:translate(120%,-40px) rotate(18deg);opacity:0;pointer-events:none}
   @media (prefers-reduced-motion:reduce){.gcard{transition:none}}
   .gcard__who{display:flex;align-items:center;gap:22px}
-  .gcard__pic{position:relative;flex:none}
+  .gcard__pic{position:relative;flex:none;display:block;text-decoration:none;color:inherit;transition:transform .1s}
+  .gcard__pic:hover{transform:translate(-2px,-2px)}
+  .gcard__pic:hover .gcard__av,.gcard__pic:hover .gcard__fb{box-shadow:10px 10px 0 var(--pink)}
+  .gcard__pic:hover .gcard__at{background:var(--pink);color:#fff}
   .gcard__av,.gcard__fb{width:150px;height:150px;border-radius:50%;border:var(--bw) solid var(--ink);box-shadow:8px 8px 0 var(--pink);object-fit:cover;background:var(--paper);flex:none}
   .gcard__fb{display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:60px}
   .gcard__at{position:absolute;left:50%;bottom:-12px;transform:translateX(-50%) rotate(-2deg);white-space:nowrap;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:var(--yellow);border:var(--bw) solid var(--ink);padding:4px 8px;display:inline-block}
