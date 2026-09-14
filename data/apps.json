@@ -1875,5 +1875,250 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-13"
+  },
+  {
+    "slug": "opendisk",
+    "name": "OpenDisk",
+    "url": "https://opendisk.app",
+    "icon": "💽",
+    "tagline": "DaisyDisk wants ten bucks to show you where your disk went. OpenDisk shows you for nothing, same sunburst and all.",
+    "replaces": {
+      "name": "DaisyDisk",
+      "price": "$9.99 once",
+      "source": "https://daisydiskapp.com/"
+    },
+    "grudge": {
+      "quote": "Everything DaisyDisk does. Free.",
+      "source": "https://opendisk.app/"
+    },
+    "builder": {
+      "name": "Andrei Golli",
+      "handle": "137137137",
+      "url": "https://github.com/137137137"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "137137137/OpenDisk",
+    "spite_score": 8,
+    "added": "2026-09-14"
+  },
+  {
+    "slug": "stems",
+    "name": "Stems",
+    "url": "https://github.com/Dunebru/stems",
+    "icon": "🎚️",
+    "tagline": "LALAL.AI charges fifteen a month to pull the vocals out of a song. Stems does it on your Mac and bills nobody.",
+    "replaces": {
+      "name": "LALAL.AI Pro",
+      "price": "$15/mo",
+      "source": "https://www.lalal.ai/pricing/"
+    },
+    "grudge": {
+      "quote": "Stems does what Moises and LALAL.AI charge $14 to $20 a month for.",
+      "source": "https://github.com/Dunebru/stems#readme"
+    },
+    "builder": {
+      "name": "dunebru",
+      "handle": "Dunebru",
+      "url": "https://github.com/Dunebru"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Dunebru/stems",
+    "spite_score": 8,
+    "added": "2026-09-14"
+  },
+  {
+    "slug": "resumake",
+    "name": "resumake",
+    "url": "https://github.com/adityakhadsecode/resumake",
+    "icon": "📄",
+    "tagline": "Resume.io lets you write your whole CV, then asks for $29.95 at the download button. resumake just hands you the PDF.",
+    "replaces": {
+      "name": "Resume.io",
+      "price": "$29.95 / 4 weeks",
+      "source": "https://resume.io/pricing"
+    },
+    "grudge": {
+      "quote": "Commercial resume builders (Zety, Resume.io, Novoresume, etc.) trick job seekers by letting them spend hours crafting a resume in a sleek editor, only to drop a paywall, demand a $25/month recurring subscription, or slap a hideous watermark on the PDF at the very last step.",
+      "source": "https://github.com/adityakhadsecode/resumake#readme"
+    },
+    "builder": {
+      "name": "Aditya Khadse",
+      "handle": "adityakhadsecode",
+      "url": "https://github.com/adityakhadsecode"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "career"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "adityakhadsecode/resumake",
+    "spite_score": 8,
+    "added": "2026-09-14"
+  },
+  {
+    "slug": "s-pdf",
+    "name": "S-PDF",
+    "url": "https://github.com/KibouAkari/S-PDF",
+    "icon": "📑",
+    "tagline": "Adobe wants $14.99 a month to merge two PDFs. S-PDF runs on your own box and merges them for the cost of electricity.",
+    "replaces": {
+      "name": "Adobe Acrobat Standard",
+      "price": "$14.99/mo",
+      "source": "https://www.adobe.com/acrobat/pricing.html"
+    },
+    "grudge": {
+      "quote": "A fast, self-hosted, open-source alternative to Adobe Acrobat / iLovePDF. Merge, split, convert, watermark, compress and visually edit PDFs from a clean, modern web UI - no subscriptions, no watermarked exports, no uploads to a third party.",
+      "source": "https://github.com/KibouAkari/S-PDF"
+    },
+    "builder": {
+      "name": "KibouAkari",
+      "handle": "KibouAkari",
+      "url": "https://github.com/KibouAkari"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "KibouAkari/S-PDF",
+    "spite_score": 8,
+    "added": "2026-09-14"
+  },
+  {
+    "slug": "erase",
+    "name": "Erase",
+    "url": "https://github.com/Dunebru/erase",
+    "icon": "🩹",
+    "tagline": "Cleanup.pictures charges five a month and caps you at 720p for free. Erase deletes the photobomber on your Mac at full size.",
+    "replaces": {
+      "name": "Cleanup.pictures Pro",
+      "price": "$5/mo",
+      "source": "https://cleanup.pictures/pricing"
+    },
+    "grudge": {
+      "quote": "No subscription, no upload, no watermark on the output.",
+      "source": "https://github.com/Dunebru/erase#readme"
+    },
+    "builder": {
+      "name": "dunebru",
+      "handle": "Dunebru",
+      "url": "https://github.com/Dunebru"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Dunebru/erase",
+    "spite_score": 8,
+    "added": "2026-09-14"
+  },
+  {
+    "slug": "sparkyfitness",
+    "name": "SparkyFitness",
+    "url": "https://github.com/CodeWithCJ/SparkyFitness",
+    "icon": "💪",
+    "tagline": "MyFitnessPal Premium is $79.99 a year per person, and that's only the food part. SparkyFitness tracks the whole family on your own server for zero.",
+    "replaces": {
+      "name": "MyFitnessPal Premium",
+      "price": "$79.99/yr",
+      "source": "https://www.myfitnesspal.com/premium"
+    },
+    "grudge": {
+      "quote": "One good nutrition app runs $40–$100 a year; covering everything SparkyFitness covers means three or four subscriptions, per person, and still no single report across them.",
+      "source": "https://github.com/CodeWithCJ/SparkyFitness#how-sparkyfitness-compares"
+    },
+    "builder": {
+      "name": "CodeWithCJ",
+      "handle": "CodeWithCJ",
+      "url": "https://github.com/CodeWithCJ"
+    },
+    "tags": [
+      "self-hosted",
+      "privacy",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "CodeWithCJ/SparkyFitness",
+    "spite_score": 8,
+    "added": "2026-09-14"
+  },
+  {
+    "slug": "broom",
+    "name": "Broom",
+    "url": "https://github.com/Dunebru/broom",
+    "icon": "🧹",
+    "tagline": "CleanMyMac wants a subscription to empty your caches. Broom sweeps them for free and signs its own release.",
+    "replaces": {
+      "name": "CleanMyMac",
+      "price": "",
+      "source": "https://macpaw.com/store/cleanmymac"
+    },
+    "grudge": {
+      "quote": "Broom does what CleanMyMac and DaisyDisk charge for, in one native app.",
+      "source": "https://github.com/Dunebru/broom#readme"
+    },
+    "builder": {
+      "name": "dunebru",
+      "handle": "Dunebru",
+      "url": "https://github.com/Dunebru"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Dunebru/broom",
+    "spite_score": 7,
+    "added": "2026-09-14"
+  },
+  {
+    "slug": "my-recipe-board",
+    "name": "My Recipe Board",
+    "url": "http://myrecipeboard.xyz",
+    "icon": "🍲",
+    "tagline": "Recipe apps want a monthly fee to remember your lasagna. My Recipe Board remembers it for free.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I wanted a free and lean option that didn’t require an ongoing subscription to curate all my favourite recipes together and be able to tweak recipes based on my past use of that recipe.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wg3j36/i_wanted_a_quick_free_and_accessible_way_to/"
+    },
+    "builder": {
+      "name": "",
+      "handle": "prussianblue101",
+      "url": "https://www.reddit.com/user/prussianblue101"
+    },
+    "tags": [
+      "web",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-14"
   }
 ]

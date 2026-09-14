@@ -1,0 +1,26 @@
+{
+  "run": "2026-09-14",
+  "swept": "hn show hn (48h), github, reddit rss (SideProject 26, selfhosted 14, vibecoding 13, webdev 1, indiehackers 1; opensource/macapps/ClaudeAI 429'd), last30days (3 days: reddit, hn, x, youtube, github; 36 items)",
+  "raw_hits": 330,
+  "triaged": 18,
+  "candidates": [],
+  "dropped": [
+    "Plate (Dunebru/plate): great Cal AI/MyFitnessPal grudge, but the photo scan needs an Anthropic API key, which has no free tier, and there's no build to download",
+    "Utilityall: 'zero ads' grudge, but every tool page already has a 'Reserved for ads' slot and analytics; no pricing, no repo",
+    "Marco: grudge is that Borderless Gaming broke after updates, not its price",
+    "offline-voice-typing: built because Windows voice typing lacks Ukrainian; 'no subscription' is only a feature bullet",
+    "khojNet: Tavily alternative, but the repo is empty (no code, no README)",
+    "Driftwall: no price grudge; MacWall named only in a disclaimer, and it's a one-time purchase anyway",
+    "Sill: surveys iStat Menus etc. on design grounds, never price",
+    "MomentClip (Opus Clip grudge): has paid credits from €0.99, fails gate 2",
+    "MacGuard: optional $9.99 paid companion from the same maker (open-core)",
+    "NavKey: Microsoft Store listing with a free trial, fails gate 2; grudge is Vimium being browser-only",
+    "Confi: grudge is upload-only converters, not price; App Store listing",
+    "Beam: couldn't afford a new Mac, no paid tool grudge",
+    "Give Me Back My Screenshot: fixes a macOS annoyance, no price grudge",
+    "onebuckqr, oneanddone-breath: pay-once paid apps",
+    "SplitFree, nestpin, otter, ghostbundle Windows utilities, folio-style PDF kits: 'free forever/no subscription' taglines with no grudge",
+    "OSS Modal Alternative (beam-cloud/beta9): VC-backed company",
+    "Remaining ~250 HN/GitHub hits: dev tools, games, agents, demos, or already in earlier queues (Photon, ToolVerve, RealNear, PDF Pocket Tools, Rendly, ThreadShelf, SubSweep, Opentracker, Hopla Games, proton-cli)"
+  ]
+}

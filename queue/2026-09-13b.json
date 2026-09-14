@@ -1,0 +1,20 @@
+{
+  "run": "2026-09-13",
+  "swept": "catch-up since the 11:28 run: hn show hn (7h, all 25 triaged), reddit rss (SideProject 19, vibecoding 3; opensource/macapps/ClaudeAI 429'd), last30days (3 days: reddit, hn, x, youtube; 8 clusters, mostly already-dropped repeats)",
+  "raw_hits": 55,
+  "triaged": 12,
+  "candidates": [],
+  "dropped": [
+    "Photon (tenzen.studio): best grudge of the day ('I didn't want to pay adobe') but the download page says 'Choose your computer and we'll email you a download link'. Email before trying, automatic reject.",
+    "PDF Pocket Tools: $1 minimum on itch.io. Fails gate 2.",
+    "CookieLite: '$9.99 instead of monthly subs' is still a price. Fails gate 2.",
+    "Metryo: 'simple website analytics with a free plan' implies paid plans. Fails gate 2.",
+    "Fluira, Fastyra & Pesyra: one-time purchase apps. Fails gate 2.",
+    "ThreadShelf: built because OpenRouter lacks bulk export, a feature gap, not price. Fails gate 1.",
+    "Hopla Games: free with no account ('There is nothing to buy') but the reason is the Kinect being dead, not a price. Fails gate 1.",
+    "Rendly, GHScan, RealNear, ToolVerve, listed.as, proton-cli: free, but no stated grudge against a paid tool in the post, README or site. Fail gate 1.",
+    "Analyst Index: account wall for 'exclusive price targets', and no stated grudge. Fails both gates.",
+    "Optees, Lifetrajectory, Fly or Tesla, InterviewsRadar, Tarfio, AlertiGate: not built against a paid tool (or are paid products themselves).",
+    "DuckDisk, Bates numbering, Photo Curator: tier-2 repeats, already dropped this morning or earlier."
+  ]
+}
