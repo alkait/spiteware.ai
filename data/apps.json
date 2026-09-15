@@ -2120,5 +2120,221 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-14"
+  },
+  {
+    "slug": "push-to-talk-dictation",
+    "name": "push-to-talk-dictation",
+    "url": "https://github.com/Geoooorge/push-to-talk-dictation",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow Pro is $144 a year to type what you say. This is a hotkey, a shell script and pennies of Whisper.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "That second pass is the actual thing Wispr Flow charges for.",
+      "source": "https://github.com/Geoooorge/push-to-talk-dictation#what-cleanup-does"
+    },
+    "builder": {
+      "name": "George Gilmer",
+      "handle": "Geoooorge",
+      "url": "https://github.com/Geoooorge"
+    },
+    "tags": [
+      "macos",
+      "byo-key",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Geoooorge/push-to-talk-dictation",
+    "spite_score": 10,
+    "added": "2026-09-15"
+  },
+  {
+    "slug": "forced",
+    "name": "FORCED",
+    "url": "https://forced.vercel.app",
+    "icon": "💣",
+    "tagline": "Microsoft charges a subscription to take the ads out of a game that came free with Windows. FORCED gives you Minesweeper with no ads, no guessing and no bill.",
+    "replaces": {
+      "name": "Microsoft Solitaire Collection",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Microsoft Solitaire charges $1.99/month to remove ads from a game that shipped free with Windows for decades — and its own support forum carries 2026 threads from people who are paying and still get ads, reporting they \"keep getting longer and longer\".",
+      "source": "https://github.com/nickzsche21/forced#why-this-exists"
+    },
+    "builder": {
+      "name": "Nikhil",
+      "handle": "nickzsche21",
+      "url": "https://github.com/nickzsche21"
+    },
+    "tags": [
+      "web",
+      "games"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "nickzsche21/forced",
+    "spite_score": 9,
+    "added": "2026-09-15"
+  },
+  {
+    "slug": "chronicle",
+    "name": "Chronicle",
+    "url": "https://pazvanti.github.io/Chronicle/",
+    "icon": "🖋️",
+    "tagline": "Vellum wants $249.99 to turn your novella into an ebook. Chronicle does it offline, and the only thing it charges is your word count.",
+    "replaces": {
+      "name": "Vellum Press",
+      "price": "$249.99 once",
+      "source": "https://vellum.pub/"
+    },
+    "grudge": {
+      "quote": "Being a software engineer by day, I decided that instead of paying hundreds of dollars for the needed tools, I could just make them the way I wanted them to be.",
+      "source": "https://news.ycombinator.com/item?id=49708069"
+    },
+    "builder": {
+      "name": "Petre Popescu",
+      "handle": "pazvanti",
+      "url": "https://github.com/pazvanti"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "pazvanti/Chronicle",
+    "spite_score": 8,
+    "added": "2026-09-15"
+  },
+  {
+    "slug": "chickadee",
+    "name": "Chickadee",
+    "url": "https://www.usechickadee.com",
+    "icon": "🐦",
+    "tagline": "Every nice reading voice on the web comes with a monthly bill. Chickadee runs one in your browser and sends the bill nowhere.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I wanted to listen to articles without a robotic voice or another subscription, so I built Chickadee: a free, open-source Chrome extension that runs a voice model locally.",
+      "source": "https://news.ycombinator.com/item?id=49697168"
+    },
+    "builder": {
+      "name": "Sahil Mahendrakar",
+      "handle": "sahilmahendrakar",
+      "url": "https://github.com/sahilmahendrakar"
+    },
+    "tags": [
+      "browser-extension",
+      "local-first",
+      "ai"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "sahilmahendrakar/chickadee",
+    "spite_score": 7,
+    "added": "2026-09-15"
+  },
+  {
+    "slug": "ielts-mastery-hub",
+    "name": "IELTS Mastery Hub",
+    "url": "https://github.com/open-lingua/ielts-mastery-hub",
+    "icon": "🎓",
+    "tagline": "IELTS prep sites give you two mock tests and then a paywall. IELTS Mastery Hub gives you all of them and keeps your essays on your own laptop.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "basically every IELTS prep tool out there is SaaS. You get two free mock tests, then a paywall, and your essays and progress data live on someone else's server.",
+      "source": "https://www.reddit.com/r/opensource/comments/1wfm4hk/"
+    },
+    "builder": {
+      "name": "Luis Miguel Báez",
+      "handle": "LuchoBazz",
+      "url": "https://github.com/LuchoBazz"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "learning"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "open-lingua/ielts-mastery-hub",
+    "spite_score": 5,
+    "added": "2026-09-15"
+  },
+  {
+    "slug": "local-cinema",
+    "name": "Local Cinema",
+    "url": "https://local-cinema.online/",
+    "icon": "🎬",
+    "tagline": "Somebody wanted money for a video player your browser already is. Local Cinema is the free ticket to your own living room.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Charging you to use your own browser to play your own video felt a bit like charging admission to your own living room.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wh32qx/local_cinema_a_free_installable_video_player_for/"
+    },
+    "builder": {
+      "name": "Jesvin Palatty",
+      "handle": "PALATTY-J",
+      "url": "https://github.com/PALATTY-J"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "PALATTY-J/simple-local-cinema",
+    "spite_score": 5,
+    "added": "2026-09-15"
+  },
+  {
+    "slug": "vectispdf",
+    "name": "VectisPDF",
+    "url": "https://vectispdf.com/",
+    "icon": "📄",
+    "tagline": "PDF editors charge a subscription to move a paragraph. VectisPDF moves it in your browser and uploads nothing, including your credit card.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "VectisPDF nació con una convicción clara: gestionar y editar tus documentos personales, laborales o legales nunca debería exigir ceder tu privacidad a la nube de terceros ni pagar suscripciones abusivas.",
+      "source": "https://vectispdf.com/"
+    },
+    "builder": {
+      "name": "Vectis Labs",
+      "handle": "Sacha-Builds",
+      "url": "https://news.ycombinator.com/user?id=Sacha-Builds"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-15"
   }
 ]
