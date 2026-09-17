@@ -2336,5 +2336,128 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-15"
+  },
+  {
+    "slug": "deft",
+    "name": "Deft",
+    "url": "https://github.com/Maneek21/Deft",
+    "icon": "💬",
+    "tagline": "Slack bills you per head, per month, forever. Deft puts chat, tasks and notes on your own server and bills you nothing.",
+    "replaces": {
+      "name": "Slack Pro",
+      "price": "$8.75/user/mo",
+      "source": "https://slack.com/pricing"
+    },
+    "grudge": {
+      "quote": "This started with three things: wanting Slack to do more, a growing resentment of SaaS bills, and getting slightly too obsessed with self-hosting.",
+      "source": "https://www.reddit.com/r/selfhosted/comments/1wh1pa2/i_wanted_slack_to_do_more_so_i_built_a_selfhosted/"
+    },
+    "builder": {
+      "name": "Maneek21",
+      "handle": "Maneek21",
+      "url": "https://github.com/Maneek21"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Maneek21/Deft",
+    "spite_score": 10,
+    "added": "2026-09-17"
+  },
+  {
+    "slug": "honestsky",
+    "name": "HonestSky",
+    "url": "https://apps.apple.com/us/app/honestsky-forecast-radar/id6760163384",
+    "icon": "🌤️",
+    "tagline": "Weather apps sell you ads, then sell you next week's forecast. HonestSky gives you the forecast and skips the sales pitch.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I built HonestSky because I was tired of weather apps that were slow to load, covered in ads some to the point of being unusable and then putting longer forecasts behind paywalls.",
+      "source": "https://news.ycombinator.com/item?id=49719113"
+    },
+    "builder": {
+      "name": "Sean",
+      "handle": "sph130",
+      "url": "https://news.ycombinator.com/user?id=sph130"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-17"
+  },
+  {
+    "slug": "concat",
+    "name": "Concat",
+    "url": "https://github.com/jub0t/Concat",
+    "icon": "🎬",
+    "tagline": "CapCut lets you edit the whole video, then wants a subscription at the Export button. Concat exports for free and never learned the word watermark.",
+    "replaces": {
+      "name": "CapCut Pro",
+      "price": "$19.99/mo",
+      "source": "https://costbench.com/software/video-editing/capcut/"
+    },
+    "grudge": {
+      "quote": "I was really excited to complete and upload my first video ever, and everything seemed perfect until I clicked Export and it showed a popup saying that I had to pay a monthly subscription fee to use the most trivial features like voice changers.",
+      "source": "https://jub0t.medium.com/got-tired-of-capcut-so-i-made-my-own-4349ea572002"
+    },
+    "builder": {
+      "name": "Jareer A.",
+      "handle": "jub0t",
+      "url": "https://github.com/jub0t"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "jub0t/Concat",
+    "spite_score": 10,
+    "added": "2026-09-17"
+  },
+  {
+    "slug": "calorie-scanner",
+    "name": "Scan & Track",
+    "url": "https://web-production-94c1d.up.railway.app",
+    "icon": "🥫",
+    "tagline": "Calorie apps charge a subscription to read a free food database back to you. Scan & Track reads it for free.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Every calorie tracker worth using wants an account, a subscription, or both, and most of them are a wrapper around the same free food database this one reads.",
+      "source": "https://github.com/exexexexe/calorie-scanner#why-it-exists"
+    },
+    "builder": {
+      "name": "4khronr6",
+      "handle": "exexexexe",
+      "url": "https://llm-brf.github.io"
+    },
+    "tags": [
+      "web",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "exexexexe/calorie-scanner",
+    "spite_score": 7,
+    "added": "2026-09-17"
   }
 ]

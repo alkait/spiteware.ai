@@ -1,0 +1,30 @@
+{
+  "run": "2026-09-17",
+  "swept": "hn (48h), reddit rss (r/SideProject, r/selfhosted, r/vibecoding, r/webdev; r/opensource, r/macapps, r/ClaudeAI rate-limited 429), github, last30days (3 days)",
+  "raw_hits": 385,
+  "triaged": 21,
+  "candidates": [],
+  "dropped": [
+    "nowbuild.ing: Linear grudge is real, but it's still waitlist-only and its pricing lists paid extras. Fails gate 2 (dropped 09-10 for the same reason).",
+    "The Attic: $59.99 per app, one-time, with a trial. Paid product.",
+    "CapDrop: $19 lifetime license after a 7-day trial. Paid product.",
+    "primalHORSE/vibe: Wispr Flow clone, but the repo is only a README with no code, and no grudge.",
+    "Bakame: Cluely alternative, but it's an interview/exam cheating tool with no price grudge, mostly OpenCluely's work.",
+    "iMirror: grudge is generic, no paid app named, and Cttay's repo is a re-upload of prat3ik/iMirror.",
+    "SelfStem: rebrand of StemDeck; its Moises/LALAL.AI line is copied from upstream, and upstream says the paid tools are worth it.",
+    "RsyncZilla: complaint is FileZilla's silent failed uploads, not a price.",
+    "hue-circadian: 'no subscription' tagline only, no grudge, no victim.",
+    "WAV-to-MP3: repo has no code, only a tagline.",
+    "Northstar.account: no README, no grudge.",
+    "StockPulse: Reddit post unreadable (403), no grudge confirmed, and it requires an email account.",
+    "StormDesk: free and MIT, but no grudge and no paid tool named.",
+    "KiwiDesk: built for ease of use, not price; BSL license.",
+    "Echodot: calls Cotype closed-source, not overpriced; README says paid options may come later.",
+    "Quiet Field: no grudge anywhere.",
+    "Yapsnap: no grudge; 'why' section is about speed and running offline.",
+    "Lumen: free only for self-hosters, which implies a paid hosted relay (open-core).",
+    "Trino: 'without a paid subscription' wording implies a paid tier.",
+    "Manga OCR tool (r/SideProject), Beaconly, Apple Music remote (last30days): posts removed or no grudge.",
+    "Everything else in the 380 Show HN/Reddit/GitHub hits: dev tools, agents, games or listicles with no paid tool in sight."
+  ]
+}

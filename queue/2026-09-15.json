@@ -3,75 +3,7 @@
   "swept": "hn show hn (48h), github, reddit rss (SideProject 34, macapps 21, ClaudeAI 17, opensource 4; selfhosted/webdev/vibecoding/indiehackers 429'd), last30days (3 days: reddit, hn, x, youtube, github; 8 clusters)",
   "raw_hits": 408,
   "triaged": 22,
-  "candidates": [
-    {
-      "slug": "concat",
-      "name": "Concat",
-      "status": "pending",
-      "spite_score": 10,
-      "url": "https://github.com/jub0t/Concat",
-      "icon": "🎬",
-      "tagline": "CapCut lets you edit the whole video, then wants a subscription at the Export button. Concat exports for free and never learned the word watermark.",
-      "replaces": {
-        "name": "CapCut Pro",
-        "price": "$19.99/mo",
-        "source": "https://costbench.com/software/video-editing/capcut/",
-        "note": "secondary (2026); CapCut's own help page gives no public price, varies by region; builder's README says $9.99 to $19.99 a month"
-      },
-      "grudge": {
-        "quote": "I was really excited to complete and upload my first video ever, and everything seemed perfect until I clicked Export and it showed a popup saying that I had to pay a monthly subscription fee to use the most trivial features like voice changers.",
-        "source": "https://jub0t.medium.com/got-tired-of-capcut-so-i-made-my-own-4349ea572002"
-      },
-      "builder": {
-        "name": "Jareer A.",
-        "handle": "jub0t",
-        "url": "https://github.com/jub0t"
-      },
-      "tags": [
-        "desktop",
-        "local-first",
-        "video"
-      ],
-      "open_source": true,
-      "vibe_coded": true,
-      "repo": "jub0t/Concat",
-      "why": "10/10: grudge quotable +3, open source +2, vibe coded +2, victim named +2, price verified +1. Rust video editor, AGPL, ~10k beta downloads in 3 weeks. Built with Claude on a Max plan (148 of 390 commits carry Claude co-author trailers). Surfaced via r/ClaudeAI; Reddit comments unreadable from here.",
-      "added": "2026-09-15"
-    },
-    {
-      "slug": "calorie-scanner",
-      "name": "Scan & Track",
-      "status": "pending",
-      "spite_score": 7,
-      "url": "https://web-production-94c1d.up.railway.app",
-      "icon": "🥫",
-      "tagline": "Calorie apps charge a subscription to read a free food database back to you. Scan & Track reads it for free.",
-      "replaces": {
-        "name": "",
-        "price": "",
-        "source": "",
-        "note": ""
-      },
-      "grudge": {
-        "quote": "Every calorie tracker worth using wants an account, a subscription, or both, and most of them are a wrapper around the same free food database this one reads.",
-        "source": "https://github.com/exexexexe/calorie-scanner#why-it-exists"
-      },
-      "builder": {
-        "name": "4khronr6",
-        "handle": "exexexexe",
-        "url": "https://llm-brf.github.io"
-      },
-      "tags": [
-        "web",
-        "health"
-      ],
-      "open_source": true,
-      "vibe_coded": true,
-      "repo": "exexexexe/calorie-scanner",
-      "why": "7/10: grudge quotable +3, open source +2, vibe coded +2, no victim 0, price unverified 0. Browser barcode scanner on Open Food Facts, MIT, no account. No paid app named. Vibe coded per Claude co-author commit trailers. Repo one day old, 0 stars.",
-      "added": "2026-09-15"
-    }
-  ],
+  "candidates": [],
   "dropped": [
     "AutoClipp AI: 'free forever' tagline, but paid 30-day packages (Rp 5.000 to Rp 100.000), required accounts, proprietary licence",
     "SayItFlow: on-device dictation pitched on RAM and battery, no price grudge or named paid tool",
