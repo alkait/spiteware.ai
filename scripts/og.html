@@ -1,0 +1,21 @@
+<!-- Source of /og.png, the share image. With the preview server on 4321:
+     firefox --headless --window-size=1200,630 --screenshot og.png scripts/og.html -->
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="http://localhost:4321/style.css">
+<style>
+html,body{width:1200px;height:630px;overflow:hidden}
+.og{position:relative;width:1200px;height:630px;padding:64px 72px;display:flex;flex-direction:column;justify-content:space-between}
+.og .logo__stack{font-size:44px}.og .logo em{font-size:28px;padding:8px 12px}
+.og h1{font-size:132px;margin:0;line-height:.9}
+.og .kills{position:absolute;right:80px;top:70px;font-size:20px;padding:14px 20px;border-width:4px;box-shadow:8px 8px 0 var(--ink);transform:rotate(4deg);background:#fff}
+.og .kills s{font-size:36px;text-decoration-thickness:4px}
+.og p{font-family:var(--mono);font-size:26px;text-transform:uppercase;letter-spacing:.08em;margin:0}
+.og p b{background:var(--pink);color:#fff;padding:2px 10px}
+.og .blob--1{left:auto;right:-70px;top:auto;bottom:-80px;width:340px;height:340px;z-index:0}
+</style>
+<div class="og">
+  <div class="blob blob--1"></div>
+  <div class="logo"><span class="logo__stack"><span>SPITE</span><span>WARE</span></span><em>.ai</em></div>
+  <div class="kills">replaces<s>your subscriptions · $∞/mo</s></div>
+  <h1>One grudge<br><span class="hl">at a time.</span></h1>
+  <p>apps built out of <b>pure spite</b> · all free</p>
+</div>

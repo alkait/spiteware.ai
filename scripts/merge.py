@@ -3,8 +3,9 @@
 
 Usage: python3 scripts/merge.py [queue/YYYY-MM-DD.json]   (default: newest queue file)
 approve -> apps.json, reject -> rejected.json, pending/edit stay in the queue.
+Anything approved also rebuilds the hall of fame pages (scripts/pages.py).
 """
-import json, sys, pathlib, datetime
+import json, sys, pathlib, datetime, importlib.util
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FIELDS = ["slug", "name", "url", "icon", "tagline", "replaces", "grudge", "builder", "tags", "open_source", "vibe_coded", "repo", "spite_score", "added"]
@@ -35,6 +36,9 @@ def merge(qf):
     apps_f.write_text(json.dumps(apps, indent=2, ensure_ascii=False) + "\n")
     rej_f.write_text(json.dumps(rej, indent=2, ensure_ascii=False) + "\n")
     qf.write_text(json.dumps(q, indent=2, ensure_ascii=False) + "\n")
+    if added:
+        spec = importlib.util.spec_from_file_location("pages", ROOT / "scripts/pages.py")
+        P = importlib.util.module_from_spec(spec); spec.loader.exec_module(P); P.build()
     return {"approved": added, "rejected": rejected, "pending": len(kept), "total_apps": len(apps)}
 
 if __name__ == "__main__":

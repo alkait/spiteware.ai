@@ -52,7 +52,11 @@
   const MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   SW.month = d => /^\d{4}-\d{2}-\d{2}/.test(d||'') ? `${MON[+d.slice(5,7)-1]} ${d.slice(0,4)}` : '';
   SW.victim = a => { const r=a.replaces||{}; const n=(r.name||'').trim(), p=(r.price||'').trim(); return esc(n&&p ? `${n} · ${p}` : n ? n : p ? `a paywall · ${p}` : 'a paywall'); };
-  SW.card = a => `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
+  // Hall of fame address and avatar account. scripts/pages.py writes the pages and
+  // mirrors both of these, plus SW.victim and SW.card: change one, change the other.
+  SW.fame = a => `/hall-of-fame/${encodeURIComponent(a.builder.handle.toLowerCase())}/${encodeURIComponent(a.slug)}/`;
+  SW.gh = a => (/^https:\/\/github\.com\/([^\/]+)\/?$/.exec(a.builder.url || '') || [])[1] || (a.repo || '').split('/')[0];
+  SW.card = a => `<a class="card" href="${SW.fame(a)}">
     ${a.added ? `<time class="card__date" datetime="${esc(a.added)}" title="added to the catalog">${SW.month(a.added)}</time>` : ''}
     <div class="card__top"><div class="card__icon">${esc(a.icon||'🔧')}</div>
       <div class="kills">replaces<s>${SW.victim(a)}</s></div></div>
@@ -67,7 +71,7 @@
   // Load the catalog once; pages subscribe via SW.ready(fn)
   const subs = [];
   SW.ready = fn => SW.apps ? fn(SW.apps) : subs.push(fn);
-  fetch('data/apps.json').then(r=>r.json()).then(apps => {
+  fetch('/data/apps.json').then(r=>r.json()).then(apps => {
     SW.apps = apps;
     document.querySelectorAll('[data-apps]').forEach(el=>el.textContent=apps.length.toLocaleString('en-US'));
     document.querySelectorAll('[data-from-apps]').forEach(el=>el.dataset.count=apps.length);
@@ -89,20 +93,43 @@
       `<a class="card card--more" href="apps.html"><div>see all ${apps.length} grudges →<small>updated whenever someone gets mad</small></div></a>`;
   });
 
-  // Hall of spite: a deck of grudge cards in the hero. Only apps with a repo are dealt,
+  // A deleted GitHub account 404s; fall back to an initial tile rather than a broken image.
+  const hues = ['var(--pink)','var(--yellow)','var(--blue)','var(--green)','var(--orange)','var(--purple)'];
+  SW.noFace = (img, who) => {
+    const d = document.createElement('div');
+    d.className = 'gcard__fb';
+    d.style.background = hues[who.length % hues.length];
+    d.textContent = who[0].toUpperCase();
+    img.replaceWith(d);
+  };
+  // The hall of fame pages ship their avatars in the HTML, so the image may have
+  // already failed by the time this runs.
+  document.querySelectorAll('img[data-who]').forEach(img => {
+    const fb = () => SW.noFace(img, img.dataset.who);
+    if (img.complete && !img.naturalWidth && img.src) fb(); else img.addEventListener('error', fb);
+  });
+
+  // "copy link" on a hall of fame page
+  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+    navigator.clipboard?.writeText(b.dataset.copy).then(() => {
+      const was = b.textContent; b.textContent = 'copied ✓';
+      setTimeout(() => { b.textContent = was; }, 1600);
+    });
+  }));
+
+  // Hall of fame: a deck of grudge cards in the hero. Only apps with a repo are dealt,
   // because the builder's GitHub avatar is what makes the card. "Next" flings the top
   // card off and deals a fresh one underneath, so the pile never runs out.
   const deck = $('#deck'), deckN = $('#deckn'), deckBtn = $('#decknext');
   if (deck) SW.ready(apps => {
     const pool = apps.filter(a => a.repo);
     for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
-    const hues = ['var(--pink)','var(--yellow)','var(--blue)','var(--green)','var(--orange)','var(--purple)'];
     const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const total = pool.length;
     let idx = 0, shown = 0;
 
     const make = a => {
-      const who = a.repo.split('/')[0];
+      const who = SW.gh(a);
       const price = (a.replaces.price || '').split(' ')[0];
       const quote = esc(a.grudge.quote).replace(/(\$[\d.,]+(?:\s*\/\s*\w+)?)/, '<em>$1</em>');
       const el = document.createElement('article');
@@ -118,17 +145,10 @@
         <p class="gcard__q">\u201c${quote}\u201d</p>
         <div class="gcard__foot">
           ${a.replaces.name ? `<span class="kills">replaces<s>${esc(a.replaces.name)}${price ? ' · ' + esc(price) : ''}</s></span>` : ''}
-          <a class="gcard__go" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.name)} \u2192</a>
+          <a class="gcard__go" href="${SW.fame(a)}">${esc(a.name)} \u2192</a>
           <span class="gcard__score" title="spite score">\ud83d\udd25 ${esc(a.spite_score)}/10</span>
         </div>`;
-      // a deleted GitHub org 404s; fall back to an initial tile rather than a broken image
-      el.querySelector('img').addEventListener('error', function () {
-        const d = document.createElement('div');
-        d.className = 'gcard__fb';
-        d.style.background = hues[who.length % hues.length];
-        d.textContent = who[0].toUpperCase();
-        this.replaceWith(d);
-      });
+      el.querySelector('img').addEventListener('error', function () { SW.noFace(this, who); });
       return el;
     };
     const deal = () => make(pool[idx++ % total]);
