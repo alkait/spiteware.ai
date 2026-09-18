@@ -1,0 +1,159 @@
+<!-- One frame of the daily short, 1080x1920. scripts/short.py fills in FRAME, serves the
+     repo root so /style.css resolves, and screenshots this with headless Firefox, once per
+     caption cue. Everything that matters stays inside .safe: TikTok, Reels and Shorts cover
+     the top, the bottom third and the right edge with their own buttons. -->
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/style.css">
+<style>
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background-size:44px 44px;background-image:radial-gradient(var(--ink) 1.6px,transparent 1.6px);--j:0}
+.safe{position:absolute;left:70px;right:150px;top:250px;bottom:400px;display:flex;flex-direction:column}
+.tilt{transform:rotate(calc(var(--r,0deg) + var(--j)*.7deg)) translate(calc(var(--j)*3px),calc(var(--j)*-2px))}
+
+.top{display:flex;align-items:center;justify-content:space-between}
+.top .logo__stack{font-size:40px}.top .logo em{font-size:26px;padding:6px 10px}
+.chip{font-family:var(--mono);font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--ink);color:var(--yellow);padding:10px 16px}
+.stage{flex:1;display:flex;flex-direction:column;justify-content:center;gap:44px;min-height:0;padding:30px 0}
+.cap{min-height:176px;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--ink);color:#fff;
+  font-family:var(--display);font-weight:900;font-size:50px;line-height:1.12;letter-spacing:-.01em;padding:18px 28px;border:4px solid var(--ink);box-shadow:10px 10px 0 var(--pink)}
+.cap b{color:var(--yellow)}
+
+.blob{z-index:0}.safe{z-index:1}
+.b1{position:absolute;width:520px;height:520px;border-radius:50%;background:var(--pink);border:6px solid var(--ink);right:-210px;top:-170px}
+.b2{position:absolute;width:0;height:0;border-left:190px solid transparent;border-right:190px solid transparent;border-bottom:330px solid var(--yellow);left:-130px;bottom:60px;transform:rotate(calc(-16deg + var(--j)*1.5deg))}
+
+/* the bill: the site's strikethrough "replaces" badge, at poster size */
+.bill{position:relative;background:#fff;border:6px solid var(--ink);box-shadow:16px 16px 0 var(--ink);padding:40px 44px 46px;--r:-2deg}
+.bill__l{display:block;font-family:var(--mono);font-size:34px;text-transform:uppercase;letter-spacing:.14em}
+.bill__n{display:block;font-family:var(--display);font-weight:900;font-size:104px;line-height:1;letter-spacing:-.03em;margin:14px 0 6px;white-space:nowrap}
+.bill__p{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 18px;font-family:var(--mono);font-weight:700;color:#b00;white-space:nowrap}
+.bill__p b{font-size:170px;line-height:1;letter-spacing:-.04em}.bill__p i{font-style:normal;font-size:48px}
+.bill--mini{padding:24px 30px 28px;box-shadow:10px 10px 0 var(--ink)}
+.bill--mini .bill__l{font-size:24px}.bill--mini .bill__n{font-size:60px;margin:8px 0 2px}
+.bill--mini .bill__p b{font-size:84px}.bill--mini .bill__p i{font-size:32px}
+.bill__x{position:absolute;left:-26px;right:-26px;top:58%;height:22px;background:var(--pink);border:4px solid var(--ink);transform:rotate(-7deg)}
+.free{position:absolute;right:-34px;top:-56px;font-family:var(--display);font-weight:900;font-size:92px;line-height:1;background:var(--yellow);border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:10px 26px;--r:9deg}
+
+.bill--mini .gripe__t{display:block;font-family:var(--display);font-weight:900;font-size:58px;line-height:1.04;letter-spacing:-.03em;margin-top:10px}
+.gripe{background:#fff;border:6px solid var(--ink);box-shadow:16px 16px 0 var(--ink);padding:40px 44px;--r:-2deg}
+.gripe span{display:block;font-family:var(--mono);font-size:34px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:18px}
+.gripe b{font-family:var(--display);font-weight:900;font-size:92px;line-height:1.02;letter-spacing:-.03em}
+
+.who{display:flex;align-items:center;gap:36px}
+.who .gcard__av,.who .gcard__fb{width:250px;height:250px;border-width:6px;box-shadow:12px 12px 0 var(--pink);font-size:110px;--r:-3deg}
+.who b{display:block;font-family:var(--display);font-weight:900;font-size:64px;line-height:1;letter-spacing:-.03em;white-space:nowrap}
+.who span{min-width:0;flex:1}
+.who i{display:inline-block;font-style:normal;font-family:var(--mono);font-size:34px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--yellow);border:5px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:6px 14px;margin-top:18px;--r:-2deg}
+.app__b .gcard__av,.app__b .gcard__fb{width:68px;height:68px;border-width:4px;box-shadow:4px 4px 0 var(--pink);font-size:32px}
+.quote{background:#fff;border:6px solid var(--ink);box-shadow:16px 16px 0 var(--pink);padding:40px 42px;--r:1deg}
+.quote p{margin:0;font-family:var(--display);font-weight:900;font-size:90px;line-height:1.1;letter-spacing:-.025em}
+.quote p em{font-style:normal;background:var(--yellow);padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.quote p span{opacity:.22}
+
+.app{display:flex;align-items:center;gap:34px}
+.app__i{position:relative;flex:none;width:230px;height:230px;display:grid;place-items:center;font-size:130px;background:#fff;border:6px solid var(--ink);box-shadow:12px 12px 0 var(--pink);--r:-4deg}
+.app__t{min-width:0;flex:1;padding-right:10px}
+.app__n{display:block;font-family:var(--display);font-weight:900;font-size:120px;line-height:.95;letter-spacing:-.035em;white-space:nowrap}
+.app__b{display:flex;align-items:center;gap:16px;font-family:var(--mono);font-size:32px;text-transform:uppercase;letter-spacing:.06em;margin-top:18px}
+.tags{display:flex;flex-wrap:wrap;gap:14px}
+.tags span{font-family:var(--mono);font-size:28px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;border:4px solid var(--ink);background:#fff;padding:6px 14px}
+.tags .on{background:var(--green)}
+.score{display:flex;align-items:center;gap:22px}
+.score b{font-family:var(--mono);font-size:34px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.score div{flex:1;display:grid;grid-template-columns:repeat(10,1fr);gap:8px}
+.score div i{height:54px;border:4px solid var(--ink);background:#fff}.score div i.on{background:var(--pink)}
+.hide{visibility:hidden}
+
+.hook{align-items:flex-start;gap:36px}
+.hook h1{margin:0;font-family:var(--display);font-weight:900;font-size:200px;line-height:.86;letter-spacing:-.045em;text-transform:uppercase}
+.hook h1 span{display:block;width:max-content;padding:6px 22px 14px}
+.hook h1 span:first-child{background:var(--pink);color:#fff;border:6px solid var(--ink)}
+.hook h1 span:last-child{background:var(--ink);color:var(--yellow);border:6px solid var(--ink)}
+.hook .date{font-family:var(--mono);font-weight:700;font-size:74px;text-transform:uppercase;letter-spacing:.04em;background:var(--yellow);border:6px solid var(--ink);box-shadow:12px 12px 0 var(--ink);padding:10px 26px;--r:3deg}
+.hook .n{font-family:var(--display);font-weight:900;font-size:108px;line-height:1;letter-spacing:-.03em;background:#fff;border:6px solid var(--ink);box-shadow:12px 12px 0 var(--pink);padding:18px 28px;--r:-3deg}
+
+.outro{gap:40px}
+.outro h2{margin:0;font-family:var(--display);font-weight:900;font-size:150px;line-height:.92;letter-spacing:-.04em}
+.outro h2 .hl{background:var(--yellow);padding:0 14px}
+.outro .url{align-self:flex-start;font-family:var(--display);font-weight:900;font-size:112px;letter-spacing:-.03em;background:var(--pink);color:#fff;border:6px solid var(--ink);box-shadow:14px 14px 0 var(--ink);padding:14px 30px;--r:-3deg;white-space:nowrap}
+.outro .more{align-self:flex-start;font-family:var(--mono);font-weight:700;font-size:44px;text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--yellow);padding:12px 20px}
+
+.guide{position:absolute;border:4px dashed red;color:red;font:700 26px var(--mono);padding:8px;z-index:9;pointer-events:none}
+</style>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div>
+<div class="safe" id="safe"></div>
+<script>
+const FRAME = /*FRAME*/null;
+const F = FRAME || {scene:"hook", step:"count", cap:"Three new grudges.", date:"Sep 18", n:3, j:0, guides:true};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const after = (steps, s) => steps.indexOf(F.step) >= steps.indexOf(s);
+document.body.style.setProperty("--j", F.j || 0);
+
+const face = () => F.face.img ? `<img class="gcard__av tilt" src="${esc(F.face.img)}" alt="">`
+  : `<div class="gcard__fb tilt" style="background:${F.face.hue}">${esc(F.face.initial)}</div>`;
+
+function bill(a, mini, struck) {
+  const free = struck ? '<span class="free tilt">FREE</span>' : "";
+  if (!(a.replaces.name && a.replaces.price))
+    return `<div class="bill tilt bill--mini"><span class="bill__l">the grudge</span><b class="gripe__t">${esc(F.gripe)}</b>${free}</div>`;
+  const m = /^(\$[\d,.]+)\s*(.*)$/.exec(a.replaces.price) || [0, a.replaces.price, ""];
+  return `<div class="bill tilt ${mini ? "bill--mini" : ""}"><span class="bill__l">replaces</span>
+    <b class="bill__n fit">${esc(a.replaces.name)}</b>
+    <span class="bill__p"><b>${esc(m[1])}</b><i>${esc(m[2])}</i></span>
+    ${struck ? '<span class="bill__x"></span>' : ""}${free}</div>`;
+}
+
+function scene() {
+  const a = F.app;
+  if (F.scene === "hook") {
+    const S = ["stamp", "date", "count"];
+    return `<div class="stage hook"><h1 class="tilt" style="--r:-3deg"><span>Fresh</span><span>spite</span></h1>
+      <div class="date tilt ${after(S, "date") ? "" : "hide"}">${esc(F.date)}</div>
+      <div class="n tilt ${after(S, "count") ? "" : "hide"}">${F.n} new grudge${F.n === 1 ? "" : "s"}</div></div>`;
+  }
+  if (F.scene === "outro") {
+    const S = ["free", "spite", "url"];
+    return `<div class="stage outro"><h2>All free.<br><span class="${after(S, "spite") ? "" : "hide"}">All <span class="hl">pure spite.</span></span></h2>
+      <div class="url tilt ${after(S, "url") ? "" : "hide"}">spiteware.ai</div>
+      ${F.more ? `<div class="more ${after(S, "url") ? "" : "hide"}">+${F.more} more fresh today</div>` : ""}</div>`;
+  }
+  if (F.step === "badge") return `<div class="stage">${bill(a, false, false)}</div>`;
+  if (F.step === "gripe") return `<div class="stage"><div class="gripe tilt"><span>the grudge</span><b>${esc(F.gripe)}</b></div></div>`;
+  if (F.step === "quote") {
+    // said so far in yellow, the rest greyed: the quote fills in as it is read
+    const said = esc(F.quote.slice(0, F.said)), rest = esc(F.quote.slice(F.said));
+    return `<div class="stage"><div class="who">${face()}<span><b class="fit">${esc(a.builder.name)}</b><i class="tilt">@${esc(F.face.at)} said</i></span></div>
+      <div class="quote tilt"><p id="q">“<em>${said}</em><span>${rest}</span>${F.cut ? "…" : ""}”</p></div></div>`;
+  }
+  const S = ["app", "free"];
+  const flags = [a.open_source && "open source", a.vibe_coded && "vibe coded"].filter(Boolean);
+  return `<div class="stage">${bill(a, true, after(S, "free"))}
+    <div class="app"><div class="app__i tilt">${esc(a.icon)}</div>
+      <div class="app__t"><b class="app__n fit">${esc(a.name)}</b><span class="app__b">${face()}by ${esc(a.builder.name)}</span></div></div>
+    <div class="tags">${flags.map(t => `<span class="on">${t}</span>`).join("")}${a.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
+    <div class="score ${after(S, "free") && F.score ? "" : "hide"}"><b>spite ${a.spite_score}/10</b><div>${
+      Array.from({length: 10}, (_, i) => `<i class="${i < a.spite_score ? "on" : ""}"></i>`).join("")}</div></div></div>`;
+}
+
+const chip = F.scene === "app" ? `${F.i}/${F.n}` : `fresh · ${F.date}`;
+document.getElementById("safe").innerHTML =
+  `<div class="top"><div class="logo"><span class="logo__stack"><span>SPITE</span><span>WARE</span></span><em>.ai</em></div><span class="chip">${esc(chip)}</span></div>
+   ${scene()}<div class="cap"><span>${esc(F.cap)}</span></div>`;
+
+// shrink one-line names to their box, and long quotes to the stage
+document.querySelectorAll(".fit").forEach(el => {
+  let px = parseFloat(getComputedStyle(el).fontSize);
+  while (el.scrollWidth > el.clientWidth && px > 30) el.style.fontSize = (px -= 2) + "px";
+});
+document.querySelectorAll(".bill__p b").forEach(el => {
+  let px = parseFloat(getComputedStyle(el).fontSize);
+  while (el.scrollWidth > el.parentElement.clientWidth && px > 60) el.style.fontSize = (px -= 4) + "px";
+});
+const q = document.getElementById("q"), stage = document.querySelector(".stage");
+if (q) { let px = 90; while (stage.scrollHeight > stage.clientHeight && px > 40) q.style.fontSize = (px -= 2) + "px"; }
+
+if (F.guides) document.body.insertAdjacentHTML("beforeend",
+  `<div class="guide" style="left:0;right:0;top:0;height:250px">platform header</div>
+   <div class="guide" style="left:0;right:0;bottom:0;height:400px">caption + handle</div>
+   <div class="guide" style="right:0;top:250px;bottom:400px;width:150px">buttons</div>`);
+</script>

@@ -1,0 +1,183 @@
+{
+  "date": "2026-09-18",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "post": {
+    "title": "GEOlayers wants $329.99. LazyMapLayers wants nothing.",
+    "caption": "Three fresh grudges: a $329.99 map plugin, a $10 a month link shortener and a stock music paywall, each replaced by someone annoyed enough to build the free version.",
+    "tags": [
+      "freesoftware",
+      "opensource",
+      "indiedev",
+      "subscriptions",
+      "aftereffects"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "September 18th.",
+          "say": "September eighteenth.",
+          "step": "date"
+        },
+        {
+          "cap": "Three new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "lazymaplayers",
+      "quote": "Paid map plugins for After Effects work, but they are expensive",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "GEOlayers charges $329.99",
+          "say": "Geo-layers charges three hundred and thirty dollars",
+          "step": "badge"
+        },
+        {
+          "cap": "to put a map in After Effects.",
+          "step": "badge"
+        },
+        {
+          "cap": "Raisul Sohan:",
+          "say": "[matter-of-fact] Raisul Sohan:",
+          "step": "quote"
+        },
+        {
+          "cap": "“Paid map plugins for After Effects work,",
+          "say": "[sarcastic] Paid map plugins for After Effects work,",
+          "step": "quote"
+        },
+        {
+          "cap": "but they are expensive…”",
+          "say": "but they are expensive.",
+          "step": "quote"
+        },
+        {
+          "cap": "Enter LazyMapLayers.",
+          "say": "[quick] Enter Lazy Map Layers.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "jinx",
+      "quote": "Paid link shorteners cost money every month for something that's really just a lookup table.",
+      "cues": [
+        {
+          "cap": "Bitly wants $10 a month",
+          "say": "Bitly wants ten dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "to shorten a link.",
+          "step": "badge"
+        },
+        {
+          "cap": "Gordon McDonald:",
+          "say": "[matter-of-fact] Gordon McDonald:",
+          "step": "quote"
+        },
+        {
+          "cap": "“Paid link shorteners cost money every month",
+          "say": "[sarcastic] Paid link shorteners cost money every month",
+          "step": "quote"
+        },
+        {
+          "cap": "for something that's really just a lookup table.”",
+          "say": "for something that's really just a lookup table.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Jinx. A text file.",
+          "say": "[quick] So: Jinx. A text file.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "mockfreeli",
+      "gripe": "Stock music wants a subscription.",
+      "quote": "Finding license free music without paying a subscription is a PITA.",
+      "cues": [
+        {
+          "cap": "Stock music wants a subscription",
+          "step": "gripe"
+        },
+        {
+          "cap": "before your hobby video gets a soundtrack.",
+          "step": "gripe"
+        },
+        {
+          "cap": "ianhil:",
+          "say": "[matter-of-fact] Ian Hill:",
+          "step": "quote"
+        },
+        {
+          "cap": "“Finding license free music without paying a subscription",
+          "say": "[sarcastic] Finding license free music without paying a subscription",
+          "step": "quote"
+        },
+        {
+          "cap": "is a PITA.”",
+          "say": "is a pita.",
+          "step": "quote"
+        },
+        {
+          "cap": "Enter mockfreeli.",
+          "say": "[quick] Enter mock-freely.",
+          "step": "app"
+        },
+        {
+          "cap": "Free. No card.",
+          "say": "[smug] Free. No card.",
+          "step": "free"
+        }
+      ],
+      "score": false
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "More grudges daily",
+          "say": "[upbeat] More grudges daily,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}

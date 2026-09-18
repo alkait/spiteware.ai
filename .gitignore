@@ -3,3 +3,8 @@
 queue/raw-*.json
 __pycache__/
 scripts/.links-state.json
+.env
+shorts/*.mp4
+shorts/*.html
+shorts/.cache/
+shorts/.build/

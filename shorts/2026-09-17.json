@@ -1,0 +1,193 @@
+{
+  "date": "2026-09-17",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 1,
+  "post": {
+    "title": "Slack Pro: $8.75 per user. Deft: free.",
+    "caption": "Fresh spite: a self-hosted answer to Slack's per-head bill, a video editor built after CapCut asked for a subscription at the Export button, and a calorie tracker with no account and no subscription.",
+    "tags": [
+      "freesoftware",
+      "opensource",
+      "indiedev",
+      "subscriptions",
+      "selfhosted"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "September 17th.",
+          "say": "September seventeenth.",
+          "step": "date"
+        },
+        {
+          "cap": "Three new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "deft",
+      "quote": "This started with three things: wanting Slack to do more, a growing resentment of SaaS bills",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Slack Pro wants $8.75 a head",
+          "say": "Slack Pro wants eight seventy-five a head",
+          "step": "badge"
+        },
+        {
+          "cap": "every month, forever.",
+          "step": "badge"
+        },
+        {
+          "cap": "Maneek21:",
+          "say": "[matter-of-fact] Maneek twenty-one:",
+          "step": "quote"
+        },
+        {
+          "cap": "“This started with three things:",
+          "say": "[sarcastic] This started with three things:",
+          "step": "quote"
+        },
+        {
+          "cap": "wanting Slack to do more,",
+          "step": "quote"
+        },
+        {
+          "cap": "a growing resentment of SaaS bills…”",
+          "say": "a growing resentment of sass bills.",
+          "step": "quote"
+        },
+        {
+          "cap": "Enter Deft. On your own server.",
+          "say": "[quick] Enter Deft. On your own server.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "concat",
+      "quote": "I was really excited to complete and upload my first video ever, and everything seemed perfect until I clicked Export",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "CapCut Pro: $19.99 a month.",
+          "say": "CapCut Pro. Twenty dollars a month.",
+          "step": "badge"
+        },
+        {
+          "cap": "Jareer A.:",
+          "say": "[matter-of-fact] Jareer A:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I was really excited to complete and upload",
+          "say": "[sarcastic] I was really excited to complete and upload",
+          "step": "quote"
+        },
+        {
+          "cap": "my first video ever,",
+          "step": "quote"
+        },
+        {
+          "cap": "and everything seemed perfect",
+          "step": "quote"
+        },
+        {
+          "cap": "until I clicked Export…”",
+          "say": "until I clicked Export.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Concat.",
+          "say": "[quick] So: Concat.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "calorie-scanner",
+      "gripe": "Calorie apps want a subscription.",
+      "quote": "Every calorie tracker worth using wants an account, a subscription, or both",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Calorie apps want a subscription",
+          "step": "gripe"
+        },
+        {
+          "cap": "to read you a free database.",
+          "step": "gripe"
+        },
+        {
+          "cap": "4khronr6:",
+          "say": "[matter-of-fact] Four-kronner-six:",
+          "step": "quote"
+        },
+        {
+          "cap": "“Every calorie tracker worth using",
+          "say": "[sarcastic] Every calorie tracker worth using",
+          "step": "quote"
+        },
+        {
+          "cap": "wants an account, a subscription, or both…”",
+          "say": "wants an account, a subscription, or both.",
+          "step": "quote"
+        },
+        {
+          "cap": "Enter Scan & Track.",
+          "say": "[quick] Enter Scan and Track.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "Plus one more",
+          "say": "[upbeat] Plus one more,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}

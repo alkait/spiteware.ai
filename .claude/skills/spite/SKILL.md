@@ -1,6 +1,6 @@
 ---
 name: spite
-description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, and drafts cards into queue/YYYY-MM-DD.md for approval. Also merges a reviewed queue file. Triggers on /spite, /spite merge, "morning run", "find spiteware".
+description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, and drafts cards into queue/YYYY-MM-DD.md for approval. Also merges a reviewed queue file and renders the day's short video. Triggers on /spite, /spite merge, /spite short, "morning run", "find spiteware", "make the short".
 ---
 
 # /spite
@@ -62,7 +62,36 @@ The review desk has a Merge button that does the same thing. This mode is for wh
    the chat path and for any star that failed at the time. It reads `data/apps.json`,
    not the queue, so re-running is free. Report any `RENAMED` or `UNRESOLVABLE` lines —
    those are stale `repo` values to fix by hand, not noise.
-4. Commit and push only if the user asks. A push publishes to GitHub Pages.
+4. If the merge listed anything, make the day's short: follow **Mode: short** below.
+5. Commit and push only if the user asks. A push publishes to GitHub Pages.
+
+## Mode: short (`/spite short [date]`, and the last step of every merge that listed something)
+
+A 45-second vertical video of the day's fresh spite, narrated, for Shorts, TikTok and Reels.
+No new apps that day, no short. The desk's Merge button does not do this, so when the user
+says they merged there, run this mode.
+
+1. Read `shorts/README.md` (the script format and the writing rules) and the newest
+   `shorts/*.json` (the reference). They are the rules and they change.
+2. Take the apps in `data/apps.json` whose `added` is the date. Top 3 by `spite_score`, a
+   filled `replaces` breaking ties; the count of the rest goes in `more`.
+3. Write `shorts/YYYY-MM-DD.json`. Quotes verbatim from `grudge.quote`, prices and victims only
+   from `replaces`, never a pronoun for a builder, anything hard to pronounce spelled out in `say`.
+   Fill in `post` too (title, caption, tags): it is the text that goes out with the video, and
+   the render refuses a script without it.
+4. Render: `python3 scripts/short.py --open`. It voices the script (about 2 cents, takes are
+   cached), screenshots the frames, and opens the posting desk, `shorts/YYYY-MM-DD.html`: the
+   video plus each platform's text behind Copy buttons. Over 50 seconds means the script is
+   too long: cut words, not tempo.
+5. Read `shorts/.build/YYYY-MM-DD/sheet.png` and fix anything that overflows or is missing.
+6. Report in under 80 words: the file, its length, which apps made it, the title you gave it,
+   that the posting desk is open, and what to listen for, since you cannot hear it: the phonetic
+   spellings, and "Free." landing on the stamp. If a line sounds wrong to the user,
+   `python3 scripts/short.py --reroll <slug|hook|outro> --open`.
+
+Never upload or post the video anywhere, and never drive a browser to do it. The user posts by
+hand from the posting desk. The hall of fame links in the description only work once the
+merge is pushed, so say so if it has not been.
 
 ## Mode: status (`/spite status`)
 

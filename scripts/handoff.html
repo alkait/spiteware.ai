@@ -1,0 +1,94 @@
+<!-- The posting desk for one short. scripts/handoff.py fills in DATA and writes this next to
+     the video as shorts/DATE.html, opened straight off the disk: hence ../style.css. -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>spiteware posting desk</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.bar{position:sticky;top:0;z-index:5;background:var(--ink);color:var(--paper);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.bar h1{font-family:var(--display);font-size:20px;margin:0;letter-spacing:-.02em}.bar h1 span{color:var(--yellow)}
+.pill{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:var(--yellow);color:var(--ink);padding:5px 10px;border:2px solid var(--ink)}
+.desk{max-width:1180px;margin:0 auto;padding:28px 20px 80px;display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start}
+@media (max-width:860px){.desk{grid-template-columns:1fr}}
+.reel{position:sticky;top:76px;display:grid;gap:14px}
+@media (max-width:860px){.reel{position:static}}
+.reel video{width:100%;aspect-ratio:9/16;background:var(--ink);border:var(--bw) solid var(--ink);box-shadow:var(--shadow)}
+.reel .none{aspect-ratio:9/16;display:grid;place-items:center;text-align:center;padding:20px;background:#fff;border:var(--bw) dashed var(--ink);font-family:var(--mono);font-size:13px}
+.file{background:#fff;border:var(--bw) solid var(--ink);padding:12px;display:grid;gap:8px}
+.file code{font-family:var(--mono);font-size:12px;overflow-wrap:anywhere}
+.file small{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;opacity:.7}
+.plat{background:#fff;border:var(--bw) solid var(--ink);box-shadow:var(--shadow);padding:20px;margin-bottom:28px;display:grid;gap:14px;position:relative}
+.plat.done{box-shadow:6px 6px 0 var(--green)}
+.plat__top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.plat h2{font-family:var(--display);font-weight:900;font-size:26px;letter-spacing:-.02em;margin:0}
+.go{font-family:var(--display);font-weight:900;font-size:15px;text-decoration:none;background:var(--pink);color:#fff;border:var(--bw) solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:8px 14px}
+.go:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.field{display:grid;gap:6px}
+.field__top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.field label{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.field label i{font-style:normal;opacity:.55;margin-left:8px}
+.field pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-family:var(--body);font-size:14px;line-height:1.45;background:var(--paper);border:2px solid var(--ink);padding:10px 12px;max-height:260px;overflow:auto}
+button.copy{font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--yellow);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:5px 10px;cursor:pointer}
+button.copy:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+button.copy.ok{background:var(--green)}
+.plat ul{margin:0;padding:0 0 0 18px;font-size:14px;display:grid;gap:4px}
+.posted{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;border-top:2px dashed #ccc;padding-top:12px;cursor:pointer}
+.posted input{width:18px;height:18px;accent-color:var(--green)}
+</style></head>
+<body>
+<div class="bar"><h1>spiteware <span>posting desk</span></h1><span class="pill" id="pill"></span></div>
+<div class="desk"><aside class="reel" id="reel"></aside><main id="plats"></main></div>
+<script>
+const D = /*DATA*/null;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const PLATFORMS = [
+  {id: "youtube", name: "YouTube Shorts", go: "https://www.youtube.com/upload", limits: {title: 100, description: 5000},
+   todo: ["Audience: no, it is not made for kids", "Vertical and under 3 minutes, so it becomes a Short by itself",
+          "Altered content: optional for a stock AI narrator; saying yes costs nothing", "Visibility: public"]},
+  {id: "tiktok", name: "TikTok", go: "https://www.tiktok.com/tiktokstudio/upload", limits: {caption: 2200},
+   todo: ["Who can watch: everyone", "Turn on “AI-generated content” under more options", "Links in captions are not clickable: the address goes in the bio"]},
+  {id: "instagram", name: "Instagram Reels", go: "https://www.instagram.com/", limits: {caption: 2200},
+   todo: ["Create, then Post, pick the file, keep the 9:16 original crop", "Turn on the AI label under advanced settings",
+          "“Also share to Facebook”, if a page is linked, is a free second post"]},
+];
+
+document.title = `posting desk · ${D.label}`;
+document.getElementById("pill").textContent = D.video ? `${D.label} · ${D.seconds}s · ${D.mb} MB` : `${D.label} · not rendered`;
+document.getElementById("reel").innerHTML = (D.video
+  ? `<video controls preload="metadata" src="${esc(D.video)}"></video>`
+  : `<div class="none">No video yet.<br>python3 scripts/short.py</div>`) +
+  `<div class="file"><small>the file · in the file picker, Ctrl+L then paste</small><code id="path">${esc(D.path)}</code>
+   <button class="copy" data-copy="path">Copy path</button></div>`;
+
+document.getElementById("plats").innerHTML = PLATFORMS.map(p => `
+  <section class="plat" id="${p.id}"><div class="plat__top"><h2>${p.name}</h2><a class="go" href="${p.go}" target="_blank" rel="noopener">Open upload ↗</a></div>
+    ${Object.entries(D.text[p.id]).map(([k, v]) => `<div class="field"><div class="field__top">
+      <label>${k}<i>${v.length} / ${p.limits[k]}</i></label><button class="copy" data-copy="${p.id}-${k}">Copy</button></div>
+      <pre id="${p.id}-${k}">${esc(v)}</pre></div>`).join("")}
+    <ul>${p.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ul>
+    <label class="posted"><input type="checkbox" data-posted="${p.id}"> posted</label></section>`).join("");
+
+async function copy(text) {
+  try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
+  const t = document.createElement("textarea");
+  t.value = text; t.style.position = "fixed"; t.style.opacity = "0"; document.body.append(t); t.select();
+  let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+  t.remove(); return ok;
+}
+document.addEventListener("click", async e => {
+  const b = e.target.closest("button.copy"); if (!b) return;
+  const was = b.textContent, ok = await copy(document.getElementById(b.dataset.copy).textContent);
+  b.textContent = ok ? "Copied" : "Select it by hand"; b.classList.toggle("ok", ok);
+  setTimeout(() => { b.textContent = was; b.classList.remove("ok"); }, 1400);
+});
+
+// which platforms are done survives a reload; the page works the same without storage
+const key = p => `posted:${D.date}:${p}`;
+document.querySelectorAll("[data-posted]").forEach(box => {
+  const mark = () => box.closest(".plat").classList.toggle("done", box.checked);
+  try { box.checked = localStorage.getItem(key(box.dataset.posted)) === "1"; } catch (e) {}
+  mark();
+  box.addEventListener("change", () => { mark(); try { localStorage.setItem(key(box.dataset.posted), box.checked ? "1" : "0"); } catch (e) {} });
+});
+</script>
+</body></html>

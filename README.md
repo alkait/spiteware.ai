@@ -11,6 +11,7 @@ A catalog of apps people built out of spite because a paid tool asked for money 
 - `queue/` — one JSON file per morning run, awaiting approval.
 - `scripts/sweep.py` — tier-1 source sweep. `scripts/review.py` — local review desk on port 4322. `scripts/merge.py` — moves approved entries into the data files and rebuilds the hall of fame. `scripts/pages.py` — rebuilds it on its own, for after a hand edit to `data/apps.json`.
 - `scripts/links.py` — the 404 hunt. With no arguments it checks every internal link offline (and `pages.py` refuses to finish a build that fails it). `--external` checks every outbound URL; `--bury <slug>` retires an app whose builder took it down: it leaves the lists and keeps its hall of fame page, stamped, with dead links swapped for Wayback snapshots.
+- `scripts/short.py` — the daily short: turns `shorts/YYYY-MM-DD.json` (a narration script) into a 1080x1920 video of the day's fresh spite, voiced through `scripts/voice.py`, then `scripts/handoff.py` writes a local posting desk with each platform's text. Nothing uploads itself. Rules in `shorts/README.md`; needs `firefox`, `ffmpeg` and an `OPENROUTER_API_KEY` in `.env`.
 
 Hosted on GitHub Pages straight from `main`.
 
