@@ -71,8 +71,10 @@
   // Load the catalog once; pages subscribe via SW.ready(fn)
   const subs = [];
   SW.ready = fn => SW.apps ? fn(SW.apps) : subs.push(fn);
-  fetch('/data/apps.json').then(r=>r.json()).then(apps => {
-    SW.apps = apps;
+  // An app that got taken down stays in the file with status "dead" (scripts/links.py --bury):
+  // it keeps its hall of fame page, and drops off every list and count here.
+  fetch('/data/apps.json').then(r=>r.json()).then(all => {
+    const apps = SW.apps = all.filter(a => a.status !== 'dead');
     document.querySelectorAll('[data-apps]').forEach(el=>el.textContent=apps.length.toLocaleString('en-US'));
     document.querySelectorAll('[data-from-apps]').forEach(el=>el.dataset.count=apps.length);
     const victims = new Set(apps.map(a=>(a.replaces?.name||'').trim().toLowerCase()).filter(Boolean)).size;

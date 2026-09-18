@@ -42,10 +42,12 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
 
 6. **Draft cards** into `queue/YYYY-MM-DD.json` using exactly the schema in `queue/README.md`. Every candidate starts `"status": "pending"`. Write the tagline in the voice from `criteria.md`: sarcastic, revenge-flavored, friendly, the joke is the price and never the person. Tag from the closed list in `criteria.md` — at most 3, never a word that isn't on it; `utilities` is the catch-all. Fill `why` with the score breakdown. Put dropped candidates with one-line reasons in the `dropped` array.
 
-7. **Open the review desk.** Approving a candidate there also stars its `repo` from the
+7. **Check the catalog for rot.** Run `python3 scripts/links.py --external`. It takes about a minute and checks every link already on the site. `DEAD` lines are findings; `SUSPECT`, `MOVED` and `UNKNOWN` are not, so leave them out unless the user asks. Never run `--bury` yourself and never edit `data/apps.json` to fix a link: report it, and bury only when the user says so.
+
+8. **Open the review desk.** Approving a candidate there also stars its `repo` from the
    user's GitHub account, so `repo` must be filled in by step 4 or the star is skipped. Check `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4322/`. If it isn't 200, start `(nohup python3 scripts/review.py 4322 >/dev/null 2>&1 &)`. Never use pkill in this repo's shell; it kills the session. Then open http://localhost:4322/ in the browser. The user approves, rejects, and edits there.
 
-8. **Report** to the user in under 150 words: how many hits, how many survived, the top three by score with one line each, and that the review desk is open. Say plainly if a source failed.
+9. **Report** to the user in under 150 words: how many hits, how many survived, the top three by score with one line each, and that the review desk is open. Say plainly if a source failed. If step 7 found dead links, list them first: app, which link, and the `--bury` command that would retire it.
 
 Never fabricate a quote, a price, or a builder. If verification fails, drop the candidate and say why in the report.
 
@@ -53,7 +55,7 @@ Never fabricate a quote, a price, or a builder. If verification fails, drop the 
 
 The review desk has a Merge button that does the same thing. This mode is for when the user decides in chat instead ("approve X, reject Y"): set those statuses in the queue JSON, then:
 
-1. Run `python3 scripts/merge.py` (defaults to the newest queue file) and show its output.
+1. Run `python3 scripts/merge.py` (defaults to the newest queue file) and show its output. A `HELD, dead link` line means an approved candidate was not listed because one of its links already 404s; tell the user which link, and do not reach for `--no-check` unless they ask.
 2. Run `python3 -c "import json;json.load(open('data/apps.json'))"` to confirm the JSON is valid.
 3. Run `python3 scripts/star.py` to star the newly listed repos from the user's GitHub
    account, and show its output. The desk stars on Approve, so this is the backstop for

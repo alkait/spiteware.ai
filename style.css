@@ -358,11 +358,16 @@
   .fcard__what p{margin:0;font-size:16px;color:#333;max-width:56ch}
   .kills--xl{font-size:12px;padding:8px 12px;background:var(--paper);border-width:var(--bw);box-shadow:4px 4px 0 var(--ink);transform:rotate(2deg);max-width:260px}
   .kills--xl s{font-size:clamp(16px,1.7vw,21px);line-height:1.2;text-decoration-thickness:3px}
+  /* taken down since we listed it: the page outlives the app (scripts/links.py --bury) */
+  .sticker--dead{top:-18px;right:-14px;z-index:2;background:var(--ink);color:var(--yellow);transform:rotate(5deg);box-shadow:4px 4px 0 var(--pink)}
+  .fcard--dead .fcard__what h1{text-decoration:line-through;text-decoration-color:var(--pink);text-decoration-thickness:4px}
+  .fcard__rip{margin:0;font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em;border:2px dashed var(--ink);background:var(--paper);padding:10px 12px}
   @media (max-width:860px){
     .fcard{grid-template-columns:1fr;min-height:0;box-shadow:8px 8px 0 var(--pink)}
     .fcard__who{border-right:0;border-bottom:var(--bw) solid var(--ink);padding:44px 22px 26px}
     .fcard .gcard__av,.fcard .gcard__fb{width:150px;height:150px}
     .fcard .gcard__fb{font-size:60px}
+    .sticker--dead{top:-14px;right:-4px;font-size:11px}
   }
   @media (max-width:620px){
     .fcard__app{grid-template-columns:auto 1fr}

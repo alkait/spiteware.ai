@@ -76,7 +76,9 @@ def main():
         sys.exit(err)
 
     apps = json.loads((ROOT / "data/apps.json").read_text())
-    repos = [(a["slug"], a["repo"].strip()) for a in apps if (a.get("repo") or "").strip()]
+    # a repo links.py has already buried would only show up as UNRESOLVABLE on every run
+    repos = [(a["slug"], a["repo"].strip()) for a in apps
+             if (a.get("repo") or "").strip() and "repo" not in (a.get("dead_links") or {})]
     have = starred_set()
 
     todo, already, renamed, gone = [], [], [], []

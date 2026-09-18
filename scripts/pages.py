@@ -4,14 +4,21 @@
 Usage: python3 scripts/pages.py
 
 Writes hall-of-fame/<author>/<app>/index.html for every app, a page per author, the
-index of inductees, sitemap.xml and robots.txt. These are real files rather than
+index of inductees, sitemap.xml, robots.txt and 404.html (GitHub Pages serves that one
+for any address that isn't a file, at any depth, hence the root-relative paths). These are real files rather than
 something site.js renders, because link previews and most crawlers don't run JS.
 
 hall-of-fame/ is wiped and rebuilt on every run, so never edit anything in it by hand.
 scripts/merge.py runs this after an approve; run it yourself after hand-editing
 data/apps.json.
+
+An app with "status": "dead" (scripts/links.py --bury) is off every list and out of the
+sitemap, but keeps its page, stamped, so a link someone shared never 404s. Any link in
+an app's `dead_links` points at its Wayback snapshot, or isn't a link any more.
+
+Every build ends with the internal link check from scripts/links.py and fails on a miss.
 """
-import json, re, html, shutil, pathlib, urllib.parse
+import json, re, html, shutil, pathlib, urllib.parse, importlib.util
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "hall-of-fame"
@@ -48,6 +55,14 @@ def gh(a):
     m = re.fullmatch(r"https://github\.com/([^/]+)/?", a["builder"].get("url") or "")
     return m.group(1) if m else (a.get("repo") or "").split("/")[0]
 
+def alive(a): return a.get("status") != "dead"
+
+def out(a, field, url):
+    """Where an outbound link points today: the URL itself, the Wayback snapshot that
+    links.py --bury found for it, or None when it died without leaving a copy."""
+    dl = a.get("dead_links") or {}
+    return (dl[field] or None) if field in dl else url
+
 def victim(a):
     """Mirrors SW.victim in site.js."""
     r = a.get("replaces") or {}
@@ -64,7 +79,7 @@ def avatar(a, px):
     """The builder's face, or an initial tile when there is no GitHub account to ask.
     site.js swaps a broken image for the same tile (img[data-who])."""
     who = gh(a)
-    if who:
+    if who and out(a, "face", who):
         # only the index is a wall of faces; everywhere else the avatar is above the fold
         lazy = ' loading="lazy"' if px < 100 else ""
         return (f'<img class="gcard__av" src="https://github.com/{esc(who)}.png?size={px * 2}" alt="" '
@@ -97,7 +112,7 @@ def related(a, apps):
     return sorted((b for b in apps if b is not a), key=score)[:3]
 
 
-def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=()):
+def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), index=True, here="/hall-of-fame/"):
     url = SITE + path
     # "</" inside JSON would let a tagline close the script tag early
     lds = "".join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for x in ld)
@@ -109,7 +124,8 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=()):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{esc(url)}">
+<link rel="canonical" href="{esc(url)}">{"" if index else f"""
+<meta name="robots" content="noindex,follow">"""}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="spiteware.ai">
 <meta property="og:url" content="{esc(url)}">
@@ -142,7 +158,7 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=()):
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/apps.html">Apps <span class="nav__n" data-apps>{n}</span></a></li>
-        <li><a href="/hall-of-fame/" aria-current="page">Hall of fame</a></li>
+        <li><a href="/hall-of-fame/"{' aria-current="page"' if here == "/hall-of-fame/" else ""}>Hall of fame</a></li>
         <li><a href="/manifesto.html">Manifesto</a></li>
         <li><a href="/rules.html">Rules</a></li>
         <li><a href="/#submit">Submit</a></li>
@@ -192,30 +208,43 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=()):
 def app_page(a, apps, nxt):
     b, r, n = a["builder"], a["replaces"], len(apps)
     vname, price = (r.get("name") or "").strip(), (r.get("price") or "").strip().split(" (")[0]
-    path, who = fame(a), gh(a)
+    path, who, dead = fame(a), gh(a), not alive(a)
     title = (f"{a['name']}: free alternative to {vname}" + (f" ({price})" if price else "") if vname
              else f"{a['name']}: built out of spite, free forever") + " · spiteware.ai"
     desc = f"{a['tagline']} Built by {b['name']} out of spite" + (f", instead of paying {vname}." if vname else ".")
+    if dead:
+        title = f"{a['name']} (taken down) · spiteware.ai hall of fame"
+        desc = f"{a['name']} has been taken down since we listed it. The grudge stands. " + desc
     quote = re.sub(r"([$€£]\d[\d,]*(?:\.\d+)?(?:\s*/\s*\w+)?)", r"<em>\1</em>", esc(a["grudge"]["quote"]), count=1)
     qsize = "s" if len(a["grudge"]["quote"]) > 210 else "m" if len(a["grudge"]["quote"]) > 100 else "l"
     src = urllib.parse.urlparse(a["grudge"]["source"]).netloc.removeprefix("www.")
 
     # The face links to GitHub when that's where it came from, else wherever the builder lives.
     href = f"https://github.com/{who}" if who else b.get("url") if (b.get("url") or "").startswith("http") else ""
+    href = out(a, "face", href) or ""
     at = f'<span class="gcard__at">@{esc(who or b["handle"])}</span>'
     pic = (f'<a class="gcard__pic" href="{esc(href)}" target="_blank" rel="noopener">{avatar(a, 200)}{at}</a>' if href
            else f'<span class="gcard__pic">{avatar(a, 200)}{at}</span>')
 
     share = urllib.parse.urlencode({"text": f"{a['name']} by {b['name']} made the spiteware.ai hall of fame."
                                             + (f" Replaces {vname}." if vname else ""), "url": SITE + path})
-    repo = (f'<a class="btn btn--ghost" href="https://github.com/{esc(a["repo"])}" target="_blank" rel="noopener">Source on GitHub</a>'
-            if a.get("repo") else "")
+    # Outbound links go through out(): a dead one points at its snapshot, or stops being a link.
+    repo_url = out(a, "repo", f'https://github.com/{a["repo"]}') if a.get("repo") else None
+    repo = (f'<a class="btn btn--ghost" href="{esc(repo_url)}" target="_blank" rel="noopener">'
+            f'{"Source on GitHub" if "repo" not in (a.get("dead_links") or {}) else "Archived source"}</a>' if repo_url else "")
+    get_url, cite_url = out(a, "url", a["url"]), out(a, "grudge", a["grudge"]["source"])
+    get = (f'<a class="btn btn--pink" href="{esc(get_url)}" target="_blank" rel="noopener">Get {esc(a["name"])} →</a>' if not dead
+           else f'<a class="btn btn--ghost" href="{esc(get_url)}" target="_blank" rel="noopener">See the archived copy →</a>' if get_url else "")
+    cite = (f'on {esc(src)} (no longer online)' if not cite_url
+            else f'<a href="{esc(cite_url)}" target="_blank" rel="noopener">on {esc(src)}{"" if cite_url == a["grudge"]["source"] else ", archived"} ↗</a>')
+    rip = (f'<span class="sticker sticker--dead">taken down{" · " + month(a.get("died")) if month(a.get("died")) else ""}</span>' if dead else "")
+    gone = (f'<p class="fcard__rip">{esc(a["name"])} has been taken down since it was inducted. The grudge outlived the app.</p>' if dead else "")
     more = "".join(card(x) for x in related(a, apps))
 
     body = f'''  <section class="fame">
     <div class="wrap">
-      <article class="fcard">
-        <a class="deck__label" href="/hall-of-fame/">Hall of fame</a>
+      <article class="fcard{" fcard--dead" if dead else ""}">
+        <a class="deck__label" href="/hall-of-fame/">Hall of fame</a>{rip}
         <div class="fcard__who">
           {pic}
           <div class="fcard__name">{esc(b["name"])}</div>
@@ -227,7 +256,7 @@ def app_page(a, apps, nxt):
         <div class="fcard__main">
           <blockquote class="fcard__q fcard__q--{qsize}">
             <p>“{quote}”</p>
-            <cite>{esc(b["name"])}, <a href="{esc(a["grudge"]["source"])}" target="_blank" rel="noopener">on {esc(src)} ↗</a></cite>
+            <cite>{esc(b["name"])}, {cite}</cite>
           </blockquote>
           <div class="fcard__app">
             <div class="card__icon">{esc(a.get("icon") or "🔧")}</div>
@@ -235,10 +264,10 @@ def app_page(a, apps, nxt):
             <div class="kills kills--xl">replaces<s>{esc(victim(a))}</s></div>
           </div>
           <div class="chips">{chips(a)}</div>
-          <div class="cta">
-            <a class="btn btn--pink" href="{esc(a["url"])}" target="_blank" rel="noopener">Get {esc(a["name"])} →</a>
+          {gone}{f"""<div class="cta">
+            {get}
             {repo}
-          </div>
+          </div>""" if get or repo else ""}
         </div>
       </article>
       <div class="fame__bar">
@@ -262,7 +291,7 @@ def app_page(a, apps, nxt):
 '''
     tags = a.get("tags") or []
     app_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": a["name"],
-              "description": a["tagline"], "url": a["url"], "isAccessibleForFree": True,
+              "description": a["tagline"], **({"url": get_url} if get_url else {}), "isAccessibleForFree": True,
               "applicationCategory": next((CATEGORY[t] for t in tags if t in CATEGORY), "UtilitiesApplication"),
               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
               "author": {"@type": "Person", "name": b["name"], **({"url": href} if href else {})}}
@@ -271,7 +300,7 @@ def app_page(a, apps, nxt):
         {"@type": "ListItem", "position": 1, "name": "spiteware.ai", "item": SITE + "/"},
         {"@type": "ListItem", "position": 2, "name": "Hall of fame", "item": SITE + "/hall-of-fame/"},
         {"@type": "ListItem", "position": 3, "name": a["name"], "item": SITE + path}]}
-    return shell(title=title, desc=desc, path=path, body=body, n=n, ld=(app_ld, crumbs),
+    return shell(title=title, desc=desc, path=path, body=body, n=n, ld=(app_ld, crumbs), index=not dead,
                  og_title=f"{a['name']} by {b['name']} · spiteware.ai hall of fame",
                  og_desc=f"“{a['grudge']['quote']}”")
 
@@ -328,6 +357,20 @@ def index_page(apps):
                  body=body, n=n, ld=(ld,))
 
 
+def lost_page(n):
+    body = f'''  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">error 404 · still free</span>
+      <h1>This page got <span class="hl">cancelled.</span></h1>
+      <p class="lede">There's nothing at this address. The apps are all still here, and they still cost <b>$0</b>.</p>
+      <div class="cta"><a class="btn btn--pink" href="/apps.html">See all {n} grudges →</a> <a class="btn btn--ghost" href="/hall-of-fame/">Hall of fame</a> <a class="btn btn--ghost" href="/">Home</a></div>
+    </div>
+  </section>
+'''
+    return shell(title="404: this page got cancelled · spiteware.ai", path="/404.html", body=body, n=n, index=False, here="",
+                 desc="There's nothing at this address. The apps are all still here, and they still cost $0.")
+
+
 def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True); path.write_text(text)
 
@@ -341,25 +384,38 @@ def build():
         seen[fame(a)] = a["slug"]
     if OUT.exists(): shutil.rmtree(OUT)
 
+    # Every list, count and sitemap entry is the living only. The dead keep their page and nothing else.
+    live, dead = [a for a in apps if alive(a)], [a for a in apps if not alive(a)]
     by = {}
     for a in apps: by.setdefault(author(a), []).append(a)
     urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/manifesto.html", None), ("/rules.html", None)]
-    for i, a in enumerate(apps):
-        write(ROOT / fame(a).strip("/") / "index.html", app_page(a, apps, apps[(i + 1) % len(apps)]))
+    for i, a in enumerate(live):
+        write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[(i + 1) % len(live)]))
         urls.append((fame(a), a["added"]))
+    for a in dead:
+        write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[0]))
     for handle, theirs in by.items():
-        solo = len(theirs) == 1
-        write(OUT / handle / "index.html", author_stub(theirs[0]) if solo else author_page(handle, theirs, len(apps)))
+        standing = [a for a in theirs if alive(a)]
+        solo = len(standing) < 2
+        write(OUT / handle / "index.html", author_stub((standing or theirs)[0]) if solo else author_page(handle, standing, len(live)))
         if not solo: urls.append((f"/hall-of-fame/{handle}/", None))
-    write(OUT / "index.html", index_page(apps))
+    write(OUT / "index.html", index_page(live))
+    write(ROOT / "404.html", lost_page(len(live)))
 
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{SITE}{p}</loc>{f'<lastmod>{d}</lastmod>' if d else ''}</url>\n" for p, d in urls)
         + "</urlset>\n")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-    return {"apps": len(apps), "authors": len(by), "urls": len(urls)}
+
+    spec = importlib.util.spec_from_file_location("links", ROOT / "scripts/links.py")
+    L = importlib.util.module_from_spec(spec); spec.loader.exec_module(L)
+    broken, _ = L.internal()
+    if broken: raise SystemExit(f"{len(broken)} broken internal links:\n" + "\n".join(f"  {ref}  <- {where}" for where, ref in broken[:20])
+                                + ("\n  ... python3 scripts/links.py lists them all" if len(broken) > 20 else ""))
+    return {"apps": len(live), "dead": len(dead), "authors": len(by), "urls": len(urls)}
 
 if __name__ == "__main__":
     r = build()
-    print(f"hall of fame: {r['apps']} app pages, {r['authors']} author pages, {r['urls']} urls in sitemap.xml")
+    print(f"hall of fame: {r['apps']} app pages (+{r['dead']} taken down), {r['authors']} author pages, "
+          f"{r['urls']} urls in sitemap.xml, internal links ok")

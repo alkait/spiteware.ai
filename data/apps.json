@@ -559,7 +559,7 @@
     "builder": {
       "name": "Philip Moses and Kavin",
       "handle": "philipmoses",
-      "url": "https://github.com/houseoffoss"
+      "url": "https://news.ycombinator.com/user?id=philipmoses"
     },
     "tags": [
       "self-hosted",
@@ -1229,7 +1229,15 @@
     "vibe_coded": false,
     "repo": "giriaryan694-a11y/Intrivox",
     "spite_score": 8,
-    "added": "2026-09-08"
+    "added": "2026-09-08",
+    "dead_links": {
+      "url": "",
+      "repo": "",
+      "grudge": "",
+      "face": ""
+    },
+    "status": "dead",
+    "died": "2026-09-18"
   },
   {
     "slug": "laberbacke",
@@ -1320,7 +1328,15 @@
     "vibe_coded": false,
     "repo": "Astro-Softwares/Lightmaker",
     "spite_score": 8,
-    "added": "2026-09-08"
+    "added": "2026-09-08",
+    "dead_links": {
+      "url": "",
+      "repo": "",
+      "grudge": "",
+      "face": ""
+    },
+    "status": "dead",
+    "died": "2026-09-18"
   },
   {
     "slug": "csvpreview",
@@ -1536,7 +1552,14 @@
     "vibe_coded": true,
     "repo": "alexec/Walkist",
     "spite_score": 10,
-    "added": "2026-09-12"
+    "added": "2026-09-12",
+    "dead_links": {
+      "url": "",
+      "repo": "",
+      "grudge": ""
+    },
+    "status": "dead",
+    "died": "2026-09-18"
   },
   {
     "slug": "openwinsidecar",

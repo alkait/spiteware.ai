@@ -2,3 +2,4 @@
 *.log
 queue/raw-*.json
 __pycache__/
+scripts/.links-state.json

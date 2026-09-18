@@ -8,6 +8,8 @@ python3 scripts/review.py 4322    # then open http://localhost:4322/
 
 The desk shows each candidate as the live card with its evidence, lets you edit any text inline, and has Approve, Reject, and Merge buttons. Merge moves approved candidates into `data/apps.json`, rejected names into `data/rejected.json`, and leaves pending ones in the queue. Push to publish.
 
+**Approve also checks the links.** The toast warns if any of the candidate's links is already dead, and Merge holds that candidate in the queue, still approved, until the link is fixed (`python3 scripts/merge.py --no-check` overrides). Everything that does get merged has a Wayback Machine capture requested in the background, so there is a snapshot to fall back on if the builder ever takes it down.
+
 **Approve also stars.** Hitting Approve stars the candidate's `repo` from your GitHub account and reports the result in the toast; a candidate with no `repo` is skipped. Un-approving does not unstar. Merge stays a pure data operation, so if a star ever fails, `python3 scripts/star.py` re-runs the whole catalog idempotently and catches it.
 
 Schema:

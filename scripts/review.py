@@ -3,9 +3,10 @@
 
 Usage: python3 scripts/review.py [port]   then open http://localhost:4322/
 Approve / reject / edit write straight back to queue/*.json. Approve also stars the
-candidate's repo via scripts/star.py. Merge runs scripts/merge.py.
+candidate's repo via scripts/star.py and checks its links via scripts/links.py. Merge
+runs scripts/merge.py, which holds back anything with a dead link.
 """
-import json, sys, pathlib, http.server, urllib.parse, importlib.util
+import json, sys, pathlib, http.server, urllib.parse, importlib.util, threading
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 def load(name):
@@ -57,10 +58,20 @@ class H(http.server.SimpleHTTPRequestHandler):
             if body.get("status") == "approve" and target is not None:
                 state, detail = load("star").star_one(target.get("repo", ""), timeout=8)
                 star = {"state": state, "detail": detail}
-            return self._json({"ok": True, "star": star})
+            # Same moment, same reason: a link that is already dead should be seen now,
+            # not by a visitor. It only warns; merge.py is what refuses.
+            dead = None
+            if body.get("status") == "approve" and target is not None:
+                try: dead = load("links").dead_fields(target, timeout=6)
+                except Exception as e: dead = {"check failed": str(e)}
+            return self._json({"ok": True, "star": star, "dead": dead})
         if p == "/api/merge":
             M = load("merge")
-            res = [dict(M.merge(qf), file=qf.name) for qf in queue_files()]; return self._json({"ok": True, "results": res})
+            res = [dict(M.merge(qf), file=qf.name) for qf in queue_files()]
+            # Wayback captures take up to a minute each, so they happen behind the desk's back.
+            new = [a for r in res for a in r.pop("new")]
+            if new: threading.Thread(target=lambda: load("links").archive(new), daemon=True).start()
+            return self._json({"ok": True, "results": res})
         self._json({"error": "unknown"}, 404)
 
 if __name__ == "__main__":
