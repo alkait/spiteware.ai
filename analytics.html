@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSP99C36LS"></script>
+<script>
+  // local previews and anything else off the real domain send nothing
+  if (location.hostname !== 'spiteware.ai') window['ga-disable-G-XSP99C36LS'] = true;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XSP99C36LS');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>the numbers — spiteware.ai</title>
+<meta name="description" content="Who visits spiteware.ai, where they come from and what they read. The real numbers, in public.">
+<link rel="canonical" href="https://spiteware.ai/analytics.html">
+<meta name="robots" content="noindex,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="spiteware.ai">
+<meta property="og:url" content="https://spiteware.ai/analytics.html">
+<meta property="og:title" content="the numbers — spiteware.ai">
+<meta property="og:description" content="Who visits spiteware.ai, where they come from and what they read. The real numbers, in public.">
+<meta property="og:image" content="https://spiteware.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFE600">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <span>★ <b data-apps>—</b> apps listed. all free.</span><span>★ spiteware.ai has made <b>$0.00</b> so far</span><span>★ built by people who read the pricing page and said "no"</span><span>★ cancel your subscriptions. someone already rebuilt the app.</span><span>★ "upgrade to Pro" is not a feature</span><span>★ "seat-based pricing" is a hate crime</span><span>★ vibe coded. spite powered.</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="./" aria-label="spiteware.ai home">
+      <span class="logo__stack" aria-hidden="true"><span>SPITE</span><span>WARE</span></span>
+      <em aria-hidden="true">.ai</em>
+    </a>
+    <button class="menu__btn" type="button" id="menubtn" aria-expanded="false" aria-controls="mainnav"><span class="menu__bars" aria-hidden="true"></span>Menu</button>
+    <nav aria-label="Main" id="mainnav">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="apps.html">Apps <span class="nav__n" data-apps>—</span></a></li>
+        <li><a href="/hall-of-fame/">Hall of fame</a></li>
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="./#submit">Submit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap an">
+
+    <div class="an__head">
+      <span class="kicker">the numbers, in public</span>
+      <h1>The footer counter is fake. These <span class="hollow">aren't.</span></h1>
+      <p class="doc__lede">Who shows up, where they came from and what they read. Straight out of Google Analytics, nothing rounded up.</p>
+    </div>
+
+    <div class="an__bar" id="periods" role="group" aria-label="Period">
+      <button class="tagbtn" type="button" data-period="today">Today</button>
+      <button class="tagbtn" type="button" data-period="yesterday">Yesterday</button>
+      <button class="tagbtn" type="button" data-period="7d">7 days</button>
+      <button class="tagbtn" type="button" data-period="30d">30 days</button>
+      <button class="tagbtn" type="button" data-period="90d">90 days</button>
+      <button class="tagbtn" type="button" data-period="custom" id="customBtn">Custom</button>
+    </div>
+
+    <div class="an__pick" id="customPicker">
+      <label for="customStart">From</label>
+      <input type="date" id="customStart">
+      <label for="customEnd">To</label>
+      <input type="date" id="customEnd">
+      <button type="button" id="customGo">Show</button>
+      <button type="button" class="an__x" id="customDismiss" aria-label="Close">✕</button>
+    </div>
+
+    <label class="an__dev" id="devToolbar"><input type="checkbox" id="cacheToggle"> <span id="cacheLabel">Cache: off</span></label>
+
+    <div id="content" aria-live="polite"><div class="an__wait">Counting</div></div>
+
+    <p class="an__foot" id="foot" hidden></p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="counter" title="You are visitor number…">
+      <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
+      <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
+    </div>
+    <div class="foot__meta">
+      this site was shamelessly vibe coded by <a href="https://github.com/alkait" target="_blank" rel="noopener">@alkait</a><br>
+      no pricing page · <a class="ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source on github</a><br>
+      the grudges, read aloud: <a class="ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">youtube</a> · <a class="ico ico--ig" href="https://www.instagram.com/spiteware.ai/" target="_blank" rel="noopener">instagram</a>
+    </div>
+    <div class="badges">
+      <span class="badge">Best viewed in any browser</span>
+      <span class="badge badge--blue">0 bytes of fonts</span>
+      <span class="badge badge--pink">Made with rage</span>
+      <span class="badge badge--green">Y2K compliant</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+(() => {
+  // The numbers come from workers/analytics-proxy. A local preview talks to `npm run dev` in that folder.
+  const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+  const WORKER_URL = LOCAL ? 'http://localhost:8788' : 'https://stats.spiteware.ai';
+  const esc = SW.esc, $ = id => document.getElementById(id);
+  const PERIODS = { today: 'Today', yesterday: 'Yesterday', '7d': 'Last 7 days', '30d': 'Last 30 days', '90d': 'Last 90 days', custom: 'Custom' };
+  // one colour per measure, everywhere it appears. Checked for colour-blind separation on white.
+  const SERIES = [
+    { key: 'users', color: '#FF3E9A', label: 'Visitors' },
+    { key: 'sessions', color: '#2D5BFF', label: 'Visits' },
+    { key: 'pageViews', color: '#FF6B1A', label: 'Page views' }
+  ];
+  // only the traffic sources GA4 can break down further
+  const DRILL = ['Referral', 'Organic Search', 'Organic Social', 'Organic Video'];
+  const EDIT = '<svg class="an__edit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>';
+
+  // a private window can refuse storage; the page has to work without it
+  const store = {
+    get: k => { try { return localStorage.getItem('analytics_' + k) || ''; } catch { return ''; } },
+    set: (k, v) => { try { localStorage.setItem('analytics_' + k, v); } catch {} }
+  };
+
+  const content = $('content'), foot = $('foot'), picker = $('customPicker'), customBtn = $('customBtn');
+  const startEl = $('customStart'), endEl = $('customEnd');
+  const iso = d => d.toISOString().split('T')[0];
+  const today = iso(new Date());
+  const day = (ds, opts) => new Date(ds + 'T00:00:00').toLocaleDateString('en-US', opts);
+  const fmt = n => (n || 0).toLocaleString('en-US');
+  const fmtDuration = s => `${Math.floor((s || 0) / 60)}:${String((s || 0) % 60).padStart(2, '0')}`;
+  const plural = (n, one, many) => `${fmt(n)} ${n === 1 ? one : many}`;
+
+  let period = store.get('period'), customStart = store.get('custom_start'), customEnd = store.get('custom_end');
+  let cacheOn = store.get('cache') === 'true', asked = 0, unpin = null, redraw = null;
+  if (!PERIODS[period] || (period === 'custom' && !(customStart && customEnd))) period = '7d';
+  startEl.max = endEl.max = today;
+
+  function customLabel() {
+    const o = { month: 'short', day: 'numeric' };
+    const text = customStart === customEnd ? day(customStart, o) : `${day(customStart, o)} – ${day(customEnd, o)}`;
+    customBtn.innerHTML = `${esc(text)} <span title="Change dates">${EDIT}</span>`;
+  }
+  function mark() {
+    document.querySelectorAll('#periods .tagbtn').forEach(b => {
+      b.classList.toggle('is-on', b.dataset.period === period);
+      b.setAttribute('aria-pressed', b.dataset.period === period);
+    });
+  }
+  function pick(p) { period = p; store.set('period', p); mark(); picker.classList.remove('is-on'); load(); }
+  function pickDates(s, e) {
+    customStart = s; customEnd = e; startEl.value = s; endEl.value = e;
+    store.set('custom_start', s); store.set('custom_end', e);
+    customLabel(); pick('custom');
+  }
+
+  if (customStart && customEnd) { startEl.value = customStart; endEl.value = customEnd; customLabel(); }
+  mark();
+
+  $('periods').addEventListener('click', e => {
+    const b = e.target.closest('.tagbtn'); if (!b) return;
+    if (b.dataset.period !== 'custom') return pick(b.dataset.period);
+    // the pencil reopens the dates; the button itself goes back to the last custom range
+    if (customStart && customEnd && !e.target.closest('.an__edit')) return pick('custom');
+    if (!startEl.value) { const d = new Date(); d.setDate(d.getDate() - 6); startEl.value = iso(d); endEl.value = today; }
+    picker.classList.toggle('is-on');
+  });
+  $('customDismiss').addEventListener('click', () => picker.classList.remove('is-on'));
+  $('customGo').addEventListener('click', () => {
+    if (!startEl.value || !endEl.value) return;
+    if (startEl.value > endEl.value) endEl.value = startEl.value;
+    pickDates(startEl.value, endEl.value);
+  });
+
+  if (LOCAL) {
+    const toggle = $('cacheToggle'), label = $('cacheLabel');
+    $('devToolbar').style.display = 'flex';
+    toggle.checked = cacheOn;
+    const say = () => label.textContent = 'Cache: ' + (cacheOn ? 'on' : 'off');
+    say();
+    toggle.addEventListener('change', () => { cacheOn = toggle.checked; store.set('cache', cacheOn); say(); load(); });
+  }
+
+  async function load() {
+    const mine = ++asked;
+    unpin = redraw = null;   // the chart they belonged to is about to go
+    content.innerHTML = '<div class="an__wait">Counting</div>';
+    foot.hidden = true;
+    try {
+      let url = `${WORKER_URL}/analytics?period=${period}${LOCAL && !cacheOn ? '&nocache=1' : ''}`;
+      if (period === 'custom') url += `&start=${encodeURIComponent(customStart)}&end=${encodeURIComponent(customEnd)}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('the API answered ' + res.status);
+      const data = await res.json();
+      if (mine === asked) render(data);   // a slow answer to an earlier click must not overwrite a newer one
+    } catch (err) {
+      if (mine === asked) content.innerHTML = `<div class="none">Couldn't load the numbers: ${esc(err.message)}.</div>`;
+    }
+  }
+
+  function delta(now, before) {
+    const pct = before ? Math.round((now - before) / before * 100) : 0;
+    if (!pct) return '<span class="an__delta" title="No change to compare">—</span>';
+    return `<span class="an__delta an__delta--${pct > 0 ? 'up' : 'down'}" title="Against the ${esc(fmt(before))} of the period before">${pct > 0 ? '▲' : '▼'} ${fmt(Math.abs(pct))}%</span>`;
+  }
+  const stat = (label, value, d, sub) => `<div class="stat"><div class="stat__l">${label}</div><div class="stat__n">${value}</div>${d}<div class="an__sub">${sub}</div></div>`;
+
+  const empty = text => `<div class="an__empty">${text}</div>`;
+  function list(title, items, row) {
+    return `<section class="an__box"><h2 class="an__t">${esc(title)}</h2>${items.length ? items.map(row).join('') : empty('Nothing yet')}</section>`;
+  }
+  const line = (rank, name, value) => `<span class="an__rank">${rank}</span><span class="an__name">${name}</span><span class="an__val">${value}</span>`;
+  const plain = unit => (x, i) => `<div class="an__row">${line(i + 1 + '.', esc(x.name), plural(x[unit[0]], unit[1], unit[2]))}</div>`;
+  const visits = ['sessions', 'visit', 'visits'];
+  const flag = code => /^[A-Za-z]{2}$/.test(code || '') ? [...code.toUpperCase()].map(c => String.fromCodePoint(0x1F1E6 + c.charCodeAt(0) - 65)).join('') : '';
+  const pageName = t => (t || '').replace(/\s[·—]\s*spiteware\.ai.*$/, '') || '(no title)';
+
+  function render(data) {
+    const t = data.totals, prev = data.previousTotals || {}, nvr = data.newVsReturning || { new: 0, returning: 0 };
+    const daily = data.dailyBreakdown || [];
+    const ppv = t.users > 0 ? (t.pageViews / t.users).toFixed(1) : '0';
+    const drill = kind => (x, i) => `<button type="button" class="an__row" data-${kind}="${esc(x.key)}" data-label="${esc(x.name)}" aria-pressed="false">${line(i + 1 + '.', esc(x.name), plural(x.sessions, 'visit', 'visits'))}</button>`;
+
+    content.innerHTML = `
+      <div class="stats">
+        ${stat('Visitors', fmt(t.users), delta(t.users, prev.users), `${fmt(nvr.new)} new · ${fmt(nvr.returning)} returning`)}
+        ${stat('Visits', fmt(t.sessions), delta(t.sessions, prev.sessions), `${fmtDuration(t.avgSessionDuration)} average visit`)}
+        ${stat('Page views', fmt(t.pageViews), delta(t.pageViews, prev.pageViews), `${ppv} pages per visitor`)}
+      </div>
+      ${daily.length >= 2 ? `<section class="an__box an__chart">
+        <h2 class="an__t">Day by day <span class="an__legend">${SERIES.map(s => `<span><i class="an__key" style="background:${s.color}"></i>${s.label}</span>`).join('')}</span></h2>
+        <div class="an__plot" id="plot"></div>
+        <details class="an__tbl"><summary>Show as a table</summary><div class="tblwrap"><table>
+          <thead><tr><th>Day</th>${SERIES.map(s => `<th>${s.label}</th>`).join('')}</tr></thead>
+          <tbody>${daily.slice().reverse().map(d => `<tr><td>${day(d.date, { weekday: 'short', month: 'short', day: 'numeric' })}</td>${SERIES.map(s => `<td>${fmt(d[s.key])}</td>`).join('')}</tr>`).join('')}</tbody>
+        </table></div></details>
+      </section>` : ''}
+      <div class="an__lists">
+        ${list('Most read pages', data.topPages || [], (x, i) => `<div class="an__row">${line(i + 1 + '.', `<a href="${'https://spiteware.ai' + esc(x.path)}" target="_blank" rel="noopener" title="${esc(x.path)}">${esc(pageName(x.name))}</a>`, plural(x.pageViews, 'view', 'views'))}</div>`)}
+        ${list('Where they are', data.topCountries || [], x => `<div class="an__row">${line(flag(x.code), esc(x.name), plural(x.users, 'visitor', 'visitors'))}</div>`)}
+        ${list('How they got here', data.topChannels || [], (x, i) => DRILL.includes(x.key) ? drill('channel')(x, i) : plain(visits)(x, i))}
+        <div class="an__detail" id="channelDetail"></div>
+        ${list('What they used', data.topDevices || [], drill('device'))}
+        <div class="an__detail" id="deviceDetail"></div>
+      </div>`;
+
+    if (daily.length >= 2) chart(daily);
+    detail('channel', $('channelDetail'), data.channelSources || {}, 'Pick a source with a ▸ to see who sent them', l => l);
+    detail('device', $('deviceDetail'), data.osPerDevice || {}, 'Pick a device to see what it runs', l => `${l}: operating systems`);
+
+    const when = new Date(data.fetchTime).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+    const range = data.startDate === data.endDate ? day(data.startDate, { month: 'short', day: 'numeric', year: 'numeric' })
+      : `${day(data.startDate, { month: 'short', day: 'numeric' })} – ${day(data.endDate, { month: 'short', day: 'numeric', year: 'numeric' })}`;
+    foot.textContent = `${PERIODS[period]}: ${range} · fetched ${when}${data.cached ? ' (cached)' : ''} · numbers are held for 3 hours`;
+    foot.hidden = false;
+  }
+
+  // a row that can be opened fills the panel beside its list; the same row again closes it
+  function detail(kind, panel, lists, hint, title) {
+    const rows = [...content.querySelectorAll(`[data-${kind}]`)];
+    const show = row => {
+      rows.forEach(r => { r.classList.toggle('is-on', r === row); r.setAttribute('aria-pressed', r === row); });
+      panel.innerHTML = row ? list(title(row.dataset.label), lists[row.dataset[kind]] || [], plain(visits)) : `<section class="an__box">${empty(hint)}</section>`;
+    };
+    rows.forEach(r => r.addEventListener('click', () => show(r.classList.contains('is-on') ? null : r)));
+    show(null);
+  }
+
+  // the top of the scale: a round number whose quarters are round too, since the grid is drawn in quarters
+  function ceilNice(v) {
+    if (v <= 12) return v <= 4 ? 4 : v <= 8 ? 8 : 12;
+    const mag = Math.pow(10, Math.floor(Math.log10(v))) / 10;
+    return [12, 16, 20, 24, 30, 40, 50, 60, 80, 100].map(s => s * mag).find(c => c >= v && c % 4 === 0);
+  }
+
+  function chart(daily) {
+    const wrap = $('plot');
+    // drawn at the box's real width, so the labels stay 11px on a phone instead of shrinking with the picture
+    const W = Math.max(280, wrap.clientWidth), H = W < 560 ? 230 : 260, pad = { top: 14, right: 14, bottom: 30, left: 46 };
+    redraw = () => { if (wrap.clientWidth !== W) chart(daily); };
+    const cw = W - pad.left - pad.right, ch = H - pad.top - pad.bottom;
+    const max = ceilNice(Math.max(1, ...daily.flatMap(d => SERIES.map(s => d[s.key]))));
+    const step = cw / (daily.length - 1);
+    const x = i => pad.left + i * step, y = v => pad.top + ch - v / max * ch;
+    const short = d => day(d.date, { month: 'short', day: 'numeric' });
+
+    let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Visitors, visits and page views for each day. The same numbers are in the table below.">`;
+    for (let i = 0; i <= 4; i++) {
+      const v = max / 4 * i;
+      svg += `<line x1="${pad.left}" y1="${y(v)}" x2="${W - pad.right}" y2="${y(v)}" class="${i ? 'an__grid' : 'an__base'}"/>`;
+      svg += `<text x="${pad.left - 8}" y="${y(v) + 4}" text-anchor="end">${fmt(v)}</text>`;
+    }
+    // date labels: every day when they fit, otherwise an even handful that always includes the last day
+    const room = W < 560 ? 4 : 7, want = Math.min(daily.length, daily.length <= 10 && W >= 560 ? 10 : room), last = daily.length - 1;
+    const ticks = new Set(Array.from({ length: want }, (_, k) => Math.round(k * last / (want - 1))));
+    ticks.forEach(i => svg += `<text x="${x(i)}" y="${H - 6}" text-anchor="${i === last ? 'end' : i ? 'middle' : 'start'}">${short(daily[i])}</text>`);
+    // drawn back to front so the smallest measure ends up on top
+    SERIES.slice().reverse().forEach(s => svg += `<polyline fill="none" stroke="${s.color}" stroke-width="${daily.length > 45 ? 2 : 3}" stroke-linejoin="round" stroke-linecap="round" points="${daily.map((d, i) => `${x(i)},${y(d[s.key])}`).join(' ')}"/>`);
+    svg += `<line id="cursor" y1="${pad.top}" y2="${H - pad.bottom}" stroke="#111" stroke-width="2" stroke-dasharray="4 4" style="display:none"/>`;
+    SERIES.forEach(s => svg += `<circle id="dot_${s.key}" r="6" fill="${s.color}" stroke="#111" stroke-width="2" style="display:none"/>`);
+    svg += `<rect id="hit" x="${pad.left - step / 2}" y="0" width="${cw + step}" height="${H}" fill="transparent" style="cursor:pointer"/></svg>`;
+    svg += `<div class="an__tip" id="tip"><b id="tipDay"></b>${SERIES.map(s => `<div><i class="an__key" style="background:${s.color}"></i><span id="tip_${s.key}"></span></div>`).join('')}<a id="tipGo" role="button" tabindex="0">Just this day →</a></div>`;
+    wrap.innerHTML = svg;
+
+    const hit = $('hit'), cursor = $('cursor'), tip = $('tip');
+    let at = -1, pinned = false;
+    const unit = { users: ['visitor', 'visitors'], sessions: ['visit', 'visits'], pageViews: ['view', 'views'] };
+
+    function point(e) {
+      const box = wrap.querySelector('svg').getBoundingClientRect();
+      const px = e.clientX - box.left;
+      at = Math.max(0, Math.min(daily.length - 1, Math.round((px * W / box.width - pad.left) / step)));
+      cursor.setAttribute('x1', x(at)); cursor.setAttribute('x2', x(at)); cursor.style.display = '';
+      SERIES.forEach(s => { const dot = $('dot_' + s.key); dot.setAttribute('cx', x(at)); dot.setAttribute('cy', y(daily[at][s.key])); dot.style.display = ''; });
+      $('tipDay').textContent = day(daily[at].date, { weekday: 'short', month: 'short', day: 'numeric' });
+      SERIES.forEach(s => $('tip_' + s.key).textContent = plural(daily[at][s.key], ...unit[s.key]));
+      tip.classList.add('is-on');
+      const dotX = x(at) * box.width / W, w = tip.offsetWidth;
+      tip.style.left = Math.max(0, dotX + 14 + w > wrap.offsetWidth ? dotX - w - 14 : dotX + 14) + 'px';
+    }
+    function clear() {
+      at = -1; pinned = false; cursor.style.display = 'none';
+      SERIES.forEach(s => $('dot_' + s.key).style.display = 'none');
+      tip.classList.remove('is-on', 'is-pinned');
+    }
+    // hover follows the pointer; a click or tap pins the day so its link can be reached
+    hit.addEventListener('pointermove', e => { if (!pinned && e.pointerType === 'mouse') point(e); });
+    hit.addEventListener('pointerleave', () => { if (!pinned) clear(); });
+    hit.addEventListener('click', e => { e.stopPropagation(); point(e); pinned = true; tip.classList.add('is-pinned'); });
+    unpin = e => { if (pinned && !tip.contains(e.target)) clear(); };
+    const go = () => { if (at >= 0) pickDates(daily[at].date, daily[at].date); };
+    $('tipGo').addEventListener('click', go);
+    $('tipGo').addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+  }
+
+  document.addEventListener('click', e => unpin && unpin(e));
+  addEventListener('resize', () => redraw && redraw());
+  load();
+})();
+</script>
+</body>
+</html>

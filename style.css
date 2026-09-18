@@ -403,6 +403,86 @@
   .fame__author .kicker a{text-decoration:none;border-bottom:2px solid var(--pink)}
   @media (hover:none){.inductee:hover{transform:none;box-shadow:4px 4px 0 var(--ink)}}
 
+  /* ---------- analytics page (numbers from workers/analytics-proxy) ---------- */
+  .an{max-width:920px;padding-top:clamp(40px,8vw,88px);padding-bottom:clamp(40px,6vw,72px)}
+  .an__head{margin-bottom:clamp(28px,4vw,40px)}
+  .an__head h1{font-size:clamp(34px,6.5vw,64px);margin-bottom:18px}
+  .an__bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .an__bar .tagbtn{font-size:13px;padding:9px 13px}
+  .an__edit{display:inline-block;width:13px;height:13px;margin-left:7px;vertical-align:-2px}
+  .an__pick{display:none;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 22px;padding:12px 14px;width:fit-content;max-width:100%;
+    background:#fff;border:var(--bw) solid var(--ink);box-shadow:4px 4px 0 var(--ink);
+    font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+  .an__pick.is-on{display:flex}
+  .an__pick input{font-family:var(--mono);font-size:16px;padding:7px 9px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);outline:none}
+  .an__pick input:focus{background:var(--yellow)}
+  .an__pick button{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding:9px 12px;
+    border:2px solid var(--ink);background:var(--yellow);color:var(--ink);cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+  .an__pick button:hover{background:var(--pink);color:#fff}
+  .an__pick .an__x{background:#fff}
+  .an__dev{display:none;align-items:center;gap:8px;margin:0 0 22px;width:fit-content;background:var(--paper);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+  .an__dev input{width:18px;height:18px;accent-color:var(--pink)}
+  .an .stats{grid-template-columns:repeat(3,1fr);margin-bottom:34px}
+  .an .stat{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+  .an .stat__l{margin-top:0}
+  .an__delta{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.04em;padding:3px 7px;border:2px solid var(--ink);background:var(--paper);color:var(--ink)}
+  .an__delta--up{background:var(--green)}
+  .an__delta--down{background:var(--ink);color:#fff}
+  .an__sub{font-family:var(--mono);font-size:12px;letter-spacing:.02em;opacity:.9}
+  @media (max-width:700px){.an .stats{grid-template-columns:1fr;gap:16px} .an .stat{transform:none}}
+
+  .an__box{background:#fff;border:var(--bw) solid var(--ink);box-shadow:var(--shadow);padding:18px 20px;min-width:0}
+  .an__t{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 18px;margin:0 0 12px;padding-bottom:10px;border-bottom:var(--bw) solid var(--ink);
+    font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+  .an__legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-weight:400;letter-spacing:.06em}
+  .an__legend span{display:inline-flex;align-items:center;gap:6px}
+  .an__key{width:14px;height:14px;border:2px solid var(--ink);flex:none}
+  .an__chart{margin-bottom:34px}
+  .an__plot{position:relative}
+  .an__plot svg{width:100%;height:auto;overflow:visible;touch-action:pan-y}
+  .an__plot text{font-family:var(--mono);font-size:11px;fill:#555}
+  .an__grid{stroke:#ccc;stroke-width:1;stroke-dasharray:4 4}
+  .an__base{stroke:var(--ink);stroke-width:2}
+  .an__tip{position:absolute;top:4px;left:0;z-index:5;opacity:0;pointer-events:none;white-space:nowrap;
+    background:var(--paper);border:var(--bw) solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:9px 11px;font-family:var(--mono);font-size:12px;line-height:1.7}
+  .an__tip.is-on{opacity:1}
+  .an__tip.is-pinned{pointer-events:auto}
+  .an__tip b{display:block;text-transform:uppercase;letter-spacing:.06em;border-bottom:2px dashed #999;margin-bottom:4px;padding-bottom:3px}
+  .an__tip div{display:flex;align-items:center;gap:7px}
+  .an__tip a{display:none;margin-top:6px;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid var(--pink);cursor:pointer;width:fit-content}
+  .an__tip.is-pinned a{display:block}
+  .an__tip a:hover{background:var(--yellow)}
+  .an__tbl{margin-top:12px;font-family:var(--mono);font-size:12px}
+  .an__tbl summary{cursor:pointer;text-transform:uppercase;letter-spacing:.06em;width:fit-content;border-bottom:2px solid var(--pink)}
+  .an__tbl .tblwrap{max-height:320px;overflow:auto;margin:12px 0 0;border:2px solid var(--ink)}
+  .an__tbl table{width:100%;border-collapse:collapse}
+  .an__tbl th,.an__tbl td{padding:6px 10px;text-align:right;border-bottom:1px dashed #bbb;white-space:nowrap}
+  .an__tbl th:first-child,.an__tbl td:first-child{text-align:left}
+  .an__tbl thead th{position:sticky;top:0;background:var(--ink);color:var(--paper);font-size:11px;text-transform:uppercase;letter-spacing:.08em;border-bottom:0}
+
+  .an__lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  @media (max-width:700px){.an__lists{grid-template-columns:1fr}}
+  .an__row{display:flex;align-items:center;gap:10px;width:100%;padding:9px 6px;border:0;border-bottom:2px dashed #ccc;background:none;color:inherit;
+    font:inherit;font-size:15px;text-align:left}
+  .an__row:last-child{border-bottom:0}
+  .an__rank{flex:none;width:24px;font-family:var(--mono);font-size:12px;opacity:.55}
+  .an__name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .an__name a{text-decoration:none;border-bottom:2px solid var(--pink)}
+  .an__name a:hover{background:var(--yellow)}
+  .an__val{flex:none;font-family:var(--mono);font-size:13px;font-weight:700}
+  button.an__row{cursor:pointer}
+  button.an__row .an__name::after{content:" ▸";font-family:var(--mono);font-size:12px}
+  button.an__row:hover{background:var(--yellow)}
+  button.an__row.is-on{background:var(--ink);color:var(--yellow)}
+  button.an__row.is-on .an__rank{opacity:1}
+  .an__detail>.an__box{height:100%}
+  .an__empty{display:grid;place-items:center;height:100%;min-height:90px;text-align:center;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#555}
+  .an__wait{padding:60px 20px;text-align:center;font-family:var(--mono);font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+  .an__wait::after{content:"█";margin-left:4px;color:var(--pink);animation:blink 1s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){.an__wait::after{animation:none}}
+  .an__foot{margin:28px 0 0;width:fit-content;background:var(--paper);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#555}
+
   /* ================= mobile ================= */
   /* The sticky header, the tag wall and the hero decorations are the three things
      that don't survive a narrow screen unchanged. Everything else just reflows. */

@@ -1,0 +1,11 @@
+name = "analytics-proxy"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+workers_dev = true
+# analytics.html calls this address. It needs the spiteware.ai zone in the same Cloudflare account.
+routes = [{ pattern = "stats.spiteware.ai", custom_domain = true }]
+
+[vars]
+# "today" and "yesterday" are cut in this zone. Match the GA4 property's reporting time zone.
+GA4_TIMEZONE = "Asia/Dubai"

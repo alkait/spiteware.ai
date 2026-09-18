@@ -12,6 +12,7 @@ A catalog of apps people built out of spite because a paid tool asked for money 
 - `scripts/sweep.py` — tier-1 source sweep. `scripts/review.py` — local review desk on port 4322. `scripts/merge.py` — moves approved entries into the data files and rebuilds the hall of fame. `scripts/pages.py` — rebuilds it on its own, for after a hand edit to `data/apps.json`.
 - `scripts/links.py` — the 404 hunt. With no arguments it checks every internal link offline (and `pages.py` refuses to finish a build that fails it). `--external` checks every outbound URL; `--bury <slug>` retires an app whose builder took it down: it leaves the lists and keeps its hall of fame page, stamped, with dead links swapped for Wayback snapshots.
 - `scripts/short.py` — the daily short: turns `shorts/YYYY-MM-DD.json` (a narration script) into a 1080x1920 video of the day's fresh spite, voiced through `scripts/voice.py`, then `scripts/handoff.py` writes a local posting desk with each platform's text. Nothing uploads itself. Rules in `shorts/README.md`; needs `firefox`, `ffmpeg` and an `OPENROUTER_API_KEY` in `.env`.
+- `analytics.html` — the site's real traffic, in public: totals against the period before, a day-by-day chart, top pages, countries, sources and devices. It reads from `workers/analytics-proxy/`, a Cloudflare Worker that asks the Google Analytics Data API and caches the answer for three hours. Setup is below.
 
 Hosted on GitHub Pages straight from `main`.
 
@@ -28,6 +29,29 @@ python3 -m http.server 4321
 ```
 
 Then open http://localhost:4321/. Opening `index.html` from `file://` will not load the JSON.
+
+## The analytics worker
+
+`analytics.html` calls `https://stats.spiteware.ai/analytics`, which is `workers/analytics-proxy/` deployed to Cloudflare. It is the only part of the site that isn't static, and it deploys on its own: pushing to `main` doesn't touch it.
+
+One-time setup:
+
+1. In Google Cloud, enable the **Google Analytics Data API** and create a service account with a JSON key.
+2. In Google Analytics, Admin → Property access management, add the service account's email as a **Viewer**. Note the numeric property ID (Admin → Property details), not the `G-…` measurement ID.
+3. Deploy, from `workers/analytics-proxy/`:
+
+```
+npm install
+npx wrangler login
+npx wrangler secret put GA4_PROPERTY_ID     # the numeric ID
+npx wrangler secret put GCP_CLIENT_EMAIL    # client_email from the JSON key
+npx wrangler secret put GCP_PRIVATE_KEY     # private_key from the JSON key, BEGIN and END lines included
+npx wrangler deploy
+```
+
+`wrangler.toml` claims `stats.spiteware.ai` as a custom domain, which works because the zone's DNS is on Cloudflare; it has to be the same account you log in with. Set `GA4_TIMEZONE` there to the property's reporting time zone, or "today" is cut at midnight UTC.
+
+To run it locally, put the same three values in `workers/analytics-proxy/.dev.vars` (gitignored) and `npm run dev`. A page served from `localhost` talks to `localhost:8788` instead of the live worker and shows a cache switch.
 
 ## License
 
