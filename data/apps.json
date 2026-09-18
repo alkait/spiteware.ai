@@ -2459,5 +2459,97 @@
     "repo": "exexexexe/calorie-scanner",
     "spite_score": 7,
     "added": "2026-09-17"
+  },
+  {
+    "slug": "lazymaplayers",
+    "name": "LazyMapLayers",
+    "url": "https://github.com/raisulsohan/LazyMapLayers",
+    "icon": "🗺️",
+    "tagline": "GEOlayers 3 charges $329.99 to put a map in After Effects. LazyMapLayers does the globe-to-street flight for nothing, forever, no key.",
+    "replaces": {
+      "name": "GEOlayers 3",
+      "price": "$329.99 one-time",
+      "source": "https://aescripts.com/geolayers/"
+    },
+    "grudge": {
+      "quote": "Paid map plugins for After Effects work, but they are expensive, depend on paid data partners, and still show their seams: blurry zoom steps, labels that pop, moves that stop halfway.",
+      "source": "https://github.com/raisulsohan/LazyMapLayers/blob/main/README.md"
+    },
+    "builder": {
+      "name": "Raisul Sohan",
+      "handle": "raisulsohan",
+      "url": "https://github.com/raisulsohan"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "raisulsohan/LazyMapLayers",
+    "spite_score": 10,
+    "added": "2026-09-18"
+  },
+  {
+    "slug": "jinx",
+    "name": "Jinx",
+    "url": "https://jinx.fyi",
+    "icon": "🔗",
+    "tagline": "Bitly wants $10 a month to remember that one URL means another URL. Jinx is a text file on GitHub Pages and it remembers for free.",
+    "replaces": {
+      "name": "Bitly Core",
+      "price": "$10/mo",
+      "source": "https://bitly.com/pages/pricing"
+    },
+    "grudge": {
+      "quote": "Paid link shorteners cost money every month for something that's really just a lookup table.",
+      "source": "https://news.ycombinator.com/item?id=49749716"
+    },
+    "builder": {
+      "name": "Gordon McDonald",
+      "handle": "gdmcdonald",
+      "url": "https://github.com/gdmcdonald"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "gdmcdonald/jinx",
+    "spite_score": 8,
+    "added": "2026-09-18"
+  },
+  {
+    "slug": "mockfreeli",
+    "name": "mockfreeli",
+    "url": "https://mockfreeli.org/",
+    "icon": "🎵",
+    "tagline": "Stock music libraries want a subscription before your hobby video gets a soundtrack. Paste a song into mockfreeli and get five license-free cousins, no card.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Finding license free music without paying a subscription is a PITA.",
+      "source": "https://news.ycombinator.com/item?id=49743031"
+    },
+    "builder": {
+      "name": "ianhil",
+      "handle": "ianhil",
+      "url": "https://news.ycombinator.com/user?id=ianhil"
+    },
+    "tags": [
+      "web",
+      "video"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-18"
   }
 ]

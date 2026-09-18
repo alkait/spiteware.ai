@@ -1,0 +1,27 @@
+{
+  "run": "2026-09-18",
+  "swept": "hn (48h), reddit (r/SideProject, r/selfhosted, r/vibecoding, r/webdev, r/ClaudeAI; r/opensource, r/macapps, r/indiehackers rate-limited 429), github, last30days (3 days; Instagram errored, X returned nothing)",
+  "raw_hits": 376,
+  "triaged": 19,
+  "candidates": [],
+  "dropped": [
+    "remotebontrol: best grudge of the day ('kept charging $2.99 a week for a WebSocket call the TV answers for free') but no public install path yet: no App Store listing, no releases, dev-registered iPhones only. Revisit when it ships.",
+    "HomeLedger: motive is privacy and Mint shutting down (Mint was free); 'no subscription' is a feature bullet, not the reason. Fails gate 1.",
+    "Fabling (last30days): Duolingo-upsell grudge, but $19.99/mo after a 7-day trial. Paid product.",
+    "Boltclient: README has a 'Pro ($12 one-time)' tier and the repo has no source. Open-core.",
+    "file-viewer: Flyfish Dev sells a commercial edition and enterprise support next to the free core. Open-core.",
+    "Clippety: privacy grudge only, and 'Get Pro' $49 to remove the watermark. Fails both gates.",
+    "Kairos: post lists a $5.99/mo tier. Paid tier.",
+    "Pelmet: built because macOS 27 broke the old tools; inspired by Ice, which is free. No price grudge.",
+    "Timeline: vibe coded and open source, but the complaint is usability, not price. Fails gate 1.",
+    "freshdock: replaces archived Watchtower, which was free. No price grudge.",
+    "Korvex-Apex: README-only placeholder, no code or binary.",
+    "ha-google-hub-bridge: 196-byte README, no code. Revisit if it ships.",
+    "Scrapper: 'no paywalls' bullet but no reason given and no victim named. Fails gate 1.",
+    "flush-hosting: 'in the making', nothing to use yet.",
+    "Snapbracket: no post text, anonymous site, no grudge.",
+    "Green Screen Remover: no grudge; anonymous site funded by a Movavi affiliate link.",
+    "office365_flake: gets MS Office running under Wine; not built against a price.",
+    "Things To Have, Calendar-On-Demand, LightningXL, ApeiroCraft, OGCraft: no price grudge in the post, or a paid product themselves."
+  ]
+}

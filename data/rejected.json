@@ -63,5 +63,20 @@
     "name": "Sinsajo",
     "url": "https://lutgaru.com/Sinsajo/",
     "rejected": "2026-09-17"
+  },
+  {
+    "name": "CodeRabbit Plus",
+    "url": "https://github.com/hacker4ofakind/coderabbit-plus",
+    "rejected": "2026-09-18"
+  },
+  {
+    "name": "open-flight-planner",
+    "url": "https://open-flight-planner.vercel.app",
+    "rejected": "2026-09-18"
+  },
+  {
+    "name": "Minilith",
+    "url": "https://minilith.site",
+    "rejected": "2026-09-18"
   }
 ]
