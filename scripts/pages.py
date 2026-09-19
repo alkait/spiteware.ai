@@ -112,7 +112,7 @@ def related(a, apps):
     return sorted((b for b in apps if b is not a), key=score)[:3]
 
 
-# Google Analytics, first thing in every head. index, apps, manifesto and rules carry the same snippet by hand.
+# Google Analytics, first thing in every head. index, apps, manifesto, rules and privacy carry the same snippet by hand.
 GTAG = '''<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSP99C36LS"></script>
 <script>
@@ -203,7 +203,7 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
     </div>
     <div class="foot__meta">
       this site was shamelessly vibe coded by <a href="https://github.com/alkait" target="_blank" rel="noopener">@alkait</a><br>
-      no pricing page · <a class="ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source on github</a><br>
+      no pricing page · <a href="/privacy.html">privacy</a> · <a class="ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source on github</a><br>
       the grudges, read aloud: <a class="ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">youtube</a> · <a class="ico ico--ig" href="https://www.instagram.com/spiteware.ai/" target="_blank" rel="noopener">instagram</a>
     </div>
     <div class="badges">
@@ -404,7 +404,7 @@ def build():
     live, dead = [a for a in apps if alive(a)], [a for a in apps if not alive(a)]
     by = {}
     for a in apps: by.setdefault(author(a), []).append(a)
-    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/manifesto.html", None), ("/rules.html", None)]
+    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/manifesto.html", None), ("/rules.html", None), ("/privacy.html", None)]
     for i, a in enumerate(live):
         write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[(i + 1) % len(live)]))
         urls.append((fame(a), a["added"]))

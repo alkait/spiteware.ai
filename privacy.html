@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSP99C36LS"></script>
+<script>
+  // local previews and anything else off the real domain send nothing
+  if (location.hostname !== 'spiteware.ai') window['ga-disable-G-XSP99C36LS'] = true;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XSP99C36LS');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>privacy — spiteware.ai</title>
+<meta name="description" content="What spiteware.ai knows about you: Google Analytics, and nothing else. No accounts, no ads, nothing sold.">
+<link rel="canonical" href="https://spiteware.ai/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="spiteware.ai">
+<meta property="og:url" content="https://spiteware.ai/privacy.html">
+<meta property="og:title" content="privacy — spiteware.ai">
+<meta property="og:description" content="What spiteware.ai knows about you: Google Analytics, and nothing else. No accounts, no ads, nothing sold.">
+<meta property="og:image" content="https://spiteware.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFE600">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <span>★ <b data-apps>—</b> apps listed. all free.</span><span>★ spiteware.ai has made <b>$0.00</b> so far</span><span>★ built by people who read the pricing page and said "no"</span><span>★ cancel your subscriptions. someone already rebuilt the app.</span><span>★ "upgrade to Pro" is not a feature</span><span>★ "seat-based pricing" is a hate crime</span><span>★ vibe coded. spite powered.</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="./" aria-label="spiteware.ai home">
+      <span class="logo__stack" aria-hidden="true"><span>SPITE</span><span>WARE</span></span>
+      <em aria-hidden="true">.ai</em>
+    </a>
+    <button class="menu__btn" type="button" id="menubtn" aria-expanded="false" aria-controls="mainnav"><span class="menu__bars" aria-hidden="true"></span>Menu</button>
+    <nav aria-label="Main" id="mainnav">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="apps.html">Apps <span class="nav__n" data-apps>—</span></a></li>
+        <li><a href="/hall-of-fame/">Hall of fame</a></li>
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="#submit">Submit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap doc">
+
+    <div class="doc__head">
+      <span class="kicker">privacy, in plain words</span>
+      <h1>We know <span class="hollow">almost</span> nothing about you.</h1>
+      <p class="doc__lede">No accounts, no ads, no newsletter, nothing to sell and nobody to sell it to. There is one tracker on this site, and this page says what it is. Last updated 19 September 2026.</p>
+    </div>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">01</span> The one tracker: Google Analytics</h2>
+      <p>Every page loads <b>Google Analytics 4</b>. It sets a cookie (<b>_ga</b>) to tell one visitor from another, and tells Google which pages you opened, where you came from, your browser and device, and roughly where you are: country and city, worked out from your IP address, which Google Analytics 4 does not store. No names, no emails, no advertising features, and we never try to work out who anybody is.</p>
+      <p>What we do with it is count. The totals are public, on <a href="/analytics.html">the same page we read them from</a>. Google handles the data under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">its own privacy policy</a>.</p>
+      <p>To stay out of the count, block it: any content blocker works, and so does <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google's opt-out add-on</a>. The site works exactly the same without it.</p>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">02</span> What stays in your browser</h2>
+      <p>The visitor counter in the footer is fake. It keeps a number in your browser's local storage (<b>sw_visits</b>) so it can tick up for you, and the analytics page remembers the date range you picked the same way. Neither is ever sent anywhere. Clearing your site data clears both.</p>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">03</span> Who serves the pages</h2>
+      <p>The site is static files on <b>GitHub Pages</b>, and the numbers on the analytics page come through a <b>Cloudflare</b> Worker. Like any web host, both see your IP address when your browser asks for a page, and keep their own logs under their own policies (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's</a>, <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's</a>). We have no access to those logs.</p>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">04</span> If you email us</h2>
+      <p>Then we have your email, because you sent it. It is used to answer you and, if you submitted an app, to list it. It is not added to anything, shared or sold.</p>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">05</span> If your app is listed</h2>
+      <p>Cards quote what builders said in public, word for word, with a link to where they said it, next to a public name or handle. Nothing on a card comes from anywhere private. Misquoted, wrong price, or something about your card you want changed? <a href="mailto:hello@spiteware.ai" target="_blank" rel="noopener">hello@spiteware.ai</a>, and it gets fixed.</p>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">06</span> The spiteware uploader</h2>
+      <p>The videos on <a href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">our YouTube channel</a> are put there by a small script, registered with Google as <b>spiteware uploader</b>. It uses <b>YouTube API Services</b>, so the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> apply to it.</p>
+      <p>It is not a public app. The only account that ever signs in to it is the site's own, and the only permission it asks for is to upload videos to that channel. It reads no YouTube data, collects nothing about viewers or anybody else, and shares nothing. Its sign-in token is kept on the one computer that runs it, and can be revoked at any time from <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">Google's security settings</a>.</p>
+    </section>
+
+    <section class="doc__sec">
+      <h2 class="dh"><span class="dh__n">07</span> Changes and questions</h2>
+      <p>If this page changes, the date at the top changes with it, and the <a href="https://github.com/alkait/spiteware.ai/commits/main/privacy.html" target="_blank" rel="noopener">full history is public</a>. Questions, or an email you sent us that you want deleted: <a href="mailto:hello@spiteware.ai" target="_blank" rel="noopener">hello@spiteware.ai</a>.</p>
+    </section>
+
+  </div>
+
+  <section class="sec sec--ink" id="submit">
+    <div class="wrap submit">
+      <div>
+        <h2>Did we<br>miss you?</h2>
+        <p>The agent only finds people who posted about it. If you built something out of spite and told nobody, this is the part where you tell somebody.</p>
+        <p style="margin-top:20px"><a class="btn" href="mailto:hello@spiteware.ai?subject=I%20built%20it%20instead%20of%20paying%20%24" target="_blank" rel="noopener">Submit your spiteware →</a></p>
+        <p style="font-family:var(--mono);font-size:13px;color:#bbb;margin-top:10px">hello@spiteware.ai · wrong price or misquoted on a card that's already up? same address, it gets fixed</p>
+      </div>
+      <ol class="steps">
+        <li><div><b>The link</b><span>To the app, and the repo if there is one.</span></div></li>
+        <li><div><b>What it replaces</b><span>The tool you refused to pay, and what it wanted per month.</span></div></li>
+        <li><div><b>One sentence on why</b><span>In your own words. We quote it verbatim — that's gate one.</span></div></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="counter" title="You are visitor number…">
+      <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
+      <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
+    </div>
+    <div class="foot__meta">
+      this site was shamelessly vibe coded by <a href="https://github.com/alkait" target="_blank" rel="noopener">@alkait</a><br>
+      no pricing page · <a href="/privacy.html">privacy</a> · <a class="ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source on github</a><br>
+      the grudges, read aloud: <a class="ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">youtube</a> · <a class="ico ico--ig" href="https://www.instagram.com/spiteware.ai/" target="_blank" rel="noopener">instagram</a>
+    </div>
+    <div class="badges">
+      <span class="badge">Best viewed in any browser</span>
+      <span class="badge badge--blue">0 bytes of fonts</span>
+      <span class="badge badge--pink">Made with rage</span>
+      <span class="badge badge--green">Y2K compliant</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
