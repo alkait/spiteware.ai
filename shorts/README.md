@@ -18,9 +18,38 @@ every time, like a push.**
 
 Every render ends by writing the **posting desk**, `shorts/YYYY-MM-DD.html` (gitignored): the
 video, the text for YouTube Shorts, TikTok and Instagram Reels behind Copy buttons, a link to
-each upload screen and the settings to tick there. Posting is by hand, by the user. YouTube and
-TikTok lock API uploads from an unaudited app to private, so there is no uploader, and no
-agent posts anything.
+each upload screen and the settings to tick there. TikTok and Instagram are posted by hand, by
+the user. No agent posts anything unasked.
+
+## YouTube upload
+
+```
+python3 scripts/upload.py --dry              # newest short: print what would go up, send nothing
+python3 scripts/upload.py                    # upload it, private
+python3 scripts/upload.py --public           # or --unlisted, or --at 2026-09-20T09:00 (local time)
+```
+
+`scripts/upload.py` sends the mp4 through the YouTube Data API with the same title and
+description the posting desk shows, and notes the video id in `shorts/.cache/uploaded.json` so a
+date never goes up twice (`--again` overrides). Free: an upload is a slice of the API's daily
+quota, and one short a day is nowhere near it.
+
+**YouTube locks API uploads from an unaudited Cloud project to private**, whatever the script asks
+for. Until the `spiteware` project passes the audit (a free form:
+https://support.google.com/youtube/contact/yt_api_form), the script saves the upload and the
+typing, and going public is one click in Studio; it prints the Studio link.
+
+Setup, once. The YouTube Data API v3 is already enabled on the `spiteware` Google Cloud project.
+
+1. https://console.cloud.google.com/auth/overview?project=spiteware — configure the consent
+   screen: External, then **Audience → Publish app** so it is "In production". Left in
+   "Testing", Google expires the refresh token after 7 days.
+2. https://console.cloud.google.com/auth/clients?project=spiteware — Create client, type
+   **Desktop app**, download the JSON.
+3. `python3 scripts/upload.py --auth ~/Downloads/client_secret_….json` — a browser tab asks which
+   channel; click through the "Google hasn't verified this app" warning (Advanced → Go to…). It
+   writes `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET` and `YOUTUBE_REFRESH_TOKEN` into `.env`.
+   Delete the downloaded JSON afterwards.
 
 ## Script
 

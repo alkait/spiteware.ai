@@ -90,7 +90,9 @@ says they merged there, run this mode.
    `python3 scripts/short.py --reroll <slug|hook|outro> --open`.
 
 Never upload or post the video anywhere, and never drive a browser to do it. The user posts by
-hand from the posting desk. The hall of fame links in the description only work once the
+hand from the posting desk. The one exception is YouTube, and only when the user asks for it in
+that message: `python3 scripts/upload.py` (private; `--public`, `--unlisted` or `--at` only if
+they said which), then report the link it prints. The hall of fame links in the description only work once the
 merge is pushed, so say so if it has not been.
 
 ## Mode: status (`/spite status`)

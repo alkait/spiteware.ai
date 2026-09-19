@@ -4,8 +4,8 @@
 Usage: python3 scripts/handoff.py [shorts/DATE.json] [--open]
 
 One local page with the video, the text for each platform behind a Copy button, and a
-link to each upload screen. Nothing here uploads anything: YouTube and TikTok lock API
-uploads from unaudited apps to private, so posting is done by hand, by the user.
+link to each upload screen. Nothing here uploads anything: posting is done by hand, by the
+user, or for YouTube by scripts/upload.py on the user's word, with the texts() from here.
 scripts/short.py builds this page after every render.
 
 The script's "post" block holds the only hand-written words: a title, a caption and the
