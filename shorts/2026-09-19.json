@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-19",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "Grok Bot on Cursor Ultra is $200 a month. OpenBot is free.",
+    "caption": "Fresh grudges: a $200 a month bot squad, a $15 a month dictation app and a business card with a subscription, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "opensource", "indiedev", "subscriptions", "aiagents"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 19th.", "say": "September nineteenth.", "step": "date"},
+      {"cap": "Five new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "openbot",
+     "quote": "Grok Bot is closed source and quite expensive", "cut": true,
+     "cues": [
+      {"cap": "Grok Bot on Cursor Ultra: $200 a month", "say": "Grok Bot on Cursor Ultra: two hundred dollars a month", "step": "badge"},
+      {"cap": "for a team of bots.", "step": "badge"},
+      {"cap": "Leonid Gorkin:", "say": "[matter-of-fact] Leonid Gorkin:", "step": "quote"},
+      {"cap": "“Grok Bot is closed source", "say": "[sarcastic] Grok Bot is closed source", "step": "quote"},
+      {"cap": "and quite expensive…”", "say": "and quite expensive.", "step": "quote"},
+      {"cap": "So: OpenBot. Bring your own key.", "say": "[quick] So: OpenBot. Bring your own key.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "flowlocal",
+     "quote": "A local replacement for subscription dictation apps like Wispr Flow", "cut": true,
+     "cues": [
+      {"cap": "Wispr Flow wants $15 a month", "say": "Whisper Flow wants fifteen dollars a month", "step": "badge"},
+      {"cap": "to type what you say.", "step": "badge"},
+      {"cap": "Automated-Intelligence:", "say": "[matter-of-fact] Automated Intelligence:", "step": "quote"},
+      {"cap": "“A local replacement", "say": "[sarcastic] A local replacement", "step": "quote"},
+      {"cap": "for subscription dictation apps like Wispr Flow…”", "say": "for subscription dictation apps like Whisper Flow.", "step": "quote"},
+      {"cap": "Enter FlowLocal.", "say": "[quick] Enter Flow Local.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "byzcard",
+     "gripe": "Business cards want a subscription.",
+     "quote": "I was tired of paying so many subscriptions", "cut": true,
+     "cues": [
+      {"cap": "Business cards want a subscription", "step": "gripe"},
+      {"cap": "per seat, for a QR code.", "say": "per seat, for a Q R code.", "step": "gripe"},
+      {"cap": "Neeraj Mohanty:", "say": "[matter-of-fact] Neeraj Mohanty:", "step": "quote"},
+      {"cap": "“I was tired of paying", "say": "[sarcastic] I was tired of paying", "step": "quote"},
+      {"cap": "so many subscriptions…”", "say": "so many subscriptions.", "step": "quote"},
+      {"cap": "Enter Byzcard.", "say": "[quick] Enter Biz Card.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus two more", "say": "[upbeat] Plus two more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "run": "2026-09-19",
+  "swept": "hn (48h), reddit rss (r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited), github, last30days (3d)",
+  "raw_hits": 390,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "Purge: grudge is CleanMyMac's opacity, not its price ('don't really show you what they're touching or why')",
+    "Nimbus: main reason is avoiding the command line; ads are secondary and no paid tool named",
+    "ledo_down: no grudge, only feature bullets; no licence; Firebase accounts and telemetry",
+    "video-redactor: paid, $49.99 on Gumroad, proprietary",
+    "Delve: repo is a README with a title and nothing else yet",
+    "openeval: no grudge stated; 'free forever' is a feature bullet",
+    "OpenWispr: fork; 'why I built this' is about accuracy, not price",
+    "Jinx: already listed",
+    "Dictivo: paid local tiers, 14-day trial",
+    "Things To Have: grudge is about design, not price",
+    "GhostBladeZero: Reddit post removed, no builder words",
+    "Tasket++: Reddit post removed, no builder words",
+    "SparkBox (Tom Spark): has a paid backer tier"
+  ]
+}

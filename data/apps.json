@@ -689,7 +689,10 @@
     "vibe_coded": false,
     "repo": "EpicenterHQ/epicenter",
     "spite_score": 8,
-    "added": "2026-09-07"
+    "added": "2026-09-07",
+    "dead_links": {
+      "grudge": "https://web.archive.org/web/20250707150904/https://news.ycombinator.com/item?id=44490741"
+    }
   },
   {
     "slug": "minimum-viable-expat",
@@ -2574,5 +2577,159 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-18"
+  },
+  {
+    "slug": "openbot",
+    "name": "OpenBot",
+    "url": "https://github.com/regnull/openbot",
+    "icon": "🤖",
+    "tagline": "Grok Bot's Ultra tier ran out of tokens at $200 a month. OpenBot is the same squad of collaborating bots, open source, on whatever key you already have.",
+    "replaces": {
+      "name": "Grok Bot (Cursor Ultra)",
+      "price": "$200/mo",
+      "source": "https://cursor.com/pricing"
+    },
+    "grudge": {
+      "quote": "However, Grok Bot is closed source and quite expensive (I ran out of tokens on Ultra tier), so I've decided to roll out my own",
+      "source": "https://news.ycombinator.com/item?id=49739491"
+    },
+    "builder": {
+      "name": "Leonid Gorkin",
+      "handle": "regnull",
+      "url": "https://github.com/regnull"
+    },
+    "tags": [
+      "self-hosted",
+      "byo-key",
+      "ai"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "regnull/openbot",
+    "spite_score": 10,
+    "added": "2026-09-19"
+  },
+  {
+    "slug": "flowlocal",
+    "name": "FlowLocal",
+    "url": "https://github.com/Automated-Intelligence/flowlocal",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow wants $15 a month to type what you say. FlowLocal holds a key, runs Whisper on your own PC, and sends the invoice nowhere.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "A local replacement for subscription dictation apps like Wispr Flow: speech recognition runs on your own machine via faster-whisper, nothing is sent to the cloud, and there's nothing to pay for.",
+      "source": "https://github.com/Automated-Intelligence/flowlocal"
+    },
+    "builder": {
+      "name": "Automated-Intelligence",
+      "handle": "Automated-Intelligence",
+      "url": "https://github.com/Automated-Intelligence"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Automated-Intelligence/flowlocal",
+    "spite_score": 8,
+    "added": "2026-09-19"
+  },
+  {
+    "slug": "byzcard",
+    "name": "Byzcard",
+    "url": "https://byzcard.cc",
+    "icon": "🪪",
+    "tagline": "Digital business card apps bill per seat, per month, for a QR code with your name on it. Byzcard is $0/month, lives on your device, and doesn't know what a seat is.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I was tired of paying so many subscriptions and when I realized I have to pay one for this for my entire team, felt absolutely worthless.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wk58y0/i_built_an_opensource_digital_business_card/"
+    },
+    "builder": {
+      "name": "Neeraj Mohanty",
+      "handle": "NeerajMohanty",
+      "url": "https://github.com/NeerajMohanty"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "marketing"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "NeerajMohanty/byzcard",
+    "spite_score": 7,
+    "added": "2026-09-19"
+  },
+  {
+    "slug": "pdf-libre",
+    "name": "PDF Libre",
+    "url": "https://oraclemarin.fr/pdf-libre/",
+    "icon": "📄",
+    "tagline": "Adobe charges $14.99 a month to fix three words in a PDF. PDF Libre does it from your phone for free and deletes the file on the way out.",
+    "replaces": {
+      "name": "Adobe Acrobat Standard",
+      "price": "$14.99/mo",
+      "source": "https://www.adobe.com/acrobat/pricing.html"
+    },
+    "grudge": {
+      "quote": "Every PDF editor online makes you pay or sign up to change three words of text.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wjyfdy/sick_of_paying_to_edit_one_line_of_text_in_a_pdf/"
+    },
+    "builder": {
+      "name": "Zboubkiller",
+      "handle": "Zboubkiller",
+      "url": "https://www.reddit.com/user/Zboubkiller"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 6,
+    "added": "2026-09-19"
+  },
+  {
+    "slug": "freecomputeruse",
+    "name": "FreeComputerUse",
+    "url": "https://github.com/OthmaneBlial/FreeComputerUse",
+    "icon": "🖱️",
+    "tagline": "Frontier computer-use agents bill by the click. FreeComputerUse lets a cheap model plan and Playwright do the clicking, so the invoice stays small.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The problem was simple: the cost didn’t make sense for the repetitive browser work I wanted to delegate.",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1wk12ee/computer_use_was_too_expensive_for_my_daily_tasks/"
+    },
+    "builder": {
+      "name": "Othmane Blial",
+      "handle": "OthmaneBlial",
+      "url": "https://github.com/OthmaneBlial"
+    },
+    "tags": [
+      "byo-key",
+      "ai"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "OthmaneBlial/FreeComputerUse",
+    "spite_score": 5,
+    "added": "2026-09-19"
   }
 ]
