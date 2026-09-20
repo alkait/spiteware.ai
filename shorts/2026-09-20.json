@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-20",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 4,
+  "post": {
+    "title": "Lokalise wants $149 a month. polygo is free.",
+    "caption": "Fresh grudges: a $149 a month localisation platform, a $39 a month Instagram DM bot and a stem splitter that wants your audio in its cloud, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "opensource", "indiedev", "subscriptions", "selfhosted"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 20th.", "say": "September twentieth.", "step": "date"},
+      {"cap": "Seven new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "polygo",
+     "quote": "I got tired of choosing between paying for different services", "cut": true,
+     "cues": [
+      {"cap": "Lokalise wants $149 a month", "say": "Lokalise wants a hundred and forty nine dollars a month", "step": "badge"},
+      {"cap": "to translate your strings.", "step": "badge"},
+      {"cap": "Atanas Angelov:", "say": "[matter-of-fact] Atanas Angelov:", "step": "quote"},
+      {"cap": "“I got tired of choosing between", "say": "[sarcastic] I got tired of choosing between", "step": "quote"},
+      {"cap": "paying for different services…”", "say": "paying for different services.", "step": "quote"},
+      {"cap": "So: polygo. On your laptop.", "say": "[quick] So: Polly-go. On your laptop.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "autodmx",
+     "quote": "the ManyChat / IGdm alternative you can self-host — no monthly fee", "cut": true,
+     "cues": [
+      {"cap": "ManyChat wants $39 a month", "say": "ManyChat wants thirty nine dollars a month", "step": "badge"},
+      {"cap": "to answer your Instagram DMs.", "say": "to answer your Instagram D Ms.", "step": "badge"},
+      {"cap": "Qaxlabs:", "say": "[matter-of-fact] Quax Labs:", "step": "quote"},
+      {"cap": "“the ManyChat / IGdm alternative", "say": "[sarcastic] the ManyChat or I G D M alternative", "step": "quote"},
+      {"cap": "you can self-host — no monthly fee…”", "say": "you can self host. No monthly fee.", "step": "quote"},
+      {"cap": "Enter AutoDMX.", "say": "[quick] Enter Auto D M X.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "stemkit",
+     "gripe": "Moises wants a subscription.",
+     "quote": "even that usually requires a cloud upload, a subscription", "cut": true,
+     "cues": [
+      {"cap": "Moises wants a subscription", "say": "Mo-ee-sees wants a subscription", "step": "gripe"},
+      {"cap": "and your audio on their servers.", "step": "gripe"},
+      {"cap": "danielravina:", "say": "[matter-of-fact] Daniel Ravina:", "step": "quote"},
+      {"cap": "“even that usually requires a cloud upload,", "say": "[sarcastic] even that usually requires a cloud upload,", "step": "quote"},
+      {"cap": "a subscription…”", "say": "a subscription.", "step": "quote"},
+      {"cap": "So: StemKit. On your Mac.", "say": "[quick] So: Stem Kit. On your Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus four more", "say": "[upbeat] Plus four more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

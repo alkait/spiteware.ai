@@ -1,0 +1,30 @@
+{
+  "run": "2026-09-20",
+  "swept": "hn (48h), reddit rss (r/webdev rate-limited), github, last30days (3d)",
+  "raw_hits": 263,
+  "triaged": 20,
+  "candidates": [],
+  "dropped": [
+    "Purge (Mac cleaner): still no price grudge in the README or this week's post; 'no paid version' is a feature bullet. Same call as 2026-09-19",
+    "avdslim: strong tool, but the README's motive is emulator RAM, not the cost of Genymotion or anything else",
+    "Inkvec: no price grudge, and it is EuroHPC-funded research rather than a grudge build",
+    "Fouine: €39 once with a 30-day trial, fails the free gate",
+    "Gotedo Impress: free, but you must create a Gotedo Account before you can activate it",
+    "SocialClipper: open-core, the builder's own $4.99/mo cloud tier",
+    "Reachbeam: free with an optional paid tier",
+    "Typoly: 2 free credits then paid",
+    "ClearBooks: 'completely free right now', requires real accounts, and the builder says he set out to build something people would pay for",
+    "Delve: 'no subscription' in the description but no grudge anywhere in the README. Same call as 2026-09-19",
+    "LuminaStudio: 'no subscription lock-in' is a feature bullet, not a stated reason",
+    "Ping-Monitor, SoloDev-Studio, memegenscript, YourAi: 'free forever' / 'no subscription' taglines with no grudge behind them",
+    "leotabs, outloud, Youtarr, chordscan, Video Size Reducer: free and good, but the builders never mention anyone's price",
+    "Timeline: grudge is that Gantt tools are unsatisfying, not that they cost money",
+    "Set: grudge is Notion's direction, not Notion's price; still in beta",
+    "XConnect: grudge is app switching on a small screen, not Microsoft's RDP pricing",
+    "SIM Screener: grudge is Xcode 27's Device Hub, not a price",
+    "astra-flash-orchestrator and ccsaver: about spending less inside a plan you still pay for, not replacing it",
+    "OneTimePay uptime monitor: a pay-once storefront, the free tier is the hook",
+    "Domino for Mac: commenters are asking which features are Pro-only",
+    "StemKit note: overlaps Stems (already listed) on the same category but is a different app, different builder, different victim"
+  ]
+}

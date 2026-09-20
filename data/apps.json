@@ -2731,5 +2731,219 @@
     "repo": "OthmaneBlial/FreeComputerUse",
     "spite_score": 5,
     "added": "2026-09-19"
+  },
+  {
+    "slug": "autodmx",
+    "name": "AutoDMX",
+    "url": "https://github.com/Qaxlabs/AutoDMX",
+    "icon": "📬",
+    "tagline": "ManyChat charges $39 a month to answer your Instagram DMs. AutoDMX runs the same funnel on a box you already pay for.",
+    "replaces": {
+      "name": "ManyChat Pro",
+      "price": "$39/mo",
+      "source": "https://help.manychat.com/hc/en-us/articles/25800228332572-Pro-plan"
+    },
+    "grudge": {
+      "quote": "It is the ManyChat / IGdm alternative you can self-host — no monthly fee, no vendor lock-in, full data ownership.",
+      "source": "https://github.com/Qaxlabs/AutoDMX"
+    },
+    "builder": {
+      "name": "Qaxlabs",
+      "handle": "Qaxlabs",
+      "url": "https://github.com/Qaxlabs"
+    },
+    "tags": [
+      "self-hosted",
+      "marketing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Qaxlabs/AutoDMX",
+    "spite_score": 8,
+    "added": "2026-09-20"
+  },
+  {
+    "slug": "polygo",
+    "name": "polygo",
+    "url": "https://github.com/Na5co/polygo",
+    "icon": "🌍",
+    "tagline": "Lokalise wants $149 a month to translate your strings. Polygo runs a model on your own laptop and bills nobody.",
+    "replaces": {
+      "name": "Lokalise Explorer",
+      "price": "$149/mo",
+      "source": "https://lokalise.com/pricing"
+    },
+    "grudge": {
+      "quote": "I got tired of choosing between paying for different services (won't name them) and pasting my string files into ChatGPT, so I built a little tool for myself and figured I'd share it.",
+      "source": "https://www.reddit.com/r/vibecoding/comments/1wl301l/made_a_small_cli_that_localizes_your_app_with_a/"
+    },
+    "builder": {
+      "name": "Atanas Angelov",
+      "handle": "Na5co",
+      "url": "https://github.com/Na5co"
+    },
+    "tags": [
+      "local-first",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Na5co/polygo",
+    "spite_score": 8,
+    "added": "2026-09-20"
+  },
+  {
+    "slug": "stemkit",
+    "name": "StemKit",
+    "url": "https://stemkit.pages.dev",
+    "icon": "🎛️",
+    "tagline": "Moises wants a subscription and your audio on their servers. StemKit splits the song on your Mac and plays the stems back over the video.",
+    "replaces": {
+      "name": "Moises",
+      "price": "",
+      "source": "https://moises.ai/pricing/"
+    },
+    "grudge": {
+      "quote": "Most tools stop at producing the files and even that usually requires a cloud upload, a subscription, or comfort with the terminal.",
+      "source": "https://www.reddit.com/r/macapps/comments/1wjygkh/stemkit_split_any_youtube_song_into_stems/"
+    },
+    "builder": {
+      "name": "danielravina",
+      "handle": "danielravina",
+      "url": "https://github.com/danielravina"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "danielravina/stemkit",
+    "spite_score": 7,
+    "added": "2026-09-20"
+  },
+  {
+    "slug": "local-ai-voice-studio",
+    "name": "Local AI Voice Studio",
+    "url": "https://github.com/harshvgaj-sudo/local-ai-voice-studio",
+    "icon": "🗣️",
+    "tagline": "Cloud voice services charge monthly and count your characters. This one runs Kokoro on a laptop CPU and counts nothing.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Cloud AI voice services charge a subscription, cap your characters, and require you to upload your script to somebody else's server.",
+      "source": "https://github.com/harshvgaj-sudo/local-ai-voice-studio"
+    },
+    "builder": {
+      "name": "harshvgaj-sudo",
+      "handle": "harshvgaj-sudo",
+      "url": "https://github.com/harshvgaj-sudo"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "ai"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "harshvgaj-sudo/local-ai-voice-studio",
+    "spite_score": 5,
+    "added": "2026-09-20"
+  },
+  {
+    "slug": "oh-a-chord",
+    "name": "Oh a Chord",
+    "url": "https://apps.apple.com/us/app/oh-a-chord/id6804457158",
+    "icon": "🎹",
+    "tagline": "Chord reference apps put the interesting voicings behind a paywall. Oh a Chord hands you a six-voice synth and asks for nothing.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most of the reference apps out there are bloated with menus or paywalls, so I just built my own.",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1wky2em/i_built_an_ios_app_with_claude_code_to_break_out/"
+    },
+    "builder": {
+      "name": "Nathan Ross Mueller",
+      "handle": "muna0001",
+      "url": "https://www.reddit.com/user/muna0001"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "learning"
+    ],
+    "open_source": false,
+    "vibe_coded": true,
+    "repo": "",
+    "spite_score": 5,
+    "added": "2026-09-20"
+  },
+  {
+    "slug": "opencv-studio",
+    "name": "OpenCV Studio",
+    "url": "https://github.com/CoriosMwRaw/opencv-studio",
+    "icon": "📄",
+    "tagline": "Every resume builder is free right up until you click Export. This one hands you the PDF offline and never finds your card.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The vast majority of CV creators online allow you to design your resume apparently for free, but they block downloads or charge abusive automatic subscriptions when exporting your PDF.",
+      "source": "https://github.com/CoriosMwRaw/opencv-studio"
+    },
+    "builder": {
+      "name": "CoriosMwRaw",
+      "handle": "CoriosMwRaw",
+      "url": "https://github.com/CoriosMwRaw"
+    },
+    "tags": [
+      "local-first",
+      "career"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "CoriosMwRaw/opencv-studio",
+    "spite_score": 5,
+    "added": "2026-09-20"
+  },
+  {
+    "slug": "password-manager",
+    "name": "PasswordManager",
+    "url": "https://github.com/k3ptok/PasswordManager",
+    "icon": "🔑",
+    "tagline": "Somebody is billing you every month for a glorified CSV reader. This one is a Go binary under GPL and it is free.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Are you tired of paying for a glorified .CVS file reader? Well, here you go.",
+      "source": "https://github.com/k3ptok/PasswordManager"
+    },
+    "builder": {
+      "name": "k3ptok",
+      "handle": "k3ptok",
+      "url": "https://github.com/k3ptok"
+    },
+    "tags": [
+      "local-first",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "k3ptok/PasswordManager",
+    "spite_score": 5,
+    "added": "2026-09-20"
   }
 ]
