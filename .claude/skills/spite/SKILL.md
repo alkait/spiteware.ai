@@ -1,15 +1,17 @@
 ---
 name: spite
-description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, and drafts cards into queue/YYYY-MM-DD.md for approval. Also merges a reviewed queue file and renders the day's short video. Triggers on /spite, /spite merge, /spite short, "morning run", "find spiteware", "make the short".
+description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, drafts cards into queue/YYYY-MM-DD.json, lists everything that passed both gates, and renders the day's short video, all in one run. /spite review stops at the review desk instead. Also merges a reviewed queue file and renders a short on its own. Triggers on /spite, /spite review, /spite merge, /spite short, "morning run", "find spiteware", "make the short".
 ---
 
 # /spite
 
-You are the spiteware.ai morning agent. You find candidates and draft cards. You never write to `data/apps.json` yourself; only `scripts/merge.py` does, after the human has flipped statuses.
+You are the spiteware.ai morning agent. You find candidates, draft cards, list them, and make the day's short. The user has given the morning run standing approval: every candidate that passes both hard gates is listed the same day, without waiting for the review desk. You still never write to `data/apps.json` yourself; only `scripts/merge.py` does.
+
+Nobody reads the queue before it is listed, so the gates are the only review there is. A candidate you are unsure about, a quote that is a paraphrase, a price you could not source: drop it with the reason. A missed app can be found tomorrow; a wrong one is on the site.
 
 Read `criteria.md` and `sources.md` first on every run. They are the rules and they change.
 
-## Mode: sweep (default, `/spite` with no args or a number of hours)
+## Mode: sweep (default, `/spite` with no args or a number of hours; `/spite review` for the manual path)
 
 1. **Sweep tier 1.** Run:
    ```
@@ -44,16 +46,36 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
 
 7. **Check the catalog for rot.** Run `python3 scripts/links.py --external`. It takes about a minute and checks every link already on the site. `DEAD` lines are findings; `SUSPECT`, `MOVED` and `UNKNOWN` are not, so leave them out unless the user asks. Never run `--bury` yourself and never edit `data/apps.json` to fix a link: report it, and bury only when the user says so.
 
-8. **Open the review desk.** Approving a candidate there also stars its `repo` from the
-   user's GitHub account, so `repo` must be filled in by step 4 or the star is skipped. Check `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4322/`. If it isn't 200, start `(nohup python3 scripts/review.py 4322 >/dev/null 2>&1 &)`. Never use pkill in this repo's shell; it kills the session. Then open http://localhost:4322/ in the browser. The user approves, rejects, and edits there.
+8. **List them.** Run:
+   ```
+   python3 scripts/merge.py --approve-all queue/$(date +%F).json
+   ```
+   It approves every candidate still `pending` in today's file and merges it into
+   `data/apps.json`. Name the file: older queue files with pending candidates are the
+   user's to decide and are not touched. Show its output. A `HELD, dead link` line means a
+   candidate was not listed because one of its links already 404s; it stays in the queue,
+   and you do not reach for `--no-check`. Then run
+   `python3 -c "import json;json.load(open('data/apps.json'))"` to confirm the JSON is
+   valid, and `python3 scripts/star.py` to star the new repos from the user's GitHub
+   account (report any `RENAMED` or `UNRESOLVABLE` lines), exactly as in **Mode: merge**.
 
-9. **Report** to the user in under 150 words: how many hits, how many survived, the top three by score with one line each, and that the review desk is open. Say plainly if a source failed. If step 7 found dead links, list them first: app, which link, and the `--bury` command that would retire it.
+   **`/spite review` skips this step and step 9.** Instead, check
+   `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4322/`; if it isn't 200, start
+   `(nohup python3 scripts/review.py 4322 >/dev/null 2>&1 &)` (never pkill in this repo's
+   shell; it kills the session), open http://localhost:4322/ in the browser, and report
+   that the desk is open. The user approves, rejects, and edits there; approving stars the
+   candidate's `repo`.
+
+9. **Make the short.** If step 8 listed anything, follow **Mode: short** below. Nothing
+   listed, no short.
+
+10. **Report** to the user in under 200 words: how many hits, how many survived, what was listed (name, score, one line each for the top three, names for the rest), what was held or dropped and why, then the short's report from Mode: short. Say plainly if a source failed. If step 7 found dead links, list them first: app, which link, and the `--bury` command that would retire it. End with the fact that nothing is committed or pushed: the listings are live only after the user says to push.
 
 Never fabricate a quote, a price, or a builder. If verification fails, drop the candidate and say why in the report.
 
 ## Mode: merge (`/spite merge [file]`)
 
-The review desk has a Merge button that does the same thing. This mode is for when the user decides in chat instead ("approve X, reject Y"): set those statuses in the queue JSON, then:
+The sweep already merges its own candidates. This mode is for what it left behind: a `/spite review` run, a held candidate whose link got fixed, or an older queue file. The review desk has a Merge button that does the same thing; when the user decides in chat instead ("approve X, reject Y"), set those statuses in the queue JSON, then:
 
 1. Run `python3 scripts/merge.py` (defaults to the newest queue file) and show its output. A `HELD, dead link` line means an approved candidate was not listed because one of its links already 404s; tell the user which link, and do not reach for `--no-check` unless they ask.
 2. Run `python3 -c "import json;json.load(open('data/apps.json'))"` to confirm the JSON is valid.
@@ -65,7 +87,7 @@ The review desk has a Merge button that does the same thing. This mode is for wh
 4. If the merge listed anything, make the day's short: follow **Mode: short** below.
 5. Commit and push only if the user asks. A push publishes to GitHub Pages.
 
-## Mode: short (`/spite short [date]`, and the last step of every merge that listed something)
+## Mode: short (`/spite short [date]`, and the last step of every sweep or merge that listed something)
 
 A 45-second vertical video of the day's fresh spite, narrated, for Shorts, TikTok and Reels.
 No new apps that day, no short. The desk's Merge button does not do this, so when the user

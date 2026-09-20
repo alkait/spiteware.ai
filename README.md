@@ -8,8 +8,8 @@ A catalog of apps people built out of spite because a paid tool asked for money 
 - `data/rejected.json` — names the morning agent must not resurface.
 - `criteria.md` — what counts as spiteware. The agent scores against it.
 - `sources.md` — where the agent looks and what it searches for.
-- `queue/` — one JSON file per morning run, awaiting approval.
-- `scripts/sweep.py` — tier-1 source sweep. `scripts/review.py` — local review desk on port 4322. `scripts/merge.py` — moves approved entries into the data files and rebuilds the hall of fame. `scripts/pages.py` — rebuilds it on its own, for after a hand edit to `data/apps.json`.
+- `queue/` — one JSON file per morning run. The run lists what passed both gates itself; what is left in a file is held (a dead link) or waiting on the review desk.
+- `scripts/sweep.py` — tier-1 source sweep. `scripts/review.py` — local review desk on port 4322. `scripts/merge.py` — moves approved entries into the data files and rebuilds the hall of fame; `--approve-all` approves everything still pending first, which is how the morning run lists its own finds. `scripts/pages.py` — rebuilds it on its own, for after a hand edit to `data/apps.json`.
 - `scripts/links.py` — the 404 hunt. With no arguments it checks every internal link offline (and `pages.py` refuses to finish a build that fails it). `--external` checks every outbound URL; `--bury <slug>` retires an app whose builder took it down: it leaves the lists and keeps its hall of fame page, stamped, with dead links swapped for Wayback snapshots.
 - `scripts/short.py` — the daily short: turns `shorts/YYYY-MM-DD.json` (a narration script) into a 1080x1920 video of the day's fresh spite, voiced through `scripts/voice.py`, then `scripts/handoff.py` writes a local posting desk with each platform's text. Nothing uploads itself. Rules in `shorts/README.md`; needs `firefox`, `ffmpeg` and an `OPENROUTER_API_KEY` in `.env`.
 - `scripts/upload.py` — puts a rendered short on YouTube through the Data API, with the posting desk's title and description: private by default, `--public`, `--unlisted` or `--at <time>` on request, `--dry` to read it first. Only ever run on the user's word. Setup in `shorts/README.md`.
@@ -20,9 +20,11 @@ Hosted on GitHub Pages straight from `main`.
 
 ## Morning routine
 
-1. `/spite` in Claude Code. It sweeps, verifies, scores, and opens the review desk.
-2. Approve, reject, or edit in the desk. Hit Merge.
+1. `/spite` in Claude Code. It sweeps, verifies, scores, lists everything that passed both gates, stars the repos, and renders the day's short with its posting desk.
+2. Read its report. Post the short by hand from the posting desk.
 3. Commit and push. Pages redeploys in about a minute.
+
+`/spite review` is the manual path: it stops after scoring and opens the review desk, where you approve, reject or edit, then hit Merge. `/spite short` makes the video afterwards.
 
 ## Run locally
 

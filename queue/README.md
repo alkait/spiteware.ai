@@ -1,6 +1,6 @@
 # Morning queue
 
-One JSON file per run: `queue/YYYY-MM-DD.json`. Review it in the desk, not by hand:
+One JSON file per run: `queue/YYYY-MM-DD.json`. The morning run (`/spite`) lists its own candidates: everything it drafts has passed both hard gates, and it ends with `python3 scripts/merge.py --approve-all queue/YYYY-MM-DD.json`, which approves what is still pending in that one file and merges it. What stays behind is a candidate held for a dead link. `/spite review` skips that and leaves the file for the desk. Review it there, not by hand:
 
 ```
 python3 scripts/review.py 4322    # then open http://localhost:4322/
