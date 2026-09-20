@@ -1,0 +1,21 @@
+name = "submit"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+workers_dev = true
+# submit.html posts to this address. It needs the spiteware.ai zone in the same Cloudflare account.
+routes = [{ pattern = "submit.spiteware.ai", custom_domain = true }]
+
+[vars]
+MAIL_TO = "hello@spiteware.ai"
+# a subdomain verified in Resend, so its DKIM and SPF records never touch the root domain's mail
+MAIL_FROM = "spiteware.ai submissions <submit@send.spiteware.ai>"
+
+# three submissions a minute from one address is already generous
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 3
+  period = 60

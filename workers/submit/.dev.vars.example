@@ -1,0 +1,4 @@
+# Copy to .dev.vars for `npm run dev`. This is Cloudflare's public always-passes test secret;
+# submit.html pairs it with the test site key on localhost. DRY_RUN makes the worker log the email instead of sending it.
+TURNSTILE_SECRET=1x0000000000000000000000000000000AA
+DRY_RUN=1

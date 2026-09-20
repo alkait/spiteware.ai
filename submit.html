@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSP99C36LS"></script>
+<script>
+  // local previews and anything else off the real domain send nothing
+  if (location.hostname !== 'spiteware.ai') window['ga-disable-G-XSP99C36LS'] = true;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XSP99C36LS');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>submit — spiteware.ai</title>
+<meta name="description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One form, no account.">
+<link rel="canonical" href="https://spiteware.ai/submit.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="spiteware.ai">
+<meta property="og:url" content="https://spiteware.ai/submit.html">
+<meta property="og:title" content="submit — spiteware.ai">
+<meta property="og:description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One form, no account.">
+<meta property="og:image" content="https://spiteware.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFE600">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <span>★ <b data-apps>—</b> apps listed. all free.</span><span>★ spiteware.ai has made <b>$0.00</b> so far</span><span>★ built by people who read the pricing page and said "no"</span><span>★ cancel your subscriptions. someone already rebuilt the app.</span><span>★ "upgrade to Pro" is not a feature</span><span>★ "seat-based pricing" is a hate crime</span><span>★ vibe coded. spite powered.</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="./" aria-label="spiteware.ai home">
+      <span class="logo__stack" aria-hidden="true"><span>SPITE</span><span>WARE</span></span>
+      <em aria-hidden="true">.ai</em>
+    </a>
+    <button class="menu__btn" type="button" id="menubtn" aria-expanded="false" aria-controls="mainnav"><span class="menu__bars" aria-hidden="true"></span>Menu</button>
+    <nav aria-label="Main" id="mainnav">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="apps.html">Apps <span class="nav__n" data-apps>—</span></a></li>
+        <li><a href="/hall-of-fame/">Hall of fame</a></li>
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="submit.html" aria-current="page">Submit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap doc">
+
+    <div class="doc__head">
+      <span class="kicker">submit, in one form</span>
+      <h1>Got a <span class="hollow">grudge?</span> Ship it.</h1>
+      <p class="doc__lede">Built something because a company wanted your credit card for a feature that fits in a single file? Tell us. It gets checked against <a href="rules.html">the same rules</a> as everything the agent finds, and nothing gets in by asking nicely.</p>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <label class="form__f">
+        <span class="form__l">The app <i>required</i></span>
+        <input type="url" name="url" required maxlength="300" placeholder="https://" autocomplete="url" inputmode="url">
+        <span class="form__h">Where people use it.</span>
+      </label>
+      <label class="form__f">
+        <span class="form__l">The repo</span>
+        <input type="url" name="repo" maxlength="300" placeholder="https://github.com/…" autocomplete="off" inputmode="url">
+        <span class="form__h">If there is one. A public repo is worth two points.</span>
+      </label>
+      <div class="form__row">
+        <label class="form__f">
+          <span class="form__l">What it replaces</span>
+          <input type="text" name="replaces" maxlength="80" placeholder="the tool you refused to pay" autocomplete="off">
+        </label>
+        <label class="form__f form__f--s">
+          <span class="form__l">What it wanted</span>
+          <input type="text" name="price" maxlength="40" placeholder="$12/mo" autocomplete="off">
+        </label>
+      </div>
+      <label class="form__f">
+        <span class="form__l">Why, in one sentence <i>required</i></span>
+        <textarea name="why" required maxlength="600" rows="4" placeholder="They moved export behind the Pro plan, so…"></textarea>
+        <span class="form__h">In your own words. The grudge is gate one.</span>
+      </label>
+      <label class="form__f">
+        <span class="form__l">Where you said it in public</span>
+        <input type="url" name="source" maxlength="300" placeholder="https://" autocomplete="off" inputmode="url">
+        <span class="form__h">A post, a README, your own site. Cards only quote what's public, and link to it.</span>
+      </label>
+      <div class="form__row">
+        <label class="form__f">
+          <span class="form__l">Your name or handle</span>
+          <input type="text" name="name" maxlength="60" autocomplete="nickname">
+        </label>
+        <label class="form__f">
+          <span class="form__l">Your email</span>
+          <input type="email" name="email" maxlength="120" autocomplete="email">
+        </label>
+      </div>
+      <p class="form__h" style="margin-top:-8px">The email is optional, and only used to answer you. <a href="/privacy.html">What happens to all this</a>.</p>
+      <input type="text" name="_gotcha" class="form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div id="ts" class="form__ts"></div>
+      <p class="form__msg" id="msg" role="alert" hidden></p>
+      <button class="btn btn--pink" type="submit" id="send">Submit your spiteware →</button>
+    </form>
+
+    <div class="form__done" id="done" hidden tabindex="-1">
+      <h2>Got it.</h2>
+      <p>It's in the inbox. If it clears both gates it goes up with a spite score, and if you left an email you'll hear either way.</p>
+      <p><a class="btn" href="apps.html">See who else is in →</a></p>
+    </div>
+
+    <p class="form__alt">Rather write an email, or fixing a card that's already up? <b>hello@spiteware.ai</b></p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="counter" title="You are visitor number…">
+      <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
+      <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
+    </div>
+    <div class="foot__meta">
+      this site was shamelessly vibe coded by <a href="https://github.com/alkait" target="_blank" rel="noopener">@alkait</a><br>
+      no pricing page · <a href="/privacy.html">privacy</a> · <a class="ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source on github</a><br>
+      the grudges, read aloud: <a class="ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">youtube</a> · <a class="ico ico--ig" href="https://www.instagram.com/spiteware.ai/" target="_blank" rel="noopener">instagram</a>
+    </div>
+    <div class="badges">
+      <span class="badge">Best viewed in any browser</span>
+      <span class="badge badge--blue">0 bytes of fonts</span>
+      <span class="badge badge--pink">Made with rage</span>
+      <span class="badge badge--green">Y2K compliant</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+  // The JSON this posts and workers/submit/ are a pair: change one, change the other.
+  const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+  const WORKER_URL = LOCAL ? 'http://localhost:8789' : 'https://submit.spiteware.ai';
+  // off the real domain this is Cloudflare's always-passes test key, matching workers/submit/.dev.vars.example
+  const SITEKEY = LOCAL ? '1x00000000000000000000AA' : '0x4AAAAAAE95SCNT3jLQQbjg';
+  const opened = Date.now();
+  const form = document.getElementById('form'), msg = document.getElementById('msg'), send = document.getElementById('send');
+  let widget = null;
+  window.onTurnstile = () => { widget = turnstile.render('#ts', { sitekey: SITEKEY, theme: 'light' }); };
+
+  function say(text) { msg.textContent = text; msg.hidden = !text; }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    say('');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const body = Object.fromEntries(new FormData(form));
+    if (!body['cf-turnstile-response']) { say('The bot check hasn\'t finished. Give it a second.'); return; }
+    body.t = Date.now() - opened;
+    send.disabled = true; send.textContent = 'Sending…';
+    try {
+      const res = await fetch(WORKER_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || !out.ok) throw new Error(out.error || 'That didn\'t send.');
+      form.hidden = true;
+      const done = document.getElementById('done');
+      done.hidden = false; done.focus();
+      if (window.gtag) gtag('event', 'submit_app');
+    } catch (err) {
+      // a failed fetch has no message worth showing
+      say(err instanceof TypeError ? 'That didn\'t send. Email hello@spiteware.ai instead.' : err.message);
+      // a token only verifies once
+      if (widget !== null) turnstile.reset(widget);
+      send.disabled = false; send.textContent = 'Submit your spiteware →';
+    }
+  });
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstile" async defer></script>
+</body>
+</html>

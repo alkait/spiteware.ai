@@ -404,7 +404,7 @@ def build():
     live, dead = [a for a in apps if alive(a)], [a for a in apps if not alive(a)]
     by = {}
     for a in apps: by.setdefault(author(a), []).append(a)
-    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/manifesto.html", None), ("/rules.html", None), ("/privacy.html", None)]
+    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/manifesto.html", None), ("/rules.html", None), ("/submit.html", None), ("/privacy.html", None)]
     for i, a in enumerate(live):
         write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[(i + 1) % len(live)]))
         urls.append((fame(a), a["added"]))

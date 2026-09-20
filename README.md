@@ -13,6 +13,7 @@ A catalog of apps people built out of spite because a paid tool asked for money 
 - `scripts/links.py` — the 404 hunt. With no arguments it checks every internal link offline (and `pages.py` refuses to finish a build that fails it). `--external` checks every outbound URL; `--bury <slug>` retires an app whose builder took it down: it leaves the lists and keeps its hall of fame page, stamped, with dead links swapped for Wayback snapshots.
 - `scripts/short.py` — the daily short: turns `shorts/YYYY-MM-DD.json` (a narration script) into a 1080x1920 video of the day's fresh spite, voiced through `scripts/voice.py`, then `scripts/handoff.py` writes a local posting desk with each platform's text. Nothing uploads itself. Rules in `shorts/README.md`; needs `firefox`, `ffmpeg` and an `OPENROUTER_API_KEY` in `.env`.
 - `scripts/upload.py` — puts a rendered short on YouTube through the Data API, with the posting desk's title and description: private by default, `--public`, `--unlisted` or `--at <time>` on request, `--dry` to read it first. Only ever run on the user's word. Setup in `shorts/README.md`.
+- `submit.html` — the one form on the site. It posts to `workers/submit/`, a Cloudflare Worker that checks the sender is a person (Turnstile, a honeypot, a rate limit) and sends the submission to hello@spiteware.ai as one email through Resend. Nothing is stored. Setup is below.
 - `analytics.html` — the site's real traffic, in public: totals against the period before, a day-by-day chart, top pages, countries, sources and devices. It reads from `workers/analytics-proxy/`, a Cloudflare Worker that asks the Google Analytics Data API and caches the answer for three hours. Setup is below.
 
 Hosted on GitHub Pages straight from `main`.
@@ -33,7 +34,7 @@ Then open http://localhost:4321/. Opening `index.html` from `file://` will not l
 
 ## The analytics worker
 
-`analytics.html` calls `https://stats.spiteware.ai/analytics`, which is `workers/analytics-proxy/` deployed to Cloudflare. It is the only part of the site that isn't static, and it deploys on its own: pushing to `main` doesn't touch it.
+`analytics.html` calls `https://stats.spiteware.ai/analytics`, which is `workers/analytics-proxy/` deployed to Cloudflare. It and the submit worker are the only parts of the site that aren't static, and they deploy on their own: pushing to `main` doesn't touch it.
 
 One-time setup:
 
@@ -53,6 +54,25 @@ npx wrangler deploy
 `wrangler.toml` claims `stats.spiteware.ai` as a custom domain, which works because the zone's DNS is on Cloudflare; it has to be the same account you log in with. Set `GA4_TIMEZONE` there to the property's reporting time zone, or "today" is cut at midnight UTC.
 
 To run it locally, put the same three values in `workers/analytics-proxy/.dev.vars` (gitignored) and `npm run dev`. A page served from `localhost` talks to `localhost:8788` instead of the live worker and shows a cache switch.
+
+## The submit worker
+
+`submit.html` posts JSON to `https://submit.spiteware.ai`, which is `workers/submit/` deployed to Cloudflare. In order, a submission has to pass: the `Origin` check, three a minute per address, a hidden honeypot field and a three-second fill timer (both answered with a fake thank-you), field validation, and Turnstile. Then it is one plain-text email to `MAIL_TO`, with `Reply-To` set to the submitter when they left an address. The worker stores nothing.
+
+One-time setup:
+
+1. Turnstile: `npx wrangler turnstile widget create spiteware.ai --domain spiteware.ai --mode managed` (or the dashboard). The site key goes in `SITEKEY` in `submit.html`; the secret goes in step 3.
+2. In [Resend](https://resend.com), add the domain `send.spiteware.ai`, put the DNS records it shows into Cloudflare, and create an API key with sending access only. The records sit on the subdomain, so the root domain's mail is untouched. `MAIL_FROM` in `wrangler.toml` has to be an address on that subdomain.
+3. Deploy, from `workers/submit/`:
+
+```sh
+npm install
+npx wrangler secret put TURNSTILE_SECRET
+npx wrangler secret put RESEND_API_KEY
+npx wrangler deploy
+```
+
+To run it locally, copy `.dev.vars.example` to `.dev.vars` and `npm run dev`. A page served from `localhost` talks to `localhost:8789` with Cloudflare's always-passes test keys, and the worker prints the email to its console instead of sending it.
 
 ## License
 
