@@ -176,7 +176,7 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
         <li><a href="/hall-of-fame/"{' aria-current="page"' if here == "/hall-of-fame/" else ""}>Hall of fame</a></li>
         <li><a href="/manifesto.html">Manifesto</a></li>
         <li><a href="/rules.html">Rules</a></li>
-        <li><a href="/#submit">Submit</a></li>
+        <li><a href="/submit.html">Submit</a></li>
       </ul>
     </nav>
   </div>
@@ -189,7 +189,7 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
       <div>
         <h2>Got a grudge?<br>Ship it.</h2>
         <p>Built something because a company wanted your credit card for a feature that fits in a single file? That's spiteware. Submit it and join the hall of fame.</p>
-        <p style="margin-top:20px"><a class="btn" href="/#submit">Submit your spiteware →</a> &nbsp; <a class="btn btn--pink" href="/apps.html">See all {n} grudges</a></p>
+        <p style="margin-top:20px"><a class="btn" href="/submit.html">Submit your spiteware →</a> &nbsp; <a class="btn btn--pink" href="/apps.html">See all {n} grudges</a></p>
       </div>
     </div>
   </section>
