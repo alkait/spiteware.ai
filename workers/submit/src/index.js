@@ -1,25 +1,13 @@
 // Cloudflare Worker: the form on spiteware.ai/submit.html, turned into one email to hello@spiteware.ai.
 // Nothing is stored. A submission has to get past, in order: the Origin check, a per-address rate limit,
-// a honeypot and a fill timer, field validation, and Cloudflare Turnstile. Then Resend carries it.
+// a honeypot and a fill timer, a check that it is a link, and Cloudflare Turnstile. Then Resend carries it.
 // The JSON it takes and the form in submit.html are a pair: change one, change the other.
 
 const ORIGINS = ['https://spiteware.ai', 'http://localhost:4321', 'http://127.0.0.1:4321'];
 const MAX_BODY = 8000;
-// nobody fills seven fields in under three seconds
-const MIN_FILL_MS = 3000;
-
-// name → [label in the email, max length, kind]
-const FIELDS = {
-  url:      ['App',          300, 'url'],
-  repo:     ['Repo',         300, 'url'],
-  replaces: ['Replaces',      80, 'line'],
-  price:    ['It wanted',     40, 'line'],
-  why:      ['Why',          600, 'text'],
-  source:   ['Said it here', 300, 'url'],
-  name:     ['From',          60, 'line'],
-  email:    ['Email',        120, 'email'],
-};
-const REQUIRED = ['url', 'why'];
+// a pasted link is quick, a script is quicker
+const MIN_FILL_MS = 1000;
+const MAX_URL = 300;
 
 export default {
   async fetch(request, env) {
@@ -44,8 +32,8 @@ export default {
     // bots get a thank-you and nothing else, so they learn nothing
     if (body._gotcha || !(Number(body.t) >= MIN_FILL_MS)) return jsonResponse({ ok: true }, 200, origin);
 
-    const { fields, error } = clean(body);
-    if (error) return jsonResponse({ error }, 400, origin);
+    const link = typeof body.url === 'string' ? body.url.trim() : '';
+    if (!link || link.length > MAX_URL || !isHttpUrl(link)) return jsonResponse({ error: "That's not a link." }, 400, origin);
 
     // after validation, because a Turnstile token only verifies once
     if (!(await passedTurnstile(body['cf-turnstile-response'], ip, env))) {
@@ -55,11 +43,10 @@ export default {
     const mail = {
       from: env.MAIL_FROM,
       to: env.MAIL_TO,
-      subject: subjectFor(fields),
+      subject: `[submit] ${new URL(link).hostname.replace(/^www\./, '')}`,
       // plain text only: nothing a stranger typed is ever rendered as HTML
-      text: textFor(fields),
+      text: `${link}\n\n--\nSent from spiteware.ai/submit.html · ${new Date().toISOString()}`,
     };
-    if (fields.email) mail.reply_to = fields.email;
 
     // set in .dev.vars only: `wrangler dev` must never send, so it logs the email instead
     if (env.DRY_RUN) {
@@ -80,32 +67,6 @@ export default {
   }
 };
 
-// Trim, cap and type-check every known field; anything else in the body is dropped.
-function clean(body) {
-  const fields = {};
-  for (const [name, [label, max, kind]] of Object.entries(FIELDS)) {
-    let v = typeof body[name] === 'string' ? body[name] : '';
-    // control characters out; single-line fields lose their newlines too, so nothing can forge a header or a row
-    v = v.replace(kind === 'text' ? /[\u0000-\u0009\u000B-\u001F\u007F]/g : /[\u0000-\u001F\u007F]/g, ' ').trim();
-    if (!v) {
-      if (REQUIRED.includes(name)) return { error: `${label} is missing.` };
-      continue;
-    }
-    if (v.length > max) return { error: `${label} is too long (${max} characters at most).` };
-    if (kind === 'url' && !isHttpUrl(v)) return { error: `${label} has to be a full link, starting with https://.` };
-    if (kind === 'email' && !/^[^\s@<>",;]+@[^\s@<>",;]+\.[^\s@<>",;]+$/.test(v)) return { error: `${label} doesn't look like an address.` };
-    fields[name] = v;
-  }
-  return { fields };
-}
-
-function isHttpUrl(v) {
-  try {
-    const u = new URL(v);
-    return (u.protocol === 'https:' || u.protocol === 'http:') && u.hostname.includes('.');
-  } catch { return false; }
-}
-
 async function passedTurnstile(token, ip, env) {
   if (typeof token !== 'string' || !token || token.length > 2048) return false;
   const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -117,27 +78,13 @@ async function passedTurnstile(token, ip, env) {
   return (await res.json()).success === true;
 }
 
-function subjectFor(f) {
-  let host = f.url;
-  try { host = new URL(f.url).hostname.replace(/^www\./, ''); } catch {}
-  const victim = f.replaces ? ` replaces ${f.replaces}${f.price ? ' · ' + f.price : ''}` : '';
-  return `[submit] ${host}${victim}`.slice(0, 160);
-}
-
-function textFor(f) {
-  const rows = Object.entries(FIELDS)
-    .filter(([name]) => f[name] && name !== 'why')
-    .map(([name, [label]]) => `${(label + ':').padEnd(14)}${f[name]}`);
-  return [
-    ...rows,
-    '',
-    'Why, in their words:',
-    f.why,
-    '',
-    '--',
-    `Sent from spiteware.ai/submit.html · ${new Date().toISOString()}`,
-    f.email ? 'Reply goes to the submitter.' : 'No email given: there is nobody to reply to.',
-  ].join('\n');
+// A full http(s) link with no whitespace or control characters in it, so it is safe in a subject line.
+function isHttpUrl(v) {
+  if (/[\s\u0000-\u001F\u007F]/.test(v)) return false;
+  try {
+    const u = new URL(v);
+    return (u.protocol === 'https:' || u.protocol === 'http:') && u.hostname.includes('.');
+  } catch { return false; }
 }
 
 function corsHeaders(origin) {

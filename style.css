@@ -243,21 +243,14 @@
   .doc a{text-decoration:none;border-bottom:2px solid var(--pink)}
   .doc a:hover{background:var(--yellow)}
 
-  /* ---------- submit page: the one form on the site ---------- */
+  /* ---------- submit page: the one form on the site, and it is one link ---------- */
   .form{display:grid;gap:22px;margin-bottom:clamp(38px,5.5vw,58px)}
-  .form__row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  .form__row .form__f--s{max-width:220px}
-  @media (max-width:560px){.form__row{grid-template-columns:1fr}.form__row .form__f--s{max-width:none}}
-  .form__f{display:grid;gap:8px;align-content:start}
-  .form__l{font-family:var(--display);font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.02em}
-  .form__l i{font-family:var(--mono);font-style:normal;font-weight:400;font-size:11px;letter-spacing:.08em;background:var(--yellow);border:2px solid var(--ink);padding:1px 6px;margin-left:6px;vertical-align:1px}
-  .form input,.form textarea{width:100%;font-family:var(--mono);font-size:16px;padding:12px 14px;border:var(--bw) solid var(--ink);border-radius:0;background:#fff;color:var(--ink);box-shadow:4px 4px 0 var(--ink);outline:none;-webkit-appearance:none;appearance:none}
-  .form textarea{resize:vertical;min-height:112px;line-height:1.5}
-  .form input:focus,.form textarea:focus{box-shadow:4px 4px 0 var(--pink)}
-  .form ::placeholder{color:#999}
-  .form__h{font-family:var(--mono);font-size:13px;color:#555;margin:0}
+  .form input[type=url]{width:100%;font-family:var(--mono);font-size:18px;padding:16px 18px;border:var(--bw) solid var(--ink);border-radius:0;background:#fff;color:var(--ink);box-shadow:var(--shadow);outline:none;-webkit-appearance:none;appearance:none}
+  .form input[type=url]:focus{box-shadow:6px 6px 0 var(--pink)}
+  .form ::placeholder{color:#888}
   .form__trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-  .form__ts{min-height:65px}
+  .form__go{display:grid;justify-items:start}
+  .form #ts.is-asking{margin-bottom:18px}
   .form__msg{margin:0;padding:12px 14px;font-family:var(--mono);font-size:14px;background:var(--pink);color:#fff;border:var(--bw) solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
   .form .btn{justify-self:start;cursor:pointer}
   .form .btn:disabled{opacity:.6;cursor:progress;transform:none;box-shadow:var(--shadow)}

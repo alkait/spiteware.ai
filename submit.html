@@ -15,13 +15,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>submit — spiteware.ai</title>
-<meta name="description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One form, no account.">
+<meta name="description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One box, no account.">
 <link rel="canonical" href="https://spiteware.ai/submit.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="spiteware.ai">
 <meta property="og:url" content="https://spiteware.ai/submit.html">
 <meta property="og:title" content="submit — spiteware.ai">
-<meta property="og:description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One form, no account.">
+<meta property="og:description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One box, no account.">
 <meta property="og:image" content="https://spiteware.ai/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFE600">
@@ -62,62 +62,24 @@
   <div class="wrap doc">
 
     <div class="doc__head">
-      <span class="kicker">submit, in one form</span>
-      <h1>Got a <span class="hollow">grudge?</span> Ship it.</h1>
-      <p class="doc__lede">Built something because a company wanted your credit card for a feature that fits in a single file? Tell us. It gets checked against <a href="rules.html">the same rules</a> as everything the agent finds, and nothing gets in by asking nicely.</p>
+      <span class="kicker">we can't keep up!</span>
+      <h1>Built something out of <span class="hollow">rage?</span><br>Tell us about it.</h1>
+      <p class="doc__lede">Our AI agent sweeps the internet every morning and still can't keep up with how fast people rage-quit a pricing page.</p>
     </div>
 
     <form class="form" id="form" novalidate>
-      <label class="form__f">
-        <span class="form__l">The app <i>required</i></span>
-        <input type="url" name="url" required maxlength="300" placeholder="https://" autocomplete="url" inputmode="url">
-        <span class="form__h">Where people use it.</span>
-      </label>
-      <label class="form__f">
-        <span class="form__l">The repo</span>
-        <input type="url" name="repo" maxlength="300" placeholder="https://github.com/…" autocomplete="off" inputmode="url">
-        <span class="form__h">If there is one. A public repo is worth two points.</span>
-      </label>
-      <div class="form__row">
-        <label class="form__f">
-          <span class="form__l">What it replaces</span>
-          <input type="text" name="replaces" maxlength="80" placeholder="the tool you refused to pay" autocomplete="off">
-        </label>
-        <label class="form__f form__f--s">
-          <span class="form__l">What it wanted</span>
-          <input type="text" name="price" maxlength="40" placeholder="$12/mo" autocomplete="off">
-        </label>
-      </div>
-      <label class="form__f">
-        <span class="form__l">Why, in one sentence <i>required</i></span>
-        <textarea name="why" required maxlength="600" rows="4" placeholder="They moved export behind the Pro plan, so…"></textarea>
-        <span class="form__h">In your own words. The grudge is gate one.</span>
-      </label>
-      <label class="form__f">
-        <span class="form__l">Where you said it in public</span>
-        <input type="url" name="source" maxlength="300" placeholder="https://" autocomplete="off" inputmode="url">
-        <span class="form__h">A post, a README, your own site. Cards only quote what's public, and link to it.</span>
-      </label>
-      <div class="form__row">
-        <label class="form__f">
-          <span class="form__l">Your name or handle</span>
-          <input type="text" name="name" maxlength="60" autocomplete="nickname">
-        </label>
-        <label class="form__f">
-          <span class="form__l">Your email</span>
-          <input type="email" name="email" maxlength="120" autocomplete="email">
-        </label>
-      </div>
-      <p class="form__h" style="margin-top:-8px">The email is optional, and only used to answer you. <a href="/privacy.html">What happens to all this</a>.</p>
+      <input type="url" name="url" required maxlength="300" aria-label="Link to your spiteware" placeholder="https://" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false">
       <input type="text" name="_gotcha" class="form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div id="ts" class="form__ts"></div>
       <p class="form__msg" id="msg" role="alert" hidden></p>
-      <button class="btn btn--pink" type="submit" id="send">Submit your spiteware →</button>
+      <div class="form__go">
+        <div id="ts"></div>
+        <button class="btn btn--pink" type="submit" id="send">Submit your spiteware →</button>
+      </div>
     </form>
 
     <div class="form__done" id="done" hidden tabindex="-1">
       <h2>Got it.</h2>
-      <p>It's in the inbox. If it clears both gates it goes up with a spite score, and if you left an email you'll hear either way.</p>
+      <p>It's in the inbox. If it clears <a href="rules.html">both gates</a> it goes up with a spite score.</p>
       <p><a class="btn" href="apps.html">See who else is in →</a></p>
     </div>
 
@@ -156,14 +118,26 @@
   const opened = Date.now();
   const form = document.getElementById('form'), msg = document.getElementById('msg'), send = document.getElementById('send');
   let widget = null;
-  window.onTurnstile = () => { widget = turnstile.render('#ts', { sitekey: SITEKEY, theme: 'light' }); };
+  // the widget only shows itself when it needs a click
+  window.onTurnstile = () => {
+    const ts = document.getElementById('ts');
+    widget = turnstile.render(ts, { sitekey: SITEKEY, theme: 'light', appearance: 'interaction-only',
+      'before-interactive-callback': () => ts.classList.add('is-asking'),
+      'after-interactive-callback': () => ts.classList.remove('is-asking') });
+  };
 
   function say(text) { msg.textContent = text; msg.hidden = !text; }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     say('');
-    if (!form.checkValidity()) { form.reportValidity(); return; }
+    // "example.com" is a link too
+    let link = form.url.value.trim();
+    if (link && !/^https?:\/\//i.test(link)) link = 'https://' + link;
+    let ok = false;
+    try { ok = new URL(link).hostname.includes('.'); } catch {}
+    if (!ok) { say('That\'s not a link.'); form.url.focus(); return; }
+    form.url.value = link;
     const body = Object.fromEntries(new FormData(form));
     if (!body['cf-turnstile-response']) { say('The bot check hasn\'t finished. Give it a second.'); return; }
     body.t = Date.now() - opened;
