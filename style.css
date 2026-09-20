@@ -245,6 +245,8 @@
 
   /* ---------- submit page: the one form on the site, and it is one link ---------- */
   .form{display:grid;gap:22px;margin-bottom:clamp(38px,5.5vw,58px)}
+  /* display:grid would otherwise beat the hidden attribute, and the sent form would stay on screen */
+  .form[hidden]{display:none}
   .form input[type=url]{width:100%;font-family:var(--mono);font-size:18px;padding:16px 18px;border:var(--bw) solid var(--ink);border-radius:0;background:#fff;color:var(--ink);box-shadow:var(--shadow);outline:none;-webkit-appearance:none;appearance:none}
   .form input[type=url]:focus{box-shadow:6px 6px 0 var(--pink)}
   .form ::placeholder{color:#888}
