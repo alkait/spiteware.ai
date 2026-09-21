@@ -1,0 +1,27 @@
+{
+  "run": "2026-09-21",
+  "swept": "hn (48h), reddit rss (r/SideProject, r/opensource timed out; r/vibecoding, r/indiehackers rate-limited), github, last30days (3d)",
+  "raw_hits": 233,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "Easymacros: free only until ~1,000 users, then 'free forever or huge free credits' for early users; no grudge in the post",
+    "Radius (Meetup alternative): £12/month Pro groups, builder's own words on HN",
+    "3D Mac window switcher: seven-day trial, then $12.99 one-time",
+    "SubCrisp: free tier plus Pro (projections, price log, what-if simulator)",
+    "AltBrowse: grudge is real (Openly's subscription), but the site has a one-time Pro upgrade. Fails the free gate",
+    "LockStatus: Pro at $1.99/month or $9.99/year with a trial",
+    "visualOS: free in the browser, one-time purchase for Mac/iPhone/iPad",
+    "KetoKind: 'no subscription' tagline, but the AI Coach export is Pro at $9.99 one-time",
+    "MidiSlayer, DeltaSnap, Simple Mass Downloader, ScoreTail: paid unlocks, licences, credit packs or Pro plans",
+    "RayMate, Fluentry, Hibi, rift, Swarm, Ifso: free and good, but the motive is features, privacy or UX, not anyone's price",
+    "OpenStock (infinityalgoacademy-lang): a re-upload of Open-Dev-Society/OpenStock, and it needs an email/password account",
+    "cdomCRM: a re-upload of ChurchCRM's README with UTM links, not the builder's project",
+    "linton: empty duplicate of CVForge by the same builder",
+    "InvoiceMate-Windows: 'Work in progress', no app yet",
+    "pingPong (AIM-style chat): account required, no price grudge",
+    "A1Lab: grudge is ads on GeeksforGeeks/W3Schools, not a price",
+    "AutoDMX: already listed 2026-09-20",
+    "last30days: dev-tools site (grudge is sign-up walls, not price), Serbian learning app, Quiper: no price grudge"
+  ]
+}

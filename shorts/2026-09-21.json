@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-21",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "CV sites charge you to download your own CV. CVForge doesn't.",
+    "caption": "Fresh grudges: CV builders that bill you at the download button and finance apps that charge a fee to read your own payslip, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "jobsearch"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 21st.", "say": "September twenty-first.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "cvforge", "score": false,
+     "gripe": "CV sites charge you to download your own CV.",
+     "quote": "download a polished CV instantly—without paying expensive CV creator fees.",
+     "cues": [
+      {"cap": "CV sites let you type for an hour", "step": "gripe"},
+      {"cap": "then charge you to download it.", "step": "gripe"},
+      {"cap": "Ishwor Poudel:", "say": "[matter-of-fact] Ish-wor Po-del:", "step": "quote"},
+      {"cap": "“download a polished CV instantly—", "say": "[sarcastic] download a polished C V instantly,", "step": "quote"},
+      {"cap": "without paying expensive CV creator fees.”", "say": "without paying expensive C V creator fees.", "step": "quote"},
+      {"cap": "So: CVForge. In your browser.", "say": "[quick] So: C V Forge. In your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "paytrack", "score": false,
+     "gripe": "Finance apps charge a fee to read your own payslip.",
+     "quote": "track your pay and tax instead of paying a fee from other finance apps.",
+     "cues": [
+      {"cap": "Finance apps want a fee", "step": "gripe"},
+      {"cap": "to read your own payslip.", "step": "gripe"},
+      {"cap": "hreslan:", "say": "[matter-of-fact] H Reslan:", "step": "quote"},
+      {"cap": "“track your pay and tax", "say": "[sarcastic] track your pay and tax", "step": "quote"},
+      {"cap": "instead of paying a fee from other finance apps.”", "say": "instead of paying a fee from other finance apps.", "step": "quote"},
+      {"cap": "Enter PayTrack. On your own machine.", "say": "[quick] Enter PayTrack. On your own machine.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

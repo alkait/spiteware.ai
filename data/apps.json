@@ -2945,5 +2945,67 @@
     "repo": "k3ptok/PasswordManager",
     "spite_score": 5,
     "added": "2026-09-20"
+  },
+  {
+    "slug": "cvforge",
+    "name": "CVForge",
+    "url": "https://cvforge-ishwor.vercel.app",
+    "icon": "📝",
+    "tagline": "CV sites charge you at the download button. CVForge builds the PDF in your browser, and its download button just downloads.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Create professional CVs for free with CVForge. Add your details, photo, skills, education, and experience, customize your design, and download a polished CV instantly—without paying expensive CV creator fees.",
+      "source": "https://github.com/ishworpoudel64-creater/CVForge"
+    },
+    "builder": {
+      "name": "Ishwor Poudel",
+      "handle": "ishworpoudel64-creater",
+      "url": "https://github.com/ishworpoudel64-creater"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "career"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "ishworpoudel64-creater/CVForge",
+    "spite_score": 5,
+    "added": "2026-09-21"
+  },
+  {
+    "slug": "paytrack",
+    "name": "PayTrack",
+    "url": "https://github.com/hreslan/PayTrack",
+    "icon": "🧾",
+    "tagline": "Tracking your own payslips is not a premium feature. PayTrack does your Australian tax estimate on your own machine, fee-free.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "A finance web ui that allows you to track your pay and tax instead of paying a fee from other finance apps.",
+      "source": "https://github.com/hreslan/PayTrack"
+    },
+    "builder": {
+      "name": "hreslan",
+      "handle": "hreslan",
+      "url": "https://github.com/hreslan"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "hreslan/PayTrack",
+    "spite_score": 5,
+    "added": "2026-09-21"
   }
 ]
