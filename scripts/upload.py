@@ -13,8 +13,10 @@ Until the Cloud project passes YouTube's API audit, every upload is locked to pr
 is asked for here, and going public is a click in Studio. The audit is a free form:
 https://support.google.com/youtube/contact/yt_api_form
 
-YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET and YOUTUBE_REFRESH_TOKEN live in .env; --auth writes
-all three. Stdlib only, like everything else here. Running this is posting: never without the
+YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN and YOUTUBE_CHANNEL_ID live in
+.env; --auth writes all four. The channel is whichever one was picked on the consent screen, and
+every upload checks the token still belongs to it: a Google account can own several channels, and
+picking the wrong one there once sent a short to the wrong place. Stdlib only, like everything else here. Running this is posting: never without the
 user's word.
 """
 import argparse, datetime, http.server, json, os, pathlib, secrets, subprocess, sys
@@ -26,7 +28,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SHORTS = ROOT / "shorts"
 ENV = ROOT / ".env"
 DONE = SHORTS / ".cache" / "uploaded.json"
-SCOPE = "https://www.googleapis.com/auth/youtube.upload"
+SCOPE = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly"
 TOKEN = "https://oauth2.googleapis.com/token"
 CATEGORY = "28"  # Science & Technology
 
@@ -93,8 +95,11 @@ def auth(client_json):
                        "redirect_uri": redirect, "grant_type": "authorization_code"})
     if "refresh_token" not in tok:
         sys.exit(f"No refresh token came back: {tok}")
-    keep({"YOUTUBE_REFRESH_TOKEN": tok["refresh_token"]})
-    print("YOUTUBE_REFRESH_TOKEN is in .env. Delete the downloaded client JSON; .env has what it held.")
+    cid_, title = channel(tok["access_token"])
+    keep({"YOUTUBE_REFRESH_TOKEN": tok["refresh_token"], "YOUTUBE_CHANNEL_ID": cid_})
+    print(f"Uploads will go to the channel {title!r} ({cid_}).\n"
+          "Not the one you meant? Run --auth again and pick the other channel on the first Google screen.\n"
+          "The tokens are in .env. Delete the downloaded client JSON; .env has what it held.")
 
 
 def access():
@@ -105,14 +110,31 @@ def access():
                         "grant_type": "refresh_token"})["access_token"]
 
 
-def upload(mp4, title, description, tags, privacy, at):
+def channel(token):
+    """The (id, title) of the channel this token uploads to."""
+    req = urllib.request.Request("https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true",
+                                 headers={"Authorization": f"Bearer {token}"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            items = json.loads(resp.read()).get("items") or []
+    except urllib.error.HTTPError as e:
+        if e.code == 403:
+            sys.exit("This token cannot see which channel it uploads to (it predates the channel check).\n"
+                     "Run python3 scripts/upload.py --auth once more and pick the channel you want.")
+        sys.exit(f"YouTube said no, HTTP {e.code}: {e.read()[:300].decode(errors='replace')}")
+    if not items:
+        sys.exit("The account you picked has no YouTube channel. Run --auth again and pick the channel itself.")
+    return items[0]["id"], items[0]["snippet"]["title"]
+
+
+def upload(mp4, title, description, tags, privacy, at, token):
     """A resumable upload in two requests: the metadata, then the bytes. Returns the API's video."""
     status = {"privacyStatus": privacy, "selfDeclaredMadeForKids": False}
     if at:
         status["publishAt"] = at
     meta = json.dumps({"snippet": {"title": title, "description": description, "tags": tags, "categoryId": CATEGORY},
                        "status": status}).encode()
-    bearer, video = {"Authorization": f"Bearer {access()}"}, mp4.read_bytes()
+    bearer, video = {"Authorization": f"Bearer {token}"}, mp4.read_bytes()
     start = urllib.request.Request(
         "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", data=meta,
         headers={**bearer, "Content-Type": "application/json; charset=UTF-8",
@@ -161,8 +183,14 @@ def main():
     if a.dry:
         return print(f"{mp4.relative_to(ROOT)}, {mp4.stat().st_size / 1e6:.1f} MB, {privacy}{' until ' + at if at else ''}\n\n"
                      f"{text['title']}\n\n{text['description']}")
+    token = access()
+    want, (cid, name) = env("YOUTUBE_CHANNEL_ID"), channel(token)
+    if cid != want:
+        sys.exit(f"The token uploads to {name!r} ({cid}), but .env says {want or 'no channel'}. Nothing sent.\n"
+                 "Run python3 scripts/upload.py --auth and pick the right channel.")
+    print(f"Uploading to {name!r} ({cid})…")
     # the description ends with the hashtags; the tags field takes the same words bare
-    video = upload(mp4, text["title"], text["description"], script["post"]["tags"], privacy, at)
+    video = upload(mp4, text["title"], text["description"], script["post"]["tags"], privacy, at, token)
     DONE.parent.mkdir(parents=True, exist_ok=True)
     DONE.write_text(json.dumps({**done, script["date"]: video["id"]}, indent=1) + "\n")
     landed = video["status"]["privacyStatus"]

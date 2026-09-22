@@ -48,7 +48,10 @@ Setup, once. The YouTube Data API v3 is already enabled on the `spiteware` Googl
    **Desktop app**, download the JSON.
 3. `python3 scripts/upload.py --auth ~/Downloads/client_secret_….json` — a browser tab asks which
    channel; click through the "Google hasn't verified this app" warning (Advanced → Go to…). It
-   writes `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET` and `YOUTUBE_REFRESH_TOKEN` into `.env`.
+   writes `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` and
+   `YOUTUBE_CHANNEL_ID` into `.env`, and prints the channel it picked. On the first Google screen
+   pick **spiteware** itself, not the personal account above it: one Google account can hold several
+   channels. Every upload checks the token still points at `YOUTUBE_CHANNEL_ID` and refuses if not.
    Delete the downloaded JSON afterwards.
 
 ## Script
