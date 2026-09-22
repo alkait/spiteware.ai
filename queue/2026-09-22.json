@@ -1,0 +1,21 @@
+{
+  "run": "2026-09-22",
+  "swept": "hn (48h), reddit rss (r/selfhosted, r/webdev, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 305,
+  "triaged": 22,
+  "candidates": [],
+  "dropped": [
+    "Leash: 'free alternative to GlassWire and NetLimiter' is a pitch, not a grudge; no builder words about price",
+    "Saffron Desk: 'no subscription to lapse' is a feature line, no grudge",
+    "Ariadne, InkHearth, FinFolio, LoreFetch, NotWallpaperEngine: 'no subscription' taglines, but the motive stated is privacy, offline or features, not a price",
+    "Inbox Attachments (inboxshare.dev): works by signing in to your mailbox; grudge vague ('could be a pain/ expensive')",
+    "LocalFlow (Neelkukreti/localflow-macos): a LocalFlow is already listed; slug collision and a Wispr Flow tagline with no builder grudge",
+    "whispering-flow: 'no subscription' tagline only; a Whispering is already listed",
+    "RahaLune QR Studio, photo tools with 'free forever' badges: marketing copy, no grudge",
+    "Kokos, rift, Transom, Marklite, SnipStash, Clipwise, Gitstats, Human Rank: free, but built for features or UX, not against a price",
+    "VoiceForge: buy-once licence, fails the free gate",
+    "Vellum: source-available diagram editor, grudge is about redrawing, not price",
+    "Easymacros, SubCrisp, Radius, KetoKind, cdomCRM, Swarm, Hibi, A1Lab, AltBrowse, LockStatus, Simple Mass Downloader, Ifso, 3D window switcher: already dropped 2026-09-21",
+    "last30days: skill not installed in this session, tier 2 skipped"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "date": "2026-09-22",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 1,
+  "post": {
+    "title": "Canva wants $144 a year for a transparent PNG. Photo Craft doesn't.",
+    "caption": "Fresh grudges: a paywalled transparent background, a finance app you pay to read your own money, and school handbook software priced like a textbook, each replaced by someone annoyed enough to build the free version.",
+    "tags": [
+      "freesoftware",
+      "indiedev",
+      "subscriptions",
+      "opensource",
+      "canva"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "September 22nd.",
+          "say": "September twenty-second.",
+          "step": "date"
+        },
+        {
+          "cap": "Four new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "photo-craft",
+      "cut": true,
+      "quote": "I was tired of using Canva and being limited on features that cost them nothing to run",
+      "cues": [
+        {
+          "cap": "Canva Pro: $144 a year",
+          "say": "Canva Pro: a hundred forty-four dollars a year",
+          "step": "badge"
+        },
+        {
+          "cap": "for a transparent background.",
+          "step": "badge"
+        },
+        {
+          "cap": "edison16a:",
+          "say": "[matter-of-fact] Edison sixteen A:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I was tired of using Canva",
+          "say": "[sarcastic] I was tired of using Canva",
+          "step": "quote"
+        },
+        {
+          "cap": "and being limited on features",
+          "step": "quote"
+        },
+        {
+          "cap": "that cost them nothing to run”",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Photo Craft.",
+          "say": "[quick] So: Photo Craft.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "cairn",
+      "cut": true,
+      "gripe": "Finance apps charge you to look at your own money.",
+      "quote": "I was paying too much for Monarch Money and Copilot",
+      "cues": [
+        {
+          "cap": "Finance apps charge you",
+          "step": "gripe"
+        },
+        {
+          "cap": "to look at your own money.",
+          "step": "gripe"
+        },
+        {
+          "cap": "terrenerapier:",
+          "say": "[matter-of-fact] Terrene Rapier:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I was paying too much",
+          "say": "[sarcastic] I was paying too much",
+          "step": "quote"
+        },
+        {
+          "cap": "for Monarch Money and Copilot”",
+          "step": "quote"
+        },
+        {
+          "cap": "Enter Cairn. No server.",
+          "say": "[quick] Enter Cairn. No server.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "school-handbooks",
+      "score": false,
+      "cut": true,
+      "gripe": "Handbook software is expensive, and schools pay it.",
+      "quote": "frustrated with expensive handbook SaaS",
+      "cues": [
+        {
+          "cap": "Schools pay software prices",
+          "step": "gripe"
+        },
+        {
+          "cap": "to publish a handbook.",
+          "step": "gripe"
+        },
+        {
+          "cap": "Mixj73IT:",
+          "say": "[matter-of-fact] Mix J seventy-three I T:",
+          "step": "quote"
+        },
+        {
+          "cap": "“frustrated with expensive handbook SaaS”",
+          "say": "[sarcastic] frustrated with expensive handbook sass",
+          "step": "quote"
+        },
+        {
+          "cap": "So: School Handbooks.",
+          "say": "[quick] So: School Handbooks.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "Plus one more",
+          "say": "[upbeat] Plus one more,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}

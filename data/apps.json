@@ -3007,5 +3007,129 @@
     "repo": "hreslan/PayTrack",
     "spite_score": 5,
     "added": "2026-09-21"
+  },
+  {
+    "slug": "photo-craft",
+    "name": "Photo Craft",
+    "url": "https://photo-craft.vercel.app",
+    "icon": "🖼️",
+    "tagline": "Canva wants $144 a year before it will leave your background transparent. Photo Craft exports nothing behind your logo for nothing.",
+    "replaces": {
+      "name": "Canva Pro",
+      "price": "$144/yr",
+      "source": "https://www.canva.com/pricing/"
+    },
+    "grudge": {
+      "quote": "I built it because I was tired of using Canva and being limited on features that cost them nothing to run, like exporting a PNG with a transparent background.",
+      "source": "https://github.com/edison16a/photo-craft"
+    },
+    "builder": {
+      "name": "edison16a",
+      "handle": "edison16a",
+      "url": "https://github.com/edison16a"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "edison16a/photo-craft",
+    "spite_score": 8,
+    "added": "2026-09-22"
+  },
+  {
+    "slug": "cairn",
+    "name": "Cairn",
+    "url": "https://github.com/cairn-finance/cairn",
+    "icon": "🪨",
+    "tagline": "Monarch and Copilot bill you monthly to look at your own money. Cairn looks at it on your phone and bills you never.",
+    "replaces": {
+      "name": "Monarch Money",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I was paying too much for Monarch Money and Copilot, so I built my own personal finance tracker.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wn1aus/cairn_privacy_focussed_serverless_personal/"
+    },
+    "builder": {
+      "name": "terrenerapier",
+      "handle": "terrenerapier",
+      "url": "https://www.reddit.com/user/terrenerapier"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "cairn-finance/cairn",
+    "spite_score": 7,
+    "added": "2026-09-22"
+  },
+  {
+    "slug": "school-handbooks",
+    "name": "School Handbooks",
+    "url": "https://github.com/Mixj73IT/school-handbooks",
+    "icon": "📚",
+    "tagline": "Handbook SaaS charges schools per editor for a textbox. This one runs on a $5 server and the school owns every page.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Built for a private K-12 school that was frustrated with expensive handbook SaaS (HTML-in-a-textbox editing, no collaboration) and Google Docs (no real TOC, weak formatting, poor search).",
+      "source": "https://github.com/Mixj73IT/school-handbooks"
+    },
+    "builder": {
+      "name": "Mixj73IT",
+      "handle": "Mixj73IT",
+      "url": "https://github.com/Mixj73IT"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Mixj73IT/school-handbooks",
+    "spite_score": 5,
+    "added": "2026-09-22"
+  },
+  {
+    "slug": "qr-local",
+    "name": "QR Local",
+    "url": "https://krisosom.github.io/qr-local/",
+    "icon": "🔳",
+    "tagline": "QR sites hold the good options for subscribers. QR Local is one HTML file that works offline and never asks for a card.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Many QR services are account-based, cloud-dependent, or reserve useful features for subscription plans.",
+      "source": "https://github.com/KrisOsoM/qr-local"
+    },
+    "builder": {
+      "name": "Kriss",
+      "handle": "KrisOsoM",
+      "url": "https://github.com/KrisOsoM"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "KrisOsoM/qr-local",
+    "spite_score": 5,
+    "added": "2026-09-22"
   }
 ]
