@@ -3131,5 +3131,66 @@
     "repo": "KrisOsoM/qr-local",
     "spite_score": 5,
     "added": "2026-09-22"
+  },
+  {
+    "slug": "attn",
+    "name": "Attn",
+    "url": "https://useattn.com",
+    "icon": "✉️",
+    "tagline": "Superhuman charges $30 a month to make Gmail fast. Attn does it from your own laptop for nothing.",
+    "replaces": {
+      "name": "Superhuman Starter",
+      "price": "$30/mo",
+      "source": "https://www.usecarly.com/blog/superhuman-pricing/"
+    },
+    "grudge": {
+      "quote": "I wanted Superhuman-like private Gmail client without the subscription, so I built one.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wni58w/i_wanted_superhumanlike_private_gmail_client/"
+    },
+    "builder": {
+      "name": "Chao Wu",
+      "handle": "stephenw310",
+      "url": "https://github.com/stephenw310"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "stephenw310/attn",
+    "spite_score": 8,
+    "added": "2026-09-23"
+  },
+  {
+    "slug": "stockchess",
+    "name": "StockChess",
+    "url": "https://stockchess.net",
+    "icon": "♟️",
+    "tagline": "Chess sites charge you to find out how badly you blundered. StockChess lets you relive it for free.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Like many of you, I got tired of hitting paywalls just to review my own mistakes after a game.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wnfvib/i_built_stockchess_a_free_tool_to_analyze_your/"
+    },
+    "builder": {
+      "name": "zeus_00",
+      "handle": "zeus_00",
+      "url": ""
+    },
+    "tags": [
+      "web",
+      "games"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-23"
   }
 ]

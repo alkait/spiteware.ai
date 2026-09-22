@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-23",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Superhuman wants $30 a month for fast Gmail. Attn doesn't.",
+    "caption": "Fresh grudges: a $30-a-month email client and chess sites that paywall your own post-game review, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "chess"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 23rd.", "say": "September twenty-third.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "attn",
+     "quote": "I wanted Superhuman-like private Gmail client without the subscription, so I built one.",
+     "cues": [
+      {"cap": "Superhuman wants $30 a month", "say": "Superhuman wants thirty dollars a month", "step": "badge"},
+      {"cap": "to make Gmail fast.", "step": "badge"},
+      {"cap": "Chao Wu:", "say": "[matter-of-fact] Chao Woo:", "step": "quote"},
+      {"cap": "“I wanted Superhuman-like private Gmail client", "say": "[sarcastic] I wanted Superhuman-like private Gmail client", "step": "quote"},
+      {"cap": "without the subscription,", "step": "quote"},
+      {"cap": "so I built one.”", "step": "quote"},
+      {"cap": "Enter Attn.", "say": "[quick] Enter Attn.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "stockchess", "score": false,
+     "gripe": "Chess sites paywall the review of your own games.",
+     "quote": "Like many of you, I got tired of hitting paywalls just to review my own mistakes after a game.",
+     "cues": [
+      {"cap": "Chess sites charge you", "step": "gripe"},
+      {"cap": "to review your own blunders.", "step": "gripe"},
+      {"cap": "zeus_00:", "say": "[matter-of-fact] Zeus zero zero:", "step": "quote"},
+      {"cap": "“Like many of you, I got tired", "say": "[sarcastic] Like many of you, I got tired", "step": "quote"},
+      {"cap": "of hitting paywalls", "step": "quote"},
+      {"cap": "just to review my own mistakes", "step": "quote"},
+      {"cap": "after a game.”", "step": "quote"},
+      {"cap": "So: StockChess.", "say": "[quick] So: Stock Chess.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

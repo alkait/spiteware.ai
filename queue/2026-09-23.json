@@ -1,0 +1,21 @@
+{
+  "run": "2026-09-23",
+  "swept": "hn (48h), reddit rss (r/SideProject, r/selfhosted, r/vibecoding, r/indiehackers; r/opensource, r/macapps, r/ClaudeAI rate-limited), github, last30days (3d)",
+  "raw_hits": 364,
+  "triaged": 20,
+  "candidates": [],
+  "dropped": [
+    "DreamMorrow: real grudge ('without paying for another subscription'), but you must create an account before you can try it",
+    "Deft: grudge against Slack add-on subscriptions is real, but the pricing page announces a paid hosted version (waitlist) and a demo form: open-core in the making",
+    "VoiceInk (alex-dialhank): a copy of Beingpax/VoiceInk, which sells licences; the 'no subscription' line isn't this account's own",
+    "virtuallyView: grudge quote is fine, but it ships one-click public torrent indexers pitched as a 'Netflix alternative'; not listing a piracy front",
+    "Saffron Desk, File Utilities: free and BYO-key/local, but 'no subscription' is a tagline, not a grudge",
+    "ai-edits: needs a paid Google Workspace shared drive, and no victim beyond 'an integration platform'",
+    "Klippy: free, open source, no IAP, but built for privacy and organisation, not against anyone's price",
+    "cvroute: the grudge is real (EUR 30/mo CV builders) but it charges EUR 2.50 per package",
+    "Dancy Ants: watermark on the free version, $39 or $99 to remove it",
+    "ReacherX, TrendCut, Nowly, Filefew, RahaLune QR Studio, mac-wallpaper-cycler, xittoycha, searchparty: paid SaaS, App Store app with no price grudge, or no grudge at all",
+    "LoreFetch, Ariadne, cdomCRM, NotWallpaperEngine, whispering-flow, FinFolio, Hibi, leash, SnipStash, Clipwise, KetoKind, InkHearth, Marklite: already decided in an earlier queue file",
+    "localflow-macos, qr-local, photo-craft: already listed"
+  ]
+}
