@@ -9,15 +9,14 @@ shows, so the desk is still the place to read them first. A vertical video under
 minutes is a Short; there is nothing to set. Each upload is noted in shorts/.cache/uploaded.json
 and a second run for the same date refuses without --again.
 
-Until the Cloud project passes YouTube's API audit, every upload is locked to private whatever
-is asked for here, and going public is a click in Studio. The audit is a free form:
-https://support.google.com/youtube/contact/yt_api_form
+The Cloud project passed YouTube's API audit in September 2026, so --public, --unlisted and --at
+land as asked. Before that, every API upload was locked to private whatever was asked for.
 
 YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN and YOUTUBE_CHANNEL_ID live in
 .env; --auth writes all four. The channel is whichever one was picked on the consent screen, and
 every upload checks the token still belongs to it: a Google account can own several channels, and
 picking the wrong one there once sent a short to the wrong place. Stdlib only, like everything else here. Running this is posting: never without the
-user's word.
+user's word, except the default /spite morning run, which runs --public after its push is live.
 """
 import argparse, datetime, http.server, json, os, pathlib, secrets, subprocess, sys
 import urllib.error, urllib.parse, urllib.request
@@ -197,7 +196,7 @@ def main():
     print(f"https://youtube.com/shorts/{video['id']}  ({landed}{', public at ' + a.at if at else ''})")
     print(f"https://studio.youtube.com/video/{video['id']}/edit")
     if landed != privacy:
-        print(f"Asked for {privacy}, got {landed}: the project has not passed the API audit yet. Flip it in Studio.")
+        print(f"Asked for {privacy}, got {landed}. YouTube overrode it; check the video in Studio.")
 
 
 if __name__ == "__main__":

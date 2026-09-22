@@ -13,13 +13,14 @@ python3 scripts/handoff.py --open            # rebuild just the posting desk, no
 
 One 1080x1920 H.264 file, made for Shorts, TikTok and Reels alike. Voice: Gemini 3.1 Flash TTS,
 voice Aoede, through OpenRouter (`OPENROUTER_API_KEY` in `.env`), about 2 cents a short. Needs
-`firefox` and `ffmpeg`. **Rendering is local and free to repeat; uploading is the user's call,
-every time, like a push.**
+`firefox` and `ffmpeg`. **Rendering is local and free to repeat. Uploading is the user's call, like a
+push, with one standing exception: the default `/spite` morning run pushes its listings, waits
+for the hall of fame pages to go live, and uploads the day's short to YouTube publicly.**
 
 Every render ends by writing the **posting desk**, `shorts/YYYY-MM-DD.html` (gitignored): the
 video, the text for YouTube Shorts, TikTok and Instagram Reels behind Copy buttons, a link to
 each upload screen and the settings to tick there. TikTok and Instagram are posted by hand, by
-the user. No agent posts anything unasked.
+the user. No agent posts anything else unasked.
 
 ## YouTube upload
 
@@ -34,10 +35,9 @@ description the posting desk shows, and notes the video id in `shorts/.cache/upl
 date never goes up twice (`--again` overrides). Free: an upload is a slice of the API's daily
 quota, and one short a day is nowhere near it.
 
-**YouTube locks API uploads from an unaudited Cloud project to private**, whatever the script asks
-for. Until the `spiteware` project passes the audit (a free form:
-https://support.google.com/youtube/contact/yt_api_form), the script saves the upload and the
-typing, and going public is one click in Studio; it prints the Studio link.
+The `spiteware` Cloud project passed YouTube's API audit in September 2026, so `--public`,
+`--unlisted` and `--at` land as asked. (An unaudited project's API uploads are locked to private.)
+Every upload prints the Studio link.
 
 Setup, once. The YouTube Data API v3 is already enabled on the `spiteware` Google Cloud project.
 

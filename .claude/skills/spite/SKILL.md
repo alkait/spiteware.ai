@@ -1,11 +1,11 @@
 ---
 name: spite
-description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, drafts cards into queue/YYYY-MM-DD.json, lists everything that passed both gates, and renders the day's short video, all in one run. /spite review stops at the review desk instead. Also merges a reviewed queue file and renders a short on its own. Triggers on /spite, /spite review, /spite merge, /spite short, "morning run", "find spiteware", "make the short".
+description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, drafts cards into queue/YYYY-MM-DD.json, lists everything that passed both gates, renders the day's short, commits and pushes, and uploads the short to YouTube publicly, all in one run. /spite review stops at the review desk instead. Also merges a reviewed queue file and renders a short on its own. Triggers on /spite, /spite review, /spite merge, /spite short, "morning run", "find spiteware", "make the short".
 ---
 
 # /spite
 
-You are the spiteware.ai morning agent. You find candidates, draft cards, list them, and make the day's short. The user has given the morning run standing approval: every candidate that passes both hard gates is listed the same day, without waiting for the review desk. You still never write to `data/apps.json` yourself; only `scripts/merge.py` does.
+You are the spiteware.ai morning agent. You find candidates, draft cards, list them, make the day's short, publish the site and publish the short. The user is working toward a run that needs nobody, and has given the morning run standing approval: every candidate that passes both hard gates is listed the same day without waiting for the review desk, the run's own files are committed and pushed, and the short goes up on YouTube publicly. That approval covers the default run only; `/spite review` and the other modes still wait for the user's word to commit, push or upload. You still never write to `data/apps.json` yourself; only `scripts/merge.py` does.
 
 Nobody reads the queue before it is listed, so the gates are the only review there is. A candidate you are unsure about, a quote that is a paraphrase, a price you could not source: drop it with the reason. A missed app can be found tomorrow; a wrong one is on the site.
 
@@ -69,7 +69,25 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
 9. **Make the short.** If step 8 listed anything, follow **Mode: short** below. Nothing
    listed, no short.
 
-10. **Report** to the user in under 200 words: how many hits, how many survived, what was listed (name, score, one line each for the top three, names for the rest), what was held or dropped and why, then the short's report from Mode: short. Say plainly if a source failed. If step 7 found dead links, list them first: app, which link, and the `--bury` command that would retire it. End with the fact that nothing is committed or pushed: the listings are live only after the user says to push.
+10. **Commit and push.** If step 8 listed anything, stage only the run's own files, never
+    whatever else is in the working tree:
+    ```
+    git add data/apps.json hall-of-fame 404.html sitemap.xml robots.txt queue/$(date +%F).json shorts/$(date +%F).json
+    ```
+    Commit in the log's voice, `List A, B and C` (every listed app's name), ending with the
+    attribution line, then `git push`. If the push is rejected, `git pull --rebase` once and
+    push again; if that fails too, stop here, skip step 11, and report it. Nothing listed:
+    commit and push nothing (a queue file of drops alone is not worth a deploy).
+
+11. **Publish the short.** Only if steps 9 and 10 both went through. The description links
+    each app's hall of fame page, so wait for GitHub Pages to serve them first: poll
+    `curl -s -o /dev/null -w "%{http_code}" https://spiteware.ai/hall-of-fame/<handle>/<slug>/`
+    for each app in the short, every 30 seconds for up to 10 minutes, until all are 200. Then
+    `python3 scripts/upload.py --public` and keep the link it prints. If the pages never come
+    up, or the upload refuses (wrong channel, token expired, already uploaded), do not force
+    it: report why and the command to run by hand. Never pass `--again` here.
+
+12. **Report** to the user in under 200 words: how many hits, how many survived, what was listed (name, score, one line each for the top three, names for the rest), what was held or dropped and why, then the short's report from Mode: short and its YouTube link. Say plainly if a source failed. If step 7 found dead links, list them first: app, which link, and the `--bury` command that would retire it. End with the commit hash that went live, or what stopped the push or the upload. The short went up before anyone heard it, so name what to listen for, and remind the user that TikTok and Instagram are still theirs to post from the posting desk.
 
 Never fabricate a quote, a price, or a builder. If verification fails, drop the candidate and say why in the report.
 
@@ -111,11 +129,13 @@ says they merged there, run this mode.
    spellings, and "Free." landing on the stamp. If a line sounds wrong to the user,
    `python3 scripts/short.py --reroll <slug|hook|outro> --open`.
 
-Never upload or post the video anywhere, and never drive a browser to do it. The user posts by
-hand from the posting desk. The one exception is YouTube, and only when the user asks for it in
-that message: `python3 scripts/upload.py` (private; `--public`, `--unlisted` or `--at` only if
-they said which), then report the link it prints. The hall of fame links in the description only work once the
-merge is pushed, so say so if it has not been.
+Never post the video to TikTok or Instagram, and never drive a browser to post anything: the
+user posts those by hand from the posting desk. YouTube goes through `scripts/upload.py` only.
+In the default morning run, steps 10 and 11 of the sweep push and then upload it publicly. In
+this mode on its own, or after `/spite review` or `/spite merge`, upload only when the user asks
+in that message: `python3 scripts/upload.py` (private; `--public`, `--unlisted` or `--at` only
+if they said which), then report the link it prints. The hall of fame links in the description
+only work once the merge is pushed, so say so if it has not been.
 
 ## Mode: status (`/spite status`)
 
