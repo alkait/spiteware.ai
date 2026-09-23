@@ -14,14 +14,14 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>submit — spiteware.ai</title>
-<meta name="description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One box, no account.">
-<link rel="canonical" href="https://spiteware.ai/submit.html">
+<title>contact — spiteware.ai</title>
+<meta name="description" content="Wrong price on your card, a misquote, something you want deleted, feedback: one form, one inbox, no account.">
+<link rel="canonical" href="https://spiteware.ai/contact.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="spiteware.ai">
-<meta property="og:url" content="https://spiteware.ai/submit.html">
-<meta property="og:title" content="submit — spiteware.ai">
-<meta property="og:description" content="Built something because a company wanted your credit card? Submit it to spiteware.ai. One box, no account.">
+<meta property="og:url" content="https://spiteware.ai/contact.html">
+<meta property="og:title" content="contact — spiteware.ai">
+<meta property="og:description" content="Wrong price on your card, a misquote, something you want deleted, feedback: one form, one inbox, no account.">
 <meta property="og:image" content="https://spiteware.ai/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFE600">
@@ -51,7 +51,7 @@
         <li><a href="apps.html">Apps <span class="nav__n" data-apps>—</span></a></li>
         <li><a href="/hall-of-fame/">Hall of fame</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="submit.html" aria-current="page">Submit</a></li>
+        <li><a href="submit.html">Submit</a></li>
       </ul>
     </nav>
   </div>
@@ -61,28 +61,40 @@
   <div class="wrap doc">
 
     <div class="doc__head">
-      <span class="kicker">we can't keep up!</span>
-      <h1>Built something out of <span class="hollow">rage?</span><br>Tell us about it.</h1>
-      <p class="doc__lede">Our AI agent sweeps the internet every morning and still can't keep up with how fast people rage-quit a pricing page.</p>
+      <span class="kicker">say it to our face</span>
+      <h1>Contact <span class="hollow">us.</span></h1>
+      <p class="doc__lede">Everything below lands in the same inbox, and a person reads it. Share your feedback, a take-down request, a wrong price or a misquote on a card, or really anything else.</p>
+      <p class="doc__lede" style="margin-top:14px">To submit your app, use <a href="submit.html">this form</a>.</p>
     </div>
 
     <form class="form" id="form" novalidate>
-      <input type="url" name="url" required maxlength="300" aria-label="Link to your spiteware" placeholder="https://" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false">
+      <div class="form__field">
+        <label for="email">Your email</label>
+        <input type="email" name="email" id="email" required maxlength="254" placeholder="you@example.com" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false">
+      </div>
+      <div class="form__field">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" required maxlength="120" placeholder="Subject" autocomplete="off">
+      </div>
+      <div class="form__field">
+        <label for="body">Message</label>
+        <textarea name="body" id="body" required maxlength="5000" rows="8" placeholder="Message"></textarea>
+      </div>
       <input type="text" name="_gotcha" class="form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="form__msg" id="msg" role="alert" hidden></p>
       <div class="form__go">
         <div id="ts"></div>
-        <button class="btn btn--pink" type="submit" id="send">Submit your spiteware →</button>
+        <button class="btn btn--pink" type="submit" id="send">Send it →</button>
       </div>
     </form>
 
     <div class="form__done" id="done" hidden tabindex="-1">
-      <h2>Got it.</h2>
-      <p>It's in the inbox. If it clears <a href="rules.html">both gates</a> it goes up with a spite score.</p>
-      <p><a class="btn" href="apps.html">See who else is in →</a></p>
+      <h2>Sent.</h2>
+      <p>It's in the inbox. The reply goes to the address you gave, and nothing you typed is stored anywhere else: <a href="privacy.html">privacy</a>.</p>
+      <p><a class="btn" href="./">Back to the grudges →</a></p>
     </div>
 
-    <p class="form__alt">Fixing a card that's already up, or anything that isn't a link? That's <a href="contact.html">the contact page</a>.</p>
+    <p class="form__alt">Built something out of spite? That goes on <a href="submit.html">the submit page</a>.</p>
 
   </div>
 </main>
@@ -130,14 +142,13 @@
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     say('');
-    // "example.com" is a link too
-    let link = form.url.value.trim();
-    if (link && !/^https?:\/\//i.test(link)) link = 'https://' + link;
-    let ok = false;
-    try { ok = new URL(link).hostname.includes('.'); } catch {}
-    if (!ok) { say('That\'s not a link.'); form.url.focus(); return; }
-    form.url.value = link;
+    const email = form.email.value.trim(), subject = form.subject.value.trim(), text = form.body.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('That\'s not an email address, and the reply has to go somewhere.'); form.email.focus(); return; }
+    if (!subject) { say('Give it a subject.'); form.subject.focus(); return; }
+    if (!text) { say('The message is empty.'); form.body.focus(); return; }
+    form.email.value = email; form.subject.value = subject; form.body.value = text;
     const body = Object.fromEntries(new FormData(form));
+    body.kind = 'contact';
     if (!body['cf-turnstile-response']) { say('The bot check hasn\'t finished. Give it a second.'); return; }
     body.t = Date.now() - opened;
     send.disabled = true; send.textContent = 'Sending…';
@@ -148,13 +159,13 @@
       form.hidden = true;
       const done = document.getElementById('done');
       done.hidden = false; done.focus();
-      if (window.gtag) gtag('event', 'submit_app');
+      if (window.gtag) gtag('event', 'contact');
     } catch (err) {
-      // a failed fetch has no message worth showing
-      say(err instanceof TypeError ? 'That didn\'t send. Try again in a minute.' : err.message);
+      // a failed fetch has no message worth showing; the address is the fallback when the form itself is down
+      say(err instanceof TypeError ? 'That didn\'t send. Try again in a minute, or email hello@spiteware.ai.' : err.message);
       // a token only verifies once
       if (widget !== null) turnstile.reset(widget);
-      send.disabled = false; send.textContent = 'Submit your spiteware →';
+      send.disabled = false; send.textContent = 'Send it →';
     }
   });
 </script>

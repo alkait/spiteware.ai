@@ -243,12 +243,15 @@
   .doc a{text-decoration:none;border-bottom:2px solid var(--pink)}
   .doc a:hover{background:var(--yellow)}
 
-  /* ---------- submit page: the one form on the site, and it is one link ---------- */
+  /* ---------- the two forms: submit (one link) and contact (email, subject, message) ---------- */
   .form{display:grid;gap:22px;margin-bottom:clamp(38px,5.5vw,58px)}
   /* display:grid would otherwise beat the hidden attribute, and the sent form would stay on screen */
   .form[hidden]{display:none}
-  .form input[type=url]{width:100%;font-family:var(--mono);font-size:18px;padding:16px 18px;border:var(--bw) solid var(--ink);border-radius:0;background:#fff;color:var(--ink);box-shadow:var(--shadow);outline:none;-webkit-appearance:none;appearance:none}
-  .form input[type=url]:focus{box-shadow:6px 6px 0 var(--pink)}
+  .form input:not(.form__trap),.form textarea{width:100%;font-family:var(--mono);font-size:18px;padding:16px 18px;border:var(--bw) solid var(--ink);border-radius:0;background:#fff;color:var(--ink);box-shadow:var(--shadow);outline:none;-webkit-appearance:none;appearance:none}
+  .form input:focus,.form textarea:focus{box-shadow:6px 6px 0 var(--pink)}
+  .form textarea{resize:vertical;min-height:160px;line-height:1.5}
+  .form__field{display:grid;gap:8px}
+  .form label{justify-self:start;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;background:var(--paper);padding-right:6px}
   .form ::placeholder{color:#888}
   .form__trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
   .form__go{display:grid;justify-items:start}

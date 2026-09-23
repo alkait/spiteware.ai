@@ -13,7 +13,7 @@ A catalog of apps people built out of spite because a paid tool asked for money 
 - `scripts/links.py` — the 404 hunt. With no arguments it checks every internal link offline (and `pages.py` refuses to finish a build that fails it). `--external` checks every outbound URL; `--bury <slug>` retires an app whose builder took it down: it leaves the lists and keeps its hall of fame page, stamped, with dead links swapped for Wayback snapshots.
 - `scripts/short.py` — the daily short: turns `shorts/YYYY-MM-DD.json` (a narration script) into a 1080x1920 video of the day's fresh spite, voiced through `scripts/voice.py`, then `scripts/handoff.py` writes a local posting desk with each platform's text. Nothing uploads itself. Rules in `shorts/README.md`; needs `firefox`, `ffmpeg` and an `OPENROUTER_API_KEY` in `.env`.
 - `scripts/upload.py` — puts a rendered short on YouTube through the Data API, with the posting desk's title and description: private by default, `--public`, `--unlisted` or `--at <time>` on request, `--dry` to read it first. Only ever run on the user's word. Setup in `shorts/README.md`.
-- `submit.html` — the one form on the site: a single box for a link. It posts to `workers/submit/`, a Cloudflare Worker that checks the sender is a person (Turnstile, a honeypot, a rate limit) and sends the submission to hello@spiteware.ai as one email through Resend. Nothing is stored. Setup is below.
+- `submit.html` — a single box for a link. `contact.html` — your email, a subject and a message, for fixes to a card, deletions, feedback, anything else. Both post to `workers/submit/`, a Cloudflare Worker that checks the sender is a person (Turnstile, a honeypot, a rate limit) and sends what was typed to `MAIL_TO` as one email through Resend. Nothing is stored. Setup is below.
 - `analytics.html` — the site's real traffic, in public: totals against the period before, a day-by-day chart, top pages, countries, sources and devices. It reads from `workers/analytics-proxy/`, a Cloudflare Worker that asks the Google Analytics Data API and caches the answer for three hours. Setup is below.
 
 Hosted on GitHub Pages straight from `main`.
@@ -59,11 +59,11 @@ To run it locally, put the same three values in `workers/analytics-proxy/.dev.va
 
 ## The submit worker
 
-`submit.html` posts JSON to `https://submit.spiteware.ai`, which is `workers/submit/` deployed to Cloudflare. In order, a submission has to pass: the `Origin` check, three a minute per address, a hidden honeypot field and a one-second fill timer (both answered with a fake thank-you), a check that what was sent is an `http(s)` link, and Turnstile. Then it is one plain-text email to `MAIL_TO` with the link in it. The worker stores nothing.
+`submit.html` and `contact.html` post JSON to `https://submit.spiteware.ai`, which is `workers/submit/` deployed to Cloudflare. The `kind` field tells the two apart (`contact`, or anything else for a submission). In order, a post has to pass: the `Origin` check, three a minute per address, a hidden honeypot field and a fill timer of one second for a link or three for a message (both answered with a fake thank-you), a check of the fields (an `http(s)` link; or an email address, a one-line subject and a message under 5,000 characters), and Turnstile. Then it is one plain-text email to `MAIL_TO`: the link, or the message with the sender's address as `Reply-To`. The worker stores nothing.
 
 One-time setup:
 
-1. Turnstile: `npx wrangler turnstile widget create spiteware.ai --domain spiteware.ai --mode managed` (or the dashboard). The site key goes in `SITEKEY` in `submit.html`; the secret goes in step 3.
+1. Turnstile: `npx wrangler turnstile widget create spiteware.ai --domain spiteware.ai --mode managed` (or the dashboard). The site key goes in `SITEKEY` in `submit.html` and `contact.html`; the secret goes in step 3.
 2. In [Resend](https://resend.com), add the domain `send.spiteware.ai`, put the DNS records it shows into Cloudflare, and create an API key with sending access only. The records sit on the subdomain, so the root domain's mail is untouched. `MAIL_FROM` in `wrangler.toml` has to be an address on that subdomain.
 3. Deploy, from `workers/submit/`:
 
