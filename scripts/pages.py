@@ -375,14 +375,14 @@ def index_page(apps):
 def lost_page(n):
     body = f'''  <section class="hero">
     <div class="wrap">
-      <span class="kicker">error 404 · still free</span>
-      <h1>This page got <span class="hl">cancelled.</span></h1>
+      <span class="kicker">you've hit a 404</span>
+      <h1>This page doesn't <span class="hl">exist.</span></h1>
       <p class="lede">There's nothing at this address. The apps are all still here, and they still cost <b>$0</b>.</p>
       <div class="cta"><a class="btn btn--pink" href="/apps.html">See all {n} grudges →</a> <a class="btn btn--ghost" href="/hall-of-fame/">Hall of fame</a> <a class="btn btn--ghost" href="/">Home</a></div>
     </div>
   </section>
 '''
-    return shell(title="404: this page got cancelled · spiteware.ai", path="/404.html", body=body, n=n, index=False, here="",
+    return shell(title="404: this page doesn't exist · spiteware.ai", path="/404.html", body=body, n=n, index=False, here="",
                  desc="There's nothing at this address. The apps are all still here, and they still cost $0.")
 
 
