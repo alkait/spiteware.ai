@@ -273,6 +273,8 @@
   .gates__n{flex:none;align-self:center;font-family:var(--display);font-weight:900;font-size:16px;
     text-transform:uppercase;letter-spacing:.02em;background:var(--pink);color:#fff;
     border:var(--bw) solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:8px 12px;line-height:1}
+  /* the about page: labels of different lengths, one column for the text */
+  .gates--even .gates__n{min-width:104px;text-align:center}
   .gates b{display:block;font-family:var(--display);font-weight:900;font-size:20px;letter-spacing:-.02em;line-height:1.15}
   .gates div{font-size:16px;color:#444}
 
