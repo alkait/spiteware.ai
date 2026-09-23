@@ -73,16 +73,6 @@
       <button class="tagbtn" type="button" data-period="7d">7 days</button>
       <button class="tagbtn" type="button" data-period="30d">30 days</button>
       <button class="tagbtn" type="button" data-period="90d">90 days</button>
-      <button class="tagbtn" type="button" data-period="custom" id="customBtn">Custom</button>
-    </div>
-
-    <div class="an__pick" id="customPicker">
-      <label for="customStart">From</label>
-      <input type="date" id="customStart">
-      <label for="customEnd">To</label>
-      <input type="date" id="customEnd">
-      <button type="button" id="customGo">Show</button>
-      <button type="button" class="an__x" id="customDismiss" aria-label="Close">✕</button>
     </div>
 
     <label class="an__dev" id="devToolbar"><input type="checkbox" id="cacheToggle"> <span id="cacheLabel">Cache: off</span></label>
@@ -121,7 +111,8 @@
   const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
   const WORKER_URL = LOCAL ? 'http://localhost:8788' : 'https://stats.spiteware.ai';
   const esc = SW.esc, $ = id => document.getElementById(id);
-  const PERIODS = { today: 'Today', yesterday: 'Yesterday', '7d': 'Last 7 days', '30d': 'Last 30 days', '90d': 'Last 90 days', custom: 'Custom' };
+  // the presets, and only these: the worker refuses anything else, so nobody can make it call GA4 for arbitrary ranges
+  const PERIODS = { today: 'Today', yesterday: 'Yesterday', '7d': 'Last 7 days', '30d': 'Last 30 days', '90d': 'Last 90 days' };
   // one colour per measure, everywhere it appears. Checked for colour-blind separation on white.
   const SERIES = [
     { key: 'users', color: '#FF3E9A', label: 'Visitors' },
@@ -130,7 +121,6 @@
   ];
   // only the traffic sources GA4 can break down further
   const DRILL = ['Referral', 'Organic Search', 'Organic Social', 'Organic Video'];
-  const EDIT = '<svg class="an__edit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>';
 
   // a private window can refuse storage; the page has to work without it
   const store = {
@@ -138,54 +128,28 @@
     set: (k, v) => { try { localStorage.setItem('analytics_' + k, v); } catch {} }
   };
 
-  const content = $('content'), foot = $('foot'), picker = $('customPicker'), customBtn = $('customBtn');
-  const startEl = $('customStart'), endEl = $('customEnd');
-  const iso = d => d.toISOString().split('T')[0];
-  const today = iso(new Date());
+  const content = $('content'), foot = $('foot');
   const day = (ds, opts) => new Date(ds + 'T00:00:00').toLocaleDateString('en-US', opts);
   const fmt = n => (n || 0).toLocaleString('en-US');
   const fmtDuration = s => `${Math.floor((s || 0) / 60)}:${String((s || 0) % 60).padStart(2, '0')}`;
   const plural = (n, one, many) => `${fmt(n)} ${n === 1 ? one : many}`;
 
-  let period = store.get('period'), customStart = store.get('custom_start'), customEnd = store.get('custom_end');
+  let period = store.get('period');
   let cacheOn = store.get('cache') === 'true', asked = 0, unpin = null, redraw = null;
-  if (!PERIODS[period] || (period === 'custom' && !(customStart && customEnd))) period = '7d';
-  startEl.max = endEl.max = today;
+  if (!PERIODS[period]) period = '7d';
 
-  function customLabel() {
-    const o = { month: 'short', day: 'numeric' };
-    const text = customStart === customEnd ? day(customStart, o) : `${day(customStart, o)} – ${day(customEnd, o)}`;
-    customBtn.innerHTML = `${esc(text)} <span title="Change dates">${EDIT}</span>`;
-  }
   function mark() {
     document.querySelectorAll('#periods .tagbtn').forEach(b => {
       b.classList.toggle('is-on', b.dataset.period === period);
       b.setAttribute('aria-pressed', b.dataset.period === period);
     });
   }
-  function pick(p) { period = p; store.set('period', p); mark(); picker.classList.remove('is-on'); load(); }
-  function pickDates(s, e) {
-    customStart = s; customEnd = e; startEl.value = s; endEl.value = e;
-    store.set('custom_start', s); store.set('custom_end', e);
-    customLabel(); pick('custom');
-  }
+  function pick(p) { period = p; store.set('period', p); mark(); load(); }
 
-  if (customStart && customEnd) { startEl.value = customStart; endEl.value = customEnd; customLabel(); }
   mark();
 
   $('periods').addEventListener('click', e => {
-    const b = e.target.closest('.tagbtn'); if (!b) return;
-    if (b.dataset.period !== 'custom') return pick(b.dataset.period);
-    // the pencil reopens the dates; the button itself goes back to the last custom range
-    if (customStart && customEnd && !e.target.closest('.an__edit')) return pick('custom');
-    if (!startEl.value) { const d = new Date(); d.setDate(d.getDate() - 6); startEl.value = iso(d); endEl.value = today; }
-    picker.classList.toggle('is-on');
-  });
-  $('customDismiss').addEventListener('click', () => picker.classList.remove('is-on'));
-  $('customGo').addEventListener('click', () => {
-    if (!startEl.value || !endEl.value) return;
-    if (startEl.value > endEl.value) endEl.value = startEl.value;
-    pickDates(startEl.value, endEl.value);
+    const b = e.target.closest('.tagbtn'); if (b) pick(b.dataset.period);
   });
 
   if (LOCAL) {
@@ -204,7 +168,6 @@
     foot.hidden = true;
     try {
       let url = `${WORKER_URL}/analytics?period=${period}${LOCAL && !cacheOn ? '&nocache=1' : ''}`;
-      if (period === 'custom') url += `&start=${encodeURIComponent(customStart)}&end=${encodeURIComponent(customEnd)}`;
       const res = await fetch(url);
       if (!res.ok) throw new Error('the API answered ' + res.status);
       const data = await res.json();

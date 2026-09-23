@@ -18,8 +18,9 @@ export default {
 
 async function handleAnalytics(url, ctx, env) {
   try {
-    const range = parsePeriod(url.searchParams.get('period') || '7d', url.searchParams.get('start'), url.searchParams.get('end'), env.GA4_TIMEZONE);
-    if (!range) return jsonResponse({ error: 'Invalid period. Use: today, yesterday, 7d, 30d, 90d, or custom with start & end params' }, 400);
+    // presets only: an arbitrary range would be a fresh cache key and a fresh GA4 call for anyone who cares to type one
+    const range = parsePeriod(url.searchParams.get('period') || '7d', env.GA4_TIMEZONE);
+    if (!range) return jsonResponse({ error: 'Invalid period. Use: today, yesterday, 7d, 30d or 90d' }, 400);
     const { startDate, endDate, prevStartDate, prevEndDate, label } = range;
 
     // skipping the cache is for `wrangler dev` only: in production it would let anyone burn the GA4 quota
@@ -133,21 +134,11 @@ function todayIn(timeZone) {
 }
 
 // The previous range is the same number of days, ending the day before this one starts.
-function parsePeriod(period, customStart, customEnd, timeZone) {
-  const today = todayIn(timeZone);
-  let startDate, endDate, days, label;
-  if (PERIODS[period]) {
-    const [ago, span, name] = PERIODS[period];
-    endDate = shift(today, -ago); days = span; label = name;
-    startDate = shift(endDate, 1 - days);
-  } else if (period === 'custom') {
-    const dateRe = /^\d{4}-\d{2}-\d{2}$/;
-    if (!dateRe.test(customStart || '') || !dateRe.test(customEnd || '')) return null;
-    if (isNaN(Date.parse(customStart)) || isNaN(Date.parse(customEnd)) || customStart > customEnd || customStart > today) return null;
-    days = Math.round((Date.parse(customEnd) - Date.parse(customStart)) / 86400000) + 1;
-    if (days > 365) return null;
-    startDate = customStart; endDate = customEnd > today ? today : customEnd; label = 'Custom';
-  } else return null;
+function parsePeriod(period, timeZone) {
+  if (!Object.hasOwn(PERIODS, period)) return null;
+  const [ago, days, label] = PERIODS[period];
+  const endDate = shift(todayIn(timeZone), -ago);
+  const startDate = shift(endDate, 1 - days);
   return { startDate, endDate, prevStartDate: shift(startDate, -days), prevEndDate: shift(startDate, -1), label };
 }
 
