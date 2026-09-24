@@ -272,7 +272,7 @@ def main():
         page = handoff.build(script, apps)
         print(f"desk   {page.relative_to(ROOT)}")
     if show:
-        subprocess.Popen(["xdg-open", str(page)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        handoff.show(page)
 
 
 if __name__ == "__main__":

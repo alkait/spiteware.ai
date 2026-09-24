@@ -22,6 +22,12 @@ SITE = "https://spiteware.ai"
 LIMITS = {"youtube title": 100, "youtube description": 5000, "tiktok caption": 2200, "instagram caption": 2200}
 
 
+def show(target):
+    """Open a file or URL in the default browser: `open` on macOS, `xdg-open` elsewhere."""
+    opener = "open" if sys.platform == "darwin" else "xdg-open"
+    subprocess.Popen([opener, str(target)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
 def check(script):
     """Exit with a plain sentence when the post block is missing or will not fit."""
     post = script.get("post")
@@ -95,7 +101,7 @@ def main():
     page = build(json.loads(src.read_text()), apps)
     print(page.relative_to(ROOT))
     if a.open:
-        subprocess.Popen(["xdg-open", str(page)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        show(page)
 
 
 if __name__ == "__main__":

@@ -18,7 +18,7 @@ every upload checks the token still belongs to it: a Google account can own seve
 picking the wrong one there once sent a short to the wrong place. Stdlib only, like everything else here. Running this is posting: never without the
 user's word, except the default /spite morning run, which runs --public after its push is live.
 """
-import argparse, datetime, http.server, json, os, pathlib, secrets, subprocess, sys
+import argparse, datetime, http.server, json, os, pathlib, secrets, sys
 import urllib.error, urllib.parse, urllib.request
 
 import handoff
@@ -85,7 +85,7 @@ def auth(client_json):
         "client_id": cid, "redirect_uri": redirect, "response_type": "code", "scope": SCOPE,
         "access_type": "offline", "prompt": "consent", "state": state})
     print(f"Pick the channel's account in the browser. If no tab opens:\n{url}")
-    subprocess.Popen(["xdg-open", url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    handoff.show(url)
     while "code" not in got and "error" not in got:
         srv.handle_request()
     if got.get("state") != state or "code" not in got:
