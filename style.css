@@ -443,6 +443,8 @@
   .shame__who b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(17px,2vw,22px);letter-spacing:-.02em;text-transform:none;line-height:1.1;
     color:var(--ink);margin-bottom:3px;overflow-wrap:anywhere}
   .shame__row .kills{flex:none;max-width:44%}
+  /* a product's cards sit in the middle when there are fewer than a full row; 345px is a third of the wrap */
+  .grid--center{grid-template-columns:repeat(auto-fit,minmax(300px,345px));justify-content:center}
   .hero .kills--xl{display:inline-block;margin:0 0 22px;transform:rotate(-2deg)}
   @media (hover:none){.shame__row:hover{transform:none;box-shadow:4px 4px 0 var(--ink)}}
   .fame__author{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(28px,5vw,56px)}

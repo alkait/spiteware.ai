@@ -444,7 +444,7 @@ def shame_page(rank, total, name, theirs, n):
     </div>
   </section>
   <section class="sec sec--alt">
-    <div class="wrap"><div class="grid">{"".join(card(a) for a in theirs)}</div></div>
+    <div class="wrap"><div class="grid grid--center">{"".join(card(a) for a in theirs)}</div></div>
   </section>
 '''
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": f"Free alternatives to {name}", "itemListElement": [
