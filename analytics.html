@@ -129,6 +129,13 @@
     get: k => { try { return localStorage.getItem('analytics_' + k) || ''; } catch { return ''; } },
     set: (k, v) => { try { localStorage.setItem('analytics_' + k, v); } catch {} }
   };
+  // Each period's answer is kept here for as long as the worker keeps its own copy (three hours from
+  // its fetchTime), so coming back to the page, or back to a period, is no round trip at all.
+  const HELD = 3 * 3600 * 1000;
+  const kept = {
+    get: p => { try { const d = JSON.parse(store.get('data_' + p)); return d && Date.now() - Date.parse(d.fetchTime) < HELD ? d : null; } catch { return null; } },
+    set: (p, d) => store.set('data_' + p, JSON.stringify(d))
+  };
 
   const content = $('content'), foot = $('foot');
   const day = (ds, opts) => new Date(ds + 'T00:00:00').toLocaleDateString('en-US', opts);
@@ -166,6 +173,8 @@
   async function load() {
     const mine = ++asked;
     unpin = redraw = null;   // the chart they belonged to is about to go
+    const held = LOCAL && !cacheOn ? null : kept.get(period);
+    if (held) return render({ ...held, cached: true });
     content.innerHTML = '<div class="an__wait">Counting</div>';
     foot.hidden = true;
     try {
@@ -173,6 +182,7 @@
       const res = await fetch(url);
       if (!res.ok) throw new Error('the API answered ' + res.status);
       const data = await res.json();
+      if (!(LOCAL && !cacheOn)) kept.set(period, data);
       if (mine === asked) render(data);   // a slow answer to an earlier click must not overwrite a newer one
     } catch (err) {
       if (mine === asked) content.innerHTML = `<div class="none">Couldn't load the numbers: ${esc(err.message)}.</div>`;

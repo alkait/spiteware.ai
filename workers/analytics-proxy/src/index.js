@@ -1,7 +1,8 @@
 // Proxies the Google Analytics 4 Data API for /analytics.html, so the service account key
 // never reaches a browser. One GET /analytics?period=… runs every report the page shows,
 // and the answer is cached for three hours. GET /total is the footer counter on every page:
-// sessions since launch, one report, cached for an hour at the edge and in the browser.
+// sessions since launch, one report, cached for an hour. Both answers carry a Cache-Control
+// that runs out when the edge copy does, so a browser holds them just as long.
 // Secrets: GA4_PROPERTY_ID, GCP_CLIENT_EMAIL, GCP_PRIVATE_KEY. Var: GA4_TIMEZONE.
 
 const CACHE_TTL = 10800;
@@ -32,7 +33,7 @@ async function handleAnalytics(url, ctx, env) {
     const cacheRequest = new Request(`${url.origin}/analytics?_ck=ga4-v1-${startDate}-${endDate}`);
     if (!noCache) {
       const cached = await caches.default.match(cacheRequest);
-      if (cached) return jsonResponse({ ...(await cached.json()), cached: true });
+      if (cached) { const c = await cached.json(); return jsonResponse({ ...c, cached: true }, 200, remaining(c.fetchTime, CACHE_TTL)); }
     }
 
     const accessToken = await getAccessToken(env);
@@ -117,7 +118,7 @@ async function handleAnalytics(url, ctx, env) {
     });
     ctx.waitUntil(caches.default.put(cacheRequest, responseToCache));
 
-    return jsonResponse({ ...result, cached: false });
+    return jsonResponse({ ...result, cached: false }, 200, CACHE_TTL);
 
   } catch (error) {
     if (error instanceof ApiError) return jsonResponse({ error: 'GA4 API error', status: error.status, details: error.message }, error.status);
@@ -130,7 +131,7 @@ async function handleTotal(url, ctx, env) {
   try {
     const cacheRequest = new Request(`${url.origin}/total?_ck=ga4-total-v1`);
     const cached = await caches.default.match(cacheRequest);
-    if (cached) return jsonResponse({ ...(await cached.json()), cached: true }, 200, TOTAL_TTL);
+    if (cached) { const c = await cached.json(); return jsonResponse({ ...c, cached: true }, 200, remaining(c.fetchTime, TOTAL_TTL)); }
 
     const accessToken = await getAccessToken(env);
     const res = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${env.GA4_PROPERTY_ID}:runReport`, {
@@ -152,6 +153,9 @@ async function handleTotal(url, ctx, env) {
     return jsonResponse({ error: 'Internal server error', message: error.message }, 500);
   }
 }
+
+// seconds the edge will keep an answer fetched at `fetchTime`: the browser's copy expires at the same moment
+const remaining = (fetchTime, ttl) => Math.max(0, ttl - Math.floor((Date.now() - Date.parse(fetchTime)) / 1000));
 
 class ApiError extends Error {
   constructor(status, body) { super(body); this.status = status; }

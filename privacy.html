@@ -76,7 +76,7 @@
 
     <section class="doc__sec">
       <h2 class="dh"><span class="dh__n">02</span> What stays in your browser</h2>
-      <p>The visitor counter in the footer is real: the number of visits Google Analytics has counted since launch, fetched from the same Cloudflare Worker as the analytics page and kept in your browser's local storage (<b>sw_total</b>) for an hour so it isn't fetched again on every page. The analytics page remembers the date range you picked the same way. Neither is ever sent anywhere. Clearing your site data clears both.</p>
+      <p>The visitor counter in the footer is real: the number of visits Google Analytics has counted since launch, fetched from the same Cloudflare Worker as the analytics page and kept in your browser's local storage (<b>sw_total</b>) for an hour so it isn't fetched again on every page. The analytics page remembers the date range you picked the same way, and keeps the numbers it last fetched for three hours so it doesn't ask again on every visit. Neither is ever sent anywhere. Clearing your site data clears both.</p>
     </section>
 
     <section class="doc__sec">
