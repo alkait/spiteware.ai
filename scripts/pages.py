@@ -198,10 +198,10 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
     <button class="menu__btn" type="button" id="menubtn" aria-expanded="false" aria-controls="mainnav"><span class="menu__bars" aria-hidden="true"></span>Menu</button>
     <nav aria-label="Main" id="mainnav">
       <ul>
+        <li><a href="/">Home</a></li>
         <li><a href="/apps.html">Apps <span class="nav__n" data-apps>{n}</span></a></li>
         <li><a href="/hall-of-fame/"{' aria-current="page"' if here == "/hall-of-fame/" else ""}>Hall of fame</a></li>
         <li><a href="/wall-of-shame/"{' aria-current="page"' if here == "/wall-of-shame/" else ""}>Wall of shame</a></li>
-        <li><a href="/submit.html">Submit</a></li>
       </ul>
     </nav>
     <a class="nav__yt ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener" aria-label="Subscribe on YouTube" title="Subscribe on YouTube"><span>YouTube</span></a>
