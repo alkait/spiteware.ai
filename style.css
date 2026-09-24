@@ -1,6 +1,6 @@
   :root{
     --paper:#FFF8E7; --ink:#111111; --pink:#FF3E9A; --yellow:#FFE600;
-    --blue:#2D5BFF; --green:#00D084; --orange:#FF6B1A; --purple:#7B3FFF;
+    --blue:#2D5BFF; --green:#00D084; --orange:#FF6B1A; --purple:#7B3FFF; --yt:#FF0000;
     --bw:3px; --shadow:6px 6px 0 var(--ink);
     --display:"Arial Black","Helvetica Neue",Impact,system-ui,sans-serif;
     --body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -44,7 +44,20 @@
   @media (max-width:640px){nav li+li::before{display:none}}
   .nav__n{display:inline-block;margin-left:5px;padding:1px 5px;background:var(--ink);color:#fff;
     font-size:11px;font-weight:700;letter-spacing:.02em;vertical-align:1px}
-  @media (max-width:560px){header nav a{padding:8px 8px;font-size:12px} .nav__n{font-size:10px;padding:1px 4px}}
+  @media (max-width:839px){header nav a{padding:8px 8px;font-size:12px} .nav__n{font-size:10px;padding:1px 4px}}
+  /* the channel button: the one link in the header that leaves the site, so it is
+     a badge, not a nav item, and it stays visible when the nav folds behind Menu */
+  header nav{margin-left:auto}
+  .nav__yt{display:inline-flex;align-items:center;flex-shrink:0;font-family:var(--mono);font-size:13px;text-transform:uppercase;
+    letter-spacing:.06em;line-height:1;padding:8px 12px;background:var(--yt);color:#fff;text-decoration:none;
+    border:var(--bw) solid var(--ink);transition:box-shadow .1s,transform .1s}
+  /* at rest it sits flush in the nav row; on hover it lifts, the same move as the nav links */
+  .nav__yt:hover{box-shadow:3px 3px 0 var(--ink);transform:translate(-1px,-1px)}
+  .nav__yt:active{box-shadow:none;transform:none}
+  .nav__yt::before{width:1.4em;height:1.4em;vertical-align:0}
+  @media (max-width:839px){.nav__yt{padding:9px 10px} .nav__yt span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)} .nav__yt::before{margin-right:0}}
+  /* under 900px the nav is behind Menu, and the two buttons share the offset shadow */
+  @media (max-width:699px){.nav__yt{box-shadow:3px 3px 0 var(--ink)} .nav__yt:hover{box-shadow:5px 5px 0 var(--ink);transform:translate(-2px,-2px)} .nav__yt:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)}}
 
   /* ---------- hall of fame: deck of grudge cards in the hero ---------- */
   .deck{position:relative;justify-self:stretch;max-width:520px;width:100%;margin:0 auto}
@@ -528,7 +541,8 @@
   section[id],[id]:target{scroll-margin-top:96px}
 
   /* the menu button only exists once JS is running; without it the nav stays a
-     plain wrapping list, which is ugly but complete */
+     plain wrapping list, which is ugly but complete. Below 700px the four links plus
+     the channel button no longer fit on one row, so that is where the nav folds. */
   .menu__btn{display:none;align-items:center;gap:9px;font-family:var(--mono);font-size:13px;text-transform:uppercase;
     letter-spacing:.08em;padding:11px 14px;background:var(--yellow);color:var(--ink);
     border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);cursor:pointer;line-height:1}
@@ -538,7 +552,8 @@
   header.is-open .menu__bars::after{content:"";position:absolute;inset:0;background:currentColor;transform:rotate(-90deg)}
 
   @media (max-width:699px){
-    .js .menu__btn{display:inline-flex}
+    .js .menu__btn{display:inline-flex;order:1}
+    .js .nav__yt{margin-left:auto}
     /* the nav drops out of the header as a full-width panel */
     .js header nav{position:absolute;top:100%;left:0;right:0;display:none;background:var(--paper);
       border-bottom:var(--bw) solid var(--ink);box-shadow:0 8px 0 rgba(17,17,17,.12)}

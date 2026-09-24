@@ -42,6 +42,15 @@
     matchMedia('(min-width:700px)').addEventListener('change', () => setOpen(false));
   }
 
+  // Every link to the channel reports where it was clicked (header, footer, page),
+  // so the analytics say which spot actually earns the subscribers.
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href*="youtube.com/@spiteware"]');
+    if (!a || typeof gtag !== 'function') return;
+    const where = a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : 'page';
+    gtag('event', 'youtube_click', { location: where, page_path: location.pathname });
+  });
+
   // Marquee: duplicate content so it loops seamlessly
   const t = $('#ticker'); if (t) t.innerHTML += t.innerHTML;
 
