@@ -3,6 +3,7 @@
   <url><loc>https://spiteware.ai/</loc></url>
   <url><loc>https://spiteware.ai/apps.html</loc></url>
   <url><loc>https://spiteware.ai/hall-of-fame/</loc></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/</loc></url>
   <url><loc>https://spiteware.ai/about.html</loc></url>
   <url><loc>https://spiteware.ai/manifesto.html</loc></url>
   <url><loc>https://spiteware.ai/rules.html</loc></url>
@@ -64,6 +65,7 @@
   <url><loc>https://spiteware.ai/hall-of-fame/exexexexe/calorie-scanner/</loc><lastmod>2026-09-17</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/sahilmahendrakar/chickadee/</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/dunebru/broom/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://spiteware.ai/hall-of-fame/julianmb/openwinsidecar/</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/biswasdebraj/dineforge-pos/</loc><lastmod>2026-09-10</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/zboubkiller/pdf-libre/</loc><lastmod>2026-09-19</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/minviex/minimum-viable-expat/</loc><lastmod>2026-09-07</lastmod></url>
@@ -74,6 +76,7 @@
   <url><loc>https://spiteware.ai/hall-of-fame/kirillklimuk/sageling/</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/damienl/theseolabs/</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/gabry-ts/mc-rofone/</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://spiteware.ai/hall-of-fame/zeus_00/stockchess/</loc><lastmod>2026-09-23</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/krisosom/qr-local/</loc><lastmod>2026-09-22</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/mixj73it/school-handbooks/</loc><lastmod>2026-09-22</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/ishworpoudel64-creater/cvforge/</loc><lastmod>2026-09-21</lastmod></url>
@@ -87,7 +90,6 @@
   <url><loc>https://spiteware.ai/hall-of-fame/palatty-j/local-cinema/</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/bava32/illusion/</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/artmanja111/kegel-trainer/</loc><lastmod>2026-09-12</lastmod></url>
-  <url><loc>https://spiteware.ai/hall-of-fame/julianmb/openwinsidecar/</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/ridge-poll/chess-analytics/</loc><lastmod>2026-09-09</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/xinbenlv/three-line-calendar/</loc><lastmod>2026-09-07</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/minsingjin/auto-hongmyungbo/</loc><lastmod>2026-09-07</lastmod></url>
@@ -99,7 +101,6 @@
   <url><loc>https://spiteware.ai/hall-of-fame/k7peak/remove-your-data/</loc><lastmod>2026-09-07</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/coopernusbaum/vodforge/</loc><lastmod>2026-09-07</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/jakeheading/ffmet/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://spiteware.ai/hall-of-fame/zeus_00/stockchess/</loc><lastmod>2026-09-23</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/ianhil/mockfreeli/</loc><lastmod>2026-09-18</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/sph130/honestsky/</loc><lastmod>2026-09-17</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/sacha-builds/vectispdf/</loc><lastmod>2026-09-15</lastmod></url>
@@ -114,4 +115,52 @@
   <url><loc>https://spiteware.ai/hall-of-fame/xthreadmaker/rank-and-run/</loc><lastmod>2026-09-07</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/mattelab/sharkshimi/</loc><lastmod>2026-09-07</lastmod></url>
   <url><loc>https://spiteware.ai/hall-of-fame/dunebru/</loc></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/wispr-flow/</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/canva/</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/slack/</loc><lastmod>2026-09-17</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/adobe-acrobat/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/daisydisk/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/resume-io/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/screen-studio/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/capcut/</loc><lastmod>2026-09-17</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/cursor/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/descript/</loc><lastmod>2026-09-07</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/freedom/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/geolayers/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/radial/</loc><lastmod>2026-09-10</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/splitwise/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/testiny/</loc><lastmod>2026-09-07</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/microsoft-solitaire-collection/</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/bitly/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/bloomberg-terminal/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/brightlocal/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/chessreps/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/cleanup-pictures/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/formspree/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/gofullpage/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/grammarly/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/inkdrop/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/lalal-ai/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/linear/</loc><lastmod>2026-09-07</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/lokalise/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/manychat/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/myfitnesspal/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/otter/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/superhuman/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/superwhisper/</loc><lastmod>2026-09-07</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/topaz-photo-ai/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/vellum/</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/wakatime/</loc><lastmod>2026-09-07</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/whoop/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/cleanmymac/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/moises/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/monarch-money/</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/spacedesk/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/ahrefs/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/chatgpt/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/cleanshot-x/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/futureme/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/nomad-list/</loc><lastmod>2026-09-07</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/typeform/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://spiteware.ai/wall-of-shame/chess-com/</loc><lastmod>2026-09-23</lastmod></url>
 </urlset>

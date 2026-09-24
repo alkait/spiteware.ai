@@ -18,6 +18,8 @@ The agent scores every candidate against this file. Edit it to change what gets 
 
 Record the paid tool the builder is reacting to when they name one, and its price when a pricing page or a dated 2026 source gives one. Leave `replaces.name` or `replaces.price` empty when unknown. Never guess a victim or a price.
 
+`replaces.name` is the plan the price belongs to ("Wispr Flow Pro", "Slack AI"). `replaces.product` is the product with no plan attached ("Wispr Flow", "Slack"), spelled the maker's way and the same way every other card spells it: it is what the hall of shame counts. Empty when `name` is empty.
+
 ## Score (0 to 10, for sorting; anything that passes both gates goes to review)
 
 | Signal | Points |

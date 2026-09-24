@@ -23,7 +23,7 @@ Schema:
     "slug": "lag-writer", "name": "lag-writer", "status": "pending", "spite_score": 8,
     "url": "https://github.com/Kryhr/lag-writer", "icon": "✍️",
     "tagline": "one line in the site voice",
-    "replaces": {"name": "Grammarly Pro", "price": "$12/mo", "source": "https://www.grammarly.com/plans", "note": ""},
+    "replaces": {"name": "Grammarly Pro", "product": "Grammarly", "price": "$12/mo", "source": "https://www.grammarly.com/plans", "note": ""},
     "grudge": {"quote": "builder's words, verbatim", "source": "https://..."},
     "builder": {"name": "Kryhr", "handle": "Kryhr", "url": ""},
     "tags": ["web", "local-first", "writing"], "open_source": true, "vibe_coded": false,
@@ -35,6 +35,8 @@ Schema:
 ```
 
 `tags` must come from the closed list in `criteria.md` — at most 3, no invented words.
+
+`replaces.name` is the plan, `replaces.product` the product with no plan attached (`criteria.md`). The hall of shame groups cards on `product`, so spell it the way the cards already in `data/apps.json` do.
 
 `spite_score` is computed by `scripts/score.py` from the fields; never hand-write it.
 

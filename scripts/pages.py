@@ -4,11 +4,12 @@
 Usage: python3 scripts/pages.py
 
 Writes hall-of-fame/<author>/<app>/index.html for every app, a page per author, the
-index of inductees, sitemap.xml, robots.txt and 404.html (GitHub Pages serves that one
+index of inductees, the wall of shame (wall-of-shame/, a leaderboard of the paid products
+by how many times they've been replaced, and a page per product), sitemap.xml, robots.txt and 404.html (GitHub Pages serves that one
 for any address that isn't a file, at any depth, hence the root-relative paths). These are real files rather than
 something site.js renders, because link previews and most crawlers don't run JS.
 
-hall-of-fame/ is wiped and rebuilt on every run, so never edit anything in it by hand.
+hall-of-fame/ and wall-of-shame/ are wiped and rebuilt on every run, so never edit anything in them by hand.
 scripts/merge.py runs this after an approve; run it yourself after hand-editing
 data/apps.json.
 
@@ -22,6 +23,7 @@ import json, re, html, shutil, pathlib, urllib.parse, importlib.util
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "hall-of-fame"
+SHAME = ROOT / "wall-of-shame"
 SITE = "https://spiteware.ai"
 MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
 HUES = ["var(--pink)", "var(--yellow)", "var(--blue)", "var(--green)", "var(--orange)", "var(--purple)"]
@@ -68,6 +70,31 @@ def victim(a):
     r = a.get("replaces") or {}
     n, p = (r.get("name") or "").strip(), (r.get("price") or "").strip()
     return f"{n} · {p}" if n and p else n if n else f"a paywall · {p}" if p else "a paywall"
+
+def product(a):
+    """The paid product a card is aimed at, plan stripped (replaces.product). Empty when the builder named none."""
+    return ((a.get("replaces") or {}).get("product") or "").strip()
+
+def shame(name):
+    """URL of a product's wall of shame page."""
+    s = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+    if not SAFE.fullmatch(s): raise SystemExit(f"product {name!r} makes no URL")
+    return f"/wall-of-shame/{s}/"
+
+def victims(apps):
+    """[(product, its apps)]: most replaced first, then the pettiest replacement, then a to z."""
+    by = {}
+    for a in apps:
+        if product(a): by.setdefault(product(a), []).append(a)
+    return sorted(by.items(), key=lambda kv: (-len(kv[1]), -max(x["spite_score"] for x in kv[1]), kv[0].lower()))
+
+def bill(theirs):
+    """The price on a product's head: the one most of its cards cite, the pettiest card breaking ties."""
+    prices = [(a["replaces"].get("price") or "").strip().split(" (")[0] for a in theirs]
+    prices = [x for x in prices if x]
+    return max(dict.fromkeys(prices), key=lambda x: (prices.count(x), -prices.index(x))) if prices else ""
+
+def times(n): return "once" if n == 1 else "twice" if n == 2 else f"{n} times"
 
 def order(apps):
     """Pettiest first, then newest, then a to z. Three stable sorts, least important first."""
@@ -174,6 +201,7 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
         <li><a href="/">Home</a></li>
         <li><a href="/apps.html">Apps <span class="nav__n" data-apps>{n}</span></a></li>
         <li><a href="/hall-of-fame/"{' aria-current="page"' if here == "/hall-of-fame/" else ""}>Hall of fame</a></li>
+        <li><a href="/wall-of-shame/"{' aria-current="page"' if here == "/wall-of-shame/" else ""}>Wall of shame</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/submit.html">Submit</a></li>
       </ul>
@@ -196,20 +224,21 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
 
 <footer>
   <div class="wrap foot">
-    <div class="counter" title="You are visitor number…">
-      <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
-      <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
+    <div class="foot__l">
+      <div class="counter" title="You are visitor number…">
+        <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
+        <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
+      </div>
+      <nav class="badges" aria-label="Footer">
+        <a class="badge" href="/privacy.html">privacy</a>
+        <a class="badge badge--blue" href="/contact.html">contact</a>
+        <a class="badge badge--pink ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source</a>
+        <a class="badge badge--green ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">youtube</a>
+      </nav>
     </div>
-    <div class="foot__meta">
-      this site was shamelessly vibe coded by <a href="https://x.com/alkait" target="_blank" rel="noopener">@alkait</a><br>
-      no pricing page · <a href="/privacy.html">privacy</a> · <a href="/contact.html">contact</a> · <a class="ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source on github</a><br>
-      the grudges, read aloud: <a class="ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">youtube</a> · <a class="ico ico--ig" href="https://www.instagram.com/spiteware.ai/" target="_blank" rel="noopener">instagram</a>
-    </div>
-    <div class="badges">
-      <span class="badge">Best viewed in any browser</span>
-      <span class="badge badge--blue">0 bytes of fonts</span>
-      <span class="badge badge--pink">Made with rage</span>
-      <span class="badge badge--green">Y2K compliant</span>
+    <div class="maker">
+      <a class="gcard__pic" href="https://github.com/alkait" target="_blank" rel="noopener"><img class="gcard__av" src="/alkait.jpg" alt="alkait" width="150" height="150"></a>
+      <span>this site was shamelessly vibe coded by <a href="https://github.com/alkait" target="_blank" rel="noopener">@alkait</a></span>
     </div>
   </div>
 </footer>
@@ -255,6 +284,8 @@ def app_page(a, apps, nxt):
     rip = (f'<span class="sticker sticker--dead">taken down{" · " + month(a.get("died")) if month(a.get("died")) else ""}</span>' if dead else "")
     gone = (f'<p class="fcard__rip">{esc(a["name"])} has been taken down since it was inducted. The grudge outlived the app.</p>' if dead else "")
     more = "".join(card(x) for x in related(a, apps))
+    # the product page exists only while a living app names the product; a dead app's page must not point at nothing
+    shamed = product(a) and any(product(x) == product(a) for x in apps)
 
     body = f'''  <section class="fame">
     <div class="wrap">
@@ -265,7 +296,8 @@ def app_page(a, apps, nxt):
           <div class="fcard__name">{esc(b["name"])}</div>
           <dl class="fcard__facts">
             <div><dt>inducted</dt><dd>{month(a["added"])} · for spite</dd></div>
-            <div><dt>spite score</dt><dd>🔥 {a["spite_score"]}/10</dd></div>
+            <div><dt>spite score</dt><dd>🔥 {a["spite_score"]}/10</dd></div>{f"""
+            <div class="fact--stack"><dt>free alternative to</dt><dd>{esc(product(a) or vname)}</dd></div>""" if vname else ""}
           </dl>
         </div>
         <div class="fcard__main">
@@ -298,7 +330,7 @@ def app_page(a, apps, nxt):
     <div class="wrap">
       <div class="sec__head">
         <h2>More grudges <span class="tag">same energy</span></h2>
-        <div class="sec__sub"><a href="/hall-of-fame/">all {n} inductees →</a></div>
+        <div class="sec__sub">{f'<a href="{shame(product(a))}">{esc(product(a))} on the wall of shame →</a> · ' if shamed else ""}<a href="/hall-of-fame/">all {n} inductees →</a></div>
       </div>
       <div class="grid">{more}</div>
     </div>
@@ -372,6 +404,59 @@ def index_page(apps):
                  body=body, n=n, ld=(ld,))
 
 
+def shame_index(ranked, n):
+    hits = sum(len(t) for _, t in ranked)
+    def row(i, name, theirs):
+        price = bill(theirs)
+        return (f'<a class="shame__row" href="{shame(name)}"><span class="shame__rank">{i + 1:02d}</span>'
+                f'<span class="shame__who"><b>{esc(name)}</b>replaced {times(len(theirs))}</span>'
+                + (f'<span class="kills">wants<s>{esc(price)}</s></span>' if price else '<span class="kills">wants<s>a paywall</s></span>') + '</a>')
+    body = f'''  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">{len(ranked)} paid products · replaced {hits} times</span>
+      <h1>Wall of <span class="hl">shame.</span></h1>
+      <p class="lede">The paid tools people were annoyed enough to rebuild for free, ranked by how many people did it. The more the price asks, the longer the line. <b>Most replaced first.</b></p>
+    </div>
+  </section>
+  <section class="sec sec--alt">
+    <div class="wrap"><div class="shame">{"".join(row(i, name, theirs) for i, (name, theirs) in enumerate(ranked))}</div></div>
+  </section>
+'''
+    ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "url": SITE + shame(name), "name": name} for i, (name, _) in enumerate(ranked)]}
+    return shell(title="Wall of shame: the paid tools people rebuilt for free · spiteware.ai", path="/wall-of-shame/",
+                 desc=f"{len(ranked)} paid products, ranked by how many people looked at the price and built the free version instead.",
+                 body=body, n=n, ld=(ld,), here="/wall-of-shame/")
+
+
+def shame_page(rank, total, name, theirs, n):
+    theirs, path, price = order(theirs), shame(name), bill(theirs)
+    k = len(theirs)
+    title = f"Free alternatives to {name}" + (f" ({price})" if price else "") + f": {k} {'app' if k == 1 else 'apps'} built out of spite · spiteware.ai"
+    desc = (f"{name} has been replaced {times(k)} by people who read the pricing page and built the free version: "
+            + ", ".join(a["name"] for a in theirs) + ". Every one is free, and every grudge is quoted from the person who built it.")
+    body = f'''  <section class="hero">
+    <div class="wrap">
+      <span class="kicker"><a href="/wall-of-shame/">Wall of shame</a> · #{rank} of {total}</span>
+      <h1>{esc(name)}</h1>
+      <div class="kills kills--xl">wants<s>{esc(price) if price else "a paywall"}</s></div>
+      <p class="lede">{k if k > 1 else "One"} free {"alternatives" if k > 1 else "alternative"} to {esc(name)}, built out of spite. {"Each" if k > 1 else "It"} does the job for <b>$0</b>.{" Pettiest first." if k > 1 else ""}</p>
+    </div>
+  </section>
+  <section class="sec sec--alt">
+    <div class="wrap"><div class="grid">{"".join(card(a) for a in theirs)}</div></div>
+  </section>
+'''
+    ld = {"@context": "https://schema.org", "@type": "ItemList", "name": f"Free alternatives to {name}", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "url": SITE + fame(a), "name": a["name"]} for i, a in enumerate(theirs)]}
+    crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "spiteware.ai", "item": SITE + "/"},
+        {"@type": "ListItem", "position": 2, "name": "Wall of shame", "item": SITE + "/wall-of-shame/"},
+        {"@type": "ListItem", "position": 3, "name": name, "item": SITE + path}]}
+    return shell(title=title, desc=desc, path=path, body=body, n=n, ld=(ld, crumbs), here="/wall-of-shame/",
+                 og_title=f"{name}: replaced {times(k)}, for free · spiteware.ai wall of shame")
+
+
 def lost_page(n):
     body = f'''  <section class="hero">
     <div class="wrap">
@@ -397,13 +482,14 @@ def build():
     for a in apps:
         if fame(a) in seen: raise SystemExit(f"{a['slug']} and {seen[fame(a)]} both want {fame(a)}")
         seen[fame(a)] = a["slug"]
-    if OUT.exists(): shutil.rmtree(OUT)
+    for d in (OUT, SHAME):
+        if d.exists(): shutil.rmtree(d)
 
     # Every list, count and sitemap entry is the living only. The dead keep their page and nothing else.
     live, dead = [a for a in apps if alive(a)], [a for a in apps if not alive(a)]
     by = {}
     for a in apps: by.setdefault(author(a), []).append(a)
-    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/about.html", None), ("/manifesto.html", None), ("/rules.html", None), ("/submit.html", None), ("/contact.html", None), ("/privacy.html", None)]
+    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/wall-of-shame/", None), ("/about.html", None), ("/manifesto.html", None), ("/rules.html", None), ("/submit.html", None), ("/contact.html", None), ("/privacy.html", None)]
     for i, a in enumerate(live):
         write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[(i + 1) % len(live)]))
         urls.append((fame(a), a["added"]))
@@ -415,6 +501,14 @@ def build():
         write(OUT / handle / "index.html", author_stub((standing or theirs)[0]) if solo else author_page(handle, standing, len(live)))
         if not solo: urls.append((f"/hall-of-fame/{handle}/", None))
     write(OUT / "index.html", index_page(live))
+    ranked = victims(live)
+    seen = {}
+    for i, (name, theirs) in enumerate(ranked):
+        if shame(name) in seen: raise SystemExit(f"products {name!r} and {seen[shame(name)]!r} both want {shame(name)}")
+        seen[shame(name)] = name
+        write(ROOT / shame(name).strip("/") / "index.html", shame_page(i + 1, len(ranked), name, theirs, len(live)))
+        urls.append((shame(name), max(a["added"] for a in theirs)))
+    write(SHAME / "index.html", shame_index(ranked, len(live)))
     write(ROOT / "404.html", lost_page(len(live)))
 
     (ROOT / "sitemap.xml").write_text(
@@ -428,9 +522,9 @@ def build():
     broken, _ = L.internal()
     if broken: raise SystemExit(f"{len(broken)} broken internal links:\n" + "\n".join(f"  {ref}  <- {where}" for where, ref in broken[:20])
                                 + ("\n  ... python3 scripts/links.py lists them all" if len(broken) > 20 else ""))
-    return {"apps": len(live), "dead": len(dead), "authors": len(by), "urls": len(urls)}
+    return {"apps": len(live), "dead": len(dead), "authors": len(by), "products": len(ranked), "urls": len(urls)}
 
 if __name__ == "__main__":
     r = build()
     print(f"hall of fame: {r['apps']} app pages (+{r['dead']} taken down), {r['authors']} author pages, "
-          f"{r['urls']} urls in sitemap.xml, internal links ok")
+          f"wall of shame: {r['products']} products, {r['urls']} urls in sitemap.xml, internal links ok")

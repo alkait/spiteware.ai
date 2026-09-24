@@ -45,7 +45,7 @@ def merge(qf, check=True, approve_all=False):
             dead = load("links").dead_fields(c) if check else {}
             if dead: kept.append(c); held.append(f"{c['name']} ({', '.join(f'{k}: {v}' for k, v in dead.items())})"); continue
             a = {k: c.get(k) for k in FIELDS}; a["added"] = today
-            a["replaces"] = {k: c["replaces"].get(k, "") for k in ("name", "price", "source")}
+            a["replaces"] = {k: c["replaces"].get(k, "") for k in ("name", "product", "price", "source")}
             apps.append(a); slugs.add(a["slug"]); added.append(a["name"]); new.append(a)
         elif st == "reject":
             rej.append({"name": c["name"], "url": c["url"], "rejected": today}); rejected.append(c["name"])

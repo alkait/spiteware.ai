@@ -78,6 +78,7 @@ function row(run,c){
     <dl>
       <dt>app</dt><dd><a href="${esc(c.url)}" target="_blank">${esc(c.url)}</a></dd>
       <dt>grudge source</dt><dd><a href="${esc(c.grudge.source)}" target="_blank">${esc(c.grudge.source)}</a></dd>
+      <dt>product</dt><dd><span contenteditable data-k="replaces.product">${esc(c.replaces.product||'')||'(product, no plan?)'}</span></dd>
       <dt>price source</dt><dd><a href="${esc(c.replaces.source)}" target="_blank">${esc(c.replaces.source)}</a> ${c.replaces.note?`<em>(${esc(c.replaces.note)})</em>`:''}</dd>
       <dt>builder</dt><dd>${esc(c.builder.name)} ${c.builder.handle?`· @${esc(c.builder.handle)}`:''}</dd>
     </dl>

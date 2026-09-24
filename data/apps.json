@@ -7,6 +7,7 @@
     "tagline": "Write a letter to your future self. Free forever, no ads, no premium tier waiting to ambush you.",
     "replaces": {
       "name": "FutureMe",
+      "product": "FutureMe",
       "price": "$9/yr",
       "source": "https://www.openwhenitstime.com/blog/is-futureme-free"
     },
@@ -37,6 +38,7 @@
     "tagline": "A contact form that files submissions as GitHub Issues. No database, no server, no monthly bill.",
     "replaces": {
       "name": "Formspree",
+      "product": "Formspree",
       "price": "$15/mo",
       "source": "https://splitforms.com/formspree-pricing"
     },
@@ -67,6 +69,7 @@
     "tagline": "A site blocker with scheduling, time tracking and a calm block screen. Every feature the freemium ones lock away, for free.",
     "replaces": {
       "name": "Freedom",
+      "product": "Freedom",
       "price": "$8.99/mo",
       "source": "https://rtriv.io/en/blog/freedom-app-review"
     },
@@ -97,6 +100,7 @@
     "tagline": "Native Mac screenshots with markup, redaction and sharing. No subscription, no account, no analytics.",
     "replaces": {
       "name": "CleanShot X",
+      "product": "CleanShot X",
       "price": "$8/mo",
       "source": "https://www.stackscored.com/pricing/screen-recording/cleanshot-x/"
     },
@@ -127,6 +131,7 @@
     "tagline": "Mac dictation with AI cleanup and voice editing. MIT licensed. Bring a free API key and never pay a monthly fee.",
     "replaces": {
       "name": "Wispr Flow",
+      "product": "Wispr Flow",
       "price": "$15/mo",
       "source": "https://zackproser.com/blog/wisprflow-pricing-guide-2026"
     },
@@ -157,6 +162,7 @@
     "tagline": "A writing assistant that trails a few words behind you, fixing typos and apostrophes. Runs from a single HTML file. Grammarly wanted $12 a month for the apostrophes.",
     "replaces": {
       "name": "Grammarly Pro",
+      "product": "Grammarly",
       "price": "$12/mo",
       "source": "https://www.grammarly.com/plans"
     },
@@ -188,6 +194,7 @@
     "tagline": "A local AI assistant for Mac running Qwen 3.5 in-process. Free, private, and it doesn't run out at 3pm like the $20 plans do.",
     "replaces": {
       "name": "ChatGPT Plus",
+      "product": "ChatGPT",
       "price": "$20/mo",
       "source": "https://tldv.io/blog/chatgpt-pricing/"
     },
@@ -219,6 +226,7 @@
     "tagline": "Seven local SEO checks that rank trackers charge $39 a month to run against public Google data. No account, no card, no \"upgrade to see the rest\".",
     "replaces": {
       "name": "BrightLocal Track",
+      "product": "BrightLocal",
       "price": "$39/mo",
       "source": "https://localdominator.co/brightlocal-pricing-guide/"
     },
@@ -249,6 +257,7 @@
     "tagline": "Split the bill with friends, unlimited expenses, no account, no ads. Splitwise wanted $4.99 a month to let you log a fourth expense today.",
     "replaces": {
       "name": "Splitwise Pro",
+      "product": "Splitwise",
       "price": "$4.99/mo",
       "source": "https://www.areweeven.com/blog/splitwise-free-vs-pro-2026"
     },
@@ -279,6 +288,7 @@
     "tagline": "Drill your chess openings with spaced repetition, Stockfish in the browser, no account. The only paywall is the one it was built to escape.",
     "replaces": {
       "name": "Chessreps Membership",
+      "product": "Chessreps",
       "price": "$34.99/yr",
       "source": "https://www.chessreps.com/plans"
     },
@@ -309,6 +319,7 @@
     "tagline": "Screen Studio wants $20 a month for zoom-on-click. Reframed does the zooms, captions and webcam bubble for the price of a brew install.",
     "replaces": {
       "name": "Screen Studio Monthly",
+      "product": "Screen Studio",
       "price": "$29/mo",
       "source": "https://www.screenkite.com/blog/screen-studio-subscription-free-alternative"
     },
@@ -339,6 +350,7 @@
     "tagline": "Topaz swapped your perpetual license for $39 a month; Open Photo AI swapped that for an AGPL repo that upscales just fine.",
     "replaces": {
       "name": "Topaz Photo Personal",
+      "product": "Topaz Photo AI",
       "price": "$39/mo",
       "source": "https://www.topazlabs.com/topaz-photo"
     },
@@ -369,6 +381,7 @@
     "tagline": "Typeform charges $29 a month and still caps your free responses at ten; Form81 charges nothing and forgot to add a cap.",
     "replaces": {
       "name": "Typeform Basic",
+      "product": "Typeform",
       "price": "$29/mo",
       "source": "https://www.typeform.com/pricing/"
     },
@@ -399,6 +412,7 @@
     "tagline": "WHOOP sells you a band, then charges $199 a year for permission to read it. OpenStrap reads it anyway, on your phone, for free.",
     "replaces": {
       "name": "WHOOP One membership",
+      "product": "WHOOP",
       "price": "$199/yr",
       "source": "https://trackervs.com/pricing/whoop-pricing/"
     },
@@ -428,6 +442,7 @@
     "tagline": "Ahrefs charges $129 a month to tell you what people type into Google. TheSEOLabs tells you for free, no account, no credit meter.",
     "replaces": {
       "name": "Ahrefs Lite",
+      "product": "Ahrefs",
       "price": "$129/mo",
       "source": "https://ahrefs.com/pricing"
     },
@@ -458,6 +473,7 @@
     "tagline": "Screen Studio wants $29 a month to zoom in on your cursor. Fovea does it on Windows for the price of an npm install.",
     "replaces": {
       "name": "Screen Studio Monthly",
+      "product": "Screen Studio",
       "price": "$29/mo",
       "source": "https://www.docsie.io/vs/screen-studio-vs-cap-pricing/"
     },
@@ -488,6 +504,7 @@
     "tagline": "Type your whole career into Resume.io and it holds the PDF hostage for $29.95. MakeMyCVFree just hands it over.",
     "replaces": {
       "name": "Resume.io Subscription",
+      "product": "Resume.io",
       "price": "$29.95/4 weeks",
       "source": "https://resume.io/pricing"
     },
@@ -519,6 +536,7 @@
     "tagline": "Descript wanted $24 a month to delete words from a video; a weekend and a browser tab turned out to be cheaper.",
     "replaces": {
       "name": "Descript",
+      "product": "Descript",
       "price": "$24/person/mo (Hobbyist, monthly billing)",
       "source": "https://www.descript.com/pricing"
     },
@@ -549,6 +567,7 @@
     "tagline": "Test management is a spreadsheet with a login. Testiny charges $19 a seat for it; EZTest charges nothing.",
     "replaces": {
       "name": "Testiny",
+      "product": "Testiny",
       "price": "$19.48/user/mo",
       "source": "https://www.testiny.io/pricing/"
     },
@@ -579,6 +598,7 @@
     "tagline": "WakaTime charges $14 a month to show you your own keystrokes; Wakana shows them back for free.",
     "replaces": {
       "name": "WakaTime",
+      "product": "WakaTime",
       "price": "$14/mo (Premium, monthly billing)",
       "source": "https://wakatime.com/pricing"
     },
@@ -609,6 +629,7 @@
     "tagline": "Slack AI's thread summaries come bundled with the $18-a-seat plan; this one comes bundled with a git clone.",
     "replaces": {
       "name": "Slack AI",
+      "product": "Slack",
       "price": "$18/user/mo (Business+ plan, monthly billing, includes Slack AI)",
       "source": "https://slack.com/pricing"
     },
@@ -639,6 +660,7 @@
     "tagline": "Every kids' typing site wanted either ad money or your money, so a dad and ChatGPT built one that wants neither.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -669,6 +691,7 @@
     "tagline": "Press a key, talk, get text. Wispr Flow wants $15 a month for that; Whispering wants an API key and nothing else.",
     "replaces": {
       "name": "Wispr Flow",
+      "product": "Wispr Flow",
       "price": "$15/user/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -702,6 +725,7 @@
     "tagline": "Cost-of-living comparisons for 230 cities, minus the $19.99 membership and the extra features nobody asked for.",
     "replaces": {
       "name": "Nomad List",
+      "product": "Nomad List",
       "price": "$19.99 one-time (Lite)",
       "source": "https://nomads.com/"
     },
@@ -732,6 +756,7 @@
     "tagline": "Windows 98 minesweeper with all the mines and none of the app-store ads.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -762,6 +787,7 @@
     "tagline": "Linear bills per seat; It's a Plan runs on your own server, where the seats are free and the AI agents take tickets too.",
     "replaces": {
       "name": "Linear",
+      "product": "Linear",
       "price": "$10/user/mo",
       "source": "https://linear.app/pricing"
     },
@@ -792,6 +818,7 @@
     "tagline": "Paid Mac disk analyzers charge ten bucks to draw a pie chart; BloomDisk draws the same sunburst for free and never phones home.",
     "replaces": {
       "name": "DaisyDisk",
+      "product": "DaisyDisk",
       "price": "$9.99 one-time",
       "source": "https://daisydiskapp.com/"
     },
@@ -822,6 +849,7 @@
     "tagline": "Local Whisper dictation for your Mac; the $8.49 a month stays in your pocket.",
     "replaces": {
       "name": "Superwhisper",
+      "product": "Superwhisper",
       "price": "$8.49/mo (Pro)",
       "source": "https://superwhisper.com/"
     },
@@ -853,6 +881,7 @@
     "tagline": "Paid data-broker removal services file the same free forms you could, then bill you monthly; this repo hands the forms to your agent.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -883,6 +912,7 @@
     "tagline": "A Raspberry Pi wall display that costs exactly zero dollars a month, which is apparently a radical feature now.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -913,6 +943,7 @@
     "tagline": "Songwriting apps wanted a subscription to hold your lyrics; Flowrite holds them offline, ad-free, AGPL, on every platform you own.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -942,6 +973,7 @@
     "tagline": "Every calorie app wants an account, an ad break, and a subscription; Budgie wants your HealthKit data and nothing else.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -972,6 +1004,7 @@
     "tagline": "Your next three events on your wrist, with no in-app purchase hiding behind any of them.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1002,6 +1035,7 @@
     "tagline": "Crypto arbitrage finders sell you a subscription to find arbitrage. Sharkshimi skips the toll booth and the login.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1032,6 +1066,7 @@
     "tagline": "A Pomodoro timer, site blocker and rain sounds that never ask you to sign up, sign in, or upgrade.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1062,6 +1097,7 @@
     "tagline": "One rough draft in, a LinkedIn, X and Threads post out, and the only subscription is your own API key.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1091,6 +1127,7 @@
     "tagline": "Somebody put a card game behind a price tag, so now the whole table plays free in a browser tab.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1121,6 +1158,7 @@
     "tagline": "Every open-source LLM gateway sells you the governance half. This one ships it all, Apache-2.0, and promises no enterprise tier, ever.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1151,6 +1189,7 @@
     "tagline": "Downloads YouTube at the quality the source actually has. Charging extra for 4K was always the punchline.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1181,6 +1220,7 @@
     "tagline": "Bloomberg wants $2,665 a month for a dark screen full of numbers. This is a dark screen full of numbers that runs on your laptop, off free public data, for nothing.",
     "replaces": {
       "name": "Bloomberg Terminal",
+      "product": "Bloomberg Terminal",
       "price": "$2,665/mo",
       "source": "https://costbench.com/software/financial-data-terminals/bloomberg-terminal/"
     },
@@ -1212,6 +1252,7 @@
     "tagline": "Burp Suite's Intruder costs $499 a year. Intrivox fuzzes the same requests for zero, and throws in eight themes Burp never offered.",
     "replaces": {
       "name": "Burp Suite Professional",
+      "product": "Burp Suite",
       "price": "$499/yr",
       "source": "https://portswigger.net/burp/pro"
     },
@@ -1250,6 +1291,7 @@
     "tagline": "Wispr Flow charges $15 a month to turn your voice into text. Laberbacke charges you Google's actual rate — about a dollar — and keeps every transcript on your Mac.",
     "replaces": {
       "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
       "price": "$15/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -1281,6 +1323,7 @@
     "tagline": "Otter wanted eighty dollars a year from a freelance journalist. This runs Whisper on your own laptop and hands back the same interview transcripts for nothing.",
     "replaces": {
       "name": "Otter Pro",
+      "product": "Otter",
       "price": "$16.99/mo",
       "source": "https://otter.ai/pricing"
     },
@@ -1311,6 +1354,7 @@
     "tagline": "Adobe rents you Lightroom at $11.99 a month to light a photo you already took. Lightmaker does it in a browser tab, for free, and never asks for the negative.",
     "replaces": {
       "name": "Adobe Lightroom",
+      "product": "Adobe Lightroom",
       "price": "$11.99/mo",
       "source": "https://www.adobe.com/creativecloud/plans.html"
     },
@@ -1349,6 +1393,7 @@
     "tagline": "Open a CSV online, hit a popup wanting your card before you can sort a column. CSV Preview does the sorting, filtering and editing in your own browser tab and never asks.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1380,6 +1425,7 @@
     "tagline": "Stockfish, your whole game history and a real dashboard, running on your own laptop — where nobody can put the good analysis behind a monthly plan.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1411,6 +1457,7 @@
     "tagline": "Wispr Flow charges $15 a month to type what you say. LocalFlow does it on your own GPU for nothing, word limit not included.",
     "replaces": {
       "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
       "price": "$15/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -1442,6 +1489,7 @@
     "tagline": "Radial wants €19.99 to put a wheel under your cursor. CopyWheel puts one there for free and does exactly one job with it.",
     "replaces": {
       "name": "Radial",
+      "product": "Radial",
       "price": "€19.99 one-time",
       "source": "https://radial.appverge.net/"
     },
@@ -1472,6 +1520,7 @@
     "tagline": "Restaurant POS software bills you every month to ring up a sandwich. DineForge rings it up on one Windows box, free, forever.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1503,6 +1552,7 @@
     "tagline": "Phone cleaner apps want a subscription to delete your own screenshots. ByeScreen lets you swipe them into the bin for free.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1534,6 +1584,7 @@
     "tagline": "Strava wants $59.99 a year to let you follow a line on a map. Walkist draws the line, walks you down it, and files the whole thing in Apple Health for nothing.",
     "replaces": {
       "name": "Strava Subscription",
+      "product": "Strava",
       "price": "$59.99/yr (Individual, billed annually)",
       "source": "https://www.strava.com/subscribe"
     },
@@ -1571,9 +1622,10 @@
     "icon": "🖥️",
     "tagline": "Windows second-screen apps want a subscription to borrow the iPad you already paid for. OpenWinSidecar streams a real extra monitor straight into Safari and bills you nothing.",
     "replaces": {
-      "name": "",
+      "name": "spacedesk",
+      "product": "spacedesk",
       "price": "",
-      "source": ""
+      "source": "https://www.spacedesk.net/licensing/"
     },
     "grudge": {
       "quote": "I looked at what was available and didn't like the options — closed-source, subscription-priced, CPU-hungry, or all three — so I built my own.",
@@ -1592,7 +1644,7 @@
     "open_source": true,
     "vibe_coded": false,
     "repo": "julianmb/OpenWinSidecar",
-    "spite_score": 5,
+    "spite_score": 7,
     "added": "2026-09-12"
   },
   {
@@ -1603,6 +1655,7 @@
     "tagline": "Kegel apps slip an upsell in between reps. This one counts your holds in a browser tab and asks for nothing, your data included.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1634,6 +1687,7 @@
     "tagline": "Interview prep wants a subscription before it'll help you land a salary. learningto.co hands over the data-structure drills first and never sends the invoice.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1664,6 +1718,7 @@
     "tagline": "Wispr Flow wants $15 a month and still won't touch Linux. Utter holds a key, listens on Wayland, and keeps both your audio and your money at home.",
     "replaces": {
       "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
       "price": "$15/user/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -1695,6 +1750,7 @@
     "tagline": "GoFullPage charges $12 a year before it will let you crop your own screenshot. OpenCapture does the PDF export, the redaction and the retina capture for nothing.",
     "replaces": {
       "name": "GoFullPage Premium",
+      "product": "GoFullPage",
       "price": "$12/yr",
       "source": "https://tryhoverify.com/blog/gofullpage-vs-hoverify-screenshot-tools-compared/"
     },
@@ -1726,6 +1782,7 @@
     "tagline": "Vector studios now rent you a subscription, an account wall and a cloud that reads your files. Illusion draws beziers in the browser and exports print-ready PDF for free.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1757,6 +1814,7 @@
     "tagline": "Every transcript tool says free and means freemium. ScriptHaul takes a whole channel, 500 videos a batch, no account, no credits, no clock.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1787,6 +1845,7 @@
     "tagline": "Canva Pro wants a monthly fee to remove a background. Cutora does it in your browser and asks for nothing.",
     "replaces": {
       "name": "Canva Pro",
+      "product": "Canva",
       "price": "$12/mo",
       "source": "https://www.canva.com/pricing/"
     },
@@ -1818,6 +1877,7 @@
     "tagline": "Inkdrop charges ten bucks a month to sync your Markdown. devnote syncs it through git and charges zero.",
     "replaces": {
       "name": "Inkdrop",
+      "product": "Inkdrop",
       "price": "$9.98/mo",
       "source": "https://www.inkdrop.app/pricing"
     },
@@ -1849,6 +1909,7 @@
     "tagline": "Wispr Flow bills you every month for speech recognition that worked the first month. YazSes runs Whisper on your machine, once, forever.",
     "replaces": {
       "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
       "price": "$15/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -1880,6 +1941,7 @@
     "tagline": "The good workout features were behind a paywall, so a 16-year-old learned to ship an iPhone app and gave them away.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -1910,6 +1972,7 @@
     "tagline": "DaisyDisk wants ten bucks to show you where your disk went. OpenDisk shows you for nothing, same sunburst and all.",
     "replaces": {
       "name": "DaisyDisk",
+      "product": "DaisyDisk",
       "price": "$9.99 once",
       "source": "https://daisydiskapp.com/"
     },
@@ -1940,6 +2003,7 @@
     "tagline": "LALAL.AI charges fifteen a month to pull the vocals out of a song. Stems does it on your Mac and bills nobody.",
     "replaces": {
       "name": "LALAL.AI Pro",
+      "product": "LALAL.AI",
       "price": "$15/mo",
       "source": "https://www.lalal.ai/pricing/"
     },
@@ -1971,6 +2035,7 @@
     "tagline": "Resume.io lets you write your whole CV, then asks for $29.95 at the download button. resumake just hands you the PDF.",
     "replaces": {
       "name": "Resume.io",
+      "product": "Resume.io",
       "price": "$29.95 / 4 weeks",
       "source": "https://resume.io/pricing"
     },
@@ -2002,6 +2067,7 @@
     "tagline": "Adobe wants $14.99 a month to merge two PDFs. S-PDF runs on your own box and merges them for the cost of electricity.",
     "replaces": {
       "name": "Adobe Acrobat Standard",
+      "product": "Adobe Acrobat",
       "price": "$14.99/mo",
       "source": "https://www.adobe.com/acrobat/pricing.html"
     },
@@ -2033,6 +2099,7 @@
     "tagline": "Cleanup.pictures charges five a month and caps you at 720p for free. Erase deletes the photobomber on your Mac at full size.",
     "replaces": {
       "name": "Cleanup.pictures Pro",
+      "product": "Cleanup.pictures",
       "price": "$5/mo",
       "source": "https://cleanup.pictures/pricing"
     },
@@ -2064,6 +2131,7 @@
     "tagline": "MyFitnessPal Premium is $79.99 a year per person, and that's only the food part. SparkyFitness tracks the whole family on your own server for zero.",
     "replaces": {
       "name": "MyFitnessPal Premium",
+      "product": "MyFitnessPal",
       "price": "$79.99/yr",
       "source": "https://www.myfitnesspal.com/premium"
     },
@@ -2095,6 +2163,7 @@
     "tagline": "CleanMyMac wants a subscription to empty your caches. Broom sweeps them for free and signs its own release.",
     "replaces": {
       "name": "CleanMyMac",
+      "product": "CleanMyMac",
       "price": "",
       "source": "https://macpaw.com/store/cleanmymac"
     },
@@ -2125,6 +2194,7 @@
     "tagline": "Recipe apps want a monthly fee to remember your lasagna. My Recipe Board remembers it for free.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2155,6 +2225,7 @@
     "tagline": "Wispr Flow Pro is $144 a year to type what you say. This is a hotkey, a shell script and pennies of Whisper.",
     "replaces": {
       "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
       "price": "$15/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -2186,6 +2257,7 @@
     "tagline": "Microsoft charges a subscription to take the ads out of a game that came free with Windows. FORCED gives you Minesweeper with no ads, no guessing and no bill.",
     "replaces": {
       "name": "Microsoft Solitaire Collection",
+      "product": "Microsoft Solitaire Collection",
       "price": "",
       "source": ""
     },
@@ -2216,6 +2288,7 @@
     "tagline": "Vellum wants $249.99 to turn your novella into an ebook. Chronicle does it offline, and the only thing it charges is your word count.",
     "replaces": {
       "name": "Vellum Press",
+      "product": "Vellum",
       "price": "$249.99 once",
       "source": "https://vellum.pub/"
     },
@@ -2247,6 +2320,7 @@
     "tagline": "Every nice reading voice on the web comes with a monthly bill. Chickadee runs one in your browser and sends the bill nowhere.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2278,6 +2352,7 @@
     "tagline": "IELTS prep sites give you two mock tests and then a paywall. IELTS Mastery Hub gives you all of them and keeps your essays on your own laptop.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2309,6 +2384,7 @@
     "tagline": "Somebody wanted money for a video player your browser already is. Local Cinema is the free ticket to your own living room.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2340,6 +2416,7 @@
     "tagline": "PDF editors charge a subscription to move a paragraph. VectisPDF moves it in your browser and uploads nothing, including your credit card.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2371,6 +2448,7 @@
     "tagline": "Slack bills you per head, per month, forever. Deft puts chat, tasks and notes on your own server and bills you nothing.",
     "replaces": {
       "name": "Slack Pro",
+      "product": "Slack",
       "price": "$8.75/user/mo",
       "source": "https://slack.com/pricing"
     },
@@ -2402,6 +2480,7 @@
     "tagline": "Weather apps sell you ads, then sell you next week's forecast. HonestSky gives you the forecast and skips the sales pitch.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2433,6 +2512,7 @@
     "tagline": "CapCut lets you edit the whole video, then wants a subscription at the Export button. Concat exports for free and never learned the word watermark.",
     "replaces": {
       "name": "CapCut Pro",
+      "product": "CapCut",
       "price": "$19.99/mo",
       "source": "https://costbench.com/software/video-editing/capcut/"
     },
@@ -2464,6 +2544,7 @@
     "tagline": "Calorie apps charge a subscription to read a free food database back to you. Scan & Track reads it for free.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2494,6 +2575,7 @@
     "tagline": "GEOlayers 3 charges $329.99 to put a map in After Effects. LazyMapLayers does the globe-to-street flight for nothing, forever, no key.",
     "replaces": {
       "name": "GEOlayers 3",
+      "product": "GEOlayers",
       "price": "$329.99 one-time",
       "source": "https://aescripts.com/geolayers/"
     },
@@ -2525,6 +2607,7 @@
     "tagline": "Bitly wants $10 a month to remember that one URL means another URL. Jinx is a text file on GitHub Pages and it remembers for free.",
     "replaces": {
       "name": "Bitly Core",
+      "product": "Bitly",
       "price": "$10/mo",
       "source": "https://bitly.com/pages/pricing"
     },
@@ -2556,6 +2639,7 @@
     "tagline": "Stock music libraries want a subscription before your hobby video gets a soundtrack. Paste a song into mockfreeli and get five license-free cousins, no card.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2586,6 +2670,7 @@
     "tagline": "Grok Bot's Ultra tier ran out of tokens at $200 a month. OpenBot is the same squad of collaborating bots, open source, on whatever key you already have.",
     "replaces": {
       "name": "Grok Bot (Cursor Ultra)",
+      "product": "Cursor",
       "price": "$200/mo",
       "source": "https://cursor.com/pricing"
     },
@@ -2617,6 +2702,7 @@
     "tagline": "Wispr Flow wants $15 a month to type what you say. FlowLocal holds a key, runs Whisper on your own PC, and sends the invoice nowhere.",
     "replaces": {
       "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
       "price": "$15/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -2648,6 +2734,7 @@
     "tagline": "Digital business card apps bill per seat, per month, for a QR code with your name on it. Byzcard is $0/month, lives on your device, and doesn't know what a seat is.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2679,6 +2766,7 @@
     "tagline": "Adobe charges $14.99 a month to fix three words in a PDF. PDF Libre does it from your phone for free and deletes the file on the way out.",
     "replaces": {
       "name": "Adobe Acrobat Standard",
+      "product": "Adobe Acrobat",
       "price": "$14.99/mo",
       "source": "https://www.adobe.com/acrobat/pricing.html"
     },
@@ -2710,6 +2798,7 @@
     "tagline": "Frontier computer-use agents bill by the click. FreeComputerUse lets a cheap model plan and Playwright do the clicking, so the invoice stays small.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2740,6 +2829,7 @@
     "tagline": "ManyChat charges $39 a month to answer your Instagram DMs. AutoDMX runs the same funnel on a box you already pay for.",
     "replaces": {
       "name": "ManyChat Pro",
+      "product": "ManyChat",
       "price": "$39/mo",
       "source": "https://help.manychat.com/hc/en-us/articles/25800228332572-Pro-plan"
     },
@@ -2770,6 +2860,7 @@
     "tagline": "Lokalise wants $149 a month to translate your strings. Polygo runs a model on your own laptop and bills nobody.",
     "replaces": {
       "name": "Lokalise Explorer",
+      "product": "Lokalise",
       "price": "$149/mo",
       "source": "https://lokalise.com/pricing"
     },
@@ -2800,6 +2891,7 @@
     "tagline": "Moises wants a subscription and your audio on their servers. StemKit splits the song on your Mac and plays the stems back over the video.",
     "replaces": {
       "name": "Moises",
+      "product": "Moises",
       "price": "",
       "source": "https://moises.ai/pricing/"
     },
@@ -2831,6 +2923,7 @@
     "tagline": "Cloud voice services charge monthly and count your characters. This one runs Kokoro on a laptop CPU and counts nothing.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2862,6 +2955,7 @@
     "tagline": "Chord reference apps put the interesting voicings behind a paywall. Oh a Chord hands you a six-voice synth and asks for nothing.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2893,6 +2987,7 @@
     "tagline": "Every resume builder is free right up until you click Export. This one hands you the PDF offline and never finds your card.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2923,6 +3018,7 @@
     "tagline": "Somebody is billing you every month for a glorified CSV reader. This one is a Go binary under GPL and it is free.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2954,6 +3050,7 @@
     "tagline": "CV sites charge you at the download button. CVForge builds the PDF in your browser, and its download button just downloads.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -2985,6 +3082,7 @@
     "tagline": "Tracking your own payslips is not a premium feature. PayTrack does your Australian tax estimate on your own machine, fee-free.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -3016,6 +3114,7 @@
     "tagline": "Canva wants $144 a year before it will leave your background transparent. Photo Craft exports nothing behind your logo for nothing.",
     "replaces": {
       "name": "Canva Pro",
+      "product": "Canva",
       "price": "$144/yr",
       "source": "https://www.canva.com/pricing/"
     },
@@ -3047,6 +3146,7 @@
     "tagline": "Monarch and Copilot bill you monthly to look at your own money. Cairn looks at it on your phone and bills you never.",
     "replaces": {
       "name": "Monarch Money",
+      "product": "Monarch Money",
       "price": "",
       "source": ""
     },
@@ -3078,6 +3178,7 @@
     "tagline": "Handbook SaaS charges schools per editor for a textbox. This one runs on a $5 server and the school owns every page.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -3109,6 +3210,7 @@
     "tagline": "QR sites hold the good options for subscribers. QR Local is one HTML file that works offline and never asks for a card.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -3140,6 +3242,7 @@
     "tagline": "Superhuman charges $30 a month to make Gmail fast. Attn does it from your own laptop for nothing.",
     "replaces": {
       "name": "Superhuman Starter",
+      "product": "Superhuman",
       "price": "$30/mo",
       "source": "https://www.usecarly.com/blog/superhuman-pricing/"
     },
@@ -3170,9 +3273,10 @@
     "icon": "♟️",
     "tagline": "Chess sites charge you to find out how badly you blundered. StockChess lets you relive it for free.",
     "replaces": {
-      "name": "",
+      "name": "Chess.com",
+      "product": "Chess.com",
       "price": "",
-      "source": ""
+      "source": "https://www.chess.com/membership"
     },
     "grudge": {
       "quote": "Like many of you, I got tired of hitting paywalls just to review my own mistakes after a game.",
@@ -3190,7 +3294,7 @@
     "open_source": false,
     "vibe_coded": false,
     "repo": "",
-    "spite_score": 3,
+    "spite_score": 5,
     "added": "2026-09-23"
   },
   {
@@ -3201,6 +3305,7 @@
     "tagline": "Wispr Flow charges $15 a month to hear you think out loud. Spokesman hears it on-device, for nothing.",
     "replaces": {
       "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
       "price": "$15/mo",
       "source": "https://wisprflow.ai/pricing"
     },
@@ -3232,6 +3337,7 @@
     "tagline": "Call recorders bill you monthly or send a bot to sit in your meeting. mc.Rofone does neither and charges nothing.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },
@@ -3263,6 +3369,7 @@
     "tagline": "A metronome that keeps time without keeping a paywall. Tick, tock, no ads.",
     "replaces": {
       "name": "",
+      "product": "",
       "price": "",
       "source": ""
     },

@@ -34,17 +34,17 @@
   .logo em{font-style:normal;font-size:14px;background:var(--yellow);border:var(--bw) solid var(--ink);padding:4px 6px;transform:rotate(8deg);box-shadow:2px 2px 0 var(--ink)}
   .logo:hover em{transform:rotate(-6deg)}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:6px}
-  nav a{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:8px 12px;border:var(--bw) solid transparent}
-  nav a:hover{border-color:var(--ink);background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}
-  nav a[aria-current]{border-bottom-color:var(--pink)}
-  nav a[aria-current]:hover{border-color:var(--ink);border-bottom-color:var(--pink)}
+  header nav a{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:8px 12px;border:var(--bw) solid transparent}
+  header nav a:hover{border-color:var(--ink);background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}
+  header nav a[aria-current]{border-bottom-color:var(--pink)}
+  header nav a[aria-current]:hover{border-color:var(--ink);border-bottom-color:var(--pink)}
   nav li{display:flex;align-items:center}
   nav li+li::before{content:"";width:1px;height:13px;background:var(--ink);opacity:.22;margin-right:6px}
   /* the nav wraps when it runs out of room; a wrapped row must not open with a divider */
   @media (max-width:640px){nav li+li::before{display:none}}
   .nav__n{display:inline-block;margin-left:5px;padding:1px 5px;background:var(--ink);color:#fff;
     font-size:11px;font-weight:700;letter-spacing:.02em;vertical-align:1px}
-  @media (max-width:560px){nav a{padding:8px 8px;font-size:12px} .nav__n{font-size:10px;padding:1px 4px}}
+  @media (max-width:560px){header nav a{padding:8px 8px;font-size:12px} .nav__n{font-size:10px;padding:1px 4px}}
 
   /* ---------- hall of fame: deck of grudge cards in the hero ---------- */
   .deck{position:relative;justify-self:stretch;max-width:520px;width:100%;margin:0 auto}
@@ -190,18 +190,24 @@
   .counter__l{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;line-height:1.3}
   .odo{display:inline-flex;gap:3px}
   .odo span{display:inline-grid;place-items:center;width:22px;height:30px;background:var(--ink);color:#39ff14;font-family:var(--mono);font-size:20px;font-weight:700;border:2px solid #333;box-shadow:inset 0 0 0 1px #000}
-  .foot__meta{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;line-height:1.9;color:#333}
-  .foot__meta a{text-decoration:none;border-bottom:2px solid var(--pink)}
+  .foot__l{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+  .maker{display:flex;align-items:center;gap:26px;font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.08em;line-height:1.8;color:#333}
+  .maker span{max-width:22ch}
+  .maker a{color:inherit;text-decoration:none}
+  .maker span a{border-bottom:2px solid var(--pink)}
   /* link icons: inline masks, so they take the text colour and cost no request */
   .ico{white-space:nowrap}
   .ico::before{content:"";display:inline-block;width:1.3em;height:1.3em;margin-right:.45em;vertical-align:-.3em;background:currentColor;
     -webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
   .ico--gh{--i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z'/%3E%3C/svg%3E")}
   .ico--yt{--i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M5 4.5h14a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4H5a4 4 0 0 1-4-4v-7a4 4 0 0 1 4-4zM9.8 8.2v7.6l6.6-3.8z'/%3E%3C/svg%3E")}
-  .ico--ig{--i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M8 2h8a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V8a6 6 0 0 1 6-6zM8 4.2h8a3.8 3.8 0 0 1 3.8 3.8v8a3.8 3.8 0 0 1-3.8 3.8H8A3.8 3.8 0 0 1 4.2 16V8A3.8 3.8 0 0 1 8 4.2zM12 7a5 5 0 1 0 0 10a5 5 0 1 0 0-10zM12 9.1a2.9 2.9 0 1 0 0 5.8a2.9 2.9 0 1 0 0-5.8zM17.4 5.35a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 1 0 0-2.5z'/%3E%3C/svg%3E")}
   .badges{display:flex;gap:8px;flex-wrap:wrap}
   .badge{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;border:2px solid var(--ink);padding:3px 7px;background:var(--yellow)}
+  a.badge{font-size:11px;padding:7px 11px;color:var(--ink);text-decoration:none;box-shadow:3px 3px 0 var(--ink);transition:transform .1s,box-shadow .1s}
+  a.badge:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+  a.badge:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)}
   .badge--blue{background:var(--blue);color:#fff} .badge--pink{background:var(--pink);color:#fff} .badge--green{background:var(--green)}
+  a.badge--blue,a.badge--pink{color:#fff}
 
   /* lazy render below the fold: cheaper first paint */
   .lazy{content-visibility:auto;contain-intrinsic-size:1px 700px}
@@ -373,6 +379,7 @@
     font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
   .fcard__facts dt{opacity:.65}
   .fcard__facts dd{margin:0;font-weight:700}
+  .fcard__facts .fact--stack{flex-direction:column;align-items:flex-start;gap:2px}
   .fcard__main{padding:clamp(26px,4vw,52px);display:flex;flex-direction:column;justify-content:center;gap:24px;min-width:0}
   .fcard__q{margin:0}
   .fcard__q p{font-family:var(--display);font-weight:900;letter-spacing:-.03em;line-height:1.08;margin:0 0 16px;text-wrap:pretty}
@@ -424,6 +431,19 @@
   .inductee b{display:block;font-family:var(--display);font-weight:900;font-size:17px;letter-spacing:-.02em;text-transform:none;line-height:1.1;
     color:var(--ink);margin-bottom:3px;overflow-wrap:anywhere}
   .inductee s{display:block;color:#b00;font-weight:700;text-decoration-color:var(--pink);text-decoration-thickness:2px}
+  /* wall of shame: the leaderboard (/wall-of-shame/) and a page per product */
+  .shame{display:grid;gap:12px;max-width:720px;margin:0 auto}
+  .shame__row{display:flex;align-items:center;gap:16px;min-width:0;background:#fff;border:var(--bw) solid var(--ink);box-shadow:4px 4px 0 var(--ink);
+    padding:12px 16px;text-decoration:none;color:var(--ink);transition:transform .1s,box-shadow .1s}
+  .shame__row:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
+  .shame__rank{font-family:var(--display);font-weight:900;font-size:clamp(22px,3vw,32px);letter-spacing:-.04em;line-height:1;min-width:2.3ch;color:var(--pink);flex:none}
+  .shame__row:nth-child(1) .shame__rank{background:var(--ink);color:var(--yellow);padding:4px 6px;transform:rotate(-4deg)}
+  .shame__who{flex:1;min-width:0;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;line-height:1.4;color:#444}
+  .shame__who b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(17px,2vw,22px);letter-spacing:-.02em;text-transform:none;line-height:1.1;
+    color:var(--ink);margin-bottom:3px;overflow-wrap:anywhere}
+  .shame__row .kills{flex:none;max-width:44%}
+  .hero .kills--xl{display:inline-block;margin:0 0 22px;transform:rotate(-2deg)}
+  @media (hover:none){.shame__row:hover{transform:none;box-shadow:4px 4px 0 var(--ink)}}
   .fame__author{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(28px,5vw,56px)}
   .fame__author .kicker a{text-decoration:none;border-bottom:2px solid var(--pink)}
   @media (hover:none){.inductee:hover{transform:none;box-shadow:4px 4px 0 var(--ink)}}
@@ -573,7 +593,6 @@
   /* a link is a tap target too */
   @media (max-width:700px){
     .gcard__go{display:inline-block;padding:12px 0}
-    .foot__meta{line-height:2.2}
   }
 
   /* smallest phones: buy back the gutters */

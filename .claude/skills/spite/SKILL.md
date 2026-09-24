@@ -31,6 +31,7 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
    - Fetch the app's own site. Look for a pricing section, trial, seat cap, "Pro", "Team", "Enterprise". Any of these fails hard gate 2. Note "bring your own key" as allowed.
    - Fetch the HN or Reddit discussion, and the README or site if needed. Find the builder's own words for the grudge. Copy one sentence verbatim. No quote, no grudge, fails hard gate 1.
    - If the builder names the tool they're reacting to, record it, and fetch its pricing page for plan name, price, and URL. If unreachable, use a dated 2026 secondary source and set note `secondary`. Never guess a victim or a price; leave the field empty instead.
+   - `replaces.product` is the product's own name with no plan attached: `"name": "Wispr Flow Pro"` gets `"product": "Wispr Flow"`, `"Slack Pro"` and `"Slack AI"` both get `"Slack"`, `"Adobe Acrobat Standard"` gets `"Adobe Acrobat"`. Spell it the way the maker does, and the way it is already spelled in `data/apps.json` when the product is there (grep for it): the hall of shame groups on this string. Empty whenever `name` is empty.
    - Note builder name and handle. Set `open_source` true if the project has a public
      GitHub repo — the app's own URL or one linked from its landing page; that is the
      whole test, no licence check. Record that repo as `owner/name` in `repo`; if the
@@ -72,7 +73,7 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
 10. **Commit and push.** If step 8 listed anything, stage only the run's own files, never
     whatever else is in the working tree:
     ```
-    git add data/apps.json hall-of-fame 404.html sitemap.xml robots.txt queue/$(date +%F).json shorts/$(date +%F).json
+    git add data/apps.json hall-of-fame wall-of-shame 404.html sitemap.xml robots.txt queue/$(date +%F).json shorts/$(date +%F).json
     ```
     Commit in the log's voice, `List A, B and C` (every listed app's name), ending with the
     attribution line, then `git push`. If the push is rejected, `git pull --rebase` once and

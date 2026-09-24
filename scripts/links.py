@@ -47,7 +47,7 @@ def resolves(ref, page):
 def internal():
     """[(where, ref)] for every local href, src, sitemap entry and card link that points at nothing."""
     bad, n = [], 0
-    for page in [*ROOT.glob("*.html"), *ROOT.glob("hall-of-fame/**/*.html")]:
+    for page in [*ROOT.glob("*.html"), *ROOT.glob("hall-of-fame/**/*.html"), *ROOT.glob("wall-of-shame/**/*.html")]:
         text = page.read_text()
         refs = re.findall(r'(?:href|src)="([^"]+)"', text) + re.findall(r'http-equiv="refresh" content="\d+;url=([^"]+)"', text)
         for ref in refs:
@@ -284,7 +284,7 @@ def bury(slug):
         print(f"  {a['name']} is delisted. Its hall of fame page stays up, stamped.")
     APPS.write_text(json.dumps(apps, indent=2, ensure_ascii=False) + "\n")
     r = load("pages").build()
-    print(f"hall of fame rebuilt: {r['apps']} live apps, {r['dead']} taken down")
+    print(f"hall of fame rebuilt: {r['apps']} live apps, {r['dead']} taken down; wall of shame: {r['products']} products")
 
 if __name__ == "__main__":
     args = sys.argv[1:]
