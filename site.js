@@ -183,8 +183,9 @@
   });
 
   // Visitor counter: sessions since launch from the analytics worker (GET /total, see
-  // workers/analytics-proxy), plus one for this visit. The answer sits in localStorage for an
-  // hour so a visitor walking the site asks once; the seed shows if the worker can't be reached.
+  // workers/analytics-proxy), the same figure the analytics page shows. The answer sits in
+  // localStorage for an hour so a visitor walking the site asks once; the seed shows if the
+  // worker can't be reached.
   const odo = $('#odo');
   if (odo) {
     const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
@@ -206,7 +207,7 @@
       return n;
     };
     show(0);
-    total().then(n => roll(0, n + 1), () => roll(0, 48213));
+    total().then(n => roll(0, n), () => roll(0, 48213));
   }
 
   // Count-up stats when they scroll into view
