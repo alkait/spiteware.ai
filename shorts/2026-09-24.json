@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-24",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Wispr Flow wants $15 a month to hear you talk. Spokesman doesn't.",
+    "caption": "Fresh grudges: a $15-a-month dictation app, call recorders that bill monthly or send a bot to your meeting, and metronomes with a paywall, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macapps"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 24th.", "say": "September twenty-fourth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "spokesman",
+     "quote": "I built it because I wanted something like Wispr Flow, but that's a subscription and your voice goes to the cloud.",
+     "cues": [
+      {"cap": "Wispr Flow wants $15 a month", "say": "Whisper Flow wants fifteen dollars a month", "step": "badge"},
+      {"cap": "to type what you say.", "step": "badge"},
+      {"cap": "Arham:", "say": "[matter-of-fact] Ar-ham:", "step": "quote"},
+      {"cap": "“I built it because I wanted", "say": "[sarcastic] I built it because I wanted", "step": "quote"},
+      {"cap": "something like Wispr Flow,", "say": "something like Whisper Flow,", "step": "quote"},
+      {"cap": "but that's a subscription", "step": "quote"},
+      {"cap": "and your voice goes to the cloud.”", "step": "quote"},
+      {"cap": "Enter Spokesman.", "say": "[quick] Enter Spokesman.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "mc-rofone", "score": false,
+     "gripe": "Call recorders bill monthly or crash your meeting.",
+     "quote": "Most call recorders either send a bot into your meeting or charge you every month.",
+     "cues": [
+      {"cap": "Call recorders want rent", "step": "gripe"},
+      {"cap": "or a seat at your meeting.", "step": "gripe"},
+      {"cap": "Gabriele Partiti:", "say": "[matter-of-fact] Gabriele Par-tee-tee:", "step": "quote"},
+      {"cap": "“Most call recorders either send a bot", "say": "[sarcastic] Most call recorders either send a bot", "step": "quote"},
+      {"cap": "into your meeting", "step": "quote"},
+      {"cap": "or charge you every month.”", "step": "quote"},
+      {"cap": "So: mc.Rofone.", "say": "[quick] So: Microphone.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "ffmet", "score": false,
+     "gripe": "Metronome apps paywall basic features.",
+     "quote": "a useful tool should not interrupt you with irrelevant ads or ask you to pay for basic features.",
+     "cues": [
+      {"cap": "A metronome with a paywall.", "step": "gripe"},
+      {"cap": "Jake Heading:", "say": "[matter-of-fact] Jake Heading:", "step": "quote"},
+      {"cap": "“a useful tool should not interrupt you", "say": "[sarcastic] a useful tool should not interrupt you", "step": "quote"},
+      {"cap": "with irrelevant ads", "step": "quote"},
+      {"cap": "or ask you to pay for basic features.”", "step": "quote"},
+      {"cap": "Enter FFMet.", "say": "[quick] Enter F F Met.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

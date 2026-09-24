@@ -1,0 +1,21 @@
+{
+  "run": "2026-09-24",
+  "swept": "hn (48h), reddit rss (r/SideProject, r/selfhosted, r/vibecoding, r/indiehackers, r/webdev; r/opensource, r/macapps, r/ClaudeAI rate-limited), github; last30days not installed, skipped",
+  "raw_hits": 360,
+  "triaged": 26,
+  "candidates": [],
+  "dropped": [
+    "FR24 Weather Overlay, K-Maps, Roans-Terminal, Freecut, VoiceType, LivePaper, Uchiyomi, open-analytics, Posta, VegBatch, Pomodoro.in, FreeCoffee, live-video-chat: 'no subscription' / 'free alternative to X' is a feature line or description, never a stated reason for building",
+    "Yap (frigade.com): Frigade is YC W23 and has a pricing page; no grudge either",
+    "SkyTwin: open-core, 'Team and hosted tiers are planned'; account needed for your own inbox",
+    "WoodWright: pricing and sign-in in the nav, paid cloud AI credits; post is by the builder's brother",
+    "Zad: grudge is against ads and donation nags in free Quran apps, not a price; no victim",
+    "Radish calorie counter: $9.99 one-time App Store price",
+    "Brayer: paid Pro tier (batch exports, transparent backgrounds, cloud sync)",
+    "Shorts Factory Engine: sold as a $149 source licence",
+    "MacMemory: $19 one-time purchase",
+    "OnDevice Tools: reason is privacy, not price; ad-supported",
+    "ToolRoots: a directory with a Premium listing tier, not a tool",
+    "Attn: already listed"
+  ]
+}

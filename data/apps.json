@@ -3192,5 +3192,97 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-23"
+  },
+  {
+    "slug": "spokesman",
+    "name": "Spokesman",
+    "url": "https://github.com/arhamhi/spokesman",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow charges $15 a month to hear you think out loud. Spokesman hears it on-device, for nothing.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I built it because I wanted something like Wispr Flow, but that's a subscription and your voice goes to the cloud.",
+      "source": "https://github.com/arhamhi/spokesman"
+    },
+    "builder": {
+      "name": "Arham",
+      "handle": "arhamhi",
+      "url": "https://github.com/arhamhi"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "arhamhi/spokesman",
+    "spite_score": 10,
+    "added": "2026-09-24"
+  },
+  {
+    "slug": "mc-rofone",
+    "name": "mc.Rofone",
+    "url": "https://github.com/gabry-ts/mc.Rofone",
+    "icon": "📞",
+    "tagline": "Call recorders bill you monthly or send a bot to sit in your meeting. mc.Rofone does neither and charges nothing.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most call recorders either send a bot into your meeting or charge you every month.",
+      "source": "https://github.com/gabry-ts/mc.Rofone"
+    },
+    "builder": {
+      "name": "Gabriele Partiti",
+      "handle": "gabry-ts",
+      "url": "https://github.com/gabry-ts"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "gabry-ts/mc.Rofone",
+    "spite_score": 5,
+    "added": "2026-09-24"
+  },
+  {
+    "slug": "ffmet",
+    "name": "FFMet",
+    "url": "https://ffmet-free-forever.web.app/",
+    "icon": "🥁",
+    "tagline": "A metronome that keeps time without keeping a paywall. Tick, tock, no ads.",
+    "replaces": {
+      "name": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "These apps began with a simple frustration: a useful tool should not interrupt you with irrelevant ads or ask you to pay for basic features.",
+      "source": "https://free-forever-apps-au.web.app/"
+    },
+    "builder": {
+      "name": "Jake Heading",
+      "handle": "jakeheading",
+      "url": "https://github.com/jakeheading"
+    },
+    "tags": [
+      "web",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-09-24"
   }
 ]
