@@ -64,7 +64,7 @@
     <div class="doc__head">
       <span class="kicker">privacy, in plain words</span>
       <h1>We know <span class="hollow">almost</span> nothing about you.</h1>
-      <p class="doc__lede">No accounts, no ads, no newsletter, nothing to sell and nobody to sell it to. There is one tracker on this site, and this page says what it is. Last updated 23 September 2026.</p>
+      <p class="doc__lede">No accounts, no ads, no newsletter, nothing to sell and nobody to sell it to. There is one tracker on this site, and this page says what it is. Last updated 24 September 2026.</p>
     </div>
 
     <section class="doc__sec">
@@ -76,7 +76,7 @@
 
     <section class="doc__sec">
       <h2 class="dh"><span class="dh__n">02</span> What stays in your browser</h2>
-      <p>The visitor counter in the footer is fake. It keeps a number in your browser's local storage (<b>sw_visits</b>) so it can tick up for you, and the analytics page remembers the date range you picked the same way. Neither is ever sent anywhere. Clearing your site data clears both.</p>
+      <p>The visitor counter in the footer is real: the number of visits Google Analytics has counted since launch, fetched from the same Cloudflare Worker as the analytics page and kept in your browser's local storage (<b>sw_total</b>) for an hour so it isn't fetched again on every page. The analytics page remembers the date range you picked the same way. Neither is ever sent anywhere. Clearing your site data clears both.</p>
     </section>
 
     <section class="doc__sec">
@@ -129,10 +129,10 @@
 <footer>
   <div class="wrap foot">
     <div class="foot__l">
-      <div class="counter" title="You are visitor number…">
+      <a class="counter" href="/analytics.html" title="Visits since launch. Click for the rest of the numbers.">
         <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
-        <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
-      </div>
+        <div class="counter__l">visits so far<br>real this time<br>see the numbers</div>
+      </a>
       <nav class="badges" aria-label="Footer">
         <a class="badge" href="/privacy.html">privacy</a>
         <a class="badge badge--blue" href="/contact.html">contact</a>

@@ -182,16 +182,31 @@
     });
   });
 
-  // Visitor counter (placeholder until backend exists): seed + per-browser increment
+  // Visitor counter: sessions since launch from the analytics worker (GET /total, see
+  // workers/analytics-proxy), plus one for this visit. The answer sits in localStorage for an
+  // hour so a visitor walking the site asks once; the seed shows if the worker can't be reached.
   const odo = $('#odo');
   if (odo) {
-    let n = 48213;
-    try { const k='sw_visits'; const v=(+localStorage.getItem(k)||0)+1; localStorage.setItem(k,v); n += v; } catch(e){}
+    const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+    const TOTAL_URL = (LOCAL ? 'http://localhost:8788' : 'https://stats.spiteware.ai') + '/total';
+    const TTL = 3600000, k = 'sw_total';
     const show = v => { odo.innerHTML = String(v).padStart(6,'0').split('').map(d=>`<span>${d}</span>`).join(''); };
+    const roll = (from, n) => {
+      const start = performance.now(), dur = 900;
+      const tick = now => { const p=Math.min(1,(now-start)/dur), e=1-Math.pow(1-p,3); show(Math.round(from+(n-from)*e)); if(p<1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    };
+    const total = async () => {
+      try { const c = JSON.parse(localStorage.getItem(k)); if (c && Date.now() - c.t < TTL) return c.n; } catch(e){}
+      const res = await fetch(TOTAL_URL);
+      if (!res.ok) throw new Error(res.status);
+      const n = (await res.json()).sessions;
+      if (!Number.isFinite(n)) throw new Error('no sessions');
+      try { localStorage.setItem(k, JSON.stringify({ n, t: Date.now() })); } catch(e){}
+      return n;
+    };
     show(0);
-    const start = performance.now(), dur = 900;
-    const tick = now => { const p=Math.min(1,(now-start)/dur), e=1-Math.pow(1-p,3); show(Math.round(n*e)); if(p<1) requestAnimationFrame(tick); };
-    requestAnimationFrame(tick);
+    total().then(n => roll(0, n + 1), () => roll(0, 48213));
   }
 
   // Count-up stats when they scroll into view

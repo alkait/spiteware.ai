@@ -1,9 +1,12 @@
 // Proxies the Google Analytics 4 Data API for /analytics.html, so the service account key
 // never reaches a browser. One GET /analytics?period=… runs every report the page shows,
-// and the answer is cached for three hours.
+// and the answer is cached for three hours. GET /total is the footer counter on every page:
+// sessions since launch, one report, cached for an hour at the edge and in the browser.
 // Secrets: GA4_PROPERTY_ID, GCP_CLIENT_EMAIL, GCP_PRIVATE_KEY. Var: GA4_TIMEZONE.
 
 const CACHE_TTL = 10800;
+const TOTAL_TTL = 3600;
+const LAUNCH_DATE = '2026-09-06';
 const TOKEN_URI = 'https://oauth2.googleapis.com/token';
 const PERIODS = { today: [0, 1, 'Today'], yesterday: [1, 1, 'Yesterday'], '7d': [0, 7, 'Last 7 days'], '30d': [0, 30, 'Last 30 days'], '90d': [0, 90, 'Last 90 days'] };
 
@@ -12,6 +15,7 @@ export default {
     const url = new URL(request.url);
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders() });
     if (url.pathname === '/analytics' && request.method === 'GET') return handleAnalytics(url, ctx, env);
+    if (url.pathname === '/total' && request.method === 'GET') return handleTotal(url, ctx, env);
     return new Response('Not Found', { status: 404 });
   }
 };
@@ -115,6 +119,34 @@ async function handleAnalytics(url, ctx, env) {
 
     return jsonResponse({ ...result, cached: false });
 
+  } catch (error) {
+    if (error instanceof ApiError) return jsonResponse({ error: 'GA4 API error', status: error.status, details: error.message }, error.status);
+    return jsonResponse({ error: 'Internal server error', message: error.message }, 500);
+  }
+}
+
+// { sessions, since, fetchTime }: what site.js reads for the footer counter. Change one, change the other.
+async function handleTotal(url, ctx, env) {
+  try {
+    const cacheRequest = new Request(`${url.origin}/total?_ck=ga4-total-v1`);
+    const cached = await caches.default.match(cacheRequest);
+    if (cached) return jsonResponse({ ...(await cached.json()), cached: true }, 200, TOTAL_TTL);
+
+    const accessToken = await getAccessToken(env);
+    const res = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${env.GA4_PROPERTY_ID}:runReport`, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ dateRanges: [{ startDate: LAUNCH_DATE, endDate: 'today' }], metrics: [{ name: 'sessions' }] })
+    });
+    if (!res.ok) throw new ApiError(res.status, await res.text());
+    const data = await res.json();
+    const row = (data.rows || [])[0];
+    const result = { sessions: parseInt((row && row.metricValues[0].value) || 0), since: LAUNCH_DATE, fetchTime: new Date().toISOString() };
+
+    ctx.waitUntil(caches.default.put(cacheRequest, new Response(JSON.stringify(result), {
+      headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${TOTAL_TTL}` }
+    })));
+    return jsonResponse({ ...result, cached: false }, 200, TOTAL_TTL);
   } catch (error) {
     if (error instanceof ApiError) return jsonResponse({ error: 'GA4 API error', status: error.status, details: error.message }, error.status);
     return jsonResponse({ error: 'Internal server error', message: error.message }, 500);
@@ -304,9 +336,10 @@ function corsHeaders() {
   };
 }
 
-function jsonResponse(data, status = 200) {
+// `maxAge` lets the browser keep the answer too, so a visitor walking the site asks once
+function jsonResponse(data, status = 200, maxAge = 0) {
   return new Response(JSON.stringify(data, null, 2), {
     status,
-    headers: { 'Content-Type': 'application/json', ...corsHeaders() }
+    headers: { 'Content-Type': 'application/json', ...(maxAge ? { 'Cache-Control': `public, max-age=${maxAge}` } : {}), ...corsHeaders() }
   });
 }

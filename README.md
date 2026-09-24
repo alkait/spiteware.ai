@@ -36,7 +36,7 @@ Then open http://localhost:4321/. Opening `index.html` from `file://` will not l
 
 ## The analytics worker
 
-`analytics.html` calls `https://stats.spiteware.ai/analytics`, which is `workers/analytics-proxy/` deployed to Cloudflare. It and the submit worker are the only parts of the site that aren't static, and they deploy on their own: pushing to `main` doesn't touch it.
+`analytics.html` calls `https://stats.spiteware.ai/analytics`, which is `workers/analytics-proxy/` deployed to Cloudflare. The footer counter on every page calls `/total` on the same worker: sessions since launch, one report, cached for an hour at the edge and, through `Cache-Control` and `localStorage` (`sw_total`), in the browser. It and the submit worker are the only parts of the site that aren't static, and they deploy on their own: pushing to `main` doesn't touch it.
 
 One-time setup:
 

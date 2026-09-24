@@ -225,10 +225,10 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
 <footer>
   <div class="wrap foot">
     <div class="foot__l">
-      <div class="counter" title="You are visitor number…">
+      <a class="counter" href="/analytics.html" title="Visits since launch. Click for the rest of the numbers.">
         <div class="odo" id="odo" aria-live="polite" aria-label="visitor counter"></div>
-        <div class="counter__l">this counter<br>is fake<br>but it looks great</div>
-      </div>
+        <div class="counter__l">visits so far<br>real this time<br>see the numbers</div>
+      </a>
       <nav class="badges" aria-label="Footer">
         <a class="badge" href="/privacy.html">privacy</a>
         <a class="badge badge--blue" href="/contact.html">contact</a>
