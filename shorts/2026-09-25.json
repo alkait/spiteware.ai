@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-25",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 5,
+  "post": {
+    "title": "FlightConnections bills $39.99 a year. FSAtlas doesn't.",
+    "caption": "Fresh grudges: a $39.99-a-year map of where the planes go, a $4.99-a-month hotkey to step away from a call, and Photoshop at $22.99 a month, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "flightsim"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 25th.", "say": "September twenty-fifth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "fsatlas",
+     "quote": "without needing a paid subscription like FlightConnections.",
+     "cues": [
+      {"cap": "FlightConnections wants $39.99 a year", "say": "FlightConnections wants thirty-nine ninety-nine a year", "step": "badge"},
+      {"cap": "to show you where the planes go.", "step": "badge"},
+      {"cap": "Leofric99:", "say": "[matter-of-fact] Lee-oh-frick ninety-nine:", "step": "quote"},
+      {"cap": "“without needing a paid subscription", "say": "[sarcastic] without needing a paid subscription", "step": "quote"},
+      {"cap": "like FlightConnections.”", "step": "quote"},
+      {"cap": "Enter FSAtlas. Self-hosted.", "say": "[quick] Enter F S Atlas. Self-hosted.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "liveloop",
+     "quote": "CamLoop already does this, but the hotkeys are in its $4.99/month plan.", 
+     "cues": [
+      {"cap": "CamLoop wants $4.99 a month", "say": "CamLoop wants four ninety-nine a month", "step": "badge"},
+      {"cap": "for a hotkey.", "step": "badge"},
+      {"cap": "adrbn:", "say": "[matter-of-fact] A D R B N:", "step": "quote"},
+      {"cap": "“CamLoop already does this,", "say": "[sarcastic] CamLoop already does this,", "step": "quote"},
+      {"cap": "but the hotkeys are in its $4.99/month plan.", "say": "but the hotkeys are in its four ninety-nine a month plan.", "step": "quote"},
+      {"cap": "So: LiveLoop.", "say": "[quick] So: LiveLoop.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "photon-studio",
+     "quote": "I spent $2,000 to implement a photoshop replacement and cancel my own Adobe subscription.",
+     "cues": [
+      {"cap": "Photoshop wants $22.99 a month,", "say": "Photoshop wants twenty-two ninety-nine a month,", "step": "badge"},
+      {"cap": "forever.", "step": "badge"},
+      {"cap": "AsejereDaDeje:", "say": "[matter-of-fact] Ah-seh-heh-reh Dah Deh-heh:", "step": "quote"},
+      {"cap": "“I spent $2,000", "say": "[sarcastic] I spent two thousand dollars", "step": "quote"},
+      {"cap": "to implement a photoshop replacement", "step": "quote"},
+      {"cap": "and cancel my own Adobe subscription.”", "step": "quote"},
+      {"cap": "Enter Photon Studio.", "say": "[quick] Enter Photon Studio.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus five more fresh today,", "say": "[upbeat] Plus five more fresh today,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

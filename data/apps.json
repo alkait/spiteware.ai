@@ -3391,5 +3391,260 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-09-24"
+  },
+  {
+    "slug": "fsatlas",
+    "name": "FSAtlas",
+    "url": "https://github.com/Leofric99/fsatlas",
+    "icon": "✈️",
+    "tagline": "FlightConnections bills $39.99 a year to show you where the planes go. FSAtlas plots 170,000 real routes on your own server and bills nobody.",
+    "replaces": {
+      "name": "FlightConnections Premium",
+      "product": "FlightConnections",
+      "price": "$39.99/yr",
+      "source": "https://www.flightconnections.com/premium"
+    },
+    "grudge": {
+      "quote": "It's designed for flight simmers, virtual airline pilots, and aviation hobbyists who want realistic route inspiration for their next flight with powerful filters for MSFS, X-Plane, or Prepar3D without needing a paid subscription like FlightConnections.",
+      "source": "https://www.reddit.com/r/selfhosted/comments/1wpe6we/fsatlas_v211_a_realworld_flight_route_finder/"
+    },
+    "builder": {
+      "name": "Leofric99",
+      "handle": "Leofric99",
+      "url": "https://github.com/Leofric99"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Leofric99/fsatlas",
+    "spite_score": 10,
+    "added": "2026-09-25"
+  },
+  {
+    "slug": "liveloop",
+    "name": "LiveLoop",
+    "url": "https://github.com/adrbn/liveloop",
+    "icon": "🔁",
+    "tagline": "CamLoop wants $4.99 a month before it hands you a hotkey to step away from your own call. LiveLoop loops you, ships the hotkey and never asks for a card.",
+    "replaces": {
+      "name": "CamLoop Pro",
+      "product": "CamLoop",
+      "price": "$4.99/mo",
+      "source": "https://camloop.app"
+    },
+    "grudge": {
+      "quote": "CamLoop already does this, but the hotkeys are in its $4.99/month plan. I wanted something free, so I made one and put the code on GitHub.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wpdznn/i_built_a_free_mac_app_that_loops_a_few_seconds/"
+    },
+    "builder": {
+      "name": "adrbn",
+      "handle": "adrbn",
+      "url": "https://github.com/adrbn"
+    },
+    "tags": [
+      "macos",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "adrbn/liveloop",
+    "spite_score": 8,
+    "added": "2026-09-25"
+  },
+  {
+    "slug": "photon-studio",
+    "name": "Photon Studio",
+    "url": "https://tenzen.studio/photon/",
+    "icon": "🖼️",
+    "tagline": "Photoshop is $22.99 a month, forever. Photon Studio does layers, masks, Liquify and PSD files on your own machine, and the bill was one cancelled Adobe subscription.",
+    "replaces": {
+      "name": "Adobe Photoshop",
+      "product": "Adobe Photoshop",
+      "price": "$22.99/mo",
+      "source": "https://justcreative.com/adobe-creative-cloud-photoshop-illustrator-cost/"
+    },
+    "grudge": {
+      "quote": "My original post blew up after I mentioned that I spent $2,000 to implement a photoshop replacement and cancel my own Adobe subscription.",
+      "source": "https://www.reddit.com/r/vibecoding/comments/1wpaies/my_vibecoded_photoshop_just_crossed_20k_users/"
+    },
+    "builder": {
+      "name": "AsejereDaDeje",
+      "handle": "AsejereDaDeje",
+      "url": "https://www.reddit.com/user/AsejereDaDeje/"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "images"
+    ],
+    "open_source": false,
+    "vibe_coded": true,
+    "repo": "",
+    "spite_score": 8,
+    "added": "2026-09-25"
+  },
+  {
+    "slug": "fullpage-screenshot",
+    "name": "Fullpage Screenshot",
+    "url": "https://chromewebstore.google.com/detail/fullpage-screenshot/oancbefogdnnbfclaimdkplonkpgdpdj",
+    "icon": "📸",
+    "tagline": "GoFullPage charges $12 a year to let you draw an arrow on your own screenshot. Fullpage Screenshot gives you the arrows, the redaction and the PDF for nothing, and nothing leaves your machine.",
+    "replaces": {
+      "name": "GoFullPage Premium",
+      "product": "GoFullPage",
+      "price": "$12/yr",
+      "source": "https://tryhoverify.com/compare/hoverify-vs-gofullpage/"
+    },
+    "grudge": {
+      "quote": "I built Fullpage Screenshot because I wanted to capture a whole webpage and mark it up without paying to unlock the editor.",
+      "source": "https://news.ycombinator.com/item?id=49827649"
+    },
+    "builder": {
+      "name": "Vinyas",
+      "handle": "vinyasvi",
+      "url": "https://news.ycombinator.com/user?id=vinyasvi"
+    },
+    "tags": [
+      "browser-extension",
+      "local-first",
+      "images"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 6,
+    "added": "2026-09-25"
+  },
+  {
+    "slug": "muro",
+    "name": "Muro",
+    "url": "https://murowallpaper.com",
+    "icon": "🌊",
+    "tagline": "Live wallpaper apps keep the good wallpapers behind a Pro tier. Muro plays real 4K video on your desktop, lock screen and screen saver, with no tier in sight.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "But most of the live wallpaper apps I tried came with a catch. Usually a subscription, or a Pro tier holding the good wallpapers hostage.",
+      "source": "https://github.com/MrRockySL/Muro"
+    },
+    "builder": {
+      "name": "MrRockySL",
+      "handle": "MrRockySL",
+      "url": "https://github.com/MrRockySL"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "MrRockySL/Muro",
+    "spite_score": 5,
+    "added": "2026-09-25"
+  },
+  {
+    "slug": "lith",
+    "name": "Lith",
+    "url": "https://github.com/skarn03/lith",
+    "icon": "🎞️",
+    "tagline": "Film looks, grain, halation and RAW edits on your own disk, with no monthly ticket to somebody's photo cloud.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "You shouldn't have to pay big tech companies expensive subscriptions to make your photos look the way you want.",
+      "source": "https://github.com/skarn03/lith"
+    },
+    "builder": {
+      "name": "skarn03",
+      "handle": "skarn03",
+      "url": "https://github.com/skarn03"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "skarn03/lith",
+    "spite_score": 5,
+    "added": "2026-09-25"
+  },
+  {
+    "slug": "kairos",
+    "name": "Kairos",
+    "url": "https://github.com/justynberk/kairos",
+    "icon": "⏱️",
+    "tagline": "The top Pomodoro apps on the Mac App Store sell you your own statistics on a subscription. Kairos is a dial, a timeline and a single HTML file.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "It skips the subscriptions, paywalled stats and full-screen interruptions.",
+      "source": "https://github.com/justynberk/kairos"
+    },
+    "builder": {
+      "name": "justynberk",
+      "handle": "justynberk",
+      "url": "https://github.com/justynberk"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "justynberk/kairos",
+    "spite_score": 5,
+    "added": "2026-09-25"
+  },
+  {
+    "slug": "trace",
+    "name": "Trace",
+    "url": "https://mandlcho.github.io/camera-trace/",
+    "icon": "✏️",
+    "tagline": "Tracing apps want a recurring subscription to hold a picture over your camera. Trace does it in the browser, keeps your photos on the device and charges nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "A free, local-first artwork tracing tool for the browser, built as an alternative to tracing apps with expensive recurring subscriptions.",
+      "source": "https://github.com/mandlcho/camera-trace"
+    },
+    "builder": {
+      "name": "mandlcho",
+      "handle": "mandlcho",
+      "url": "https://github.com/mandlcho"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "mandlcho/camera-trace",
+    "spite_score": 5,
+    "added": "2026-09-25"
   }
 ]
