@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-26",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Wispr Flow bills $15 a month. Whisper Free doesn't.",
+    "caption": "One fresh grudge: $15 a month to turn your voice into text, replaced by someone annoyed enough to build the free, fully local version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "dictation"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 26th.", "say": "September twenty-sixth.", "step": "date"},
+      {"cap": "One new grudge.", "step": "count"}]},
+    {"scene": "app", "slug": "whisper-free",
+     "quote": "Wispr Flow is a great product, but it's a paid cloud service.",
+     "cues": [
+      {"cap": "Wispr Flow wants $15 a month", "say": "Whisper Flow wants fifteen dollars a month", "step": "badge"},
+      {"cap": "to type what you say.", "step": "badge"},
+      {"cap": "Shero:", "say": "[matter-of-fact] Sheh-roh:", "step": "quote"},
+      {"cap": "“Wispr Flow is a great product,", "say": "[sarcastic] Whisper Flow is a great product,", "step": "quote"},
+      {"cap": "but it's a paid cloud service.”", "step": "quote"},
+      {"cap": "So: Whisper Free. Runs on your machine.", "say": "[quick] So: Whisper Free. Runs on your machine.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

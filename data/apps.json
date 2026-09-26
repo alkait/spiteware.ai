@@ -3646,5 +3646,37 @@
     "repo": "mandlcho/camera-trace",
     "spite_score": 5,
     "added": "2026-09-25"
+  },
+  {
+    "slug": "whisper-free",
+    "name": "Whisper Free",
+    "url": "https://github.com/SheroAbi/whisper-free",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow bills $15 a month to type what you say. Whisper Free does it on your own machine and never sends an invoice.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "Wispr Flow is a great product, but it's a paid cloud service.",
+      "source": "https://github.com/SheroAbi/whisper-free"
+    },
+    "builder": {
+      "name": "Shero",
+      "handle": "SheroAbi",
+      "url": "https://github.com/SheroAbi"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "SheroAbi/whisper-free",
+    "spite_score": 8,
+    "added": "2026-09-26"
   }
 ]

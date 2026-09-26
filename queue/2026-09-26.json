@@ -1,0 +1,27 @@
+{
+  "run": "2026-09-26",
+  "swept": "hn (48h, 281 Show HN), reddit json (r/SideProject, r/selfhosted, r/vibecoding, r/webdev, r/indiehackers; r/opensource, r/macapps, r/ClaudeAI rate-limited 429), github search, last30days (3 days)",
+  "raw_hits": 362,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "OOMU (oomu.ai): paid 'OOMU Control' tier for organizations and a 'Talk to us' sales page, open-core by the same maker (Eldris)",
+    "LinkVM: a link-in-bio page needs an account before you can try it",
+    "RentBook: free plan capped at 3 units, paid Pro upgrade planned",
+    "TagNod: 'Free alternative to MacroDroid' is a tagline, no grudge sentence",
+    "Univault: 'status: in design', no release, no code to run",
+    "MarginDesk: 'no subscription' is positioning, no stated reason for building",
+    "Hostoryx: upsells a paid custom setup service on Upwork; no grudge",
+    "Papora: the grudge is about sign-up walls and server-side PDFs, not price; 'no subscription tier' is a feature line",
+    "Pawdit: '100% Free Core' implies paid extras, and the link is an Instagram page",
+    "CalmMate: iOS app with no link in the post; 'no paywall' is in the title only",
+    "hidnr (ptoronik/hidnr): empty repo, Reddit post removed, nothing to quote",
+    "Little Memory 2.0: premium upgrade, lifetime or subscription",
+    "Hamilton: paid Play Store app",
+    "Gotcha RSS: $7.99 lifetime",
+    "Jexxa: perpetual licence, paid",
+    "MemoryNotch, Sesku, Storia, Shelf, HocusFocus, PitchDrops, free resume builder, Learn SQL (sql-easy.com): no price grudge anywhere in post, comments or site",
+    "Personal Jarvis, BlazeBot, SimplyPraise, Zeph, Plux, RizzFit, WCAG checker: dropped yesterday for the same reasons, unchanged",
+    "search (WebKit browser for Mac, via last30days): no grudge; Conversations going free on Google Play: an existing app changing price, not a new build"
+  ]
+}
