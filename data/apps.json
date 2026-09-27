@@ -3678,5 +3678,37 @@
     "repo": "SheroAbi/whisper-free",
     "spite_score": 8,
     "added": "2026-09-26"
+  },
+  {
+    "slug": "sish-form-mailer",
+    "name": "SiSH Form Mailer",
+    "url": "https://github.com/kellenwiltshire/sish-form-mailer",
+    "icon": "📨",
+    "tagline": "Formspree's free plan taps out at 50 submissions a month. SiSH Form Mailer takes every one of them on your own server, and its builder learned Go on the way.",
+    "replaces": {
+      "name": "Formspree Personal",
+      "product": "Formspree",
+      "price": "$10/mo",
+      "source": "https://formspree.io/plans"
+    },
+    "grudge": {
+      "quote": "I had been using Formspree, but I was really running into issues keeping it free.",
+      "source": "https://www.reddit.com/r/webdev/comments/1wqrifu/i_wanted_to_learn_go_without_ai_i_built_sish_form/"
+    },
+    "builder": {
+      "name": "Kellen Wiltshire",
+      "handle": "kellenwiltshire",
+      "url": "https://github.com/kellenwiltshire"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "forms"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "kellenwiltshire/sish-form-mailer",
+    "spite_score": 8,
+    "added": "2026-09-27"
   }
 ]

@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-27",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Formspree wants $10 a month. SiSH Form Mailer doesn't.",
+    "caption": "One fresh grudge: $10 a month to forward a contact form, replaced by someone annoyed enough to self-host the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "selfhosted", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 27th.", "say": "September twenty-seventh.", "step": "date"},
+      {"cap": "One new grudge.", "step": "count"}]},
+    {"scene": "app", "slug": "sish-form-mailer",
+     "quote": "I had been using Formspree, but I was really running into issues keeping it free.",
+     "cues": [
+      {"cap": "Formspree wants $10 a month", "say": "Form-spree wants ten dollars a month", "step": "badge"},
+      {"cap": "to forward a contact form.", "step": "badge"},
+      {"cap": "Kellen Wiltshire:", "say": "[matter-of-fact] Kellen Wiltshire:", "step": "quote"},
+      {"cap": "“I had been using Formspree,", "say": "[sarcastic] I had been using Form-spree,", "step": "quote"},
+      {"cap": "but I was really running into issues", "step": "quote"},
+      {"cap": "keeping it free.”", "step": "quote"},
+      {"cap": "So: SiSH Form Mailer. On your own server.", "say": "[quick] So: Sish Form Mailer. On your own server.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
