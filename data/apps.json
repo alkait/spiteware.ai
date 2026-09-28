@@ -3710,5 +3710,69 @@
     "repo": "kellenwiltshire/sish-form-mailer",
     "spite_score": 8,
     "added": "2026-09-27"
+  },
+  {
+    "slug": "aldine",
+    "name": "Aldine",
+    "url": "https://github.com/trahloff/Aldine",
+    "icon": "📜",
+    "tagline": "Overleaf wants $25 a month before your co-author gets track changes. Aldine is the whole collaborative LaTeX editor in two containers, and nothing in it has a price.",
+    "replaces": {
+      "name": "Overleaf Standard",
+      "product": "Overleaf",
+      "price": "$25/mo",
+      "source": "https://www.overleaf.com/user/subscription/plans"
+    },
+    "grudge": {
+      "quote": "Most need a paid subscription service to enable proper collaboration, are clunky, and shove distracting non-features in your face.",
+      "source": "https://news.ycombinator.com/item?id=49865948"
+    },
+    "builder": {
+      "name": "Tobias Rahloff",
+      "handle": "trahloff",
+      "url": "https://github.com/trahloff"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "trahloff/Aldine",
+    "spite_score": 8,
+    "added": "2026-09-28"
+  },
+  {
+    "slug": "git-writer",
+    "name": "Git-Writer",
+    "url": "https://github.com/jotalac/git-writer",
+    "icon": "📝",
+    "tagline": "Obsidian Sync is $5 a month to get your notes onto your phone. Git-Writer syncs them through a git repo you already have, on five platforms, for nothing.",
+    "replaces": {
+      "name": "Obsidian Sync",
+      "product": "Obsidian",
+      "price": "$5/mo",
+      "source": "https://obsidian.md/pricing"
+    },
+    "grudge": {
+      "quote": "I wanted a simple, private way to take notes on my laptop and sync them across my other devices (like my phone and Android e-ink tablet) without paying for a subscription or handing my data over to big corporations like Google or Microsoft.",
+      "source": "https://www.reddit.com/r/macapps/comments/1wrt8gh/os_gitwriter_a_crossplatform_markdown_notetaking/"
+    },
+    "builder": {
+      "name": "Josef Talač",
+      "handle": "jotalac",
+      "url": "https://github.com/jotalac"
+    },
+    "tags": [
+      "local-first",
+      "privacy",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "jotalac/git-writer",
+    "spite_score": 8,
+    "added": "2026-09-28"
   }
 ]

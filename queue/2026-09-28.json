@@ -1,0 +1,29 @@
+{
+  "run": "2026-09-28",
+  "swept": "hn (48h, 191 Show HN), reddit json (r/SideProject, r/macapps, r/vibecoding, r/opensource; r/selfhosted, r/webdev, r/ClaudeAI rate-limited 429; post pages 403 during verification), github search, last30days (3 days)",
+  "raw_hits": 282,
+  "triaged": 16,
+  "candidates": [],
+  "dropped": [
+    "Beauty (markdown.beauty): editor is free but iCloud sync is a paid subscription (Beauty Maximus)",
+    "fizzdoc: free and Apache-2.0, but the stated reason is privacy (files on someone else's server), not a price; the paid-plans column is a comparison table, not a grudge",
+    "Soundsible: 'alternative to paid music services' is the title only; the one price line is about Apple's dev account, not a victim",
+    "NotionManager: free tier plus a paid lifetime licence",
+    "Dicty: Pro $4/mo and a $99 lifetime tier on its own site",
+    "Squint: Plus is $10/month and free needs an email sign-in",
+    "LunarClip: 'free plan' implies paid plans; grudge is upload queues more than price",
+    "Voxa: BYO-key dictation, but no grudge anywhere in the post or README",
+    "r3: local alternative to Claude Artifacts, reason is workflow, not price",
+    "OmniWM: grudge is stacking several tiling tools, not paying for them",
+    "HS Deck Tracker: built because Arcane Tracker was discontinued, not over a price",
+    "Snaply: privacy-first image tools; grudge is uploads, not price",
+    "yt-dlp clip GUI (mehambas): built to avoid downloading whole videos, no price grudge",
+    "Docspira: no grudge stated",
+    "CoordMap: no grudge stated",
+    "Screenshot beautifier (r/SideProject): the only price quote is a commenter's, and the post itself was unreachable (Reddit 403)",
+    "CV rewriter extension (r/SideProject): BYO key, no grudge stated; post unreachable",
+    "Pawdit: already dropped on 2026-09-26",
+    "Volna, Loop (clipyouredit): already judged on 2026-09-27",
+    "Billed, Clipbara, Morning Press, FileWorks, Outie, €14 Git workspace: paid, one-time purchase or no price grudge"
+  ]
+}

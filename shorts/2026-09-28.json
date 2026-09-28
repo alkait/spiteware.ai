@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-28",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Overleaf wants $25 a month. Aldine doesn't.",
+    "caption": "Two fresh grudges: a paywall on LaTeX collaboration and a subscription to sync your own notes, both replaced by people annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "latex", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 28th.", "say": "September twenty-eighth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "aldine",
+     "quote": "Most need a paid subscription service to enable proper collaboration", "cut": true,
+     "cues": [
+      {"cap": "Overleaf wants $25 a month", "say": "Overleaf wants twenty-five dollars a month", "step": "badge"},
+      {"cap": "so your co-author can edit too.", "step": "badge"},
+      {"cap": "Tobias Rahloff:", "say": "[matter-of-fact] Tobias Rah-loff:", "step": "quote"},
+      {"cap": "“Most need a paid subscription service", "say": "[sarcastic] Most need a paid subscription service", "step": "quote"},
+      {"cap": "to enable proper collaboration…”", "say": "to enable proper collaboration.", "step": "quote"},
+      {"cap": "So: Aldine. Two containers.", "say": "[quick] So: All-dine. Two containers.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "git-writer",
+     "quote": "without paying for a subscription or handing my data over to big corporations like Google or Microsoft.",
+     "cues": [
+      {"cap": "Obsidian Sync wants $5 a month", "say": "Obsidian Sync wants five dollars a month", "step": "badge"},
+      {"cap": "to put your notes on your phone.", "step": "badge"},
+      {"cap": "Josef Talač:", "say": "[matter-of-fact] Yosef Tah-lach:", "step": "quote"},
+      {"cap": "“without paying for a subscription", "say": "[sarcastic] without paying for a subscription", "step": "quote"},
+      {"cap": "or handing my data over to big corporations", "step": "quote"},
+      {"cap": "like Google or Microsoft.”", "step": "quote"},
+      {"cap": "So: Git-Writer. Your own repo.", "say": "[quick] So: Git Writer. Your own repo.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
