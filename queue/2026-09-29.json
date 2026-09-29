@@ -1,0 +1,21 @@
+{
+  "run": "2026-09-29",
+  "swept": "hn (48h, 221 Show HN), reddit json (r/SideProject, r/selfhosted, r/vibecoding; r/opensource, r/macapps, r/ClaudeAI rate-limited 429; post pages blocked during verification), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 300,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "ShotCandy: MIT and free, but no grudge; 'no paywall' is a feature blurb and no paid tool is named anywhere",
+    "metadata'nt: 'No subscription. No telemetry.' is a feature line, no reason given, no victim",
+    "Dawnloder: no grudge, account and repo made the same day, thin yt-dlp wrapper",
+    "local-ai-animated-videos: repo is a two-line README, no app",
+    "GoTrivia: 'no signup, no ads' only, no price grudge or victim",
+    "Voxa, Dicty, NotionManager, Squint, Beauty: already judged on 2026-09-28",
+    "InkVec Studio: already dropped on 2026-09-20",
+    "Paragon Strength: builder charges coaches, 'for much less' than the big apps",
+    "refern: offline Pinterest/Milanote, reason is local storage, not a price",
+    "terminal lift: one-time purchase",
+    "Flo State: grudge is Electron memory use, not price",
+    "Uploaf: built because Tenor killed its API, not a price"
+  ]
+}

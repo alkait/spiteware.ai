@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-29",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "Speechify wants $29 a month. Earful reads for free.",
+    "caption": "Fresh grudges against a NotebookLM subscription, a text-to-speech bill and a laptop alarm with paid upgrades, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "notebooklm"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 29th.", "say": "September twenty-ninth.", "step": "date"},
+      {"cap": "Five new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "knownote",
+     "quote": "I really didn't have spare money in my wallet to subscribe",
+     "cut": true,
+     "cues": [
+      {"cap": "Google AI Pro is $19.99 a month", "say": "Google A I Pro is nineteen ninety-nine a month", "step": "badge"},
+      {"cap": "for the full NotebookLM.", "say": "for the full Notebook L M.", "step": "badge"},
+      {"cap": "MrSibe:", "say": "[matter-of-fact] Mister Sibe:", "step": "quote"},
+      {"cap": "“I really didn't have spare money", "say": "[sarcastic] I really didn't have spare money", "step": "quote"},
+      {"cap": "in my wallet to subscribe…”", "say": "in my wallet to subscribe.", "step": "quote"},
+      {"cap": "So: KnowNote. Double-click it.", "say": "[quick] So: Know Note. Double-click it.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "earful",
+     "quote": "The popular reading apps lock the basics behind a subscription",
+     "cut": true,
+     "cues": [
+      {"cap": "Speechify wants $29 a month", "say": "Speechify wants twenty-nine dollars a month", "step": "badge"},
+      {"cap": "to read text out loud.", "step": "badge"},
+      {"cap": "Bilal:", "say": "[matter-of-fact] Bee-lahl:", "step": "quote"},
+      {"cap": "“The popular reading apps lock the basics", "say": "[sarcastic] The popular reading apps lock the basics", "step": "quote"},
+      {"cap": "behind a subscription…”", "say": "behind a subscription.", "step": "quote"},
+      {"cap": "So: Earful. On your device.", "say": "[quick] So: Earful. On your device.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "yowl",
+     "quote": "A free alternative to apps like Unplug Alarm, which has paid upgrades.",
+     "cues": [
+      {"cap": "Unplug Alarm wants $11.99 a year", "say": "Unplug Alarm wants eleven ninety-nine a year", "step": "badge"},
+      {"cap": "to guard your own laptop.", "step": "badge"},
+      {"cap": "nejcar20:", "say": "[matter-of-fact] Nayts-car twenty:", "step": "quote"},
+      {"cap": "“A free alternative to apps like Unplug Alarm,", "say": "[sarcastic] A free alternative to apps like Unplug Alarm,", "step": "quote"},
+      {"cap": "which has paid upgrades.”", "step": "quote"},
+      {"cap": "So: Yowl. It screams.", "say": "[quick] So: Yowl. It screams.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus two more", "say": "[upbeat] Plus two more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

@@ -3774,5 +3774,165 @@
     "repo": "jotalac/git-writer",
     "spite_score": 8,
     "added": "2026-09-28"
+  },
+  {
+    "slug": "knownote",
+    "name": "KnowNote",
+    "url": "https://knownote.pages.dev/",
+    "icon": "📓",
+    "tagline": "NotebookLM runs smoothly once you pay Google $19.99 a month. KnowNote is a desktop app you double-click, questions your own sources, and asks for no Docker and no wallet.",
+    "replaces": {
+      "name": "Google AI Pro",
+      "product": "NotebookLM",
+      "price": "$19.99/mo",
+      "source": "https://justinmckelvey.com/blog/notebooklm-pricing"
+    },
+    "grudge": {
+      "quote": "However, to use it smoothly required a Google subscription, and I really didn't have spare money in my wallet to subscribe, so I could only consider finding some self-hosted alternatives.",
+      "source": "https://news.ycombinator.com/item?id=49880045"
+    },
+    "builder": {
+      "name": "MrSibe",
+      "handle": "mrsibe",
+      "url": "https://github.com/mrsibe"
+    },
+    "tags": [
+      "desktop",
+      "byo-key",
+      "ai"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "MrSibe/KnowNote",
+    "spite_score": 10,
+    "added": "2026-09-29"
+  },
+  {
+    "slug": "earful",
+    "name": "Earful",
+    "url": "https://bassambeelal.github.io/earful/",
+    "icon": "🎧",
+    "tagline": "Speechify charges $29 a month to read text out loud. Earful reads your PDFs, books and photos of pages aloud on your own device, for nothing.",
+    "replaces": {
+      "name": "Speechify Premium",
+      "product": "Speechify",
+      "price": "$29/mo",
+      "source": "https://speechify.com/pricing/"
+    },
+    "grudge": {
+      "quote": "The popular reading apps lock the basics behind a subscription of around $139 a year.",
+      "source": "https://github.com/bassambeelal/earful"
+    },
+    "builder": {
+      "name": "Bilal",
+      "handle": "bassambeelal",
+      "url": "https://github.com/bassambeelal"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "learning"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "bassambeelal/earful",
+    "spite_score": 10,
+    "added": "2026-09-29"
+  },
+  {
+    "slug": "yowl",
+    "name": "Yowl",
+    "url": "https://dontstealmylaptop.com",
+    "icon": "🚨",
+    "tagline": "Unplug Alarm makes you upgrade to guard your own laptop. Yowl screams, locks the screen and pings your phone when someone grabs your MacBook, and upgrades are not a thing.",
+    "replaces": {
+      "name": "Unplug Alarm Yearly",
+      "product": "Unplug Alarm",
+      "price": "$11.99/yr",
+      "source": "https://apps.apple.com/us/app/unplug-alarm-anti-theft-app/id1489026302?mt=12"
+    },
+    "grudge": {
+      "quote": "A free alternative to apps like Unplug Alarm, which has paid upgrades.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wsotcm/i_made_a_free_opensource_alarm_that_screams_when/"
+    },
+    "builder": {
+      "name": "nejcar20",
+      "handle": "nejcar20",
+      "url": "https://github.com/nejcar20"
+    },
+    "tags": [
+      "macos",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "nejcar20/yowl",
+    "spite_score": 10,
+    "added": "2026-09-29"
+  },
+  {
+    "slug": "edgeever",
+    "name": "EdgeEver",
+    "url": "https://github.com/tianma-if/edgeever",
+    "icon": "🐘",
+    "tagline": "Evernote wants $14.99 a month for your own notes, plus ads for free. EdgeEver is the three-pane notebook you run on Cloudflare's free tier or your own Docker box, apps included.",
+    "replaces": {
+      "name": "Evernote Starter",
+      "product": "Evernote",
+      "price": "$14.99/mo",
+      "source": "https://evernote.com/compare-plans"
+    },
+    "grudge": {
+      "quote": "Data export is cumbersome, free tiers are heavily restricted, and AI/MCP features require costly subscriptions.",
+      "source": "https://github.com/tianma-if/edgeever"
+    },
+    "builder": {
+      "name": "tianma-if",
+      "handle": "tianma-if",
+      "url": "https://github.com/tianma-if"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "tianma-if/edgeever",
+    "spite_score": 8,
+    "added": "2026-09-29"
+  },
+  {
+    "slug": "scissor-studio",
+    "name": "Scissor Studio",
+    "url": "https://scissor.studio/",
+    "icon": "✂️",
+    "tagline": "Illustrator costs $22.99 a month, forever. Scissor edits vector and raster in a browser tab, no install, no account, no arm or leg.",
+    "replaces": {
+      "name": "Adobe Illustrator",
+      "product": "Adobe Illustrator",
+      "price": "$22.99/mo",
+      "source": "https://www.adobe.com/products/illustrator/plans.html"
+    },
+    "grudge": {
+      "quote": "I don't replicate, I am creating an aleternative for myself and people like me that they need an advanced app but can't afford to give an arm and a leg.",
+      "source": "https://news.ycombinator.com/item?id=49875308"
+    },
+    "builder": {
+      "name": "Samal Studios",
+      "handle": "samalstudios",
+      "url": "https://samalstudios.com"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "images"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 6,
+    "added": "2026-09-29"
   }
 ]
