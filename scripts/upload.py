@@ -148,6 +148,22 @@ def upload(mp4, title, description, tags, privacy, at, token):
         sys.exit(f"YouTube said no, HTTP {e.code}: {e.read()[:500].decode(errors='replace')}")
 
 
+def set_thumb(video_id, jpg, token):
+    """Put the grudge frame short.py saved on the video. A failure is reported, never fatal:
+    the video is already up. YouTube only takes custom thumbnails from a phone-verified channel,
+    and the Shorts feed itself may still pick its own frame; search and the channel page use this."""
+    if not jpg.exists():
+        return print(f"No {jpg.relative_to(ROOT)}: re-render with python3 scripts/short.py to make one")
+    req = urllib.request.Request(f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={video_id}",
+                                 data=jpg.read_bytes(), headers={"Authorization": f"Bearer {token}",
+                                                                 "Content-Type": "image/jpeg"})
+    try:
+        with urllib.request.urlopen(req, timeout=120):
+            print(f"thumbnail set from {jpg.relative_to(ROOT)}")
+    except urllib.error.HTTPError as e:
+        print(f"Thumbnail refused, HTTP {e.code}: {e.read()[:300].decode(errors='replace')}")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("script", nargs="?", help="shorts/DATE.json, default the newest; with --auth, the client JSON")
@@ -157,6 +173,7 @@ def main():
     ap.add_argument("--at", help="publish at this local time, e.g. 2026-09-20T09:00")
     ap.add_argument("--again", action="store_true", help="upload a date that was already uploaded")
     ap.add_argument("--dry", action="store_true", help="print what would go up, and send nothing")
+    ap.add_argument("--thumb", action="store_true", help="only set the thumbnail on the date's video that is already up")
     a = ap.parse_args()
     if a.auth:
         return auth(a.script)
@@ -166,6 +183,11 @@ def main():
     if not mp4.exists():
         sys.exit(f"No {mp4.relative_to(ROOT)}: render it first with python3 scripts/short.py")
     done = json.loads(DONE.read_text()) if DONE.exists() else {}
+    jpg = SHORTS / ".build" / script["date"] / "thumb.jpg"
+    if a.thumb:
+        if script["date"] not in done:
+            sys.exit(f"{script['date']} has not been uploaded, so there is no video to put a thumbnail on")
+        return set_thumb(done[script["date"]], jpg, access())
     if script["date"] in done and not a.again:
         sys.exit(f"{script['date']} is already up: https://youtube.com/shorts/{done[script['date']]} (--again to upload it twice)")
     at = None
@@ -195,6 +217,7 @@ def main():
     landed = video["status"]["privacyStatus"]
     print(f"https://youtube.com/shorts/{video['id']}  ({landed}{', public at ' + a.at if at else ''})")
     print(f"https://studio.youtube.com/video/{video['id']}/edit")
+    set_thumb(video["id"], jpg, token)
     if landed != privacy:
         print(f"Asked for {privacy}, got {landed}. YouTube overrode it; check the video in Studio.")
 

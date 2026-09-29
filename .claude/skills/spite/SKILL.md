@@ -84,7 +84,8 @@ Read `criteria.md` and `sources.md` first on every run. They are the rules and t
     each app's hall of fame page, so wait for GitHub Pages to serve them first: poll
     `curl -s -o /dev/null -w "%{http_code}" https://spiteware.ai/hall-of-fame/<handle>/<slug>/`
     for each app in the short, every 30 seconds for up to 10 minutes, until all are 200. Then
-    `python3 scripts/upload.py --public` and keep the link it prints. If the pages never come
+    `python3 scripts/upload.py --public` and keep the link it prints. It sets the thumbnail
+    too; a `Thumbnail refused` line does not undo the upload, so report it with the reason. If the pages never come
     up, or the upload refuses (wrong channel, token expired, already uploaded), do not force
     it: report why and the command to run by hand. Never pass `--again` here.
 
@@ -119,12 +120,19 @@ says they merged there, run this mode.
 3. Write `shorts/YYYY-MM-DD.json`. Quotes verbatim from `grudge.quote`, prices and victims only
    from `replaces`, never a pronoun for a builder, anything hard to pronounce spelled out in `say`.
    Fill in `post` too (title, caption, tags): it is the text that goes out with the video, and
-   the render refuses a script without it.
+   the render refuses a script without it. The hook's count frame shows the day's total, the
+   voiced apps plus `more`, so its caption says that same total ("Five new grudges."), never just
+   the apps voiced. Put the app the title is about first, or set `"thumb": "<its slug>"`: the
+   thumbnail is that app's grudge frame, so it and the title tell the same story.
 4. Render: `python3 scripts/short.py --open`. It voices the script (about 2 cents, takes are
    cached), screenshots the frames, and opens the posting desk, `shorts/YYYY-MM-DD.html`: the
    video plus each platform's text behind Copy buttons. Over 50 seconds means the script is
    too long: cut words, not tempo.
 5. Read `shorts/.build/YYYY-MM-DD/sheet.png` and fix anything that overflows or is missing.
+   The sheet samples every 2.5 seconds and can skip the count frame, so check the hook against
+   the voice by hand: its number must match the count caption. Then read
+   `shorts/.build/YYYY-MM-DD/thumb.jpg`, the thumbnail `upload.py` sets: the whole quote lit, the
+   title's app. A mismatch in either is fixed and re-rendered before anything is uploaded.
 6. Report in under 80 words: the file, its length, which apps made it, the title you gave it,
    that the posting desk is open, and what to listen for, since you cannot hear it: the phonetic
    spellings, and "Free." landing on the stamp. If a line sounds wrong to the user,

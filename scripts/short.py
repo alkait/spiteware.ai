@@ -100,7 +100,8 @@ def narrate(script, reroll=()):
 def frame_data(cue, script, apps, n_apps, guides):
     seg = cue["seg"]
     f = {"scene": seg["scene"], "step": cue["step"], "cap": cue["cap"], "n": n_apps, "guides": guides,
-         "date": script["label"], "more": script.get("more", 0)}
+         "date": script["label"], "more": script.get("more", 0),
+         "day": n_apps + script.get("more", 0)}  # the hook counts the day's apps, not just the ones voiced
     if seg["scene"] == "app":
         f.update(app=apps[seg["slug"]], face=face(apps[seg["slug"]]), i=seg["i"], gripe=seg.get("gripe", ""),
                  quote=seg["quote"], cut=seg.get("cut", False), said=0,
@@ -110,6 +111,18 @@ def frame_data(cue, script, apps, n_apps, guides):
             at = seg["quote"].find(part)
             f["said"] = at + len(part) if at >= 0 and part and not part.endswith(":") else 0
     return f
+
+
+def thumb(script, app_segs, cues, stills, build):
+    """The YouTube thumbnail: the grudge frame with the whole quote lit, from the app named
+    in the script's "thumb" (a slug), else the first one. JPEG, well under YouTube's 2 MB."""
+    want = script.get("thumb") or app_segs[0]["slug"]
+    seg = next((s for s in app_segs if s["slug"] == want), None)
+    if not seg:
+        sys.exit(f"thumb: {want} is not one of the short's apps")
+    png = [pair[0] for c, pair in zip(cues, stills) if c["seg"] is seg and c["step"] == "quote"][-1]
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(png), "-q:v", "3", str(build / "thumb.jpg")],
+                   check=True)
 
 
 def face(a):
@@ -224,6 +237,7 @@ def main():
     with tempfile.TemporaryDirectory() as profiles, cf.ThreadPoolExecutor(4) as ex:
         list(ex.map(lambda job: shoot(job, base, profiles), jobs.values()))
     srv.shutdown()
+    thumb(script, app_segs, cues, stills, build)
 
     # concat list: each cue holds until the next, wobbling between its two stills
     lines, events, prev = [], [], None

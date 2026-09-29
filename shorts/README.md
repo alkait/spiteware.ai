@@ -28,7 +28,14 @@ the user. No agent posts anything else unasked.
 python3 scripts/upload.py --dry              # newest short: print what would go up, send nothing
 python3 scripts/upload.py                    # upload it, private
 python3 scripts/upload.py --public           # or --unlisted, or --at 2026-09-20T09:00 (local time)
+python3 scripts/upload.py --thumb            # only set the thumbnail on the date's video already up
 ```
+
+Every upload also sets the thumbnail: `shorts/.build/DATE/thumb.jpg`, which each render saves
+from the grudge frame with the whole quote lit (the first app's, or the one the script names in
+`"thumb": "<slug>"`). A refused thumbnail is reported and never undoes the upload. YouTube takes
+custom thumbnails only from a phone-verified channel, and the Shorts feed may still choose its
+own frame; search, the channel page and embeds show this one.
 
 `scripts/upload.py` sends the mp4 through the YouTube Data API with the same title and
 description the posting desk shows, and notes the video id in `shorts/.cache/uploaded.json` so a
@@ -106,7 +113,8 @@ Setup, once. The YouTube Data API v3 is already enabled on the `spiteware` Googl
 - `"score": false` keeps the spite meter off screen. Use it under 6: a low score on a video
   reads as a dig at the builder, and the joke is the price, never the person.
 - `more` is how many of the day's apps did not make the cut; the end card shows "+N more fresh
-  today". When it is above zero, say so in the outro ("Plus four more, at spiteware dot A I.").
+  today", and the hook's count frame shows the day's total (voiced apps plus `more`), so the
+  count caption says that total too ("Five new grudges."). When it is above zero, say so in the outro ("Plus four more, at spiteware dot A I.").
 
 - `post` is the text that goes out with the video, and the render refuses a script without
   it. `title`: 10 to 70 characters, the top app's bill against its price of nothing; it is the

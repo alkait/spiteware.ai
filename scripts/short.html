@@ -84,7 +84,7 @@ body{background-size:44px 44px;background-image:radial-gradient(var(--ink) 1.6px
 <div class="safe" id="safe"></div>
 <script>
 const FRAME = /*FRAME*/null;
-const F = FRAME || {scene:"hook", step:"count", cap:"Three new grudges.", date:"Sep 18", n:3, j:0, guides:true};
+const F = FRAME || {scene:"hook", step:"count", cap:"Three new grudges.", date:"Sep 18", n:3, day:3, j:0, guides:true};
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const after = (steps, s) => steps.indexOf(F.step) >= steps.indexOf(s);
 document.body.style.setProperty("--j", F.j || 0);
@@ -109,7 +109,7 @@ function scene() {
     const S = ["stamp", "date", "count"];
     return `<div class="stage hook"><h1 class="tilt" style="--r:-3deg"><span>Fresh</span><span>spite</span></h1>
       <div class="date tilt ${after(S, "date") ? "" : "hide"}">${esc(F.date)}</div>
-      <div class="n tilt ${after(S, "count") ? "" : "hide"}">${F.n} new grudge${F.n === 1 ? "" : "s"}</div></div>`;
+      <div class="n tilt ${after(S, "count") ? "" : "hide"}">${F.day} new grudge${F.day === 1 ? "" : "s"}</div></div>`;
   }
   if (F.scene === "outro") {
     const S = ["free", "spite", "url"];
