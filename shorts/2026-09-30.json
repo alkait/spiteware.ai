@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-30",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Mattermost wants $10 a seat. Antimatter is the free fork.",
+    "caption": "Fresh grudges against a per-seat chat licence, a car-spotting app that costs too much and paying for a job you do twice a year, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "selfhosted", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "September 30th.", "say": "September thirtieth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "antimatter",
+     "quote": "paywalling previously available features, putting arbitrary limits that previously didn't exist",
+     "cut": true,
+     "cues": [
+      {"cap": "Mattermost wants $10 a user a month", "say": "Mattermost wants ten dollars a user a month", "step": "badge"},
+      {"cap": "to chat on your own server.", "step": "badge"},
+      {"cap": "Throwasys:", "say": "[matter-of-fact] Throw-uh-sis:", "step": "quote"},
+      {"cap": "“paywalling previously available features,", "say": "[sarcastic] paywalling previously available features,", "step": "quote"},
+      {"cap": "putting arbitrary limits", "step": "quote"},
+      {"cap": "that previously didn't exist…”", "say": "that previously didn't exist.", "step": "quote"},
+      {"cap": "So: Antimatter. The fork.", "say": "[quick] So: Antimatter. The fork.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "garagedex",
+     "gripe": "The car-spotting app costs too much.",
+     "quote": "Since the actual app is too expensive.",
+     "cues": [
+      {"cap": "Spot a car,", "step": "gripe"},
+      {"cap": "pay an app to name it.", "step": "gripe"},
+      {"cap": "dinathdismitha15-hue:", "say": "[matter-of-fact] Dinath Dismitha:", "step": "quote"},
+      {"cap": "“Since the actual app is too expensive.”", "say": "[sarcastic] Since the actual app is too expensive.", "step": "quote"},
+      {"cap": "So: GarageDex. Built with Claude.", "say": "[quick] So: Garage Dex. Built with Claude.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "rename-tools",
+     "score": false,
+     "gripe": "Renaming software wants a licence for a twice-a-year job.",
+     "quote": "I couldn’t justify buying dedicated software for it.",
+     "cut": false,
+     "cues": [
+      {"cap": "A whole licence", "step": "gripe"},
+      {"cap": "to rename some files.", "step": "gripe"},
+      {"cap": "chenz24:", "say": "[matter-of-fact] Chen Z twenty-four:", "step": "quote"},
+      {"cap": "“I couldn’t justify buying", "say": "[sarcastic] I couldn't justify buying", "step": "quote"},
+      {"cap": "dedicated software for it.”", "step": "quote"},
+      {"cap": "So: Rename.Tools. In a tab.", "say": "[quick] So: Rename Tools. In a tab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

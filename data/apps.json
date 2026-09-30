@@ -3934,5 +3934,100 @@
     "repo": "",
     "spite_score": 6,
     "added": "2026-09-29"
+  },
+  {
+    "slug": "antimatter",
+    "name": "Antimatter",
+    "url": "https://github.com/AntimatterChat/antimatter",
+    "icon": "🧲",
+    "tagline": "Mattermost started paywalling features it used to give away and sells the rest by the seat. Antimatter is the fork with the licence checks pulled out: SSO, LDAP, no nag screens, no invoice.",
+    "replaces": {
+      "name": "Mattermost Professional",
+      "product": "Mattermost",
+      "price": "$10/user/mo",
+      "source": "https://www.capterra.com/p/170524/Mattermost/pricing/"
+    },
+    "grudge": {
+      "quote": "Unfortunately, after a few disappointments at a previous company actually trying (and giving up) to buy a licence, and after their latest actions, which I could only call backstabs (paywalling previously available features, putting arbitrary limits that previously didn't exist, or recently adding nag screens to push people into either buying their licence or just away from their platform altogether), I've ended up fed up with their BS and started to work on a fork.",
+      "source": "https://www.reddit.com/r/selfhosted/comments/1wto0z7/i_made_a_mattermost_fork_without_the_bs/"
+    },
+    "builder": {
+      "name": "Throwasys",
+      "handle": "Throwasys",
+      "url": "https://www.reddit.com/user/Throwasys"
+    },
+    "tags": [
+      "self-hosted",
+      "privacy",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "AntimatterChat/antimatter",
+    "spite_score": 10,
+    "added": "2026-09-30"
+  },
+  {
+    "slug": "rename-tools",
+    "name": "Rename.Tools",
+    "url": "https://rename.tools/en",
+    "icon": "🏷️",
+    "tagline": "Batch renamers want a licence for a job you do twice a year. Rename.Tools chains regex, EXIF and numbering rules in a browser tab, and your files never leave the machine.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "This is something I only do occasionally, so I couldn’t justify buying dedicated software for it.",
+      "source": "https://news.ycombinator.com/item?id=49887510"
+    },
+    "builder": {
+      "name": "chenz24",
+      "handle": "chenz24",
+      "url": "https://github.com/chenz24"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "chenz24/rename.tools",
+    "spite_score": 5,
+    "added": "2026-09-30"
+  },
+  {
+    "slug": "garagedex",
+    "name": "GarageDex",
+    "url": "https://bespoke-melba-39e414.netlify.app",
+    "icon": "🏎️",
+    "tagline": "The car-spotting app cost too much, so somebody asked Claude for a free one. GarageDex snaps a car, names it and parks it in your garage, no account.",
+    "replaces": {
+      "name": "CarDex",
+      "product": "CarDex",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "This is a free version of CarDex created with Claude. Since the actual app is too expensive.",
+      "source": "https://github.com/dinathdismitha15-hue/CarDex-Free-"
+    },
+    "builder": {
+      "name": "dinathdismitha15-hue",
+      "handle": "dinathdismitha15-hue",
+      "url": "https://github.com/dinathdismitha15-hue"
+    },
+    "tags": [
+      "web",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "dinathdismitha15-hue/CarDex-Free-",
+    "spite_score": 9,
+    "added": "2026-09-30"
   }
 ]

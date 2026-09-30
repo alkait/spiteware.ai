@@ -1,0 +1,18 @@
+{
+  "run": "2026-09-30",
+  "swept": "hn (48h, 287 Show HN), reddit json (r/SideProject, r/ClaudeAI, r/vibecoding, r/selfhosted, r/webdev, r/indiehackers; r/opensource, r/macapps rate-limited 429; post pages blocked during verification), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 400,
+  "triaged": 12,
+  "candidates": [],
+  "dropped": [
+    "Chow: sells an optional sync subscription (paid tier from the same maker)",
+    "OLS (Open Local Server): grudge is missing features ('none of them had everything I wanted'), not a price",
+    "SuperCMO Skills: company repo fronting a waitlisted SuperCMO Agent; competitor, not a grudge",
+    "FreeOSINTUI: 'free alternative to osint-ui.com' is a one-line description, no reason given",
+    "NoteMark, rembrandt, NetworkRoute, CraftCV: 'free, no subscription' is a feature line, no grudge",
+    "Arc PDF, Theia, PicPop, cvtail, Flat Invoice: paid, trial or store apps with in-app purchase",
+    "Roborock local server: reason is cloud dependence, not price",
+    "Uploaf, Flo State, GoTrivia: already judged on 2026-09-29",
+    "Linktree fee post: an article, not an app"
+  ]
+}
