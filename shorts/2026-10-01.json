@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-01",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "Otter wants $16.99 a month. Parrot records your calls for free.",
+    "caption": "Fresh grudges against a meeting transcriber, a cold email tool that bills per lead and AI flashcards behind a subscription, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "localfirst"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 1st.", "say": "October first.", "step": "date"},
+      {"cap": "Five new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "parrot",
+     "quote": "I got tired of paying for services like Otter.ai",
+     "cut": true,
+     "cues": [
+      {"cap": "Otter wants $16.99 a month", "say": "Otter wants sixteen ninety-nine a month", "step": "badge"},
+      {"cap": "to take your meeting notes.", "step": "badge"},
+      {"cap": "Uygar Turantekin:", "say": "[matter-of-fact] Oo-gar Too-ran-teh-kin:", "step": "quote"},
+      {"cap": "“I got tired of paying", "say": "[sarcastic] I got tired of paying", "step": "quote"},
+      {"cap": "for services like Otter.ai…”", "say": "for services like Otter dot A I.", "step": "quote"},
+      {"cap": "So: Parrot. On your own Mac.", "say": "[quick] So: Parrot. On your own Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "hedwig",
+     "quote": "tools like Instantly or Smartlead, which charge huge amounts of money per lead",
+     "cut": true,
+     "cues": [
+      {"cap": "Instantly wants $97 a month", "say": "Instantly wants ninety-seven dollars a month", "step": "badge"},
+      {"cap": "to send your cold emails.", "step": "badge"},
+      {"cap": "Gabriel Cebria Oliveira:", "say": "[matter-of-fact] Gabriel Sebria Oliveira:", "step": "quote"},
+      {"cap": "“tools like Instantly or Smartlead,", "say": "[sarcastic] tools like Instantly or Smartlead,", "step": "quote"},
+      {"cap": "which charge huge amounts of money", "step": "quote"},
+      {"cap": "per lead…”", "say": "per lead.", "step": "quote"},
+      {"cap": "So: Hedwig. Same sequences.", "say": "[quick] So: Hedwig. Same sequences.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "cardsmith",
+     "quote": "Existing AI flashcard tools need an account and a subscription",
+     "cut": true,
+     "cues": [
+      {"cap": "Quizlet wants $7.99 a month", "say": "Quizlet wants seven ninety-nine a month", "step": "badge"},
+      {"cap": "for flashcards.", "step": "badge"},
+      {"cap": "Chi-Wei Lee:", "say": "[matter-of-fact] Chee-Way Lee:", "step": "quote"},
+      {"cap": "“Existing AI flashcard tools", "say": "[sarcastic] Existing A I flashcard tools", "step": "quote"},
+      {"cap": "need an account and a subscription…”", "say": "need an account and a subscription.", "step": "quote"},
+      {"cap": "So: cardsmith. Offline.", "say": "[quick] So: cardsmith. Offline.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus two more", "say": "[upbeat] Plus two more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

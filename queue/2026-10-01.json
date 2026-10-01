@@ -1,0 +1,17 @@
+{
+  "run": "2026-10-01",
+  "swept": "hn (48h, 310 Show HN), reddit json (r/SideProject, r/macapps, r/ClaudeAI, r/selfhosted, r/opensource; r/webdev, r/vibecoding, r/indiehackers rate-limited 429; post pages blocked during verification), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 412,
+  "triaged": 40,
+  "candidates": [],
+  "dropped": [
+    "Dokvio: Play listing flags in-app purchases",
+    "Smolkapps JSON Viewer, Scrieb, Whisper Dictate, Plotscribe, LinguaClip, Screenlet (screen recorder), VisiGrid, Floodtide, VaultAudit, Lathe: paid, trial, one-time or Pro tier",
+    "Paperweight, Melete, Stafflio, compress (Everest): open-core, paid hosted version, priced later, or a company's hosted service",
+    "OpenDots, helpin: company 'alternative to X', competitor not grudge",
+    "AudioDrop, US Life Toolkit, Free Games for Seniors, APIaxess, MealShark: grudge is ads, dark patterns, setup or UX, not price",
+    "Stay Steady: motive line names no paid tool, company developer, thread unreachable",
+    "Sarala, RAWmakase, Kasora, Mluva, VoxScribe, Trace, YuliusBox, Miniagent, VantorKit, Vibe, SocialControl, genQR, Platen PDF, kepli, Webbit: no grudge, feature line only",
+    "Chow, NetworkRoute: already judged on 2026-09-30"
+  ]
+}

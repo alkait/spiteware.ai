@@ -4029,5 +4029,162 @@
     "repo": "dinathdismitha15-hue/CarDex-Free-",
     "spite_score": 9,
     "added": "2026-09-30"
+  },
+  {
+    "slug": "parrot",
+    "name": "Parrot",
+    "url": "https://openparrot.app",
+    "icon": "🦜",
+    "tagline": "Otter charges $16.99 a month to send your calls to its servers. Parrot transcribes them on your own Mac, no bot in the meeting, for nothing.",
+    "replaces": {
+      "name": "Otter Pro",
+      "product": "Otter",
+      "price": "$16.99/mo",
+      "source": "https://otter.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I got tired of paying for services like Otter.ai that send all my conversations to some server I don't control.",
+      "source": "https://github.com/turantekin/Parrot"
+    },
+    "builder": {
+      "name": "Uygar Turantekin",
+      "handle": "turantekin",
+      "url": "https://github.com/turantekin"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "turantekin/Parrot",
+    "spite_score": 10,
+    "added": "2026-10-01"
+  },
+  {
+    "slug": "hedwig",
+    "name": "Hedwig",
+    "url": "https://flyhedwig.com",
+    "icon": "🦉",
+    "tagline": "Instantly wants $97 a month to send cold email from inboxes you already own. Hedwig sends the same sequences for $0, and the code is yours to host.",
+    "replaces": {
+      "name": "Instantly Hypergrowth",
+      "product": "Instantly",
+      "price": "$97/mo",
+      "source": "https://instantly.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I created an open source alternative to tools like Instantly or Smartlead, which charge huge amounts of money per lead for basic cold email campaign management.",
+      "source": "https://news.ycombinator.com/item?id=49912846"
+    },
+    "builder": {
+      "name": "Gabriel Cebria Oliveira",
+      "handle": "gabrilator",
+      "url": "https://github.com/gabrilator"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "marketing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "gabrilator/hedwig",
+    "spite_score": 8,
+    "added": "2026-10-01"
+  },
+  {
+    "slug": "cardsmith",
+    "name": "cardsmith",
+    "url": "https://github.com/Arthur031221/cardsmith",
+    "icon": "🃏",
+    "tagline": "The AI flashcard apps want an account and a monthly fee. cardsmith builds the deck offline from your own PDF, checks every card against the source, and exports to Anki for free.",
+    "replaces": {
+      "name": "Quizlet Plus",
+      "product": "Quizlet",
+      "price": "$7.99/mo",
+      "source": "https://recurdash.com/subscription-pricing/quizlet-plus"
+    },
+    "grudge": {
+      "quote": "Existing AI flashcard tools need an account and a subscription, or they generate cards with no way to check them against the source before you start memorizing something wrong.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wuu6q3/i_built_an_offline_flashcard_generator_that/"
+    },
+    "builder": {
+      "name": "Chi-Wei Lee",
+      "handle": "Arthur031221",
+      "url": "https://arthur031221.github.io/"
+    },
+    "tags": [
+      "local-first",
+      "learning"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Arthur031221/cardsmith",
+    "spite_score": 8,
+    "added": "2026-10-01"
+  },
+  {
+    "slug": "wordpaste",
+    "name": "wordpaste",
+    "url": "https://smrifat1411.github.io/wordpaste/",
+    "icon": "📋",
+    "tagline": "TinyMCE puts clean Word paste in its $145-a-month plan. wordpaste does it for any editor, equations included, MIT and free.",
+    "replaces": {
+      "name": "TinyMCE Professional",
+      "product": "TinyMCE",
+      "price": "$145/mo",
+      "source": "https://www.tiny.cloud/pricing/"
+    },
+    "grudge": {
+      "quote": "Clean Office paste is a paid feature nearly everywhere:",
+      "source": "https://github.com/smrifat1411/wordpaste"
+    },
+    "builder": {
+      "name": "MD Rifat Hossain",
+      "handle": "smrifat1411",
+      "url": "https://github.com/smrifat1411"
+    },
+    "tags": [
+      "web",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "smrifat1411/wordpaste",
+    "spite_score": 8,
+    "added": "2026-10-01"
+  },
+  {
+    "slug": "paintlustrator",
+    "name": "Paintlustrator",
+    "url": "https://www.paintlustrator.fun",
+    "icon": "🖌️",
+    "tagline": "The App Store wanted $20 a month to import a PDF and export an SVG. Paintlustrator does both on your iPad for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "All the apps on the app store wanted to charge me $20/mo to upload a pdf and export as SVG.",
+      "source": "https://news.ycombinator.com/item?id=49916789"
+    },
+    "builder": {
+      "name": "Maytee Chinavanichkit",
+      "handle": "maytc",
+      "url": "https://news.ycombinator.com/user?id=maytc"
+    },
+    "tags": [
+      "ios",
+      "images"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-01"
   }
 ]
