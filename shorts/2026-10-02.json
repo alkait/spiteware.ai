@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-02",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Soundpad wants $4.99. MyLittleSoundpad plays your sounds for free.",
+    "caption": "Fresh grudges against a paid soundboard and clipboard managers behind a subscription, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 2nd.", "say": "October second.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "mylittlesoundpad",
+     "quote": "I made this because I did not want to pay $3 for Soundpad.",
+     "cues": [
+      {"cap": "Soundpad wants $4.99", "say": "Soundpad wants four ninety-nine", "step": "badge"},
+      {"cap": "to play your own sound files.", "step": "badge"},
+      {"cap": "Oğuzhan18:", "say": "[matter-of-fact] Oh-ooz-hahn eighteen:", "step": "quote"},
+      {"cap": "“I made this because", "say": "[sarcastic] I made this because", "step": "quote"},
+      {"cap": "I did not want to pay $3", "say": "I did not want to pay three dollars", "step": "quote"},
+      {"cap": "for Soundpad.”", "say": "for Soundpad.", "step": "quote"},
+      {"cap": "So: MyLittleSoundpad. Keys one to nine.", "say": "[quick] So: My Little Soundpad. Keys one to nine.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "copy", "score": false,
+     "gripe": "Clipboard managers want a subscription.",
+     "quote": "every clipboard manager I tried was a list of grey text rows, a subscription, or both.",
+     "cues": [
+      {"cap": "Clipboard managers", "step": "gripe"},
+      {"cap": "want a subscription.", "step": "gripe"},
+      {"cap": "Tarik Caramanico:", "say": "[matter-of-fact] Tah-reek Cara-mah-nee-co:", "step": "quote"},
+      {"cap": "“every clipboard manager I tried", "say": "[sarcastic] every clipboard manager I tried", "step": "quote"},
+      {"cap": "was a list of grey text rows,", "step": "quote"},
+      {"cap": "a subscription, or both.”", "step": "quote"},
+      {"cap": "So: Copy. A shelf of cards.", "say": "[quick] So: Copy. A shelf of cards.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

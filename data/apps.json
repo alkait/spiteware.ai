@@ -4186,5 +4186,68 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-10-01"
+  },
+  {
+    "slug": "copy",
+    "name": "Copy",
+    "url": "https://tarikbc.github.io/Copy/",
+    "icon": "📋",
+    "tagline": "Every clipboard manager was grey rows, a subscription, or both. Copy is a shelf of cards for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I kept losing things I had copied two items ago, and every clipboard manager I tried was a list of grey text rows, a subscription, or both.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wvaout/i_built_a_free_open_source_clipboard_manager_for/"
+    },
+    "builder": {
+      "name": "Tarik Caramanico",
+      "handle": "tarikbc",
+      "url": "https://github.com/tarikbc"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "tarikbc/Copy",
+    "spite_score": 5,
+    "added": "2026-10-02"
+  },
+  {
+    "slug": "mylittlesoundpad",
+    "name": "MyLittleSoundpad",
+    "url": "https://github.com/oguzhanbayrakdarcse-source/MylittleSoundpad",
+    "icon": "🔊",
+    "tagline": "Soundpad wanted a few dollars to play your own sound files. Keys 1 to 9 now do it for free.",
+    "replaces": {
+      "name": "Soundpad",
+      "product": "Soundpad",
+      "price": "$4.99 one-time",
+      "source": "https://store.steampowered.com/app/629520/Soundpad/"
+    },
+    "grudge": {
+      "quote": "I made this because I did not want to pay $3 for Soundpad.",
+      "source": "https://github.com/oguzhanbayrakdarcse-source/MylittleSoundpad"
+    },
+    "builder": {
+      "name": "Oğuzhan18",
+      "handle": "oguzhanbayrakdarcse-source",
+      "url": "https://github.com/oguzhanbayrakdarcse-source"
+    },
+    "tags": [
+      "windows",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "oguzhanbayrakdarcse-source/MylittleSoundpad",
+    "spite_score": 8,
+    "added": "2026-10-02"
   }
 ]
