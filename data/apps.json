@@ -4249,5 +4249,100 @@
     "repo": "oguzhanbayrakdarcse-source/MylittleSoundpad",
     "spite_score": 8,
     "added": "2026-10-02"
+  },
+  {
+    "slug": "onion-board",
+    "name": "Onion Board",
+    "url": "https://onion-alien.github.io/onion-board/",
+    "icon": "🧅",
+    "tagline": "Soundpad charges for a sad trombone. Onion Board plays it the second you die, for nothing.",
+    "replaces": {
+      "name": "Soundpad",
+      "product": "Soundpad",
+      "price": "$4.99 one-time",
+      "source": "https://store.steampowered.com/app/629520/Soundpad/"
+    },
+    "grudge": {
+      "quote": "I made a free Windows soundboard because I didn't want to pay for Soundpad or Voicemod",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wwafir/i_made_a_free_windows_soundboard_because_i_didnt/"
+    },
+    "builder": {
+      "name": "OnionAlien",
+      "handle": "Onion-Alien",
+      "url": "https://github.com/Onion-Alien"
+    },
+    "tags": [
+      "windows",
+      "games"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Onion-Alien/onion-board",
+    "spite_score": 8,
+    "added": "2026-10-03"
+  },
+  {
+    "slug": "plume",
+    "name": "Plume",
+    "url": "https://github.com/soyAkil/plume",
+    "icon": "🪶",
+    "tagline": "Superwhisper bills monthly for work your Mac's Neural Engine does anyway. Plume just lets it.",
+    "replaces": {
+      "name": "Superwhisper Pro",
+      "product": "Superwhisper",
+      "price": "$8.49/mo",
+      "source": "https://superwhisper.com/"
+    },
+    "grudge": {
+      "quote": "It started as a free alternative to Superwhisper, designed around what people actually complain about in dictation apps: modes to configure before you can talk, an AI that quietly rewrites your numbers, a subscription for work the Mac does itself, a pause button that never shipped.",
+      "source": "https://github.com/soyAkil/plume"
+    },
+    "builder": {
+      "name": "soyAkil",
+      "handle": "soyAkil",
+      "url": "https://github.com/soyAkil"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "soyAkil/plume",
+    "spite_score": 8,
+    "added": "2026-10-03"
+  },
+  {
+    "slug": "lumen",
+    "name": "Lumen",
+    "url": "https://github.com/fasi96/lumen",
+    "icon": "✦",
+    "tagline": "Loom wants $24 a seat to cut your ums. Lumen cuts them on Linux and hands you the link for free.",
+    "replaces": {
+      "name": "Loom Business + AI",
+      "product": "Loom",
+      "price": "$24/user/mo",
+      "source": "https://www.loom.com/pricing"
+    },
+    "grudge": {
+      "quote": "And the parts that make Loom videos nice to watch cost extra.",
+      "source": "https://github.com/fasi96/lumen"
+    },
+    "builder": {
+      "name": "fasi96",
+      "handle": "fasi96",
+      "url": "https://github.com/fasi96"
+    },
+    "tags": [
+      "desktop",
+      "self-hosted",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "fasi96/lumen",
+    "spite_score": 8,
+    "added": "2026-10-03"
   }
 ]

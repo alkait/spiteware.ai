@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-03",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Loom wants $24 a seat. Lumen records your screen for free.",
+    "caption": "Fresh grudges against a paid screen recorder, a dictation subscription and a paid soundboard, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "linux"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 3rd.", "say": "October third.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "lumen",
+     "quote": "And the parts that make Loom videos nice to watch cost extra.",
+     "cues": [
+      {"cap": "Loom wants $24 a seat", "say": "Loom wants twenty-four dollars a seat", "step": "badge"},
+      {"cap": "to cut out your ums.", "step": "badge"},
+      {"cap": "fasi96:", "say": "[matter-of-fact] Fah-see ninety-six:", "step": "quote"},
+      {"cap": "“And the parts that make Loom videos", "say": "[sarcastic] And the parts that make Loom videos", "step": "quote"},
+      {"cap": "nice to watch cost extra.”", "step": "quote"},
+      {"cap": "So: Lumen. Linux, your own Cloudflare.", "say": "[quick] So: Lumen. Linux, your own Cloudflare.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "plume",
+     "quote": "a subscription for work the Mac does itself",
+     "cut": true,
+     "cues": [
+      {"cap": "Superwhisper wants $8.49 a month", "say": "Superwhisper wants eight forty-nine a month", "step": "badge"},
+      {"cap": "to type what you say.", "step": "badge"},
+      {"cap": "soyAkil:", "say": "[matter-of-fact] Soy Ah-keel:", "step": "quote"},
+      {"cap": "“a subscription", "say": "[sarcastic] a subscription", "step": "quote"},
+      {"cap": "for work the Mac does itself”", "step": "quote"},
+      {"cap": "So: Plume. Dictation in the notch.", "say": "[quick] So: Plume. Dictation in the notch.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "onion-board",
+     "quote": "I didn't want to pay for Soundpad or Voicemod",
+     "cues": [
+      {"cap": "Soundpad wants $4.99", "say": "Soundpad wants four ninety-nine", "step": "badge"},
+      {"cap": "for a soundboard.", "step": "badge"},
+      {"cap": "OnionAlien:", "say": "[matter-of-fact] Onion Alien:", "step": "quote"},
+      {"cap": "“I didn't want to pay", "say": "[sarcastic] I didn't want to pay", "step": "quote"},
+      {"cap": "for Soundpad or Voicemod”", "say": "for Soundpad or Voice-mod", "step": "quote"},
+      {"cap": "So: Onion Board. A trombone every death.", "say": "[quick] So: Onion Board. A sad trombone every time you die.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

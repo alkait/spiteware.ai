@@ -1,0 +1,23 @@
+{
+  "run": "2026-10-03",
+  "swept": "hn (48h, 287 Show HN), reddit json (r/SideProject, r/macapps, r/ClaudeAI, r/selfhosted; r/webdev, r/vibecoding, r/indiehackers rate-limited 429), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 391,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "PayPath: Play Store listing contains ads and in-app purchases (gate 2)",
+    "SiliconWin: no grudge in the builder's words, only 'usually means a commercial virtualization product' (gate 1)",
+    "OpenSupport: PolyForm Noncommercial licence on a business helpdesk, not fully usable for free; site says it was born to experiment (unsure, gate 2)",
+    "pixel (q2dhi): repackaged editor with a third-party Pro tier unlocked, not the builder's own app",
+    "TrueScribe: went freemium (gate 2)",
+    "timeular-local: 'no app, no account and no subscription' is a feature list, not a stated grudge (gate 1)",
+    "DeepWork: 'No subscription' is a feature line, not a grudge (gate 1)",
+    "auto-transcribe: 'no subscription' is a feature line, not a grudge (gate 1)",
+    "removebackgroundonline.com: built because remove.bg is closing, not over a price (gate 1)",
+    "Crookcooked: no grudge against a paid tool (gate 1)",
+    "Vibe (vibeplayer.app): built out of missing Winamp, not a price (gate 1)",
+    "QC Control: built over a missing Bose menu, not a price (gate 1)",
+    "Header Modifier Pro: $19 paid download (gate 2)",
+    "TABAnimation: 'less expensive' means memory cost, not price (gate 1)"
+  ]
+}
