@@ -4344,5 +4344,101 @@
     "repo": "fasi96/lumen",
     "spite_score": 8,
     "added": "2026-10-03"
+  },
+  {
+    "slug": "photobaer",
+    "name": "photobaer",
+    "url": "https://photobaer.com",
+    "icon": "🐻",
+    "tagline": "Adobe bills you every month to open a PSD. photobaer opens it in a browser tab, offline, for nothing.",
+    "replaces": {
+      "name": "Adobe Photoshop",
+      "product": "Adobe Photoshop",
+      "price": "",
+      "source": "https://www.adobe.com/products/photoshop/plans.html"
+    },
+    "grudge": {
+      "quote": "Photopea comes with ads and cookie prompts, and Photoshop means paying Adobe every month.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wxkp0m/looking_for_testers_photobaer_a_free_opensource/"
+    },
+    "builder": {
+      "name": "IT-BAER",
+      "handle": "IT-BAER",
+      "url": "https://github.com/IT-BAER"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "IT-BAER/photobaer",
+    "spite_score": 7,
+    "added": "2026-10-04"
+  },
+  {
+    "slug": "local-dictation",
+    "name": "Local Dictation",
+    "url": "https://github.com/ysham123/imnotpayingforwisprflow",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow wants $15 a month to type what you say. This one put the refusal in the repo name and runs on your Mac.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I'm not paying for Wispr Flow.",
+      "source": "https://github.com/ysham123/imnotpayingforwisprflow"
+    },
+    "builder": {
+      "name": "Yosef Shammout",
+      "handle": "ysham123",
+      "url": "https://github.com/ysham123"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "ysham123/imnotpayingforwisprflow",
+    "spite_score": 8,
+    "added": "2026-10-04"
+  },
+  {
+    "slug": "freepdf-editor",
+    "name": "FreePDF Editor",
+    "url": "https://pdfeditnow.pages.dev/",
+    "icon": "📄",
+    "tagline": "Acrobat wants $14.99 a month to fix one typo. FreePDF Editor fixes it in your browser and never asks for a card.",
+    "replaces": {
+      "name": "Adobe Acrobat Standard",
+      "product": "Adobe Acrobat",
+      "price": "$14.99/mo",
+      "source": "https://www.adobe.com/acrobat/pricing.html"
+    },
+    "grudge": {
+      "quote": "Most online PDF editors demand a subscription after one or two edits.",
+      "source": "https://github.com/iamthearafatkhan/free-pdf-editor"
+    },
+    "builder": {
+      "name": "Arafat Khan",
+      "handle": "iamthearafatkhan",
+      "url": "https://github.com/iamthearafatkhan"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "iamthearafatkhan/free-pdf-editor",
+    "spite_score": 8,
+    "added": "2026-10-04"
   }
 ]

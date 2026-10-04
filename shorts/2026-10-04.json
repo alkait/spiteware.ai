@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-04",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Wispr Flow wants $15 a month. Local Dictation said no.",
+    "caption": "Fresh grudges against a dictation subscription, a PDF editor that bills monthly and Photoshop, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 4th.", "say": "October fourth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "local-dictation",
+     "quote": "I'm not paying for Wispr Flow.",
+     "cues": [
+      {"cap": "Wispr Flow wants $15 a month", "say": "Whisper Flow wants fifteen dollars a month", "step": "badge"},
+      {"cap": "to type what you say.", "step": "badge"},
+      {"cap": "Yosef Shammout:", "say": "[matter-of-fact] Yo-sef Sha-moot:", "step": "quote"},
+      {"cap": "“I'm not paying for Wispr Flow.”", "say": "[sarcastic] I'm not paying for Whisper Flow.", "step": "quote"},
+      {"cap": "So: Local Dictation. On your Mac.", "say": "[quick] So: Local Dictation. On your Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "freepdf-editor",
+     "quote": "Most online PDF editors demand a subscription after one or two edits.",
+     "cues": [
+      {"cap": "Acrobat wants $14.99 a month", "say": "Acrobat wants fourteen ninety-nine a month", "step": "badge"},
+      {"cap": "to fix a typo.", "step": "badge"},
+      {"cap": "Arafat Khan:", "say": "[matter-of-fact] Ah-rah-fat Khan:", "step": "quote"},
+      {"cap": "“Most online PDF editors demand a subscription", "say": "[sarcastic] Most online P D F editors demand a subscription", "step": "quote"},
+      {"cap": "after one or two edits.”", "step": "quote"},
+      {"cap": "So: FreePDF Editor. In a tab.", "say": "[quick] So: Free P D F Editor. In a tab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "photobaer",
+     "gripe": "Photoshop bills every month.",
+     "quote": "Photoshop means paying Adobe every month.",
+     "cues": [
+      {"cap": "Open a PSD,", "say": "Open a P S D,", "step": "gripe"},
+      {"cap": "pay Adobe forever.", "step": "gripe"},
+      {"cap": "IT-BAER:", "say": "[matter-of-fact] I T Bear:", "step": "quote"},
+      {"cap": "“Photoshop means paying Adobe", "say": "[sarcastic] Photoshop means paying Adobe", "step": "quote"},
+      {"cap": "every month.”", "step": "quote"},
+      {"cap": "So: photobaer. Offline, in your browser.", "say": "[quick] So: photo bear. Offline, in your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

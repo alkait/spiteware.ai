@@ -1,0 +1,25 @@
+{
+  "run": "2026-10-04",
+  "swept": "hn (48h, 202 Show HN), reddit json (r/SideProject, r/ClaudeAI, r/macapps, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited 429; post pages blocked during verification), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 303,
+  "triaged": 19,
+  "candidates": [],
+  "dropped": [
+    "OpenScreen 2.0: grudge only in the project's comparison page, not the builder's words, and the maintainer is not the original creator (unsure, gate 1)",
+    "Kalkee: calls rival calendars 'SAAS' but names no price or paywall (gate 1)",
+    "LocalBolo: $49 one-time purchase with a licence key (gate 2)",
+    "Lemme Cook: freemium, Premium $9.99/mo (gate 2)",
+    "ZangMusic: feature list, no grudge; README is the Expo template and it plays Audius, not YouTube (gate 1)",
+    "NotchFlow: feature bullets only, no grudge (gate 1)",
+    "DeepWork: feature claims only, no grudge (gate 1)",
+    "hearth: 'no monthly bill' is a feature, not a reason (gate 1)",
+    "Chop Chop: no grudge in README (gate 1)",
+    "SweepKit: no grudge (gate 1)",
+    "Screen Loupe: no grudge (gate 1)",
+    "Fennec: built against a bug, not a price (gate 1)",
+    "Audio Merger: no grudge, shows ads (gate 1)",
+    "Kokoro TTS (Sandbook): comparison copy only, no builder grudge (gate 1)",
+    "MapAnimator: submitter is not the builder, no grudge (gate 1)",
+    "SCM: no grudge (gate 1)"
+  ]
+}
