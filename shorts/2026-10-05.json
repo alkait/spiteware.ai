@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-05",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "Cursor wants $20 a month. Freekit wants nothing.",
+    "caption": "Fresh grudges against a $20 coding agent, ride apps that bill monthly and print-farm add-ons on subscription, each replaced by someone annoyed enough to build the free version.",
+    "tags": [
+      "freesoftware",
+      "indiedev",
+      "subscriptions",
+      "selfhosted",
+      "vscode"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "October 5th.",
+          "say": "October fifth.",
+          "step": "date"
+        },
+        {
+          "cap": "Five new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "freekit",
+      "quote": "I was tired of paying $20/month for AI coding tools.",
+      "cues": [
+        {
+          "cap": "Cursor wants $20 a month",
+          "say": "Cursor wants twenty dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "to write your code.",
+          "step": "badge"
+        },
+        {
+          "cap": "Laurentiu Pelin:",
+          "say": "[matter-of-fact] Lau-ren-tsee-oo Peh-leen:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I was tired of paying $20/month",
+          "say": "[sarcastic] I was tired of paying twenty dollars a month",
+          "step": "quote"
+        },
+        {
+          "cap": "for AI coding tools.”",
+          "say": "for A I coding tools.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Freekit. In VS Code.",
+          "say": "[quick] So: Free-kit. In V S Code.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "headwind",
+      "score": false,
+      "gripe": "Ride apps bill monthly for your own rides.",
+      "quote": "I didn't want another subscription",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Your own ride history,",
+          "step": "gripe"
+        },
+        {
+          "cap": "rented by the month.",
+          "step": "gripe"
+        },
+        {
+          "cap": "lordmaa:",
+          "say": "[matter-of-fact] Lord-mah:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I didn't want another subscription”",
+          "say": "[sarcastic] I didn't want another subscription.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Headwind. On your own box.",
+          "say": "[quick] So: Headwind. On your own box.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "loopimir",
+      "score": false,
+      "gripe": "Print-farm add-ons charge monthly to keep printing.",
+      "quote": "Commercial print‑farm add‑ons often lock the unattended‑looping feature behind a monthly subscription",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Print the same part again,",
+          "step": "gripe"
+        },
+        {
+          "cap": "pay every month.",
+          "step": "gripe"
+        },
+        {
+          "cap": "Dani Aeschbach:",
+          "say": "[matter-of-fact] Dah-nee Esh-bahk:",
+          "step": "quote"
+        },
+        {
+          "cap": "“Commercial print‑farm add‑ons often",
+          "say": "[sarcastic] Commercial print-farm add-ons",
+          "step": "quote"
+        },
+        {
+          "cap": "lock the unattended‑looping feature behind a monthly subscription”",
+          "say": "lock the unattended looping feature behind a monthly subscription.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Loopimir. On your own Linux box.",
+          "say": "[quick] So: Loo-pih-meer. On your own Linux box.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "Plus two more",
+          "say": "[upbeat] Plus two more,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}

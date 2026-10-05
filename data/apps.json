@@ -4440,5 +4440,162 @@
     "repo": "iamthearafatkhan/free-pdf-editor",
     "spite_score": 8,
     "added": "2026-10-04"
+  },
+  {
+    "slug": "freekit",
+    "name": "Freekit",
+    "url": "https://marketplace.visualstudio.com/items?itemName=builderweb.freekit",
+    "icon": "🧰",
+    "tagline": "Cursor wants $20 a month for an agent. Freekit drives the AI chat you already have, or a local model, for nothing.",
+    "replaces": {
+      "name": "Cursor Pro",
+      "product": "Cursor",
+      "price": "$20/mo",
+      "source": "https://cursor.com/pricing"
+    },
+    "grudge": {
+      "quote": "I built Freekit because I was tired of paying $20/month for AI coding tools.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wxrbwi/i_built_freekit_a_free_ai_coding_agent_for_vs/"
+    },
+    "builder": {
+      "name": "Laurentiu Pelin",
+      "handle": "builderweb-app",
+      "url": "https://github.com/builderweb-app"
+    },
+    "tags": [
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "builderweb-app/freekit",
+    "spite_score": 8,
+    "added": "2026-10-05"
+  },
+  {
+    "slug": "headwind",
+    "name": "Headwind",
+    "url": "https://github.com/lordmaa/headwind",
+    "icon": "🚴",
+    "tagline": "Ride apps rent you your own ride history by the month. Headwind keeps every pedal stroke on your own box, for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I didn't want another subscription or another service holding the only useful copy of my ride history, so I started building my own self-hosted cycling archive.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wxr8ur/title_i_wanted_somewhere_to_keep_my_cycling/"
+    },
+    "builder": {
+      "name": "lordmaa",
+      "handle": "lordmaa",
+      "url": "https://github.com/lordmaa"
+    },
+    "tags": [
+      "self-hosted",
+      "privacy",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "lordmaa/headwind",
+    "spite_score": 5,
+    "added": "2026-10-05"
+  },
+  {
+    "slug": "loopimir",
+    "name": "Loopimir",
+    "url": "https://github.com/DaniAeschbach/loopimir",
+    "icon": "🔁",
+    "tagline": "Print-farm add-ons charge monthly to press print again. Loopimir loops the farm from your own Linux box, for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Commercial print‑farm add‑ons often lock the unattended‑looping feature behind a monthly subscription and a cloud account that can shut you out.",
+      "source": "https://github.com/DaniAeschbach/loopimir#why"
+    },
+    "builder": {
+      "name": "Dani Aeschbach",
+      "handle": "DaniAeschbach",
+      "url": "https://github.com/DaniAeschbach"
+    },
+    "tags": [
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "DaniAeschbach/loopimir",
+    "spite_score": 5,
+    "added": "2026-10-05"
+  },
+  {
+    "slug": "scrollshot",
+    "name": "ScrollShot",
+    "url": "https://chromewebstore.google.com/detail/idaeanodifgkejmbfdggiohdkfgimklm",
+    "icon": "📜",
+    "tagline": "Screenshot tools paywall the scroll. ScrollShot captures the whole page, blurs the secrets and edits the PDF, free and offline.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Whenever I needed to capture a scrolling page, blur out sensitive info, or edit a PDF, I found myself either hitting paywalls or uploading sensitive files to online converter sites.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wy0hm5/i_got_tired_of_paid_screenshot_tools_sketchy/"
+    },
+    "builder": {
+      "name": "Brown_N_Bad",
+      "handle": "Brown_N_Bad",
+      "url": "https://www.reddit.com/user/Brown_N_Bad"
+    },
+    "tags": [
+      "browser-extension",
+      "privacy",
+      "images"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-05"
+  },
+  {
+    "slug": "canadian-citizenship-test-prep",
+    "name": "Canadian Citizenship Test Prep",
+    "url": "https://preparecitizenship.ca",
+    "icon": "🍁",
+    "tagline": "Test-prep sites charge a ridiculous amount to quiz you on Canada. This one does 500 questions free, no ads, no account.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "While looking for tools to prepare for the test, I found most are either hard to use, full of annoying ads, or ask for a ridiculous amount of money.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1wy091j/my_sideproject_canadian_citizenship_test/"
+    },
+    "builder": {
+      "name": "to_milon",
+      "handle": "to_milon",
+      "url": "https://www.reddit.com/user/to_milon"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "learning"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-05"
   }
 ]
