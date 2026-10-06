@@ -480,7 +480,10 @@ def describe(marks):
         return f"{a['name']} by {a['builder']['name'] or a['builder']['handle']}" + (f", replaces {pages.victim(a)}" if r.get("name") or r.get("price") else "")
     apps = "\n\n".join(f"{credit(a)}\n{handoff.SITE}{pages.fame(a)}" for a in EP["named"])
     more = len(EP["live"]) - len(EP["named"])
-    text = "\n\n".join([post["title"], post["caption"], chapters, apps,
+    # YouTube only makes description links clickable for a channel with its advanced features on, and shortens
+    # the ones it does not link. So say where everything is in words a viewer can type, before the list.
+    find = f"Every app here is on spiteware.ai: type its name into the search box on the apps page."
+    text = "\n\n".join([post["title"], post["caption"], find, chapters, apps,
                         f"Plus {more} more from {EP['label'].split()[0]}: {handoff.SITE}/apps.html?sort=new",
                         "Every app is free. Prices and grudges come from the people who built them.\n"
                         "The hosts are AI voices and their stories are scripted.",

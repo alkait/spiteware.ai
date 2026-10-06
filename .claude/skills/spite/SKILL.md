@@ -172,8 +172,9 @@ here is covered by its standing approval: this mode edits files and renders, and
 
 Never upload it unasked. The user watches it first. When they ask in that message:
 `python3 scripts/upload.py episodes/YYYY-MM.json` (private; `--public`, `--unlisted` or `--at` only
-if they said which), then report the links it prints. Commit the script, the ledger and the hosts
-file only when the user says so.
+if they said which), then report the links it prints and add the **Published** line (date and
+link) to the episode's section in `episodes/ledger.md`: that line is how the next session knows
+the month is done. Commit the script, the ledger and the hosts file only when the user says so.
 
 ## Mode: status (`/spite status`)
 

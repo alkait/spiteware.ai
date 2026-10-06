@@ -25,6 +25,7 @@ One per episode, never repeated. The name goes in the script's `"site_tips"`.
 
 ## 2026-09
 
+- **Published:** 2026-10-06, https://youtube.com/watch?v=fbnIML4C87Q
 - **Length:** 5:27, 814 words, 21 apps named, tempo 1.06.
 - **Segments:** it used to be free · the last button · wall of shame · by the head · tiny ones ·
   you already own it · on the site · the expensive end.
