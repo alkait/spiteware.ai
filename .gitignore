@@ -8,3 +8,7 @@ shorts/*.mp4
 shorts/*.html
 shorts/.cache/
 shorts/.build/
+
+# the monthly episode: scripts are committed, renders and build files are not
+episodes/*.mp4
+episodes/.build/

@@ -1,0 +1,169 @@
+{
+ "month": "2026-09",
+ "tempo": 1.06,
+ "wall": "Wispr Flow",
+ "site_tips": ["search", "manifesto"],
+ "post": {
+  "title": "21 free apps built out of pure spite · September 2026",
+  "caption": "The month's best free apps from people who got annoyed at a price tag and built the thing themselves: what each one replaces and what that used to cost.",
+  "tags": [
+   "freesoftware",
+   "opensource",
+   "indiedev",
+   "subscriptions",
+   "selfhosted"
+  ]
+ },
+ "shots": {},
+ "say": [
+  ["$2,665", "two thousand six hundred and sixty-five dollars"],
+  ["$29.95", "twenty-nine ninety-five"],
+  ["$19.99", "nineteen ninety-nine"],
+  ["$19.48", "nineteen forty-eight"],
+  ["$4.99", "four ninety-nine"],
+  ["$8.75", "eight seventy-five"],
+  ["$199", "a hundred and ninety-nine dollars"],
+  ["$144", "a hundred and forty-four dollars"],
+  ["$200", "two hundred dollars"],
+  ["$39", "thirty-nine dollars"],
+  ["$24", "twenty-four dollars"],
+  ["$15", "fifteen dollars"],
+  ["$12", "twelve dollars"],
+  ["$10", "ten dollars"],
+  ["Spliit", "Split"],
+  ["Wispr Flow", "Whisper Flow"],
+  ["wassgha", "wass-gah"],
+  ["YazSes", "Yaz Ses"],
+  ["Laberbacke", "Lah-ber-bah-keh"],
+  ["Maneek21", "Maneek twenty-one"],
+  ["edison16a", "Edison sixteen A"],
+  ["nejcar20", "Nej-car twenty"],
+  ["Throwasys", "Throw-a-sis"],
+  ["EZTest", "Easy Test"],
+  ["Kryhr", "Kry-er"],
+  ["Resume.io", "Resume dot I O"],
+  ["resumake", "resu-make"],
+  ["WHOOP", "Whoop"],
+  ["Rescript", "Re-script"],
+  ["CapCut", "Cap Cut"],
+  ["push-to-talk-dictation", "push to talk dictation"]
+ ],
+ "segments": [
+  {
+   "title": "here we go",
+   "turns": [
+    ["V", "<eq>Okay. Everybody settled? Here we go."],
+    ["V", "<title><sfx whoosh>This is Spiteware Monthly. Welcome, everybody. Wherever you're watching from, I hope your month was good and your free trials got cancelled in time. I'm Vera."],
+    ["G", "And I'm Gus. Hi."],
+    ["V", "<stats>Here's the deal. People get so annoyed at a price tag that they build the thing themselves and give it away. We listed {LIVE} of those in September. You're about to get the best ones: what they replace, and what that used to cost."],
+    ["G", "<eq>And I'm here because I think software should cost money."],
+    ["V", "Says the man who went through his card statement last night, <fx 🖍️ squeak>with a highlighter."],
+    ["G", "Eleven subscriptions. I recognized nine. <fx 😬 boing>One is just four capital letters and seven dollars a month."],
+    ["V", "Hold that thought."]
+   ]
+  },
+  {
+   "title": "it used to be free",
+   "turns": [
+    ["V", "<gap 0.6>Okay. First pattern. It was free, and then one day it wasn't."],
+    ["V", "<gap 0.3><bill spliit>Splitwise now caps free accounts at three expenses a day. The fourth one costs $4.99 a month."],
+    ["G", "<fx 🍝 pop>Three a day is one dinner."],
+    ["V", "<shot spliit>So Sebastien Castiel built Spliit. No limit, no account, no ads."],
+    ["G", "<fx 💬 pop tl>I'd use that. If you split bills with anybody, would you? Tell us."],
+    ["V", "<gap 0.6><eq>Okay. Same story, bigger bill."],
+    ["V", "<gap 0.3><bill open-photo-ai>Topaz Photo used to be a license you bought once. Now it's $39 a month. <app open-photo-ai>So vegidio built Open Photo AI."]
+   ]
+  },
+  {
+   "title": "the last button",
+   "turns": [
+    ["V", "<gap 0.7><eq>Next pattern, and it's my favorite. The price shows up at the last button."],
+    ["V", "<gap 0.3>Jareer A. finished a first video ever, clicked Export in CapCut, <bill concat>and got a popup asking for $19.99 a month."],
+    ["G", "After the whole edit?"],
+    ["V", "After the whole edit. <app concat>So now there's Concat. The Export button just exports."],
+    ["G", "<gap 0.6><eq>Who else pulls that?"],
+    ["V", "<bill resumake>Resume.io. $29.95, at the download button. <app resumake>Aditya Khadse built resumake. It hands you the PDF."],
+    ["G", "<fx 🔘 buzzer>Why is it always the last button?"],
+    ["V", "<eq><pre meow 🐱>Sorry. That's Kerning, my cat. She has never paid for anything."],
+    ["G", "Role model."]
+   ]
+  },
+  {
+   "title": "wall of shame",
+   "turns": [
+    ["V", "<gap 0.7><bill localflow><sfx drumroll>Okay. Wall of shame. The most replaced product of the month: Wispr Flow. Dictation, $15 a month. Replaced ten times."],
+    ["G", "Ten?"],
+    ["V", "<wall>Ten. LocalFlow, FlowLocal, FreeFlow, <wall all>and seven more."],
+    ["V", "The builder of YazSes put the grudge best: you keep paying for speech recognition that already worked the first month."],
+    ["G", "<fx 💬 pop>Anybody watching still paying for dictation? No judgment. Okay, some judgment."]
+   ]
+  },
+  {
+   "title": "by the head",
+   "turns": [
+    ["G", "<gap 0.7><eq>My turn. Per-seat pricing. I sold software for six years. A hundred people should pay more than two."],
+    ["V", "<gap 0.3>Then you'll know this one. <bill deft>Slack Pro is $8.75 a head. <app deft>Maneek21 built Deft: chat, tasks and notes on your own server."],
+    ["G", "<fx 🖥️ pop>The catch is, you run the server."]
+   ]
+  },
+  {
+   "title": "tiny ones",
+   "turns": [
+    ["V", "<gap 0.7><eq>Okay. The next two are tiny."],
+    ["V", "<gap 0.3><bill jinx>Bitly wants $10 a month to shorten a link. <app jinx>Gordon McDonald built Jinx. <fx 📄 pop>It's a text file."],
+    ["V", "<gap 0.5><eq>And this one took a weekend."],
+    ["V", "<bill rescript>Descript is $24 a month to edit a video by deleting words. <app rescript>wassgha built Rescript."],
+    ["G", "<fx 📅 boing>A weekend. That used to be an eighteen-month project."]
+   ]
+  },
+  {
+   "title": "you already own it",
+   "turns": [
+    ["V", "<gap 0.7><eq>Next up: paying for things you already own."],
+    ["V", "<gap 0.3><bill openstrap-edge>WHOOP sells you a fitness band, then charges $199 a year to read it. <app openstrap-edge>OpenStrap Edge reads it anyway."],
+    ["V", "<gap 0.6><eq>Okay, this one. This one is loud."],
+    ["V", "<gap 0.3><bill yowl>Unplug Alarm wants a paid upgrade to guard your own laptop. <app yowl>nejcar20 built Yowl. Somebody grabs your MacBook, <fx 🚨 alarm>it screams."],
+    ["G", "<fx 💬 pop>Would you actually put that on your laptop? I think I would."]
+   ]
+  },
+  {
+   "title": "on the site",
+   "turns": [
+    ["V", "<gap 0.7><site apps slack>Quick site tip. The apps page has a search box. Type in whatever you're paying for, and see who already got mad about it."],
+    ["G", "I typed in Slack. I shouldn't have."],
+    ["V", "There's a manifesto on there, too."],
+    ["G", "<fx 📜 pop>I read it. The site calls seat-based pricing a hate crime. I'm trying not to take that personally."]
+   ]
+  },
+  {
+   "title": "the expensive end",
+   "turns": [
+    ["V", "<gap 0.7><eq>Last two. The expensive end."],
+    ["V", "<gap 0.3><bill openbot>Leonid Gorkin was paying $200 a month for Grok Bot's top tier, <fx 💸 trombone>and ran out of tokens. <app openbot>So now there's OpenBot."],
+    ["G", "<gap 0.5><eq>Is there a bigger one?"],
+    ["V", "There is a much bigger one. <bill openterminal>Bloomberg Terminal. $2,665 a month. <app openterminal>French Ben built OpenTerminal: a dark screen full of numbers, on your laptop, from free public data."],
+    ["G", "I would love to have been in that pricing meeting."]
+   ]
+  },
+  {
+   "title": "spite of the month",
+   "turns": [
+    ["V", "<gap 0.7><eq>Before we go. The four capital letters."],
+    ["G", "I looked it up. <fx 🧘 gong>It's a meditation app."],
+    ["V", "No."],
+    ["G", "I've opened it twice. I'm paying seven dollars a month to be calm, <fx 😤 buzzer>and I'm furious."],
+    ["V", "Are you going to cancel it?"],
+    ["G", "I'm going to try it one more time first."],
+    ["V", "That is exactly how they get you. Spite of the month. You pick."],
+    ["G", "<spite concat><sfx fanfare>Concat. Nobody planned to build a video editor that day. A popup made that decision."],
+    ["G", "<eq>I still think software should cost money. Just tell me the price before I've done all the work."],
+    ["V", "That's the most reasonable thing you've ever said to me. <outro>Everything we mentioned is linked below, and there are {MORE} more from September at spiteware.ai."],
+    ["G", "Tell us which one you'd actually use. And if a price tag ever made you build something, send it in."],
+    ["V", "<outro sub><fx 🔔 ding>And subscribe, and hit the bell, so next month's grudges come to you."],
+    ["G", "It's free. We checked."],
+    ["V", "See you in November. Go and check your statement."],
+    ["G", "<fx 🖍️ squeak>Bring a highlighter."]
+   ]
+  }
+ ]
+}

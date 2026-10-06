@@ -1,6 +1,6 @@
 ---
 name: spite
-description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, drafts cards into queue/YYYY-MM-DD.json, lists everything that passed both gates, renders the day's short, commits and pushes, and uploads the short to YouTube publicly, all in one run. /spite review stops at the review desk instead. Also merges a reviewed queue file and renders a short on its own. Triggers on /spite, /spite review, /spite merge, /spite short, "morning run", "find spiteware", "make the short".
+description: Morning spiteware hunt. Sweeps HN, Reddit, GitHub and last30days for apps built out of spite against paid tools, scores them against criteria.md, drafts cards into queue/YYYY-MM-DD.json, lists everything that passed both gates, renders the day's short, commits and pushes, and uploads the short to YouTube publicly, all in one run. /spite review stops at the review desk instead. Also merges a reviewed queue file and renders a short on its own. Also writes and renders the monthly episode, a five-minute two-host video of the month's apps (/spite monthly). Triggers on /spite, /spite review, /spite merge, /spite short, /spite monthly, "morning run", "find spiteware", "make the short", "monthly episode".
 ---
 
 # /spite
@@ -145,6 +145,35 @@ this mode on its own, or after `/spite review` or `/spite merge`, upload only wh
 in that message: `python3 scripts/upload.py` (private; `--public`, `--unlisted` or `--at` only
 if they said which), then report the link it prints. The hall of fame links in the description
 only work once the merge is pushed, so say so if it has not been.
+
+## Mode: monthly (`/spite monthly [YYYY-MM]`)
+
+The monthly episode: about five minutes, landscape, two hosts (Vera and Gus) talking through the
+month's apps. Defaults to last month, once it is over. Never part of the morning run, and nothing
+here is covered by its standing approval: this mode edits files and renders, and stops there.
+
+1. Read, in this order: `episodes/README.md` (the format and the rules, each one there because
+   the user rejected its opposite), `episodes/hosts.md` (who the hosts are and what has been said
+   on air), `episodes/ledger.md` (what earlier episodes used up), and the newest `episodes/*.json`
+   (the reference: copy its shape, never its lines).
+2. Pick the apps as `episodes/README.md` says, and run `python3 scripts/links.py --external` so
+   nothing DEAD is featured.
+3. Write `episodes/YYYY-MM.json`. New lead-ins, new viewer prompts, new stickers, a site tip the
+   ledger shows as unused, a running bit that moves one of the hosts' storylines a step.
+4. `python3 scripts/episode.py --measure` until it lands near 5:00 (it refuses a repeated site
+   tip and lists lines or stickers an earlier episode used: fix those too). Then `--stills`, and
+   read the stills. Then render: `python3 scripts/episode.py --open`.
+5. Read `episodes/.build/YYYY-MM/sheet.png` and fix what is wrong before showing anyone.
+6. In the same change as the script: add the episode's section to `episodes/ledger.md`, mark its
+   site tip used, and move anything newly said about a host up to "Said on air" in
+   `episodes/hosts.md`. An episode without its ledger entry is not finished.
+7. Report in under 120 words: the file and its length, how many apps, the site tip, the spite of
+   the month, what it cost, and what to listen for, since you cannot hear it.
+
+Never upload it unasked. The user watches it first. When they ask in that message:
+`python3 scripts/upload.py episodes/YYYY-MM.json` (private; `--public`, `--unlisted` or `--at` only
+if they said which), then report the links it prints. Commit the script, the ledger and the hosts
+file only when the user says so.
 
 ## Mode: status (`/spite status`)
 

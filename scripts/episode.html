@@ -1,0 +1,220 @@
+<!-- One frame of the monthly episode, 1920x1080. scripts/episode.py fills in FRAME, serves the repo root so
+     /style.css resolves, and screenshots this with headless Firefox: twice per caption (mouth shut, mouth open),
+     and once more where a sticker lands. The two pure-green boxes are windows: ffmpeg keys that colour out and the
+     live equalizer shows through, so nothing else here may use it. Class names must not repeat one in style.css
+     (.wall, .shame and .sticker all did, and each broke a frame). -->
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/style.css">
+<style>
+html,body{width:1920px;height:1080px;overflow:hidden;margin:0}
+body{position:relative;background-size:44px 44px;background-image:radial-gradient(var(--ink) 1.4px,transparent 1.4px);--j:0}
+.tilt{transform:rotate(calc(var(--r,0deg) + var(--j)*.35deg))}
+.top{position:absolute;left:60px;right:60px;top:34px;height:84px;display:flex;align-items:center;justify-content:space-between}
+.top .logo__stack{font-size:34px}.top .logo em{font-size:22px;padding:5px 9px}
+.chip{font-family:var(--mono);font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--ink);color:var(--yellow);padding:10px 16px}
+
+/* the hosts */
+.hosts{position:absolute;left:60px;top:150px;width:320px;height:680px;display:flex;flex-direction:column;gap:32px}
+.host{position:relative;flex:1;background:#fff;border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);overflow:hidden}
+.host.off{filter:grayscale(1);opacity:.5;box-shadow:6px 6px 0 var(--ink)}
+.host.on.V{background:var(--pink)}.host.on.G{background:var(--yellow)}
+.host.on{transform:rotate(calc(var(--j)*.8deg - .4deg))}
+.name{position:absolute;left:0;right:0;bottom:0;background:var(--ink);color:#fff;font-family:var(--display);font-weight:900;font-size:32px;line-height:1;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
+.name i{font-style:normal;font-family:var(--mono);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--yellow)}
+.face{position:absolute;left:50%;top:22px;width:200px;height:230px;margin-left:-100px}
+.face div{position:absolute}
+.head{left:28px;top:44px;width:144px;height:164px;border-radius:72px 72px 66px 66px;background:var(--paper);border:6px solid var(--ink);z-index:1}
+.eye{top:112px;width:16px;height:16px;border-radius:50%;background:var(--ink);z-index:4}
+.eye.l{left:66px}.eye.r{left:118px}
+.mouth{left:78px;top:160px;width:44px;height:8px;border-radius:4px;background:var(--ink);z-index:4}
+.talk .mouth{left:80px;top:150px;width:40px;height:30px;border-radius:45%;background:var(--pink);border:6px solid var(--ink);box-sizing:border-box}
+.V .hair{left:10px;top:20px;width:180px;height:196px;border-radius:90px 90px 24px 24px;background:var(--ink);z-index:0}
+.V .fringe{left:28px;top:44px;width:144px;height:44px;border-radius:72px 72px 0 0;background:var(--ink);z-index:2}
+.V .lens{top:98px;width:44px;height:44px;border-radius:50%;border:5px solid var(--ink);box-sizing:border-box;z-index:3;background:rgba(255,255,255,.5)}
+.V .lens.l{left:52px}.V .lens.r{left:104px}.V .bridge{left:94px;top:116px;width:12px;height:5px;background:var(--ink);z-index:3}
+.G .capd{left:22px;top:26px;width:156px;height:62px;border-radius:78px 78px 0 0;background:var(--blue);border:6px solid var(--ink);box-sizing:border-box;z-index:3}
+.G .brim{left:120px;top:76px;width:86px;height:18px;border-radius:0 12px 12px 0;background:var(--blue);border:6px solid var(--ink);box-sizing:border-box;z-index:3}
+.G .beard{left:28px;top:138px;width:144px;height:70px;border-radius:0 0 66px 66px;background:var(--ink);z-index:2}
+.G .mouth{background:var(--paper)}.G.talk .mouth{background:var(--pink);border-color:var(--paper)}
+
+/* the stage */
+.stage{position:absolute;left:440px;right:60px;top:150px;height:680px;display:flex;align-items:center;justify-content:center}
+
+.title{display:flex;flex-direction:column;align-items:flex-start;gap:30px}
+.title h1{margin:0;font-family:var(--display);font-weight:900;font-size:170px;line-height:.86;letter-spacing:-.045em;text-transform:uppercase;--r:-2deg}
+.title h1 span{display:block;width:max-content;padding:6px 22px 14px;border:6px solid var(--ink)}
+.title h1 span:first-child{background:var(--pink);color:#fff}.title h1 span:last-child{background:var(--ink);color:var(--yellow)}
+.title .row{display:flex;gap:26px;align-items:center}
+.title .date{font-family:var(--mono);font-weight:700;font-size:54px;text-transform:uppercase;letter-spacing:.04em;background:var(--yellow);border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:8px 22px;--r:2deg}
+.title .n{white-space:nowrap;font-family:var(--display);font-weight:900;font-size:42px;line-height:1;background:#fff;border:6px solid var(--ink);box-shadow:10px 10px 0 var(--pink);padding:14px 22px}
+.hide{visibility:hidden}
+
+.bill{position:relative;background:#fff;border:6px solid var(--ink);box-shadow:16px 16px 0 var(--ink);padding:36px 48px 42px;max-width:1200px;--r:-2deg}
+.bill__l{display:block;font-family:var(--mono);font-size:30px;text-transform:uppercase;letter-spacing:.14em}
+.bill__n{display:block;font-family:var(--display);font-weight:900;font-size:120px;line-height:1;letter-spacing:-.03em;margin:12px 0 4px;white-space:nowrap;max-width:1100px}
+.bill__p{display:flex;align-items:baseline;gap:0 18px;font-family:var(--mono);font-weight:700;color:#b00;white-space:nowrap}
+.bill__p b{font-size:200px;line-height:1;letter-spacing:-.04em}.bill__p i{font-style:normal;font-size:52px}
+.bill--mini{padding:18px 24px 20px;box-shadow:8px 8px 0 var(--ink)}
+.bill--mini .bill__l{font-size:18px}.bill--mini .bill__n{font-size:40px;margin:6px 0 0;max-width:340px}
+.bill--mini .bill__p b{font-size:64px}.bill--mini .bill__p i{font-size:24px}
+.pay{display:flex;align-items:center;gap:30px}.pay .free{position:static;font-size:54px;transform:rotate(-6deg)}
+.bill__x{position:absolute;left:-18px;right:-18px;top:60%;height:16px;background:var(--pink);border:4px solid var(--ink);transform:rotate(-7deg)}
+.free{position:absolute;right:-30px;top:-44px;font-family:var(--display);font-weight:900;font-size:64px;line-height:1;background:var(--yellow);border:6px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:8px 20px;transform:rotate(9deg)}
+
+.av{flex:none;width:150px;height:150px;border:6px solid var(--ink);box-shadow:10px 10px 0 var(--pink);object-fit:cover;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:76px;--r:-3deg}
+
+.shot{display:flex;align-items:center;gap:44px}
+.win{flex:none;width:800px;border:6px solid var(--ink);box-shadow:14px 14px 0 var(--ink);background:#fff;--r:-1deg}
+.win__bar{height:44px;border-bottom:6px solid var(--ink);background:var(--yellow);display:flex;align-items:center;gap:10px;padding:0 14px;font-family:var(--mono);font-size:20px;font-weight:700}
+.win__bar u{width:18px;height:18px;border:4px solid var(--ink);background:#fff;flex:none}
+.win__bar span{margin-left:10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.win img{display:block;width:100%;height:500px;object-fit:cover;object-position:top}
+.side{display:flex;flex-direction:column;align-items:flex-start;gap:24px;min-width:0;width:520px}
+.icon{width:130px;height:130px;display:grid;place-items:center;font-size:74px;background:#fff;border:6px solid var(--ink);box-shadow:8px 8px 0 var(--pink);--r:-4deg}
+.side .nm{font-family:var(--display);font-weight:900;font-size:86px;line-height:.95;letter-spacing:-.035em;white-space:nowrap;max-width:520px}
+.side .by{font-family:var(--mono);font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px}
+
+.app{display:flex;flex-direction:column;gap:34px;align-items:flex-start;position:relative;margin-top:110px}
+.app .row{display:flex;align-items:center;gap:40px}
+.app .icon{width:220px;height:220px;font-size:126px}
+.app .nm{display:block;font-family:var(--display);font-weight:900;font-size:150px;line-height:.95;letter-spacing:-.035em;white-space:nowrap;max-width:900px}
+.app .by{display:block;font-family:var(--mono);font-size:32px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-top:14px}
+.tags{display:flex;flex-wrap:wrap;gap:14px}
+.tags span{font-family:var(--mono);font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;border:4px solid var(--ink);background:#fff;padding:6px 14px}
+.tags .on{background:var(--green)}
+.stamp{position:absolute;right:30px;top:6px;font-family:var(--display);font-weight:900;font-size:58px;line-height:1;background:var(--pink);color:#fff;border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:14px 24px;transform:rotate(7deg)}
+
+.epw{display:flex;align-items:center;gap:60px;width:1300px}
+.epw__l{flex:none;display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.epw__l .l{font-family:var(--mono);font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+.epw__l .v{font-family:var(--display);font-weight:900;font-size:84px;line-height:1;letter-spacing:-.03em;background:#fff;border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:10px 20px;--r:-2deg}
+.epw__l .t{font-family:var(--display);font-weight:900;font-size:230px;line-height:.9;letter-spacing:-.05em}
+.epw__l .t small{font-size:90px;letter-spacing:-.02em}
+.epw__r{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-width:0}
+.epw__r span{font-family:var(--display);font-weight:900;font-size:36px;line-height:1.1;border:5px solid var(--ink);background:#fff;padding:12px 16px;min-height:66px;box-sizing:border-box;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.epw__r span.on{background:var(--yellow);box-shadow:6px 6px 0 var(--ink)}
+.epw__r span.no{border-style:dashed;color:transparent}
+
+.outro{display:flex;flex-direction:column;align-items:flex-start;gap:30px}
+.outro h2{margin:0;font-family:var(--display);font-weight:900;font-size:124px;line-height:1.12;letter-spacing:-.04em}
+.outro h2 .hl{display:inline-block;line-height:1;background:var(--yellow);padding:2px 14px 10px}
+.outro .url{font-family:var(--display);font-weight:900;font-size:110px;letter-spacing:-.03em;background:var(--pink);color:#fff;border:6px solid var(--ink);box-shadow:14px 14px 0 var(--ink);padding:10px 30px;--r:-2deg}
+.outro .more{font-family:var(--mono);font-weight:700;font-size:38px;text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--yellow);padding:10px 18px}
+.outro .ai{font-family:var(--mono);font-size:24px;font-weight:700;letter-spacing:.02em}
+
+/* the equalizer shows through these: mk.py keys this exact green out and draws the bars behind */
+.mini{position:absolute;left:300px;top:48px;width:360px;height:56px;background:#00ff01;outline:5px solid var(--ink)}
+.eqhole{position:absolute;left:90px;top:120px;width:1240px;height:440px;background:#00ff01;outline:6px solid var(--ink);box-shadow:16px 16px 0 6px var(--pink)}
+.onair{position:absolute;left:84px;top:52px;font-family:var(--mono);font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:var(--pink);color:#fff;border:5px solid var(--ink);padding:6px 14px}
+/* stickers: five shapes, four sizes, five ways of moving, picked by the sticker's number so no two neighbours match */
+.stk{position:absolute;z-index:6;width:var(--w);height:var(--w);display:grid;place-items:center;filter:drop-shadow(10px 10px 0 var(--ink))}
+.stk u{position:absolute;inset:0;background:var(--ink)}
+.stk u::after{content:"";position:absolute;inset:8px;background:var(--fill,#fff)}
+.stk b{position:relative;font-size:calc(var(--w)*.58);line-height:1;font-weight:400}
+.s0 u,.s0 u::after{border-radius:50%}
+.s1 u{border-radius:30px}.s1 u::after{border-radius:22px}.s1{--fill:var(--yellow)}
+.s2 u,.s2 u::after{clip-path:polygon(50% 0,61% 13%,78% 7%,80% 24%,97% 28%,89% 43%,100% 57%,85% 65%,87% 83%,70% 82%,61% 98%,48% 87%,34% 98%,27% 82%,9% 81%,13% 64%,0 53%,12% 41%,5% 25%,22% 22%,26% 5%,41% 13%)}
+.s2{--fill:var(--yellow)}.s2 b{font-size:calc(var(--w)*.46)}
+.s3 u{border-radius:44px 44px 44px 0}.s3 u::after{border-radius:36px 36px 36px 0}
+.s4 u,.s4 u::after{clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0 50%)}.s4{--fill:var(--pink)}.s4 b{font-size:calc(var(--w)*.5)}
+.z0{--w:220px}.z1{--w:170px}.z2{--w:280px}.z3{--w:200px}
+.p0{right:0;top:-24px;--rot:8deg}.p1{right:24px;bottom:-12px;--rot:-7deg}.p2{left:10px;top:-20px;--rot:-9deg}.p3{right:150px;top:-34px;--rot:5deg}
+.a0{transform:rotate(calc(var(--rot) + var(--j)*10deg - 5deg))}
+.a1{transform:rotate(var(--rot)) scale(calc(1 + var(--j)*.15))}
+.a2{transform:translateY(calc(var(--j)*-30px)) rotate(var(--rot))}
+.a3{transform:translateX(calc(var(--j)*26px - 13px)) rotate(calc(var(--rot) + 4deg - var(--j)*8deg))}
+.a4{transform:rotate(calc(var(--j)*30deg - 15deg))}
+.stk.land{transform:scale(1.28) rotate(calc(var(--rot)*-1))}
+
+/* the site's own page, and the builder's face on a card */
+.site{width:1040px;border:6px solid var(--ink);box-shadow:14px 14px 0 var(--pink);background:#fff;--r:-.8deg}
+.site img{display:block;width:100%;height:520px;object-fit:cover;object-position:top}
+.byline{display:flex;align-items:center;gap:18px;margin-top:16px}
+.byline .av{width:124px;height:124px;border-width:6px;box-shadow:8px 8px 0 var(--pink);font-size:60px}
+.side .byline{margin-top:0;gap:14px}.side .byline .av{width:96px;height:96px;font-size:48px}
+.app .byline .by{margin-top:0}.side .byline .by{margin-bottom:0}
+.outro.has-sub{margin-right:430px}
+.sub{position:absolute;right:10px;top:150px;display:flex;flex-direction:column;align-items:center;gap:18px;--r:4deg}
+.sub b{font-family:var(--display);font-weight:900;font-size:62px;line-height:1;background:var(--yt);color:#fff;border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:16px 26px}
+.sub i{font-style:normal;font-size:110px;line-height:1}
+.sub span{font-family:var(--mono);font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--yellow);border:5px solid var(--ink);padding:4px 12px}
+
+/* the caption */
+.cap{position:absolute;left:60px;right:60px;bottom:40px;height:170px;box-sizing:border-box;background:var(--ink);box-shadow:10px 10px 0 var(--pink);color:#fff;display:flex;align-items:center;gap:30px;padding:0 36px}
+.sp{flex:none;font-family:var(--mono);font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:.08em;padding:8px 16px}
+.sp.V{background:var(--pink);color:#fff}.sp.G{background:var(--yellow);color:var(--ink)}
+.cap p{margin:0;min-width:0;flex:1;font-family:var(--display);font-weight:900;font-size:46px;line-height:1.14;letter-spacing:-.01em}
+.cap p b{color:var(--yellow)}
+</style>
+<body>
+<div class="top"><div class="logo"><span class="logo__stack"><span>SPITE</span><span>WARE</span></span><em>.ai</em></div><span class="chip" id="chip"></span></div>
+<div class="mini"></div>
+<div class="hosts" id="hosts"></div>
+<div class="stage" id="stage"></div>
+<div class="cap"><span class="sp" id="sp"></span><p id="cp"></p></div>
+<script>
+const FRAME = /*FRAME*/null;
+const F = FRAME || {who:"V", seg:"here we go", cap:"A test caption.", j:1, month:"September 2026",
+  hosts:{V:{name:"Vera", role:"brings the grudges"}, G:{name:"Gus", role:"defends the bill"}},
+  stage:{t:"eq"}, sticker:{e:"🖍️", n:1, p:""}};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const S = F.stage, a = S.app;
+document.body.style.setProperty("--j", F.j === 1 ? 1 : 0);
+
+const FACE = {
+  V: '<div class="hair"></div><div class="head"></div><div class="fringe"></div><div class="lens l"></div><div class="lens r"></div><div class="bridge"></div>',
+  G: '<div class="head"></div><div class="beard"></div><div class="capd"></div><div class="brim"></div>'};
+document.getElementById("hosts").innerHTML = ["V", "G"].map(k => {
+  const on = F.who === k, talk = on && F.j ? "talk" : "";
+  return `<div class="host ${k} ${on ? "on" : "off"}"><div class="face ${k} ${talk}">${FACE[k]}<div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div>
+    <div class="name"><span>${esc(F.hosts[k].name)}</span><i>${esc(F.hosts[k].role)}</i></div></div>`;
+}).join("");
+
+function bill(mini, struck) {
+  const m = /^([$€£][\d,.]+)\s*(.*)$/.exec(a.price) || [0, a.price, ""];
+  const card = `<div class="bill tilt ${mini ? "bill--mini" : ""}"><span class="bill__l">replaces</span>
+    <b class="bill__n fit">${esc(a.victim)}</b><span class="bill__p"><b>${esc(m[1])}</b><i>${esc(m[2])}</i></span>
+    ${struck ? '<span class="bill__x"></span>' : ""}</div>`;
+  return mini && struck ? `<div class="pay">${card}<span class="free">FREE</span></div>` : card;
+}
+const avatar = () => a.face.img ? `<img class="av tilt" src="${esc(a.face.img)}" alt="">`
+  : `<div class="av tilt" style="background:${a.face.hue}">${esc(a.face.initial)}</div>`;
+
+function stage() {
+  if (S.t === "site") return `<div class="site tilt"><div class="win__bar"><u></u><u></u><u></u><span>${esc(S.label)}</span></div><img src="${esc(S.img)}" alt=""></div>`;
+  if (S.t === "eq") return '<span class="onair">● on air</span><div class="eqhole"></div>';
+  if (S.t === "title") return `<div class="title"><h1 class="tilt"><span>Spiteware</span><span>Monthly</span></h1>
+    <div class="row"><div class="date tilt">${esc(S.month)}</div>
+    <div class="n ${S.stats ? "" : "hide"}">${S.live} new apps</div><div class="n ${S.stats ? "" : "hide"}">${S.products} paid products replaced</div></div></div>`;
+  if (S.t === "bill") return bill(false, false);
+  if (S.t === "shot") return `<div class="shot"><div class="win tilt"><div class="win__bar"><u></u><u></u><u></u><span>${esc(a.name)}</span></div>
+    ${a.shot ? `<img src="${esc(a.shot)}" alt="">` : ""}</div>
+    <div class="side"><div class="icon tilt">${esc(a.icon)}</div><b class="nm fit">${esc(a.name)}</b><span class="byline">${avatar()}<span class="by">by ${esc(a.builder)}</span></span>${bill(true, true)}</div></div>`;
+  if (S.t === "app") {
+    const flags = [a.open_source && "open source"].filter(Boolean);
+    return `${S.stamp ? `<span class="stamp">${esc(S.stamp)}</span>` : ""}<div class="app">
+      <div class="row"><div class="icon tilt">${esc(a.icon)}</div><span><b class="nm fit">${esc(a.name)}</b><span class="byline">${avatar()}<span class="by">by ${esc(a.builder)}</span></span></span></div>
+      <div class="tags">${flags.map(t => `<span class="on">${t}</span>`).join("")}${a.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
+      ${bill(true, true)}</div>`;
+  }
+  if (S.t === "wall") return `<div class="epw"><div class="epw__l"><span class="l">most replaced · ${esc(F.month)}</span><span class="v tilt fit">${esc(S.product)}</span>
+    <span class="t">${S.named.length}<small>/${S.all.length}</small></span></div>
+    <div class="epw__r">${S.all.map(n => S.named.includes(n) ? `<span class="on">${esc(n)}</span>` : '<span class="no">?</span>').join("")}</div></div>`;
+  return `<div class="outro ${S.lit ? "has-sub" : ""}"><h2>All free.<br>All <span class="hl">pure spite.</span></h2><div class="url tilt">spiteware.ai</div>
+    <div class="more">+${S.more} more from ${esc(S.month.split(" ")[0])}</div>
+    ${S.lit ? '<div class="sub tilt"><b>SUBSCRIBE</b><i>🔔</i><span>new grudges monthly</span></div>' : ""}<div class="ai">The hosts are AI voices. Their stories are scripted. The apps, prices and grudges are real.</div></div>`;
+}
+const K = F.sticker, n = K ? K.n : 0;
+document.getElementById("stage").innerHTML = stage() + (K ? `<span class="stk s${n % 5} z${(n * 3) % 4} p${K.p ? {tr: 0, br: 1, tl: 2, tm: 3}[K.p] : [0, 1, 2, 3, 1, 0, 3, 2][n % 8]} ${F.j === 2 ? "land" : "a" + ((n * 2 + 1) % 5)}"><u></u><b>${esc(K.e)}</b></span>` : "");
+document.getElementById("chip").textContent = `${F.month} · ${F.seg}`;
+const sp = document.getElementById("sp");
+if (F.who) { sp.textContent = F.hosts[F.who].name; sp.className = "sp " + F.who; } else sp.hidden = true;
+document.getElementById("cp").textContent = F.cap;
+
+// shrink one-line names to their box and long captions to the strip
+document.querySelectorAll(".fit").forEach(el => {
+  let px = parseFloat(getComputedStyle(el).fontSize);
+  while (el.scrollWidth > el.clientWidth && px > 24) el.style.fontSize = (px -= 2) + "px";
+});
+const cp = document.getElementById("cp");
+{ let px = 46; while (cp.offsetHeight > 150 && px > 28) cp.style.fontSize = (px -= 2) + "px"; }
+</script>

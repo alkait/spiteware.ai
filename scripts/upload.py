@@ -2,6 +2,7 @@
 """Upload a daily short to YouTube: shorts/DATE.mp4, with the posting desk's title and description.
 
 Usage: python3 scripts/upload.py [shorts/DATE.json] [--public | --unlisted | --at 2026-09-20T09:00]
+       python3 scripts/upload.py episodes/YYYY-MM.json [...]   # the monthly episode instead
        python3 scripts/upload.py --auth [client_secret.json]   # once: consent in the browser
 
 Private unless told otherwise. The words are handoff.texts(), the same ones the posting desk
@@ -17,6 +18,10 @@ YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN and YOUTUBE_CHAN
 every upload checks the token still belongs to it: a Google account can own several channels, and
 picking the wrong one there once sent a short to the wrong place. Stdlib only, like everything else here. Running this is posting: never without the
 user's word, except the default /spite morning run, which runs --public after its push is live.
+
+Given a script from episodes/, it uploads episodes/YYYY-MM.mp4 as an ordinary video, with the title,
+chapters and app links scripts/episode.py wrote to episodes/.build/YYYY-MM/description.txt. That is
+never part of the morning run: an episode goes up only when the user asks, in that message.
 """
 import argparse, datetime, http.server, json, os, pathlib, secrets, sys
 import urllib.error, urllib.parse, urllib.request
@@ -25,6 +30,7 @@ import handoff
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SHORTS = ROOT / "shorts"
+EPISODES = ROOT / "episodes"
 ENV = ROOT / ".env"
 DONE = SHORTS / ".cache" / "uploaded.json"
 SCOPE = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly"
@@ -153,7 +159,7 @@ def set_thumb(video_id, jpg, token):
     the video is already up. YouTube only takes custom thumbnails from a phone-verified channel,
     and the Shorts feed itself may still pick its own frame; search and the channel page use this."""
     if not jpg.exists():
-        return print(f"No {jpg.relative_to(ROOT)}: re-render with python3 scripts/short.py to make one")
+        return print(f"No {jpg.relative_to(ROOT)}: re-render to make one")
     req = urllib.request.Request(f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={video_id}",
                                  data=jpg.read_bytes(), headers={"Authorization": f"Bearer {token}",
                                                                  "Content-Type": "image/jpeg"})
@@ -166,7 +172,7 @@ def set_thumb(video_id, jpg, token):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("script", nargs="?", help="shorts/DATE.json, default the newest; with --auth, the client JSON")
+    ap.add_argument("script", nargs="?", help="shorts/DATE.json, default the newest; or episodes/YYYY-MM.json; with --auth, the client JSON")
     ap.add_argument("--auth", action="store_true", help="one-time browser consent, writes the tokens to .env")
     ap.add_argument("--public", action="store_true", help="publish at once")
     ap.add_argument("--unlisted", action="store_true")
@@ -179,17 +185,20 @@ def main():
         return auth(a.script)
     src = pathlib.Path(a.script) if a.script else max(SHORTS.glob("20*.json"))
     script = json.loads(src.read_text())
-    mp4 = SHORTS / f"{script['date']}.mp4"
+    episode = "month" in script  # a monthly episode's script; a short's has a date
+    key, home = (script["month"], EPISODES) if episode else (script["date"], SHORTS)
+    watch = "https://youtube.com/watch?v=" if episode else "https://youtube.com/shorts/"
+    mp4 = home / f"{key}.mp4"
     if not mp4.exists():
-        sys.exit(f"No {mp4.relative_to(ROOT)}: render it first with python3 scripts/short.py")
+        sys.exit(f"No {mp4.relative_to(ROOT)}: render it first with python3 scripts/{'episode' if episode else 'short'}.py")
     done = json.loads(DONE.read_text()) if DONE.exists() else {}
-    jpg = SHORTS / ".build" / script["date"] / "thumb.jpg"
+    jpg = home / ".build" / key / "thumb.jpg"
     if a.thumb:
-        if script["date"] not in done:
-            sys.exit(f"{script['date']} has not been uploaded, so there is no video to put a thumbnail on")
-        return set_thumb(done[script["date"]], jpg, access())
-    if script["date"] in done and not a.again:
-        sys.exit(f"{script['date']} is already up: https://youtube.com/shorts/{done[script['date']]} (--again to upload it twice)")
+        if key not in done:
+            sys.exit(f"{key} has not been uploaded, so there is no video to put a thumbnail on")
+        return set_thumb(done[key], jpg, access())
+    if key in done and not a.again:
+        sys.exit(f"{key} is already up: {watch}{done[key]} (--again to upload it twice)")
     at = None
     if a.at:
         when = datetime.datetime.fromisoformat(a.at).astimezone()
@@ -199,8 +208,17 @@ def main():
     # a scheduled video waits as private; YouTube flips it at publishAt
     privacy = "private" if at else "public" if a.public else "unlisted" if a.unlisted else "private"
     handoff.check(script)
-    apps = {x["slug"]: x for x in json.loads((ROOT / "data" / "apps.json").read_text())}
-    text = handoff.texts(script, apps)["youtube"]
+    if episode:  # episode.py wrote the words after its render: the title, then everything under it
+        words = home / ".build" / key / "description.txt"
+        if not words.exists():
+            sys.exit(f"No {words.relative_to(ROOT)}: render the episode first with python3 scripts/episode.py")
+        title, _, description = words.read_text().partition("\n\n")
+        text = {"title": title.strip(), "description": description.strip()}
+        if len(text["description"]) > handoff.LIMITS["youtube description"]:
+            sys.exit(f"The description came out at {len(text['description'])} characters, over YouTube's limit")
+    else:
+        apps = {x["slug"]: x for x in json.loads((ROOT / "data" / "apps.json").read_text())}
+        text = handoff.texts(script, apps)["youtube"]
     if a.dry:
         return print(f"{mp4.relative_to(ROOT)}, {mp4.stat().st_size / 1e6:.1f} MB, {privacy}{' until ' + at if at else ''}\n\n"
                      f"{text['title']}\n\n{text['description']}")
@@ -213,9 +231,9 @@ def main():
     # the description ends with the hashtags; the tags field takes the same words bare
     video = upload(mp4, text["title"], text["description"], script["post"]["tags"], privacy, at, token)
     DONE.parent.mkdir(parents=True, exist_ok=True)
-    DONE.write_text(json.dumps({**done, script["date"]: video["id"]}, indent=1) + "\n")
+    DONE.write_text(json.dumps({**done, key: video["id"]}, indent=1) + "\n")
     landed = video["status"]["privacyStatus"]
-    print(f"https://youtube.com/shorts/{video['id']}  ({landed}{', public at ' + a.at if at else ''})")
+    print(f"{watch}{video['id']}  ({landed}{', public at ' + a.at if at else ''})")
     print(f"https://studio.youtube.com/video/{video['id']}/edit")
     set_thumb(video["id"], jpg, token)
     if landed != privacy:

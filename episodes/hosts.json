@@ -1,0 +1,35 @@
+{
+  "hosts": {
+    "V": {
+      "name": "Vera",
+      "role": "brings the grudges",
+      "voice": "Aoede",
+      "style": "[podcast host talking to a friend, quick, dry, warm, natural]"
+    },
+    "G": {
+      "name": "Gus",
+      "role": "defends the bill",
+      "voice": "Umbriel",
+      "style": "[relaxed, low-key, dry, understated, deadpan, natural conversational pace]"
+    }
+  },
+  "fallback_style": "[casual, dry, mid-conversation]",
+  "say": [
+    [
+      "spiteware.ai",
+      "spiteware dot A I"
+    ],
+    [
+      "SaaS",
+      "sass"
+    ],
+    [
+      "résumé",
+      "resume"
+    ],
+    [
+      "PNG",
+      "P N G"
+    ]
+  ]
+}
