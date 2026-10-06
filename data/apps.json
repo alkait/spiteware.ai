@@ -4597,5 +4597,69 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-10-05"
+  },
+  {
+    "slug": "recly",
+    "name": "Recly",
+    "url": "https://recly.dev/",
+    "icon": "⌚",
+    "tagline": "Plaud sells a $159 recorder, then $17.99 a month to transcribe it. Recly uses the watch already on your wrist and transcribes on the device for nothing.",
+    "replaces": {
+      "name": "Plaud Pro Plan",
+      "product": "Plaud",
+      "price": "$17.99/mo",
+      "source": "https://www.plaud.ai/pages/plaud-ai-plan-pricing"
+    },
+    "grudge": {
+      "quote": "A Plaud costs $159 or more, plus a plan once the free 300 minutes a month run out.",
+      "source": "https://recly.dev/"
+    },
+    "builder": {
+      "name": "Hyungrok Kim",
+      "handle": "rokrokss",
+      "url": "https://github.com/rokrokss"
+    },
+    "tags": [
+      "local-first",
+      "byo-key",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "rokrokss/recly",
+    "spite_score": 8,
+    "added": "2026-10-06"
+  },
+  {
+    "slug": "earwing",
+    "name": "EarWing",
+    "url": "https://github.com/nlothian/earwing",
+    "icon": "🎙️",
+    "tagline": "AI note-taker gadgets charge for the box and then again every month. EarWing is an ESP32, four mics and a 3D print, and the transcription runs in your browser.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I've been shocked by the amount of money people are paying for hardware transcription devices and subscriptions for the software.",
+      "source": "https://news.ycombinator.com/item?id=49963151"
+    },
+    "builder": {
+      "name": "Nick Lothian",
+      "handle": "nlothian",
+      "url": "https://github.com/nlothian"
+    },
+    "tags": [
+      "local-first",
+      "privacy",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "nlothian/earwing",
+    "spite_score": 5,
+    "added": "2026-10-06"
   }
 ]

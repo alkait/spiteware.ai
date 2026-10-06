@@ -1,0 +1,21 @@
+{
+  "run": "2026-10-06",
+  "swept": "hn (48h, 248 Show HN), reddit json (r/SideProject, r/selfhosted, r/vibecoding; r/opensource, r/macapps, r/ClaudeAI rate-limited 429; post pages blocked during verification), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 334,
+  "triaged": 18,
+  "candidates": [],
+  "dropped": [
+    "WhatsApp Group Member Exporter: real grudge, but it harvests other people's phone numbers from groups; not a card the site should carry",
+    "Private desk for a local model (r/selfhosted): a guide with no link to an app (gate 1 has a grudge, but nothing to list)",
+    "Capbase: 'free alternative to Crunchbase and PitchBook' is positioning, no grudge in the builder's words (gate 1)",
+    "openrisksim: 'free alternative to @RISK and Crystal Ball' is positioning, no grudge (gate 1)",
+    "diskforecast: 'free alternative to DaisyDisk and CleanMyMac' is positioning, no grudge; diskforecast.com does not resolve (gate 1)",
+    "Open Report: built because Superset was complex and Metabase limited, not a price (gate 1)",
+    "Figxit: built because the open Fig alternatives lack features, not a price (gate 1)",
+    "Loquacio, tv-remote-mac, loop (WHOOP strap): 'no subscription' is a feature line, not a grudge (gate 1)",
+    "GlacierVault: built to make cheap AWS storage usable, no paid tool reacted to (gate 1)",
+    "Postquel, Leftovers, Mooring, Free Analytics, Lyricise: no grudge in post, comments or site (gate 1)",
+    "EdgeLite Panel, Steam Deals: built for a missing feature or for fun, not a price (gate 1)",
+    "Squeegee, Nightwatch, SocialSaver, Off, Fennec, MapAnimator, SCM, RedactPDF.ai: already dropped on earlier runs"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-06",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Plaud wants $17.99 a month. Recly wants nothing.",
+    "caption": "Two fresh grudges against AI recorders that bill for the box and then again every month, each replaced by someone annoyed enough to build the free version.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "transcription"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 6th.", "say": "October sixth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "recly",
+     "quote": "A Plaud costs $159 or more, plus a plan once the free 300 minutes a month run out.",
+     "cues": [
+      {"cap": "Plaud wants $17.99 a month", "say": "Plaud wants seventeen ninety-nine a month", "step": "badge"},
+      {"cap": "to transcribe your meetings.", "step": "badge"},
+      {"cap": "Hyungrok Kim:", "say": "[matter-of-fact] Hyung-rock Kim:", "step": "quote"},
+      {"cap": "“A Plaud costs $159 or more,", "say": "[sarcastic] A Plaud costs a hundred and fifty-nine dollars or more,", "step": "quote"},
+      {"cap": "plus a plan once the free", "step": "quote"},
+      {"cap": "300 minutes a month run out.”", "say": "three hundred minutes a month run out.", "step": "quote"},
+      {"cap": "So: Recly. On your watch.", "say": "[quick] So: Reck-lee. On your watch.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "earwing", "score": false,
+     "gripe": "AI recorders charge for the box, then every month.",
+     "quote": "I've been shocked by the amount of money people are paying for hardware transcription devices",
+     "cut": true,
+     "cues": [
+      {"cap": "Pay for the recorder,", "step": "gripe"},
+      {"cap": "then pay monthly to read it.", "step": "gripe"},
+      {"cap": "Nick Lothian:", "say": "[matter-of-fact] Nick Loh-thee-an:", "step": "quote"},
+      {"cap": "“I've been shocked by the amount of money", "say": "[sarcastic] I've been shocked by the amount of money", "step": "quote"},
+      {"cap": "people are paying for hardware transcription devices”", "say": "people are paying for hardware transcription devices.", "step": "quote"},
+      {"cap": "So: EarWing. Print it yourself.", "say": "[quick] So: Ear-Wing. Print it yourself.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
