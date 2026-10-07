@@ -4661,5 +4661,37 @@
     "repo": "nlothian/earwing",
     "spite_score": 5,
     "added": "2026-10-06"
+  },
+  {
+    "slug": "snapback",
+    "name": "Snapback",
+    "url": "https://pinutss.github.io/snapback/",
+    "icon": "👻",
+    "tagline": "Snapchat put your own old photos behind a storage plan. Snapback opens the free export in your browser and gives you the grid, the year scrubber and the flashbacks back. Nothing leaves your device.",
+    "replaces": {
+      "name": "Snapchat Memories storage plan",
+      "product": "Snapchat",
+      "price": "",
+      "source": "https://newsroom.snap.com/snap-memory-storage"
+    },
+    "grudge": {
+      "quote": "In 2025 Snapchat started charging for Memories storage above 5 GB.",
+      "source": "https://github.com/Pinutss/snapback"
+    },
+    "builder": {
+      "name": "Pinuts",
+      "handle": "Pinutss",
+      "url": "https://github.com/Pinutss"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Pinutss/snapback",
+    "spite_score": 9,
+    "added": "2026-10-07"
   }
 ]

@@ -1,0 +1,26 @@
+{
+  "run": "2026-10-07",
+  "swept": "hn (48h, 327 Show HN), reddit json (r/SideProject, r/selfhosted, r/vibecoding, r/webdev; r/opensource, r/macapps, r/ClaudeAI rate-limited 429), github search; last30days unavailable (skill not installed), four web searches in its place found nothing from the window",
+  "raw_hits": 417,
+  "triaged": 23,
+  "candidates": [],
+  "dropped": [
+    "Pixellect (macOS Photoshop clone): real grudge ('unwilling to pay the Adobe tax'), but the site sells cloud plans at $9.99 and $29.99/mo (gate 2)",
+    "AdSnooze: real grudge against Spotify Premium, but sells a paid Founders Edition and promises a Pro tier (gate 2)",
+    "Open Lingo: real grudge against Duolingo's family plan, but ad-funded with premium subscriptions planned (gate 2)",
+    "Sales Coach (Gong alternative): hosted version behind Stripe plans from $399/mo (gate 2)",
+    "EtherPK: paid Sync+ plan with a trial (gate 2)",
+    "DenizliHub: 'Upgrade to PRO' and sign-up on the site, no grudge (gates 1 and 2)",
+    "SpeakoFlow: complaint is about features, not price (gate 1)",
+    "LoroNote: built for quality and privacy, App Store app (gate 1)",
+    "GlassStudio, Scrawly, OpenPhoto, Browsentic: 'free alternative to X' is positioning, no grudge (gate 1)",
+    "Draw-Music lines: builder's own answer to why is 'I actually... dont know' (gate 1)",
+    "Ithaca: pre-alpha with nothing to install, 'no subscription' is a tagline (gate 1)",
+    "Docultra: generic mission line, no named victim, reads as an SEO network (gate 1)",
+    "Soundscaper: web port of Audacity, which is free (gate 1)",
+    "BerryDB: only a Ko-fi appeal mentions subscriptions, no grudge (gate 1)",
+    "ImgKit, Snug: privacy claims, no price grudge (gate 1)",
+    "Holm, TuneFuse: built for design or speed, not price (gate 1)",
+    "VoxScribe, OpenScreen, Capbase, Postquel, GlacierVault, Lyricise: already dropped on earlier runs"
+  ]
+}

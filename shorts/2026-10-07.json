@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-07",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Snapchat charges rent on your memories. Snapback doesn't.",
+    "caption": "One fresh grudge: Snapchat put old Memories behind a storage plan, so someone built a free viewer for the export that runs entirely in your browser.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "snapchat"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 7th.", "say": "October seventh.", "step": "date"},
+      {"cap": "One new grudge.", "step": "count"}]},
+    {"scene": "app", "slug": "snapback",
+     "gripe": "Snapchat charges to keep your own old photos.",
+     "quote": "In 2025 Snapchat started charging for Memories storage above 5 GB.",
+     "cues": [
+      {"cap": "Your old snaps, your old photos,", "step": "gripe"},
+      {"cap": "now behind a storage plan.", "step": "gripe"},
+      {"cap": "Pinuts:", "say": "[matter-of-fact] Pea-nuts:", "step": "quote"},
+      {"cap": "“In 2025 Snapchat started charging", "say": "[sarcastic] In twenty twenty-five Snapchat started charging", "step": "quote"},
+      {"cap": "for Memories storage above 5 GB.”", "say": "for Memories storage above five gigabytes.", "step": "quote"},
+      {"cap": "So: Snapback. The export, unzipped.", "say": "[quick] So: Snapback. The export, unzipped.", "step": "app"},
+      {"cap": "On your own device.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
