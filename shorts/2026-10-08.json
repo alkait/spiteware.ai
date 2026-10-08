@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-08",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Chart replay, billed monthly. CandleDrill runs it free.",
+    "caption": "Two fresh grudges: trading practice tools sold by the month, and simple file chores locked behind subscription paywalls. Both rebuilt for free, both running on your own machine.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "trading"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 8th.", "say": "October eighth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "candledrill", "score": false,
+     "gripe": "Practicing on old charts costs a monthly bill.",
+     "quote": "Bar-replay and manual backtesting are mostly sold as monthly subscriptions.",
+     "cues": [
+      {"cap": "Replaying old candles,", "step": "gripe"},
+      {"cap": "billed every single month.", "step": "gripe"},
+      {"cap": "Kinfxhk:", "say": "[matter-of-fact] K-I-N-F-X-H-K:", "step": "quote"},
+      {"cap": "“Bar-replay and manual backtesting", "say": "[sarcastic] Bar replay and manual backtesting", "step": "quote"},
+      {"cap": "are mostly sold as monthly subscriptions.”", "step": "quote"},
+      {"cap": "So: CandleDrill. Install once.", "say": "[quick] So: CandleDrill. Install once.", "step": "app"},
+      {"cap": "Runs on your machine.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "swiftutils", "score": false,
+     "gripe": "Merging two PDFs should not take a subscription.",
+     "quote": "Like many of you, I was tired of hitting subscription paywalls",
+     "cut": true,
+     "cues": [
+      {"cap": "Merge two PDFs?", "step": "gripe"},
+      {"cap": "Subscribe first.", "step": "gripe"},
+      {"cap": "Taqi Raza:", "say": "[matter-of-fact] Tah-kee Rah-zah:", "step": "quote"},
+      {"cap": "“Like many of you,", "say": "[sarcastic] Like many of you,", "step": "quote"},
+      {"cap": "I was tired of hitting subscription paywalls”", "say": "I was tired of hitting subscription paywalls.", "step": "quote"},
+      {"cap": "So: SwiftUtils. Fifteen tools,", "say": "[quick] So: Swift Utils. Fifteen tools,", "step": "app"},
+      {"cap": "all in your browser tab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

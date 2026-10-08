@@ -4693,5 +4693,69 @@
     "repo": "Pinutss/snapback",
     "spite_score": 9,
     "added": "2026-10-07"
+  },
+  {
+    "slug": "swiftutils",
+    "name": "SwiftUtils",
+    "url": "https://swiftutils.net",
+    "icon": "🧰",
+    "tagline": "Merging two PDFs should not need a subscription and a stranger's server. Fifteen little tools that run in your browser tab, for free, and keep your tax forms to themselves.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Like many of you, I was tired of hitting subscription paywalls or having to upload sensitive PDFs, tax info, and personal photos to random third-party servers just to do simple tasks like merging pages or converting a file.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x08crj/i_built_swiftutils_a_suite_of_15_web_utilities/"
+    },
+    "builder": {
+      "name": "Taqi Raza",
+      "handle": "taqiraza",
+      "url": "https://github.com/taqiraza"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "taqiraza/swiftutils",
+    "spite_score": 5,
+    "added": "2026-10-08"
+  },
+  {
+    "slug": "candledrill",
+    "name": "CandleDrill",
+    "url": "https://github.com/Kinfxhk/candledrill",
+    "icon": "🕯️",
+    "tagline": "Bar replay is a monthly bill for scrolling candles you already have. CandleDrill replays your own CSV one bar at a time on your own machine, installed once, free forever.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Bar-replay and manual backtesting are mostly sold as monthly subscriptions.",
+      "source": "https://github.com/Kinfxhk/candledrill#why"
+    },
+    "builder": {
+      "name": "Kinfxhk",
+      "handle": "Kinfxhk",
+      "url": "https://github.com/Kinfxhk"
+    },
+    "tags": [
+      "self-hosted",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Kinfxhk/candledrill",
+    "spite_score": 5,
+    "added": "2026-10-08"
   }
 ]
