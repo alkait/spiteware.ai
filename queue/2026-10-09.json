@@ -1,0 +1,18 @@
+{
+  "run": "2026-10-09",
+  "swept": "hn (48h, 305 Show HN), reddit json (r/SideProject, r/macapps, r/selfhosted, r/ClaudeAI, r/opensource; r/webdev, r/vibecoding, r/indiehackers rate-limited 429), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 409,
+  "triaged": 22,
+  "candidates": [],
+  "dropped": [
+    "Memodo: real grudge ('another subscription'), but the builder plans to make it a paid app on Oct 10 (gate 2)",
+    "Leftover: dark mode is unlocked by a one-off $5 payment (gate 2)",
+    "Zeph (DIY AI voice recorder): built by a registered company, vendor post, pricing unclear (gate 2)",
+    "Notestack: open-source NotebookLM pitch, hosted 'get started for free' signup and ElevenLabs upsell, grudge is about Google killing products, not price (gates 1 and 2)",
+    "pgNimbus: 'TablePlus is ... closed source and paid' is one row of a comparison, not a reason (gate 1)",
+    "Anarkey, ClientFlow, TwoDo, Draft (Windows STT): 'no subscription' as a feature line, no stated reason (gate 1)",
+    "Open Contexts, FanFic to Audio, MarbleMD, Jellex: comparison or UI motive, no price grudge (gate 1)",
+    "OpenClicky, Daisy, LiteClient, Get YouTube Text, Upfling, Zancta: no grudge in post, comments or README (gate 1)",
+    "Rembrandt, TexIt, Codync, CaptureFlow, CustomFrom, TuxWhisper, ChillSweep: already dropped on earlier runs"
+  ]
+}

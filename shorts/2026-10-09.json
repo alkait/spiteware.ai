@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-09",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "SideNotes wants $19.99. EdgeMark slides in free.",
+    "caption": "Two fresh grudges: a paid notes panel on the edge of your screen, and two note-app bills for a tree of documents. Both rebuilt for free and open source.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macapps"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 9th.", "say": "October ninth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "edgemark",
+     "quote": "But it's closed-source and paid, with no way to contribute, customize, or verify what it does with your data.",
+     "cues": [
+      {"cap": "SideNotes wants $19.99", "say": "SideNotes wants nineteen ninety-nine", "step": "badge"},
+      {"cap": "for a panel on the edge of your screen.", "step": "badge"},
+      {"cap": "Ender Wang:", "say": "[matter-of-fact] Ender Wang:", "step": "quote"},
+      {"cap": "“But it's closed-source and paid,", "say": "[sarcastic] But it's closed source and paid,", "step": "quote"},
+      {"cap": "with no way to contribute, customize,", "step": "quote"},
+      {"cap": "or verify what it does with your data.”", "step": "quote"},
+      {"cap": "So: EdgeMark. Same edge.", "say": "[quick] So: Edge Mark. Same edge.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "ops-wiki",
+     "gripe": "Two note apps, two bills, for a tree of documents.",
+     "quote": "Tired of paying for Yuque and Evernote, I built a simple note app for myself.",
+     "cues": [
+      {"cap": "Two note apps.", "step": "gripe"},
+      {"cap": "Two bills.", "step": "gripe"},
+      {"cap": "Zhenhui Yuan:", "say": "[matter-of-fact] Jen-hway Yoo-en:", "step": "quote"},
+      {"cap": "“Tired of paying for Yuque and Evernote,", "say": "[sarcastic] Tired of paying for Yoo-chweh and Evernote,", "step": "quote"},
+      {"cap": "I built a simple note app for myself.”", "step": "quote"},
+      {"cap": "So: Ops Wiki. On your own box.", "say": "[quick] So: Ops Wiki. On your own box.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

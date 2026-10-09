@@ -4757,5 +4757,69 @@
     "repo": "Kinfxhk/candledrill",
     "spite_score": 5,
     "added": "2026-10-08"
+  },
+  {
+    "slug": "edgemark",
+    "name": "EdgeMark",
+    "url": "https://github.com/Ender-Wang/EdgeMark",
+    "icon": "📝",
+    "tagline": "SideNotes wants $19.99 for a notes panel that slides in from the edge of your screen. EdgeMark slides in from the same edge, keeps your notes as plain Markdown files, and costs the edge.",
+    "replaces": {
+      "name": "SideNotes",
+      "product": "SideNotes",
+      "price": "$19.99 one-time",
+      "source": "https://www.apptorium.com/sidenotes"
+    },
+    "grudge": {
+      "quote": "But it's closed-source and paid, with no way to contribute, customize, or verify what it does with your data.",
+      "source": "https://github.com/Ender-Wang/EdgeMark#readme"
+    },
+    "builder": {
+      "name": "Ender Wang",
+      "handle": "Ender-Wang",
+      "url": "https://github.com/Ender-Wang"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Ender-Wang/EdgeMark",
+    "spite_score": 8,
+    "added": "2026-10-09"
+  },
+  {
+    "slug": "ops-wiki",
+    "name": "Ops Wiki",
+    "url": "https://github.com/yzh0623/ops-wiki",
+    "icon": "📚",
+    "tagline": "Two note-app bills a month for a tree of documents. Ops Wiki is the tree of documents, encrypted, searchable, on your own box, and the bills go in the bin.",
+    "replaces": {
+      "name": "Evernote Starter",
+      "product": "Evernote",
+      "price": "",
+      "source": "https://evernote.com/compare-plans"
+    },
+    "grudge": {
+      "quote": "Tired of paying for Yuque and Evernote, I built a simple note app for myself.",
+      "source": "https://github.com/yzh0623/ops-wiki"
+    },
+    "builder": {
+      "name": "Zhenhui Yuan",
+      "handle": "yzh0623",
+      "url": "https://github.com/yzh0623"
+    },
+    "tags": [
+      "self-hosted",
+      "privacy",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "yzh0623/ops-wiki",
+    "spite_score": 7,
+    "added": "2026-10-09"
   }
 ]
