@@ -1,0 +1,21 @@
+{
+  "run": "2026-10-10",
+  "swept": "hn (48h, 275 Show HN), reddit json (r/SideProject, r/macapps, r/ClaudeAI, r/selfhosted, r/opensource; r/webdev, r/vibecoding, r/indiehackers rate-limited 429), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 389,
+  "triaged": 21,
+  "candidates": [],
+  "dropped": [
+    "Wivoice (Wispr Flow alternative): repo created today holds only a README and a Wivoice.zip binary, no source to check (unverifiable, possible lure)",
+    "Norri: Plex grudge, but norri.tv has a Pricing page (gate 2)",
+    "PDFowo: 'Premium' plan at 9,99 zł/month on its own site (gate 2)",
+    "Quietly Sober: optional $4.99/mo AI add-on (gate 2)",
+    "HandyTools.ro: grudge is ads and signup walls, and the site runs ads (gate 2)",
+    "OldRoll: launch offer from a commercial app with paid store versions (gate 2)",
+    "ytd (YouTube downloader): 'not free, clunky, overcomplicated' is mixed, and its page renders nothing to check for pricing (gates 1 and 2 unverified)",
+    "FlyBudget: 'another subscription service' is secondary to combining features; inspired by Monarch/YNAB, not a reaction to their price (gate 1, unsure)",
+    "Kaskas, Open Dict, ironpage, Halfpast (free-booking-page), 2easy2scan: 'no subscription' as a feature line or comparison row, no stated reason (gate 1)",
+    "Applejack: 'a free alternative to Cider', no reason given (gate 1)",
+    "Gudaeme: grudge is Google Drive permissions, not price (gate 1)",
+    "Rembrandt: already dropped on an earlier run"
+  ]
+}

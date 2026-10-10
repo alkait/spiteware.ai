@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-10",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 1,
+  "post": {
+    "title": "Obsidian wants $5 a month to sync. Cairn Notes doesn't.",
+    "caption": "Four fresh grudges: a sync fee for your own notes, a baby tracker that went paid, five finance app bills and a paid Mac download manager. All rebuilt for free.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "obsidian", "selfhosted"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 10th.", "say": "October tenth.", "step": "date"},
+      {"cap": "Four new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "cairn-notes",
+     "quote": "Obsidian made me pay them for syncing so I made an open-source implementation",
+     "cues": [
+      {"cap": "Obsidian wants $5 a month", "say": "Obsidian wants five dollars a month", "step": "badge"},
+      {"cap": "to sync your own notes.", "step": "badge"},
+      {"cap": "Lucas Pospor:", "say": "[matter-of-fact] Lucas Poss-por:", "step": "quote"},
+      {"cap": "“Obsidian made me pay them for syncing", "say": "[sarcastic] Obsidian made me pay them for syncing", "step": "quote"},
+      {"cap": "so I made an open-source implementation”", "step": "quote"},
+      {"cap": "So: Cairn Notes. Your own server.", "say": "[quick] So: Cairn Notes. Your own server.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "bober",
+     "gripe": "Nara Baby added paid plans.",
+     "quote": "why pay another subscription when I can pay Apple $99 a year for a developer account and build my own app?",
+     "cues": [
+      {"cap": "A baby tracker.", "step": "gripe"},
+      {"cap": "Now with paid plans.", "step": "gripe"},
+      {"cap": "braincrowd:", "say": "[matter-of-fact] brain crowd:", "step": "quote"},
+      {"cap": "“why pay another subscription", "say": "[sarcastic] why pay another subscription", "step": "quote"},
+      {"cap": "when I can pay Apple $99 a year", "say": "when I can pay Apple ninety-nine dollars a year", "step": "quote"},
+      {"cap": "for a developer account and build my own app?”", "step": "quote"},
+      {"cap": "So: Bober. Both parents, one log.", "say": "[quick] So: Boh-ber. Both parents, one log.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "vyra", "score": false,
+     "gripe": "Five finance apps, five bills.",
+     "quote": "because I hated paying for 5 different finance apps",
+     "cues": [
+      {"cap": "Five finance apps.", "step": "gripe"},
+      {"cap": "Five bills.", "step": "gripe"},
+      {"cap": "Arjumaan:", "say": "[matter-of-fact] Ar-joo-mahn:", "step": "quote"},
+      {"cap": "“because I hated paying", "say": "[sarcastic] because I hated paying", "step": "quote"},
+      {"cap": "for 5 different finance apps”", "say": "for five different finance apps", "step": "quote"},
+      {"cap": "So: Vyra. All five, self-hosted.", "say": "[quick] So: Vy-ra. All five, self-hosted.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus one more", "say": "[upbeat] Plus one more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

@@ -4821,5 +4821,131 @@
     "repo": "yzh0623/ops-wiki",
     "spite_score": 7,
     "added": "2026-10-09"
+  },
+  {
+    "slug": "cairn-notes",
+    "name": "Cairn Notes",
+    "url": "https://cairnnotes.app/",
+    "icon": "📓",
+    "tagline": "Obsidian charges $5 a month to move your own Markdown between your own devices. Cairn syncs it through your own server and charges nothing.",
+    "replaces": {
+      "name": "Obsidian Sync Standard",
+      "product": "Obsidian",
+      "price": "$5/mo",
+      "source": "https://obsidian.md/pricing"
+    },
+    "grudge": {
+      "quote": "Obsidian made me pay them for syncing so I made an open-source implementation",
+      "source": "https://www.reddit.com/r/selfhosted/comments/1x24okq/obsidian_made_me_pay_them_for_syncing_so_i_made/"
+    },
+    "builder": {
+      "name": "Lucas Pospor",
+      "handle": "lucas-pospor",
+      "url": "https://github.com/lucas-pospor"
+    },
+    "tags": [
+      "desktop",
+      "self-hosted",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "lucas-pospor/cairn",
+    "spite_score": 10,
+    "added": "2026-10-10"
+  },
+  {
+    "slug": "bober",
+    "name": "Bober",
+    "url": "https://apps.apple.com/us/app/bober-baby-tracker/id6813018894",
+    "icon": "🦫",
+    "tagline": "Nara Baby put a price on 3 a.m. feeds. Bober logs them on both parents' phones and the Watch for free.",
+    "replaces": {
+      "name": "Nara Baby paid plans",
+      "product": "Nara Baby",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "My reasoning was roughly: why pay another subscription when I can pay Apple $99 a year for a developer account and build my own app?",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1x1oqn4/nara_baby_introduced_paid_plans_so_i_tried/"
+    },
+    "builder": {
+      "name": "braincrowd",
+      "handle": "braincrowd",
+      "url": "https://www.reddit.com/user/braincrowd"
+    },
+    "tags": [
+      "ios",
+      "health"
+    ],
+    "open_source": false,
+    "vibe_coded": true,
+    "repo": "",
+    "spite_score": 7,
+    "added": "2026-10-10"
+  },
+  {
+    "slug": "vyra",
+    "name": "Vyra",
+    "url": "https://github.com/Arjumaan/Vyra",
+    "icon": "💰",
+    "tagline": "Five finance apps, five monthly bills, all to tell you you're spending too much. Vyra is all five on your own server, billing you nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I built an Open-Source, Self-Hosted \"Wealth OS\" in Finance (because I hated paying for 5 different finance apps)",
+      "source": "https://www.reddit.com/r/opensource/comments/1x1u7wn/i_built_an_opensource_selfhosted_wealth_os_in/"
+    },
+    "builder": {
+      "name": "Arjumaan",
+      "handle": "Arjumaan",
+      "url": "https://github.com/Arjumaan"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Arjumaan/Vyra",
+    "spite_score": 5,
+    "added": "2026-10-10"
+  },
+  {
+    "slug": "convoy",
+    "name": "Convoy",
+    "url": "https://thedynamicpunk.github.io/",
+    "icon": "🚚",
+    "tagline": "Mac download managers want money to open sixteen connections. Convoy opens them for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Everything I tried was either paid, Electron, or felt like it came from 2009.",
+      "source": "https://www.reddit.com/r/macapps/comments/1x0qigq/os_convoy_a_free_native_download_manager_for_mac/"
+    },
+    "builder": {
+      "name": "Ashutosh",
+      "handle": "TheDynamicPunk",
+      "url": "https://github.com/TheDynamicPunk"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "TheDynamicPunk/Convoy",
+    "spite_score": 5,
+    "added": "2026-10-10"
   }
 ]
