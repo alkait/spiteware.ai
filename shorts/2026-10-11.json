@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-11",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Resume tools want a paywall. Tailor wants a browser tab.",
+    "caption": "One fresh grudge: every online tool for tailoring a resume sat behind a paywall or a sign-up, so someone built a free one that keeps your resume on your own device.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "jobsearch", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 11th.", "say": "October eleventh.", "step": "date"},
+      {"cap": "One new grudge.", "step": "count"}]},
+    {"scene": "app", "slug": "tailor", "score": false,
+     "gripe": "Resume tools hide behind a paywall or a sign-up.",
+     "quote": "I couldn't find a simple to use online tool that wasn't blocked behind a paywall or sign up, so I made one.",
+     "cues": [
+      {"cap": "One resume, ten job applications,", "step": "gripe"},
+      {"cap": "and every tool wants a sign-up first.", "step": "gripe"},
+      {"cap": "Rayan Tighiouart:", "say": "[matter-of-fact] Rah-yahn Tee-ghee-oo-art:", "step": "quote"},
+      {"cap": "“I couldn't find a simple to use online tool", "say": "[sarcastic] I couldn't find a simple to use online tool", "step": "quote"},
+      {"cap": "that wasn't blocked behind a paywall or sign up,", "step": "quote"},
+      {"cap": "so I made one.”", "step": "quote"},
+      {"cap": "So: Tailor. One resume, every version.", "say": "[quick] So: Tailor. One resume, every version.", "step": "app"},
+      {"cap": "In a browser tab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

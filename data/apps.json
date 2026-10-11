@@ -4947,5 +4947,37 @@
     "repo": "TheDynamicPunk/Convoy",
     "spite_score": 5,
     "added": "2026-10-10"
+  },
+  {
+    "slug": "tailor",
+    "name": "Tailor",
+    "url": "https://tailor-ecru-seven.vercel.app",
+    "icon": "✂️",
+    "tagline": "Every resume tool wants a sign-up or a paywall before you can hide one bullet point. Tailor wants a browser tab.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Doing this with google docs or word docs is so tedious, and I couldn't find a simple to use online tool that wasn't blocked behind a paywall or sign up, so I made one.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x2wg9i/tailoring_to_each_job_application_takes_forever/"
+    },
+    "builder": {
+      "name": "Rayan Tighiouart",
+      "handle": "tig-github",
+      "url": "https://github.com/tig-github"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "career"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "tig-github/tailor",
+    "spite_score": 5,
+    "added": "2026-10-11"
   }
 ]

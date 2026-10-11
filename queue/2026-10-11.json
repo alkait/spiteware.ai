@@ -1,0 +1,19 @@
+{
+  "run": "2026-10-11",
+  "swept": "hn (48h, 188 Show HN), reddit json (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited 429), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 277,
+  "triaged": 18,
+  "candidates": [],
+  "dropped": [
+    "KERF: real subscription grudge in PLEDGE.md, but the repo is hours old with template placeholders ([FUNDING LINK], github.com/you/kerf) and a company behind it; can't verify (unsure)",
+    "Artcraft: getartcraft.com (Storyteller) has a Pricing page (gate 2)",
+    "AntiPDF: 'the program has a paying part' (gate 2)",
+    "Doory (Canva alternative): 'Canva is a great product' plus a comparison table, no stated reason (gate 1)",
+    "Wisp: 'no subscription, no paid tier' as a feature line, no reason (gate 1)",
+    "WallHop: built because 12ft.io went away, a free tool, not a price grudge (gate 1)",
+    "freeXplorer, viralflow (CapCut), open-tv-remote, glassify, Ledjoro: 'free alternative' or 'no subscription' as a feature line, no stated reason (gate 1)",
+    "Lacuna, Nostos, CAD Studio: no grudge in post or README (gate 1)",
+    "On-device meeting recorder (r/SideProject): one-time purchase (gate 2)",
+    "Wivoice, ytd, ironpage: already dropped on an earlier run"
+  ]
+}
