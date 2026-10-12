@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-12",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 1,
+  "post": {
+    "title": "Wispr Flow wants $15 a month. BetterWispr wants nothing.",
+    "caption": "Four fresh grudges: a dictation subscription, a PDF bill, a seventeen-dollar passport photo and a pile of fake-free office apps, each replaced by someone who refused to pay.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macapps"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 12th.", "say": "October twelfth.", "step": "date"},
+      {"cap": "Four new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "betterwispr", "cut": true,
+     "quote": "I wanted to make voice typing more accessible without requiring a monthly subscription",
+     "cues": [
+      {"cap": "Wispr Flow wants $15 a month", "say": "Wispr Flow wants fifteen dollars a month", "step": "badge"},
+      {"cap": "to type what you say.", "step": "badge"},
+      {"cap": "Kartik Labhshetwar:", "say": "[matter-of-fact] Kartik Labh-shet-war:", "step": "quote"},
+      {"cap": "“I wanted to make voice typing more accessible", "say": "[sarcastic] I wanted to make voice typing more accessible", "step": "quote"},
+      {"cap": "without requiring a monthly subscription…”", "say": "without requiring a monthly subscription.", "step": "quote"},
+      {"cap": "So: BetterWispr. On your Mac.", "say": "[quick] So: Better Whisper. On your Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "pagjoro",
+     "quote": "Many people pay a monthly fee just to merge two PDFs or sign a form.",
+     "cues": [
+      {"cap": "Acrobat Pro: $19.99 a month.", "say": "Acrobat Pro: nineteen ninety-nine a month.", "step": "badge"},
+      {"cap": "Tusivo:", "say": "[matter-of-fact] Too-see-voh:", "step": "quote"},
+      {"cap": "“Many people pay a monthly fee", "say": "[sarcastic] Many people pay a monthly fee", "step": "quote"},
+      {"cap": "just to merge two PDFs or sign a form.”", "step": "quote"},
+      {"cap": "So: Pagjoro.", "say": "[quick] So: Pag-joe-roh.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "deadpan",
+     "gripe": "One passport photo costs seventeen dollars.",
+     "quote": "I needed a passport photo and didn't want to pay $17 for one picture.",
+     "cues": [
+      {"cap": "Seventeen dollars. For one photo.", "step": "gripe"},
+      {"cap": "Chi-Wei Lee:", "say": "[matter-of-fact] Chee-way Lee:", "step": "quote"},
+      {"cap": "“I needed a passport photo", "say": "[sarcastic] I needed a passport photo", "step": "quote"},
+      {"cap": "and didn't want to pay $17 for one picture.”", "say": "and didn't want to pay seventeen dollars for one picture.", "step": "quote"},
+      {"cap": "So: Deadpan. Your webcam is the booth.", "say": "[quick] So: Deadpan. Your webcam is the booth.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus one more", "say": "[upbeat] Plus one more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

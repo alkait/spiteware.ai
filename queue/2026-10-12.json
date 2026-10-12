@@ -1,0 +1,21 @@
+{
+  "run": "2026-10-12",
+  "swept": "hn (48h), reddit rss (r/opensource, r/macapps, r/ClaudeAI rate-limited), github; last30days unavailable",
+  "raw_hits": 282,
+  "triaged": 15,
+  "candidates": [],
+  "dropped": [
+    "open-motion (Claude Motion): README states Motion is Team/Enterprise-only as fact, no builder grudge (gate 1)",
+    "FileoPDF: grudge mostly privacy and ads, and 'stays free for its current features' leaves room for a paid tier (unsure, gate 2)",
+    "NativeBundle: $39 one-time per app (gate 2)",
+    "Homy: $9 early-bird, $29 regular (gate 2)",
+    "Paperlane: one-time Pro unlock and ads (gate 2)",
+    "KhataPro: no build or release, nothing to try yet",
+    "GrogLog: reacts to free Drink Coach's missing features, no price grudge (gate 1)",
+    "Cachety: built for privacy, not price (gate 1)",
+    "circlet, Rohith1-p/freeflow, Flow State Tracker, Ze-Auto-Scanner-9000: 'no subscription' as a feature line, no stated reason (gate 1); Ze-Auto-Scanner is also scaffolding",
+    "deckforge: Elgato has no Linux app, a free tool, not a price grudge (gate 1)",
+    "Free Maps Calculator: about runaway GCP bills, not a paid tool replaced (gate 1)",
+    "KERF, Doory, Ledjoro, WallHop, Nostos: already dropped on 2026-10-11"
+  ]
+}

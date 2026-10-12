@@ -4979,5 +4979,132 @@
     "repo": "tig-github/tailor",
     "spite_score": 5,
     "added": "2026-10-11"
+  },
+  {
+    "slug": "betterwispr",
+    "name": "BetterWispr",
+    "url": "https://betterwispr.com/",
+    "icon": "🎙️",
+    "tagline": "Wispr Flow wants $15 a month to type what you say. BetterWispr holds Option+Space, listens on your Mac, and bills nobody.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I wanted to make voice typing more accessible without requiring a monthly subscription or sending every recording to a cloud server.",
+      "source": "https://news.ycombinator.com/item?id=50042349"
+    },
+    "builder": {
+      "name": "Kartik Labhshetwar",
+      "handle": "KartikLabhshetwar",
+      "url": "https://github.com/KartikLabhshetwar"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "opennookorg/betterwispr",
+    "spite_score": 8,
+    "added": "2026-10-12"
+  },
+  {
+    "slug": "pagjoro",
+    "name": "Pagjoro",
+    "url": "https://tusivo.com/apps/Pagjoro/",
+    "icon": "📄",
+    "tagline": "Acrobat Pro wants $19.99 a month to staple two PDFs together. Pagjoro merges, signs and redacts on your own PC for the price of a download.",
+    "replaces": {
+      "name": "Adobe Acrobat Pro",
+      "product": "Adobe Acrobat",
+      "price": "$19.99/mo",
+      "source": "https://www.adobe.com/acrobat/pricing.html"
+    },
+    "grudge": {
+      "quote": "Many people pay a monthly fee just to merge two PDFs or sign a form.",
+      "source": "https://github.com/Tusivo/Pagjoro"
+    },
+    "builder": {
+      "name": "Tusivo",
+      "handle": "Tusivo",
+      "url": "https://tusivo.com"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Tusivo/Pagjoro",
+    "spite_score": 8,
+    "added": "2026-10-12"
+  },
+  {
+    "slug": "deadpan",
+    "name": "Deadpan",
+    "url": "https://arthur031221.github.io/Deadpan/",
+    "icon": "🛂",
+    "tagline": "Seventeen dollars for one passport photo. Deadpan turns your webcam into the photo booth and prints six on a 4x6.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I needed a passport photo and didn't want to pay $17 for one picture.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x3qw8w/i_built_a_free_passport_photo_guide_that_runs_in/"
+    },
+    "builder": {
+      "name": "Chi-Wei Lee",
+      "handle": "Arthur031221",
+      "url": "https://arthur031221.github.io/"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Arthur031221/Deadpan",
+    "spite_score": 7,
+    "added": "2026-10-12"
+  },
+  {
+    "slug": "ethicalapp",
+    "name": "EthicalApp",
+    "url": "https://ethicalapp.org",
+    "icon": "🧰",
+    "tagline": "Every \"free\" PDF editor had a watermark or a subscription on the one button that mattered. EthicalApp answered with ten free Windows apps.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The one button I needed locked behind a subscription.",
+      "source": "https://ethicalapp.org"
+    },
+    "builder": {
+      "name": "CraftingBenchGames",
+      "handle": "CBGGitHub",
+      "url": "https://craftingbenchgames.com/"
+    },
+    "tags": [
+      "windows",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "CBGGitHub/ethicalapp",
+    "spite_score": 5,
+    "added": "2026-10-12"
   }
 ]
