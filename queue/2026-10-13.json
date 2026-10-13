@@ -1,0 +1,26 @@
+{
+  "run": "2026-10-13",
+  "swept": "hn (48h), reddit rss + r/opensource, r/macapps, r/ClaudeAI via browser, github; last30days unavailable",
+  "raw_hits": 341,
+  "triaged": 27,
+  "candidates": [],
+  "dropped": [
+    "GleamRoll: App Store in-app purchases (tip jar), unsure under gate 2",
+    "ProfMute: 'couldn't find a free program', no price or paid tool named (gate 1, unsure)",
+    "Raycast CLI Assistant: needs a paid Claude or ChatGPT plan to work (gate 2)",
+    "opentv: Play edition sells OpenTV Premium as an in-app purchase (gate 2)",
+    "ai-interview-helper: feature lines only, no reason given (gate 1)",
+    "Bemmoly: built because nothing fit, price only as feature bullets (gate 1)",
+    "Clero: commercial fintech, account and bank link required (gate 2)",
+    "gradesign, Pullr: empty repos, nothing to try",
+    "pdf-to-audiobook: localhost proof of concept, no grudge sentence (gate 1)",
+    "Frost, writui, llms.py, RME, Folio-PDF, Budgy: no grudge stated (gate 1)",
+    "TallyMint: $59.99 / $9.99 a month (gate 2)",
+    "KettleHour: affiliate boxes, ads planned (gate 2)",
+    "Mastershot: editor needs an account (gate 2)",
+    "Quick Image Kit: ad slots planned (gate 2)",
+    "NameDaemon: Pro tier announced (gate 2)",
+    "Authrot: signup and AI credits (gate 2)",
+    "SpeakoFlow: already dropped on 2026-10-07"
+  ]
+}

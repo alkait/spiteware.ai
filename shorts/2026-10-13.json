@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-13",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "CleanShot wants $10 a month. Glossyshots wants nothing.",
+    "caption": "Three fresh grudges: a screenshot subscription, paid piano-video apps and a monthly music bill, each replaced by someone who refused to pay.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "windows"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 13th.", "say": "October thirteenth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "glossyshots", "cut": true,
+     "quote": "I got tired of paying a subscription just to make screenshots look decent",
+     "cues": [
+      {"cap": "CleanShot wants $10 a month", "say": "CleanShot wants ten dollars a month", "step": "badge"},
+      {"cap": "to make a screenshot pretty.", "step": "badge"},
+      {"cap": "abg5f:", "say": "[matter-of-fact] A B G five F:", "step": "quote"},
+      {"cap": "“I got tired of paying a subscription", "say": "[sarcastic] I got tired of paying a subscription", "step": "quote"},
+      {"cap": "just to make screenshots look decent…”", "say": "just to make screenshots look decent.", "step": "quote"},
+      {"cap": "So: Glossyshots. On Windows.", "say": "[quick] So: Glossy-shots. On Windows.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "tiledropper", "cut": true, "score": false,
+     "gripe": "Piano videos cost money, or every note by hand.",
+     "quote": "The apps that make them either cost money or make you place every note by hand",
+     "cues": [
+      {"cap": "Piano videos: pay up, or place every note.", "say": "Piano videos: pay up, or place every note yourself.", "step": "gripe"},
+      {"cap": "Black_Hawk2048:", "say": "[matter-of-fact] Black Hawk twenty forty-eight:", "step": "quote"},
+      {"cap": "“The apps that make them either cost money", "say": "[sarcastic] The apps that make them either cost money", "step": "quote"},
+      {"cap": "or make you place every note by hand…”", "say": "or make you place every note by hand.", "step": "quote"},
+      {"cap": "So: TileDropper. In your browser.", "say": "[quick] So: Tile Dropper. In your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "luma", "score": false,
+     "gripe": "Five dollars a month, for music.",
+     "quote": "Tired of paying $5 a month for music?",
+     "cues": [
+      {"cap": "Five dollars a month. For music.", "step": "gripe"},
+      {"cap": "replited-del:", "say": "[matter-of-fact] Replited Del:", "step": "quote"},
+      {"cap": "“Tired of paying $5 a month for music?”", "say": "[sarcastic] Tired of paying five dollars a month for music?", "step": "quote"},
+      {"cap": "So: Luma. Plays the folder you own.", "say": "[quick] So: Loo-mah. Plays the folder you own.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

@@ -5106,5 +5106,101 @@
     "repo": "CBGGitHub/ethicalapp",
     "spite_score": 5,
     "added": "2026-10-12"
+  },
+  {
+    "slug": "glossyshots",
+    "name": "Glossyshots",
+    "url": "https://github.com/abg5f/Glossyshots",
+    "icon": "📸",
+    "tagline": "CleanShot wants $10 a month to make a screenshot presentable. Glossyshots blurs it, circles it and frames it on Windows for nothing.",
+    "replaces": {
+      "name": "CleanShot Pro",
+      "product": "CleanShot X",
+      "price": "$10/mo",
+      "source": "https://cleanshot.com/pricing"
+    },
+    "grudge": {
+      "quote": "I got tired of paying a subscription just to make screenshots look decent, so I built a free, open-source one with Claude Code",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1x4btf2/i_got_tired_of_paying_a_subscription_just_to_make/"
+    },
+    "builder": {
+      "name": "abg5f",
+      "handle": "abg5f",
+      "url": "https://github.com/abg5f"
+    },
+    "tags": [
+      "windows",
+      "privacy",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "abg5f/Glossyshots",
+    "spite_score": 10,
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "tiledropper",
+    "name": "TileDropper",
+    "url": "https://tiledropper.github.io/TileDropper/",
+    "icon": "🎹",
+    "tagline": "Falling-notes piano videos cost money or an afternoon of placing every note by hand. TileDropper eats a MIDI file and renders one in your browser, free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The apps that make them either cost money or make you place every note by hand, so I built a free one that runs in your browser.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x4ffym/i_made_a_free_website_that_turns_midi_and/"
+    },
+    "builder": {
+      "name": "Black_Hawk2048",
+      "handle": "Black_Hawk2048",
+      "url": "https://www.reddit.com/user/Black_Hawk2048"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "TileDropper/TileDropper",
+    "spite_score": 5,
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "luma",
+    "name": "Luma",
+    "url": "https://github.com/replited-del/Luma",
+    "icon": "🎵",
+    "tagline": "Five dollars a month to hear music. Luma plays the folder you already own, ten-band equalizer included, for zero.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Tired of paying $5 a month for music?",
+      "source": "https://github.com/replited-del/Luma"
+    },
+    "builder": {
+      "name": "replited-del",
+      "handle": "replited-del",
+      "url": "https://github.com/replited-del"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "replited-del/Luma",
+    "spite_score": 5,
+    "added": "2026-10-13"
   }
 ]
