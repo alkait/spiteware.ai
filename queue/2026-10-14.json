@@ -1,0 +1,24 @@
+{
+  "run": "2026-10-14",
+  "swept": "hn (48h, 346 Show HN), reddit json (r/SideProject, r/selfhosted, r/webdev, r/vibecoding, r/indiehackers; r/opensource, r/macapps, r/ClaudeAI rate-limited 429), github search; last30days unavailable (skill not installed)",
+  "raw_hits": 475,
+  "triaged": 19,
+  "candidates": [],
+  "dropped": [
+    "HookForge AI: sells a $39 Pro licence, 3 free runs a day, watermark (gate 2)",
+    "tiny-recorder: 'like Loom but free forever' as a description only; README says learning project (gate 1)",
+    "torch: Linear alternative built for local files, no price reason (gate 1)",
+    "EDA-EasyPRO: README-only repo, work in progress, nothing to try",
+    "Sayso: built 'to take on WisprFlow', competing, not a price grudge (gate 1)",
+    "Pyramid Budget: free 'right now', paid tier may come later (gate 2)",
+    "Jagsin Media Studio: 'no subscriptions' as a feature line, no reason (gate 1)",
+    "Keepjson: no reason stated in post or README (gate 1)",
+    "Oriel: open-core, paid hosted plans at useoriel.com",
+    "CiteSilo: email signup before trying (auto-reject)",
+    "ClipIt: ShadowPlay is free, no price grudge (gate 1)",
+    "potoo: built because alternatives were heavy, not priced (gate 1)",
+    "Sonder: AI-pricing line explains a feature, the stated reason is lock-in, no victim (gate 1, unsure)",
+    "HookPulse: not released, testers by DM only",
+    "visualOS: already dropped on 2026-09-21"
+  ]
+}

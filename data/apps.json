@@ -5202,5 +5202,100 @@
     "repo": "replited-del/Luma",
     "spite_score": 5,
     "added": "2026-10-13"
+  },
+  {
+    "slug": "tern",
+    "name": "tern",
+    "url": "https://github.com/your-moon/tern",
+    "icon": "🐦",
+    "tagline": "Termius wants ten dollars a month to sync your server list. tern syncs it to a Git repo you own, in a native Mac app that fits in 76 MB.",
+    "replaces": {
+      "name": "Termius Pro",
+      "product": "Termius",
+      "price": "$10/mo",
+      "source": "https://termius.com/pricing"
+    },
+    "grudge": {
+      "quote": "and termius wants paid plan just to sync the vault.",
+      "source": "https://news.ycombinator.com/item?id=50077412"
+    },
+    "builder": {
+      "name": "Moonn",
+      "handle": "your-moon",
+      "url": "https://github.com/your-moon"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "your-moon/tern",
+    "spite_score": 10,
+    "added": "2026-10-14"
+  },
+  {
+    "slug": "sada",
+    "name": "sada",
+    "url": "https://github.com/Mohammedkhaled96/sada",
+    "icon": "🎙️",
+    "tagline": "Word's Transcribe wants a Microsoft 365 subscription and stops at 300 minutes. sada runs Whisper on your own PC, inside Word, with no meter running.",
+    "replaces": {
+      "name": "Microsoft 365 Personal",
+      "product": "Microsoft 365",
+      "price": "$9.99/mo",
+      "source": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products"
+    },
+    "grudge": {
+      "quote": "Microsoft 365's Transcribe needs a paid subscription, uploads your audio to its servers, and caps you at 300 minutes per month and 200 MB per file.",
+      "source": "https://github.com/Mohammedkhaled96/sada#why-it-exists"
+    },
+    "builder": {
+      "name": "Mohammed Khaled Mahmoud",
+      "handle": "Mohammedkhaled96",
+      "url": "https://github.com/Mohammedkhaled96"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Mohammedkhaled96/sada",
+    "spite_score": 10,
+    "added": "2026-10-14"
+  },
+  {
+    "slug": "pdf-text-replace",
+    "name": "PDF Text Replace",
+    "url": "https://pdftextreplace.com/",
+    "icon": "📄",
+    "tagline": "The \"free\" PDF editors fix your typo, then charge you to download it. This one fixes one typo on a scan and hands the file back for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "And some of the \"free\" PDF editors that I tried wanted me to pay just to download the edited file.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x5isrf/i_had_to_fix_one_typo_on_a_scanned_pdf_so_i_did_a/"
+    },
+    "builder": {
+      "name": "Jouni Flemming",
+      "handle": "JouniFlemming",
+      "url": "https://www.reddit.com/user/JouniFlemming"
+    },
+    "tags": [
+      "web",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-14"
   }
 ]

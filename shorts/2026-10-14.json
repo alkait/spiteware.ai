@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-14",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Termius wants $10 a month to sync your vault. tern wants nothing.",
+    "caption": "Three fresh grudges: a paid SSH vault sync, a transcription subscription with a minute cap, and PDF editors that charge at the download button.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 14th.", "say": "October fourteenth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "tern",
+     "quote": "and termius wants paid plan just to sync the vault.",
+     "cues": [
+      {"cap": "Termius wants $10 a month", "say": "Termius wants ten dollars a month", "step": "badge"},
+      {"cap": "to sync your server list.", "step": "badge"},
+      {"cap": "Moonn:", "say": "[matter-of-fact] Moon:", "step": "quote"},
+      {"cap": "“and termius wants paid plan", "say": "[sarcastic] and Termius wants paid plan", "step": "quote"},
+      {"cap": "just to sync the vault.”", "say": "just to sync the vault.", "step": "quote"},
+      {"cap": "So: tern. Native, on your Mac.", "say": "[quick] So: Tern. Native, on your Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "sada", "cut": true,
+     "quote": "Microsoft 365's Transcribe needs a paid subscription",
+     "cues": [
+      {"cap": "Microsoft 365 wants $9.99 a month", "say": "Microsoft three-sixty-five wants nine ninety-nine a month", "step": "badge"},
+      {"cap": "to transcribe in Word.", "step": "badge"},
+      {"cap": "Mohammed Khaled Mahmoud:", "say": "[matter-of-fact] Mohammed Khaled Mahmoud:", "step": "quote"},
+      {"cap": "“Microsoft 365's Transcribe", "say": "[sarcastic] Microsoft three-sixty-five's Transcribe", "step": "quote"},
+      {"cap": "needs a paid subscription…”", "say": "needs a paid subscription.", "step": "quote"},
+      {"cap": "So: sada. Whisper, on your PC.", "say": "[quick] So: Sah-dah. Whisper, on your PC.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "pdf-text-replace", "score": false,
+     "gripe": "Free PDF editors that charge at the download.",
+     "quote": "And some of the \"free\" PDF editors that I tried wanted me to pay just to download the edited file.",
+     "cues": [
+      {"cap": "“Free” PDF editors. Pay to download.", "say": "Free PDF editors. Pay to download.", "step": "gripe"},
+      {"cap": "Jouni Flemming:", "say": "[matter-of-fact] Yo-nee Flemming:", "step": "quote"},
+      {"cap": "“And some of the \"free\" PDF editors that I tried", "say": "[sarcastic] And some of the free PDF editors that I tried", "step": "quote"},
+      {"cap": "wanted me to pay just to download the edited file.”", "say": "wanted me to pay just to download the edited file.", "step": "quote"},
+      {"cap": "So: PDF Text Replace.", "say": "[quick] So: PDF Text Replace.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
