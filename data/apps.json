@@ -5297,5 +5297,37 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-10-14"
+  },
+  {
+    "slug": "photo4cents",
+    "name": "Photo4Cents",
+    "url": "https://photo4cents.com",
+    "icon": "📸",
+    "tagline": "The photo studio wants real money for two tiny headshots. Photo4Cents lays them out on a 4x6 and the lab charges you for one print.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Photo4Cents helps you make passport photos without paying those ridiculous prices at photo studios.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x64vs2/i_built_passport_photo_editor_that_runs_in_your/"
+    },
+    "builder": {
+      "name": "wayne099",
+      "handle": "wayne099",
+      "url": "https://www.reddit.com/user/wayne099"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "images"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-15"
   }
 ]

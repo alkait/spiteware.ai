@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-15",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Photo studios charge a fortune for passport photos. Photo4Cents: free.",
+    "caption": "One fresh grudge: photo studios charging ridiculous prices for two tiny headshots, replaced by a free browser tool and one 4x6 print.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "passportphoto", "privacy"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 15th.", "say": "October fifteenth.", "step": "date"},
+      {"cap": "One new grudge.", "step": "count"}]},
+    {"scene": "app", "slug": "photo4cents", "score": false,
+     "gripe": "Photo studios, charging a fortune for two tiny headshots.",
+     "quote": "Photo4Cents helps you make passport photos without paying those ridiculous prices at photo studios.",
+     "cues": [
+      {"cap": "Two tiny passport photos.", "step": "gripe"},
+      {"cap": "Photo studio prices.", "step": "gripe"},
+      {"cap": "wayne099:", "say": "[matter-of-fact] Wayne zero nine nine:", "step": "quote"},
+      {"cap": "“Photo4Cents helps you make passport photos", "say": "[sarcastic] Photo for Cents helps you make passport photos", "step": "quote"},
+      {"cap": "without paying those ridiculous prices", "step": "quote"},
+      {"cap": "at photo studios.”", "step": "quote"},
+      {"cap": "So: one 4x6 print at any lab.", "say": "[quick] So: one four-by-six print, at any lab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

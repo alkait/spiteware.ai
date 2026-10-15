@@ -1,0 +1,25 @@
+{
+  "run": "2026-10-15",
+  "swept": "hn (48h), reddit rss (r/opensource, r/macapps, r/ClaudeAI rate-limited 429), github; last30days unavailable",
+  "raw_hits": 462,
+  "triaged": 16,
+  "candidates": [],
+  "dropped": [
+    "Wesper: 'free, open-source alternative to paid dictation apps' is a description, no stated reason (gate 1)",
+    "Infinity Flow: agency portfolio piece built around other people's review complaints, no builder grudge, no victim named (gate 1, unsure)",
+    "GemType: identical README in two 0-star repos created the same day, builder unclear; comparison table only, no stated reason (gate 1)",
+    "Crystal Suite: 'no accounts, no subscription' is a feature line, no reason (gate 1)",
+    "ESPeak32: README milestone M1 in progress, nothing to try",
+    "kindkit: ads and donations, no grudge (gate 1)",
+    "Petal: built because acquirers keep sunsetting pairing tools, not a price (gate 1)",
+    "Circuits (puter.com): no post text or stated reason; Puter is a company (gate 1)",
+    "PrivacyPenguin: grudge is ShutUp10++ settings resetting, ShutUp10++ is free (gate 1)",
+    "Treesum: vibe coded, no price reason (gate 1)",
+    "GitVolt: left GitKraken over speed, not price (gate 1)",
+    "cutout (remove.bg alternative): built because remove.bg is closing, not a price, as dropped on 2026-10-03 (gate 1)",
+    "Zipgeist: free version with Pro trial and 1GB cap (gate 2)",
+    "Tuno TV: optional Premium subscription (gate 2)",
+    "dataspline: cheap paid keyword volumes (gate 2)",
+    "Sayso, Keepjson, Sonder, ClipIt, Oriel (Chatbase alternative), CiteSilo (Rewind alternative), visualOS: already dropped on 2026-10-14"
+  ]
+}
