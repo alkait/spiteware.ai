@@ -5329,5 +5329,100 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-10-15"
+  },
+  {
+    "slug": "papercut-studio",
+    "name": "Papercut Studio",
+    "url": "https://artificia1.github.io/papercut-studio/",
+    "icon": "📰",
+    "tagline": "InDesign charges rent by the month to lay out a page. Papercut Studio does the layout, the bleed and the PDF/X in your browser, rent-free.",
+    "replaces": {
+      "name": "Adobe InDesign",
+      "product": "Adobe InDesign",
+      "price": "$22.99/mo",
+      "source": "https://www.adobe.com/products/indesign/plans.html"
+    },
+    "grudge": {
+      "quote": "Why should the craft of arranging thought upon paper require rent paid to a landlord in San Jose?",
+      "source": "https://github.com/artificia1/papercut-studio"
+    },
+    "builder": {
+      "name": "artificia",
+      "handle": "artificia1",
+      "url": "https://github.com/artificia1"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "artificia1/papercut-studio",
+    "spite_score": 8,
+    "added": "2026-10-16"
+  },
+  {
+    "slug": "fivebyfive",
+    "name": "FiveByFive",
+    "url": "https://play.google.com/store/apps/details?id=com.mohamedhussien.fivebyfive",
+    "icon": "🏋️",
+    "tagline": "MyFitnessPal wants $79.99 a year before you've lifted anything. FiveByFive does the 5x5 progression and the plate math for nothing.",
+    "replaces": {
+      "name": "MyFitnessPal Premium",
+      "product": "MyFitnessPal",
+      "price": "$79.99/yr",
+      "source": "https://recurdash.com/subscription-pricing/myfitnesspal"
+    },
+    "grudge": {
+      "quote": "Fitness apps have become bloated subscription machines ($80/yr for StrongLifts or MyFitnessPal).",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x6xpah/i_built_fivebyfive_a_native_jetpack_compose_55/"
+    },
+    "builder": {
+      "name": "mhussien86",
+      "handle": "mhussien86",
+      "url": "https://www.reddit.com/user/mhussien86"
+    },
+    "tags": [
+      "local-first",
+      "health"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 6,
+    "added": "2026-10-16"
+  },
+  {
+    "slug": "cueboard",
+    "name": "Cueboard",
+    "url": "https://cueboard.steelzz.co.uk/",
+    "icon": "🔊",
+    "tagline": "Soundboards that bill you monthly to play an airhorn. Cueboard binds the airhorn to a hotkey and bills you nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I wanted a soundboard for gaming and streaming without paying a subscription or dealing with loads of extra features.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x73wcs/i_got_tired_of_paid_soundboards_so_i_made_my_own/"
+    },
+    "builder": {
+      "name": "Steelzz",
+      "handle": "steelzzeu",
+      "url": "https://github.com/steelzzeu"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "steelzzeu/cueboard",
+    "spite_score": 5,
+    "added": "2026-10-16"
   }
 ]

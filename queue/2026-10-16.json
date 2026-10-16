@@ -1,0 +1,24 @@
+{
+  "run": "2026-10-16",
+  "swept": "hn (48h), reddit rss (r/opensource, r/macapps, r/ClaudeAI rate-limited 429), github; last30days unavailable",
+  "raw_hits": 432,
+  "triaged": 22,
+  "candidates": [],
+  "dropped": [
+    "Input Recorder: free version capped at 10 repeats and 3x speed, paid unlock (gate 2)",
+    "Nib-E: built as an experiment and to remove Acrobat from a PC, no price reason (gate 1, unsure)",
+    "hookshot: 'free, open-source alternative to paid tools like OpusClip' is a description, no stated reason (gate 1)",
+    "sbu-apps: a project remaking paid App Store utilities, described, no builder grudge and no single app (gate 1)",
+    "MozCut: 'no subscription, no watermark' is a feature line (gate 1)",
+    "quillsign: 'no accounts, no subscriptions' feature line, public delivery still gated (gate 1)",
+    "PHOTOPASS: 'free forever' commitments, no stated reason (gate 1)",
+    "RDeskMini: 'free alternative to AnyDesk' description only, empty README (gate 1)",
+    "Free-Obsidian-iOS-Linux-sync: a how-to guide, not an app",
+    "Gitsu: Pro is $4 (gate 2)",
+    "Luksmith: paid unlock beyond read and copy (gate 2)",
+    "StockGraber: grudge is ads and logins, no paid tool (gate 1)",
+    "OpenFactor: 'frustration with other 2FA app', no price (gate 1)",
+    "coffer, booxday, eqMini, Tether, Sygal, Theorem, Textfold, DipperPDF, Blurt, picpassed: no post text or stated reason (gate 1)",
+    "GemType (AlessioChavez19153): a third copy of the README dropped on 2026-10-15"
+  ]
+}

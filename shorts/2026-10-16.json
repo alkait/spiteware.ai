@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-16",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "InDesign wants $22.99 a month. Papercut Studio wants nothing.",
+    "caption": "Three fresh grudges: a desktop publishing subscription, a fitness app that bills by the year, and soundboards that charge to play a clip.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "adobe"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 16th.", "say": "October sixteenth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "papercut-studio",
+     "quote": "Why should the craft of arranging thought upon paper require rent paid to a landlord in San Jose?",
+     "cues": [
+      {"cap": "InDesign wants $22.99 a month", "say": "InDesign wants twenty-two ninety-nine a month", "step": "badge"},
+      {"cap": "to lay out a page.", "step": "badge"},
+      {"cap": "artificia:", "say": "[matter-of-fact] Arti-fish-ah:", "step": "quote"},
+      {"cap": "“Why should the craft of arranging thought upon paper", "say": "[sarcastic] Why should the craft of arranging thought upon paper", "step": "quote"},
+      {"cap": "require rent paid to a landlord in San Jose?”", "say": "require rent paid to a landlord in San Jose?", "step": "quote"},
+      {"cap": "So: Papercut Studio. In your browser.", "say": "[quick] So: Papercut Studio. In your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "fivebyfive", "cut": true,
+     "quote": "Fitness apps have become bloated subscription machines",
+     "cues": [
+      {"cap": "MyFitnessPal wants $79.99 a year.", "say": "MyFitnessPal wants seventy-nine ninety-nine a year.", "step": "badge"},
+      {"cap": "mhussien86:", "say": "[matter-of-fact] M. Hussien eighty-six:", "step": "quote"},
+      {"cap": "“Fitness apps have become", "say": "[sarcastic] Fitness apps have become", "step": "quote"},
+      {"cap": "bloated subscription machines…”", "say": "bloated subscription machines.", "step": "quote"},
+      {"cap": "So: FiveByFive. Five by five, offline.", "say": "[quick] So: Five by Five. Offline.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "cueboard", "score": false,
+     "gripe": "Soundboards that charge a subscription.",
+     "quote": "I wanted a soundboard for gaming and streaming without paying a subscription or dealing with loads of extra features.",
+     "cues": [
+      {"cap": "A soundboard. With a subscription.", "step": "gripe"},
+      {"cap": "Steelzz:", "say": "[matter-of-fact] Steelz:", "step": "quote"},
+      {"cap": "“I wanted a soundboard for gaming and streaming", "say": "[sarcastic] I wanted a soundboard for gaming and streaming", "step": "quote"},
+      {"cap": "without paying a subscription", "step": "quote"},
+      {"cap": "or dealing with loads of extra features.”", "step": "quote"},
+      {"cap": "So: Cueboard.", "say": "[quick] So: Cue-board.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
