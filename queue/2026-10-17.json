@@ -1,0 +1,21 @@
+{
+  "run": "2026-10-17",
+  "swept": "hn (48h), reddit (r/SideProject, r/selfhosted, r/vibecoding, r/indiehackers; r/opensource, r/macapps, r/ClaudeAI rate-limited), github; last30days unavailable",
+  "raw_hits": 375,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "Pomoflow: paywall is a parenthetical beside 'login'; main reason is wanting three things in one tab (gate 1, unsure)",
+    "billingreceipts.com: Pro is $5/mo or $39/yr (gate 2)",
+    "Local Analyst (offlinebi.com): Pro is $12/mo (gate 2)",
+    "caption-your-video: needs a paid Claude API key, no free route documented (gate 2, unsure)",
+    "recto-studio: renamed repo of Papercut Studio, listed 2026-10-16 (already listed)",
+    "shelf-app: 'no subscription' feature line, no stated reason; a consulting studio's portfolio piece (gate 1)",
+    "notchcue: feature line only, a freebie from Lycana, which sells a paid product (gates 1 and 2)",
+    "Putaway: 'not pay' is about the Apple developer account, no grudge (gate 1)",
+    "Lisorto: Pro from $19/yr, free tier capped at 100 files a month (gate 2)",
+    "Pdf2epub: no post text or stated reason (gate 1)",
+    "GemType, ApolloCut: copied-README spam repos",
+    "Nib-E, eqMini, Blurt, OpenFactor, Textfold, DipperPDF, picpassed, Gitsu: already dropped on 2026-10-16"
+  ]
+}

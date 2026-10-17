@@ -5424,5 +5424,69 @@
     "repo": "steelzzeu/cueboard",
     "spite_score": 5,
     "added": "2026-10-16"
+  },
+  {
+    "slug": "reelbird",
+    "name": "Reelbird",
+    "url": "https://reelbird.app/",
+    "icon": "🐦",
+    "tagline": "Screen Studio wants $29 a month and makes you export before you get a link. Reelbird hands you the link the second you stop, polish later, bill never.",
+    "replaces": {
+      "name": "Screen Studio Monthly",
+      "product": "Screen Studio",
+      "price": "$29/mo",
+      "source": "https://screen.studio"
+    },
+    "grudge": {
+      "quote": "Loom's free plan stops each video at 5 minutes and won't let you download it; Screen Studio costs $29 a month and gives you a link only after you export.",
+      "source": "https://github.com/btahir/reelbird"
+    },
+    "builder": {
+      "name": "Bilal",
+      "handle": "btahir",
+      "url": "https://github.com/btahir"
+    },
+    "tags": [
+      "macos",
+      "self-hosted",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "btahir/reelbird",
+    "spite_score": 8,
+    "added": "2026-10-17"
+  },
+  {
+    "slug": "rejboard",
+    "name": "RejBoard",
+    "url": "https://rejwanshafi25.github.io/RejBoard/",
+    "icon": "✍️",
+    "tagline": "Every handwriting app keeps its best pen behind a subscription. RejBoard collected all the good features into one notebook and forgot to charge for any of them.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The problem is that the best features are usually locked behind a paywall or a subscription, and buying every app would cost far more than I was willing to spend.",
+      "source": "https://github.com/RejwanShafi25/RejBoard#why-it-exists"
+    },
+    "builder": {
+      "name": "Rejwan Shafi",
+      "handle": "RejwanShafi25",
+      "url": "https://github.com/RejwanShafi25"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "RejwanShafi25/RejBoard",
+    "spite_score": 7,
+    "added": "2026-10-17"
   }
 ]

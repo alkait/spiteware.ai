@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-17",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Screen Studio wants $29 a month. Reelbird wants nothing.",
+    "caption": "Two fresh grudges: a screen recorder that bills monthly for a share link, and handwriting apps that keep their best pens behind a subscription.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 17th.", "say": "October seventeenth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "reelbird", "cut": true,
+     "quote": "Loom's free plan stops each video at 5 minutes and won't let you download it",
+     "cues": [
+      {"cap": "Screen Studio wants $29 a month", "say": "Screen Studio wants twenty-nine dollars a month", "step": "badge"},
+      {"cap": "to record your screen.", "step": "badge"},
+      {"cap": "Bilal:", "say": "[matter-of-fact] Bilal:", "step": "quote"},
+      {"cap": "“Loom's free plan stops each video at 5 minutes", "say": "[sarcastic] Loom's free plan stops each video at five minutes", "step": "quote"},
+      {"cap": "and won't let you download it…”", "say": "and won't let you download it.", "step": "quote"},
+      {"cap": "So: Reelbird. Link the second you stop.", "say": "[quick] So: Reelbird. Link the second you stop.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "rejboard", "cut": true,
+     "gripe": "Handwriting apps that paywall the good pens.",
+     "quote": "The problem is that the best features are usually locked behind a paywall or a subscription,",
+     "cues": [
+      {"cap": "Handwriting apps. Paywalled pens.", "step": "gripe"},
+      {"cap": "Rejwan Shafi:", "say": "[matter-of-fact] Rezh-wahn Shafi:", "step": "quote"},
+      {"cap": "“The problem is that the best features", "say": "[sarcastic] The problem is that the best features", "step": "quote"},
+      {"cap": "are usually locked behind a paywall", "step": "quote"},
+      {"cap": "or a subscription…”", "say": "or a subscription.", "step": "quote"},
+      {"cap": "So: RejBoard. Every pen, one notebook.", "say": "[quick] So: Rej-board. Every pen, one notebook.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
