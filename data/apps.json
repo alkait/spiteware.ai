@@ -5488,5 +5488,69 @@
     "repo": "RejwanShafi25/RejBoard",
     "spite_score": 7,
     "added": "2026-10-17"
+  },
+  {
+    "slug": "probe",
+    "name": "Probe",
+    "url": "https://github.com/amschel99/Probe",
+    "icon": "📋",
+    "tagline": "Tally wants $24 a month before your survey stops wearing its logo. Probe is the whole form builder in one Docker container, and the only thing it asks is your questions.",
+    "replaces": {
+      "name": "Tally Pro",
+      "product": "Tally",
+      "price": "$24/mo",
+      "source": "https://tally.so/pricing"
+    },
+    "grudge": {
+      "quote": "A self hosted form because tally is too expensive and google forms lacks style",
+      "source": "https://github.com/amschel99/Probe"
+    },
+    "builder": {
+      "name": "amschel",
+      "handle": "amschel99",
+      "url": "https://github.com/amschel99"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "forms"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "amschel99/Probe",
+    "spite_score": 8,
+    "added": "2026-10-18"
+  },
+  {
+    "slug": "ayakaleaf-pro",
+    "name": "Ayakaleaf Pro",
+    "url": "https://github.com/ayaka-notes/ayakaleaf-pro",
+    "icon": "📜",
+    "tagline": "Overleaf charges by the head for Git sync and the rest of the good parts. Ayakaleaf Pro bolted the Pro features onto the free edition and handed the server back to your lab.",
+    "replaces": {
+      "name": "Overleaf Standard",
+      "product": "Overleaf",
+      "price": "$25/mo",
+      "source": "https://www.overleaf.com/user/subscription/plans"
+    },
+    "grudge": {
+      "quote": "Overleaf subscriptions can be expensive, especially for research teams.",
+      "source": "https://www.reddit.com/r/selfhosted/comments/1x8ua83/an_opensource_overleaf_fork_with_all_pro_features/"
+    },
+    "builder": {
+      "name": "ayaka-notes",
+      "handle": "ayaka-notes",
+      "url": "https://github.com/ayaka-notes"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "ayaka-notes/ayakaleaf-pro",
+    "spite_score": 8,
+    "added": "2026-10-18"
   }
 ]

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-18",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Tally wants $24 a month. Probe is one Docker container.",
+    "caption": "Two fresh grudges: a form builder that charges to take its logo off your survey, and a LaTeX editor that bills research teams by the head.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "selfhosted", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 18th.", "say": "October eighteenth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "probe", "cut": true,
+     "quote": "A self hosted form because tally is too expensive",
+     "cues": [
+      {"cap": "Tally wants $24 a month", "say": "Tally wants twenty-four dollars a month", "step": "badge"},
+      {"cap": "to build a form.", "step": "badge"},
+      {"cap": "amschel:", "say": "[matter-of-fact] Am-shell:", "step": "quote"},
+      {"cap": "“A self hosted form", "say": "[sarcastic] A self hosted form", "step": "quote"},
+      {"cap": "because tally is too expensive…”", "say": "because Tally is too expensive.", "step": "quote"},
+      {"cap": "So: Probe. One Docker container.", "say": "[quick] So: Probe. One Docker container.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "ayakaleaf-pro",
+     "quote": "Overleaf subscriptions can be expensive, especially for research teams.",
+     "cues": [
+      {"cap": "Overleaf wants $25 a month", "say": "Overleaf wants twenty-five dollars a month", "step": "badge"},
+      {"cap": "for the Pro features.", "step": "badge"},
+      {"cap": "ayaka-notes:", "say": "[matter-of-fact] Ah-yah-ka Notes:", "step": "quote"},
+      {"cap": "“Overleaf subscriptions can be expensive,", "say": "[sarcastic] Overleaf subscriptions can be expensive,", "step": "quote"},
+      {"cap": "especially for research teams.”", "step": "quote"},
+      {"cap": "So: Ayakaleaf Pro. Every Pro feature, your server.", "say": "[quick] So: Ah-yah-ka-leaf Pro. Every Pro feature, your server.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

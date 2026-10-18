@@ -1,0 +1,20 @@
+{
+  "run": "2026-10-18",
+  "swept": "hn (48h), reddit (r/SideProject, r/selfhosted, r/webdev, r/macapps, r/ClaudeAI; r/opensource, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 337,
+  "triaged": 18,
+  "candidates": [],
+  "dropped": [
+    "tessera (Serum 2 alternative): repo 404s, no post text",
+    "SoundBoard Pro: repo holds only a README and an unsigned .exe release, no source, and the Reddit post still had a template placeholder in it (unsure)",
+    "GitGud: frustration is that no open-source Git GUI felt as nice as GitKraken, not a price (gate 1)",
+    "Plinth: 'no premium tier' feature lines, no stated reason (gate 1)",
+    "OpenItems: 'free alternative to the paid plugin ItemsAdder' is a description, no stated reason (gate 1)",
+    "3DValley: paid credits from 5 cents a model (gate 2)",
+    "ParseExtract: pay-as-you-go pricing (gate 2)",
+    "Fundstash, Moonrain: no post text or stated reason (gate 1)",
+    "PureClear, Refreshly, voxtype, inkdesk, open-photo-booth, transcriber, CoastMath: 'no subscription' or 'free forever' feature lines, no stated reason (gate 1)",
+    "GemType, ApolloCut, smallpdf-reverse-engineered: copied-README spam repos",
+    "Pomoflow, Scriber-Pro, SpeakoFlow, Putaway: already dropped on an earlier run"
+  ]
+}
