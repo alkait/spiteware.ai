@@ -5552,5 +5552,101 @@
     "repo": "ayaka-notes/ayakaleaf-pro",
     "spite_score": 8,
     "added": "2026-10-18"
+  },
+  {
+    "slug": "open-photo-booth",
+    "name": "Open Photo Booth",
+    "url": "https://github.com/robert-schmidt/open-photo-booth",
+    "icon": "📸",
+    "tagline": "Photo booth software wants a monthly fee, an account and a connection to print a strip of four. Open Photo Booth does the strip offline and charges you nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most photo booth software is sold as a monthly subscription, tied to an online account, and often limited per device.",
+      "source": "https://github.com/robert-schmidt/open-photo-booth#why-open-photo-booth"
+    },
+    "builder": {
+      "name": "Robert Schmidt",
+      "handle": "robert-schmidt",
+      "url": "https://github.com/robert-schmidt"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "robert-schmidt/open-photo-booth",
+    "spite_score": 7,
+    "added": "2026-10-19"
+  },
+  {
+    "slug": "mirlow",
+    "name": "Mirlow",
+    "url": "https://mirlow.vercel.app/",
+    "icon": "🪞",
+    "tagline": "Putting your phone screen on your own PC somehow became a subscription. Mirlow does it over Wi-Fi, no app on the phone, no bill.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I built a free app to mirror your iPhone to Windows because I was tired of paying for it",
+      "source": "https://www.reddit.com/r/SideProject/comments/1x9gsr1/"
+    },
+    "builder": {
+      "name": "Francisco Martins",
+      "handle": "franciscogfsm",
+      "url": "https://github.com/franciscogfsm"
+    },
+    "tags": [
+      "windows",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "franciscogfsm/Mirlow",
+    "spite_score": 5,
+    "added": "2026-10-19"
+  },
+  {
+    "slug": "meetcap",
+    "name": "MeetCap",
+    "url": "https://meetcap.seacen.dev/",
+    "icon": "🎙️",
+    "tagline": "Meeting note-takers bill by the month to ship your calls to their servers. MeetCap transcribes on your Mac and lets the AI you already pay for write the minutes.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "There are tools for this, but most charge by the month and send your recordings to someone else’s servers.",
+      "source": "https://meetcap.seacen.dev/about/"
+    },
+    "builder": {
+      "name": "Xichang (Seacen) Zhao",
+      "handle": "seacen",
+      "url": "https://github.com/seacen"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-19"
   }
 ]

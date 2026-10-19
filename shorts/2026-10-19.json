@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-19",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Photo booths want a monthly fee. Open Photo Booth is free.",
+    "caption": "Three fresh grudges: photo booth software billed by the month, phone mirroring that somehow needs a subscription, and meeting note-takers that rent out your own calls.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "privacy"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 19th.", "say": "October nineteenth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "open-photo-booth", "cut": true,
+     "gripe": "Photo booth software, billed monthly to print a strip of four.",
+     "quote": "Most photo booth software is sold as a monthly subscription",
+     "cues": [
+      {"cap": "Four photos in a strip.", "step": "gripe"},
+      {"cap": "Billed by the month.", "step": "gripe"},
+      {"cap": "Robert Schmidt:", "say": "[matter-of-fact] Robert Schmidt:", "step": "quote"},
+      {"cap": "“Most photo booth software", "say": "[sarcastic] Most photo booth software", "step": "quote"},
+      {"cap": "is sold as a monthly subscription…”", "say": "is sold as a monthly subscription.", "step": "quote"},
+      {"cap": "So: Open Photo Booth. Offline.", "say": "[quick] So: Open Photo Booth. Offline.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "mirlow", "score": false,
+     "gripe": "Mirroring your own phone to your own PC, for a fee.",
+     "quote": "I built a free app to mirror your iPhone to Windows because I was tired of paying for it",
+     "cues": [
+      {"cap": "Your phone. Your PC.", "step": "gripe"},
+      {"cap": "Somehow, a subscription.", "step": "gripe"},
+      {"cap": "Francisco Martins:", "say": "[matter-of-fact] Francisco Martins:", "step": "quote"},
+      {"cap": "“I built a free app", "say": "[sarcastic] I built a free app", "step": "quote"},
+      {"cap": "to mirror your iPhone to Windows", "step": "quote"},
+      {"cap": "because I was tired of paying for it”", "say": "because I was tired of paying for it.", "step": "quote"},
+      {"cap": "So: Mirlow. No app on the phone.", "say": "[quick] So: Meer-low. No app on the phone.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "meetcap", "score": false, "cut": true,
+     "gripe": "Meeting note-takers, billed by the month.",
+     "quote": "There are tools for this, but most charge by the month",
+     "cues": [
+      {"cap": "Meeting notes.", "step": "gripe"},
+      {"cap": "Billed by the month.", "step": "gripe"},
+      {"cap": "Xichang Zhao:", "say": "[matter-of-fact] Shee-chahng Jow:", "step": "quote"},
+      {"cap": "“There are tools for this,", "say": "[sarcastic] There are tools for this,", "step": "quote"},
+      {"cap": "but most charge by the month…”", "say": "but most charge by the month.", "step": "quote"},
+      {"cap": "So: MeetCap. Transcribes on your Mac.", "say": "[quick] So: Meet Cap. Transcribes on your Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

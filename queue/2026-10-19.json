@@ -1,0 +1,25 @@
+{
+  "run": "2026-10-19",
+  "swept": "hn (48h), reddit (r/SideProject, r/selfhosted, r/webdev, r/vibecoding, r/indiehackers; r/opensource, r/macapps, r/ClaudeAI 429), github; last30days unavailable",
+  "raw_hits": 299,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "Octaflow: $20/month tier for the voice-actions half (gate 2)",
+    "Intake: $9.99 one-time unlock (gate 2)",
+    "Hubs: Hubs+ $7.99/mo, Sparks, per-member Organizations pricing (gate 2)",
+    "3DValley: paid credits from 5 cents a model (gate 2)",
+    "ParseExtract: paid desktop edition with trial (gate 2)",
+    "Removify Studio: Monetag pop-under ads and a schema rating that looks made up (gate 2, unsure)",
+    "tessera (Serum 2 alternative): repo 404s, no post text",
+    "Offline iOS workout engine: video-only post, no app name or link",
+    "VeloPopuli: 'No subscription. No paywall.' is a feature line, no stated reason (gate 1)",
+    "SpeakoFlow: grudge is a missing feature, not price; roadmap plans a paid cloud tier (gate 1, already dropped earlier)",
+    "GitGud: GitKraken named for looks, not price (gate 1)",
+    "clipper: OpusClip comparison table, no stated reason (gate 1)",
+    "silcut, sequence-mail, free-draw-kids, Spare, plumb: 'free alternative' / 'no subscription' descriptions, no stated reason (gate 1)",
+    "Plinth, Torrie, Nori, Setforge, Moonrain, Fundstash: no post text or stated reason (gate 1)",
+    "Chest: built because Ice broke on macOS 27, not over price (gate 1)",
+    "GemType clones, illustrator-mac, smallpdf-reverse-engineered: copied-README spam/lure repos"
+  ]
+}
