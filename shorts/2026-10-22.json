@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-22",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 5,
+  "post": {
+    "title": "YouTube Premium wants $15.99 a month. YouTube Debloat is free.",
+    "caption": "Eight fresh grudges: paying YouTube to stop the ads, paying remove.bg for full-size cutouts, and paying Flightradar24 to remember yesterday's flights.",
+    "tags": [
+      "freesoftware",
+      "indiedev",
+      "subscriptions",
+      "opensource",
+      "selfhosted"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "October 22nd.",
+          "say": "October twenty-second.",
+          "step": "date"
+        },
+        {
+          "cap": "Eight new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "youtube-debloat",
+      "quote": "No ads. No Shorts. No subscription to get rid of either.",
+      "cues": [
+        {
+          "cap": "YouTube Premium: $15.99 a month",
+          "say": "YouTube Premium: fifteen ninety-nine a month",
+          "step": "badge"
+        },
+        {
+          "cap": "to skip the ads.",
+          "step": "badge"
+        },
+        {
+          "cap": "whydr4:",
+          "say": "[matter-of-fact] Why-D-R-four:",
+          "step": "quote"
+        },
+        {
+          "cap": "“No ads. No Shorts.",
+          "say": "[sarcastic] No ads. No Shorts.",
+          "step": "quote"
+        },
+        {
+          "cap": "No subscription to get rid of either.”",
+          "say": "No subscription to get rid of either.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: YouTube Debloat. For Safari.",
+          "say": "[quick] So: YouTube Dee-bloat. For Safari.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "rmbg",
+      "cut": true,
+      "quote": "The only caveats for me were the export resolution limits",
+      "cues": [
+        {
+          "cap": "remove.bg: $9 a month",
+          "say": "Remove dot B G: nine dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "for the full-size cutout.",
+          "step": "badge"
+        },
+        {
+          "cap": "Sathyajith MC:",
+          "say": "[matter-of-fact] Sat-yah-jith M C:",
+          "step": "quote"
+        },
+        {
+          "cap": "“The only caveats for me",
+          "say": "[sarcastic] The only caveats for me",
+          "step": "quote"
+        },
+        {
+          "cap": "were the export resolution limits…”",
+          "say": "were the export resolution limits.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: RMBG. Runs in your browser.",
+          "say": "[quick] So: R M B G. Runs in your browser.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "velocity",
+      "gripe": "Flight history, rationed unless you pay.",
+      "quote": "Flightradar24 now charges for anything older than 12 hours, and I wanted my own copy.",
+      "cues": [
+        {
+          "cap": "Yesterday's flights.",
+          "step": "gripe"
+        },
+        {
+          "cap": "Paywalled.",
+          "step": "gripe"
+        },
+        {
+          "cap": "Andrew:",
+          "say": "[matter-of-fact] Andrew:",
+          "step": "quote"
+        },
+        {
+          "cap": "“Flightradar24 now charges",
+          "say": "[sarcastic] Flight radar twenty-four now charges",
+          "step": "quote"
+        },
+        {
+          "cap": "for anything older than 12 hours,",
+          "say": "for anything older than twelve hours,",
+          "step": "quote"
+        },
+        {
+          "cap": "and I wanted my own copy.”",
+          "say": "and I wanted my own copy.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Velocity. Rewind on your own disk.",
+          "say": "[quick] So: Velocity. Rewind on your own disk.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "Plus five more",
+          "say": "[upbeat] Plus five more,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}

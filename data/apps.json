@@ -5648,5 +5648,259 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-10-19"
+  },
+  {
+    "slug": "rmbg",
+    "name": "RMBG",
+    "url": "https://velmet44.github.io/rmbg/",
+    "icon": "✂️",
+    "tagline": "remove.bg capped your export resolution and then moved into Canva. RMBG cuts out backgrounds in your browser at full size, no credits.",
+    "replaces": {
+      "name": "remove.bg Lite",
+      "product": "remove.bg",
+      "price": "$9/mo",
+      "source": "https://costbench.com/software/ai-design-tools/remove-bg/"
+    },
+    "grudge": {
+      "quote": "The only caveats for me were the export resolution limits and a privacy factor, that is, my images got uploaded to their servers.",
+      "source": "https://news.ycombinator.com/item?id=50185013"
+    },
+    "builder": {
+      "name": "Sathyajith MC",
+      "handle": "Velmet44",
+      "url": "https://github.com/Velmet44"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Velmet44/rmbg",
+    "spite_score": 8,
+    "added": "2026-10-22"
+  },
+  {
+    "slug": "youtube-debloat",
+    "name": "YouTube Debloat",
+    "url": "https://github.com/whydr4/youtube-debloat",
+    "icon": "🚫",
+    "tagline": "YouTube sells the silence for a monthly fee. YouTube Debloat deletes the ads and the Shorts from Safari for nothing.",
+    "replaces": {
+      "name": "YouTube Premium",
+      "product": "YouTube",
+      "price": "$15.99/mo",
+      "source": "https://9to5google.com/2026/04/10/youtube-premium-us-price-hike/"
+    },
+    "grudge": {
+      "quote": "No ads. No Shorts. No subscription to get rid of either.",
+      "source": "https://github.com/whydr4/youtube-debloat"
+    },
+    "builder": {
+      "name": "whydr4",
+      "handle": "whydr4",
+      "url": "https://github.com/whydr4"
+    },
+    "tags": [
+      "browser-extension",
+      "privacy",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "whydr4/youtube-debloat",
+    "spite_score": 8,
+    "added": "2026-10-22"
+  },
+  {
+    "slug": "velocity",
+    "name": "Velocity",
+    "url": "https://github.com/AndrewCTF/velocity",
+    "icon": "✈️",
+    "tagline": "Flightradar24 wants a subscription to remember yesterday. Velocity records every plane and ship to your own disk and lets you rewind for free.",
+    "replaces": {
+      "name": "Flightradar24",
+      "product": "Flightradar24",
+      "price": "",
+      "source": "https://www.flightradar24.com/premium"
+    },
+    "grudge": {
+      "quote": "Flightradar24 now charges for anything older than 12 hours, and I wanted my own copy.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xc8jth/velocity_a_selfhosted_flight_and_ship_tracker/"
+    },
+    "builder": {
+      "name": "Andrew",
+      "handle": "AndrewCTF",
+      "url": "https://github.com/AndrewCTF"
+    },
+    "tags": [
+      "self-hosted",
+      "travel"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "AndrewCTF/velocity",
+    "spite_score": 7,
+    "added": "2026-10-22"
+  },
+  {
+    "slug": "biscotti",
+    "name": "Biscotti",
+    "url": "https://biscottiapp.com",
+    "icon": "🍪",
+    "tagline": "Meeting note-takers want a subscription and your audio on their servers. Biscotti records, transcribes and summarizes on your Mac and charges nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I'm tired of meeting transcription apps that send your private audio to their servers, aren't Mac native, and require an account/subscription.",
+      "source": "https://www.reddit.com/r/macapps/comments/1xasf9i/biscotti_v10_a_free_meeting_recorder_for_mac_that/"
+    },
+    "builder": {
+      "name": "Steve Cosman",
+      "handle": "scosman",
+      "url": "https://github.com/scosman"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "scosman/Biscotti",
+    "spite_score": 5,
+    "added": "2026-10-22"
+  },
+  {
+    "slug": "resourcedeck",
+    "name": "resourcedeck",
+    "url": "https://resourcedeck.app/",
+    "icon": "📊",
+    "tagline": "Portfolio planning suites bill $50 to $100 per head per month. resourcedeck plans the people and the budgets on your desktop for zero per head.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Enterprise resource planning tools charge $50 to $100 per user per month while locking your strategic plans inside proprietary clouds.",
+      "source": "https://resourcedeck.app/"
+    },
+    "builder": {
+      "name": "George Shaheen",
+      "handle": "gshaheen",
+      "url": "https://github.com/gshaheen"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "gshaheen/resourcedeck",
+    "spite_score": 5,
+    "added": "2026-10-22"
+  },
+  {
+    "slug": "linkit",
+    "name": "Linkit",
+    "url": "https://github.com/blue-idea/linkit",
+    "icon": "🔖",
+    "tagline": "Bookmark managers charge monthly to sync your own links. Linkit adds AI summaries and syncs them for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Unlike competing tools that gate cross-device sync, full-text search, or backups behind monthly subscriptions, Linkit's cloud sync is 100% free with zero paywalls.",
+      "source": "https://github.com/blue-idea/linkit"
+    },
+    "builder": {
+      "name": "blue-idea",
+      "handle": "blue-idea",
+      "url": "https://github.com/blue-idea"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "blue-idea/linkit",
+    "spite_score": 5,
+    "added": "2026-10-22"
+  },
+  {
+    "slug": "clipforge",
+    "name": "ClipForge",
+    "url": "https://github.com/mustaph333/clipforge",
+    "icon": "🎬",
+    "tagline": "AI video sites charge per clip and then a subscription on top. ClipForge turns a topic into a finished vertical video on your own machine, per-video fee: none.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Online AI video tools charge per video, lock you into subscriptions, and upload your work to someone else's cloud.",
+      "source": "https://github.com/mustaph333/clipforge"
+    },
+    "builder": {
+      "name": "Mustapha Rais",
+      "handle": "mustaph333",
+      "url": "https://github.com/mustaph333"
+    },
+    "tags": [
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "mustaph333/clipforge",
+    "spite_score": 5,
+    "added": "2026-10-22"
+  },
+  {
+    "slug": "balai",
+    "name": "Balai",
+    "url": "https://github.com/root-lr/Balai",
+    "icon": "🧹",
+    "tagline": "Mac cleaners sell you a subscription and a scary pop-up. Balai sweeps the disk for free and skips the scare.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "As polished as the paid ones, without the subscription, the telemetry or the scare tactics.",
+      "source": "https://github.com/root-lr/Balai"
+    },
+    "builder": {
+      "name": "root-lr",
+      "handle": "root-lr",
+      "url": "https://github.com/root-lr"
+    },
+    "tags": [
+      "macos",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "root-lr/Balai",
+    "spite_score": 5,
+    "added": "2026-10-22"
   }
 ]

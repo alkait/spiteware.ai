@@ -1,0 +1,24 @@
+{
+  "run": "2026-10-22",
+  "swept": "hn (72h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 563,
+  "triaged": 27,
+  "candidates": [],
+  "dropped": [
+    "KeyboardStack: $29.99 one-time unlock for every mode but Grid (gate 2)",
+    "Photonica: Pro at $2.99/mo (gate 2)",
+    "PDFkind: ad-supported product of a company (Peerledge SARLAU) with a pricing page; unsure, held off",
+    "shortener.dev: pricing page, paid plans and lifetime deal (gate 2)",
+    "Local Keep: Pro one-time in-app purchase (gate 2)",
+    "Inca: free Maya-like 3D app but no grudge in the builder's words (gate 1)",
+    "AppSweep: 'free alternative to paid Mac cleaners' is a feature line, no grudge (gate 1)",
+    "Scrap: 'Inspired by Tot, with no paid tier' is not a grudge (gate 1)",
+    "Overdrive: no grudge stated (gate 1)",
+    "watchYou: grudge is there but it is an unfinished Xcode project with no build to download; unsure",
+    "PixelSmith: two-word README ('adobe expensive'), no app to verify",
+    "OpenCut, Narra, Toppo, FollowTidy, OpenCena, Veyron Crosshair, Invoice Tool: 'no subscription' feature lines, no grudge (gate 1)",
+    "CapChief, NotchSub, Timeminator, Footloom, PurePDF: no grudge stated (gate 1)",
+    "LaunchWindow: paid with free trial (gate 2)",
+    "Hibi: already listed; Oriel, VoxScribe: already seen in earlier queues"
+  ]
+}
