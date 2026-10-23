@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-23",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Arcade wants $50 a seat a month. Stepcast is free.",
+    "caption": "Two fresh grudges: paying Arcade per seat to replay your own clicks, and renting QR codes that stop working when the subscription does.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "qrcode"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 23rd.", "say": "October twenty-third.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "stepcast", "cut": true,
+     "quote": "Arcade, Supademo and Storylane do the same thing, but cost $32–50 per user per month",
+     "cues": [
+      {"cap": "Arcade: $50 a seat a month", "say": "Arcade: fifty dollars a seat a month", "step": "badge"},
+      {"cap": "to replay your own clicks.", "step": "badge"},
+      {"cap": "Arda:", "say": "[matter-of-fact] Arda:", "step": "quote"},
+      {"cap": "“Arcade, Supademo and Storylane do the same thing,", "say": "[sarcastic] Arcade, Soopa-demo and Story-lane do the same thing,", "step": "quote"},
+      {"cap": "but cost $32–50 per user per month…”", "say": "but cost thirty-two to fifty per user per month.", "step": "quote"},
+      {"cap": "So: Stepcast. Your demo, one HTML file.", "say": "[quick] So: Stepcast. Your demo, one H T M L file.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "qrcode666", "score": false,
+     "gripe": "QR codes that stop working when you stop paying.",
+     "quote": "The internet doesn’t need another QR code subscription.",
+     "cues": [
+      {"cap": "A QR code.", "say": "A Q R code.", "step": "gripe"},
+      {"cap": "On a subscription.", "step": "gripe"},
+      {"cap": "LMQY666:", "say": "[matter-of-fact] L M Q Y six six six:", "step": "quote"},
+      {"cap": "“The internet doesn’t need", "say": "[sarcastic] The internet doesn't need", "step": "quote"},
+      {"cap": "another QR code subscription.”", "say": "another Q R code subscription.", "step": "quote"},
+      {"cap": "So: QRCode666. The link lives in the squares.", "say": "[quick] So: Q R Code six six six. The link lives in the squares.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

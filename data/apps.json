@@ -5902,5 +5902,69 @@
     "repo": "root-lr/Balai",
     "spite_score": 5,
     "added": "2026-10-22"
+  },
+  {
+    "slug": "stepcast",
+    "name": "Stepcast",
+    "url": "https://arda-dd.github.io/stepcast/",
+    "icon": "🖱️",
+    "tagline": "Arcade charges $50 a seat a month to replay your own clicks. Stepcast records them in a Chrome extension and hands you the HTML file for nothing.",
+    "replaces": {
+      "name": "Arcade Growth",
+      "product": "Arcade",
+      "price": "$50/user/mo",
+      "source": "https://www.arcade.software/pricing-interactive-demos"
+    },
+    "grudge": {
+      "quote": "Arcade, Supademo and Storylane do the same thing, but cost $32–50 per user per month and keep your screenshots on their servers.",
+      "source": "https://github.com/Arda-dd/stepcast"
+    },
+    "builder": {
+      "name": "Arda",
+      "handle": "Arda-dd",
+      "url": "https://github.com/Arda-dd"
+    },
+    "tags": [
+      "browser-extension",
+      "local-first",
+      "marketing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Arda-dd/stepcast",
+    "spite_score": 8,
+    "added": "2026-10-23"
+  },
+  {
+    "slug": "qrcode666",
+    "name": "QRCode666",
+    "url": "https://qrcode666.app",
+    "icon": "🔳",
+    "tagline": "QR subscriptions rent you a redirect and switch your menus off when you stop paying. QRCode666 bakes the link into the squares, free, forever.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The internet doesn’t need another QR code subscription.",
+      "source": "https://qrcode666.app"
+    },
+    "builder": {
+      "name": "LMQY666",
+      "handle": "leida666",
+      "url": "https://github.com/leida666"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "leida666/qrcode666",
+    "spite_score": 5,
+    "added": "2026-10-23"
   }
 ]

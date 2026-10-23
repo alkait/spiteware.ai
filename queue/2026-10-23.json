@@ -1,0 +1,22 @@
+{
+  "run": "2026-10-23",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted via RSS; r/webdev, r/vibecoding, r/indiehackers 429/403), github; last30days unavailable",
+  "raw_hits": 401,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "superCMO-skills: Higgsfield grudge is real, but the maker sells pay-per-use generation on its own keys (paid tier, gate 2)",
+    "Daybook (rpolastro): grudge line in README, but the repo is a README and a licence, no app to try",
+    "Headroom: 'no coaching-app subscription' line, but it needs Claude in Chrome on a paid Claude plan; unsure",
+    "OneUptime: company with a paid cloud, open-core alternative to Datadog (automatic reject)",
+    "Photonica, LightScroll, Timeminator, Lalabase, KeyboardStack: paid tier or Pro plan (gate 2)",
+    "Thok ($0.99), Media Renamer Pro ($4.99), WatchdogTV ($9/yr), Pixels (one-time): paid (gate 2)",
+    "Murmur: names Wispr Flow as a comparison, built 'for my custom needs'; no grudge (gate 1)",
+    "AudioRouterNow: Loopback is 'overkill', a comparison, not a grudge (gate 1)",
+    "OnKey: grudge is the singing app's song list, not its price (gate 1)",
+    "International Space Station: 'a paid tool may run a server' is an aside, no grudge (gate 1)",
+    "foodlog, VoxScribe, decloud, Lore, home-share-ha, free-to-download, prism, text-to-voice, Setomi: 'no subscription' feature lines, no grudge (gate 1)",
+    "Better Splitwise (cashout): Android closed testing only, can't be tried",
+    "Cathode, FileOctopus, Kindred, WhatYouSay, Switchboard, Overdrive, NeoInbox, Webmark.ing: no grudge stated (gate 1)"
+  ]
+}
