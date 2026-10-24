@@ -5966,5 +5966,101 @@
     "repo": "leida666/qrcode666",
     "spite_score": 5,
     "added": "2026-10-23"
+  },
+  {
+    "slug": "ketchup",
+    "name": "KetchUp",
+    "url": "https://github.com/Ketchup3D/app",
+    "icon": "🍅",
+    "tagline": "SketchUp Pro bills $33.25 a month to push a rectangle into a box. KetchUp pushes, pulls and even opens your .skp files for nothing.",
+    "replaces": {
+      "name": "SketchUp Pro",
+      "product": "SketchUp",
+      "price": "$33.25/mo",
+      "source": "https://www.sketchup.com/en/plans-and-pricing"
+    },
+    "grudge": {
+      "quote": "Just like Sketchup, but without subscription",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xduxeo/just_like_sketchup_but_without_subscription/"
+    },
+    "builder": {
+      "name": "Dan Coulombe",
+      "handle": "dannycoulombe",
+      "url": "https://github.com/dannycoulombe"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Ketchup3D/app",
+    "spite_score": 8,
+    "added": "2026-10-24"
+  },
+  {
+    "slug": "quiz-toolkit",
+    "name": "Quiz Toolkit",
+    "url": "https://quiztoolkit.com/",
+    "icon": "🛎️",
+    "tagline": "Quiz apps lock the buzzers behind a subscription and the door behind an account. Quiz Toolkit turns everyone's phone into a buzzer and asks for neither.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The ones I tried either put features I needed behind a subscription or required an account just to get started.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xdtt76/i_host_a_lot_of_quiz_nights_so_i_built_a_free/"
+    },
+    "builder": {
+      "name": "Anshul",
+      "handle": "thepolymoth",
+      "url": "https://www.reddit.com/user/thepolymoth"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "games"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-24"
+  },
+  {
+    "slug": "flow",
+    "name": "Flow",
+    "url": "https://github.com/jaivedpereira/flow",
+    "icon": "🎞️",
+    "tagline": "Mobile photo editors rent you the good presets by the month. Flow ships 269 film LUTs, curves and masks on your phone, offline, for zero a month.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Flow is a photo editor built around one idea: the good stuff should not be behind a subscription.",
+      "source": "https://github.com/jaivedpereira/flow"
+    },
+    "builder": {
+      "name": "Jaíved Pereira dos Santos Silva",
+      "handle": "jaivedpereira",
+      "url": "https://github.com/jaivedpereira"
+    },
+    "tags": [
+      "local-first",
+      "privacy",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "jaivedpereira/flow",
+    "spite_score": 5,
+    "added": "2026-10-24"
   }
 ]

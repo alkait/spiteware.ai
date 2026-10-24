@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "SketchUp Pro wants $33 a month. KetchUp is free.",
+    "caption": "Three fresh grudges: a 3D modeler on a subscription, photo presets behind a paywall, and quiz night buzzers that want an account.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "3dmodeling"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 24th.", "say": "October twenty-fourth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "ketchup",
+     "quote": "Just like Sketchup, but without subscription",
+     "cues": [
+      {"cap": "SketchUp Pro: $33.25 a month", "say": "SketchUp Pro: thirty-three twenty-five a month", "step": "badge"},
+      {"cap": "to push a rectangle into a box.", "step": "badge"},
+      {"cap": "Dan Coulombe:", "say": "[matter-of-fact] Dan Coulombe:", "step": "quote"},
+      {"cap": "“Just like Sketchup,", "say": "[sarcastic] Just like SketchUp,", "step": "quote"},
+      {"cap": "but without subscription”", "say": "but without subscription.", "step": "quote"},
+      {"cap": "So: KetchUp. Push, pull, open your .skp.", "say": "[quick] So: KetchUp. Push, pull, open your S K P.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "flow", "score": false,
+     "gripe": "The good presets, rented by the month.",
+     "quote": "the good stuff should not be behind a subscription.",
+     "cues": [
+      {"cap": "Photo presets.", "step": "gripe"},
+      {"cap": "Rented by the month.", "step": "gripe"},
+      {"cap": "Jaíved Pereira:", "say": "[matter-of-fact] Zha-EE-ved Pereira:", "step": "quote"},
+      {"cap": "“the good stuff should not be", "say": "[sarcastic] the good stuff should not be", "step": "quote"},
+      {"cap": "behind a subscription.”", "step": "quote"},
+      {"cap": "So: Flow. 269 film looks, offline.", "say": "[quick] So: Flow. Two hundred sixty-nine film looks, offline.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "quiz-toolkit", "score": false, "cut": true,
+     "gripe": "Quiz night buzzers behind a subscription.",
+     "quote": "The ones I tried either put features I needed behind a subscription",
+     "cues": [
+      {"cap": "Quiz night.", "step": "gripe"},
+      {"cap": "Buzzers sold separately.", "step": "gripe"},
+      {"cap": "Anshul:", "say": "[matter-of-fact] Anshul:", "step": "quote"},
+      {"cap": "“The ones I tried either put features I needed", "say": "[sarcastic] The ones I tried either put features I needed", "step": "quote"},
+      {"cap": "behind a subscription…”", "say": "behind a subscription.", "step": "quote"},
+      {"cap": "So: Quiz Toolkit. Phones become buzzers.", "say": "[quick] So: Quiz Toolkit. Phones become buzzers.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

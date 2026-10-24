@@ -1,0 +1,23 @@
+{
+  "run": "2026-10-24",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 419,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "OpenZPL: has a Pricing page and API keys",
+    "Klara: Klara Premium monthly and yearly plans",
+    "FattyURL: paid plans",
+    "Vim My Mac: waitlist asking what price to charge, not free",
+    "FlowUnzip: Pro is a one-time $1.99",
+    "Pastethread: paid app",
+    "Burrow: grudge is about trusting VPN companies, not price, and you pay AWS about $5/mo",
+    "YouCutOwn Studio: 'No subscription' is a slogan, no grudge in the builder's words",
+    "LANCloud: no subscription listed as a feature, the grudge is cloud uploads, not price",
+    "StickyFX: organisation account, one-line description and no builder to quote",
+    "Murmur: builder says they built it for custom needs, no grudge",
+    "Radian: Arc clone because Arc is shutting down, Arc was free",
+    "HatchZip, Blueberry Shake, AI Text Detector, Audio Splitter: no grudge from the builder anywhere",
+    "Kindred: Elastic License with commercial licensing, no grudge"
+  ]
+}
