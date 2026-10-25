@@ -6062,5 +6062,67 @@
     "repo": "jaivedpereira/flow",
     "spite_score": 5,
     "added": "2026-10-24"
+  },
+  {
+    "slug": "alarmist",
+    "name": "Alarmist",
+    "url": "https://github.com/orthohincom/alarmist",
+    "icon": "⏰",
+    "tagline": "Alarmy wants a subscription to yell at you every morning. Alarmist yells for free and still makes you scan the toothpaste.",
+    "replaces": {
+      "name": "Alarmy",
+      "product": "Alarmy",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I built Alarmist for my own use, mostly so I wouldn't have to pay a subscription for an alarm clock.",
+      "source": "https://github.com/orthohincom/alarmist"
+    },
+    "builder": {
+      "name": "orthohincom",
+      "handle": "orthohincom",
+      "url": "https://github.com/orthohincom"
+    },
+    "tags": [
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "orthohincom/alarmist",
+    "spite_score": 7,
+    "added": "2026-10-25"
+  },
+  {
+    "slug": "soulkey",
+    "name": "SoulKey",
+    "url": "https://github.com/FatedHelios/soulkey",
+    "icon": "⌨️",
+    "tagline": "Paying monthly to press keys for you on a Mac? SoulKey presses them for free, hotkeys and loops included.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I created this because I was tired of paying for macro software for MacOS when it should be available.",
+      "source": "https://github.com/FatedHelios/soulkey"
+    },
+    "builder": {
+      "name": "FatedHelios",
+      "handle": "FatedHelios",
+      "url": "https://github.com/FatedHelios"
+    },
+    "tags": [
+      "macos",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "FatedHelios/soulkey",
+    "spite_score": 5,
+    "added": "2026-10-25"
   }
 ]

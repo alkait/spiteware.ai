@@ -1,0 +1,25 @@
+{
+  "run": "2026-10-25",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 333,
+  "triaged": 19,
+  "candidates": [],
+  "dropped": [
+    "WhaLeads: open-core, funnels multi-number and hosted use to WhaBuzz",
+    "WeResume: Pro tier at $2.99/year",
+    "HeadedIn: unlocks at $9.99-$24.99",
+    "Strapless: 'no subscription' is a feature line, no grudge in the builder's words",
+    "AeonCut: '$10-20/mo saved' is a feature bullet, no grudge and no victim named",
+    "NDraw: says what it strips from EdrawMax, not why it was built",
+    "FaderHouse: Elgato Wave Link is free; grudge is lock-in, not price",
+    "Beam: commercial use needs a paid license, no grudge",
+    "QRagga: 'no subscription' slogan, no grudge",
+    "Narro: grudge is voices and clutter, not price",
+    "Paste Buff: grudge is Raycast's memory use, not price",
+    "Amgi: grudge is Anki's UI, not price",
+    "Yomu, Dō, Dainiki: no price grudge",
+    "Letterboxd Analytics, Stenograf, Chord Finance: no text from the builder to quote",
+    "offline-voice-changer, offline-face-swap and the other 'AI X desktop app, no subscription' repos: spam batch alongside game-cheat repos, likely malware",
+    "Radian, OpenZPL, Bolo AI, StockPulse: already in a queue file"
+  ]
+}

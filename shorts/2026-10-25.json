@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-25",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "An alarm clock on a subscription. Alarmist is free.",
+    "caption": "Two fresh grudges: an alarm clock you rent by the month, and Mac macro software that wants paying for pressing keys.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "android"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 25th.", "say": "October twenty-fifth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "alarmist",
+     "gripe": "An alarm clock, on a subscription.",
+     "quote": "mostly so I wouldn't have to pay a subscription for an alarm clock.",
+     "cues": [
+      {"cap": "An alarm clock.", "step": "gripe"},
+      {"cap": "On a subscription.", "step": "gripe"},
+      {"cap": "orthohincom:", "say": "[matter-of-fact] Ortho-hin-com:", "step": "quote"},
+      {"cap": "“mostly so I wouldn't have to pay", "say": "[sarcastic] mostly so I wouldn't have to pay", "step": "quote"},
+      {"cap": "a subscription for an alarm clock.”", "say": "a subscription for an alarm clock.", "step": "quote"},
+      {"cap": "So: Alarmist. Scan the toothpaste to stop it.", "say": "[quick] So: Alarmist. Scan the toothpaste to stop it.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "soulkey", "score": false,
+     "gripe": "Mac macro software, by the month.",
+     "quote": "I was tired of paying for macro software for MacOS",
+     "cut": true,
+     "cues": [
+      {"cap": "Pressing keys for you.", "step": "gripe"},
+      {"cap": "For a fee.", "step": "gripe"},
+      {"cap": "FatedHelios:", "say": "[matter-of-fact] Fated Helios:", "step": "quote"},
+      {"cap": "“I was tired of paying", "say": "[sarcastic] I was tired of paying", "step": "quote"},
+      {"cap": "for macro software for MacOS…”", "say": "for macro software for Mac O S.", "step": "quote"},
+      {"cap": "So: SoulKey. Hotkeys, loops, done.", "say": "[quick] So: Soul Key. Hotkeys, loops, done.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
