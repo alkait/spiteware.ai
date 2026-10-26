@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-26",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 3,
+  "post": {
+    "title": "AlDente charges €11.49 a year to stop at 80%. BalDente is free.",
+    "caption": "Six fresh grudges: a Mac battery limiter, a WHOOP strap reader and a Tesla charging ledger, each built by someone done paying for the privilege.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 26th.", "say": "October twenty-sixth.", "step": "date"},
+      {"cap": "Six new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "baldente",
+     "quote": "it has been a paid feature in other apps.",
+     "cues": [
+      {"cap": "AlDente wants €11.49 a year", "say": "Al Dente wants eleven forty-nine euros a year", "step": "badge"},
+      {"cap": "to stop charging at 80%.", "say": "to stop charging at eighty percent.", "step": "badge"},
+      {"cap": "close design:", "say": "[matter-of-fact] Close Design:", "step": "quote"},
+      {"cap": "“it has been a paid feature", "say": "[sarcastic] it has been a paid feature", "step": "quote"},
+      {"cap": "in other apps.”", "say": "in other apps.", "step": "quote"},
+      {"cap": "So: BalDente. Same limit, no bill.", "say": "[quick] So: Bal Dente. Same limit, no bill.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "unstrapped",
+     "quote": "Cancel the membership and the band keeps recording to its own flash — WHOOP's cloud just stops showing it to you.",
+     "cues": [
+      {"cap": "WHOOP: $199 a year", "say": "Whoop: a hundred ninety-nine dollars a year", "step": "badge"},
+      {"cap": "to see your own heartbeat.", "step": "badge"},
+      {"cap": "Samrat Gouni:", "say": "[matter-of-fact] Samrat Gouni:", "step": "quote"},
+      {"cap": "“Cancel the membership", "say": "[sarcastic] Cancel the membership", "step": "quote"},
+      {"cap": "and the band keeps recording", "step": "quote"},
+      {"cap": "to its own flash —", "say": "to its own flash.", "step": "quote"},
+      {"cap": "WHOOP's cloud just stops showing it to you.”", "say": "Whoop's cloud just stops showing it to you.", "step": "quote"},
+      {"cap": "So: Unstrapped. Reads the strap directly.", "say": "[quick] So: Unstrapped. Reads the strap directly.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "tesla-charge-ledger",
+     "quote": "Tessie and TezLab charge a subscription just to show a cost estimate.",
+     "cues": [
+      {"cap": "Tessie wants $6.99 a month", "say": "Tessie wants six ninety-nine a month", "step": "badge"},
+      {"cap": "to tell you what charging cost.", "step": "badge"},
+      {"cap": "Raphael Malikian:", "say": "[matter-of-fact] Raphael Ma-lee-kee-an:", "step": "quote"},
+      {"cap": "“Tessie and TezLab charge a subscription", "say": "[sarcastic] Tessie and Tez Lab charge a subscription", "step": "quote"},
+      {"cap": "just to show a cost estimate.”", "say": "just to show a cost estimate.", "step": "quote"},
+      {"cap": "So: Tesla Charge Ledger. Your real rates.", "say": "[quick] So: Tesla Charge Ledger. Your real rates.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus three more", "say": "[upbeat] Plus three more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

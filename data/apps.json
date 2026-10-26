@@ -6124,5 +6124,194 @@
     "repo": "FatedHelios/soulkey",
     "spite_score": 5,
     "added": "2026-10-25"
+  },
+  {
+    "slug": "baldente",
+    "name": "BalDente",
+    "url": "https://github.com/closedesign/BalDente",
+    "icon": "🔋",
+    "tagline": "AlDente charges €11.49 a year to stop your Mac at 80%. BalDente stops it for free, and knows when you're home.",
+    "replaces": {
+      "name": "AlDente Pro",
+      "product": "AlDente",
+      "price": "€11.49/yr",
+      "source": "https://apphousekitchen.com/pricing/"
+    },
+    "grudge": {
+      "quote": "Holding it around 80% when it is plugged in is the usual fix, and it has been a paid feature in other apps.",
+      "source": "https://github.com/closedesign/BalDente"
+    },
+    "builder": {
+      "name": "close design.",
+      "handle": "closedesign",
+      "url": "https://github.com/closedesign"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "closedesign/BalDente",
+    "spite_score": 8,
+    "added": "2026-10-26"
+  },
+  {
+    "slug": "unstrapped",
+    "name": "Unstrapped",
+    "url": "https://github.com/Samrat-Gouni/unstrapped",
+    "icon": "💓",
+    "tagline": "Cancel the $199 WHOOP membership and the strap keeps recording anyway. Unstrapped just reads it back to you.",
+    "replaces": {
+      "name": "WHOOP One membership",
+      "product": "WHOOP",
+      "price": "$199/yr",
+      "source": "https://trackervs.com/pricing/whoop-pricing/"
+    },
+    "grudge": {
+      "quote": "Cancel the membership and the band keeps recording to its own flash — WHOOP's cloud just stops showing it to you.",
+      "source": "https://github.com/Samrat-Gouni/unstrapped"
+    },
+    "builder": {
+      "name": "Samrat Gouni",
+      "handle": "Samrat-Gouni",
+      "url": "https://github.com/Samrat-Gouni"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Samrat-Gouni/unstrapped",
+    "spite_score": 8,
+    "added": "2026-10-26"
+  },
+  {
+    "slug": "tesla-charge-ledger",
+    "name": "Tesla Charge Ledger",
+    "url": "https://github.com/rtmalikian/tesla-charge-ledger",
+    "icon": "⚡",
+    "tagline": "Tessie wants $6.99 a month per car to tell you what charging cost. This ledger does the math on your real electricity rates, free.",
+    "replaces": {
+      "name": "Tessie",
+      "product": "Tessie",
+      "price": "$6.99/mo",
+      "source": "https://www.tessie.com/pricing"
+    },
+    "grudge": {
+      "quote": "Tessie and TezLab charge a subscription just to show a cost estimate.",
+      "source": "https://github.com/rtmalikian/tesla-charge-ledger"
+    },
+    "builder": {
+      "name": "Raphael Malikian",
+      "handle": "rtmalikian",
+      "url": "https://github.com/rtmalikian"
+    },
+    "tags": [
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "rtmalikian/tesla-charge-ledger",
+    "spite_score": 8,
+    "added": "2026-10-26"
+  },
+  {
+    "slug": "freedesk",
+    "name": "FreeDesk",
+    "url": "https://github.com/parmardhruv021-dev/freedesk",
+    "icon": "🖥️",
+    "tagline": "Remote desktop tools bill by the seat and by the minute. FreeDesk bills nobody, for as long as the call takes.",
+    "replaces": {
+      "name": "AnyDesk",
+      "product": "AnyDesk",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "FreeDesk is a self-hostable remote support and remote access tool for everyone who is tired of paying per-minute or per-seat fees for tools like AnyDesk, TeamViewer or BeyondTrust.",
+      "source": "https://github.com/parmardhruv021-dev/freedesk"
+    },
+    "builder": {
+      "name": "parmardhruv021-dev",
+      "handle": "parmardhruv021-dev",
+      "url": "https://github.com/parmardhruv021-dev"
+    },
+    "tags": [
+      "macos",
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "parmardhruv021-dev/freedesk",
+    "spite_score": 7,
+    "added": "2026-10-26"
+  },
+  {
+    "slug": "chango",
+    "name": "Chango",
+    "url": "https://github.com/tiwariramesh/Chango",
+    "icon": "🔄",
+    "tagline": "Online converters give you three files, then ask for a card. Chango lives in your right-click menu and never counts.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Converting a file is basic computer work, so it shouldn't mean uploading it to someone else's server, waiting in a queue or paying past a limit.",
+      "source": "https://github.com/tiwariramesh/Chango"
+    },
+    "builder": {
+      "name": "Ramesh Tiwari",
+      "handle": "tiwariramesh",
+      "url": "https://github.com/tiwariramesh"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "tiwariramesh/Chango",
+    "spite_score": 5,
+    "added": "2026-10-26"
+  },
+  {
+    "slug": "ultimate-obd",
+    "name": "Ultimate OBD",
+    "url": "https://github.com/faseehbhatti/Ultimate-OBD",
+    "icon": "🚗",
+    "tagline": "Pro scan tools cost a fortune to tell you why the light is on. This one reads the code, clears it and charts the engine for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "An OBD application that can do for free what so many super expensive OBD devices offer.",
+      "source": "https://github.com/faseehbhatti/Ultimate-OBD"
+    },
+    "builder": {
+      "name": "faseehbhatti",
+      "handle": "faseehbhatti",
+      "url": "https://github.com/faseehbhatti"
+    },
+    "tags": [
+      "windows",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "faseehbhatti/Ultimate-OBD",
+    "spite_score": 5,
+    "added": "2026-10-26"
   }
 ]

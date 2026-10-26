@@ -1,0 +1,25 @@
+{
+  "run": "2026-10-26",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 306,
+  "triaged": 22,
+  "candidates": [],
+  "dropped": [
+    "Lavoi: maker CoIsland sells paid products and says dictation 'stays free for individuals', a business tier in waiting",
+    "Musoff: binary-only Windows exe from a day-old anonymous account, no source to check",
+    "PhotoFloor: $9.99 one-time unlock",
+    "OpenTV: optional paid tier for sync",
+    "PeerInvoice: micro-SaaS, paid",
+    "AsoBeast: hosted version at $10/mo from the same maker (open-core)",
+    "LabelLoupe: 10 free scans, then lifetime or monthly IAP",
+    "sideOS: $89.90 lifetime licence",
+    "HomeKanban: no grudge stated, just 'no subscription'",
+    "Letterboxd Pro Analytics: no grudge in the builder's words",
+    "Zilum: no grudge stated",
+    "Nullofy TV / My Kids TV: grudge is ads, not a price",
+    "Narro: grudge is bad voices and signups, not a price",
+    "Paste Buff: grudge is Raycast's memory use, not its price",
+    "billable-hours-tracker: no grudge, sells a pay-once companion",
+    "xcalidraw, Shotstash, Valence, Open Accountant, Yomu: no price grudge"
+  ]
+}
