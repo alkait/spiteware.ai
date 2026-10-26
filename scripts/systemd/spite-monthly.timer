@@ -1,0 +1,9 @@
+[Unit]
+Description=spiteware.ai monthly episode, the 1st at 09:00 Dubai
+
+[Timer]
+OnCalendar=*-*-01 09:00:00 Asia/Dubai
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -15,8 +15,10 @@ One 1920x1080 H.264 file for YouTube, about five minutes: two hosts, Vera and Gu
 the month's apps. Voices are Gemini 3.1 Flash TTS through OpenRouter (`OPENROUTER_API_KEY` in
 `.env`), about 4 cents per finished minute; every line is cached, so a re-render only pays for the
 lines that changed. Needs `firefox` and `ffmpeg`. A full render takes about five minutes.
-**Rendering is local and free to repeat. Uploading is the user's call, every time**: the morning
-run's standing exception does not cover the monthly episode.
+**Rendering is local and free to repeat. Uploading is the user's call, with one standing
+exception: `/spite monthly`, run unattended on claude-pi on the 1st by `scripts/autorun.sh monthly`,
+writes, renders, uploads publicly, adds the Published line and pushes.** Nobody watches that cut
+before it goes up, so the checks below are the only review there is.
 
 ```
 python3 scripts/upload.py episodes/2026-09.json --dry       # print what would go up, send nothing

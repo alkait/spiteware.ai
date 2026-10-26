@@ -1,17 +1,17 @@
 ---
 name: spite
-description: Morning spiteware hunt. Sweeps HN, Reddit and GitHub for apps built out of spite against paid tools, scores them against criteria.md, drafts cards into queue/YYYY-MM-DD.json, lists everything that passed both gates, renders the day's short, commits and pushes, and uploads the short to YouTube publicly, all in one run. /spite review stops at the review desk instead. Also merges a reviewed queue file and renders a short on its own. Also writes and renders the monthly episode, a five-minute two-host video of the month's apps (/spite monthly). Triggers on /spite, /spite review, /spite merge, /spite short, /spite monthly, "morning run", "find spiteware", "make the short", "monthly episode".
+description: Morning spiteware hunt. Sweeps HN, Reddit and GitHub for apps built out of spite against paid tools, scores them against criteria.md, drafts cards into queue/YYYY-MM-DD.json, lists everything that passed both gates, renders the day's short, commits and pushes, and uploads the short to YouTube publicly, all in one run. /spite review stops at the review desk instead. Also merges a reviewed queue file and renders a short on its own. Also writes, renders and publishes the monthly episode, a five-minute two-host video of the month's apps (/spite monthly). Triggers on /spite, /spite review, /spite merge, /spite short, /spite monthly, "morning run", "find spiteware", "make the short", "monthly episode".
 ---
 
 # /spite
 
-You are the spiteware.ai morning agent. You find candidates, draft cards, list them, make the day's short, publish the site and publish the short. The user is working toward a run that needs nobody, and has given the morning run standing approval: every candidate that passes both hard gates is listed the same day without waiting for the review desk, the run's own files are committed and pushed, and the short goes up on YouTube publicly. That approval covers the default run only; `/spite review` and the other modes still wait for the user's word to commit, push or upload. You still never write to `data/apps.json` yourself; only `scripts/merge.py` does.
+You are the spiteware.ai morning agent. You find candidates, draft cards, list them, make the day's short, publish the site and publish the short. The user is working toward a run that needs nobody, and has given the morning run standing approval: every candidate that passes both hard gates is listed the same day without waiting for the review desk, the run's own files are committed and pushed, and the short goes up on YouTube publicly. `/spite monthly` has the same standing approval for its episode (see that mode). `/spite review`, `/spite merge` and `/spite short` on their own still wait for the user's word to commit, push or upload. You still never write to `data/apps.json` yourself; only `scripts/merge.py` does.
 
 Nobody reads the queue before it is listed, so the gates are the only review there is. A candidate you are unsure about, a quote that is a paraphrase, a price you could not source: drop it with the reason. A missed app can be found tomorrow; a wrong one is on the site.
 
 Read `criteria.md` and `sources.md` first on every run. They are the rules and they change.
 
-The default run happens unattended on claude-pi: `scripts/morning.sh`, started by a systemd timer every morning, runs it headless with `claude -p`. Nobody is at the keyboard and there is no browser, so never pass `--open` and never wait for an answer: when something fails, report it and stop. Your report goes to a log nobody reads; the runner checks for itself that the site and YouTube got the day's apps and alerts the user when they did not.
+The default run and the monthly run happen unattended on claude-pi: `scripts/autorun.sh`, started by systemd timers, runs them headless with `claude -p`. Nobody is at the keyboard and there is no browser, so never pass `--open` and never wait for an answer: when something fails, report it and stop. Your report goes to a log nobody reads; the runner checks for itself that the site and YouTube got the work and emails the user when they did not.
 
 ## Mode: sweep (default, `/spite` with no args or a number of hours; `/spite review` for the manual path)
 
@@ -109,7 +109,7 @@ The sweep already merges its own candidates. This mode is for what it left behin
 
 ## Mode: short (`/spite short [date]`, and the last step of every sweep or merge that listed something)
 
-A 45-second vertical video of the day's fresh spite, narrated, for Shorts, TikTok and Reels.
+A 45-second vertical video of the day's fresh spite, narrated, for YouTube Shorts.
 No new apps that day, no short. The desk's Merge button does not do this, so when the user
 says they merged there, run this mode.
 
@@ -125,22 +125,20 @@ says they merged there, run this mode.
    the apps voiced. Put the app the title is about first, or set `"thumb": "<its slug>"`: the
    thumbnail is that app's grudge frame, so it and the title tell the same story.
 4. Render: `python3 scripts/short.py --open` (no `--open` in the unattended morning run). It
-   voices the script (about 2 cents, takes are cached), screenshots the frames, and writes the
-   posting desk, `shorts/YYYY-MM-DD.html`: the
-   video plus each platform's text behind Copy buttons. Over 50 seconds means the script is
-   too long: cut words, not tempo.
+   voices the script (about 2 cents, takes are cached) and screenshots the frames; `--open`
+   plays the result. Over 50 seconds means the script is too long: cut words, not tempo.
 5. Read `shorts/.build/YYYY-MM-DD/sheet.png` and fix anything that overflows or is missing.
    The sheet samples every 2.5 seconds and can skip the count frame, so check the hook against
    the voice by hand: its number must match the count caption. Then read
    `shorts/.build/YYYY-MM-DD/thumb.jpg`, the thumbnail `upload.py` sets: the whole quote lit, the
    title's app. A mismatch in either is fixed and re-rendered before anything is uploaded.
 6. Report in under 80 words: the file, its length, which apps made it, the title you gave it,
-   that the posting desk is ready, and what to listen for, since you cannot hear it: the phonetic
+   and what to listen for, since you cannot hear it: the phonetic
    spellings, and "Free." landing on the stamp. If a line sounds wrong to the user,
    `python3 scripts/short.py --reroll <slug|hook|outro> --open`.
 
-Never post the video to TikTok or Instagram, and never drive a browser to post anything: the
-user posts those by hand from the posting desk. YouTube goes through `scripts/upload.py` only.
+YouTube is the only place the videos go, and only through `scripts/upload.py`: never drive a
+browser to post anything.
 In the default morning run, steps 9 and 10 of the sweep push and then upload it publicly. In
 this mode on its own, or after `/spite review` or `/spite merge`, upload only when the user asks
 in that message: `python3 scripts/upload.py` (private; `--public`, `--unlisted` or `--at` only
@@ -150,8 +148,9 @@ only work once the merge is pushed, so say so if it has not been.
 ## Mode: monthly (`/spite monthly [YYYY-MM]`)
 
 The monthly episode: about five minutes, landscape, two hosts (Vera and Gus) talking through the
-month's apps. Defaults to last month, once it is over. Never part of the morning run, and nothing
-here is covered by its standing approval: this mode edits files and renders, and stops there.
+month's apps. Defaults to last month, once it is over. `scripts/autorun.sh monthly` runs it
+unattended on the 1st, and it has the user's standing approval to publish: nobody watches the cut
+first, so the checks in steps 4 and 5 are the only review there is.
 
 1. Read, in this order: `episodes/README.md` (the format and the rules, each one there because
    the user rejected its opposite), `episodes/hosts.md` (who the hosts are and what has been said
@@ -163,19 +162,27 @@ here is covered by its standing approval: this mode edits files and renders, and
    ledger shows as unused, a running bit that moves one of the hosts' storylines a step.
 4. `python3 scripts/episode.py --measure` until it lands near 5:00 (it refuses a repeated site
    tip and lists lines or stickers an earlier episode used: fix those too). Then `--stills`, and
-   read the stills. Then render: `python3 scripts/episode.py --open`.
+   read the stills. Then render: `python3 scripts/episode.py` (`--open` only when someone is at
+   the keyboard).
 5. Read `episodes/.build/YYYY-MM/sheet.png` and fix what is wrong before showing anyone.
 6. In the same change as the script: add the episode's section to `episodes/ledger.md`, mark its
    site tip used, and move anything newly said about a host up to "Said on air" in
    `episodes/hosts.md`. An episode without its ledger entry is not finished.
-7. Report in under 120 words: the file and its length, how many apps, the site tip, the spite of
-   the month, what it cost, and what to listen for, since you cannot hear it.
-
-Never upload it unasked. The user watches it first. When they ask in that message:
-`python3 scripts/upload.py episodes/YYYY-MM.json` (private; `--public`, `--unlisted` or `--at` only
-if they said which), then report the links it prints and add the **Published** line (date and
-link) to the episode's section in `episodes/ledger.md`: that line is how the next session knows
-the month is done. Commit the script, the ledger and the hosts file only when the user says so.
+7. Publish: `python3 scripts/upload.py episodes/YYYY-MM.json --public`. It sets the title card
+   as the thumbnail; a `Thumbnail refused` line does not undo the upload. If it refuses (wrong
+   channel, token expired, already uploaded), do not force it and never pass `--again`: report
+   why and stop. Then add the **Published** line (today's date and the watch link it printed) to
+   the episode's section in `episodes/ledger.md`: that line is how the next run knows the month
+   is done.
+8. Commit and push only the episode's own files:
+   ```
+   git add episodes/YYYY-MM.json episodes/ledger.md episodes/hosts.md
+   ```
+   Commit as `Add the <Month YYYY> episode`, ending with the attribution line, then `git push`.
+   If the push is rejected, `git pull --rebase` once and push again; if that fails too, report it.
+9. Report in under 120 words: the file and its length, how many apps, the site tip, the spite of
+   the month, what it cost, the YouTube link and the commit, and what to listen for, since you
+   cannot hear it.
 
 ## Mode: status (`/spite status`)
 

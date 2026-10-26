@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Upload a daily short to YouTube: shorts/DATE.mp4, with the posting desk's title and description.
+"""Upload a daily short to YouTube: shorts/DATE.mp4, with handoff.texts()'s title and description.
 
 Usage: python3 scripts/upload.py [shorts/DATE.json] [--public | --unlisted | --at 2026-09-20T09:00]
        python3 scripts/upload.py episodes/YYYY-MM.json [...]   # the monthly episode instead
        python3 scripts/upload.py --auth [client_secret.json]   # once: consent in the browser
 
-Private unless told otherwise. The words are handoff.texts(), the same ones the posting desk
-shows, so the desk is still the place to read them first. A vertical video under three
+Private unless told otherwise; --dry prints the words without sending. A vertical video under three
 minutes is a Short; there is nothing to set. Each upload is noted in shorts/.cache/uploaded.json
 and a second run for the same date refuses without --again.
 
@@ -17,11 +16,11 @@ YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN and YOUTUBE_CHAN
 .env; --auth writes all four. The channel is whichever one was picked on the consent screen, and
 every upload checks the token still belongs to it: a Google account can own several channels, and
 picking the wrong one there once sent a short to the wrong place. Stdlib only, like everything else here. Running this is posting: never without the
-user's word, except the default /spite morning run, which runs --public after its push is live.
+user's word, except the two unattended runs on claude-pi (scripts/autorun.sh): the daily /spite
+run uploads its short --public after its push is live, and the monthly one its episode.
 
 Given a script from episodes/, it uploads episodes/YYYY-MM.mp4 as an ordinary video, with the title,
-chapters and app links scripts/episode.py wrote to episodes/.build/YYYY-MM/description.txt. That is
-never part of the morning run: an episode goes up only when the user asks, in that message.
+chapters and app links scripts/episode.py wrote to episodes/.build/YYYY-MM/description.txt.
 """
 import argparse, datetime, http.server, json, os, pathlib, secrets, sys
 import urllib.error, urllib.parse, urllib.request

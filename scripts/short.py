@@ -3,17 +3,16 @@
 
 Usage: python3 scripts/short.py [shorts/DATE.json] [--tempo 1.05] [--reroll SEG] [--guides] [--open]
 
-Defaults to the newest script in shorts/. One 1080x1920 H.264 file that every platform
-takes. The voice comes first and sets the clock: each segment is one take from
+Defaults to the newest script in shorts/. One 1080x1920 H.264 file, a YouTube Short. The voice comes first and sets the clock: each segment is one take from
 scripts/voice.py, its cues are timed to the pauses in that take, and scripts/short.html
 is screenshotted once per cue with headless Firefox. Hard cuts and a two-frame wobble,
 no tweening: it matches the site. Needs firefox and ffmpeg; stdlib otherwise.
 
---guides draws the platform UI zones over every frame, to check the safe area.
+--guides draws the Shorts player's UI zones over every frame, to check the safe area.
 --reroll takes a segment's slug, or "hook" or "outro", and voices it again: every take is a
 fresh performance, and the rest stay cached. A contact sheet of the cut lands next to the
-build files, so an agent can look at the frames without playing the video. Every render ends
-by writing the posting desk, shorts/DATE.html (scripts/handoff.py): nothing is ever uploaded.
+build files, so an agent can look at the frames without playing the video. Nothing here
+uploads: scripts/upload.py does that.
 
 The script format and how to write one are in shorts/README.md.
 """
@@ -192,7 +191,7 @@ def main():
     ap.add_argument("--reroll", action="append", default=[], metavar="SEG",
                     help="voice this segment again: an app's slug, hook or outro")
     ap.add_argument("--guides", action="store_true", help="draw the platform UI zones on every frame")
-    ap.add_argument("--open", action="store_true", help="open the posting desk (the video and each platform's text) when done")
+    ap.add_argument("--open", action="store_true", help="open the video when done")
     a = ap.parse_args()
     guides, show, tempo = a.guides, a.open, a.tempo
     src = pathlib.Path(a.script) if a.script else max(SHORTS.glob("20*.json"))
@@ -280,13 +279,8 @@ def main():
                     "-frames:v", "1", str(sheet)], capture_output=True)
     print(f"sheet  {sheet.relative_to(ROOT)}")
     print(f"{out.relative_to(ROOT)}  {total / tempo:.1f}s  {out.stat().st_size / 1e6:.1f} MB")
-    if guides:
-        page = out
-    else:
-        page = handoff.build(script, apps)
-        print(f"desk   {page.relative_to(ROOT)}")
     if show:
-        handoff.show(page)
+        handoff.show(out)
 
 
 if __name__ == "__main__":

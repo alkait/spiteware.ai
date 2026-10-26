@@ -1,0 +1,12 @@
+[Unit]
+Description=spiteware.ai monthly episode (/spite monthly, unattended)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/Documents/code/alkait/spiteware.ai
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStartPre=/bin/mkdir -p %h/logs/spite
+ExecStart=/usr/bin/flock %h/logs/spite/.lock %h/Documents/code/alkait/spiteware.ai/scripts/autorun.sh monthly
+TimeoutStartSec=10h

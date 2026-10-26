@@ -5,22 +5,17 @@ One narration script per merge day, `shorts/YYYY-MM-DD.json`, rendered to `short
 record of what was said about whom.
 
 ```
-python3 scripts/short.py --open              # newest script -> mp4, then open its posting desk
+python3 scripts/short.py --open              # newest script -> mp4, then play it
 python3 scripts/short.py --reroll jinx       # voice one segment again, keep the rest
-python3 scripts/short.py --guides            # same cut with the platform UI zones drawn on
-python3 scripts/handoff.py --open            # rebuild just the posting desk, no render
+python3 scripts/short.py --guides            # same cut with the Shorts player's UI zones drawn on
 ```
 
-One 1080x1920 H.264 file, made for Shorts, TikTok and Reels alike. Voice: Gemini 3.1 Flash TTS,
+One 1080x1920 H.264 file, a YouTube Short. YouTube is the only place the shorts go. Voice: Gemini 3.1 Flash TTS,
 voice Aoede, through OpenRouter (`OPENROUTER_API_KEY` in `.env`), about 2 cents a short. Needs
 `firefox` and `ffmpeg`. **Rendering is local and free to repeat. Uploading is the user's call, like a
-push, with one standing exception: the default `/spite` morning run pushes its listings, waits
-for the hall of fame pages to go live, and uploads the day's short to YouTube publicly.**
-
-Every render ends by writing the **posting desk**, `shorts/YYYY-MM-DD.html` (gitignored): the
-video, the text for YouTube Shorts, TikTok and Instagram Reels behind Copy buttons, a link to
-each upload screen and the settings to tick there. TikTok and Instagram are posted by hand, by
-the user. No agent posts anything else unasked.
+push, with one standing exception: the daily `/spite` run, unattended on claude-pi, pushes its
+listings, waits for the hall of fame pages to go live, and uploads the day's short to YouTube
+publicly. No agent posts anything else unasked.**
 
 ## YouTube upload
 
@@ -37,8 +32,8 @@ from the grudge frame with the whole quote lit (the first app's, or the one the 
 custom thumbnails only from a phone-verified channel, and the Shorts feed may still choose its
 own frame; search, the channel page and embeds show this one.
 
-`scripts/upload.py` sends the mp4 through the YouTube Data API with the same title and
-description the posting desk shows, and notes the video id in `shorts/.cache/uploaded.json` so a
+`scripts/upload.py` sends the mp4 through the YouTube Data API with the title and
+description from `scripts/handoff.py` (`--dry` prints them), and notes the video id in `shorts/.cache/uploaded.json` so a
 date never goes up twice (`--again` overrides). Free: an upload is a slice of the API's daily
 quota, and one short a day is nowhere near it.
 
@@ -118,13 +113,13 @@ Setup, once. The YouTube Data API v3 is already enabled on the `spiteware` Googl
 
 - `post` is the text that goes out with the video, and the render refuses a script without
   it. `title`: 10 to 70 characters, the top app's bill against its price of nothing; it is the
-  YouTube title and the first line everywhere else. `caption`: one or two sentences, 40 to 300
+  YouTube title. `caption`: one or two sentences, 40 to 300
   characters, on what the day's apps replace. `tags`: 3 to 5 lowercase hashtags without the `#`;
   keep `freesoftware`, `indiedev` and `subscriptions`, and spend the rest on the day's apps.
   No links and no app list in either: `scripts/handoff.py` adds the apps, the builder credits
   and the hall of fame links from `data/apps.json`. Same rules as the narration: only prices and
   victims that are in `replaces`, no pronouns for builders. No @-tags: a GitHub handle is
-  somebody else's name on TikTok.
+  somebody else's name on YouTube.
 
 ## Writing one
 
