@@ -25,7 +25,7 @@ main() {
 
     git pull --ff-only || { alert "git pull failed, so nothing ran today."; return 1; }
 
-    timeout 4h claude -p "/spite" --dangerously-skip-permissions
+    timeout 4h claude -p "/spite" --dangerously-skip-permissions </dev/null
     local code=$?
     echo "=== $(date -Is) claude exited $code"
 
@@ -74,7 +74,7 @@ alert() {
     echo "=== ALERT: $msg"
     echo "$msg" >> "$HOME/logs/spite/FAILED"
     timeout 5m claude -p "Send exactly one email with the Gmail send_message tool to alkait@gmail.com, subject: spiteware morning run failed, body: $msg — Do not do anything else." \
-        --dangerously-skip-permissions --allowedTools mcp__claude_ai_Gmail__send_message \
+        --dangerously-skip-permissions --allowedTools mcp__claude_ai_Gmail__send_message </dev/null \
         || echo "=== the alert email itself failed"
 }
 
