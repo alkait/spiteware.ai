@@ -3,7 +3,7 @@
 #
 # Pulls, runs /spite headless, then checks for itself that every app the run listed is on
 # GitHub, on the live site and in a YouTube short. Silent when they are, or when nothing was
-# listed; one push notification to the user's phone when they are not. Logs go to
+# listed; one email to the user when they are not. Logs go to
 # ~/logs/spite/YYYY-MM-DD.log.
 #
 # Install (once, on claude-pi):
@@ -67,14 +67,15 @@ count() {
     python3 -c "import json,sys,datetime;d=datetime.date.today().isoformat();print(sum(a.get('added')==d for a in json.load(sys.stdin)))" 2>/dev/null || echo 0
 }
 
-# One push notification to the user's phone, through Claude Code's mobile push
+# One email to the user, through Claude's Gmail connector. (Claude Code's push notification
+# won't do: in a headless run it thinks the user is watching the terminal and skips it.)
 alert() {
     local msg="spiteware morning run $(date +%F) failed: $1 Log: ~/logs/spite/$(date +%F).log on claude-pi"
     echo "=== ALERT: $msg"
     echo "$msg" >> "$HOME/logs/spite/FAILED"
-    timeout 5m claude -p "Send the user exactly one push notification with the PushNotification tool, with this text and nothing else: $msg — Do not do anything else." \
-        --dangerously-skip-permissions --allowedTools PushNotification \
-        || echo "=== the push notification itself failed"
+    timeout 5m claude -p "Send exactly one email with the Gmail send_message tool to alkait@gmail.com, subject: spiteware morning run failed, body: $msg — Do not do anything else." \
+        --dangerously-skip-permissions --allowedTools mcp__claude_ai_Gmail__send_message \
+        || echo "=== the alert email itself failed"
 }
 
 main "$@"; exit
