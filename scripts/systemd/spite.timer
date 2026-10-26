@@ -1,0 +1,9 @@
+[Unit]
+Description=spiteware.ai morning run, daily at 07:00 Dubai
+
+[Timer]
+OnCalendar=*-*-* 07:00:00 Asia/Dubai
+Persistent=true
+
+[Install]
+WantedBy=timers.target
