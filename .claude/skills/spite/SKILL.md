@@ -164,7 +164,7 @@ first, so the checks in steps 4 and 5 are the only review there is.
    tip and lists lines or stickers an earlier episode used: fix those too). Then `--stills`, and
    read the stills. Then render: `python3 scripts/episode.py` (`--open` only when someone is at
    the keyboard).
-5. Read `episodes/.build/YYYY-MM/sheet.png` and fix what is wrong before showing anyone.
+5. Read `episodes/.build/YYYY-MM/sheet.png` and fix what is wrong before anything is uploaded.
 6. In the same change as the script: add the episode's section to `episodes/ledger.md`, mark its
    site tip used, and move anything newly said about a host up to "Said on air" in
    `episodes/hosts.md`. An episode without its ledger entry is not finished.

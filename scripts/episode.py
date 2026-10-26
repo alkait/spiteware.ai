@@ -581,7 +581,8 @@ def main():
          "-movflags", "+faststart", str(out)], capture_output=True, text=True)
     if done.returncode:
         sys.exit("ffmpeg failed:\n" + done.stderr[-1200:])
-    subprocess.run(["xattr", "-d", "com.apple.quarantine", str(out)], capture_output=True)  # macOS flags files a sandbox wrote
+    if sys.platform == "darwin":  # macOS flags files a sandbox wrote
+        subprocess.run(["xattr", "-d", "com.apple.quarantine", str(out)], capture_output=True)
 
     marks = {}
     for c in cues:
