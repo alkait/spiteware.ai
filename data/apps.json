@@ -6313,5 +6313,69 @@
     "repo": "faseehbhatti/Ultimate-OBD",
     "spite_score": 5,
     "added": "2026-10-26"
+  },
+  {
+    "slug": "mycam",
+    "name": "MyCam",
+    "url": "https://mycam.dev/",
+    "icon": "📷",
+    "tagline": "Phone-webcam apps want a subscription, an ad break or developer mode. This one wants a USB cable.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Every time I needed a better webcam for a call, the options were a paid app, an app full of ads, or something that wanted me to turn on USB debugging.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xggwrw/i_got_tired_of_phonewebcam_apps_asking_for/"
+    },
+    "builder": {
+      "name": "whoissaaif",
+      "handle": "whoissaaif",
+      "url": "https://github.com/whoissaaif"
+    },
+    "tags": [
+      "windows",
+      "privacy",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "whoissaaif/mycam",
+    "spite_score": 5,
+    "added": "2026-10-27"
+  },
+  {
+    "slug": "home-ledger",
+    "name": "Home Ledger",
+    "url": "https://github.com/camelder0-dot/home-ledger",
+    "icon": "🧾",
+    "tagline": "Quicken rents you your own checkbook by the year. This is the checkbook, and it stays yours.",
+    "replaces": {
+      "name": "Quicken",
+      "product": "Quicken",
+      "price": "",
+      "source": "https://www.quicken.com/"
+    },
+    "grudge": {
+      "quote": "A free, private, offline checkbook and personal-finance ledger — the parts of Quicken most people actually use, without the subscription.",
+      "source": "https://github.com/camelder0-dot/home-ledger"
+    },
+    "builder": {
+      "name": "camelder0-dot",
+      "handle": "camelder0-dot",
+      "url": "https://github.com/camelder0-dot"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "camelder0-dot/home-ledger",
+    "spite_score": 7,
+    "added": "2026-10-27"
   }
 ]

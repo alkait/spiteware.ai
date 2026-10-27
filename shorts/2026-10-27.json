@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-27",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Quicken rents you your own checkbook. Home Ledger is free.",
+    "caption": "Two fresh grudges: a checkbook that skips the Quicken subscription, and a phone webcam that skips the paid app, the ads and the developer mode.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "personalfinance"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 27th.", "say": "October twenty-seventh.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "home-ledger",
+     "gripe": "Your own checkbook, on a subscription.",
+     "quote": "the parts of Quicken most people actually use, without the subscription.",
+     "cues": [
+      {"cap": "A checkbook.", "step": "gripe"},
+      {"cap": "On a subscription.", "step": "gripe"},
+      {"cap": "camelder0-dot:", "say": "[matter-of-fact] Cam Elder zero dot:", "step": "quote"},
+      {"cap": "“the parts of Quicken", "say": "[sarcastic] the parts of Quicken", "step": "quote"},
+      {"cap": "most people actually use,", "step": "quote"},
+      {"cap": "without the subscription.”", "say": "without the subscription.", "step": "quote"},
+      {"cap": "So: Home Ledger. Your money, your file.", "say": "[quick] So: Home Ledger. Your money, your file.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "mycam", "score": false,
+     "gripe": "Your own phone as a webcam, for a fee.",
+     "quote": "the options were a paid app, an app full of ads, or something that wanted me to turn on USB debugging.",
+     "cues": [
+      {"cap": "The phone in your pocket.", "step": "gripe"},
+      {"cap": "As a webcam. For a fee.", "step": "gripe"},
+      {"cap": "whoissaaif:", "say": "[matter-of-fact] Who is Saif:", "step": "quote"},
+      {"cap": "“the options were a paid app,", "say": "[sarcastic] the options were a paid app,", "step": "quote"},
+      {"cap": "an app full of ads,", "step": "quote"},
+      {"cap": "or something that wanted me", "step": "quote"},
+      {"cap": "to turn on USB debugging.”", "say": "to turn on U S B debugging.", "step": "quote"},
+      {"cap": "So: MyCam. Plug in, done.", "say": "[quick] So: My Cam. Plug in, done.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

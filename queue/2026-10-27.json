@@ -1,0 +1,23 @@
+{
+  "run": "2026-10-27",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 357,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "Lavoi: pricing section, and dictation 'stays free for individuals' (dropped 2026-10-26 too)",
+    "TablePro: open-core, iCloud Sync and other extras are paid",
+    "Freedraw: needs an account, and the grudge is Excalidraw+'s one-login limit, not its price",
+    "Tabverse: 'will not need an account nor subscription' describes itself, no grudge stated",
+    "Hindsight: 'couldn't find a free option that fit' is a gap, not a grudge",
+    "iMirror (Soumya-codr): no release to install, day-old repo; an iMirror re-upload was dropped 2026-09-17",
+    "hushsub-translate: the only grudge is a comparison-table cell, no sentence to quote",
+    "3q-pdf-tool: sells the packaged Windows .exe",
+    "free-asr: rides Doubao's private speech API, not an app built against a paid tool",
+    "unleash-vg: Unleash is open source itself; no grudge stated",
+    "Inspector, OpenDownload, crescentpdf, LocalFlix, drivecrew, glotfax, Deckle: 'no subscription' in the pitch, no grudge",
+    "Valence, xcalidraw, Gostman, Tenivel, Zilum, Rewrite, TemplateBox, tellyscope, whisper.tanpreet: link-only posts, no builder words",
+    "Hob: from FrigadeHQ, a YC company",
+    "UnCode: weekend project, no grudge"
+  ]
+}
