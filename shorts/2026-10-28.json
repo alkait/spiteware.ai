@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-28",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Chess.com charges for the training. Open Chess is free.",
+    "caption": "Three fresh grudges: chess training without the membership, a video converter without the weekly subscription, and vinyl-cutter software without the cloud account.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "chess"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 28th.", "say": "October twenty-eighth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "open-chess",
+     "gripe": "Getting better at chess, behind a paywall.",
+     "quote": "On chess.com, the things that actually make you better are paid",
+     "cut": true,
+     "cues": [
+      {"cap": "Getting better at chess.", "step": "gripe"},
+      {"cap": "Behind a paywall.", "step": "gripe"},
+      {"cap": "jupiutrera:", "say": "[matter-of-fact] Joo-pee-oo-TEH-rah:", "step": "quote"},
+      {"cap": "“On chess.com, the things", "say": "[sarcastic] On chess dot com, the things", "step": "quote"},
+      {"cap": "that actually make you better are paid”", "say": "that actually make you better are paid.", "step": "quote"},
+      {"cap": "So: Open Chess. Stockfish included.", "say": "[quick] So: Open Chess. Stockfish included.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "video-audio-converter", "score": false,
+     "gripe": "Changing a file format, by the week.",
+     "quote": "Others wanted a weekly subscription just to change MP4 to MOV.",
+     "cues": [
+      {"cap": "Converting a video.", "step": "gripe"},
+      {"cap": "On a weekly plan.", "step": "gripe"},
+      {"cap": "ashrinkm:", "say": "[matter-of-fact] Ash Rink M:", "step": "quote"},
+      {"cap": "“Others wanted a weekly subscription", "say": "[sarcastic] Others wanted a weekly subscription", "step": "quote"},
+      {"cap": "just to change MP4 to MOV.”", "say": "just to change M P four to M O V.", "step": "quote"},
+      {"cap": "So: Video & Audio Converter.", "say": "[quick] So: Video and Audio Converter.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "cutcraft", "score": false,
+     "gripe": "Cutting your own vinyl, on a subscription.",
+     "quote": "Most cutting software is either locked behind a subscription and a cloud account",
+     "cut": true,
+     "cues": [
+      {"cap": "Cutting your own vinyl.", "step": "gripe"},
+      {"cap": "Subscription required.", "step": "gripe"},
+      {"cap": "DnG-Crafts:", "say": "[matter-of-fact] D and G Crafts:", "step": "quote"},
+      {"cap": "“Most cutting software is either locked", "say": "[sarcastic] Most cutting software is either locked", "step": "quote"},
+      {"cap": "behind a subscription and a cloud account”", "say": "behind a subscription and a cloud account.", "step": "quote"},
+      {"cap": "So: CutCraft. Offline.", "say": "[quick] So: Cut Craft. Offline.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

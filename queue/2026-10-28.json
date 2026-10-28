@@ -1,0 +1,20 @@
+{
+  "run": "2026-10-28",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers 429), github; last30days unavailable",
+  "raw_hits": 439,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "KawaiiMD: no build to install yet, prebuilt DMG 'soon'",
+    "rezzo: nothing to download yet, Phase 0",
+    "Clarity (unsubbed): 'free alternative to Hemingway Editor' only, no grudge sentence",
+    "Open Habit: 'replacement for HabitKit', no price grudge",
+    "GradeStudio, Photool, OddlyCleverEditor, UmbraForge: 'no subscription' in the pitch, no grudge sentence",
+    "Talkhawk: Pro plan $9/mo with a 14-day trial",
+    "Kiiwi: $4.99 one-time, 3-day trial",
+    "HealthViewer: 7-day trial, then $24",
+    "Captain's Deck: paid lifetime licence",
+    "Whytap, ChapterDesk, DocPerRow, Amni-CAD, Kompakt: no grudge stated",
+    "TablePro, Freedraw, Tabverse, 3q-pdf-tool, free-asr, UnCode, Hob, tellyscope, OpenTV: dropped 2026-10-27 or earlier, nothing new"
+  ]
+}

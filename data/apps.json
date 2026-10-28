@@ -6377,5 +6377,101 @@
     "repo": "camelder0-dot/home-ledger",
     "spite_score": 7,
     "added": "2026-10-27"
+  },
+  {
+    "slug": "open-chess",
+    "name": "Open Chess",
+    "url": "https://jupiutrera.github.io/open-chess/",
+    "icon": "♟️",
+    "tagline": "Chess.com charges for the drills that make you better. Stockfish and Lichess's puzzles were free the whole time, so here they are, minus the bill.",
+    "replaces": {
+      "name": "Chess.com",
+      "product": "Chess.com",
+      "price": "",
+      "source": "https://www.chess.com/membership"
+    },
+    "grudge": {
+      "quote": "On chess.com, the things that actually make you better are paid: unlimited game reviews, unlimited puzzles, lessons and the opening trainer.",
+      "source": "https://github.com/jupiutrera/open-chess/blob/main/README.en.md"
+    },
+    "builder": {
+      "name": "jupiutrera",
+      "handle": "jupiutrera",
+      "url": "https://github.com/jupiutrera"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "games"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "jupiutrera/open-chess",
+    "spite_score": 7,
+    "added": "2026-10-28"
+  },
+  {
+    "slug": "video-audio-converter",
+    "name": "Video & Audio Converter",
+    "url": "https://github.com/ashrinkm/video-audio-converter",
+    "icon": "🎞️",
+    "tagline": "The App Store wanted a weekly subscription to turn MP4 into MOV. FFmpeg did the work for free all along; now the button is free too.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Others wanted a weekly subscription just to change MP4 to MOV.",
+      "source": "https://github.com/ashrinkm/video-audio-converter"
+    },
+    "builder": {
+      "name": "ashrinkm",
+      "handle": "ashrinkm",
+      "url": "https://github.com/ashrinkm"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "ashrinkm/video-audio-converter",
+    "spite_score": 5,
+    "added": "2026-10-28"
+  },
+  {
+    "slug": "cutcraft",
+    "name": "CutCraft",
+    "url": "https://github.com/DnG-Crafts/CutCraft",
+    "icon": "✂️",
+    "tagline": "Cutting software rents you the right to cut your own vinyl. This one drives about 120 cutters, offline, and never asks for a card.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most cutting software is either locked behind a subscription and a cloud account, or is a dated desktop tool that does the pro features badly.",
+      "source": "https://github.com/DnG-Crafts/CutCraft"
+    },
+    "builder": {
+      "name": "DnG-Crafts",
+      "handle": "DnG-Crafts",
+      "url": "https://github.com/DnG-Crafts"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "DnG-Crafts/CutCraft",
+    "spite_score": 5,
+    "added": "2026-10-28"
   }
 ]
