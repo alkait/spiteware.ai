@@ -6473,5 +6473,130 @@
     "repo": "DnG-Crafts/CutCraft",
     "spite_score": 5,
     "added": "2026-10-28"
+  },
+  {
+    "slug": "lensprout",
+    "name": "Lensprout",
+    "url": "https://lensprout.myudak.com",
+    "icon": "🎥",
+    "tagline": "Screen Studio's auto-zoom, minus the $29 a month and the Mac. Runs in Chrome; its pricing table is all zeros.",
+    "replaces": {
+      "name": "Screen Studio Monthly",
+      "product": "Screen Studio",
+      "price": "$29/mo",
+      "source": "https://screen.studio"
+    },
+    "grudge": {
+      "quote": "i got tired of paying for screen studio so i built a free open source one that runs in chrome",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xi0uuy/i_got_tired_of_paying_for_screen_studio_so_i/"
+    },
+    "builder": {
+      "name": "Muchamad Yuda Tri Ananda",
+      "handle": "myudak",
+      "url": "https://github.com/myudak"
+    },
+    "tags": [
+      "browser-extension",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "myudak/lensprout",
+    "spite_score": 8,
+    "added": "2026-10-29"
+  },
+  {
+    "slug": "collectarr",
+    "name": "Collectarr",
+    "url": "https://collectarr.github.io/collectarr-page/",
+    "icon": "💿",
+    "tagline": "CLZ wants a separate subscription per shelf. Collectarr catalogs the vinyl, the games and the figures for nothing.",
+    "replaces": {
+      "name": "CLZ",
+      "product": "CLZ",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "However, I wasn't a fan of the recurring subscriptions, having to pay separately for different collection categories, or relying on cloud services to manage things I physically own.",
+      "source": "https://www.reddit.com/r/selfhosted/comments/1xhsis5/im_building_collectarr_a_free_opensource/"
+    },
+    "builder": {
+      "name": "SaiTatter",
+      "handle": "SaiTatter",
+      "url": "https://www.reddit.com/user/SaiTatter"
+    },
+    "tags": [
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "collectarr/collectarr-app",
+    "spite_score": 9,
+    "added": "2026-10-29"
+  },
+  {
+    "slug": "openinbox",
+    "name": "OpenInbox",
+    "url": "https://github.com/sums001/OpenInbox",
+    "icon": "📬",
+    "tagline": "Business email without the per-seat tax. Unlimited mailboxes on your own free Cloudflare account.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I refuse to pay for business email on every side project",
+      "source": "https://www.reddit.com/r/webdev/comments/1xh2m94/i_refuse_to_pay_for_business_email_on_every_side/"
+    },
+    "builder": {
+      "name": "sums001",
+      "handle": "sums001",
+      "url": "https://github.com/sums001"
+    },
+    "tags": [
+      "self-hosted",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "sums001/OpenInbox",
+    "spite_score": 5,
+    "added": "2026-10-29"
+  },
+  {
+    "slug": "cadenzato",
+    "name": "Cadenzato",
+    "url": "https://cadenzato.com",
+    "icon": "🎧",
+    "tagline": "Noisli turns the rain off after 90 minutes unless you pay $12 a month. Cadenzato synthesizes it forever, free.",
+    "replaces": {
+      "name": "Noisli Pro",
+      "product": "Noisli",
+      "price": "$12/mo",
+      "source": "https://www.noisli.com/pricing"
+    },
+    "grudge": {
+      "quote": "I got tired of ad-cluttered timers and paid sound apps, so I spent the last month building an aesthetic, 100% free study sanctuary (Cadenzato)",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xi4rnc/i_got_tired_of_adcluttered_timers_and_paid_sound/"
+    },
+    "builder": {
+      "name": "Competitive_Town5387",
+      "handle": "Competitive_Town5387",
+      "url": "https://www.reddit.com/user/Competitive_Town5387"
+    },
+    "tags": [
+      "web",
+      "productivity"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 6,
+    "added": "2026-10-29"
   }
 ]

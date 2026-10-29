@@ -1,0 +1,20 @@
+{
+  "run": "2026-10-29",
+  "swept": "hn (48h), reddit rss (r/opensource, r/macapps, r/indiehackers rate-limited), github",
+  "raw_hits": 453,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "Cloak Proxy: optional paid Personal Cloud ($25/yr) from the same maker",
+    "Espresso (Everything for macOS): paid version for €19",
+    "Natively: source-available, free only for non-commercial use, 'Premium User' tier and affiliate promo",
+    "VidSay (Loom rebuild): no grudge sentence; the page reproduces Loom's Pro $12/user pricing",
+    "Tally clone: no grudge sentence; the page reproduces Tally's Pro and Business pricing",
+    "Open Habit: 'replacement for HabitKit', no price grudge (dropped yesterday too)",
+    "Talkhawk: Pro plan $9/mo with a 14-day trial (dropped yesterday too)",
+    "rezzo, OddlyCleverDesign: already dropped yesterday, no grudge sentence",
+    "CoachCaptions: free, but no grudge sentence in the post",
+    "Unicode font and bio generator: no link in the post, victim unnamed",
+    "MacClair, fivedock-crm, ZengBeats, Afterglow, FitTrack, OpenNetworkMonitor: 'no subscription' or 'free alternative' in the description, no grudge sentence"
+  ]
+}

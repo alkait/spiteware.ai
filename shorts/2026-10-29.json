@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-29",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 1,
+  "post": {
+    "title": "Screen Studio wants $29 a month. Lensprout is free.",
+    "caption": "Four fresh grudges: click-to-zoom screen recording without the monthly bill, a collection catalog without a subscription per shelf, background rain without a meter, and business email without the per-seat fee.",
+    "tags": [
+      "freesoftware",
+      "indiedev",
+      "subscriptions",
+      "opensource",
+      "screenrecording"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "October 29th.",
+          "say": "October twenty-ninth.",
+          "step": "date"
+        },
+        {
+          "cap": "Four new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "lensprout",
+      "quote": "i got tired of paying for screen studio",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Screen Studio wants $29 a month",
+          "say": "Screen Studio wants twenty-nine dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "to zoom in where you click.",
+          "step": "badge"
+        },
+        {
+          "cap": "Muchamad Yuda Tri Ananda:",
+          "say": "[matter-of-fact] Moo-HAH-mad YOO-dah Tree Ah-NAHN-dah:",
+          "step": "quote"
+        },
+        {
+          "cap": "“i got tired of paying",
+          "say": "[sarcastic] I got tired of paying",
+          "step": "quote"
+        },
+        {
+          "cap": "for screen studio”",
+          "say": "for Screen Studio.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Lensprout. In Chrome.",
+          "say": "[quick] So: Lens-sprout. In Chrome.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "collectarr",
+      "gripe": "A catalog of your own records, rented by the shelf.",
+      "quote": "However, I wasn't a fan of the recurring subscriptions",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Cataloging your own records.",
+          "step": "gripe"
+        },
+        {
+          "cap": "Rented by the shelf.",
+          "step": "gripe"
+        },
+        {
+          "cap": "SaiTatter:",
+          "say": "[matter-of-fact] Sigh Tatter:",
+          "step": "quote"
+        },
+        {
+          "cap": "“However, I wasn't a fan",
+          "say": "[sarcastic] However, I wasn't a fan",
+          "step": "quote"
+        },
+        {
+          "cap": "of the recurring subscriptions”",
+          "step": "quote",
+          "say": "of the recurring subscriptions."
+        },
+        {
+          "cap": "So: Collectarr. Every shelf.",
+          "say": "[quick] So: Collect-ARR. Every shelf.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "cadenzato",
+      "quote": "I got tired of ad-cluttered timers and paid sound apps",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Noisli wants $12 a month",
+          "say": "Noisli wants twelve dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "for background rain.",
+          "step": "badge"
+        },
+        {
+          "cap": "Competitive_Town5387:",
+          "say": "[matter-of-fact] Competitive Town fifty-three eighty-seven:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I got tired of ad-cluttered timers",
+          "say": "[sarcastic] I got tired of ad-cluttered timers",
+          "step": "quote"
+        },
+        {
+          "cap": "and paid sound apps”",
+          "say": "and paid sound apps.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Cadenzato. Endless rain.",
+          "say": "[quick] So: Kah-den-TSAH-toe. Endless rain.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "Plus one more",
+          "say": "[upbeat] Plus one more,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}
