@@ -1,0 +1,20 @@
+{
+  "run": "2026-10-30",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited), github",
+  "raw_hits": 423,
+  "triaged": 16,
+  "candidates": [],
+  "dropped": [
+    "Offline AI video caption & voiceover studio (r/SideProject): grudge in the title ('$30/mo for cloud credits'), but Reddit rate-limited and the post links only a v.redd.it demo, so no app to verify",
+    "fio (emf187): grudge in the repo description, but no README, no site, an AI Studio APK in a day-old repo; could not verify what it is or whether it needs a Gemini key",
+    "BurpDormitory: empty repo",
+    "listen (unsubbed): 'free alternative to Speechify' only, no grudge sentence (Clarity from the same org dropped on 10-28 for the same reason)",
+    "Grip (Bestboy): no grudge sentence; a company product with link hosting and testimonials",
+    "lg-hue-sync: 'like the paid Hue Sync TV app', 'no subscription' in the pitch, no grudge sentence",
+    "freelance-invoice-cli: same maker sells a $15 Freelancer Starter Kit",
+    "InputConfig: comparison table lists paid rivals, no grudge sentence",
+    "RimestDB: 7-day free trial",
+    "LightEditor, Vampire, projection-mapping, OpenTerminal (swasthik-s), silizium.gg: 'no subscription' or 'free alternative' in the description, no grudge sentence",
+    "Letterblade, Ballast, Overheard, Curate, MiniToolDesk, SMS split-expenses app: free, but no grudge sentence"
+  ]
+}

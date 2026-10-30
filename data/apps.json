@@ -6598,5 +6598,68 @@
     "repo": "",
     "spite_score": 6,
     "added": "2026-10-29"
+  },
+  {
+    "slug": "dynamicbar",
+    "name": "DynamicBar",
+    "url": "https://kag1o.github.io/DynamicBar/",
+    "icon": "🏝️",
+    "tagline": "Notch apps charge rent on the black rectangle Apple already gave you. DynamicBar moves in for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I got tired of paying for notch apps, so I made a free Dynamic Island for the Mac",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xj23mr/i_got_tired_of_paying_for_notch_apps_so_i_made_a/"
+    },
+    "builder": {
+      "name": "KAG1O",
+      "handle": "KAG1O",
+      "url": "https://github.com/KAG1O"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "KAG1O/DynamicBar",
+    "spite_score": 5,
+    "added": "2026-10-30"
+  },
+  {
+    "slug": "free-bike-workout",
+    "name": "Free Bike Workout",
+    "url": "https://freebikeworkout.com/",
+    "icon": "🚴",
+    "tagline": "You already paid for the smart trainer. The riding game wants a subscription on top. This sets the resistance from your browser for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I didn’t want to subscribe to a full blown game.",
+      "source": "https://news.ycombinator.com/item?id=50289659"
+    },
+    "builder": {
+      "name": "ruroma",
+      "handle": "ruroma",
+      "url": "https://news.ycombinator.com/user?id=ruroma"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "health"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-10-30"
   }
 ]

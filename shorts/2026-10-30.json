@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-30",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Notch apps want rent. DynamicBar is free.",
+    "caption": "Two fresh grudges: a Dynamic Island for the Mac notch without paying for a notch app, and smart-trainer workouts in the browser without subscribing to a riding game.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "macos", "cycling"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 30th.", "say": "October thirtieth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "dynamicbar", "score": false,
+     "gripe": "Paying rent on the notch Apple already gave you.",
+     "quote": "I got tired of paying for notch apps", "cut": true,
+     "cues": [
+      {"cap": "The notch is free.", "step": "gripe"},
+      {"cap": "The apps that fill it aren't.", "say": "The apps that fill it? Aren't.", "step": "gripe"},
+      {"cap": "KAG1O:", "say": "[matter-of-fact] K. A. G. one O:", "step": "quote"},
+      {"cap": "“I got tired of paying", "say": "[sarcastic] I got tired of paying", "step": "quote"},
+      {"cap": "for notch apps”", "say": "for notch apps.", "step": "quote"},
+      {"cap": "So: DynamicBar. An island.", "say": "[quick] So: Dynamic Bar. An island.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "free-bike-workout", "score": false,
+     "gripe": "A subscription on top of the trainer you already bought.",
+     "quote": "I didn’t want to subscribe to a full blown game.",
+     "cues": [
+      {"cap": "You bought the smart trainer.", "step": "gripe"},
+      {"cap": "Now subscribe to ride it.", "step": "gripe"},
+      {"cap": "ruroma:", "say": "[matter-of-fact] roo-ROH-mah:", "step": "quote"},
+      {"cap": "“I didn’t want to subscribe", "say": "[sarcastic] I didn't want to subscribe", "step": "quote"},
+      {"cap": "to a full blown game.”", "say": "to a full blown game.", "step": "quote"},
+      {"cap": "So: Free Bike Workout.", "say": "[quick] So: Free Bike Workout.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
