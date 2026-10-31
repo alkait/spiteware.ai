@@ -1,0 +1,23 @@
+{
+  "run": "2026-10-31",
+  "swept": "hn (48h), reddit r/SideProject r/macapps r/ClaudeAI (r/selfhosted, r/webdev, r/vibecoding, r/indiehackers returned 429), github",
+  "raw_hits": 410,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "Sequence Studio: strong grudge, but the README says ready-made builds are paid from the first stable release",
+    "InvoicingPro: free plan plus $49 Pro",
+    "KernelCash: $9.99/mo with a card-required trial",
+    "ClipStack: $12 after a 14-day trial",
+    "Seqora: Pro at $5.99/mo",
+    "Startica: grudge is real, but it needs a Claude or OpenAI API key with no free tier",
+    "nosub-studios: needs a paid Kie.ai key, no grudge sentence",
+    "Tossit: TestFlight beta only, no site, cannot confirm it stays free",
+    "ScreenMerge: 'free alternative to BetterDisplay Pro' only, no grudge sentence",
+    "GoodSort PDF, Nova Download Manager, voiceobe, Turbo, Shinybox, InputConfig, CoreEQ, gplatch: free, but no grudge sentence",
+    "serenix: README is an unedited Claude Code boilerplate; Online-VTT: a one-line README; neither verifiable",
+    "trrrst-watch: complaint is ads and tracking in a free app, nothing paid",
+    "Tellyscope, Floodtide, Letterblade, Grip, freelance-invoice-cli, MiniToolDesk: already seen in an earlier queue",
+    "Pauzenna, Mock Magic, FluxTime, Logfolio, alt-tabr, SortSage, Polido, Unfriction: paid tier or paid app"
+  ]
+}

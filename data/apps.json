@@ -6661,5 +6661,99 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-10-30"
+  },
+  {
+    "slug": "lindowin",
+    "name": "lindowin",
+    "url": "https://github.com/alozdev/lindowin",
+    "icon": "🐳",
+    "tagline": "Docker Desktop waits until your company is big enough, then bills $24 a seat. lindowin runs the same docker commands on Windows for $0, with no GUI and no invoice.",
+    "replaces": {
+      "name": "Docker Business",
+      "product": "Docker Desktop",
+      "price": "$24/user/mo",
+      "source": "https://www.docker.com/pricing/"
+    },
+    "grudge": {
+      "quote": "Docker Desktop needs a paid subscription for companies with more than 250 employees or more than $10M in revenue.",
+      "source": "https://github.com/alozdev/lindowin"
+    },
+    "builder": {
+      "name": "Alejandro Lozano",
+      "handle": "alozdev",
+      "url": "https://github.com/alozdev"
+    },
+    "tags": [
+      "windows",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "alozdev/lindowin",
+    "spite_score": 8,
+    "added": "2026-10-31"
+  },
+  {
+    "slug": "zeroai-video",
+    "name": "ZeroAI-Video",
+    "url": "https://github.com/jasiritech/ZeroAI-Video",
+    "icon": "🎬",
+    "tagline": "Runway bills $35 a month for AI video. ZeroAI-Video cuts one from Wikipedia, Wikimedia Commons and FFmpeg for nothing, and no GPU was charged in the making of it.",
+    "replaces": {
+      "name": "Runway Pro",
+      "product": "Runway",
+      "price": "$35/mo",
+      "source": "https://runwayml.com/pricing"
+    },
+    "grudge": {
+      "quote": "Most automated video tools today force you into expensive subscriptions ($30–$100/mo) and proprietary cloud APIs (OpenAI, Runway, Pika, Midjourney) that take minutes to render a single short clip.",
+      "source": "https://github.com/jasiritech/ZeroAI-Video"
+    },
+    "builder": {
+      "name": "Jasiri Tech",
+      "handle": "jasiritech",
+      "url": "https://github.com/jasiritech"
+    },
+    "tags": [
+      "desktop",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "jasiritech/ZeroAI-Video",
+    "spite_score": 8,
+    "added": "2026-10-31"
+  },
+  {
+    "slug": "freecap",
+    "name": "freecap",
+    "url": "https://sayemnyc.github.io/freecap/",
+    "icon": "🎥",
+    "tagline": "Recording your own screen somehow turned into a subscription. freecap is one HTML page that does it in the browser, uploads nothing and hands you the file for $0.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Screen recording shouldn't need a subscription.",
+      "source": "https://github.com/Sayemnyc/freecap"
+    },
+    "builder": {
+      "name": "Sayem Islam",
+      "handle": "Sayemnyc",
+      "url": "https://github.com/Sayemnyc"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Sayemnyc/freecap",
+    "spite_score": 5,
+    "added": "2026-10-31"
   }
 ]

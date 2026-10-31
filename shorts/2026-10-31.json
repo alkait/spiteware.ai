@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-31",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Docker Desktop bills $24 a seat. lindowin is free.",
+    "caption": "Three fresh grudges: Docker on Windows without the Docker Desktop bill, video without a Runway plan, and screen recording that never asks for a subscription.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "docker", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "October 31st.", "say": "October thirty-first.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "lindowin",
+     "quote": "Docker Desktop needs a paid subscription for companies with more than 250 employees", "cut": true,
+     "cues": [
+      {"cap": "Docker Business: $24 a seat,", "say": "Docker Business: twenty-four dollars a seat,", "step": "badge"},
+      {"cap": "every month.", "step": "badge"},
+      {"cap": "Alejandro Lozano:", "say": "[matter-of-fact] Alejandro Lozano:", "step": "quote"},
+      {"cap": "“Docker Desktop needs a paid subscription", "say": "[sarcastic] Docker Desktop needs a paid subscription", "step": "quote"},
+      {"cap": "for companies with more than 250 employees”", "say": "for companies with more than two hundred fifty employees.", "step": "quote"},
+      {"cap": "So: lindowin. No GUI.", "say": "[quick] So: Lin-doh-win. No G U I.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "zeroai-video",
+     "quote": "Most automated video tools today force you into expensive subscriptions", "cut": true,
+     "cues": [
+      {"cap": "Runway Pro: $35 a month.", "say": "Runway Pro: thirty-five dollars a month.", "step": "badge"},
+      {"cap": "Jasiri Tech:", "say": "[matter-of-fact] jah-SEE-ree Tech:", "step": "quote"},
+      {"cap": "“Most automated video tools today", "say": "[sarcastic] Most automated video tools today", "step": "quote"},
+      {"cap": "force you into expensive subscriptions”", "say": "force you into expensive subscriptions.", "step": "quote"},
+      {"cap": "So: ZeroAI-Video. No GPU.", "say": "[quick] So: Zero A I Video. No G P U.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "freecap", "score": false,
+     "gripe": "A monthly fee to film your own screen.",
+     "quote": "Screen recording shouldn't need a subscription.",
+     "cues": [
+      {"cap": "A monthly fee", "step": "gripe"},
+      {"cap": "to film your own screen.", "step": "gripe"},
+      {"cap": "Sayem Islam:", "say": "[matter-of-fact] SAH-yem Islam:", "step": "quote"},
+      {"cap": "“Screen recording shouldn't need a subscription.”", "say": "[sarcastic] Screen recording shouldn't need a subscription.", "step": "quote"},
+      {"cap": "So: freecap. One page.", "say": "[quick] So: Free Cap. One page.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
