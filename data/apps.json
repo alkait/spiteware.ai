@@ -6755,5 +6755,197 @@
     "repo": "Sayemnyc/freecap",
     "spite_score": 5,
     "added": "2026-10-31"
+  },
+  {
+    "slug": "listune",
+    "name": "Listune",
+    "url": "https://github.com/Suleman-Elahi/Listune",
+    "icon": "🎧",
+    "tagline": "Spotify rationed the free tier to six skips an hour, so Listune plays the MP3s you already own, from your disk, S3 or Google Drive. Skips: unlimited.",
+    "replaces": {
+      "name": "Spotify Premium Individual",
+      "product": "Spotify",
+      "price": "$12.99/mo",
+      "source": "https://www.spotify.com/us/premium/"
+    },
+    "grudge": {
+      "quote": "In a d*ck move Spotify decided to impose restrcitions in their free version that they have for the rest of the world: 6 skips per hour, no add to queue, only shuffly playback and tons of annoying ads (earlier it was 1 ad per 30 mins).",
+      "source": "https://news.ycombinator.com/item?id=50316793"
+    },
+    "builder": {
+      "name": "Suleman",
+      "handle": "Suleman-Elahi",
+      "url": "https://github.com/Suleman-Elahi"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Suleman-Elahi/Listune",
+    "spite_score": 10,
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "unsubbed-script",
+    "name": "Unsubbed Script",
+    "url": "https://unsubbed.github.io/script",
+    "icon": "🎬",
+    "tagline": "Final Draft Suite bills $16.99 a month to put a slugline in the right place. Unsubbed Script does industry page format in a browser tab, reads your .fdx and charges nothing.",
+    "replaces": {
+      "name": "Final Draft Suite",
+      "product": "Final Draft",
+      "price": "$16.99/mo",
+      "source": "https://www.finaldraft.com/products/final-draft/"
+    },
+    "grudge": {
+      "quote": "Subscriptions keep rising for tools people use a few times a month.",
+      "source": "https://unsubbed.org/about"
+    },
+    "builder": {
+      "name": "Zabir Mahmud",
+      "handle": "unsubbed",
+      "url": "https://github.com/unsubbed"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "unsubbed/script",
+    "spite_score": 10,
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "screenshot-x",
+    "name": "Screenshot X",
+    "url": "https://github.com/rochakagrawal/ScreenshotX",
+    "icon": "📸",
+    "tagline": "CleanShot X costs $35, and that buys one year of updates. Screenshot X keeps the floating previews, pins and scrolling capture, then drops the invoice.",
+    "replaces": {
+      "name": "CleanShot Basic",
+      "product": "CleanShot X",
+      "price": "$35 once",
+      "source": "https://cleanshot.com/pricing"
+    },
+    "grudge": {
+      "quote": "CleanShot X is excellent and paid.",
+      "source": "https://github.com/rochakagrawal/ScreenshotX"
+    },
+    "builder": {
+      "name": "Rochak Agrawal",
+      "handle": "rochakagrawal",
+      "url": "https://github.com/rochakagrawal"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "rochakagrawal/ScreenshotX",
+    "spite_score": 8,
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "healthsync",
+    "name": "HealthSync",
+    "url": "https://github.com/HanSur94/health-sync-ios",
+    "icon": "🫀",
+    "tagline": "MetricBridge charges $24.99 to write your own Apple Health data to a folder. HealthSync does the same job in about 700 lines of Swift, for the price of building it.",
+    "replaces": {
+      "name": "MetricBridge",
+      "product": "MetricBridge",
+      "price": "$24.99 once",
+      "source": "https://www.healthexport.dev"
+    },
+    "grudge": {
+      "quote": "The paid alternative was MetricBridge at 24.99 EUR.",
+      "source": "https://github.com/HanSur94/health-sync-ios"
+    },
+    "builder": {
+      "name": "Hannes Suhr",
+      "handle": "HanSur94",
+      "url": "https://github.com/HanSur94"
+    },
+    "tags": [
+      "ios",
+      "local-first",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "HanSur94/health-sync-ios",
+    "spite_score": 8,
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "crestr",
+    "name": "Crestr",
+    "url": "https://app.crestr.co.uk",
+    "icon": "🥾",
+    "tagline": "AllTrails and Komoot want a subscription before your own route reaches your own watch. Crestr plans UK and Ireland hikes and exports the GPX for $0.",
+    "replaces": {
+      "name": "AllTrails+",
+      "product": "AllTrails",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Growing up without much disposable income, I couldn't afford the subscriptions required by platforms like AllTrails and Komoot to export GPX routes to my watch.",
+      "source": "https://www.reddit.com/r/opensource/comments/1xkmc4m/i_made_a_free_hiking_route_planner_for_the_uk/"
+    },
+    "builder": {
+      "name": "Abdulrahman Sultan",
+      "handle": "abdlfc11",
+      "url": "https://github.com/abdlfc11"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "travel"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "abdlfc11/Crestr-Hiking-App",
+    "spite_score": 7,
+    "added": "2026-11-01"
+  },
+  {
+    "slug": "stay-steady",
+    "name": "Stay Steady",
+    "url": "https://dataconsultingservices.net/apps/staysteady/",
+    "icon": "🪙",
+    "tagline": "YNAB charges $14.99 a month to tell you where the money went. Stay Steady reads your bank's own export file on your device, and that $14.99 stays in the budget.",
+    "replaces": {
+      "name": "YNAB",
+      "product": "YNAB",
+      "price": "$14.99/mo",
+      "source": "https://www.ynab.com/pricing"
+    },
+    "grudge": {
+      "quote": "Most budgeting apps want your bank login, handed to their own aggregator, or a monthly subscription, and most are built around American banks.",
+      "source": "https://www.reddit.com/r/macapps/comments/1xj9j3v/stay_steady_23_update_fetch_your_transactions/"
+    },
+    "builder": {
+      "name": "Data Consulting Services",
+      "handle": "No-Land5964",
+      "url": "https://www.reddit.com/user/No-Land5964"
+    },
+    "tags": [
+      "macos",
+      "privacy",
+      "finance"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": null,
+    "spite_score": 6,
+    "added": "2026-11-01"
   }
 ]

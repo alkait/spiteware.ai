@@ -1,0 +1,33 @@
+{
+  "run": "2026-11-01",
+  "swept": "hn (48h), reddit r/SideProject r/macapps r/ClaudeAI r/opensource (r/selfhosted, r/webdev, r/vibecoding, r/indiehackers returned 429), github",
+  "raw_hits": 325,
+  "triaged": 30,
+  "candidates": [],
+  "dropped": [
+    "PagePerfect: public repo is README and docs only (closed APK, no source), and the site's '0 network calls' contradicts a README that declares INTERNET",
+    "ToolsBeam: grudge is real but the site says goodbye to ad-ridden websites while running AdSense",
+    "InvoicingPro: $49 Pro tier on its own site",
+    "Floodtide: paid, $14.99 once after a 14-day trial",
+    "alt-tabr: paid, $9",
+    "Pauzenna: optional Pro tier",
+    "Papasito TV: monthly in-app support purchases, and the grudge is a shutdown, not a price",
+    "HoldMyTrack: post truncated, thread unreachable (Reddit 403), no verifiable grudge sentence",
+    "Oriel: thread unreachable, no grudge sentence on the site",
+    "Awakr: feature table only, no sentence saying why it was built instead of paying",
+    "MacUp: says subscriptions don't help, never says why it exists; no grudge sentence",
+    "Ghostman: grudge is RAM and forced accounts, not price",
+    "Huntsman: speed pitch against Firecrawl, no price grudge",
+    "CoreEQ: motive is avoiding a virtual audio driver; eqMac Pro only appears in the comparison",
+    "Turbo: motive is a disappointing Siri launcher, not a price",
+    "Reoo: 'free alternative to Photopea' only, no grudge sentence",
+    "SheetCraft: motive is cloud accounts and bloat, not price",
+    "OrbitDrop: no grudge",
+    "TRRRST Watch: reacts to an ad-filled free companion app, no paid tool",
+    "OpenFlow: no README, 'no subscriptions' in the description is all there is",
+    "my-start-page: empty repo",
+    "Hushkey: no price grudge",
+    "Tinycap: 'why I built it' post unreadable (JS only), no grudge sentence found",
+    "forge-agent, spotify-toolkit: throwaway accounts with spam-shaped repos, not verified"
+  ]
+}

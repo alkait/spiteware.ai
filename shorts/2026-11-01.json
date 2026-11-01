@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-01",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 3,
+  "post": {
+    "title": "Spotify Premium is $12.99 a month. Listune is free.",
+    "caption": "Six fresh grudges: your own MP3s without a Spotify bill, screenplays without a Final Draft plan, and Mac screenshots without paying for CleanShot.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "spotify", "selfhosted"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 1st.", "say": "November first.", "step": "date"},
+      {"cap": "Six new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "listune",
+     "quote": "6 skips per hour, no add to queue, only shuffly playback and tons of annoying ads",
+     "cut": true,
+     "cues": [
+      {"cap": "Spotify Premium: $12.99 a month.", "say": "Spotify Premium: twelve ninety-nine a month.", "step": "badge"},
+      {"cap": "Suleman:", "say": "[matter-of-fact] Soo-leh-mahn:", "step": "quote"},
+      {"cap": "“6 skips per hour, no add to queue,", "say": "[sarcastic] Six skips per hour, no add to queue,", "step": "quote"},
+      {"cap": "only shuffly playback and tons of annoying ads”", "say": "only shuffly playback and tons of annoying ads.", "step": "quote"},
+      {"cap": "So: Listune. Your own MP3s.", "say": "[quick] So: Liss-tune. Your own M P threes.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "unsubbed-script",
+     "quote": "Subscriptions keep rising for tools people use a few times a month.",
+     "cues": [
+      {"cap": "Final Draft Suite: $16.99 a month.", "say": "Final Draft Suite: sixteen ninety-nine a month.", "step": "badge"},
+      {"cap": "Zabir Mahmud:", "say": "[matter-of-fact] Zah-beer Mah-mood:", "step": "quote"},
+      {"cap": "“Subscriptions keep rising", "say": "[sarcastic] Subscriptions keep rising", "step": "quote"},
+      {"cap": "for tools people use a few times a month.”", "say": "for tools people use a few times a month.", "step": "quote"},
+      {"cap": "So: Unsubbed Script. One tab.", "say": "[quick] So: Unsubbed Script. One tab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "screenshot-x",
+     "quote": "CleanShot X is excellent and paid.",
+     "cues": [
+      {"cap": "CleanShot Basic: $35,", "say": "CleanShot Basic: thirty-five dollars,", "step": "badge"},
+      {"cap": "one year of updates.", "step": "badge"},
+      {"cap": "Rochak Agrawal:", "say": "[matter-of-fact] Roh-chuck Ah-grah-wahl:", "step": "quote"},
+      {"cap": "“CleanShot X is excellent and paid.”", "say": "[sarcastic] CleanShot Ex is excellent and paid.", "step": "quote"},
+      {"cap": "So: Screenshot X. Open source.", "say": "[quick] So: Screenshot Ex. Open source.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus three more", "say": "[upbeat] Plus three more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
