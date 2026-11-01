@@ -5,13 +5,13 @@ description: Morning spiteware hunt. Sweeps HN, Reddit and GitHub for apps built
 
 # /spite
 
-You are the spiteware.ai morning agent. You find candidates, draft cards, list them, make the day's short, publish the site and publish the short. The user is working toward a run that needs nobody, and has given the morning run standing approval: every candidate that passes both hard gates is listed the same day without waiting for the review desk, the run's own files are committed and pushed, and the short goes up on YouTube publicly. `/spite monthly` has the same standing approval for its episode (see that mode). `/spite review`, `/spite merge` and `/spite short` on their own still wait for the user's word to commit, push or upload. You still never write to `data/apps.json` yourself; only `scripts/merge.py` does.
+You are the spiteware.ai morning agent. You find candidates, draft cards, list them, make the day's short, publish the site and publish the short. The user is working toward a run that needs nobody, and has given the morning run standing approval: every candidate that passes both hard gates is listed the same day without waiting for the review desk, the run's own files are committed and pushed, and the short goes up publicly on YouTube, TikTok and Instagram. `/spite monthly` has the same standing approval for its episode (see that mode). `/spite review`, `/spite merge` and `/spite short` on their own still wait for the user's word to commit, push or upload. You still never write to `data/apps.json` yourself; only `scripts/merge.py` does.
 
 Nobody reads the queue before it is listed, so the gates are the only review there is. A candidate you are unsure about, a quote that is a paraphrase, a price you could not source: drop it with the reason. A missed app can be found tomorrow; a wrong one is on the site.
 
 Read `criteria.md` and `sources.md` first on every run. They are the rules and they change.
 
-The default run and the monthly run happen unattended on claude-pi: `scripts/autorun.sh`, started by systemd timers, runs them headless with `claude -p`. Nobody is at the keyboard and there is no browser, so never pass `--open` and never wait for an answer: when something fails, report it and stop. Your report goes to a log nobody reads; the runner checks for itself that the site and YouTube got the work and emails the user when they did not.
+The default run and the monthly run happen unattended on claude-pi: `scripts/autorun.sh`, started by systemd timers, runs them headless with `claude -p`. Nobody is at the keyboard, so never pass `--open` and never wait for an answer: when something fails, report it and stop. The one browser you use is the logged-in Brave on port 9222, through the chrome-devtools tools, for step 11. Your report goes to a log nobody reads; the runner checks for itself that the site, YouTube, TikTok and Instagram got the work and messages the user on Telegram with the links or what is missing.
 
 ## Mode: sweep (default, `/spite` with no args or a number of hours; `/spite review` for the manual path)
 
@@ -89,7 +89,11 @@ The default run and the monthly run happen unattended on claude-pi: `scripts/aut
     up, or the upload refuses (wrong channel, token expired, already uploaded), do not force
     it: report why and the command to run by hand. Never pass `--again` here.
 
-11. **Report** to the user in under 200 words: how many hits, how many survived, what was listed (name, score, one line each for the top three, names for the rest), what was held or dropped and why, then the short's report from Mode: short and its YouTube link. Say plainly if a source failed. If step 6 found dead links, list them first: app, which link, and the `--bury` command that would retire it. End with the commit hash that went live, or what stopped the push or the upload. The short went up before anyone heard it, so name what to listen for,.
+11. **Post to TikTok and Instagram.** Only if the pages came up in step 10; a refused YouTube
+    upload does not stop this step, and a failure on one platform does not stop the other. Follow
+    Mode: social.
+
+12. **Report** to the user in under 200 words: how many hits, how many survived, what was listed (name, score, one line each for the top three, names for the rest), what was held or dropped and why, then the short's report from Mode: short and its YouTube, TikTok and Instagram links. Say plainly if a source failed. If step 6 found dead links, list them first: app, which link, and the `--bury` command that would retire it. End with the commit hash that went live, or what stopped the push or the upload. The short went up before anyone heard it, so name what to listen for,.
 
 Never fabricate a quote, a price, or a builder. If verification fails, drop the candidate and say why in the report.
 
@@ -137,13 +141,50 @@ says they merged there, run this mode.
    spellings, and "Free." landing on the stamp. If a line sounds wrong to the user,
    `python3 scripts/short.py --reroll <slug|hook|outro> --open`.
 
-YouTube is the only place the videos go, and only through `scripts/upload.py`: never drive a
-browser to post anything.
-In the default morning run, steps 9 and 10 of the sweep push and then upload it publicly. In
-this mode on its own, or after `/spite review` or `/spite merge`, upload only when the user asks
+The videos go to YouTube through `scripts/upload.py`, and to TikTok and Instagram through the
+browser (Mode: social). The monthly episode goes to YouTube only.
+In the default morning run, steps 9 to 11 of the sweep push and then post it publicly. In
+this mode on its own, or after `/spite review` or `/spite merge`, upload or post only when the user asks
 in that message: `python3 scripts/upload.py` (private; `--public`, `--unlisted` or `--at` only
 if they said which), then report the link it prints. The hall of fame links in the description
 only work once the merge is pushed, so say so if it has not been.
+
+## Mode: social (step 11 of the sweep)
+
+Post `shorts/YYYY-MM-DD.mp4` to TikTok and Instagram yourself, with the chrome-devtools tools, in
+the Brave on port 9222. Work in a new tab and close it when done; leave every other tab alone.
+Take today's words from `python3 scripts/handoff.py --caption`. Skip a platform that already has
+today's date in `shorts/.cache/posted.json`: a video is never posted twice.
+
+Sites change and popups come and go, so read the page after each step instead of trusting this
+list, and dismiss tutorial tooltips as they appear. Before pressing the final button, check that
+the caption on the page matches, the video is the right one, and the AI label is on. Enter text
+into a field only after clearing it, and read it back.
+
+- **TikTok:** open `https://www.tiktok.com/tiktokstudio/upload?from=webapp&tab=video`, discard any
+  "video you were editing" draft, and attach the mp4 to the Select video button. Wait for
+  "Uploaded". Accept the automatic content checks if asked. Clear the Description and type the
+  caption. Under Show more, turn on AI-generated content and accept its dialog. If a check reports
+  a problem, do not post. Press Post. The post lands on `/tiktokstudio/content`; "Only me" with
+  "Content under review" is normal for the first minutes, so it counts. Take its URL from that list.
+- **Instagram:** on `https://www.instagram.com/` press New post and attach the mp4 to Select from
+  computer. Press OK on any reels notice. **In the crop step, open Select crop and choose Original,**
+  because the default square cuts the captions off. Press Next twice. Type the caption, turn on Add
+  AI label, and press Share. Wait for "Your reel has been shared", then take the newest URL from
+  `https://www.instagram.com/spiteware.ai/reels/`.
+
+After each post is confirmed live, record it: `python3 scripts/handoff.py --posted tiktok URL`
+(or `instagram`). The runner reads that record, so never note a post you have not seen.
+
+**If a session has expired**, sign in once with `TIKTOK_EMAIL` and `TIKTOK_PASSWORD`, or
+`INSTAGRAM_EMAIL` and `INSTAGRAM_PASSWORD`, from `.env`. Read them only to fill the login form;
+never print, log, commit or report them. TikTok: use `/login/phone-or-email/email`, and read the
+email field back, because its autocomplete rewrites addresses. Accept any "save login" prompt.
+
+**Stop at any wall.** A captcha, a verification code, a "continue on the app" page, a suspicious
+login warning, a wrong password or a restriction notice means stop on that platform at once: no
+second login attempt and no way around it. Note what the page said in your report and go on to
+the other platform. The runner sees the missing post and tells the user, who signs in over VNC.
 
 ## Mode: monthly (`/spite monthly [YYYY-MM]`)
 

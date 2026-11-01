@@ -2,11 +2,13 @@
 # The unattended runs on claude-pi, started by the timers in scripts/systemd/:
 #
 #   autorun.sh daily     07:00 every day: /spite, then checks that every app it listed is on
-#                        GitHub, on the live site and in a YouTube short.
+#                        GitHub, on the live site and in a short on YouTube, TikTok and Instagram.
 #   autorun.sh monthly   the 1st at 09:00: /spite monthly for last month, then checks that the
 #                        episode is on YouTube and its script and Published line are on GitHub.
 #
-# Silent when everything landed (or the day listed nothing); one email to the user when not.
+# Each run sends the user one Telegram message either way: the links when everything landed,
+# what is missing when not.
+# (TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in .env.)
 # Logs go to ~/logs/spite/YYYY-MM-DD[-monthly].log, failures also to ~/logs/spite/FAILED. The
 # units hold a shared lock, so the two never run in the same checkout at once.
 #
@@ -36,6 +38,7 @@ main() {
 }
 
 daily() {
+    browser
     timeout 4h claude -p "/spite" --dangerously-skip-permissions </dev/null
     local code=$?
     echo "=== $(date -Is) claude exited $code"
@@ -48,7 +51,11 @@ daily() {
     if [ ! -f "queue/raw-$DAY.json" ]; then
         alert "the sweep never ran, so nothing was found today."; return 1
     fi
-    [ "$listed" -eq 0 ] && { echo "=== nothing listed today: done"; return 0; }
+    if [ "$listed" -eq 0 ]; then
+        echo "=== nothing listed today: done"
+        telegram "spiteware daily run $DAY: nothing new passed the gates, so nothing was posted."
+        return 0
+    fi
 
     local problems=()
     git fetch -q origin
@@ -65,8 +72,16 @@ daily() {
     [ "${live:-0}" -ge "$listed" ] || problems+=("spiteware.ai is not serving today's apps")
 
     [ -n "$(uploaded "$DAY")" ] || problems+=("today's short is not on YouTube")
+    [ -n "$(posted "$DAY" tiktok)" ] || problems+=("today's short is not on TikTok")
+    [ -n "$(posted "$DAY" instagram)" ] || problems+=("today's short is not on Instagram")
 
-    report "${problems[@]}" && echo "=== all live: $listed apps, site and YouTube"
+    report "${problems[@]}" || return 1
+    echo "=== all live: $listed apps, site, YouTube, TikTok and Instagram"
+    telegram "spiteware daily run $DAY: $listed new apps, all live.
+YouTube: https://youtube.com/shorts/$(uploaded "$DAY")
+TikTok: $(posted "$DAY" tiktok)
+Instagram: $(posted "$DAY" instagram)
+Site: https://spiteware.ai/apps.html?sort=new"
 }
 
 monthly() {
@@ -90,12 +105,33 @@ monthly() {
         problems+=("the ledger on GitHub has no Published line for $month")
     fi
 
-    report "${problems[@]}" && echo "=== the $month episode is up: https://youtube.com/watch?v=$video"
+    report "${problems[@]}" || return 1
+    echo "=== the $month episode is up: https://youtube.com/watch?v=$video"
+    telegram "spiteware monthly run: the $month episode is live.
+YouTube: https://youtube.com/watch?v=$video"
 }
 
 # The YouTube id that scripts/upload.py noted for a date or a month, or nothing
 uploaded() {
     python3 -c "import json,sys;print(json.load(open('shorts/.cache/uploaded.json')).get(sys.argv[1],''))" "$1" 2>/dev/null
+}
+
+# The post URL that scripts/handoff.py noted for a date and a platform, or nothing
+posted() {
+    python3 -c "import json,sys;print(json.load(open('shorts/.cache/posted.json')).get(sys.argv[1],{}).get(sys.argv[2],''))" "$1" "$2" 2>/dev/null
+}
+
+# Start the logged-in browser if it is down, in its own unit so it outlives this one: systemd
+# ends everything a oneshot leaves behind, and the user needs it, and its VNC, after a failure.
+browser() {
+    curl -s http://127.0.0.1:9222/json/version >/dev/null && return 0
+    systemd-run --user --unit=dev-browser --collect --setenv=PATH="$PATH" dev-browser
+    local i
+    for i in $(seq 30); do
+        curl -s http://127.0.0.1:9222/json/version >/dev/null && return 0
+        sleep 1
+    done
+    echo "=== the browser did not start"
 }
 
 # How many apps in the apps.json on stdin were added today
@@ -110,15 +146,19 @@ report() {
     return 1
 }
 
-# One email to the user, through Claude's Gmail connector. (Claude Code's push notification
-# won't do: in a headless run it thinks the user is watching the terminal and skips it.)
+# One Telegram message to the user. Plain curl, so it still arrives when Claude is what failed.
+telegram() {
+    curl -fsS -m 30 -o /dev/null "https://api.telegram.org/bot$(sed -n 's/^TELEGRAM_BOT_TOKEN=//p' .env)/sendMessage" \
+        --data-urlencode "chat_id=$(sed -n 's/^TELEGRAM_CHAT_ID=//p' .env)" --data-urlencode "text=$1" \
+        -d disable_web_page_preview=true \
+        || echo "=== the Telegram message itself failed"
+}
+
 alert() {
     local msg="spiteware $MODE run $DAY failed: $1 Log: $LOG on claude-pi"
     echo "=== ALERT: $msg"
     echo "$msg" >> "$LOGS/FAILED"
-    timeout 5m claude -p "Send exactly one email with the Gmail send_message tool to alkait@gmail.com, subject: spiteware $MODE run failed, body: $msg — Do not do anything else." \
-        --dangerously-skip-permissions --allowedTools mcp__claude_ai_Gmail__send_message </dev/null \
-        || echo "=== the alert email itself failed"
+    telegram "$msg"
 }
 
 main "$@"; exit
