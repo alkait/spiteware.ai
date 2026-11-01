@@ -12,7 +12,7 @@ One per episode, never repeated. The name goes in the script's `"site_tips"`.
 |---|---|---|
 | `search` | The apps page has a search box: type what you pay for, see who got mad first. | 2026-09 |
 | `manifesto` | There is a manifesto. It has opinions (seat-based pricing). | 2026-09 |
-| `rules` | Nobody pays to be listed; two gates; how the spite score is added up. | |
+| `rules` | Nobody pays to be listed; two gates; how the spite score is added up. | 2026-10 |
 | `wall-of-shame` | A leaderboard of paid products by how often they have been replaced. | |
 | `hall-of-fame` | Every builder gets a page, with the grudge in their own words. | |
 | `submit` | One box, one link: send in what you built. | |
@@ -45,3 +45,27 @@ One per episode, never repeated. The name goes in the script's `"site_tips"`.
   app. Kerning has been introduced. Nothing else has been said on air.
 - **Left out for time:** EZTest, Photo Craft, Antimatter, lag-writer. Fair game
   for a later "ones we missed" beat, if they are still alive.
+
+## 2026-10
+
+- **Published:** 2026-11-01, https://youtube.com/watch?v=LfnFgcYTYB0
+- **Length:** 5:34, 816 words, 18 apps named, tempo 1.06.
+- **Segments:** here we go · it's already yours · on somebody's server · wall of shame · by the
+  seat · one little thing · on the site · the bigger bills · say it in the name · spite of the month.
+- **Wall of shame:** Soundpad, replaced twice. A four-way tie at two (Soundpad, Wispr Flow, Adobe
+  Acrobat, Screen Studio), and the script says so; Soundpad because it is $4.99 once.
+- **Spite of the month:** Local Dictation (Gus's pick: the repo is named imnotpayingforwisprflow).
+- **Site tips:** `rules` (Gus asked what a boosted spot would cost).
+- **Running bit:** the meditation app. He tried it, went to cancel, took the annual plan.
+- **Side stories:** Gus sells seats and now buys them (Vera does his $350 math); Sami's weekends.
+- **Sign-off:** "See you in December. Cancel something." / "Breathe first."
+- **Settle-in line:** "Right. Get comfortable."
+- **Welcome wish:** "I hope nothing renewed while you were asleep."
+- **Viewer prompts:** anybody paying for sync; would you build an app to save three dollars;
+  anybody paying for cold email; which one would you cancel something for.
+- **Subscribe line:** "…and the November grudges will find you." / "Still free. No annual plan."
+- **Stickers:** 🫁 ✈️ 💬 🦜 🎺 🪑 📋 🌧️ 🚧 🚪 🍅 🕯️ 🤦 🔔
+- **Storylines after this episode:** Gus's count is still eleven, and the meditation app is now
+  annual. The bike shop and its seven seats are on air. Sami is on air and has built nothing.
+- **Left out for time:** Recly, Probe, Snapback (its victim name overflows the card badge).
+  Papercut Studio, SoulKey, Cardsmith and Deadpan were left out for DEAD links.

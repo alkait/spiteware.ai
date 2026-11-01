@@ -1,0 +1,610 @@
+{
+ "month": "2026-10",
+ "tempo": 1.06,
+ "wall": "Soundpad",
+ "site_tips": [
+  "rules"
+ ],
+ "post": {
+  "title": "86 free apps built out of pure spite · October 2026",
+  "caption": "October's best free apps from people who read a pricing page and built the thing themselves: what each one replaces, what that costs, and who refused a one-time $4.99.",
+  "tags": [
+   "freesoftware",
+   "opensource",
+   "indiedev",
+   "subscriptions",
+   "selfhosted"
+  ]
+ },
+ "shots": {},
+ "say": [
+  [
+   "$145",
+   "a hundred and forty-five dollars"
+  ],
+  [
+   "$159",
+   "a hundred and fifty-nine dollars"
+  ],
+  [
+   "$350",
+   "three hundred and fifty dollars"
+  ],
+  [
+   "$33.25",
+   "thirty-three twenty-five"
+  ],
+  [
+   "$17.99",
+   "seventeen ninety-nine"
+  ],
+  [
+   "$16.99",
+   "sixteen ninety-nine"
+  ],
+  [
+   "$4.99",
+   "four ninety-nine"
+  ],
+  [
+   "€11.49",
+   "eleven euros forty-nine"
+  ],
+  [
+   "$97",
+   "ninety-seven dollars"
+  ],
+  [
+   "$50",
+   "fifty dollars"
+  ],
+  [
+   "$29",
+   "twenty-nine dollars"
+  ],
+  [
+   "$24",
+   "twenty-four dollars"
+  ],
+  [
+   "$15",
+   "fifteen dollars"
+  ],
+  [
+   "$12",
+   "twelve dollars"
+  ],
+  [
+   "$10",
+   "ten dollars"
+  ],
+  [
+   "$5",
+   "five dollars"
+  ],
+  [
+   "$0",
+   "zero dollars"
+  ],
+  [
+   "imnotpayingforwisprflow",
+   "I'm not paying for Whisper Flow"
+  ],
+  [
+   "MyLittleSoundpad",
+   "My Little Soundpad"
+  ],
+  [
+   "Soundpad",
+   "Sound Pad"
+  ],
+  [
+   "Cairn Notes",
+   "Kairn Notes"
+  ],
+  [
+   "Moonn",
+   "Moon"
+  ],
+  [
+   "CLZ",
+   "C L Z"
+  ],
+  [
+   "SaiTatter",
+   "Sai Tatter"
+  ],
+  [
+   "Collectarr",
+   "Collect-ar"
+  ],
+  [
+   "Otter",
+   "Ah-ter"
+  ],
+  [
+   "Uygar Turantekin",
+   "Oy-gar Too-ran-teh-kin"
+  ],
+  [
+   "Plaud",
+   "Plawd"
+  ],
+  [
+   "Hyungrok Kim",
+   "Hyung-rok Kim"
+  ],
+  [
+   "Recly",
+   "Reck-lee"
+  ],
+  [
+   "Mohammed Khaled Mahmoud",
+   "Mohammed Khaled Mahmoud"
+  ],
+  [
+   "sada",
+   "sah-dah"
+  ],
+  [
+   "Arcade Growth",
+   "Arcade Growth"
+  ],
+  [
+   "Arda",
+   "Ar-dah"
+  ],
+  [
+   "Stepcast",
+   "Step-cast"
+  ],
+  [
+   "Alejandro Lozano",
+   "Alejandro Lozano"
+  ],
+  [
+   "lindowin",
+   "lin-doh-win"
+  ],
+  [
+   "TinyMCE",
+   "Tiny M C E"
+  ],
+  [
+   "MD Rifat Hossain",
+   "M D Rifat Hossain"
+  ],
+  [
+   "wordpaste",
+   "word paste"
+  ],
+  [
+   "amschel",
+   "am-shel"
+  ],
+  [
+   "Noisli",
+   "Noyz-lee"
+  ],
+  [
+   "Cadenzato",
+   "Cah-den-zah-toe"
+  ],
+  [
+   "CleanShot",
+   "Clean Shot"
+  ],
+  [
+   "abg5f",
+   "A B G five F"
+  ],
+  [
+   "Glossyshots",
+   "Glossy Shots"
+  ],
+  [
+   "AlDente",
+   "Al Dente"
+  ],
+  [
+   "BalDente",
+   "Bal Dente"
+  ],
+  [
+   "close design",
+   "close design"
+  ],
+  [
+   ".skp",
+   "dot S K P"
+  ],
+  [
+   "KetchUp",
+   "Ketchup"
+  ],
+  [
+   "Dan Coulombe",
+   "Dan Coo-lom"
+  ],
+  [
+   "Gabriel Cebria Oliveira",
+   "Gabriel Seb-ree-ah Oliveira"
+  ],
+  [
+   "Lensprout",
+   "Len-sprout"
+  ],
+  [
+   "Muchamad Yuda Tri Ananda",
+   "Moo-hah-mad Yoo-dah Tree Ah-nan-dah"
+  ],
+  [
+   "Yosef Shammout",
+   "Yosef Sha-moot"
+  ],
+  [
+   "80%",
+   "eighty percent"
+  ],
+  [
+   "Flightradar24",
+   "Flight Radar twenty-four"
+  ]
+ ],
+ "segments": [
+  {
+   "title": "here we go",
+   "turns": [
+    [
+     "V",
+     "<eq>Right. Get comfortable."
+    ],
+    [
+     "V",
+     "<title><sfx whoosh>This is Spiteware Monthly. Welcome, everybody. I hope nothing renewed while you were asleep. I'm Vera."
+    ],
+    [
+     "G",
+     "I'm Gus. Still here."
+    ],
+    [
+     "V",
+     "<stats>Somebody gets annoyed at a price, builds the thing, and gives it away. We listed {LIVE} of those in October. Here are the best ones, and the bills they're answering."
+    ],
+    [
+     "G",
+     "<eq>You're about to ask if I cancelled anything."
+    ],
+    [
+     "V",
+     "Eleven subscriptions, and a meditation app you swore you'd try once more."
+    ],
+    [
+     "G",
+     "<fx 🫁 boing>I tried it. I'll report at the end."
+    ]
+   ]
+  },
+  {
+   "title": "it's already yours",
+   "turns": [
+    [
+     "V",
+     "<gap 0.6>Okay. First pattern. It's yours, and there's a toll on it."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill velocity>Flightradar24 now charges for anything older than twelve hours. <app velocity>Andrew built Velocity. It records every plane and ship to your own disk."
+    ],
+    [
+     "G",
+     "<fx ✈️ pop>So yesterday is a premium feature."
+    ],
+    [
+     "V",
+     "<gap 0.6><eq>Same toll, smaller road."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill cairn-notes>Obsidian charges $5 a month to move your own Markdown between your own devices. <app cairn-notes>Lucas Pospor built Cairn Notes."
+    ],
+    [
+     "G",
+     "<gap 0.5><eq>Who's next?"
+    ],
+    [
+     "V",
+     "<bill tern>Termius Pro. $10 a month to sync your server list. <app tern>Moonn built tern. It syncs to a Git repo you own."
+    ],
+    [
+     "G",
+     "<fx 💬 pop tl>Anybody out there paying for sync? Tell us."
+    ],
+    [
+     "V",
+     "<gap 0.6><eq>And then there are the shelves."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill collectarr>CLZ wants a separate subscription per shelf. <app collectarr>SaiTatter built Collectarr."
+    ]
+   ]
+  },
+  {
+   "title": "on somebody's server",
+   "turns": [
+    [
+     "V",
+     "<gap 0.7><eq>Next pattern. Your own voice, on somebody else's server."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill parrot>Otter Pro is $16.99 a month, and your calls go to its servers. <app parrot>Uygar Turantekin built Parrot. It transcribes on your own Mac, with no bot in the meeting."
+    ],
+    [
+     "G",
+     "<fx 🦜 pop>I always wave at the bot."
+    ],
+    [
+     "G",
+     "<gap 0.5><eq>And the office crowd?"
+    ],
+    [
+     "V",
+     "<bill sada>Word's Transcribe needs a Microsoft 365 subscription and stops at 300 minutes a month. <app sada>Mohammed Khaled Mahmoud built sada. It runs on your own PC, inside Word."
+    ]
+   ]
+  },
+  {
+   "title": "wall of shame",
+   "turns": [
+    [
+     "V",
+     "<gap 0.7><bill mylittlesoundpad><sfx drumroll>Okay. Wall of shame. Four products tied this month at two replacements each, so I picked. Soundpad. It plays sound files. $4.99."
+    ],
+    [
+     "G",
+     "A month?"
+    ],
+    [
+     "V",
+     "Once."
+    ],
+    [
+     "G",
+     "<fx 🎺 trombone>And people built their own."
+    ],
+    [
+     "V",
+     "<wall>Two of them. MyLittleSoundpad, <wall all>and Onion Board. One builder's reason: not wanting to pay three dollars."
+    ],
+    [
+     "G",
+     "<fx 💬 pop br>Would you build an app to save three dollars? I'd like to meet you."
+    ]
+   ]
+  },
+  {
+   "title": "by the seat",
+   "turns": [
+    [
+     "G",
+     "<gap 0.7><eq>Seats. I sold them for six years. Now I buy them. I own a bike shop. <fx 🪑 pop>Seven people, seven seats, on everything."
+    ],
+    [
+     "V",
+     "<gap 0.3>Then sit down. <bill stepcast>Arcade Growth is $50 a seat, a month, to replay your own clicks. <app stepcast>Arda built Stepcast."
+    ],
+    [
+     "G",
+     "<eq>Seven seats. That's..."
+    ],
+    [
+     "V",
+     "$350 a month. I did it before you sat down."
+    ],
+    [
+     "V",
+     "<gap 0.6>This one waits until you've grown."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill lindowin>Docker Desktop wants $24 a seat once a company passes 250 people. <app lindowin>Alejandro Lozano built lindowin. Same commands, no invoice."
+    ]
+   ]
+  },
+  {
+   "title": "one little thing",
+   "turns": [
+    [
+     "V",
+     "<gap 0.7><eq>Okay. A whole plan, for one little thing."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill wordpaste>TinyMCE puts clean Word paste in its $145 a month plan. <app wordpaste>MD Rifat Hossain built wordpaste."
+    ],
+    [
+     "G",
+     "<fx 📋 pop>$145. For paste."
+    ],
+    [
+     "V",
+     "<gap 0.6><eq>This one's about the weather."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill cadenzato>Noisli turns the rain off after 90 minutes unless you pay $12 a month. <app cadenzato>Cadenzato synthesizes it forever."
+    ],
+    [
+     "G",
+     "<fx 🌧️ pop>I ride in that on Saturdays. Nobody's billed me yet."
+    ],
+    [
+     "V",
+     "<gap 0.6><eq>Now your screenshots."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill glossyshots>CleanShot wants $10 a month to make one presentable. <app glossyshots>abg5f built Glossyshots, for Windows."
+    ],
+    [
+     "V",
+     "<gap 0.6><eq>Last little one. It's a battery."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill baldente>AlDente charges €11.49 a year to stop your Mac at 80%. <app baldente>close design built BalDente."
+    ],
+    [
+     "V",
+     "<eq>My brother Sami says he could build all of those in a weekend."
+    ],
+    [
+     "G",
+     "Has he built anything?"
+    ],
+    [
+     "V",
+     "<fx 🚧 squeak>He has a lot of weekends."
+    ]
+   ]
+  },
+  {
+   "title": "on the site",
+   "turns": [
+    [
+     "V",
+     "<gap 0.7><site rules>Quick site tip. There's a rules page. Nobody pays to be on the list."
+    ],
+    [
+     "G",
+     "I asked what a boosted spot would cost."
+    ],
+    [
+     "V",
+     "There's a whole page saying you can't."
+    ],
+    [
+     "G",
+     "<fx 🚪 buzzer>I read it. Two gates, a score out of ten, and no door for a salesman."
+    ]
+   ]
+  },
+  {
+   "title": "the bigger bills",
+   "turns": [
+    [
+     "V",
+     "<gap 0.7><eq>Two bigger bills."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill ketchup>SketchUp Pro is $33.25 a month to push a rectangle into a box. <app ketchup>Dan Coulombe built KetchUp."
+    ],
+    [
+     "G",
+     "<fx 🍅 pop>KetchUp. I have nothing to add."
+    ],
+    [
+     "V",
+     "<gap 0.6><eq>This one's for you, salesman."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill hedwig>Instantly wants $97 a month to send cold email from inboxes you already own. <app hedwig>Gabriel Cebria Oliveira built Hedwig."
+    ],
+    [
+     "G",
+     "<fx 💬 pop>I have sent that email. Is anybody watching paying for this right now?"
+    ]
+   ]
+  },
+  {
+   "title": "say it in the name",
+   "turns": [
+    [
+     "V",
+     "<gap 0.7><eq>Last two. Neither one hid how it felt."
+    ],
+    [
+     "V",
+     "<gap 0.3><bill lensprout>Screen Studio is $29 a month. <app lensprout>Muchamad Yuda Tri Ananda built Lensprout. Its pricing table is all zeros."
+    ],
+    [
+     "G",
+     "<gap 0.5><eq>That's restrained."
+    ],
+    [
+     "V",
+     "<bill local-dictation>Then here's a $15 a month dictation bill. <app local-dictation>Yosef Shammout built Local Dictation. The name of the repo: imnotpayingforwisprflow."
+    ]
+   ]
+  },
+  {
+   "title": "spite of the month",
+   "turns": [
+    [
+     "V",
+     "<gap 0.7><eq>Before we go. The meditation app."
+    ],
+    [
+     "G",
+     "<fx 🕯️ gong>It said welcome back, and it asked me to breathe."
+    ],
+    [
+     "V",
+     "And then you cancelled."
+    ],
+    [
+     "G",
+     "I went to cancel. It offered me the annual plan."
+    ],
+    [
+     "V",
+     "Gus."
+    ],
+    [
+     "G",
+     "<fx 🤦 buzzer>I took it. I was very calm when I clicked."
+    ],
+    [
+     "V",
+     "Still eleven, then. Your pick. Spite of the month."
+    ],
+    [
+     "G",
+     "<spite local-dictation><sfx fanfare>Local Dictation. Other people write a blog post. This one just named the repo."
+    ],
+    [
+     "G",
+     "<eq>Software should still cost money. It can stop telling me to breathe."
+    ],
+    [
+     "V",
+     "<outro>Everything we mentioned is linked below, and there are {MORE} more from October at spiteware.ai."
+    ],
+    [
+     "G",
+     "Which one would you cancel something for? Tell us. Got a grudge with a download link? Send it in."
+    ],
+    [
+     "V",
+     "<outro sub><fx 🔔 ding br>Subscribe and hit the bell, and the November grudges will find you."
+    ],
+    [
+     "G",
+     "Still free. No annual plan."
+    ],
+    [
+     "V",
+     "See you in December. Cancel something."
+    ],
+    [
+     "G",
+     "<fx 🫁 boing>Breathe first."
+    ]
+   ]
+  }
+ ]
+}
