@@ -6947,5 +6947,194 @@
     "repo": null,
     "spite_score": 6,
     "added": "2026-11-01"
+  },
+  {
+    "slug": "treadmill-home",
+    "name": "Treadmill Home",
+    "url": "https://github.com/Crawler757/treadmill-home",
+    "icon": "🏃",
+    "tagline": "iFIT wants $15 a month before a treadmill screen will show you the Netflix you already pay for. Treadmill Home swaps in a home screen with no login, no ads and no membership nags.",
+    "replaces": {
+      "name": "iFIT Train",
+      "product": "iFIT",
+      "price": "$15/mo",
+      "source": "https://www.ifit.com/membership"
+    },
+    "grudge": {
+      "quote": "What we didn’t know is that everything beyond the basic workout controls is locked behind an iFit subscription, even streaming services you already pay for.",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1xlg9nd/thanks_to_claude_i_was_able_to_give_nordictrack/"
+    },
+    "builder": {
+      "name": "Crawler757",
+      "handle": "Crawler757",
+      "url": "https://github.com/Crawler757"
+    },
+    "tags": [
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "Crawler757/treadmill-home",
+    "spite_score": 10,
+    "added": "2026-11-02"
+  },
+  {
+    "slug": "storytella",
+    "name": "Storytella",
+    "url": "https://storytella.io/",
+    "icon": "🎧",
+    "tagline": "ElevenReader wants an account and $11 a month to read you an article. Storytella does it inside your browser tab, with no account and nobody watching what you read.",
+    "replaces": {
+      "name": "ElevenReader Ultra",
+      "product": "ElevenReader",
+      "price": "$11/mo",
+      "source": "https://elevenreader.io/pricing"
+    },
+    "grudge": {
+      "quote": "While I think the voices they have are great, I didn't want to bother with an account, a subscription, and yet another service interested in my content habits.",
+      "source": "https://news.ycombinator.com/item?id=50324284"
+    },
+    "builder": {
+      "name": "hallh",
+      "handle": "hallh",
+      "url": "https://news.ycombinator.com/user?id=hallh"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "ai"
+    ],
+    "open_source": false,
+    "vibe_coded": true,
+    "repo": "",
+    "spite_score": 8,
+    "added": "2026-11-02"
+  },
+  {
+    "slug": "shorts-studio",
+    "name": "Shorts Studio",
+    "url": "https://github.com/canardu1/shorts-studio",
+    "icon": "🎬",
+    "tagline": "OpusClip charges $15 a month to crop your own video in its cloud. Shorts Studio does the reframing, cuts and captions on your own computer, and your footage never leaves.",
+    "replaces": {
+      "name": "OpusClip Starter",
+      "product": "OpusClip",
+      "price": "$15/mo",
+      "source": "https://www.opus.pro/pricing"
+    },
+    "grudge": {
+      "quote": "Tools like OpusClip, Submagic or CapCut Pro do this in the cloud for $15–30 a month.",
+      "source": "https://github.com/canardu1/shorts-studio"
+    },
+    "builder": {
+      "name": "Carlo Anardu",
+      "handle": "canardu1",
+      "url": "https://github.com/canardu1"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "canardu1/shorts-studio",
+    "spite_score": 8,
+    "added": "2026-11-02"
+  },
+  {
+    "slug": "shroom",
+    "name": "Shroom",
+    "url": "https://shroom.am",
+    "icon": "🍄",
+    "tagline": "$18 a month is a lot for the months you record one demo. Shroom records your Mac into your own Cloudflare account, and the bill counts video, not people.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Paying $18/month didn't justify.",
+      "source": "https://news.ycombinator.com/item?id=50325709"
+    },
+    "builder": {
+      "name": "Bagrat Aznauryan",
+      "handle": "bagrat",
+      "url": "https://github.com/bagrat"
+    },
+    "tags": [
+      "macos",
+      "self-hosted",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "bagrat/shroom",
+    "spite_score": 7,
+    "added": "2026-11-02"
+  },
+  {
+    "slug": "mantpro",
+    "name": "MantPro",
+    "url": "https://github.com/AnabasaSoft/MantPro",
+    "icon": "🔧",
+    "tagline": "Maintenance software bills per user, per month, for the privilege of knowing a pump broke. MantPro runs on your own PC with no limit on users, machines or records.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I'm an industrial maintenance technician, and I started developing MantPro because I wanted a practical tool to manage maintenance work without relying on spreadsheets, paperwork or expensive subscription-based software.",
+      "source": "https://www.reddit.com/r/opensource/comments/1xl178m/title_i_built_mantpro_a_free_and_opensource_cmms/"
+    },
+    "builder": {
+      "name": "AnabasaSoft",
+      "handle": "AnabasaSoft",
+      "url": "https://github.com/AnabasaSoft"
+    },
+    "tags": [
+      "desktop",
+      "self-hosted",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "AnabasaSoft/MantPro",
+    "spite_score": 5,
+    "added": "2026-11-02"
+  },
+  {
+    "slug": "cafaine",
+    "name": "Cafaine",
+    "url": "https://local-over.github.io/decaf",
+    "icon": "☕",
+    "tagline": "Some App Store apps want $3.99 to stop your Mac falling asleep. Cafaine keeps it awake for nothing, and the money can go on actual coffee.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Keep your Mac awake without paying $3.99 on the App Store.",
+      "source": "https://github.com/local-over/decaf"
+    },
+    "builder": {
+      "name": "Hassan Elkady",
+      "handle": "local-over",
+      "url": "https://github.com/local-over"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "local-over/decaf",
+    "spite_score": 5,
+    "added": "2026-11-02"
   }
 ]

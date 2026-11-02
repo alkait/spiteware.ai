@@ -1,0 +1,21 @@
+{
+  "run": "2026-11-02",
+  "swept": "hn (48h), reddit r/SideProject r/macapps r/ClaudeAI r/opensource (r/selfhosted, r/webdev, r/vibecoding, r/indiehackers returned 429), github",
+  "raw_hits": 294,
+  "triaged": 27,
+  "candidates": [],
+  "dropped": [
+    "Kardive: real paywall grudge, but its optional Kardive Cloud is a paid subscription from the same maker",
+    "Izzy: its own JS bundle sells Izzy Pro with a script limit, Pro skins and lava.top checkout",
+    "Helix: $4.99 paid app",
+    "Swoopa-Reverse-Engineer: empty repo, nothing to use",
+    "mizzou-sports-calendar: 'similar to Sync2Cal but free' is a comparison, no stated grudge",
+    "Aruma: pitches a lower Firebase bill but states no reason of the builder's own, and pricing is usage based",
+    "Quirk-notes, fleur, MusicBittle, Autooria, Nimbo: 'no subscription' is a feature line, no grudge stated",
+    "Inzx: post is by a third party, the builder's reason is not stated",
+    "zeromiss: reacts to noisy newsletters, not to a price",
+    "Findow, CleanMacster, Gleam Audio, DockGroups, NotchTime, 1DevTool, VaultSort: paid apps or a free plan with paid tiers",
+    "Natively, Hushkey, Folio Refresh, VestLens: already seen on an earlier run",
+    "Filepeek, Resticker, LanesMac, PixelShrink, Portr, Keypause, AirFlick Drop, Subfaro: no grudge in the post or the author's comments"
+  ]
+}

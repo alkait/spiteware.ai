@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-02",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 3,
+  "post": {
+    "title": "iFIT wants $15 a month. Treadmill Home is free.",
+    "caption": "Six fresh grudges: a treadmill screen without an iFIT bill, articles read aloud without ElevenReader, and vertical shorts without OpusClip.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "homegym"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 2nd.", "say": "November second.", "step": "date"},
+      {"cap": "Six new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "treadmill-home",
+     "quote": "everything beyond the basic workout controls is locked behind an iFit subscription",
+     "cut": true,
+     "cues": [
+      {"cap": "iFIT Train: $15 a month.", "say": "Eye-fit Train: fifteen dollars a month.", "step": "badge"},
+      {"cap": "Crawler757:", "say": "[matter-of-fact] Crawler seven five seven:", "step": "quote"},
+      {"cap": "“everything beyond the basic workout controls", "say": "[sarcastic] Everything beyond the basic workout controls", "step": "quote"},
+      {"cap": "is locked behind an iFit subscription”", "say": "is locked behind an Eye-fit subscription.", "step": "quote"},
+      {"cap": "So: Treadmill Home. No login.", "say": "[quick] So: Treadmill Home. No login.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "storytella",
+     "quote": "I didn't want to bother with an account, a subscription",
+     "cut": true,
+     "cues": [
+      {"cap": "ElevenReader Ultra: $11 a month.", "say": "Eleven Reader Ultra: eleven dollars a month.", "step": "badge"},
+      {"cap": "hallh:", "say": "[matter-of-fact] Hall H:", "step": "quote"},
+      {"cap": "“I didn't want to bother", "say": "[sarcastic] I didn't want to bother", "step": "quote"},
+      {"cap": "with an account, a subscription”", "say": "with an account, a subscription.", "step": "quote"},
+      {"cap": "So: Storytella. In your browser.", "say": "[quick] So: Story-tella. In your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "shorts-studio",
+     "quote": "Tools like OpusClip, Submagic or CapCut Pro do this in the cloud for $15–30 a month.",
+     "cues": [
+      {"cap": "OpusClip Starter: $15 a month.", "say": "Opus Clip Starter: fifteen dollars a month.", "step": "badge"},
+      {"cap": "Carlo Anardu:", "say": "[matter-of-fact] Car-lo Ah-nar-doo:", "step": "quote"},
+      {"cap": "“Tools like OpusClip, Submagic or CapCut Pro", "say": "[sarcastic] Tools like Opus Clip, Sub-magic or Cap Cut Pro", "step": "quote"},
+      {"cap": "do this in the cloud for $15–30 a month.”", "say": "do this in the cloud for fifteen to thirty dollars a month.", "step": "quote"},
+      {"cap": "So: Shorts Studio. Your computer.", "say": "[quick] So: Shorts Studio. Your computer.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus three more", "say": "[upbeat] Plus three more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
