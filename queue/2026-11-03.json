@@ -1,0 +1,22 @@
+{
+  "run": "2026-11-03",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited 429), github",
+  "raw_hits": 383,
+  "triaged": 17,
+  "candidates": [],
+  "dropped": [
+    "GoodPDFTools: Paddle checkout, /pricing page and 'Upgrade Plan' in its bundle, plus AdSense (fails gate 2)",
+    "CalibRaw: built because free alternatives were slow or buggy, not over Lightroom's price; 'no subscription' is positioning, not a grudge",
+    "Aulico: no post text, no grudge sentence; HN thread accuses it of spam",
+    "OpenMarket: 'Free alternative to TradingView' only, no grudge sentence",
+    "Garnet: 'no accounts, no subscription' and a RubyMine comparison, no grudge sentence",
+    "alpine-ride: 'No subscription' only, no grudge sentence",
+    "Pulsr: 'no subscription' only, no grudge sentence",
+    "frameroom: README is a one-liner, no grudge sentence",
+    "4D Reel, Cashrow, rusty-teleprompter: 'no subscription' / 'free forever' taglines only, no grudge sentence",
+    "People you know: grudge is Instagram's enshittification, no price; Instagram is free",
+    "Corollary: weekend project to try on-device models, not a price grudge",
+    "Switch, Legger: motive is macOS ergonomics, not a price",
+    "Mago: venture of two founders, previously closed source; no price grudge"
+  ]
+}

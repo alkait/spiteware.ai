@@ -7136,5 +7136,164 @@
     "repo": "local-over/decaf",
     "spite_score": 5,
     "added": "2026-11-02"
+  },
+  {
+    "slug": "ownnote",
+    "name": "OwnNote",
+    "url": "https://github.com/janehwzn/ownnote",
+    "icon": "📝",
+    "tagline": "Notion Plus is $10 a month to reread your own notes. OwnNote imports the whole workspace onto your computer and turns the meter off.",
+    "replaces": {
+      "name": "Notion Plus",
+      "product": "Notion",
+      "price": "$10/mo",
+      "source": "https://www.notion.com/pricing"
+    },
+    "grudge": {
+      "quote": "Notion is wonderful, but if you mostly use it as a personal notebook, you end up paying a monthly subscription to read your own notes, on someone else's server, behind a login.",
+      "source": "https://github.com/janehwzn/ownnote"
+    },
+    "builder": {
+      "name": "Sophie Hu",
+      "handle": "janehwzn",
+      "url": "https://github.com/janehwzn"
+    },
+    "tags": [
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "janehwzn/ownnote",
+    "spite_score": 8,
+    "added": "2026-11-03"
+  },
+  {
+    "slug": "tiny-tally",
+    "name": "Tiny Tally",
+    "url": "https://apps.tarwin.art/tiny-tally/",
+    "icon": "🧾",
+    "tagline": "Quicken wanted a monthly subscription to keep doing one dad's books. Tiny Tally keeps them in a single file on his own computer, works out the GST return, and bills nobody.",
+    "replaces": {
+      "name": "Quicken",
+      "product": "Quicken",
+      "price": "",
+      "source": "https://www.quicken.com/"
+    },
+    "grudge": {
+      "quote": "Made it because my dad was sick of Quicken wanting him to move to their online subscription model.",
+      "source": "https://news.ycombinator.com/item?id=50347156"
+    },
+    "builder": {
+      "name": "Tarwin Stroh-Spijer",
+      "handle": "tarwin",
+      "url": "https://github.com/tarwin"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "tarwin/tiny-tally",
+    "spite_score": 7,
+    "added": "2026-11-03"
+  },
+  {
+    "slug": "unsubbed-cycle",
+    "name": "Unsubbed Cycle",
+    "url": "https://unsubbed.github.io/cycle/",
+    "icon": "🌙",
+    "tagline": "Flo would like a subscription to count to 28. Unsubbed Cycle keeps the calendar in a browser tab, on your device, and charges nothing.",
+    "replaces": {
+      "name": "Flo",
+      "product": "Flo",
+      "price": "",
+      "source": "https://flo.health/"
+    },
+    "grudge": {
+      "quote": "Subscriptions keep rising for tools people use a few times a month.",
+      "source": "https://unsubbed.org/about"
+    },
+    "builder": {
+      "name": "Zabir Mahmud",
+      "handle": "unsubbed",
+      "url": "https://github.com/unsubbed"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "unsubbed/cycle",
+    "spite_score": 7,
+    "added": "2026-11-03"
+  },
+  {
+    "slug": "payday",
+    "name": "PayDay",
+    "url": "https://github.com/iamuwan/PayDay",
+    "icon": "💸",
+    "tagline": "Budgeting apps charge you every month to tell you that you spend too much every month. PayDay does the month-end recap on your own computer, for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most budgeting apps want you to connect your bank, sync to a server and pay every month for the privilege.",
+      "source": "https://github.com/iamuwan/PayDay"
+    },
+    "builder": {
+      "name": "Wan",
+      "handle": "iamuwan",
+      "url": "https://github.com/iamuwan"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "iamuwan/PayDay",
+    "spite_score": 5,
+    "added": "2026-11-03"
+  },
+  {
+    "slug": "turbo",
+    "name": "Turbo",
+    "url": "https://indiegoodies.com/turbo",
+    "icon": "⚡",
+    "tagline": "Every Mac launcher keeps the clipboard, the snippets or the AI box behind a subscription. Turbo runs Raycast extensions, brings your own model, and has nothing to unlock.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Every option I tried put at least one of those behind a subscription or an account.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xm9d8t/turbo_a_free_native_mac_launcher_that_runs/"
+    },
+    "builder": {
+      "name": "Khoa",
+      "handle": "onmyway133",
+      "url": "https://github.com/onmyway133"
+    },
+    "tags": [
+      "macos",
+      "byo-key",
+      "productivity"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-11-03"
   }
 ]

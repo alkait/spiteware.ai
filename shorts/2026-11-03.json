@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-03",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "Notion Plus wants $10 a month. OwnNote is free.",
+    "caption": "Five fresh grudges: your Notion notes without the Notion bill, a dad's books without a Quicken subscription, and a period tracker without Flo.",
+    "tags": [
+      "freesoftware",
+      "indiedev",
+      "subscriptions",
+      "opensource",
+      "localfirst"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "November 3rd.",
+          "say": "November third.",
+          "step": "date"
+        },
+        {
+          "cap": "Five new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "ownnote",
+      "quote": "you end up paying a monthly subscription to read your own notes",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Notion Plus: $10 a month.",
+          "say": "Notion Plus: ten dollars a month.",
+          "step": "badge"
+        },
+        {
+          "cap": "Sophie Hu:",
+          "say": "[matter-of-fact] Sophie Hu:",
+          "step": "quote"
+        },
+        {
+          "cap": "“you end up paying a monthly subscription",
+          "say": "[sarcastic] You end up paying a monthly subscription",
+          "step": "quote"
+        },
+        {
+          "cap": "to read your own notes”",
+          "say": "to read your own notes.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: OwnNote. Your computer.",
+          "say": "[quick] So: Own Note. Your computer.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "tiny-tally",
+      "quote": "my dad was sick of Quicken wanting him to move to their online subscription model.",
+      "cues": [
+        {
+          "cap": "Quicken moved to a subscription.",
+          "step": "gripe"
+        },
+        {
+          "cap": "Tarwin Stroh-Spijer:",
+          "say": "[matter-of-fact] Tar-win Stro Spy-er:",
+          "step": "quote"
+        },
+        {
+          "cap": "“my dad was sick of Quicken",
+          "say": "[sarcastic] My dad was sick of Quicken",
+          "step": "quote"
+        },
+        {
+          "cap": "wanting him to move",
+          "step": "quote"
+        },
+        {
+          "cap": "to their online subscription model.”",
+          "say": "to their online subscription model.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Tiny Tally. One file.",
+          "say": "[quick] So: Tiny Tally. One file.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ],
+      "gripe": "Quicken moved to a subscription."
+    },
+    {
+      "scene": "app",
+      "slug": "unsubbed-cycle",
+      "quote": "Subscriptions keep rising for tools people use a few times a month.",
+      "cues": [
+        {
+          "cap": "A monthly fee to count to 28.",
+          "say": "A monthly fee to count to twenty-eight.",
+          "step": "gripe"
+        },
+        {
+          "cap": "Zabir Mahmud:",
+          "say": "[matter-of-fact] Zah-beer Mah-mood:",
+          "step": "quote"
+        },
+        {
+          "cap": "“Subscriptions keep rising",
+          "say": "[sarcastic] Subscriptions keep rising",
+          "step": "quote"
+        },
+        {
+          "cap": "for tools people use a few times a month.”",
+          "say": "for tools people use a few times a month.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Unsubbed Cycle. One tab.",
+          "say": "[quick] So: Unsubbed Cycle. One tab.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ],
+      "gripe": "A monthly fee to count to 28."
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "Plus two more",
+          "say": "[upbeat] Plus two more,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}
