@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-04",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "openyog",
+  "post": {
+    "title": "Webyog killed the free SQLyog. OpenYog brought it back.",
+    "caption": "Three fresh grudges: a database client whose free edition got shut down, a music player without the ads, and a silence cutter without the desktop-app bill.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "localfirst"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 4th.", "say": "November fourth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "openyog",
+     "quote": "Webyog stopped SQLyog Community version", "cut": true,
+     "gripe": "The free SQLyog got shut down.",
+     "cues": [
+      {"cap": "The free SQLyog got shut down.", "say": "The free S Q L yog got shut down.", "step": "gripe"},
+      {"cap": "Md Abdul Ohab:", "say": "[matter-of-fact] M D Abdul Oh-hab:", "step": "quote"},
+      {"cap": "“Webyog stopped", "say": "[sarcastic] Web yog stopped", "step": "quote"},
+      {"cap": "SQLyog Community version”", "say": "S Q L yog Community version.", "step": "quote"},
+      {"cap": "So: OpenYog. Same menus.", "say": "[quick] So: Open Yog. Same menus.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "boom-listener",
+     "quote": "I got tired of music apps that want an account, show ads, or push streaming", "cut": true,
+     "gripe": "An ad break to play your own MP3s.",
+     "cues": [
+      {"cap": "An ad break to play your own MP3s.", "say": "An ad break to play your own M P threes.", "step": "gripe"},
+      {"cap": "Rilcle Saraiva:", "say": "[matter-of-fact] Reel-kleh Sah-rye-vah:", "step": "quote"},
+      {"cap": "“I got tired of music apps", "say": "[sarcastic] I got tired of music apps", "step": "quote"},
+      {"cap": "that want an account, show ads,", "step": "quote"},
+      {"cap": "or push streaming”", "say": "or push streaming.", "step": "quote"},
+      {"cap": "So: Boom, listener! Your files.", "say": "[quick] So: Boom, listener! Your files.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "pauseless", "score": false,
+     "quote": "I got tired of paying for desktop apps just to remove dead air from recordings", "cut": true,
+     "gripe": "Paying rent to delete silence.",
+     "cues": [
+      {"cap": "Paying rent to delete silence.", "step": "gripe"},
+      {"cap": "Taha Aygün:", "say": "[matter-of-fact] Tah-ha Eye-goon:", "step": "quote"},
+      {"cap": "“I got tired of paying for desktop apps", "say": "[sarcastic] I got tired of paying for desktop apps", "step": "quote"},
+      {"cap": "just to remove dead air from recordings”", "say": "just to remove dead air from recordings.", "step": "quote"},
+      {"cap": "So: Pauseless. Your browser.", "say": "[quick] So: Pauseless. Your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

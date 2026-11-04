@@ -1,0 +1,23 @@
+{
+  "run": "2026-11-04",
+  "swept": "hn (48h), reddit (r/SideProject, r/selfhosted, r/vibecoding, r/webdev; r/opensource, r/macapps, r/ClaudeAI rate-limited 429), github",
+  "raw_hits": 440,
+  "triaged": 16,
+  "candidates": [],
+  "dropped": [
+    "quant-drill: good grudge, but the repo is a README with no app in it",
+    "FreeDictate: 'No subscription, no account, no pro tier' is positioning against Wispr Flow, not a stated reason",
+    "OpenTreadmill: 'No account, no subscription' is positioning against iFIT, not a stated reason",
+    "Murmur: built to be local and nice to look at, not over Wispr Flow's price",
+    "LiteClip: grudge is Medal's bloat, not its price",
+    "Unidle: grudge is a Teams 'Away' status, not a price",
+    "MRH1 (mrh2), MacPad, ScanForge: 'no subscription' positioning only, no grudge sentence",
+    "cfmb: one-line 'free alternative to ACF' description, no README, no grudge",
+    "Digital Scanner (scanneronline): empty README, 'without paying' names no reason or victim",
+    "AURA: link is a Google search for an X profile, app not reachable to check pricing",
+    "TQ Charts: TradingView grudge is chart caps and freezes; app is a video post, pricing not verifiable",
+    "Cairn: Plus tier (fails gate 2)",
+    "Max Commander: Pro one-time purchase (fails gate 2)",
+    "Offlog, Mintype, Unbubble, CheapGPT, Airy Studio, Clarpex: no grudge in the builder's words"
+  ]
+}

@@ -7295,5 +7295,100 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-11-03"
+  },
+  {
+    "slug": "pauseless",
+    "name": "Pauseless",
+    "url": "https://tahaygun.github.io/pauseless/",
+    "icon": "✂️",
+    "tagline": "Desktop apps charge rent to delete the silence in your podcast. Pauseless finds every pause and um in your browser and hands the cut to your editor for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I got tired of paying for desktop apps just to remove dead air from recordings, so I made Pauseless",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xn9pqc/i_built_a_free_opensource_tool_that_cuts_silences/"
+    },
+    "builder": {
+      "name": "Taha Aygün",
+      "handle": "tahaygun",
+      "url": "https://github.com/tahaygun"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "tahaygun/pauseless",
+    "spite_score": 5,
+    "added": "2026-11-04"
+  },
+  {
+    "slug": "openyog",
+    "name": "OpenYog",
+    "url": "https://github.com/AbdulOhab/openyog",
+    "icon": "🐬",
+    "tagline": "Webyog shut the free SQLyog and left the trial button. OpenYog takes the GPL source it already gave away and ports it to Qt 6, on Linux and Windows.",
+    "replaces": {
+      "name": "SQLyog",
+      "product": "SQLyog",
+      "price": "",
+      "source": "https://www.webyog.com/product/sqlyog"
+    },
+    "grudge": {
+      "quote": "Webyog stopped SQLyog Community version, so I built OpenYog by porting it to Qt 6.",
+      "source": "https://news.ycombinator.com/item?id=50349003"
+    },
+    "builder": {
+      "name": "Md Abdul Ohab",
+      "handle": "AbdulOhab",
+      "url": "https://github.com/AbdulOhab"
+    },
+    "tags": [
+      "desktop",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "AbdulOhab/openyog",
+    "spite_score": 7,
+    "added": "2026-11-04"
+  },
+  {
+    "slug": "boom-listener",
+    "name": "Boom, listener!",
+    "url": "https://github.com/rilclesaraiva/BoomListener",
+    "icon": "🎧",
+    "tagline": "Music apps want an account and an ad break to play the MP3s already on your phone. Boom, listener! plays them, with lyrics and a visualizer, and wants nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I got tired of music apps that want an account, show ads, or push streaming when all I wanted was to play the files already on my phone.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xna9xl/i_built_my_own_android_music_player_because_i_was/"
+    },
+    "builder": {
+      "name": "Rilcle Saraiva",
+      "handle": "rilclesaraiva",
+      "url": "https://github.com/rilclesaraiva"
+    },
+    "tags": [
+      "local-first",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "rilclesaraiva/BoomListener",
+    "spite_score": 7,
+    "added": "2026-11-04"
   }
 ]
