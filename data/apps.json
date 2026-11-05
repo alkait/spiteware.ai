@@ -7390,5 +7390,195 @@
     "repo": "rilclesaraiva/BoomListener",
     "spite_score": 7,
     "added": "2026-11-04"
+  },
+  {
+    "slug": "not-adobe-audio-studio",
+    "name": "not-adobe-audio-studio",
+    "url": "https://github.com/NonakaVal/not-adobe-audio-studio",
+    "icon": "🎙️",
+    "tagline": "Edit your podcast by editing the transcript, transcribed on your own machine, with no monthly plan from Adobe.",
+    "replaces": {
+      "name": "Adobe Podcast Premium",
+      "product": "Adobe Podcast",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "to be honest just started to get too expensive the monthly plan haha",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xo3zol/vibe_coded_a_local_alternative_to_adobe_podcast/"
+    },
+    "builder": {
+      "name": "Valdenir Nonaka",
+      "handle": "NonakaVal",
+      "url": "https://github.com/NonakaVal"
+    },
+    "tags": [
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "NonakaVal/not-adobe-audio-studio",
+    "spite_score": 9,
+    "added": "2026-11-05"
+  },
+  {
+    "slug": "derust",
+    "name": "Derust",
+    "url": "https://github.com/Kencho5/derust",
+    "icon": "🧹",
+    "tagline": "CleanMyMac charges a yearly fee to empty your caches. Derust empties them for nothing and puts it all in the Trash.",
+    "replaces": {
+      "name": "CleanMyMac",
+      "product": "CleanMyMac",
+      "price": "$39.95/yr",
+      "source": "https://www.capterra.com/p/232745/CleanMyMac-X/pricing/"
+    },
+    "grudge": {
+      "quote": "I didn't like paying a subscription to clear caches, so I built one that anyone can use, read and change",
+      "source": "https://www.reddit.com/r/opensource/comments/1xntiue/derust_a_free_opensource_alternative_to_cleanmymac/"
+    },
+    "builder": {
+      "name": "Kencho",
+      "handle": "Kencho5",
+      "url": "https://github.com/Kencho5"
+    },
+    "tags": [
+      "macos",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Kencho5/derust",
+    "spite_score": 8,
+    "added": "2026-11-05"
+  },
+  {
+    "slug": "superbase",
+    "name": "Superbase",
+    "url": "https://xl0.github.io/superbase/",
+    "icon": "🗄️",
+    "tagline": "The Supabase table editor, minus the Supabase bill. Paste a Postgres URL and edit away.",
+    "replaces": {
+      "name": "Supabase Pro",
+      "product": "Supabase",
+      "price": "$25/mo",
+      "source": "https://supabase.com/pricing"
+    },
+    "grudge": {
+      "quote": "I don't think there is a better table editor UX than what Supabase provides, but their pricing is steep and local deployment feels clanky and a hassle.",
+      "source": "https://news.ycombinator.com/item?id=50358171"
+    },
+    "builder": {
+      "name": "Alexey Zaytsev",
+      "handle": "xl0",
+      "url": "https://github.com/xl0"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "xl0/superbase",
+    "spite_score": 8,
+    "added": "2026-11-05"
+  },
+  {
+    "slug": "clipedit",
+    "name": "ClipEdit",
+    "url": "https://github.com/0wl/ClipEdit",
+    "icon": "✂️",
+    "tagline": "Trim a clip from the right-click menu. No sign-in, no timeline, and nobody steering you toward Clipchamp's paid plan.",
+    "replaces": {
+      "name": "Clipchamp Premium",
+      "product": "Clipchamp",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Windows' built-in option, Clipchamp, is a heavy, cluttered editor: it wants you signed in, takes a while to load, buries a simple trim under timelines, templates and stock media, and keeps steering you toward a paid plan.",
+      "source": "https://github.com/0wl/ClipEdit"
+    },
+    "builder": {
+      "name": "Árpád",
+      "handle": "0wl",
+      "url": "https://github.com/0wl"
+    },
+    "tags": [
+      "windows",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "0wl/ClipEdit",
+    "spite_score": 7,
+    "added": "2026-11-05"
+  },
+  {
+    "slug": "caltrak",
+    "name": "CalTrak",
+    "url": "https://caltrak.app",
+    "icon": "🥗",
+    "tagline": "Barcode scanning without a $19.99 monthly toll. Every feature free, no account, the tip jar unlocks nothing.",
+    "replaces": {
+      "name": "MyFitnessPal Premium",
+      "product": "MyFitnessPal",
+      "price": "$19.99/mo",
+      "source": "https://caltrak.app/compare/myfitnesspal-alternative"
+    },
+    "grudge": {
+      "quote": "I got frustrated with how many trackers wanted me to pay for features, so I built CalTrak.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xo1fol/caltrak_a_free_calorie_tracker_i_built_after/"
+    },
+    "builder": {
+      "name": "Ryan",
+      "handle": "Legitimate-Pop-7928",
+      "url": "https://www.reddit.com/user/Legitimate-Pop-7928"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "health"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 6,
+    "added": "2026-11-05"
+  },
+  {
+    "slug": "klinth",
+    "name": "Klinth",
+    "url": "https://klinth.pages.dev",
+    "icon": "🧱",
+    "tagline": "A website builder with no 'made with' badge and no paywall to remove it. Export the ZIP and host it free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Every time I tried to put up a simple portfolio, I hit the same wall: a badge in the corner, or a paywall to remove it, or an account just to save my work.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xo3c7v/i_got_tired_of_website_builders_putting_a_made/"
+    },
+    "builder": {
+      "name": "ig_suyas",
+      "handle": "ig_suyas",
+      "url": "https://www.reddit.com/user/ig_suyas"
+    },
+    "tags": [
+      "web",
+      "byo-key",
+      "productivity"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-11-05"
   }
 ]

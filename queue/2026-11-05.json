@@ -1,0 +1,17 @@
+{
+  "run": "2026-11-05",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited 429), github",
+  "raw_hits": 443,
+  "triaged": 18,
+  "candidates": [],
+  "dropped": [
+    "OpenScreen 2.2.1, Mintype, Unbubble, CheapGPT, Airy Studio, Clarpex: already dropped on earlier runs",
+    "Bacoy Music: optional Premium subscription from the same maker (open-core)",
+    "getmeaqrcode: ships a Pro $9.99/mo and Enterprise pricing modal (gate 2)",
+    "APIblaze: pay per request from the maker (gate 2)",
+    "PromptReel, 3re, Visor-flow, LazyPDF, gs-clipboard, Free Online PDF Editor Pro: 'no subscription' in the blurb but no grudge in the builder's words (gate 1)",
+    "OpenHuman (Superhuman clone): builder is a happy Superhuman user, no grudge (gate 1)",
+    "MyVideoStation: reacting to a discontinued free Synology app, not a price",
+    "Samewindow, Remene, Aggregate Finance, Kairos: not built against a paid tool, or have paid plans"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-05",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 3,
+  "thumb": "derust",
+  "post": {
+    "title": "CleanMyMac wants $39.95 a year to clear caches. Derust doesn't.",
+    "caption": "Six fresh grudges: a Mac cleaner without the yearly fee, a Supabase table editor without the bill, a transcript audio editor without Adobe's monthly plan, and three more.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 5th.", "say": "November fifth.", "step": "date"},
+      {"cap": "Six new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "derust",
+     "quote": "I didn't like paying a subscription to clear caches", "cut": true,
+     "cues": [
+      {"cap": "CleanMyMac wants $39.95 a year", "say": "Clean My Mac wants thirty-nine ninety-five a year", "step": "badge"},
+      {"cap": "to empty your caches.", "step": "badge"},
+      {"cap": "Kencho:", "say": "[matter-of-fact] Ken-cho:", "step": "quote"},
+      {"cap": "“I didn't like paying a subscription", "say": "[sarcastic] I didn't like paying a subscription", "step": "quote"},
+      {"cap": "to clear caches”", "say": "to clear caches.", "step": "quote"},
+      {"cap": "So: Derust. Open source.", "say": "[quick] So: Dee-rust. Open source.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "superbase",
+     "quote": "their pricing is steep", "cut": true,
+     "cues": [
+      {"cap": "Supabase Pro: $25 a month.", "say": "Supabase Pro: twenty-five dollars a month.", "step": "badge"},
+      {"cap": "Alexey Zaytsev:", "say": "[matter-of-fact] Uh-lex-ay Zay-tsev:", "step": "quote"},
+      {"cap": "“their pricing is steep”", "say": "[sarcastic] their pricing is steep.", "step": "quote"},
+      {"cap": "So: Superbase. Same table editor.", "say": "[quick] So: Superbase. Same table editor.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "not-adobe-audio-studio",
+     "quote": "just started to get too expensive the monthly plan", "cut": true,
+     "gripe": "A monthly plan to edit a podcast.",
+     "cues": [
+      {"cap": "A monthly plan to edit a podcast.", "step": "gripe"},
+      {"cap": "Valdenir Nonaka:", "say": "[matter-of-fact] Vahl-deh-neer No-nah-kah:", "step": "quote"},
+      {"cap": "“just started to get too expensive", "say": "[sarcastic] just started to get too expensive", "step": "quote"},
+      {"cap": "the monthly plan”", "say": "the monthly plan.", "step": "quote"},
+      {"cap": "So: not Adobe. Runs locally.", "say": "[quick] So: Not Adobe Audio Studio. Runs locally.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus three more", "say": "[upbeat] Plus three more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
