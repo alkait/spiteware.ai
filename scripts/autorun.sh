@@ -2,12 +2,13 @@
 # The unattended runs on claude-pi, started by the timers in scripts/systemd/:
 #
 #   autorun.sh daily     07:00 every day: /spite, then checks that every app it listed is on
-#                        GitHub, on the live site and in a short on YouTube, TikTok and Instagram.
+#                        GitHub, on the live site and in a short on YouTube, TikTok, Instagram and X.
 #   autorun.sh monthly   the 1st at 09:00: /spite monthly for last month, then checks that the
 #                        episode is on YouTube and its script and Published line are on GitHub.
 #
-# Each run sends the user one Telegram message either way: the links when everything landed,
-# what is missing when not.
+# Each run sends the user one Telegram message either way. Daily: a ✅ or ❌ line for each of
+# GitHub, the site, YouTube, TikTok, Instagram and X, with its link, so a failure still shows what
+# landed. Monthly: the episode link, or what is missing.
 # (TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in .env.)
 # Logs go to ~/logs/spite/YYYY-MM-DD[-monthly].log, failures also to ~/logs/spite/FAILED. The
 # units hold a shared lock, so the two never run in the same checkout at once.
@@ -57,10 +58,16 @@ daily() {
         return 0
     fi
 
-    local problems=()
+    # One line per destination, so the message says what landed as well as what did not
+    local lines=() failed=() link
+    check() {  # check NAME LINK-IF-OK WHAT-WENT-WRONG
+        if [ -n "$2" ]; then lines+=("✅ $1: $2"); else lines+=("❌ $1: $3"); failed+=("$1"); fi
+    }
+
     git fetch -q origin
-    [ "$(git show origin/main:data/apps.json | count)" -ge "$listed" ] \
-        || problems+=("the $listed new apps were not pushed to GitHub")
+    link=""; [ "$(git show origin/main:data/apps.json | count)" -ge "$listed" ] \
+        && link="pushed ($(git rev-parse --short origin/main))"
+    check GitHub "$link" "the $listed new apps were not pushed"
 
     # GitHub Pages can lag a push by a few minutes
     local live=0 i
@@ -69,19 +76,31 @@ daily() {
         [ "${live:-0}" -ge "$listed" ] && break
         sleep 30
     done
-    [ "${live:-0}" -ge "$listed" ] || problems+=("spiteware.ai is not serving today's apps")
+    link=""; [ "${live:-0}" -ge "$listed" ] && link="https://spiteware.ai/apps.html?sort=new"
+    check Site "$link" "not serving today's apps yet"
 
-    [ -n "$(uploaded "$DAY")" ] || problems+=("today's short is not on YouTube")
-    [ -n "$(posted "$DAY" tiktok)" ] || problems+=("today's short is not on TikTok")
-    [ -n "$(posted "$DAY" instagram)" ] || problems+=("today's short is not on Instagram")
+    link=$(uploaded "$DAY"); [ -n "$link" ] && link="https://youtube.com/shorts/$link"
+    check YouTube "$link" "not uploaded"
+    check TikTok "$(posted "$DAY" tiktok)" "not posted"
+    check Instagram "$(posted "$DAY" instagram)" "not posted"
+    check X "$(posted "$DAY" x)" "not posted"
 
-    report "${problems[@]}" || return 1
-    echo "=== all live: $listed apps, site, YouTube, TikTok and Instagram"
-    telegram "spiteware daily run $DAY: $listed new apps, all live.
-YouTube: https://youtube.com/shorts/$(uploaded "$DAY")
-TikTok: $(posted "$DAY" tiktok)
-Instagram: $(posted "$DAY" instagram)
-Site: https://spiteware.ai/apps.html?sort=new"
+    local body
+    body=$(printf '%s\n' "${lines[@]}")
+    if [ ${#failed[@]} -eq 0 ]; then
+        echo "=== all live: $listed apps, site, YouTube, TikTok, Instagram and X"
+        telegram "spiteware daily run $DAY: $listed new apps, all live.
+$body"
+        return 0
+    fi
+    local what
+    what=$(printf '%s, ' "${failed[@]}" | sed 's/, $//')
+    echo "=== ALERT: $what failed"
+    echo "spiteware daily run $DAY: $what failed. Log: $LOG" >> "$LOGS/FAILED"
+    telegram "spiteware daily run $DAY: $listed new apps. ${#failed[@]} of ${#lines[@]} failed ($what).
+$body
+Log: $LOG on claude-pi"
+    return 1
 }
 
 monthly() {

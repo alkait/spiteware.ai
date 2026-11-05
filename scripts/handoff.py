@@ -2,12 +2,13 @@
 """The words that go up with a daily short, and the checks on them.
 
 scripts/short.py checks the script's post block before it pays for a voice, and
-scripts/upload.py sends texts() as the video's title and description. TikTok and Instagram
+scripts/upload.py sends texts() as the video's title and description. TikTok, Instagram and X
 are posted through the browser by the /spite run, which takes its caption from here and notes
 each post here, so the runner can check it and a re-run cannot post the same day twice:
 
     python3 scripts/handoff.py --caption [DATE]
-    python3 scripts/handoff.py --posted tiktok|instagram URL [DATE]
+    python3 scripts/handoff.py --caption x [DATE]
+    python3 scripts/handoff.py --posted tiktok|instagram|x URL [DATE]
 
 The script's "post" block holds the only hand-written words: a title, a caption and the
 hashtags. The app list, builder credits and hall of fame links are filled in from
@@ -22,6 +23,8 @@ ROOT = Path(__file__).resolve().parent.parent
 POSTED = ROOT / "shorts" / ".cache" / "posted.json"
 SITE = "https://spiteware.ai"
 LIMITS = {"youtube title": 100, "youtube description": 5000}
+PLATFORMS = ("tiktok", "instagram", "x")
+X_LIMIT, X_URL = 280, 23  # X counts every link as 23 characters
 
 
 def show(target):
@@ -77,6 +80,21 @@ def social(script):
                         " ".join("#" + t for t in post["tags"])])
 
 
+def tweet(script):
+    """The X post: 280 characters, and a link that works, so it points at the day's apps.
+    The caption, then the hashtags, are dropped when it would run over."""
+    post, link = script["post"], f"{SITE}/apps.html?sort=new"
+    tags = " ".join("#" + t for t in post["tags"][:2])
+    for parts in ([post["title"], post["caption"], f"Every app is free: {link}", tags],
+                  [post["title"], post["caption"], f"Every app is free: {link}"],
+                  [post["title"], f"Every app is free: {link}", tags],
+                  [post["title"], f"Every app is free: {link}"]):
+        text = "\n\n".join(parts)
+        if len(text) - len(link) + X_URL <= X_LIMIT:
+            return text
+    sys.exit(f"The X post runs over {X_LIMIT} characters even with only the title")
+
+
 def note(where, url, date):
     """Record a live post in shorts/.cache/posted.json."""
     posted = json.loads(POSTED.read_text()) if POSTED.exists() else {}
@@ -86,12 +104,16 @@ def note(where, url, date):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--caption", nargs="?", const=datetime.date.today().isoformat(), metavar="DATE")
+    ap.add_argument("--caption", nargs="*", metavar="[x] [DATE]")
     ap.add_argument("--posted", nargs="+", metavar="WHERE URL [DATE]")
     args = ap.parse_args()
-    if args.caption:
-        print(social(json.loads((ROOT / "shorts" / f"{args.caption}.json").read_text())))
-    elif args.posted and args.posted[0] in ("tiktok", "instagram") and len(args.posted) in (2, 3):
-        note(args.posted[0], args.posted[1], (args.posted[2:] or [datetime.date.today().isoformat()])[0])
+    today = datetime.date.today().isoformat()
+    if args.caption is not None and len(args.caption) <= 2:
+        on_x = args.caption[:1] == ["x"]
+        date = (args.caption[1:] if on_x else args.caption) or [today]
+        script = json.loads((ROOT / "shorts" / f"{date[0]}.json").read_text())
+        print(tweet(script) if on_x else social(script))
+    elif args.posted and args.posted[0] in PLATFORMS and len(args.posted) in (2, 3):
+        note(args.posted[0], args.posted[1], (args.posted[2:] or [today])[0])
     else:
-        ap.error("pass --caption [DATE] or --posted tiktok|instagram URL [DATE]")
+        ap.error("pass --caption [x] [DATE] or --posted tiktok|instagram|x URL [DATE]")
