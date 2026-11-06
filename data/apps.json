@@ -7580,5 +7580,161 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-11-05"
+  },
+  {
+    "slug": "instability-control",
+    "name": "Instability Control",
+    "url": "https://github.com/instabilitycontrolracing/instability-control",
+    "icon": "🏎️",
+    "tagline": "A race engineer in your ear is a thing you pay for, apparently. Instability Control is the engineer, spotter, strategist and pit crew for iRacing, and it charges nothing, forever.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "There are tools that do some of this, but you pay for them.",
+      "source": "https://github.com/instabilitycontrolracing/instability-control#why-i-made-this"
+    },
+    "builder": {
+      "name": "instabilitycontrolracing",
+      "handle": "instabilitycontrolracing",
+      "url": "https://github.com/instabilitycontrolracing"
+    },
+    "tags": [
+      "windows",
+      "games"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "instabilitycontrolracing/instability-control",
+    "spite_score": 5,
+    "added": "2026-11-06"
+  },
+  {
+    "slug": "localpaint",
+    "name": "LocalPaint",
+    "url": "https://github.com/LeoDevRX/LMP",
+    "icon": "🎨",
+    "tagline": "Substance 3D Painter rents you the right to put rust on a crate. LocalPaint paints layers, smart materials and .sbsar files onto your models for free.",
+    "replaces": {
+      "name": "Substance 3D Painter",
+      "product": "Substance 3D Painter",
+      "price": "",
+      "source": "https://www.adobe.com/products/substance3d/plans.html"
+    },
+    "grudge": {
+      "quote": "It's a free alternative to paid material painting programs, for anyone who would rather not pay for a subscription or deal with licence restrictions.",
+      "source": "https://github.com/LeoDevRX/LMP#readme"
+    },
+    "builder": {
+      "name": "LeoDevRX",
+      "handle": "LeoDevRX",
+      "url": "https://github.com/LeoDevRX"
+    },
+    "tags": [
+      "windows",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "LeoDevRX/LMP",
+    "spite_score": 9,
+    "added": "2026-11-06"
+  },
+  {
+    "slug": "unsubbed-clients",
+    "name": "Unsubbed Clients",
+    "url": "https://unsubbed.github.io/clients/",
+    "icon": "🧾",
+    "tagline": "HoneyBook bills $36 a month so a freelancer can send an invoice. Unsubbed Clients writes the proposal, the contract and the invoice in a browser tab and bills nobody.",
+    "replaces": {
+      "name": "HoneyBook Starter",
+      "product": "HoneyBook",
+      "price": "$36/mo",
+      "source": "https://www.honeybook.com/pricing"
+    },
+    "grudge": {
+      "quote": "Subscriptions keep rising for tools people use a few times a month.",
+      "source": "https://unsubbed.org/about"
+    },
+    "builder": {
+      "name": "Zabir Mahmud",
+      "handle": "unsubbed",
+      "url": "https://github.com/unsubbed"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "unsubbed/clients",
+    "spite_score": 8,
+    "added": "2026-11-06"
+  },
+  {
+    "slug": "evrila",
+    "name": "Evrila",
+    "url": "https://evrila.eu/",
+    "icon": "🎬",
+    "tagline": "A video editor, an image editor and a file converter in one browser tab, with no subscription waiting for you at the export button.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The idea behind Evrila is simple: make useful creative tools accessible to everyone, directly from their browser, without having to download complicated software or pay expensive subscriptions.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xou31f/i_built_evrila_a_free_online_platform_for_video/"
+    },
+    "builder": {
+      "name": "Several-Ordinary-193",
+      "handle": "Several-Ordinary-193",
+      "url": "https://www.reddit.com/user/Several-Ordinary-193"
+    },
+    "tags": [
+      "web",
+      "video"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-11-06"
+  },
+  {
+    "slug": "konfeti",
+    "name": "Konfeti",
+    "url": "https://apps.apple.com/app/id6822419290",
+    "icon": "🎉",
+    "tagline": "Online card sites charge per card for a page of 'happy birthday'. Konfeti collects the whole group's messages from one link and charges per nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Paper cards don't reach remote people, and most online card sites charge per card.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xov5fi/i_built_a_free_group_card_app_one_link_everyone/"
+    },
+    "builder": {
+      "name": "Mehmet Kara",
+      "handle": "mehmetkara155",
+      "url": "https://www.reddit.com/user/mehmetkara155"
+    },
+    "tags": [
+      "ios",
+      "utilities"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 3,
+    "added": "2026-11-06"
   }
 ]

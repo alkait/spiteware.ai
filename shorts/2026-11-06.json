@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-06",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "thumb": "unsubbed-clients",
+  "post": {
+    "title": "HoneyBook wants $36 a month to send an invoice. This doesn't.",
+    "caption": "Five fresh grudges: proposals and invoices without HoneyBook's monthly bill, a 3D texture painter without the Substance subscription, a free race engineer for iRacing, and two more.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "freelance"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 6th.", "say": "November sixth.", "step": "date"},
+      {"cap": "Five new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "unsubbed-clients",
+     "quote": "Subscriptions keep rising for tools people use a few times a month.",
+     "cues": [
+      {"cap": "HoneyBook wants $36 a month", "say": "HoneyBook wants thirty-six dollars a month", "step": "badge"},
+      {"cap": "to send an invoice.", "step": "badge"},
+      {"cap": "Zabir Mahmud:", "say": "[matter-of-fact] Zah-beer Mah-mood:", "step": "quote"},
+      {"cap": "“Subscriptions keep rising", "say": "[sarcastic] Subscriptions keep rising", "step": "quote"},
+      {"cap": "for tools people use a few times a month.”", "say": "for tools people use a few times a month.", "step": "quote"},
+      {"cap": "So: Unsubbed Clients. One tab.", "say": "[quick] So: Unsubbed Clients. One browser tab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "localpaint",
+     "quote": "It's a free alternative to paid material painting programs", "cut": true,
+     "gripe": "A subscription to paint rust on a crate.",
+     "cues": [
+      {"cap": "A subscription to paint rust on a crate.", "step": "gripe"},
+      {"cap": "LeoDevRX:", "say": "[matter-of-fact] Leo Dev R X:", "step": "quote"},
+      {"cap": "“It's a free alternative", "say": "[sarcastic] It's a free alternative", "step": "quote"},
+      {"cap": "to paid material painting programs”", "say": "to paid material painting programs.", "step": "quote"},
+      {"cap": "So: LocalPaint. Open source.", "say": "[quick] So: Local Paint. Open source.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "instability-control", "score": false,
+     "quote": "There are tools that do some of this, but you pay for them.",
+     "gripe": "Paying extra to hear “box, box.”",
+     "cues": [
+      {"cap": "Paying extra to hear “box, box.”", "say": "Paying extra to hear: box, box.", "step": "gripe"},
+      {"cap": "Instability Control Racing:", "say": "[matter-of-fact] Instability Control Racing:", "step": "quote"},
+      {"cap": "“There are tools that do some of this,", "say": "[sarcastic] There are tools that do some of this,", "step": "quote"},
+      {"cap": "but you pay for them.”", "say": "but you pay for them.", "step": "quote"},
+      {"cap": "So: a race engineer for iRacing.", "say": "[quick] So: a race engineer for eye-racing.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus two more", "say": "[upbeat] Plus two more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

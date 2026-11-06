@@ -1,0 +1,20 @@
+{
+  "run": "2026-11-06",
+  "swept": "hn (48h), reddit (selfhosted, webdev, vibecoding, indiehackers rate-limited 429), github",
+  "raw_hits": 435,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "EnviousWispr: local Wispr Flow + Granola, but no grudge sentence in the post (gate 1)",
+    "OpenHuman (Superhuman clone): builder is a happy Superhuman user, no grudge, as dropped 2026-11-05 (gate 1)",
+    "OpenClicky: dropped 2026-10-09, still no grudge, just 'closed source with a paid plan' comparison (gate 1)",
+    "cutout (unsubbed): dropped 2026-10-15, remove.bg closing is not a price (gate 1)",
+    "MacroPaste: one-time purchase (gate 2)",
+    "Uncapped, Practical: free trial (gate 2)",
+    "Mirrorr: free for personal use only, paid otherwise (gate 2)",
+    "Shotorio: App Store giveaway, paid app (gate 2)",
+    "amv-cp-bridge: needs an organisation's M365 Copilot account and drives its web session; not a standalone free app",
+    "Clock-in', PeptyTrack, budget-tracker, BlackMiro, cutbycut, ClipboardHistory, HealthyMac, jmptab, Klipo: 'no subscription' as a feature, no grudge sentence (gate 1)",
+    "TubeHaus, Tunefield, oldTunes, MeetCrate, MyArc, Skykeep, Inbox Classic, ChannelVault, Setforge, MoneyVaults, noentiendo: no grudge in post, comments or README (gate 1)"
+  ]
+}
