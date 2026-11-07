@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-07",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "fatsearch",
+  "post": {
+    "title": "Firecrawl wants $19 a month to read the web. FATSEARCH doesn't.",
+    "caption": "Two fresh grudges: web reading for AI agents without Firecrawl's monthly bill, and a spending tracker that never asks for your bank login.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "aiagents"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 7th.", "say": "November seventh.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "fatsearch",
+     "quote": "Tools like Firecrawl or Tavily get expensive fast",
+     "cues": [
+      {"cap": "Firecrawl wants $19 a month", "say": "Firecrawl wants nineteen dollars a month", "step": "badge"},
+      {"cap": "to read a web page for your agent.", "step": "badge"},
+      {"cap": "blabluhblah:", "say": "[matter-of-fact] blah-bluh-blah:", "step": "quote"},
+      {"cap": "“Tools like Firecrawl or Tavily", "say": "[sarcastic] Tools like Firecrawl or Tavily", "step": "quote"},
+      {"cap": "get expensive fast”", "say": "get expensive fast.", "step": "quote"},
+      {"cap": "So: FATSEARCH. Open source.", "say": "[quick] So: Fat Search. Open source.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "pocketflow", "score": false,
+     "quote": "I got tired of modern budgeting apps charging $10–$15/month subscriptions just to tell me what I already know", "cut": true,
+     "gripe": "A monthly fee to learn you spent money.",
+     "cues": [
+      {"cap": "A monthly fee to learn you spent money.", "step": "gripe"},
+      {"cap": "PrideAccomplished223:", "say": "[matter-of-fact] Pride Accomplished two two three:", "step": "quote"},
+      {"cap": "“I got tired of modern budgeting apps", "say": "[sarcastic] I got tired of modern budgeting apps", "step": "quote"},
+      {"cap": "charging $10–$15/month subscriptions", "say": "charging ten to fifteen dollars a month in subscriptions", "step": "quote"},
+      {"cap": "just to tell me what I already know”", "say": "just to tell me what I already know.", "step": "quote"},
+      {"cap": "So: PocketFlow. No bank login.", "say": "[quick] So: Pocket Flow. No bank login.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

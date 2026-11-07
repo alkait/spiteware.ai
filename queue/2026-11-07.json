@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-07",
+  "swept": "hn (48h), reddit (selfhosted, webdev, vibecoding, indiehackers rate-limited 429), github",
+  "raw_hits": 387,
+  "triaged": 31,
+  "candidates": [],
+  "dropped": [
+    "Wormhole (Beam clone): grudge is real ('too expensive and needs an account') but it is free for one window, pay once for more (gate 2)",
+    "Musou: 14-day trial, then monthly, annual or $49.99 lifetime plans (gate 2)",
+    "ivyNote: ivyNote Cloud plans (gate 2)",
+    "Monetor: has a pricing section (gate 2)",
+    "Glocker: 'none of the commercial offerings worked properly', a quality complaint, and being productized (gate 1)",
+    "Hyperbutler: 'free at any company size' is a feature line, no grudge sentence against Docker Desktop (gate 1)",
+    "LinkedIn note extension: real paywall grudge, but no public link ('dm for link')",
+    "IPVIO Stream: built against TiviMate's missing features, not its price (gate 1)",
+    "Stat Space, Shotorio, wrong-layout converter, Cloud Media Shrinker, Screen Gist, Practical, Uncapped: paid apps (gate 2)",
+    "My cooking app raised its price: the replacement sells for a third of the price (gate 2)",
+    "lobbyboard, old-phone-cctv, intercom, BlackMiro, OPEN_QR, crypto-portfolio-tracker, local-ai-server, open-voice-studio: 'no subscription' as a feature, no grudge sentence (gate 1)",
+    "PDFReader, ezman, music-sync, tuna-tv, HumanizeAnythingFully: 'free alternative' tagline only, no grudge (gate 1)",
+    "Win Stats, Handbrake, Amvo, Formatide, Phone Link for macOS, Moosik, finances: no grudge in post or README (gate 1)",
+    "EnviousWispr, OpenClicky, TubeHaus, Tunefield, oldTunes, MeetCrate, MyArc, MoneyVaults, noentiendo: dropped on 2026-11-06, nothing new (gate 1)",
+    "llm-cli-gateway, clibridge, Makoda: route existing paid subscriptions, not a free replacement"
+  ]
+}

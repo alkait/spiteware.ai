@@ -7736,5 +7736,69 @@
     "repo": "",
     "spite_score": 3,
     "added": "2026-11-06"
+  },
+  {
+    "slug": "fatsearch",
+    "name": "FATSEARCH",
+    "url": "https://github.com/fatsearch/fatsearch",
+    "icon": "🔎",
+    "tagline": "Firecrawl charges $19 a month to read the web for your agent. This reads it on your own connection and hands over only the part you asked for.",
+    "replaces": {
+      "name": "Firecrawl Hobby",
+      "product": "Firecrawl",
+      "price": "$19/mo",
+      "source": "https://www.firecrawl.dev/pricing"
+    },
+    "grudge": {
+      "quote": "Tools like Firecrawl or Tavily get expensive fast",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1xpf4nc/annoyed_of_wasted_tokens_money_by_agents_on_web/"
+    },
+    "builder": {
+      "name": "blabluhblah",
+      "handle": "blabluhblah",
+      "url": "https://www.reddit.com/user/blabluhblah"
+    },
+    "tags": [
+      "local-first",
+      "byo-key",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "fatsearch/fatsearch",
+    "spite_score": 8,
+    "added": "2026-11-07"
+  },
+  {
+    "slug": "pocketflow",
+    "name": "PocketFlow",
+    "url": "https://pocket-flow-one.vercel.app/",
+    "icon": "💸",
+    "tagline": "Budgeting apps charge $15 a month to tell you that you spent money. This tells you for free, offline, without ever seeing your bank login.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I got tired of modern budgeting apps charging $10–$15/month subscriptions just to tell me what I already know, while demanding full read-access to my bank credentials.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xpr6gx/i_built_an_offlinefirst_spending_tracker_pwa_with/"
+    },
+    "builder": {
+      "name": "PrideAccomplished223",
+      "handle": "PrideAccomplished223",
+      "url": "https://www.reddit.com/user/PrideAccomplished223"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "mohammedissah/PocketFlow",
+    "spite_score": 5,
+    "added": "2026-11-07"
   }
 ]
