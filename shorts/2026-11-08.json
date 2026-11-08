@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-08",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "vow",
+  "post": {
+    "title": "Forfeit wants $10.99 a month to keep your promises. Vow doesn't.",
+    "caption": "Two fresh grudges: commitment contracts without Forfeit's subscription, and a PDF editor that marks up, merges and splits without Acrobat Pro.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "productivity"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 8th.", "say": "November eighth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "vow",
+     "quote": "Built as a free alternative to Forfeit (forfeit.app), which charges a subscription and keeps forfeited stakes.",
+     "cues": [
+      {"cap": "Forfeit wants $10.99 a month", "say": "Forfeit wants ten ninety-nine a month", "step": "badge"},
+      {"cap": "to hold you to your own promises.", "step": "badge"},
+      {"cap": "Juwen Lie:", "say": "[matter-of-fact] Joo-wen Lee:", "step": "quote"},
+      {"cap": "“Built as a free alternative to Forfeit (forfeit.app),", "say": "[sarcastic] Built as a free alternative to Forfeit, forfeit dot app,", "step": "quote"},
+      {"cap": "which charges a subscription", "step": "quote"},
+      {"cap": "and keeps forfeited stakes.”", "say": "and keeps forfeited stakes.", "step": "quote"},
+      {"cap": "So: Vow. Your stake goes to your cause.", "say": "[quick] So: Vow. Your stake goes to your cause.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "open-pdf-writer-pro",
+     "quote": "Open PDF Writer Pro is for when you need to mark them up, review them, and fix them — without paying $180+/year for the privilege.",
+     "gripe": "Acrobat keeps the good tools behind Pro.",
+     "cues": [
+      {"cap": "Acrobat keeps the good tools behind Pro.", "step": "gripe"},
+      {"cap": "foyrasel:", "say": "[matter-of-fact] foy-rah-sell:", "step": "quote"},
+      {"cap": "“Open PDF Writer Pro is for when you need", "say": "[sarcastic] Open PDF Writer Pro is for when you need", "step": "quote"},
+      {"cap": "to mark them up, review them, and fix them", "step": "quote"},
+      {"cap": "— without paying $180+/year", "say": "without paying a hundred and eighty dollars a year", "step": "quote"},
+      {"cap": "for the privilege.”", "say": "for the privilege.", "step": "quote"},
+      {"cap": "So: Open PDF Writer Pro. The Pro is free.", "say": "[quick] So: Open P D F Writer Pro. The Pro is free.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

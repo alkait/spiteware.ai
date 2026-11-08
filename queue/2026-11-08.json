@@ -1,0 +1,21 @@
+{
+  "run": "2026-11-08",
+  "swept": "hn (48h), reddit (selfhosted, webdev, vibecoding, indiehackers rate-limited 429), github",
+  "raw_hits": 317,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "ElevenVoice: a one-commit rebrand of debpalash/VoiceStudio, not the builder's own app",
+    "withoutBG: credits, free trial and pricing on withoutbg.com (gate 2)",
+    "Sheen: 'no subscription' and a CleanMyMac price table, no grudge sentence in the builder's words (gate 1)",
+    "Pouchy: README links its download back to itself, created today with no releases or stars; unverifiable, not listed",
+    "IFTTT credits migration kit: a consultancy's migration kit, not a free replacement app",
+    "Local-Generative-Design-Sim: empty repository",
+    "topic-radar: 'no subscription' as a feature, no victim or grudge (gate 1)",
+    "AppleAppLock, lobbyboard, yt-channel-whitelist, cd-wallet, pdfstudio, OpenToolKit: 'no subscription' as a feature, no grudge sentence (gate 1)",
+    "Shoebox PDF, Cloud Media Shrinker, Stat Space, BillAlert, Pocket+: paid unlock, Pro or ads (gate 2)",
+    "PDF read-aloud app (r/SideProject): real price grudge but only a video link; the app's pricing could not be checked",
+    "myhouse, Splitsetter, Moosik, Conducted, Phone Link for macOS, Handbrake: grudge about UX or features, not price (gate 1)",
+    "FreeAPI, Makoda, OS Grokbot: route existing paid subscriptions, not a free replacement"
+  ]
+}

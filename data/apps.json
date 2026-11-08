@@ -7800,5 +7800,69 @@
     "repo": "mohammedissah/PocketFlow",
     "spite_score": 5,
     "added": "2026-11-07"
+  },
+  {
+    "slug": "vow",
+    "name": "Vow",
+    "url": "https://juw12.github.io/vow/",
+    "icon": "🤝",
+    "tagline": "Forfeit charges $10.99 a month to hold your promises hostage. Vow does it free, and the only thing it keeps is your witness on speed dial.",
+    "replaces": {
+      "name": "Forfeit",
+      "product": "Forfeit",
+      "price": "$10.99/mo",
+      "source": "https://forfeit.app/"
+    },
+    "grudge": {
+      "quote": "Built as a free alternative to Forfeit (forfeit.app), which charges a subscription and keeps forfeited stakes.",
+      "source": "https://github.com/juw12/vow"
+    },
+    "builder": {
+      "name": "Juwen Lie",
+      "handle": "juw12",
+      "url": "https://github.com/juw12"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "juw12/vow",
+    "spite_score": 8,
+    "added": "2026-11-08"
+  },
+  {
+    "slug": "open-pdf-writer-pro",
+    "name": "Open PDF Writer Pro",
+    "url": "https://github.com/foyrasel/Open-PDF-Writer-Pro",
+    "icon": "🖍️",
+    "tagline": "Acrobat locks page operations and review marks behind Pro. This one marks up, merges and splits for nothing, and the Pro is just in the name.",
+    "replaces": {
+      "name": "Adobe Acrobat Pro",
+      "product": "Adobe Acrobat",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Open PDF Writer Pro is for when you need to mark them up, review them, and fix them — without paying $180+/year for the privilege.",
+      "source": "https://github.com/foyrasel/Open-PDF-Writer-Pro"
+    },
+    "builder": {
+      "name": "foyrasel",
+      "handle": "foyrasel",
+      "url": "https://github.com/foyrasel"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "foyrasel/Open-PDF-Writer-Pro",
+    "spite_score": 7,
+    "added": "2026-11-08"
   }
 ]
