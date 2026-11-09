@@ -1,0 +1,22 @@
+{
+  "run": "2026-11-09",
+  "swept": "hn (48h), reddit (SideProject, ClaudeAI, macapps, opensource; selfhosted, webdev, vibecoding, indiehackers rate-limited 429), github",
+  "raw_hits": 294,
+  "triaged": 19,
+  "candidates": [],
+  "dropped": [
+    "ElevenVoice: still a rebrand of debpalash/VoiceStudio (13 commits; the site says 'Based on VoiceStudio'), same call as 2026-11-08",
+    "Meetlaud: pre-release, not on the App Store or TestFlight yet; nothing to install without building it in Xcode. Good grudge, list it when it ships",
+    "Pouchy: 'a free alternative to Dropover and Yoink' is a positioning line, no grudge in the builder's words; source-available, still no releases (gate 1)",
+    "eyeSpy: 'without their cloud or subscription' is a comparison table line, not a grudge in the builder's words (gate 1)",
+    "MacGet: the why is TCP resets, not a price (gate 1)",
+    "Kinoklip: the grudge is DaVinci Resolve's Linux install, and Resolve is free (gate 1)",
+    "Track Pocket / Tune Pocket: grudge is against ads, not a price; no victim (unsure, dropped)",
+    "Conducted: rebuilt because Conductor sold to Meta, not over a price (gate 1)",
+    "Gitbet: Sourcetree is free; the reason is Linux support (gate 1)",
+    "Notekpr: a paid cloud service and free tier are planned (open-core)",
+    "Webcrawl: from Brainfish, a company; 'open-source alternative to Firecrawl' is a competitor, not a grudge",
+    "Amour, VOID, Mini-Reader-Solo, Qraftify: one-line READMEs, 'no subscription' with no grudge sentence (gate 1)",
+    "Tomorrow, Monigo, MKCinema, ytwatch, and the r/macapps paid apps (Bibliome, Classycal, Folder Quick Look, Pocket+): no grudge, or a paid app (gates 1/2)"
+  ]
+}

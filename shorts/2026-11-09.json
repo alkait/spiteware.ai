@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-09",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "retouch",
+  "post": {
+    "title": "Photoshop wants $22.99 a month. Retouch kept the 5% that got used.",
+    "caption": "Three fresh grudges: a Mac photo editor with only the Photoshop tools that got used, a menu bar world clock without Dato's price, and an IDM-style download manager with no licence nags.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 9th.", "say": "November ninth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "retouch",
+     "quote": "I pay for Photoshop and use maybe 5% of it.",
+     "cues": [
+      {"cap": "Photoshop wants $22.99 a month", "say": "Photoshop wants twenty-two ninety-nine a month", "step": "badge"},
+      {"cap": "for every tool, used or not.", "step": "badge"},
+      {"cap": "Matthew Clapp:", "say": "[matter-of-fact] Matthew Clapp:", "step": "quote"},
+      {"cap": "“I pay for Photoshop", "say": "[sarcastic] I pay for Photoshop", "step": "quote"},
+      {"cap": "and use maybe 5% of it.”", "say": "and use maybe five percent of it.", "step": "quote"},
+      {"cap": "So: Retouch. Just the 5%.", "say": "[quick] So: Retouch. Just the five percent.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "multiclock-free",
+     "quote": "A free alternative to Dato ($7.99), World Clock Pro ($5.99)",
+     "cut": true,
+     "gripe": "Paying extra for a second clock.",
+     "cues": [
+      {"cap": "Paying extra for a second clock.", "step": "gripe"},
+      {"cap": "FedrBodrLain:", "say": "[matter-of-fact] Fedder Bodder Lane:", "step": "quote"},
+      {"cap": "“A free alternative to Dato ($7.99),", "say": "[sarcastic] A free alternative to Dato, seven ninety-nine,", "step": "quote"},
+      {"cap": "World Clock Pro ($5.99)…”", "say": "World Clock Pro, five ninety-nine.", "step": "quote"},
+      {"cap": "So: MultiClock Free. Two time zones.", "say": "[quick] So: MultiClock Free. Two time zones.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "mister-download-manager",
+     "quote": "I honestly never liked the licence nags.",
+     "gripe": "Internet Download Manager nags for a licence.",
+     "cues": [
+      {"cap": "Internet Download Manager nags for a licence.", "step": "gripe"},
+      {"cap": "Ahmed Nefzaoui:", "say": "[matter-of-fact] Ahmed Nef-zah-wee:", "step": "quote"},
+      {"cap": "“I honestly never liked", "say": "[sarcastic] I honestly never liked", "step": "quote"},
+      {"cap": "the licence nags.”", "say": "the licence nags.", "step": "quote"},
+      {"cap": "So: Mister Download Manager.", "say": "[quick] So: Mister Download Manager.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

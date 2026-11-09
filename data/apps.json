@@ -7864,5 +7864,98 @@
     "repo": "foyrasel/Open-PDF-Writer-Pro",
     "spite_score": 7,
     "added": "2026-11-08"
+  },
+  {
+    "slug": "retouch",
+    "name": "Retouch",
+    "url": "https://github.com/nautis/retouch",
+    "icon": "🩹",
+    "tagline": "Read its own Photoshop logs, kept the 5% that got used, and stopped paying for the other 95.",
+    "replaces": {
+      "name": "Adobe Photoshop",
+      "product": "Adobe Photoshop",
+      "price": "$22.99/mo",
+      "source": "https://www.adobe.com/products/photoshop/plans.html?country=US"
+    },
+    "grudge": {
+      "quote": "I pay for Photoshop and use maybe 5% of it.",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1xrduqg/i_had_claude_code_read_my_photoshop_usage_logs/"
+    },
+    "builder": {
+      "name": "Matthew Clapp",
+      "handle": "nautis",
+      "url": "https://github.com/nautis"
+    },
+    "tags": [
+      "macos",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "nautis/retouch",
+    "spite_score": 10,
+    "added": "2026-11-09"
+  },
+  {
+    "slug": "mister-download-manager",
+    "name": "Mister Download Manager",
+    "url": "https://misterdownloadmanager.com",
+    "icon": "⬇️",
+    "tagline": "The download manager you know, minus the 30-day countdown and the licence nag at the end of it.",
+    "replaces": {
+      "name": "Internet Download Manager",
+      "product": "Internet Download Manager",
+      "price": "",
+      "source": "https://www.internetdownloadmanager.com/buy.html"
+    },
+    "grudge": {
+      "quote": "I honestly never liked the licence nags.",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1xqy0s6/i_used_claude_code_to_rebuild_idm_as_a_free/"
+    },
+    "builder": {
+      "name": "Ahmed Nefzaoui",
+      "handle": "anefzaoui",
+      "url": "https://github.com/anefzaoui"
+    },
+    "tags": [
+      "windows",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "anefzaoui/misterdownloadmanager",
+    "spite_score": 9,
+    "added": "2026-11-09"
+  },
+  {
+    "slug": "multiclock-free",
+    "name": "MultiClock Free",
+    "url": "https://github.com/FedrBodrLain/multiclock-free",
+    "icon": "🕰️",
+    "tagline": "Two time zones in the menu bar. That is the whole app, and that is why it costs nothing.",
+    "replaces": {
+      "name": "Dato",
+      "product": "Dato",
+      "price": "$18 one-time",
+      "source": "https://sindresorhus.com/dato"
+    },
+    "grudge": {
+      "quote": "A free alternative to Dato ($7.99), World Clock Pro ($5.99) and similar paid menu bar clocks, for the one thing most people need: my time and their time.",
+      "source": "https://github.com/FedrBodrLain/multiclock-free"
+    },
+    "builder": {
+      "name": "FedrBodrLain",
+      "handle": "FedrBodrLain",
+      "url": "https://github.com/FedrBodrLain"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "FedrBodrLain/multiclock-free",
+    "spite_score": 10,
+    "added": "2026-11-09"
   }
 ]
