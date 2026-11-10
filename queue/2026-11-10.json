@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-10",
+  "swept": "hn (48h), reddit (SideProject, selfhosted, vibecoding, webdev, indiehackers; opensource, macapps, ClaudeAI rate-limited 429), github",
+  "raw_hits": 320,
+  "triaged": 17,
+  "candidates": [],
+  "dropped": [
+    "Hourbun: Harvest's 10x price jack is a real grudge, but it has a 14-day trial (paid product)",
+    "TimeScroll: built because Rewind shut down, not over a price",
+    "Siftora: 'alternative to Opus Clip ... with no subscription' describes the app, no sentence on why it was built instead of paying",
+    "MacFresh: CleanMyMac alternative, README has no grudge sentence",
+    "Hub Rider (Freehub): 'No Zwift subscription needed' is a feature line, not a grudge",
+    "HeliosGen: no grudge, just a feature list",
+    "AlyxCut: no grudge, no victim named",
+    "GerGit: built because Fork has no Linux build, not over price",
+    "Gitbet: Sourcetree is free; the reason is platform",
+    "Layr PDF: paid ($35/yr, 7-day trial)",
+    "Jot: paid one-time licence",
+    "Notekpr: paid cloud tier planned",
+    "Webcrawl: from brainfish-ai, a company; no grudge in the post",
+    "A free replacement for House Stock Watcher: no post text, no grudge",
+    "Kiiwi, Gimbap, Hyper Compress, PageCarry, Privacy First Compress, Reges Code: no grudge in post or comments"
+  ]
+}

@@ -7957,5 +7957,68 @@
     "repo": "FedrBodrLain/multiclock-free",
     "spite_score": 10,
     "added": "2026-11-09"
+  },
+  {
+    "slug": "novelmaker",
+    "name": "Novelmaker",
+    "url": "https://github.com/maniesoft/Novelmaker-public",
+    "icon": "📖",
+    "tagline": "The AI writing room for novels, minus the subscription that kept billing through every writer's block.",
+    "replaces": {
+      "name": "Novelcrafter Hobbyist",
+      "product": "Novelcrafter",
+      "price": "$8/mo",
+      "source": "https://www.novelcrafter.com/pricing"
+    },
+    "grudge": {
+      "quote": "I just wanted it without a website and without a subscription.",
+      "source": "https://github.com/maniesoft/Novelmaker-public#why-novelmaker-exists"
+    },
+    "builder": {
+      "name": "maniesoft",
+      "handle": "maniesoft",
+      "url": "https://github.com/maniesoft"
+    },
+    "tags": [
+      "local-first",
+      "byo-key",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "maniesoft/Novelmaker-public",
+    "spite_score": 8,
+    "added": "2026-11-10"
+  },
+  {
+    "slug": "driftcast",
+    "name": "Driftcast",
+    "url": "https://github.com/leechsoftware/driftcast",
+    "icon": "📺",
+    "tagline": "Your MKV, on the TV, for free. Six paid casting apps just lost a customer.",
+    "replaces": {
+      "name": "Airflow",
+      "product": "Airflow",
+      "price": "$18.99 one-time",
+      "source": "https://airflow.app/"
+    },
+    "grudge": {
+      "quote": "Playing a video from your Mac on the TV shouldn't cost money, need an account, or turn into an evening of fiddling.",
+      "source": "https://github.com/leechsoftware/driftcast#why"
+    },
+    "builder": {
+      "name": "Shawn Reimerdes",
+      "handle": "leechsoftware",
+      "url": "https://github.com/leechsoftware"
+    },
+    "tags": [
+      "macos",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "leechsoftware/driftcast",
+    "spite_score": 8,
+    "added": "2026-11-10"
   }
 ]
