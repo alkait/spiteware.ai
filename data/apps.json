@@ -8020,5 +8020,194 @@
     "repo": "leechsoftware/driftcast",
     "spite_score": 8,
     "added": "2026-11-10"
+  },
+  {
+    "slug": "homeroll",
+    "name": "HomeRoll",
+    "url": "https://github.com/silentprovider423/HomeRoll",
+    "icon": "📸",
+    "tagline": "Apple bills you monthly to hold your own photos. HomeRoll keeps the Photos app feel and moves the library home.",
+    "replaces": {
+      "name": "iCloud+",
+      "product": "iCloud+",
+      "price": "",
+      "source": "https://www.apple.com/icloud/"
+    },
+    "grudge": {
+      "quote": "I got tired of paying Apple every month to keep my own photos, so I moved ~85,000 photos and videos to my own server (Immich) and switched iCloud Photos off.",
+      "source": "https://www.reddit.com/r/ClaudeAI/comments/1xsvh4x/i_reverseengineered_apple_photos_and_rebuilt_it/"
+    },
+    "builder": {
+      "name": "silentprovider423",
+      "handle": "silentprovider423",
+      "url": "https://github.com/silentprovider423"
+    },
+    "tags": [
+      "ios",
+      "self-hosted",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "silentprovider423/HomeRoll",
+    "spite_score": 9,
+    "added": "2026-11-11"
+  },
+  {
+    "slug": "simstim",
+    "name": "Simstim",
+    "url": "https://simstim.tech/",
+    "icon": "🎙️",
+    "tagline": "Granola wanted an account and $14 a month to let you read your own calls. Simstim hands them over as Markdown, free.",
+    "replaces": {
+      "name": "Granola Business",
+      "product": "Granola",
+      "price": "$14/user/mo",
+      "source": "https://www.granola.ai/pricing"
+    },
+    "grudge": {
+      "quote": "I needed an account and a subscription for doing basic things.",
+      "source": "https://news.ycombinator.com/item?id=50439671"
+    },
+    "builder": {
+      "name": "Pavel Hrakovich",
+      "handle": "pgrekovich",
+      "url": "https://github.com/pgrekovich"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "pgrekovich/simstim",
+    "spite_score": 8,
+    "added": "2026-11-11"
+  },
+  {
+    "slug": "weltbon",
+    "name": "Weltbon",
+    "url": "https://github.com/Yalton/Weltbon",
+    "icon": "🗺️",
+    "tagline": "Campfire put your fantasy world on a $12 monthly lease. Weltbon moves it to your own server, rent-free.",
+    "replaces": {
+      "name": "Campfire Standard Monthly",
+      "product": "Campfire",
+      "price": "$12/mo",
+      "source": "https://blog.chapter.pub/campfire-pricing/"
+    },
+    "grudge": {
+      "quote": "I've used Campfire, but it moved to a subscription model, and most of the other tools live on someone else's website.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xsy6ze/weltbon_opensource_selfhostable_worldbuilding_app/"
+    },
+    "builder": {
+      "name": "Dalton Bailey",
+      "handle": "Yalton",
+      "url": "https://github.com/Yalton"
+    },
+    "tags": [
+      "self-hosted",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Yalton/Weltbon",
+    "spite_score": 8,
+    "added": "2026-11-11"
+  },
+  {
+    "slug": "satori",
+    "name": "Satori",
+    "url": "https://github.com/TinkeringDao/satori",
+    "icon": "🎤",
+    "tagline": "Voice note apps charge monthly to upload your thoughts to their cloud. Satori keeps them on the phone for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I didn't have the time to audition a dozen different note-taking apps, and I refused to pay recurring subscriptions just to hand my private voice recordings and personal reflections over to someone else's cloud servers.",
+      "source": "https://github.com/TinkeringDao/satori#why-i-built-satori"
+    },
+    "builder": {
+      "name": "TinkeringDao",
+      "handle": "TinkeringDao",
+      "url": "https://github.com/TinkeringDao"
+    },
+    "tags": [
+      "local-first",
+      "privacy",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "TinkeringDao/satori",
+    "spite_score": 5,
+    "added": "2026-11-11"
+  },
+  {
+    "slug": "luminaclean",
+    "name": "LuminaClean",
+    "url": "https://github.com/sadik254/LuminaClean",
+    "icon": "🧹",
+    "tagline": "Mac cleaners charge $30 to $40 a year to empty your caches. LuminaClean takes out the trash for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Created as a free, open-source alternative to commercial Mac utility subscriptions ($30–$40/year) that charge users for routine filesystem pruning.",
+      "source": "https://github.com/sadik254/LuminaClean"
+    },
+    "builder": {
+      "name": "MD Saleh Sadik",
+      "handle": "sadik254",
+      "url": "https://github.com/sadik254"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "sadik254/LuminaClean",
+    "spite_score": 5,
+    "added": "2026-11-11"
+  },
+  {
+    "slug": "auto-task",
+    "name": "Auto-Task",
+    "url": "https://github.com/gamers402/Auto-Task",
+    "icon": "🖱️",
+    "tagline": "Fancy auto clickers want money to click a mouse. Auto-Task clicks it for free.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "fancy auto clickers are expensive, so i made this instead.",
+      "source": "https://github.com/gamers402/Auto-Task"
+    },
+    "builder": {
+      "name": "Nadir",
+      "handle": "gamers402",
+      "url": "https://github.com/gamers402"
+    },
+    "tags": [
+      "desktop",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "gamers402/Auto-Task",
+    "spite_score": 5,
+    "added": "2026-11-11"
   }
 ]

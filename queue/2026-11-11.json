@@ -1,0 +1,23 @@
+{
+  "run": "2026-11-11",
+  "swept": "hn (48h), reddit (r/macapps, r/SideProject, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited), github",
+  "raw_hits": 433,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "Hourbun, TimeScroll, GerGit, House Stock Watcher replacement: already decided in queue/2026-11-10.json",
+    "Workspace.mac: Boxy Suite's $39/year is a comparison line, no sentence on why it was built",
+    "sisu: repo is a one-line slogan, no README, no grudge sentence",
+    "Umless: Wispr Flow appears only in a feature-comparison FAQ, no grudge",
+    "NekoTrail: Conductor alternative with no stated grudge",
+    "PDFMeasure: frustrated by complex software, not by its price",
+    "Faux Show: left the Ring ecosystem for local control, not over a price",
+    "LokalBot: Granola is a comparison line, no grudge",
+    "erhu, Lumtub, gym-timer-pro, lapsewerk, Rockyx Auto-Clipper, TeleCloud, BantuPOS: 'no subscription' or 'free forever' is a feature line, not a grudge",
+    "71-OpenSource-LocalDictation-2026-11-8: Wispr Flow named as a feature line only; throwaway dated repo name",
+    "Natel: moved off Google Contacts for self-hosting, not price",
+    "Favorable Investors: a trading-calls community, not an app",
+    "Filepeek, Negs, Gauge, Notebook AI, FilmCraft, RiffWright, LocalGearbox, Todaypad, Rambler, Just Dashboard, dependency-free RSS reader: no grudge in post or comments",
+    "TabPug, ScreenGo, Misuro, smush, Xul Valley and other r/macapps launches: paid apps"
+  ]
+}

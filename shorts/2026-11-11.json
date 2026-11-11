@@ -1,0 +1,181 @@
+{
+  "date": "2026-11-11",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 3,
+  "thumb": "homeroll",
+  "post": {
+    "title": "iCloud+ bills you monthly for your own photos. HomeRoll doesn't.",
+    "caption": "Six fresh grudges: a Photos-style app for your own photo server, call transcripts kept as plain Markdown, a self-hosted worldbuilding app, and three more built instead of paying.",
+    "tags": [
+      "freesoftware",
+      "indiedev",
+      "subscriptions",
+      "selfhosted",
+      "opensource"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "November 11th.",
+          "say": "November eleventh.",
+          "step": "date"
+        },
+        {
+          "cap": "Six new grudges.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "homeroll",
+      "quote": "I got tired of paying Apple every month to keep my own photos",
+      "cut": true,
+      "gripe": "Renting space for your own photos.",
+      "cues": [
+        {
+          "cap": "Renting space for your own photos.",
+          "step": "gripe"
+        },
+        {
+          "cap": "silentprovider423:",
+          "say": "[matter-of-fact] Silent provider four-two-three:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I got tired of paying Apple every month",
+          "say": "[sarcastic] I got tired of paying Apple every month",
+          "step": "quote"
+        },
+        {
+          "cap": "to keep my own photos…”",
+          "say": "to keep my own photos.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: HomeRoll. Your server, Photos feel.",
+          "say": "[quick] So: Home Roll. Your server, Photos feel.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "simstim",
+      "quote": "I needed an account and a subscription for doing basic things.",
+      "cues": [
+        {
+          "cap": "Granola wants $14 a month",
+          "say": "Granola wants fourteen dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "for your own meeting notes.",
+          "step": "badge"
+        },
+        {
+          "cap": "Pavel Hrakovich:",
+          "say": "[matter-of-fact] Pavel Hra-KO-vich:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I needed an account and a subscription",
+          "say": "[sarcastic] I needed an account and a subscription",
+          "step": "quote"
+        },
+        {
+          "cap": "for doing basic things.”",
+          "say": "for doing basic things.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Simstim. Your calls, as Markdown.",
+          "say": "[quick] So: Sim-stim. Your calls, as Markdown.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "weltbon",
+      "quote": "I've used Campfire, but it moved to a subscription model",
+      "cut": true,
+      "cues": [
+        {
+          "cap": "Campfire wants $12 a month",
+          "say": "Campfire wants twelve dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "to rent you your own fantasy world.",
+          "step": "badge"
+        },
+        {
+          "cap": "Dalton Bailey:",
+          "say": "[matter-of-fact] Dalton Bailey:",
+          "step": "quote"
+        },
+        {
+          "cap": "“I've used Campfire,",
+          "say": "[sarcastic] I've used Campfire,",
+          "step": "quote"
+        },
+        {
+          "cap": "but it moved to a subscription model…”",
+          "say": "but it moved to a subscription model.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Weltbon. On your own server.",
+          "say": "[quick] So: Velt-bone. On your own server.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "Plus three more",
+          "say": "[upbeat] Plus three more,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}
