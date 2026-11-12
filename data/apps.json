@@ -8209,5 +8209,37 @@
     "repo": "gamers402/Auto-Task",
     "spite_score": 5,
     "added": "2026-11-11"
+  },
+  {
+    "slug": "free-local-voice-clone",
+    "name": "Free Local Voice Clone",
+    "url": "https://github.com/waseemnasir2k26/free-local-voice-clone",
+    "icon": "🎙️",
+    "tagline": "ElevenLabs bills by the character to say things in your own voice. This one clones it on your gaming laptop and bills nothing.",
+    "replaces": {
+      "name": "ElevenLabs Starter",
+      "product": "ElevenLabs",
+      "price": "$6/mo",
+      "source": "https://elevenlabs.io/pricing"
+    },
+    "grudge": {
+      "quote": "No monthly plan, no character quota, no \"you ran out of credits on line 1,400\".",
+      "source": "https://github.com/waseemnasir2k26/free-local-voice-clone#why-bother-running-it-locally"
+    },
+    "builder": {
+      "name": "Waseem Nasir",
+      "handle": "waseemnasir2k26",
+      "url": "https://github.com/waseemnasir2k26"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "ai"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "waseemnasir2k26/free-local-voice-clone",
+    "spite_score": 8,
+    "added": "2026-11-12"
   }
 ]

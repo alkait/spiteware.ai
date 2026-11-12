@@ -1,0 +1,25 @@
+{
+  "run": "2026-11-12",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited), github",
+  "raw_hits": 490,
+  "triaged": 22,
+  "candidates": [],
+  "dropped": [
+    "Yogurt: Granola alternative from FrigadeHQ, a YC-backed company (automatic reject)",
+    "SanitizePDF: real Acrobat Pro grudge, but sells auto-scan credits (in-app purchases)",
+    "QuickPass: 1Password appears only in the r/macapps comparison line; README says it was missed, not overpriced",
+    "Aircad: costs $19/mo itself",
+    "Tellable: Tellable Pro, five free documents",
+    "VIDO Studio: Free plan with watermark, Trial, Pro",
+    "Jobsprintly: $59.99/year",
+    "Outbound: has a pricing page and a 7-day trial",
+    "Whisperstream: Superwhisper is a comparison point, not a grudge",
+    "OpenSwells, VoxaDub, Nib, Totpvault, HolyArrs, Faux Show, Stemkara, Twinbells, EdgeCase, FloatChat, Bams & Dots: no price grudge in post, comments or README",
+    "Pixlory IndexNow Submitter: part of a site with accounts and 'free to try' tools",
+    "HarborIQ: a CRM that needs an account",
+    "Flex Music Player: grudge is against adverts in a preinstalled player, not a paid tool",
+    "OpenMeasure: grudge is Google retiring Measure, not a price",
+    "LokalBot, PDFMeasure, Umless, FilmCraft, Notebook AI: already dropped on 2026-11-11",
+    "kerf: already dropped on 2026-10-11"
+  ]
+}

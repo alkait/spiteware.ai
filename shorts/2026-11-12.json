@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-12",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "ElevenLabs wants $6 a month to clone your voice. This one's free.",
+    "caption": "One fresh grudge: voice cloning billed by the character, replaced by a free tool that clones your own voice on your own laptop and never uploads it.",
+    "tags": [
+      "freesoftware",
+      "indiedev",
+      "subscriptions",
+      "voiceclone",
+      "opensource"
+    ]
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "cues": [
+        {
+          "cap": "Fresh spite.",
+          "step": "stamp"
+        },
+        {
+          "cap": "November 12th.",
+          "say": "November twelfth.",
+          "step": "date"
+        },
+        {
+          "cap": "One new grudge.",
+          "step": "count"
+        }
+      ]
+    },
+    {
+      "scene": "app",
+      "slug": "free-local-voice-clone",
+      "quote": "No monthly plan, no character quota, no \"you ran out of credits on line 1,400\".",
+      "cues": [
+        {
+          "cap": "ElevenLabs wants $6 a month",
+          "say": "Eleven Labs wants six dollars a month",
+          "step": "badge"
+        },
+        {
+          "cap": "to rent you your own voice.",
+          "step": "badge"
+        },
+        {
+          "cap": "Waseem Nasir:",
+          "say": "[matter-of-fact] Wa-SEEM NAH-sir:",
+          "step": "quote"
+        },
+        {
+          "cap": "“No monthly plan, no character quota,",
+          "say": "[sarcastic] No monthly plan, no character quota,",
+          "step": "quote"
+        },
+        {
+          "cap": "no \"you ran out of credits on line 1,400\".”",
+          "say": "no: you ran out of credits on line fourteen hundred.",
+          "step": "quote"
+        },
+        {
+          "cap": "So: Free Local Voice Clone. Your laptop.",
+          "say": "[quick] So: Free Local Voice Clone. On your laptop.",
+          "step": "app"
+        },
+        {
+          "cap": "Free.",
+          "say": "[smug] Free.",
+          "step": "free"
+        }
+      ]
+    },
+    {
+      "scene": "outro",
+      "cues": [
+        {
+          "cap": "All free.",
+          "step": "free"
+        },
+        {
+          "cap": "All built out of pure spite.",
+          "step": "spite"
+        },
+        {
+          "cap": "More grudges daily",
+          "say": "[upbeat] More grudges daily,",
+          "step": "url"
+        },
+        {
+          "cap": "at spiteware.ai",
+          "say": "at spiteware dot A I.",
+          "step": "url"
+        }
+      ]
+    }
+  ]
+}
