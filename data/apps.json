@@ -8241,5 +8241,162 @@
     "repo": "waseemnasir2k26/free-local-voice-clone",
     "spite_score": 8,
     "added": "2026-11-12"
+  },
+  {
+    "slug": "zigzag",
+    "name": "ZigZag",
+    "url": "https://zigzag.diy/",
+    "icon": "🧵",
+    "tagline": "The embroidery machine cost $300. The app wanted rent on top. This one stitches for free and talks to the machine over Bluetooth anyway.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "My $300 embroidery machine needed a subscription, so I built my own app",
+      "source": "https://news.ycombinator.com/item?id=50470488"
+    },
+    "builder": {
+      "name": "Kathy Korevec",
+      "handle": "simpsoka",
+      "url": "https://github.com/simpsoka"
+    },
+    "tags": [
+      "desktop",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "simpsoka/zigzag",
+    "spite_score": 7,
+    "added": "2026-11-13"
+  },
+  {
+    "slug": "openbloom",
+    "name": "OpenBloom",
+    "url": "https://openbloom.vercel.app/",
+    "icon": "🌸",
+    "tagline": "Ticker, function code, GO. The Bloomberg Terminal routine, minus the $2,665 a month for the keyboard.",
+    "replaces": {
+      "name": "Bloomberg Terminal",
+      "product": "Bloomberg Terminal",
+      "price": "$2,665/mo",
+      "source": "https://costbench.com/software/financial-data-terminals/bloomberg-terminal/"
+    },
+    "grudge": {
+      "quote": "A Bloomberg Terminal costs over $24,000 per user each year, locking students, independent traders, researchers, and small funds out of institutional-quality tools.",
+      "source": "https://github.com/akshayjadhav237237-cmd/openbloom#-why-openbloom"
+    },
+    "builder": {
+      "name": "Akshay Jadhav",
+      "handle": "akshayjadhav237237-cmd",
+      "url": "https://github.com/akshayjadhav237237-cmd"
+    },
+    "tags": [
+      "web",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "akshayjadhav237237-cmd/openbloom",
+    "spite_score": 8,
+    "added": "2026-11-13"
+  },
+  {
+    "slug": "typehaus",
+    "name": "typehaus",
+    "url": "https://github.com/4nonX/typehaus",
+    "icon": "🔤",
+    "tagline": "Font servers come with a Talk To An Expert button. This one comes with a docker-compose file.",
+    "replaces": {
+      "name": "Universal Type Server",
+      "product": "Universal Type Server",
+      "price": "",
+      "source": "https://www.extensis.com/universal-type-server"
+    },
+    "grudge": {
+      "quote": "Commercial font servers solve this, but they are expensive and closed.",
+      "source": "https://github.com/4nonX/typehaus#why"
+    },
+    "builder": {
+      "name": "Dan",
+      "handle": "4nonX",
+      "url": "https://github.com/4nonX"
+    },
+    "tags": [
+      "self-hosted",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "4nonX/typehaus",
+    "spite_score": 7,
+    "added": "2026-11-13"
+  },
+  {
+    "slug": "betterchess",
+    "name": "betterchess",
+    "url": "https://github.com/Garmubu/betterchess.com",
+    "icon": "♟️",
+    "tagline": "Move-by-move coaching, opening drills, a bot at your level. Usually a membership. Here, one HTML file.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Good training tools (move-by-move feedback, opening drills, an opponent that matches your level) usually sit behind a subscription.",
+      "source": "https://github.com/Garmubu/betterchess.com#why-this-exists"
+    },
+    "builder": {
+      "name": "Emerton",
+      "handle": "Garmubu",
+      "url": "https://github.com/Garmubu"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "games"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Garmubu/betterchess.com",
+    "spite_score": 5,
+    "added": "2026-11-13"
+  },
+  {
+    "slug": "radarrss",
+    "name": "Radar RSS",
+    "url": "https://github.com/dznass-cmd/RadarRSS",
+    "icon": "📡",
+    "tagline": "Twenty outlets, one press release. Other readers charge monthly to notice. This one stacks them for free, on your machine.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Most readers either don't address this or lock semantic clustering behind a recurring cloud subscription.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xuuhjw/i_got_tired_of_seeing_the_same_news_20_times_in/"
+    },
+    "builder": {
+      "name": "Dzerivado",
+      "handle": "dznass-cmd",
+      "url": "https://github.com/dznass-cmd"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "dznass-cmd/RadarRSS",
+    "spite_score": 5,
+    "added": "2026-11-13"
   }
 ]

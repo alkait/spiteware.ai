@@ -1,0 +1,20 @@
+{
+  "run": "2026-11-13",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI, r/opensource; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited), github",
+  "raw_hits": 489,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "Type Shortcut: real TextExpander grudge, but sells Type Shortcut Pro, an optional subscription",
+    "Nurture: Premium and Household plans",
+    "Easy Bulk Chat Cleaner: free for 25 chats a day, Pro is $9",
+    "Paidwhere: pricing page, free account drops to 10 pages a month",
+    "Fin (finbudget.app): Plans page",
+    "Ortly: $6.99/mo with a 7-day trial",
+    "Outbound: pricing page",
+    "Dluely: an invisible interview-answering overlay; unsure the site should send people to it",
+    "Pastel Cards (Quizlet alternative): repo is gone (404)",
+    "ShopLite POS, My Notes, proofsheet, Zipzi, Skykeep, uxzView, Ghostwriter, Vespertine, Postman-like API client, Monity: no price grudge in post or README",
+    "Yogurt, Whisperstream, Nib, OpenSwells, QuickPass: already dropped on 2026-11-12"
+  ]
+}

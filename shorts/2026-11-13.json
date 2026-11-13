@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-13",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "A Bloomberg Terminal is $2,665 a month. OpenBloom is free.",
+    "caption": "Five fresh grudges: a market terminal without the Bloomberg bill, a team font server without a sales call, embroidery software without the subscription, and two more.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "investing"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 13th.", "say": "November thirteenth.", "step": "date"},
+      {"cap": "Five new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "openbloom",
+     "quote": "A Bloomberg Terminal costs over $24,000 per user each year", "cut": true,
+     "cues": [
+      {"cap": "A Bloomberg Terminal: $2,665 a month", "say": "A Bloomberg Terminal: two thousand six hundred sixty-five dollars a month", "step": "badge"},
+      {"cap": "to look at stock prices.", "step": "badge"},
+      {"cap": "Akshay Jadhav:", "say": "[matter-of-fact] AHK-shay JAH-dahv:", "step": "quote"},
+      {"cap": "“A Bloomberg Terminal costs over $24,000", "say": "[sarcastic] A Bloomberg Terminal costs over twenty-four thousand dollars", "step": "quote"},
+      {"cap": "per user each year…”", "say": "per user, each year.", "step": "quote"},
+      {"cap": "So: OpenBloom. In your browser.", "say": "[quick] So: Open Bloom. In your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "typehaus",
+     "gripe": "Universal Type Server? Talk to an expert.",
+     "quote": "Commercial font servers solve this, but they are expensive and closed.",
+     "cues": [
+      {"cap": "Universal Type Server? Talk to an expert.", "say": "Universal Type Server? Talk to an expert.", "step": "gripe"},
+      {"cap": "Dan:", "say": "[matter-of-fact] Dan:", "step": "quote"},
+      {"cap": "“Commercial font servers solve this,", "say": "[sarcastic] Commercial font servers solve this,", "step": "quote"},
+      {"cap": "but they are expensive and closed.”", "step": "quote"},
+      {"cap": "So: typehaus. Your own server.", "say": "[quick] So: type house. Your own server.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "zigzag",
+     "gripe": "Buy the machine. Then rent the app.",
+     "quote": "My $300 embroidery machine needed a subscription, so I built my own app",
+     "cues": [
+      {"cap": "Buy the machine. Then rent the app.", "step": "gripe"},
+      {"cap": "Kathy Korevec:", "say": "[matter-of-fact] Kathy KOR-eh-vek:", "step": "quote"},
+      {"cap": "“My $300 embroidery machine", "say": "[sarcastic] My three hundred dollar embroidery machine", "step": "quote"},
+      {"cap": "needed a subscription,", "step": "quote"},
+      {"cap": "so I built my own app”", "say": "so I built my own app.", "step": "quote"},
+      {"cap": "So: ZigZag. Stitches included.", "say": "[quick] So: ZigZag. Stitches included.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus two more", "say": "[upbeat] Plus two more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
