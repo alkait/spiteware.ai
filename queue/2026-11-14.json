@@ -1,0 +1,22 @@
+{
+  "run": "2026-11-14",
+  "swept": "hn (48h), reddit (r/SideProject, r/selfhosted, r/vibecoding, r/webdev, r/indiehackers; r/opensource, r/macapps, r/ClaudeAI rate-limited), github",
+  "raw_hits": 423,
+  "triaged": 22,
+  "candidates": [],
+  "dropped": [
+    "Orphis_'s BetterTouchTool and auto-clicker clones: real grudge, but unreleased and the post asks how to sell them",
+    "VIDUVOX: free VidIQ/TubeBuddy alternative, but sells a $19 Agency edition",
+    "resume-builder-kit: Pro edition for 39 USDT",
+    "OptiSheet: optional £14.99 Pro licence",
+    "DropCove: Pro one-time purchase goes on sale December 8",
+    "Honest Scanner: Pro is $29.99",
+    "Trip Dump: Premium $1.99/month",
+    "MytView: 14-day trial then paid TV apps",
+    "tack.host: paid tier",
+    "Maison Mise, SignalChess: free plan implies paid plans",
+    "Cal.flare: no price grudge in post or README, and needs Cloudflare Workers Paid to deploy",
+    "Wonderchat: a paid Zendesk competitor",
+    "Scenedraw, Garrul, Auto Digger, Tailgate, Earshot, Luma, Desk Widgets, RemoteKu, Altar, SETU, Filiread: no price grudge in post or README"
+  ]
+}

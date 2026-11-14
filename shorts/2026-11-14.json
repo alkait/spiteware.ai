@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-14",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "haku",
+  "post": {
+    "title": "FutureMe went paid. Haku is free.",
+    "caption": "Two fresh grudges: letters to your future self without the FutureMe paywall, and file recovery without paying for commercial software.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "datarecovery"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 14th.", "say": "November fourteenth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "haku",
+     "gripe": "Letters to yourself. Now with a paywall.",
+     "quote": "I spent about ten years writing to my future self with FutureMe. When it went paid, I built the app I wanted to keep using.",
+     "cues": [
+      {"cap": "Letters to yourself. Now with a paywall.", "step": "gripe"},
+      {"cap": "Michael Gorini:", "say": "[matter-of-fact] Michael goh-REE-nee:", "step": "quote"},
+      {"cap": "“I spent about ten years writing", "say": "[sarcastic] I spent about ten years writing", "step": "quote"},
+      {"cap": "to my future self with FutureMe.", "say": "to my future self with Future Me.", "step": "quote"},
+      {"cap": "When it went paid,", "step": "quote"},
+      {"cap": "I built the app I wanted to keep using.”", "step": "quote"},
+      {"cap": "So: Haku. Encrypted on your phone.", "say": "[quick] So: HAH-koo. Encrypted on your phone.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "reflota", "score": false,
+     "gripe": "Dead disk? Recovery software wants paying.",
+     "quote": "I built Reflota because I wanted a free tool to recover data, without paying for commercial software.",
+     "cues": [
+      {"cap": "Dead disk? Recovery software wants paying.", "step": "gripe"},
+      {"cap": "Christian:", "say": "[matter-of-fact] Christian:", "step": "quote"},
+      {"cap": "“I built Reflota because I wanted a free tool", "say": "[sarcastic] I built reh-FLOH-tah because I wanted a free tool", "step": "quote"},
+      {"cap": "to recover data,", "step": "quote"},
+      {"cap": "without paying for commercial software.”", "step": "quote"},
+      {"cap": "So: Reflota. Read-only rescue.", "say": "[quick] So: reh-FLOH-tah. Read-only rescue.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

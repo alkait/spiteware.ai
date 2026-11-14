@@ -8398,5 +8398,68 @@
     "repo": "dznass-cmd/RadarRSS",
     "spite_score": 5,
     "added": "2026-11-13"
+  },
+  {
+    "slug": "haku",
+    "name": "Haku",
+    "url": "https://haku-web.pages.dev/",
+    "icon": "💌",
+    "tagline": "Letters to your future self, without your future self getting an invoice. FutureMe went paid; this one went free for good.",
+    "replaces": {
+      "name": "FutureMe Premium",
+      "product": "FutureMe",
+      "price": "",
+      "source": "https://www.openwhenitstime.com/blog/is-futureme-free"
+    },
+    "grudge": {
+      "quote": "I spent about ten years writing to my future self with FutureMe. When it went paid, I built the app I wanted to keep using.",
+      "source": "https://haku-web.pages.dev/"
+    },
+    "builder": {
+      "name": "Michael Gorini",
+      "handle": "Blackajiro",
+      "url": "https://www.reddit.com/user/Blackajiro"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "writing"
+    ],
+    "open_source": false,
+    "vibe_coded": true,
+    "repo": "",
+    "spite_score": 7,
+    "added": "2026-11-14"
+  },
+  {
+    "slug": "reflota",
+    "name": "Reflota",
+    "url": "https://github.com/Christ10-8/reflota",
+    "icon": "💾",
+    "tagline": "Your disk died. Your wallet doesn't have to. Free, open-source file recovery that never writes to the drive it's saving.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I built Reflota because I wanted a free tool to recover data, without paying for commercial software.",
+      "source": "https://news.ycombinator.com/item?id=50482484"
+    },
+    "builder": {
+      "name": "Christian",
+      "handle": "Christ10-8",
+      "url": "https://github.com/Christ10-8"
+    },
+    "tags": [
+      "windows",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Christ10-8/reflota",
+    "spite_score": 5,
+    "added": "2026-11-14"
   }
 ]
