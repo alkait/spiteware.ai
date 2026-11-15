@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-15",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "Cold Turkey Pro costs extra. Focus Blocker is free.",
+    "caption": "Five fresh grudges: a site blocker without the Cold Turkey upgrade, a voice changer without Voicemod PRO, AWS maps without a Cloudcraft subscription, and two more built instead of paying.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "productivity"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 15th.", "say": "November fifteenth.", "step": "date"},
+      {"cap": "Five new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "focus-blocker",
+     "gripe": "Blocking YouTube? Cold Turkey Pro costs extra.",
+     "quote": "I kept using Cold Turkey, then wanted something free that I could tweak myself, so I built my own.",
+     "cues": [
+      {"cap": "Blocking YouTube? Cold Turkey Pro costs extra.", "step": "gripe"},
+      {"cap": "aman9560:", "say": "[matter-of-fact] Aman, ninety-five sixty:", "step": "quote"},
+      {"cap": "“I kept using Cold Turkey,", "say": "[sarcastic] I kept using Cold Turkey,", "step": "quote"},
+      {"cap": "then wanted something free", "step": "quote"},
+      {"cap": "that I could tweak myself,", "step": "quote"},
+      {"cap": "so I built my own.”", "step": "quote"},
+      {"cap": "So: Focus Blocker. Shorts, blocked.", "say": "[quick] So: Focus Blocker. Shorts, blocked.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "vesper",
+     "gripe": "Voicemod rations voices unless you go PRO.",
+     "quote": "Everyday voice effects should be available without a paid plan.",
+     "cues": [
+      {"cap": "Voicemod rations voices unless you go PRO.", "say": "Voice mod rations voices unless you go pro.", "step": "gripe"},
+      {"cap": "KirosigenIsMe:", "say": "[matter-of-fact] Kee-roh-SEE-gen Is Me:", "step": "quote"},
+      {"cap": "“Everyday voice effects should be available", "say": "[sarcastic] Everyday voice effects should be available", "step": "quote"},
+      {"cap": "without a paid plan.”", "step": "quote"},
+      {"cap": "So: VESPER. All 24 voices.", "say": "[quick] So: Vesper. All twenty-four voices.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "awsanalyze", "score": false,
+     "gripe": "AWS diagrams, rented by the month.",
+     "quote": "Cloudcraft was a subscription that wanted access to my AWS account, so I built AWSAnalyze",
+     "cues": [
+      {"cap": "AWS diagrams, rented by the month.", "say": "A W S diagrams, rented by the month.", "step": "gripe"},
+      {"cap": "itsfreddyrb:", "say": "[matter-of-fact] Its Freddy R B:", "step": "quote"},
+      {"cap": "“Cloudcraft was a subscription", "say": "[sarcastic] Cloud craft was a subscription", "step": "quote"},
+      {"cap": "that wanted access to my AWS account,", "say": "that wanted access to my A W S account,", "step": "quote"},
+      {"cap": "so I built AWSAnalyze”", "say": "so I built A W S Analyze.", "step": "quote"},
+      {"cap": "So: AWSAnalyze. Read-only, on your Mac.", "say": "[quick] So: A W S Analyze. Read-only, on your Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus two more", "say": "[upbeat] Plus two more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

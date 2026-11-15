@@ -1,0 +1,22 @@
+{
+  "run": "2026-11-15",
+  "swept": "hn (48h), github, reddit r/SideProject r/macapps r/ClaudeAI r/opensource (r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited)",
+  "raw_hits": 339,
+  "triaged": 17,
+  "candidates": [],
+  "dropped": [
+    "FluidVoice: real grudge, but the site has an Enterprise offering",
+    "LocalGateKeys: one-time price on the Mac App Store",
+    "Nimbus: free and open source, but the grudge is vendor sprawl; price only comes up in a comparison",
+    "SonicForge: reimplements Equalizer APO, which is already free",
+    "Murmur, FORBIDDEN // AI CORE, MacNite, Scanforth: no-subscription is a feature line, not a grudge",
+    "Lander: optional supporter subscription, and no grudge",
+    "Lampka: unhappy with readers' features, not their prices",
+    "Twoshare: paid Together plan with a trial",
+    "Opsyra: tired of opening CorelDRAW, not of paying for it",
+    "Orphis_'s BetterTouchTool and auto-clicker clones: already dropped on 2026-11-14",
+    "free-ai (LM Arena proxy), Haukley (free movies), the game-cheat repos: not spiteware",
+    "Whiteboard (Puter), Wonderchat, Proxyman TCP viewer: company products, no builder grudge",
+    "Paintpot, wipe.photos, browser-whisper, Whiteboard, resume builder: no price grudge in post or comments"
+  ]
+}

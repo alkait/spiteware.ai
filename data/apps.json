@@ -8461,5 +8461,164 @@
     "repo": "Christ10-8/reflota",
     "spite_score": 5,
     "added": "2026-11-14"
+  },
+  {
+    "slug": "focus-blocker",
+    "name": "Focus Blocker",
+    "url": "https://github.com/aman9560/FocusBlocker",
+    "icon": "🚫",
+    "tagline": "Cold Turkey sells the lock on your own willpower. Focus Blocker hands you the key for free, YouTube Shorts and all.",
+    "replaces": {
+      "name": "Cold Turkey Blocker Pro",
+      "product": "Cold Turkey",
+      "price": "",
+      "source": "https://getcoldturkey.com/pricing/"
+    },
+    "grudge": {
+      "quote": "I kept using Cold Turkey, then wanted something free that I could tweak myself, so I built my own.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xwfi00/focus_blocker_a_free_cold_turkey_alternative_for/"
+    },
+    "builder": {
+      "name": "aman9560",
+      "handle": "aman9560",
+      "url": "https://github.com/aman9560"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "aman9560/FocusBlocker",
+    "spite_score": 7,
+    "added": "2026-11-15"
+  },
+  {
+    "slug": "vesper",
+    "name": "VESPER",
+    "url": "https://github.com/KirosigenIsMe/vesper-voice",
+    "icon": "🎙️",
+    "tagline": "Voicemod rations its voices by the day unless you go PRO. VESPER hands over all 24 at once and never sends a bill.",
+    "replaces": {
+      "name": "Voicemod PRO",
+      "product": "Voicemod",
+      "price": "",
+      "source": "https://support.voicemod.net/hc/en-us/articles/360014300760-Voicemod-Features-Free-vs-PRO"
+    },
+    "grudge": {
+      "quote": "Everyday voice effects should be available without a paid plan.",
+      "source": "https://github.com/KirosigenIsMe/vesper-voice"
+    },
+    "builder": {
+      "name": "KirosigenIsMe",
+      "handle": "KirosigenIsMe",
+      "url": "https://github.com/KirosigenIsMe"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "KirosigenIsMe/vesper-voice",
+    "spite_score": 7,
+    "added": "2026-11-15"
+  },
+  {
+    "slug": "awsanalyze",
+    "name": "AWSAnalyze",
+    "url": "https://awsanalyze.app/",
+    "icon": "🗺️",
+    "tagline": "Cloudcraft wanted a subscription and the keys to your AWS account. AWSAnalyze draws the map on your Mac and asks for neither.",
+    "replaces": {
+      "name": "Cloudcraft",
+      "product": "Cloudcraft",
+      "price": "",
+      "source": "https://www.cloudcraft.co/pricing"
+    },
+    "grudge": {
+      "quote": "Cloudcraft was a subscription that wanted access to my AWS account, so I built AWSAnalyze",
+      "source": "https://www.reddit.com/r/macapps/comments/1xvvdgy/cloudcraft_was_a_subscription_that_wanted_access/"
+    },
+    "builder": {
+      "name": "itsfreddyrb",
+      "handle": "itsfreddyrb",
+      "url": "https://github.com/itsfreddyrb"
+    },
+    "tags": [
+      "macos",
+      "byo-key",
+      "dev-tools"
+    ],
+    "open_source": false,
+    "vibe_coded": false,
+    "repo": "",
+    "spite_score": 5,
+    "added": "2026-11-15"
+  },
+  {
+    "slug": "plainly",
+    "name": "Plainly",
+    "url": "https://github.com/riotrequest/plainly",
+    "icon": "✏️",
+    "tagline": "Grammar checkers put the good suggestions behind a paywall. Plainly puts them back, offline, for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Grammar checkers have moved their useful suggestions (sentence structure, wordiness, clarity) behind a paywall, and they send everything you type to their servers.",
+      "source": "https://github.com/riotrequest/plainly"
+    },
+    "builder": {
+      "name": "riotrequest",
+      "handle": "riotrequest",
+      "url": "https://github.com/riotrequest"
+    },
+    "tags": [
+      "browser-extension",
+      "privacy",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "riotrequest/plainly",
+    "spite_score": 5,
+    "added": "2026-11-15"
+  },
+  {
+    "slug": "vitool",
+    "name": "Vitool",
+    "url": "https://github.com/bioheater/Vitool",
+    "icon": "🎬",
+    "tagline": "Video downloaders grow paywalls like mold. Vitool downloads, cuts and censors on your own PC, no meter running.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I didn't want to use that shady downloader with a paywall slowly creeping up, and I didn't like the idea of opening DaVinci Resolve just to do some cuts or convert something.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xwe8du/allinone_videotoolbox_that_does_it_all_download/"
+    },
+    "builder": {
+      "name": "bioheater",
+      "handle": "bioheater",
+      "url": "https://github.com/bioheater"
+    },
+    "tags": [
+      "windows",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "bioheater/Vitool",
+    "spite_score": 5,
+    "added": "2026-11-15"
   }
 ]
