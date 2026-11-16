@@ -8620,5 +8620,165 @@
     "repo": "bioheater/Vitool",
     "spite_score": 5,
     "added": "2026-11-15"
+  },
+  {
+    "slug": "saylark",
+    "name": "Saylark",
+    "url": "https://github.com/btahir/saylark",
+    "icon": "🐦",
+    "tagline": "Wispr Flow charges $15 a month to hear you talk. Saylark listens on your Mac for nothing and sends the message when you hit Return.",
+    "replaces": {
+      "name": "Wispr Flow Pro",
+      "product": "Wispr Flow",
+      "price": "$15/mo",
+      "source": "https://wisprflow.ai/pricing"
+    },
+    "grudge": {
+      "quote": "Wispr Flow is great, but it’s $15 a month, so I decided to try to build a free, open-source version that runs locally.",
+      "source": "https://news.ycombinator.com/item?id=50504932"
+    },
+    "builder": {
+      "name": "Bilal",
+      "handle": "btahir",
+      "url": "https://github.com/btahir"
+    },
+    "tags": [
+      "macos",
+      "local-first",
+      "dictation"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "btahir/saylark",
+    "spite_score": 8,
+    "added": "2026-11-16"
+  },
+  {
+    "slug": "open-airzone-gateway",
+    "name": "Open Airzone Gateway",
+    "url": "https://github.com/letherman255/Open-Airzone-Gateway",
+    "icon": "🌡️",
+    "tagline": "Airzone put remote control of your own heating behind €48 a year. One ESP32 later, the house takes orders locally again.",
+    "replaces": {
+      "name": "Airzone Cloud Plan Cloud",
+      "product": "Airzone Cloud",
+      "price": "€48/yr",
+      "source": "https://www.igen.fr/domotique/2026/05/airzone-cloud-passe-labonnement-pour-le-controle-distant-des-pompes-chaleur-156281"
+    },
+    "grudge": {
+      "quote": "In May 2026 Airzone announced the Airzone Cloud \"Plan Cloud\" subscription, from October 2026: after six free months, €48 per year per installation.",
+      "source": "https://github.com/letherman255/Open-Airzone-Gateway#why"
+    },
+    "builder": {
+      "name": "letherman255",
+      "handle": "letherman255",
+      "url": "https://github.com/letherman255"
+    },
+    "tags": [
+      "self-hosted",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "letherman255/Open-Airzone-Gateway",
+    "spite_score": 8,
+    "added": "2026-11-16"
+  },
+  {
+    "slug": "hark",
+    "name": "Hark",
+    "url": "https://github.com/Blop77/hark",
+    "icon": "🎧",
+    "tagline": "Speechify wants $29 a month to read your PDFs out loud. Hark reads them in a browser tab and keeps the files to itself.",
+    "replaces": {
+      "name": "Speechify Premium",
+      "product": "Speechify",
+      "price": "$29/mo",
+      "source": "https://speechify.com/pricing/"
+    },
+    "grudge": {
+      "quote": "The good ones cost around $100+ a year and upload your documents to their servers.",
+      "source": "https://github.com/Blop77/hark#why"
+    },
+    "builder": {
+      "name": "Ishaan Singh",
+      "handle": "Blop77",
+      "url": "https://github.com/Blop77"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "learning"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Blop77/hark",
+    "spite_score": 8,
+    "added": "2026-11-16"
+  },
+  {
+    "slug": "krocpdf",
+    "name": "KrocPDF",
+    "url": "https://github.com/KrocPDF/KrocPDF",
+    "icon": "📄",
+    "tagline": "iLovePDF wants $7 a month for the whole toolbox. KrocPDF merges and compresses on your own machine, no watermark, no meter.",
+    "replaces": {
+      "name": "iLovePDF Premium",
+      "product": "iLovePDF",
+      "price": "$7/mo",
+      "source": "https://www.ilovepdf.com/pricing"
+    },
+    "grudge": {
+      "quote": "Most commercial online converters (iLovePDF, Smallpdf, PDF Candy) lure users with a \"free\" claim, then aggressively monetize document urgency through user-hostile mechanics",
+      "source": "https://github.com/KrocPDF/KrocPDF#why-this-exists"
+    },
+    "builder": {
+      "name": "Abhijeet Jha",
+      "handle": "jhaabhijeet864",
+      "url": "https://github.com/jhaabhijeet864"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "KrocPDF/KrocPDF",
+    "spite_score": 8,
+    "added": "2026-11-16"
+  },
+  {
+    "slug": "billsathi",
+    "name": "BillSathi",
+    "url": "https://github.com/tungaantu/BillSathi",
+    "icon": "🧾",
+    "tagline": "Billing software that bills you first is a strange business. BillSathi does GST invoices for ₹0, no renewal reminder attached.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Running a shop is expensive enough. Why pay a subscription just to make the next bill?",
+      "source": "https://github.com/tungaantu/BillSathi#your-billing-app-should-send-invoices-not-renewal-reminders"
+    },
+    "builder": {
+      "name": "Antu Tunga",
+      "handle": "tungaantu",
+      "url": "https://github.com/tungaantu"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "tungaantu/BillSathi",
+    "spite_score": 5,
+    "added": "2026-11-16"
   }
 ]

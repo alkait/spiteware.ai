@@ -1,0 +1,22 @@
+{
+  "run": "2026-11-16",
+  "swept": "hn (48h), github, reddit r/SideProject r/macapps r/ClaudeAI r/opensource (r/selfhosted, r/webdev, r/vibecoding, r/indiehackers rate-limited)",
+  "raw_hits": 340,
+  "triaged": 16,
+  "candidates": [],
+  "dropped": [
+    "VoxFab AI Keyboard: real grudge, but the key it needs is OpenAI's only, which has no free tier",
+    "Blackout: commercial, $9 once; free licenses are by email",
+    "guitux: 'free alternative to Guitar Pro' with no stated reason, and Guitar Pro is a one-time purchase",
+    "garmin-coach: no grudge, and it runs on a Claude subscription",
+    "quills (Granola alternative): built for privacy and multilingual calls, not price",
+    "Snippai: no grudge; a 2024 project reposted",
+    "Velinshot, Kalao, DeskLLM, cairn, aether, open-pdf-reader, ONYX: no-subscription is a tagline, not a grudge",
+    "CalPocket: one-time price on the App Store",
+    "Seasnd: paid App Store app",
+    "Slingsnap: grudge is Skitch withering, not its price",
+    "Minute, Learn Piano Easy, Kasa, Floodtide, SecondGlow, Keep Your Screen Awake: no price grudge in the post",
+    "Roadgoose: grudge is accounts, ads and tracking, not price",
+    "the game-cheat repos: not spiteware"
+  ]
+}

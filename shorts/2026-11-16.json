@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-16",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 2,
+  "post": {
+    "title": "Airzone wants €48 a year. Open Airzone Gateway is free.",
+    "caption": "Five fresh grudges: remote heating control without Airzone's €48 a year, a read-aloud app without Speechify Premium, dictation without Wispr Flow Pro, and two more built instead of paying.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "selfhosted"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 16th.", "say": "November sixteenth.", "step": "date"},
+      {"cap": "Five new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "open-airzone-gateway",
+     "quote": "In May 2026 Airzone announced the Airzone Cloud \"Plan Cloud\" subscription", "cut": true,
+     "cues": [
+      {"cap": "Airzone wants €48 a year", "say": "Air zone wants forty-eight euros a year", "step": "badge"},
+      {"cap": "to adjust your own heating.", "step": "badge"},
+      {"cap": "letherman255:", "say": "[matter-of-fact] Leather man, two fifty-five:", "step": "quote"},
+      {"cap": "“In May 2026 Airzone announced", "say": "[sarcastic] In May twenty twenty-six, Air zone announced", "step": "quote"},
+      {"cap": "the Airzone Cloud \"Plan Cloud\" subscription…”", "say": "the Air zone Cloud, Plan Cloud, subscription.", "step": "quote"},
+      {"cap": "So: Open Airzone Gateway. One ESP32.", "say": "[quick] So: Open Air zone Gateway. One E S P thirty-two.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "hark",
+     "quote": "The good ones cost around $100+ a year and upload your documents to their servers.",
+     "cues": [
+      {"cap": "Speechify wants $29 a month", "say": "Speechify wants twenty-nine dollars a month", "step": "badge"},
+      {"cap": "to read your PDFs aloud.", "say": "to read your P D Fs aloud.", "step": "badge"},
+      {"cap": "Ishaan Singh:", "say": "[matter-of-fact] Ee-shahn Singh:", "step": "quote"},
+      {"cap": "“The good ones cost around $100+ a year", "say": "[sarcastic] The good ones cost around a hundred dollars plus a year", "step": "quote"},
+      {"cap": "and upload your documents to their servers.”", "step": "quote"},
+      {"cap": "So: Hark. In a browser tab.", "say": "[quick] So: Hark. In a browser tab.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "saylark",
+     "quote": "Wispr Flow is great, but it’s $15 a month", "cut": true,
+     "cues": [
+      {"cap": "Wispr Flow wants $15 a month", "say": "Whisper Flow wants fifteen dollars a month", "step": "badge"},
+      {"cap": "to type what you say.", "step": "badge"},
+      {"cap": "Bilal:", "say": "[matter-of-fact] Bee-lahl:", "step": "quote"},
+      {"cap": "“Wispr Flow is great,", "say": "[sarcastic] Whisper Flow is great,", "step": "quote"},
+      {"cap": "but it’s $15 a month…”", "say": "but it's fifteen dollars a month.", "step": "quote"},
+      {"cap": "So: Saylark. Runs on your Mac.", "say": "[quick] So: Say-lark. Runs on your Mac.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus two more", "say": "[upbeat] Plus two more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
