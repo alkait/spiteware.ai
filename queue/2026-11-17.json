@@ -1,0 +1,21 @@
+{
+  "run": "2026-11-17",
+  "swept": "hn (48h), reddit (r/SideProject, r/macapps, r/ClaudeAI; r/selfhosted, r/webdev, r/vibecoding, r/indiehackers and others rate-limited 429), github",
+  "raw_hits": 389,
+  "triaged": 20,
+  "candidates": [],
+  "dropped": [
+    "XDM: a 2013 IDM alternative revamped; no price grudge in post or README (gate 1)",
+    "Stages: 'free alternative to Stardock Fences' is a label, no stated reason for not paying (gate 1)",
+    "parla, Minute, quills-style meeting notetakers: built for privacy and local models, not price (gate 1)",
+    "Candela: €2.99 paid once after a 14-day trial (gate 2)",
+    "Supabase Free Backup Lite: the same maker sells the paid Supabase Backup Kit on Gumroad (open-core)",
+    "Acutis Firewall, Torsher, WireTunnels, First Row, Dashbar: free, but no price grudge in the builder's words (gate 1)",
+    "Vibeconferencing: reacting to being sherlocked by Claude Meetings, not to a price (gate 1)",
+    "Vinglad: 'actually free' wine app, no named grudge against a price (gate 1)",
+    "Caddy: Mac HUD is a one-time purchase (gate 2)",
+    "VoxFab AI Keyboard, Blackout, Snippai, Skykeep: already decided in an earlier queue file",
+    "SeraGlow: source not public and no grudge beyond a feature line (gate 1)",
+    "Sibyl chess: no price grudge in the post; accounts for online play"
+  ]
+}

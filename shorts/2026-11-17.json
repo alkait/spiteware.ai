@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-17",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 3,
+  "post": {
+    "title": "Fiddler Everywhere wants $10 a month. VioLens is free.",
+    "caption": "Six fresh grudges: HTTPS debugging without Fiddler Everywhere's $10 a month, grammar fixes without Grammarly Pro, piano lessons without the subscription, and three more built instead of paying.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "devtools"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 17th.", "say": "November seventeenth.", "step": "date"},
+      {"cap": "Six new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "violens",
+     "quote": "In 2026 Progress Software changed Fiddler Classic’s license to allow non-commercial use only.",
+     "cues": [
+      {"cap": "Fiddler Everywhere wants $10 a month", "say": "Fiddler Everywhere wants ten dollars a month", "step": "badge"},
+      {"cap": "to watch your own traffic.", "step": "badge"},
+      {"cap": "MarkSPowell:", "say": "[matter-of-fact] Mark S. Powell:", "step": "quote"},
+      {"cap": "“In 2026 Progress Software changed", "say": "[sarcastic] In twenty twenty-six, Progress Software changed", "step": "quote"},
+      {"cap": "Fiddler Classic’s license", "say": "Fiddler Classic's license", "step": "quote"},
+      {"cap": "to allow non-commercial use only.”", "say": "to allow non-commercial use only.", "step": "quote"},
+      {"cap": "So: VioLens. Fine at work.", "say": "[quick] So: Vye-oh-lens. Fine at work.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "grammable",
+     "quote": "Paying a monthly subscription for a grammar checker", "cut": true,
+     "cues": [
+      {"cap": "Grammarly wants $12 a month", "say": "Grammarly wants twelve dollars a month", "step": "badge"},
+      {"cap": "to find your typos.", "step": "badge"},
+      {"cap": "Lakmal Rathnasiri:", "say": "[matter-of-fact] Lahk-mahl Raht-nah-see-ree:", "step": "quote"},
+      {"cap": "“Paying a monthly subscription", "say": "[sarcastic] Paying a monthly subscription", "step": "quote"},
+      {"cap": "for a grammar checker…”", "say": "for a grammar checker.", "step": "quote"},
+      {"cap": "So: Grammable. Uses the AI you have.", "say": "[quick] So: Grammable. Uses the A I you have.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "learn-piano-easy", "score": false,
+     "gripe": "Learn scales. Pay monthly. Forever.",
+     "quote": "i didnt want to pay the expensive subscriptions", "cut": true,
+     "cues": [
+      {"cap": "Learn scales. Pay monthly. Forever.", "step": "gripe"},
+      {"cap": "Roland Eigelsreiter:", "say": "[matter-of-fact] Roland Eye-gels-rye-ter:", "step": "quote"},
+      {"cap": "“i didnt want to pay", "say": "[sarcastic] I didn't want to pay", "step": "quote"},
+      {"cap": "the expensive subscriptions…”", "say": "the expensive subscriptions.", "step": "quote"},
+      {"cap": "So: Learn Piano Easy. In a browser.", "say": "[quick] So: Learn Piano Easy. In a browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus three more", "say": "[upbeat] Plus three more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

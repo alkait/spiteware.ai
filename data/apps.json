@@ -8780,5 +8780,195 @@
     "repo": "tungaantu/BillSathi",
     "spite_score": 5,
     "added": "2026-11-16"
+  },
+  {
+    "slug": "violens",
+    "name": "VioLens",
+    "url": "https://violens.dev",
+    "icon": "🔍",
+    "tagline": "Fiddler Classic went non-commercial and pointed everyone at work toward a $10 subscription. VioLens debugs your HTTPS at the office for $0.",
+    "replaces": {
+      "name": "Fiddler Everywhere Lite",
+      "product": "Fiddler Everywhere",
+      "price": "$10/mo",
+      "source": "https://www.telerik.com/purchase/fiddler"
+    },
+    "grudge": {
+      "quote": "In 2026 Progress Software changed Fiddler Classic’s license to allow non-commercial use only.",
+      "source": "https://violens.dev/about/"
+    },
+    "builder": {
+      "name": "MarkSPowell",
+      "handle": "MarkSPowell",
+      "url": "https://github.com/MarkSPowell"
+    },
+    "tags": [
+      "desktop",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "MarkSPowell/VioLens",
+    "spite_score": 8,
+    "added": "2026-11-17"
+  },
+  {
+    "slug": "grammable",
+    "name": "Grammable",
+    "url": "https://github.com/UdayaLakmal/Grammable",
+    "icon": "📝",
+    "tagline": "Grammarly Pro wants $12 a month to fix commas the AI you already pay for can fix. Grammable just asks that one instead.",
+    "replaces": {
+      "name": "Grammarly Pro",
+      "product": "Grammarly",
+      "price": "$12/mo",
+      "source": "https://www.grammarly.com/plans"
+    },
+    "grudge": {
+      "quote": "Paying a monthly subscription for a grammar checker when you already pay for Claude, ChatGPT or Gemini — or can run a free local model — makes no sense.",
+      "source": "https://github.com/UdayaLakmal/Grammable#why-grammable"
+    },
+    "builder": {
+      "name": "Lakmal Rathnasiri",
+      "handle": "UdayaLakmal",
+      "url": "https://github.com/UdayaLakmal"
+    },
+    "tags": [
+      "macos",
+      "byo-key",
+      "writing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "UdayaLakmal/Grammable",
+    "spite_score": 8,
+    "added": "2026-11-17"
+  },
+  {
+    "slug": "learn-piano-easy",
+    "name": "Learn Piano Easy",
+    "url": "https://learn-piano-easy.app/",
+    "icon": "🎹",
+    "tagline": "Piano apps bill you monthly to teach you where middle C is. Learn Piano Easy teaches it in your browser, offline, for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "And yes, a few hour went into this project, primarely because wanted i myself (piano beginner) and i didnt want to pay the expensive subscriptions from all the other paid piano apps.",
+      "source": "https://news.ycombinator.com/item?id=50523924"
+    },
+    "builder": {
+      "name": "Roland Eigelsreiter",
+      "handle": "brainfoolong",
+      "url": "https://github.com/brainfoolong"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "learning"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "brainfoolong/learn-piano-easy",
+    "spite_score": 5,
+    "added": "2026-11-17"
+  },
+  {
+    "slug": "pixeldeck",
+    "name": "PixelDeck",
+    "url": "https://pr0xs.github.io/PixelDeck/",
+    "icon": "📱",
+    "tagline": "Making your app look expensive on the App Store shouldn't cost a subscription. PixelDeck frames the screenshots for free, in your browser.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I wanted something that made it easy to create good-looking store screenshots without paying for yet another subscription, so I decided to build it myself.",
+      "source": "https://www.reddit.com/r/SideProject/comments/1xy0rjl/i_built_a_free_opensource_app_store_google_play/"
+    },
+    "builder": {
+      "name": "Jorge Díaz",
+      "handle": "Pr0xS",
+      "url": "https://github.com/Pr0xS"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Pr0xS/PixelDeck",
+    "spite_score": 5,
+    "added": "2026-11-17"
+  },
+  {
+    "slug": "open-source-pdf-editor",
+    "name": "open-source-pdf-editor",
+    "url": "https://github.com/LOLEDASI/open-source-android-pdf-editor",
+    "icon": "📄",
+    "tagline": "Signing one PDF on Android shouldn't take a login and a monthly plan. This one signs, highlights and edits text for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Got tired of every PDF app wanting a subscription or an account just to sign something, so here's one that doesn't.",
+      "source": "https://github.com/LOLEDASI/open-source-android-pdf-editor"
+    },
+    "builder": {
+      "name": "LOLEDASI",
+      "handle": "LOLEDASI",
+      "url": "https://github.com/LOLEDASI"
+    },
+    "tags": [
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "LOLEDASI/open-source-android-pdf-editor",
+    "spite_score": 5,
+    "added": "2026-11-17"
+  },
+  {
+    "slug": "pocket-tools",
+    "name": "Pocket Tools",
+    "url": "https://github.com/rudransh175/pocket-tools",
+    "icon": "🧰",
+    "tagline": "Little web tools, each one a single HTML file. No account, no email, and no subscription waiting at the end of a free trial.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Every tool site on the internet wants something from you — an account, your email, your files uploaded to their server, a subscription after the free trial.",
+      "source": "https://github.com/rudransh175/pocket-tools"
+    },
+    "builder": {
+      "name": "rudransh175",
+      "handle": "rudransh175",
+      "url": "https://github.com/rudransh175"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "rudransh175/pocket-tools",
+    "spite_score": 5,
+    "added": "2026-11-17"
   }
 ]
