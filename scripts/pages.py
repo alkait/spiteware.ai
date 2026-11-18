@@ -492,11 +492,9 @@ def shame_index(ranked, n):
       <h1>Wall of <span class="hl">shame.</span></h1>
       <p class="lede">The paid tools people were annoyed enough to rebuild for free, ranked by how many people did it. Once is a grudge; twice gets you on the wall. <b>Most replaced first.</b></p>
       <nav class="shame__jump" aria-label="Tiers">{jump}</nav>
+      <div class="board">
+{"".join(blocks)}      </div>
     </div>
-  </section>
-  <section class="sec board">
-    <div class="wrap">
-{"".join(blocks)}    </div>
   </section>
 '''
     ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [

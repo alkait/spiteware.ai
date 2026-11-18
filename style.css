@@ -437,9 +437,8 @@
     color:var(--ink);margin-bottom:3px;overflow-wrap:anywhere}
   .inductee s{display:block;color:#b00;font-weight:700;text-decoration-color:var(--pink);text-decoration-thickness:2px}
   /* wall of shame: the leaderboard (/wall-of-shame/) and a page per product */
-  /* the board: a yellow pegboard, a sticky note per product, pinned at a tilt; the worse the tier, the bigger the note */
-  .board{background:var(--yellow);color:var(--ink);border-top:var(--bw) solid var(--ink);border-bottom:var(--bw) solid var(--ink);
-    background-image:radial-gradient(rgba(17,17,17,.2) 1.4px,transparent 1.4px);background-size:26px 26px}
+  /* the board: sticky notes pinned at a tilt straight onto the hero's dotted paper; the worse the tier, the bigger the note */
+  .board{margin-top:clamp(40px,6vw,64px)}
   .shame__tier{scroll-margin-top:24px}
   .board__block + .board__block{margin-top:clamp(48px,7vw,80px);padding-top:clamp(28px,4vw,40px);border-top:2px dashed var(--ink)}
   .shame__pair .shame__tier + .shame__tier{margin-top:clamp(48px,7vw,80px)}
@@ -449,7 +448,7 @@
   }
   .shame__tier .sec__head{margin-bottom:clamp(24px,4vw,40px)}
   .board__notes{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:clamp(22px,3vw,36px)}
-  .note{--w:200px;--name:19px;--paperc:#fff;position:relative;display:flex;flex-direction:column;gap:6px;width:min(var(--w),100%);
+  .note{--w:200px;--name:19px;--paperc:var(--yellow);position:relative;display:flex;flex-direction:column;gap:6px;width:min(var(--w),100%);
     min-height:calc(var(--w) * .82);padding:26px 16px 16px;background:var(--paperc);color:var(--ink);text-decoration:none;
     border:var(--bw) solid var(--ink);box-shadow:6px 6px 0 var(--ink);transform:rotate(var(--tilt,0deg));transition:transform .12s,box-shadow .12s}
   .note::before{content:"";position:absolute;top:-11px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;
@@ -466,8 +465,8 @@
   .note--most-wanted .note__count{color:var(--ink)}
   .note--most-wanted:hover{box-shadow:11px 11px 0 var(--ink)}
   .note--repeat-offenders{--w:310px;--name:clamp(22px,3vw,30px)}
-  .note--on-notice{--w:250px;--name:22px;--paperc:var(--paper)}
-  .note--strike-two:nth-child(even){--paperc:var(--paper)}
+  .note--on-notice{--w:250px;--name:22px;--paperc:#fff}
+  .note--strike-two:nth-child(even){--paperc:#fff}
   @media (max-width:520px){
     .board__notes{gap:26px 16px}
     .note--strike-two,.note--on-notice{--w:calc(50% - 8px);--name:16px;min-height:150px;padding:24px 10px 12px}
