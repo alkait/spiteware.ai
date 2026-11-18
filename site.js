@@ -123,7 +123,7 @@
     if (img.complete && !img.naturalWidth && img.src) fb(); else img.addEventListener('error', fb);
   });
 
-  // "copy link" on a hall of fame page
+  // "copy link" and "copy README badge" on a hall of fame page
   document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
     navigator.clipboard?.writeText(b.dataset.copy).then(() => {
       const was = b.textContent; b.textContent = 'copied ✓';

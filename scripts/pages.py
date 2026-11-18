@@ -322,7 +322,8 @@ def app_page(a, apps, nxt):
       <div class="fame__bar">
         <span class="fame__share"><span class="deck__n">show it off</span>
           <button class="deck__next" type="button" data-copy="{esc(SITE + path)}">copy link</button>
-          <a class="deck__next" href="https://x.com/intent/post?{esc(share)}" target="_blank" rel="noopener">post on X</a></span>
+          <a class="deck__next" href="https://x.com/intent/post?{esc(share)}" target="_blank" rel="noopener">post on X</a>{"" if dead else f"""
+          <button class="deck__next" type="button" data-copy="{esc(readme_badge(a))}" title="Markdown for your README">copy README badge</button>"""}</span>
         <a class="deck__next" href="{fame(nxt)}">next inductee: {esc(nxt["builder"]["name"])} →</a>
       </div>
     </div>
@@ -548,6 +549,30 @@ def lost_page(n):
                  desc="There's nothing at this address. The apps are all still here, and they still cost $0.")
 
 
+def badge(a):
+    """The README badge at <hall of fame page>/badge.svg: the site's flat blocks, thick border and hard
+    shadow, with the app's spite score. Text is measured by character count, so it stays ASCII."""
+    parts = (("SPITEWARE.AI", "#111", "#FFE600"), ("HALL OF FAME", "#FF3E9A", "#fff"), (f"{a['spite_score']}/10 SPITE", "#FFE600", "#111"))
+    fs, pad, h, bw, sh = 11, 9, 28, 2, 3
+    ws = [len(t) * fs * 0.68 + 2 * pad for t, _, _ in parts]
+    W = sum(ws); tw, th = round(W + sh + bw), round(h + sh + bw)
+    y, x, rects, texts = h / 2 + fs * 0.36 + bw / 2, 0, [], []
+    for (t, bg, fg), w in zip(parts, ws):
+        rects.append(f'<rect x="{x:.1f}" width="{w:.1f}" height="{h}" fill="{bg}"/>')
+        texts.append(f'<text x="{bw / 2 + x + w / 2:.1f}" y="{y:.1f}" fill="{fg}">{t}</text>')
+        x += w
+    label = f"spiteware.ai hall of fame: {a['spite_score']}/10 spite"
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{tw}" height="{th}" viewBox="0 0 {tw} {th}" role="img" aria-label="{label}">'
+            f'<title>{label}</title><rect x="{sh + bw / 2}" y="{sh + bw / 2}" width="{W:.1f}" height="{h}" fill="#111"/>'
+            f'<g transform="translate({bw / 2},{bw / 2})">{"".join(rects)}<rect width="{W:.1f}" height="{h}" fill="none" stroke="#111" stroke-width="{bw}"/>'
+            f'<line x1="{ws[0] + ws[1]:.1f}" y1="0" x2="{ws[0] + ws[1]:.1f}" y2="{h}" stroke="#111" stroke-width="{bw}"/></g>'
+            f'<g font-family="\'Arial Black\',\'Arial Bold\',Helvetica,Arial,sans-serif" font-weight="900" font-size="{fs}" letter-spacing=".3" text-anchor="middle">'
+            f'{"".join(texts)}</g></svg>\n')
+
+def readme_badge(a):
+    page = SITE + fame(a)
+    return f"[![spiteware.ai hall of fame]({page}badge.svg)]({page}?ref=badge)"
+
 def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True); path.write_text(text)
 
@@ -569,6 +594,7 @@ def build():
     urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/wall-of-shame/", None), ("/about.html", None), ("/manifesto.html", None), ("/rules.html", None), ("/submit.html", None), ("/contact.html", None), ("/privacy.html", None)]
     for i, a in enumerate(live):
         write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[(i + 1) % len(live)]))
+        write(ROOT / fame(a).strip("/") / "badge.svg", badge(a))
         urls.append((fame(a), a["added"]))
     for a in dead:
         write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[0]))
