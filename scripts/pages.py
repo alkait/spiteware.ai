@@ -234,6 +234,9 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
         <a class="badge badge--blue" href="/contact.html">contact</a>
         <a class="badge badge--pink ico ico--gh" href="https://github.com/alkait/spiteware.ai" target="_blank" rel="noopener">source</a>
         <a class="badge badge--green ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener">youtube</a>
+        <a class="badge ico ico--tt" href="https://www.tiktok.com/@spiteware.ai" target="_blank" rel="noopener">tiktok</a>
+        <a class="badge badge--pink ico ico--ig" href="https://www.instagram.com/spiteware.ai/" target="_blank" rel="noopener">instagram</a>
+        <a class="badge badge--blue ico ico--x" href="https://x.com/Spiteware" target="_blank" rel="noopener">x</a>
       </nav>
     </div>
     <div class="maker">
@@ -380,23 +383,69 @@ def author_stub(a):
             f'<meta http-equiv="refresh" content="0;url={fame(a)}">\n<a href="{fame(a)}">{esc(a["name"])} →</a>\n')
 
 
+def bento(k):
+    """Box sizes for the k perfect scores after the big one, so every row of a 4-column grid comes out full:
+    two small boxes and a wide one beside the big box, then rows of small, small, wide and wide, small, small.
+    A leftover pair goes wide; a lone leftover spans the row. Sizes are rhythm, never rank."""
+    out, rows = ["s", "s", "w"][:k], 0
+    while len(out) < k:
+        left = k - len(out)
+        if left >= 3: out += ["s", "s", "w"] if rows % 2 == 0 else ["w", "s", "s"]; rows += 1
+        else: out += ["w", "w"] if left == 2 else ["f"]
+    if k == 1: out = ["f"]
+    elif k == 2: out = ["w", "w"]
+    return out
+
+def gist(q, n=120):
+    """A grudge cut to fit a wide box, at a word."""
+    q = " ".join((q or "").split())
+    return q if len(q) <= n else q[:n].rsplit(" ", 1)[0].rstrip(",.;:—-") + "…"
+
 def index_page(apps):
     n = len(apps)
+    perfect = [a for a in apps if a["spite_score"] == 10]
+    rest = [a for a in apps if a["spite_score"] != 10]
+    who = lambda a: a["builder"]["name"] or a["builder"]["handle"]
+    quote = lambda a: (a.get("grudge") or {}).get("quote") or ""
     def tile(a):
         v = (a["replaces"].get("name") or "").strip()
-        return (f'<a class="inductee" href="{fame(a)}">{avatar(a, 64)}<span><b>{esc(a["builder"]["name"])}</b>'
+        return (f'<a class="inductee" href="{fame(a)}">{avatar(a, 64)}<span><b>{esc(who(a))}</b>'
                 f'built {esc(a["name"])}' + (f"<s>{esc(v)}</s>" if v else "") + "</span></a>")
+    def box(a, size):
+        big = size == "big"
+        line = (f'<q>{esc(quote(a))}</q>' if big else f'<q>{esc(gist(quote(a)))}</q>' if size in ("w", "f") and quote(a) else "")
+        return (f'<a class="bento__box bento__box--{size}" href="{fame(a)}">'
+                + ('<span class="bento__stamp">Latest perfect 10</span>' if big else "")
+                + f'<span class="bento__who">{avatar(a, 120 if big else 56)}<span><b>{esc(who(a))}</b>built {esc(a["name"])}</span></span>'
+                + line + f'<span class="kills">replaces<s>{esc(victim(a))}</s></span></a>')
+    boxes = ([box(perfect[0], "big")] + [box(a, z) for a, z in zip(perfect[1:], bento(len(perfect) - 1))]) if perfect else []
+    k = len(perfect)
+    best = f'''  <section class="sec sec--alt" id="perfect">
+    <div class="wrap">
+      <div class="sec__head"><h2>Best grudgers <span class="tag">10/10</span></h2><div class="sec__sub">{k} perfect {"score" if k == 1 else "scores"} · unranked</div></div>
+      <p class="bento__why">{k} {"builder" if k == 1 else "builders"} scored a full 10 for spite. There's no ranking among them: a perfect score is a perfect score, so the size of a box means nothing. <b>The newest gets the big box</b> until the next perfect 10 arrives; the rest follow, newest first.</p>
+      <div class="bento">{"".join(boxes)}</div>
+    </div>
+  </section>
+''' if perfect else ""
+    hall = f'''  <section class="sec" id="everyone">
+    <div class="wrap">
+      <div class="sec__head"><h2>The rest of the hall</h2><div class="sec__sub">{len(rest)} inductees · pettiest first</div></div>
+      <details class="hallfold">
+        <summary><span class="hallfold__show">Show all {len(rest)} ▾</span><span class="hallfold__hide">Fold them away ▴</span></summary>
+        <div class="hall">{"".join(tile(a) for a in rest)}</div>
+      </details>
+    </div>
+  </section>
+''' if rest else ""
     body = f'''  <section class="hero">
     <div class="wrap">
       <span class="kicker">{n} inductees · inducted for spite</span>
       <h1>Hall of <span class="hl">fame.</span></h1>
-      <p class="lede">Everyone who read the pricing page, said <b>no</b>, and shipped the thing instead. Pettiest first.</p>
+      <p class="lede">Everyone who read the pricing page, said <b>no</b>, and shipped the thing instead. The perfect scores up top, everyone else one click below.</p>
     </div>
   </section>
-  <section class="sec sec--alt">
-    <div class="wrap"><div class="hall">{"".join(tile(a) for a in apps)}</div></div>
-  </section>
-'''
+{best}{hall}'''
     ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "url": SITE + fame(a), "name": a["name"]} for i, a in enumerate(apps)]}
     return shell(title="Hall of fame: the people who built it instead of paying · spiteware.ai", path="/hall-of-fame/",
@@ -416,11 +465,14 @@ def tier(k):
 def shame_index(ranked, n):
     wall = [(name, theirs) for name, theirs in ranked if tier(len(theirs))]
     hits = sum(len(t) for _, t in wall)
-    def row(i, name, theirs):
-        price = bill(theirs)
-        return (f'<a class="shame__row{" shame__row--top" if i == 0 else ""}" href="{shame(name)}"><span class="shame__rank">{i + 1:02d}</span>'
-                f'<span class="shame__who"><b>{esc(name)}</b>replaced {times(len(theirs))}</span>'
-                + (f'<span class="kills">wants<s>{esc(price)}</s></span>' if price else '<span class="kills">wants<s>a paywall</s></span>') + '</a>')
+    tilts = ("-2.5deg", "1.5deg", "-1deg", "2.5deg", "-1.8deg", "1deg", "2deg")
+    def note(i, name, theirs):
+        price = bill(theirs) or "a paywall"
+        t = tier(len(theirs))
+        return (f'<a class="note note--{t[3]}" href="{shame(name)}" style="--tilt:{tilts[i % len(tilts)]}">'
+                f'<span class="note__rank">{i + 1:02d}</span><b class="note__name">{esc(name)}</b>'
+                f'<span class="note__count">replaced {times(len(theirs))}</span>'
+                f'<span class="kills">wants<s>{esc(price)}</s></span></a>')
     groups = [(t, [(i, name, theirs) for i, (name, theirs) in enumerate(wall) if tier(len(theirs)) == t]) for t in TIERS]
     groups = [(t, rows) for t, rows in groups if rows]
     def ranges(t):
@@ -430,9 +482,16 @@ def shame_index(ranked, n):
         k = len(rows)
         return (f'''      <section class="shame__tier" id="{t[3]}">
         <div class="sec__head"><h2>{t[1]} <span class="tag">{t[2]}</span></h2><div class="sec__sub">{ranges(t)} · {k} {"product" if k == 1 else "products"}</div></div>
-        <div class="shame{" shame--compact" if t[0] == 2 else ""}">{"".join(row(i, name, theirs) for i, name, theirs in rows)}</div>
+        <div class="board__notes">{"".join(note(i, name, theirs) for i, name, theirs in rows)}</div>
       </section>
 ''')
+    # two neighbouring tiers of one or two notes share a row of the board instead of a band each
+    blocks, j = [], 0
+    while j < len(groups):
+        if j + 1 < len(groups) and len(groups[j][1]) <= 2 and len(groups[j + 1][1]) <= 2:
+            blocks.append('      <div class="board__block shame__pair">\n' + section(*groups[j]) + section(*groups[j + 1]) + '      </div>\n'); j += 2
+        else:
+            blocks.append(section(*groups[j]).replace('class="shame__tier"', 'class="board__block shame__tier"', 1)); j += 1
     jump = "".join(f'<a href="#{t[3]}">{t[1]} {t[2]} <b>{len(rows)}</b></a>' for t, rows in groups)
     body = f'''  <section class="hero">
     <div class="wrap">
@@ -442,9 +501,9 @@ def shame_index(ranked, n):
       <nav class="shame__jump" aria-label="Tiers">{jump}</nav>
     </div>
   </section>
-  <section class="sec sec--alt">
+  <section class="sec board">
     <div class="wrap">
-{"".join(section(t, rows) for t, rows in groups)}    </div>
+{"".join(blocks)}    </div>
   </section>
 '''
     ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [

@@ -43,12 +43,15 @@
   }
 
   // Every link to the channel reports where it was clicked (header, footer, page),
-  // so the analytics say which spot actually earns the subscribers.
+  // so the analytics say which spot actually earns the subscribers. TikTok, Instagram and X
+  // report the same way as social_click, with the network named.
+  const NETS = { 'youtube.com/@spiteware': 'youtube', 'tiktok.com/@spiteware.ai': 'tiktok', 'instagram.com/spiteware.ai': 'instagram', 'x.com/Spiteware': 'x' };
   document.addEventListener('click', e => {
-    const a = e.target.closest('a[href*="youtube.com/@spiteware"]');
+    const a = e.target.closest(Object.keys(NETS).map(k => `a[href*="${k}"]`).join(','));
     if (!a || typeof gtag !== 'function') return;
+    const net = NETS[Object.keys(NETS).find(k => a.href.includes(k))];
     const where = a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : 'page';
-    gtag('event', 'youtube_click', { location: where, page_path: location.pathname });
+    gtag('event', net === 'youtube' ? 'youtube_click' : 'social_click', { network: net, location: where, page_path: location.pathname });
   });
 
   // Marquee: duplicate content so it loops seamlessly
