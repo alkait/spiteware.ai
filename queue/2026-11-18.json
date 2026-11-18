@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-18",
+  "swept": "hn (48h), github; reddit failed (HTTP 404/429 on every sub)",
+  "raw_hits": 412,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "Whiz.pub: free and donation-run, but the post's 'inexpensive' is about hosting costs, not a paid tool (gate 1)",
+    "bar-replay: a personal PineScript-to-Python port; 'free alternative to TradingView's Bar Replay' is a description, no grudge sentence (gate 1)",
+    "photo-to-cartoon: model weights are gated behind a request at the maker's site (gate 2)",
+    "BackdropAds: bring-your-own Google/OpenAI key with no free tier for image or video generation, and no grudge sentence (gates 1 and 2)",
+    "Church Slides: an optional paid server service from the same maker (open-core)",
+    "Feasible: hosted plan at $9.99/mo after a 30-day trial (gate 2)",
+    "Skiss: Pro at $10/mo after a 14-day trial (gate 2)",
+    "mailtopdf: Pro subscription at $9.90/yr (gate 2)",
+    "Spokendocs: €79 licence after 10 free documents (gate 2)",
+    "Compact Contacts: $24.99 one-time purchase (gate 2)",
+    "Thrumm: Thrumm+ at $2.99/mo in-app (gate 2)",
+    "HabitStats: needs an account to use beyond the demo, and no price grudge",
+    "Wavetify, Ebook-Reader, music-player, open-cal, tts-server-proxy, Rewrite, TOM, Tabletist, LibreDB Studio, Toolbelt, MacAudio, DecksMD, BaitWall, FocusBlock: 'no subscription' at most as a feature line, no grudge in the builder's words (gate 1)",
+    "Whoop, MindMeister, Sejda, FreshBooks, Remove.bg 'repack' repos: pirated-software bait, not apps",
+    "XDM, Lightscroll, Candela, OpenFlow, Supabase Free Backup Lite, Vibeconferencing, Acutis Firewall, Torsher, Skykeep: already decided in an earlier queue file"
+  ]
+}

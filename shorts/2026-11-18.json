@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-18",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "post": {
+    "title": "Buienradar wants €3.49 a year to hide the ads. This is free.",
+    "caption": "Two fresh grudges: the Dutch rain forecast without paying Buienradar €3.49 a year to lose the ads, and AI Shorts clipping without a cloud that bills by the minute.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "weather"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 18th.", "say": "November eighteenth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "buienradar-pwa",
+     "quote": "A PWA (Progressive Web App) wrapper of Buienradar so you can enjoy an ad-free experience without paying for the subscription fee.",
+     "cues": [
+      {"cap": "Buienradar wants €3.49 a year", "say": "Bowen-rah-dar wants three euros forty-nine a year", "step": "badge"},
+      {"cap": "to hide the ads around your rain.", "step": "badge"},
+      {"cap": "Zhongyuan Zhang:", "say": "[matter-of-fact] Jong-yoo-ahn Jahng:", "step": "quote"},
+      {"cap": "“A PWA (Progressive Web App)", "say": "[sarcastic] A Progressive Web App", "step": "quote"},
+      {"cap": "wrapper of Buienradar", "say": "wrapper of Bowen-rah-dar", "step": "quote"},
+      {"cap": "so you can enjoy an ad-free experience", "step": "quote"},
+      {"cap": "without paying for the subscription fee.”", "step": "quote"},
+      {"cap": "So: buienradar-pwa. Just the rain.", "say": "[quick] So: Bowen-rah-dar P. W. A. Just the rain.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "hookcut", "score": false,
+     "gripe": "AI clippers. Billed by the minute.",
+     "quote": "You upload your footage to someone else's servers and pay every month, often by the minute of video.",
+     "cues": [
+      {"cap": "AI clippers. Billed by the minute.", "say": "A I clippers. Billed by the minute.", "step": "gripe"},
+      {"cap": "Abhay varun S:", "say": "[matter-of-fact] Uh-bye Vah-roon Ess:", "step": "quote"},
+      {"cap": "“You upload your footage", "say": "[sarcastic] You upload your footage", "step": "quote"},
+      {"cap": "to someone else's servers", "step": "quote"},
+      {"cap": "and pay every month,", "step": "quote"},
+      {"cap": "often by the minute of video.”", "step": "quote"},
+      {"cap": "So: hookcut. Cuts on your laptop.", "say": "[quick] So: Hook-cut. Cuts on your laptop.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

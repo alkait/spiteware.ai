@@ -8970,5 +8970,69 @@
     "repo": "rudransh175/pocket-tools",
     "spite_score": 5,
     "added": "2026-11-17"
+  },
+  {
+    "slug": "buienradar-pwa",
+    "name": "buienradar-pwa",
+    "url": "https://lesser-panda.github.io/buienradar-pwa/",
+    "icon": "🌧️",
+    "tagline": "Buienradar wants €3.49 a year to take the ads off your rain. This puts the same forecast in a home-screen app with nothing around it, for €0.",
+    "replaces": {
+      "name": "Buienradar Plus",
+      "product": "Buienradar",
+      "price": "€3.49/yr",
+      "source": "https://www.buienradar.nl/app/buienradarapp/"
+    },
+    "grudge": {
+      "quote": "A PWA (Progressive Web App) wrapper of Buienradar so you can enjoy an ad-free experience without paying for the subscription fee.",
+      "source": "https://github.com/lesser-panda/buienradar-pwa"
+    },
+    "builder": {
+      "name": "Zhongyuan Zhang",
+      "handle": "lesser-panda",
+      "url": "https://github.com/lesser-panda"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "lesser-panda/buienradar-pwa",
+    "spite_score": 10,
+    "added": "2026-11-18"
+  },
+  {
+    "slug": "hookcut",
+    "name": "hookcut",
+    "url": "https://github.com/abhay-error/hookcut",
+    "icon": "✂️",
+    "tagline": "The AI clippers bill you by the minute for chopping up your own video. This one cuts the Shorts on your own laptop and bills nobody.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "You upload your footage to someone else's servers and pay every month, often by the minute of video.",
+      "source": "https://github.com/abhay-error/hookcut"
+    },
+    "builder": {
+      "name": "Abhay varun S",
+      "handle": "abhay-error",
+      "url": "https://github.com/abhay-error"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "video"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "abhay-error/hookcut",
+    "spite_score": 5,
+    "added": "2026-11-18"
   }
 ]
