@@ -204,7 +204,6 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
         <li><a href="/wall-of-shame/"{' aria-current="page"' if here == "/wall-of-shame/" else ""}>Wall of shame</a></li>
       </ul>
     </nav>
-    <a class="nav__yt ico ico--yt" href="https://www.youtube.com/@spiteware" target="_blank" rel="noopener" aria-label="Subscribe on YouTube" title="Subscribe on YouTube"><span>YouTube</span></a>
   </div>
 </header>
 
@@ -420,13 +419,7 @@ def index_page(apps):
                 + line + f'<span class="kills">replaces<s>{esc(victim(a))}</s></span></a>')
     boxes = ([box(perfect[0], "big")] + [box(a, z) for a, z in zip(perfect[1:], bento(len(perfect) - 1))]) if perfect else []
     k = len(perfect)
-    best = f'''  <section class="sec sec--alt" id="perfect">
-    <div class="wrap">
-      <div class="sec__head"><h2>Best grudgers <span class="tag">10/10</span></h2><div class="sec__sub">{k} perfect {"score" if k == 1 else "scores"} · unranked</div></div>
-      <p class="bento__why">{k} {"builder" if k == 1 else "builders"} scored a full 10 for spite. There's no ranking among them: a perfect score is a perfect score, so the size of a box means nothing. <b>The newest gets the big box</b> until the next perfect 10 arrives; the rest follow, newest first.</p>
-      <div class="bento">{"".join(boxes)}</div>
-    </div>
-  </section>
+    best = f'''      <div class="bento" id="perfect">{"".join(boxes)}</div>
 ''' if perfect else ""
     hall = f'''  <section class="sec" id="everyone">
     <div class="wrap">
@@ -440,12 +433,12 @@ def index_page(apps):
 ''' if rest else ""
     body = f'''  <section class="hero">
     <div class="wrap">
-      <span class="kicker">{n} inductees · inducted for spite</span>
+      <span class="kicker">{n} inductees{f" · {k} perfect 10s" if k > 1 else ""}</span>
       <h1>Hall of <span class="hl">fame.</span></h1>
-      <p class="lede">Everyone who read the pricing page, said <b>no</b>, and shipped the thing instead. The perfect scores up top, everyone else one click below.</p>
-    </div>
+      <p class="lede">Everyone who read the pricing page, said <b>no</b>, and shipped it instead.{f" Up top, the {k} who scored a perfect 10 for spite, unranked: the newest gets the big box." if k > 1 else ""}</p>
+{best}    </div>
   </section>
-{best}{hall}'''
+{hall}'''
     ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "url": SITE + fame(a), "name": a["name"]} for i, a in enumerate(apps)]}
     return shell(title="Hall of fame: the people who built it instead of paying · spiteware.ai", path="/hall-of-fame/",
