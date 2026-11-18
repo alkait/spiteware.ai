@@ -404,40 +404,67 @@ def index_page(apps):
                  body=body, n=n, ld=(ld,))
 
 
+# The wall's tiers, worst first: (fewest replacements to get in, big number, name, anchor).
+# Replaced once doesn't make the wall; the product keeps its own page.
+TIERS = [(10, "10+", "Most wanted", "most-wanted"), (5, "5+", "Repeat offenders", "repeat-offenders"),
+         (3, "3+", "On notice", "on-notice"), (2, "2×", "Strike two", "strike-two")]
+
+def tier(k):
+    """The wall of shame tier for a product replaced k times, or None below the wall."""
+    return next((t for t in TIERS if k >= t[0]), None)
+
 def shame_index(ranked, n):
-    hits = sum(len(t) for _, t in ranked)
+    wall = [(name, theirs) for name, theirs in ranked if tier(len(theirs))]
+    hits = sum(len(t) for _, t in wall)
     def row(i, name, theirs):
         price = bill(theirs)
-        return (f'<a class="shame__row" href="{shame(name)}"><span class="shame__rank">{i + 1:02d}</span>'
+        return (f'<a class="shame__row{" shame__row--top" if i == 0 else ""}" href="{shame(name)}"><span class="shame__rank">{i + 1:02d}</span>'
                 f'<span class="shame__who"><b>{esc(name)}</b>replaced {times(len(theirs))}</span>'
                 + (f'<span class="kills">wants<s>{esc(price)}</s></span>' if price else '<span class="kills">wants<s>a paywall</s></span>') + '</a>')
+    groups = [(t, [(i, name, theirs) for i, (name, theirs) in enumerate(wall) if tier(len(theirs)) == t]) for t in TIERS]
+    groups = [(t, rows) for t, rows in groups if rows]
+    def ranges(t):
+        nxt = TIERS[TIERS.index(t) - 1][0] - 1 if TIERS.index(t) else None
+        return f"replaced {t[0]} or more times" if nxt is None else "replaced twice" if t[0] == nxt else f"replaced {t[0]} or {nxt} times" if nxt == t[0] + 1 else f"replaced {t[0]} to {nxt} times"
+    def section(t, rows):
+        k = len(rows)
+        return (f'''      <section class="shame__tier" id="{t[3]}">
+        <div class="sec__head"><h2>{t[1]} <span class="tag">{t[2]}</span></h2><div class="sec__sub">{ranges(t)} · {k} {"product" if k == 1 else "products"}</div></div>
+        <div class="shame{" shame--compact" if t[0] == 2 else ""}">{"".join(row(i, name, theirs) for i, name, theirs in rows)}</div>
+      </section>
+''')
+    jump = "".join(f'<a href="#{t[3]}">{t[1]} {t[2]} <b>{len(rows)}</b></a>' for t, rows in groups)
     body = f'''  <section class="hero">
     <div class="wrap">
-      <span class="kicker">{len(ranked)} paid products · replaced {hits} times</span>
+      <span class="kicker">{len(wall)} paid products · replaced {hits} times</span>
       <h1>Wall of <span class="hl">shame.</span></h1>
-      <p class="lede">The paid tools people were annoyed enough to rebuild for free, ranked by how many people did it. The more the price asks, the longer the line. <b>Most replaced first.</b></p>
+      <p class="lede">The paid tools people were annoyed enough to rebuild for free, ranked by how many people did it. Once is a grudge; twice gets you on the wall. <b>Most replaced first.</b></p>
+      <nav class="shame__jump" aria-label="Tiers">{jump}</nav>
     </div>
   </section>
   <section class="sec sec--alt">
-    <div class="wrap"><div class="shame">{"".join(row(i, name, theirs) for i, (name, theirs) in enumerate(ranked))}</div></div>
+    <div class="wrap">
+{"".join(section(t, rows) for t, rows in groups)}    </div>
   </section>
 '''
     ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
-        {"@type": "ListItem", "position": i + 1, "url": SITE + shame(name), "name": name} for i, (name, _) in enumerate(ranked)]}
+        {"@type": "ListItem", "position": i + 1, "url": SITE + shame(name), "name": name} for i, (name, _) in enumerate(wall)]}
     return shell(title="Wall of shame: the paid tools people rebuilt for free · spiteware.ai", path="/wall-of-shame/",
-                 desc=f"{len(ranked)} paid products, ranked by how many people looked at the price and built the free version instead.",
+                 desc=f"{len(wall)} paid products, each rebuilt for free at least twice, ranked by how many people looked at the price and built the free version instead.",
                  body=body, n=n, ld=(ld,), here="/wall-of-shame/")
 
 
 def shame_page(rank, total, name, theirs, n):
     theirs, path, price = order(theirs), shame(name), bill(theirs)
     k = len(theirs)
+    t = tier(k)
+    standing = (f'<a href="/wall-of-shame/#{t[3]}">{t[2]}</a> · #{rank} of {total}' if t else "First offence")
     title = f"Free alternatives to {name}" + (f" ({price})" if price else "") + f": {k} {'app' if k == 1 else 'apps'} built out of spite · spiteware.ai"
     desc = (f"{name} has been replaced {times(k)} by people who read the pricing page and built the free version: "
             + ", ".join(a["name"] for a in theirs) + ". Every one is free, and every grudge is quoted from the person who built it.")
     body = f'''  <section class="hero">
     <div class="wrap">
-      <span class="kicker"><a href="/wall-of-shame/">Wall of shame</a> · #{rank} of {total}</span>
+      <span class="kicker"><a href="/wall-of-shame/">Wall of shame</a> · {standing}</span>
       <h1>{esc(name)}</h1>
       <div class="kills kills--xl">wants<s>{esc(price) if price else "a paywall"}</s></div>
       <p class="lede">{k if k > 1 else "One"} free {"alternatives" if k > 1 else "alternative"} to {esc(name)}, built out of spite. {"Each" if k > 1 else "It"} does the job for <b>$0</b>.{" Pettiest first." if k > 1 else ""}</p>
@@ -506,7 +533,7 @@ def build():
     for i, (name, theirs) in enumerate(ranked):
         if shame(name) in seen: raise SystemExit(f"products {name!r} and {seen[shame(name)]!r} both want {shame(name)}")
         seen[shame(name)] = name
-        write(ROOT / shame(name).strip("/") / "index.html", shame_page(i + 1, len(ranked), name, theirs, len(live)))
+        write(ROOT / shame(name).strip("/") / "index.html", shame_page(i + 1, sum(1 for _, t in ranked if tier(len(t))), name, theirs, len(live)))
         urls.append((shame(name), max(a["added"] for a in theirs)))
     write(SHAME / "index.html", shame_index(ranked, len(live)))
     write(ROOT / "404.html", lost_page(len(live)))

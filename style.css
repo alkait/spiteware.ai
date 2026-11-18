@@ -451,11 +451,29 @@
     padding:12px 16px;text-decoration:none;color:var(--ink);transition:transform .1s,box-shadow .1s}
   .shame__row:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
   .shame__rank{font-family:var(--display);font-weight:900;font-size:clamp(22px,3vw,32px);letter-spacing:-.04em;line-height:1;min-width:2.3ch;color:var(--pink);flex:none}
-  .shame__row:nth-child(1) .shame__rank{background:var(--ink);color:var(--yellow);padding:4px 6px;transform:rotate(-4deg)}
+  .shame__row--top .shame__rank{background:var(--ink);color:var(--yellow);padding:4px 6px;transform:rotate(-4deg)}
   .shame__who{flex:1;min-width:0;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;line-height:1.4;color:#444}
   .shame__who b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(17px,2vw,22px);letter-spacing:-.02em;text-transform:none;line-height:1.1;
     color:var(--ink);margin-bottom:3px;overflow-wrap:anywhere}
   .shame__row .kills{flex:none;max-width:44%}
+  /* tiers: 10+, 5+, 3+, 2×; the 2× tier packs into a grid of smaller rows */
+  .shame__tier{max-width:720px;margin:0 auto;scroll-margin-top:24px}
+  .shame__tier + .shame__tier{margin-top:clamp(40px,6vw,64px)}
+  .shame__tier .sec__head{margin-bottom:18px}
+  .shame__tier .shame{max-width:none}
+  @media (min-width:640px){
+    .shame--compact{grid-template-columns:repeat(3,1fr)}
+    .shame--compact .shame__row{flex-wrap:wrap;align-content:flex-start;gap:8px 10px;padding:10px 12px}
+    .shame--compact .shame__rank{font-size:20px;min-width:2ch}
+    .shame--compact .shame__who{flex:1 1 calc(100% - 2ch - 20px)}
+    .shame--compact .shame__who b{font-size:17px}
+    .shame--compact .shame__row .kills{max-width:100%;margin-left:auto}
+  }
+  .shame__jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .shame__jump a{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--ink);
+    background:#fff;border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:6px 10px}
+  .shame__jump b{background:var(--pink);color:#fff;padding:0 5px;margin-left:4px}
+  .shame__jump a:hover{box-shadow:3px 3px 0 var(--pink)}
   /* a product's cards sit in the middle when there are fewer than a full row; 345px is a third of the wrap */
   .grid--center{grid-template-columns:repeat(auto-fit,minmax(300px,345px));justify-content:center}
   .hero .kills--xl{display:inline-block;margin:0 0 22px;transform:rotate(-2deg)}
