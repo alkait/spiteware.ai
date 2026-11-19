@@ -134,7 +134,7 @@ SW.ready(apps => {
     let list=apps.filter(a=>!tag||(derived[tag]?derived[tag](a):(a.tags||[]).includes(tag)));
     if(s) list=list.filter(a=>[a.name,a.tagline,a.replaces.name,a.builder.name,a.grudge.quote,...(a.tags||[])].join(' ').toLowerCase().includes(s));
     list.sort(sorters[sort.value]||sorters.spite);
-    grid.innerHTML=list.map(SW.card).join(''); none.hidden=list.length>0;
+    grid.innerHTML=list.map(SW.mini).join(''); none.hidden=list.length>0;
     const u=new URLSearchParams(); if(s)u.set('q',q.value.trim()); if(tag)u.set('tag',tag); if(sort.value!=='spite')u.set('sort',sort.value);
     history.replaceState(null,'',u.toString()?`?${u}`:location.pathname);
   }

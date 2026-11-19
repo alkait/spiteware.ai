@@ -77,8 +77,8 @@
     <div class="chips">${(a.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}${a.open_source?'<span class="chip">open-source</span>':''}${a.vibe_coded?'<span class="chip chip--vibe">vibe coded</span>':''}</div>
     <div class="card__meta"><span>by ${esc(a.builder.name)}</span><span title="spite score">🔥 ${esc(a.spite_score)}/10</span></div></a>`;
 
-  // The home row's card: the signature badge, the name, one line, the score. Home only,
-  // so it isn't mirrored in pages.py.
+  // The short card on the home row and the catalog: the signature badge, the name, one
+  // line, the score. SW.card (the full one) is the mirror of pages.py's card(); this isn't.
   SW.mini = a => `<a class="card card--mini" href="${SW.fame(a)}">
     <div class="card__top"><div class="card__icon">${esc(a.icon||'🔧')}</div>
       <div class="kills">replaces<s>${SW.victim(a)}</s></div></div>
