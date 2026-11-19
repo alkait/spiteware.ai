@@ -28,6 +28,9 @@ main() {
     DAY=$(date +%F)
     INBOX=""
     LOGS="$HOME/logs/spite"; mkdir -p "$LOGS"
+    # The long-lived token from `claude setup-token`, so the run outlives the interactive login
+    local tok; tok=$(sed -n 's/^CLAUDE_CODE_OAUTH_TOKEN=//p' .env)
+    [ -n "$tok" ] && export CLAUDE_CODE_OAUTH_TOKEN="$tok"
     LOG="$LOGS/$DAY$([ "$MODE" = monthly ] && echo -monthly).log"
     exec >>"$LOG" 2>&1
     echo "=== $(date -Is) $MODE run"
