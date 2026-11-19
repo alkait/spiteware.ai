@@ -9034,5 +9034,100 @@
     "repo": "abhay-error/hookcut",
     "spite_score": 5,
     "added": "2026-11-18"
+  },
+  {
+    "slug": "praisewall",
+    "name": "Praisewall",
+    "url": "https://arda-dd.github.io/praisewall/",
+    "icon": "💬",
+    "tagline": "Senja charges $29 a month to hold a list of nice things your customers said. Praisewall keeps the list on your own server and charges nothing.",
+    "replaces": {
+      "name": "Senja Starter",
+      "product": "Senja",
+      "price": "$29/mo",
+      "source": "https://senja.io/pricing"
+    },
+    "grudge": {
+      "quote": "Hosted testimonial tools are great, but they're a monthly subscription for a list of quotes.",
+      "source": "https://arda-dd.github.io/praisewall/"
+    },
+    "builder": {
+      "name": "Arda Tınmazoğlu",
+      "handle": "Arda-dd",
+      "url": "https://github.com/Arda-dd"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "marketing"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Arda-dd/praisewall",
+    "spite_score": 8,
+    "added": "2026-11-19"
+  },
+  {
+    "slug": "pakkagst",
+    "name": "PakkaGST",
+    "url": "https://github.com/hunzo1/PakkaGST",
+    "icon": "🧾",
+    "tagline": "myBillBook wants a yearly fee to split CGST from SGST. PakkaGST asks you a few questions in the terminal and hands you the invoice PDF for free.",
+    "replaces": {
+      "name": "myBillBook Plus",
+      "product": "myBillBook",
+      "price": "₹3,490/yr",
+      "source": "https://mybillbook.in/pricing"
+    },
+    "grudge": {
+      "quote": "Every time I had to invoice a client I ended up either hand-fixing a Word template (and occasionally getting the CGST/SGST split wrong, which is a great way to annoy a client's accounts team) or staring at Vyapar/myBillBook's pricing page and closing the tab.",
+      "source": "https://github.com/hunzo1/PakkaGST"
+    },
+    "builder": {
+      "name": "Prince",
+      "handle": "hunzo1",
+      "url": "https://github.com/hunzo1"
+    },
+    "tags": [
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "hunzo1/PakkaGST",
+    "spite_score": 8,
+    "added": "2026-11-19"
+  },
+  {
+    "slug": "archiver",
+    "name": "Archiver",
+    "url": "https://archiver.scryer.media/",
+    "icon": "🗜️",
+    "tagline": "The other unzip sites want a sign-up and show you ads before you get your files back. Archiver opens RAR, 7z and ZIP in your browser and asks for nothing.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "There's a couple other tools like this out there, but they have sign-ups, ads, limitations.",
+      "source": "https://news.ycombinator.com/item?id=50553654"
+    },
+    "builder": {
+      "name": "nzbman",
+      "handle": "nzbman",
+      "url": "https://news.ycombinator.com/user?id=nzbman"
+    },
+    "tags": [
+      "web",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "scryer-media/archiver",
+    "spite_score": 5,
+    "added": "2026-11-19"
   }
 ]

@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-19",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "pakkagst",
+  "post": {
+    "title": "myBillBook wants ₹3,490 a year. PakkaGST is free.",
+    "caption": "Three fresh grudges: GST invoices without a myBillBook plan, a testimonial wall without Senja's $29 a month, and an unzip tool without the sign-up and the ads.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "selfhosted"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 19th.", "say": "November nineteenth.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "pakkagst",
+     "quote": "or staring at Vyapar/myBillBook's pricing page and closing the tab.",
+     "cues": [
+      {"cap": "myBillBook wants ₹3,490 a year", "say": "My Bill Book wants three thousand four hundred ninety rupees a year", "step": "badge"},
+      {"cap": "to put GST on an invoice.", "say": "to put G S T on an invoice.", "step": "badge"},
+      {"cap": "Prince:", "say": "[matter-of-fact] Prince:", "step": "quote"},
+      {"cap": "“or staring at Vyapar/myBillBook's pricing page", "say": "[sarcastic] or staring at Vyah-par, slash My Bill Book's pricing page", "step": "quote"},
+      {"cap": "and closing the tab.”", "step": "quote"},
+      {"cap": "So: PakkaGST. Invoices from the terminal.", "say": "[quick] So: Pukka G S T. Invoices from the terminal.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "praisewall",
+     "quote": "Hosted testimonial tools are great, but they're a monthly subscription for a list of quotes.",
+     "cues": [
+      {"cap": "Senja wants $29 a month", "say": "Senja wants twenty-nine dollars a month", "step": "badge"},
+      {"cap": "to show off your reviews.", "step": "badge"},
+      {"cap": "Arda Tınmazoğlu:", "say": "[matter-of-fact] Ar-dah Tun-mah-zo-loo:", "step": "quote"},
+      {"cap": "“Hosted testimonial tools are great,", "say": "[sarcastic] Hosted testimonial tools are great,", "step": "quote"},
+      {"cap": "but they're a monthly subscription", "step": "quote"},
+      {"cap": "for a list of quotes.”", "step": "quote"},
+      {"cap": "So: Praisewall. On your own server.", "say": "[quick] So: Praise-wall. On your own server.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "archiver", "score": false,
+     "gripe": "Unzip sites. Sign up first.",
+     "quote": "There's a couple other tools like this out there, but they have sign-ups, ads, limitations.",
+     "cues": [
+      {"cap": "Unzip sites. Sign up first.", "step": "gripe"},
+      {"cap": "nzbman:", "say": "[matter-of-fact] N Z B man:", "step": "quote"},
+      {"cap": "“There's a couple other tools like this out there,", "say": "[sarcastic] There's a couple other tools like this out there,", "step": "quote"},
+      {"cap": "but they have sign-ups, ads, limitations.”", "step": "quote"},
+      {"cap": "So: Archiver. Unzips in your browser.", "say": "[quick] So: Archiver. Unzips in your browser.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "run": "2026-11-19",
+  "swept": "hn (48h), github; reddit failed (every subreddit 404 or 429)",
+  "raw_hits": 440,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "runheat: Strava grudge in the repo description, but no README and no release, so nothing a visitor can install",
+    "Stamp Card: a £25 'Build it with Claude' kit is sold on the app's own page (gate 2)",
+    "StrideFree, Fortelia, Lockoff, Tom VMware, Hayward OmniLogic driver, Lazycow Studio: 'no subscription' as a feature line, no grudge sentence (gate 1)",
+    "Windshift: built out of fondness for Jira, not its price; no grudge sentence (gate 1)",
+    "ExitPath: no post text, no builder comment, no grudge sentence (gate 1)",
+    "MR Office: the Word/Excel component is a closed binary, and no grudge sentence",
+    "Tinnitus frequency finder, MacAudio: built for a need, not against a price (gate 1)",
+    "journalfree: a list of journals, not an app against a paid tool",
+    "MacZentra: free scan with a paid clean (gate 2)",
+    "Whoop, Toggl Track repack repos: pirated-software bait, not apps",
+    "Thrumm, HabitStats, Spokendocs, Lightscroll, Rewrite, TOM, Toolbelt, FocusBlock, MacAudio, Compact Contacts, mailtopdf: already decided in an earlier queue file"
+  ]
+}
