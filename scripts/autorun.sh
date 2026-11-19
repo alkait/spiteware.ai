@@ -8,7 +8,8 @@
 #
 # Each run sends the user one Telegram message either way. Daily: a ✅ or ❌ line for each of
 # GitHub, the site, YouTube, TikTok, Instagram and X, with its link, so a failure still shows what
-# landed. Monthly: the episode link, or what is missing.
+# landed. Monthly: the episode link, or what is missing. When the daily run's inbox check
+# (/spite inbox) found messages from real people, the daily message lists them at the end.
 # (TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in .env.)
 # Logs go to ~/logs/spite/YYYY-MM-DD[-monthly].log, failures also to ~/logs/spite/FAILED. The
 # units hold a shared lock, so the two never run in the same checkout at once.
@@ -25,6 +26,7 @@ main() {
     cd "$(dirname "$0")/.." || exit 1
     MODE=${1:-daily}
     DAY=$(date +%F)
+    INBOX=""
     LOGS="$HOME/logs/spite"; mkdir -p "$LOGS"
     LOG="$LOGS/$DAY$([ "$MODE" = monthly ] && echo -monthly).log"
     exec >>"$LOG" 2>&1
@@ -43,6 +45,15 @@ daily() {
     timeout 4h claude -p "/spite" --dangerously-skip-permissions </dev/null
     local code=$?
     echo "=== $(date -Is) claude exited $code"
+
+    # Messages from real people the run found in spiteware's inboxes; every message below carries them
+    local inbox="shorts/.cache/inbox-$DAY.txt"
+    if [ -s "$inbox" ]; then
+        INBOX="
+
+📬 Messages worth reading:
+$(cat "$inbox")"
+    fi
 
     local listed
     listed=$(count < data/apps.json)
@@ -82,13 +93,14 @@ daily() {
     link=$(uploaded "$DAY"); [ -n "$link" ] && link="https://youtube.com/shorts/$link"
     check YouTube "$link" "not uploaded"
     check TikTok "$(posted "$DAY" tiktok)" "not posted"
-    check Instagram "$(posted "$DAY" instagram)" "not posted"
+    # Instagram is paused while the account is under appeal (2026-11-19); put this line back to resume
+    # check Instagram "$(posted "$DAY" instagram)" "not posted"
     check X "$(posted "$DAY" x)" "not posted"
 
     local body
     body=$(printf '%s\n' "${lines[@]}")
     if [ ${#failed[@]} -eq 0 ]; then
-        echo "=== all live: $listed apps, site, YouTube, TikTok, Instagram and X"
+        echo "=== all live: $listed apps, site, YouTube, TikTok and X"
         telegram "spiteware daily run $DAY: $listed new apps, all live.
 $body"
         return 0
@@ -168,7 +180,7 @@ report() {
 # One Telegram message to the user. Plain curl, so it still arrives when Claude is what failed.
 telegram() {
     curl -fsS -m 30 -o /dev/null "https://api.telegram.org/bot$(sed -n 's/^TELEGRAM_BOT_TOKEN=//p' .env)/sendMessage" \
-        --data-urlencode "chat_id=$(sed -n 's/^TELEGRAM_CHAT_ID=//p' .env)" --data-urlencode "text=$1" \
+        --data-urlencode "chat_id=$(sed -n 's/^TELEGRAM_CHAT_ID=//p' .env)" --data-urlencode "text=$1$INBOX" \
         -d disable_web_page_preview=true \
         || echo "=== the Telegram message itself failed"
 }
