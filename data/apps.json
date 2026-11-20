@@ -9129,5 +9129,67 @@
     "repo": "scryer-media/archiver",
     "spite_score": 5,
     "added": "2026-11-19"
+  },
+  {
+    "slug": "purple-flow",
+    "name": "Purple Flow",
+    "url": "https://github.com/leetheguy/purple_flow",
+    "icon": "🟣",
+    "tagline": "n8n's self-hosted Business plan is €667 a month to get past \"just me\". Purple Flow runs ten thousand workflows on 512MB and charges nothing.",
+    "replaces": {
+      "name": "n8n Business",
+      "product": "n8n",
+      "price": "€667/mo",
+      "source": "https://n8n.io/pricing/"
+    },
+    "grudge": {
+      "quote": "I ran into a wall with n8n - hard and expensive to scale, limited streaming, heavy MCP is confusing for agents.",
+      "source": "https://news.ycombinator.com/item?id=50560170"
+    },
+    "builder": {
+      "name": "Lee Nathan",
+      "handle": "leetheguy",
+      "url": "https://github.com/leetheguy"
+    },
+    "tags": [
+      "self-hosted",
+      "dev-tools"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "leetheguy/purple_flow",
+    "spite_score": 10,
+    "added": "2026-11-20"
+  },
+  {
+    "slug": "lumen-care",
+    "name": "Lumen Care",
+    "url": "https://github.com/arkillese/lumen-care",
+    "icon": "🧹",
+    "tagline": "Mac cleaners want a subscription to tidy your disk. Lumen Care does it for free, in Rust, and puts everything in the Trash first.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Mac cleaners are useful, but many sit behind a subscription.",
+      "source": "https://github.com/arkillese/lumen-care"
+    },
+    "builder": {
+      "name": "arkillese",
+      "handle": "arkillese",
+      "url": "https://github.com/arkillese"
+    },
+    "tags": [
+      "macos",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "arkillese/lumen-care",
+    "spite_score": 7,
+    "added": "2026-11-20"
   }
 ]

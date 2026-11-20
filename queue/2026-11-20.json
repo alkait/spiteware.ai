@@ -1,0 +1,26 @@
+{
+  "run": "2026-11-20",
+  "swept": "hn (48h), github; reddit failed (404/429 on every subreddit)",
+  "raw_hits": 387,
+  "triaged": 28,
+  "candidates": [],
+  "dropped": [
+    "Tools4U: grudge is against ad-cluttered sites, and the site runs AdSense itself; anonymous builder, no victim",
+    "Cashcraft: bank sync planned as a paid feature (gate 2)",
+    "Free OPT tracker: lead magnet for Aladdin, paid plans from $6.99/mo (gate 2)",
+    "Foolscap: free tier with a paid plan and a sign-in (gate 2)",
+    "Reprise: Premium tier (gate 2)",
+    "Brume: Pro and Basic plans with free-tier caps (gate 2)",
+    "Padit: €1.99/mo after a 30-day trial (gate 2)",
+    "Lex Cloak: $35 after three free documents (gate 2)",
+    "Mailflare Cloud: paid SaaS from $4/mo with a trial (gate 2)",
+    "Kiiwi: $6.99 one-time (gate 2)",
+    "Shotspa: $24 after a 7-day trial (gate 2)",
+    "Lattice, Zwitch alternative, Count Macula, Natel, SideLedger Tools: free, but no grudge sentence in the builder's words (gate 1)",
+    "CycleCore, DisBright, FlattFile, MacIsland, BytePass: 'a free alternative to X' as a description only, no reason given (gate 1)",
+    "RestStop, dialbubble, cue, local-audio-enhancer: 'no subscription' as a feature line, no grudge sentence (gate 1)",
+    "rent-receipt-generator: made and run by an AI agent, no human builder or grudge",
+    "PDF editor, Minitab 2026, AI Voice Changer repos: pirated-software bait, not apps",
+    "ExitPath, Windshift, MR Office, Lazycow Studio, journalfree, MacZentra, duvo: already decided in an earlier queue file"
+  ]
+}

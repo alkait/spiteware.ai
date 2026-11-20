@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-20",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "purple-flow",
+  "post": {
+    "title": "n8n Business wants €667 a month. Purple Flow is free.",
+    "caption": "Two fresh grudges: workflow automation without n8n's €667 a month Business plan, and a Mac cleaner without the subscription.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "opensource", "selfhosted"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 20th.", "say": "November twentieth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "purple-flow",
+     "quote": "I ran into a wall with n8n - hard and expensive to scale", "cut": true,
+     "cues": [
+      {"cap": "n8n wants €667 a month", "say": "N eight N wants six hundred sixty-seven euros a month", "step": "badge"},
+      {"cap": "to self-host past one person.", "step": "badge"},
+      {"cap": "Lee Nathan:", "say": "[matter-of-fact] Lee Nathan:", "step": "quote"},
+      {"cap": "“I ran into a wall with n8n -", "say": "[sarcastic] I ran into a wall with N eight N,", "step": "quote"},
+      {"cap": "hard and expensive to scale…”", "say": "hard and expensive to scale.", "step": "quote"},
+      {"cap": "So: Purple Flow. Ten thousand workflows.", "say": "[quick] So: Purple Flow. Ten thousand workflows.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "lumen-care",
+     "gripe": "Clean your Mac. Pay monthly.",
+     "quote": "Mac cleaners are useful, but many sit behind a subscription.",
+     "cues": [
+      {"cap": "Clean your Mac. Pay monthly.", "step": "gripe"},
+      {"cap": "arkillese:", "say": "[matter-of-fact] Ar-kill-eese:", "step": "quote"},
+      {"cap": "“Mac cleaners are useful,", "say": "[sarcastic] Mac cleaners are useful,", "step": "quote"},
+      {"cap": "but many sit behind a subscription.”", "step": "quote"},
+      {"cap": "So: Lumen Care. Trash first.", "say": "[quick] So: Loo-men Care. Trash first.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
