@@ -53,13 +53,16 @@ export default {
         text: `From: ${email}\n\n${message}\n\n--\nSent from spiteware.ai/contact.html · ${stamp}`,
       };
     } else {
-      const link = str(body.url);
+      const link = str(body.url), email = str(body.email);
       if (!link || link.length > MAX_URL || !isHttpUrl(link)) return jsonResponse({ error: "That's not a link." }, 400, origin);
+      // optional: when given, the inbox run tells them how it went
+      if (email && (email.length > MAX_EMAIL || !isEmail(email))) return jsonResponse({ error: "That's not an email address." }, 400, origin);
       mail = {
         from: env.MAIL_FROM,
         to: env.MAIL_TO,
+        ...(email ? { reply_to: email } : {}),
         subject: `[submit] ${new URL(link).hostname.replace(/^www\./, '')}`,
-        text: `${link}\n\n--\nSent from spiteware.ai/submit.html · ${stamp}`,
+        text: `${email ? `From: ${email}\n\n` : ''}${link}\n\n--\nSent from spiteware.ai/submit.html · ${stamp}`,
       };
     }
 
