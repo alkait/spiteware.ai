@@ -352,6 +352,13 @@ when nobody wrote. Serious ones go first, marked, with the link to the conversat
 ⚠️ <Platform> · <sender>: <the offer in under 15 words>. Not answered, your call. <link>
 <Platform> · <sender>: <what they wanted> → <what you did>
 ```
+**Mark every email you dealt with as read**, so the user's Gmail stays clean: answered, acted
+on, skipped as spam or a directory blast, auto-replies, and spiteware's own Bcc copies. With the
+Gmail tools, remove the `UNREAD` label from the thread; in the browser, tick it and press "Mark
+as read". The one exception is serious business: leave it unread, so the user sees it. Only
+ever mark mail to hello@spiteware.ai; the rest of the mailbox stays untouched. Read state is the
+only thing you change there: never archive, label, star, delete or move anything.
+
 Then write the time you started part 1 to `inbox.json`. In the run's report, say how many people
 wrote and how many you answered.
 
