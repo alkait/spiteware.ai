@@ -9,7 +9,7 @@
 # Each run sends the user one Telegram message either way. Daily: a ✅ or ❌ line for each of
 # GitHub, the site, YouTube, TikTok, Instagram and X, with its link, so a failure still shows what
 # landed. Monthly: the episode link, or what is missing. When the daily run's inbox check
-# (/spite inbox) found messages from real people, the daily message lists them at the end.
+# (/spite inbox) answered anyone, the daily message ends with its short summary.
 # (TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in .env.)
 # Logs go to ~/logs/spite/YYYY-MM-DD[-monthly].log, failures also to ~/logs/spite/FAILED. The
 # units hold a shared lock, so the two never run in the same checkout at once.
@@ -49,12 +49,12 @@ daily() {
     local code=$?
     echo "=== $(date -Is) claude exited $code"
 
-    # Messages from real people the run found in spiteware's inboxes; every message below carries them
+    # What the run did with messages from real people; every message below carries it
     local inbox="shorts/.cache/inbox-$DAY.txt"
     if [ -s "$inbox" ]; then
         INBOX="
 
-📬 Messages worth reading:
+📬 Inbox:
 $(cat "$inbox")"
     fi
 

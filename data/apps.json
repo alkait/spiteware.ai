@@ -1328,7 +1328,7 @@
       "source": "https://otter.ai/pricing"
     },
     "grudge": {
-      "quote": "I used to pay for Otter (80 bucks a year as a freelance journalist, egad!) and then I used a wonderful service called Scroll that was free for journalists.",
+      "quote": "I used to pay for Otter (80 bucks a year as a freelance journalist, egad!)",
       "source": "https://github.com/joshdaxelrod/transcribe"
     },
     "builder": {
@@ -3331,10 +3331,10 @@
   },
   {
     "slug": "mc-rofone",
-    "name": "mc.Rofone",
-    "url": "https://github.com/gabry-ts/mc.Rofone",
+    "name": "Kaiku",
+    "url": "https://apps.partiti.dev/kaiku",
     "icon": "📞",
-    "tagline": "Call recorders bill you monthly or send a bot to sit in your meeting. mc.Rofone does neither and charges nothing.",
+    "tagline": "Call recorders bill you monthly and send their bot from someone else's cloud. Kaiku records on your Mac, even its meeting bot runs on your own computer, and it charges nothing.",
     "replaces": {
       "name": "",
       "product": "",
@@ -3353,11 +3353,11 @@
     "tags": [
       "macos",
       "local-first",
-      "dictation"
+      "ai"
     ],
     "open_source": true,
     "vibe_coded": false,
-    "repo": "gabry-ts/mc.Rofone",
+    "repo": "gabry-ts/kaiku",
     "spite_score": 5,
     "added": "2026-09-24"
   },
