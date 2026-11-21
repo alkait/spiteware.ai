@@ -1,0 +1,23 @@
+{
+  "run": "2026-11-21",
+  "swept": "hn (48h), github; reddit failed (404/429 on every sub)",
+  "raw_hits": 316, "triaged": 30,
+  "candidates": [],
+  "dropped": [
+    "Edgy: $5 for the signed app (gate 2)",
+    "AbcTab: Pro tier, 14-day trial, $9.99 lifetime (gate 2)",
+    "ClearBar: $7 one-time (gate 2)",
+    "Oyasoo: optional Premium subscription (gate 2)",
+    "Pug.sh: open-core, Pug Cloud hosted tier (automatic reject)",
+    "SoundBench: ad-supported converter site, no builder grudge (gate 1)",
+    "SynthCamp mastering: free tool inside an AI music marketplace, no grudge stated (gate 1)",
+    "nopaypdf: mission is privacy; 'aggressive paywalls' is a comparison-table row, anonymous builder (gate 1)",
+    "Declutta: free with tip jar, but 'without a subscription or paywall' is a feature line, no grudge (gate 1)",
+    "Rustroom, fn-talk, Ultra-Symbol-Keyboard, sound-of-souls, Sprout Hollow: 'no subscription' as a feature line, no grudge sentence (gate 1)",
+    "SAKURA: 'Free to start. No expensive subscriptions.' implies a paid tier, no builder grudge (gates 1 and 2)",
+    "Openspot: grudge is Apple's developer account fee, and it replaces no paid tool",
+    "Pstview: reason is Classic Outlook modifying files, not a price (gate 1)",
+    "Curve, Chipload, HyprMac, Brisk, Lintsure, LarpLess, VoxNotes, Voxstead, printer-friendly, DCIM, Bocalito, Crabble, habits.win, maptools, NetSieve: free or open, but no grudge in post, comments or README (gate 1)",
+    "Foolscap, Cashcraft, Tools4U, Kiiwi, Shotspa, Lattice, Zwitch alternative, Count Macula, Mailflare Cloud, RestStop, rent-receipt-generator: already decided in an earlier queue file"
+  ]
+}

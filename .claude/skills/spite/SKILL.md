@@ -82,8 +82,13 @@ The default run and the monthly run happen unattended on claude-pi: `scripts/aut
     Commit in the log's voice, `List A, B and C` (every listed app's name; `Fix the X card` for an
     inbox fix, joined with `and` when there are both), ending with the
     attribution line, then `git push`. If the push is rejected, `git pull --rebase` once and
-    push again; if that fails too, stop here, skip step 10, and report it. Nothing listed and
-    no card fixed: commit and push nothing (a queue file of drops alone is not worth a deploy).
+    push again; if that fails too, stop here, skip step 10, and report it.
+
+    Nothing listed and no card fixed: still commit and push today's queue file on its own
+    (`git add queue/$(date +%F).json`, message `Queue for YYYY-MM-DD: nothing passed`). Its drops
+    are how later runs know what was already turned down, so it belongs in git every day. Push it
+    the same day rather than letting it wait: an unpushed commit on the Pi would make the next
+    morning's `git pull --ff-only` fail as soon as anything else reached GitHub.
 
 10. **Publish the short.** Only if steps 8 and 9 both went through. The description links
     each app's hall of fame page, so wait for GitHub Pages to serve them first: poll
