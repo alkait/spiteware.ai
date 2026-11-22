@@ -1,0 +1,23 @@
+{
+  "run": "2026-11-22",
+  "swept": "hn (48h), github; reddit failed (404/429 on every subreddit)",
+  "raw_hits": 267,
+  "triaged": 32,
+  "candidates": [],
+  "dropped": [
+    "Musset: paid sync service and a planned $9.90 one-time price at 1.0; reason given is workflow, not price (gates 1 and 2)",
+    "ClearBar: $7 one-time licence (gate 2)",
+    "AbcTab: $9.9 Pro licence with a 14-day trial (gate 2)",
+    "Edgy: signed app is $5 once (gate 2)",
+    "Nunya: free for 5 sends, then $4.99 (gate 2)",
+    "PocketTransfer: 10 MB free tier with ads and a paid unlock (gate 2)",
+    "ILoveNotch 2.0: $1.99 App Store edition from the same maker (gate 2)",
+    "CloseFlow: README only, no app, single-repo account (gate 2)",
+    "Crawler-SEO: binaries only, no source, single-repo account; likely malware bait",
+    "VKOP: no app source, one-line README, single-repo account (gate 1; suspect)",
+    "focus-grove, spine-leaf, clean-my-life, chessy-review, Ultra-Symbol-Keyboard, PlayitLoud, Declutta: 'free alternative' or 'no subscription' as a feature line, no grudge sentence (gate 1)",
+    "KeyLayers, HyprMac, LarpLess, yavcpdf, Pstview: built for workflow or convenience, not against a price (gate 1)",
+    "CVPebble, NerdKit, SoundBench: reason given is privacy or uploads, not price (gate 1)",
+    "Curve, Free mastering (SynthCamp), printer-friendly, habits.win, VoxNotes, SOAP client: no grudge anywhere (gate 1)"
+  ]
+}

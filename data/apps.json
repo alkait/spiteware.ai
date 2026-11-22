@@ -9191,5 +9191,36 @@
     "repo": "arkillese/lumen-care",
     "spite_score": 7,
     "added": "2026-11-20"
+  },
+  {
+    "slug": "sniffy",
+    "name": "Sniffy",
+    "url": "https://getsniffy.com/",
+    "icon": "🐽",
+    "tagline": "Pangram wants $20 a month to tell you a LinkedIn post was written by a robot. Sniffy badges your whole feed for free.",
+    "replaces": {
+      "name": "Pangram Individual",
+      "product": "Pangram",
+      "price": "$20/mo",
+      "source": "https://www.pangram.com/pricing"
+    },
+    "grudge": {
+      "quote": "I wanted to see if I can replicate a completely free pangram.com alternative.",
+      "source": "https://news.ycombinator.com/item?id=50586349"
+    },
+    "builder": {
+      "name": "vood",
+      "handle": "vood",
+      "url": "https://news.ycombinator.com/user?id=vood"
+    },
+    "tags": [
+      "browser-extension",
+      "ai"
+    ],
+    "open_source": false,
+    "vibe_coded": true,
+    "repo": "",
+    "spite_score": 8,
+    "added": "2026-11-22"
   }
 ]

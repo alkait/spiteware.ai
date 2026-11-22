@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-22",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "sniffy",
+  "post": {
+    "title": "Pangram wants $20 a month to spot AI posts. Sniffy is free.",
+    "caption": "One fresh grudge: an AI-text detector that badges every post in your feed, without Pangram's $20 a month.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "aidetector", "chromeextension"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 22nd.", "say": "November twenty-second.", "step": "date"},
+      {"cap": "One new grudge.", "step": "count"}]},
+    {"scene": "app", "slug": "sniffy",
+     "quote": "I wanted to see if I can replicate a completely free pangram.com alternative.",
+     "cues": [
+      {"cap": "Pangram wants $20 a month", "say": "Pangram wants twenty dollars a month", "step": "badge"},
+      {"cap": "to tell you a robot wrote that post.", "step": "badge"},
+      {"cap": "vood:", "say": "[matter-of-fact] Vood:", "step": "quote"},
+      {"cap": "“I wanted to see if I can replicate", "say": "[sarcastic] I wanted to see if I can replicate", "step": "quote"},
+      {"cap": "a completely free pangram.com alternative.”", "say": "a completely free Pangram dot com alternative.", "step": "quote"},
+      {"cap": "So: Sniffy. Badges your whole feed.", "say": "[quick] So: Sniffy. Badges your whole feed.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
