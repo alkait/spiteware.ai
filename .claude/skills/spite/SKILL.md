@@ -107,6 +107,19 @@ The default run and the monthly run happen unattended on claude-pi: `scripts/aut
     or a step that failed: follow **Mode: inbox**, part 2. Replies go out after the push, so a
     "your card is fixed" is already true when they read it.
 
+    **Then tell today's builders**, if step 9 pushed something listed today: one email to the
+    builder of each app step 7 listed, so they hear it from spiteware first. The note is
+    fixed and written by the script, never by you:
+    `python3 scripts/reply.py --hello <slug> --to <address>`. Find the address only where the
+    builder published it themselves, in this order, and stop at the first hit:
+    `gh api users/<handle> --jq .email`; a commit author email on the app's own repo
+    (`gh api repos/<repo>/commits --jq '.[].commit.author.email'`) that isn't
+    `users.noreply.github.com`; their HN profile's `about` when the app came from HN; a contact
+    address on the app's own site or README. Never guess one, build one from a name, or
+    look anywhere else. No address means no email: that's fine, and no DM in its place.
+    A `NOT SENT` is final for that app. Add one line per app to the day's inbox summary
+    (`Note · <app>: sent` or `Note · <app>: no public address`), creating the file if nobody wrote.
+
 13. **Report** to the user in under 200 words: how many hits, how many survived, what was listed (name, score, one line each for the top three, names for the rest), what was held or dropped and why, then the short's report from Mode: short and its YouTube, TikTok, Instagram and X links. Say plainly if a source failed. If step 6 found dead links, list them first: app, which link, and the `--bury` command that would retire it. End with the commit hash that went live, or what stopped the push or the upload. The short went up before anyone heard it, so name what to listen for,.
 
 Never fabricate a quote, a price, or a builder. If verification fails, drop the candidate and say why in the report.
@@ -347,7 +360,7 @@ Never invent a feature, a promise or a date; never mention the user by name.
 Then write the summary to `shorts/.cache/inbox-$(date +%F).txt`, for the Telegram message. The
 user reads it on a phone and will look closer only if they want to, so keep it really short: one
 line per person, what they wanted and what you did, at most 8 lines (then `+N more`), no file at all
-when nobody wrote. Serious ones go first, marked, with the link to the conversation:
+when nobody wrote and no builder note went out. Serious ones go first, marked, with the link to the conversation:
 ```
 ⚠️ <Platform> · <sender>: <the offer in under 15 words>. Not answered, your call. <link>
 <Platform> · <sender>: <what they wanted> → <what you did>
