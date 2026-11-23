@@ -244,7 +244,7 @@
     const when = new Date(data.fetchTime).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
     const range = data.startDate === data.endDate ? day(data.startDate, { month: 'short', day: 'numeric', year: 'numeric' })
       : `${day(data.startDate, { month: 'short', day: 'numeric' })} – ${day(data.endDate, { month: 'short', day: 'numeric', year: 'numeric' })}`;
-    foot.textContent = `${PERIODS[period]}: ${range} · fetched ${when}${data.cached ? ' (cached)' : ''} · numbers are held for 3 hours`;
+    foot.textContent = `${PERIODS[period]}: ${range} · fetched ${when}${data.stale ? ' · Google isn\'t answering right now, so these are the last numbers it gave' : (data.cached ? ' (cached)' : '') + ' · numbers are held for 3 hours'}`;
     foot.hidden = false;
   }
 

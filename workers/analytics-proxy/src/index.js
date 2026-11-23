@@ -3,10 +3,16 @@
 // and the answer is cached for three hours. GET /total is the footer counter on every page:
 // sessions since launch, one report, cached for an hour. Both answers carry a Cache-Control
 // that runs out when the edge copy does, so a browser holds them just as long.
+// Google sometimes answers a Worker with its "automated queries" page (a 429): Workers share
+// egress IPs. So every call is retried, the reports go out in three batches rather than fourteen
+// requests, and the last good answer is kept for a day and served, marked stale, when Google
+// still says no.
 // Secrets: GA4_PROPERTY_ID, GCP_CLIENT_EMAIL, GCP_PRIVATE_KEY. Var: GA4_TIMEZONE.
 
 const CACHE_TTL = 10800;
 const TOTAL_TTL = 3600;
+const STALE_TTL = 86400;   // how long the last good answer is kept as a fallback: a day
+const STALE_AGE = 300;         // how long a browser may hold a stale answer before asking again
 const LAUNCH_DATE = '2026-09-06';
 const TOKEN_URI = 'https://oauth2.googleapis.com/token';
 const PERIODS = { today: [0, 1, 'Today'], yesterday: [1, 1, 'Yesterday'], '7d': [0, 7, 'Last 7 days'], '30d': [0, 30, 'Last 30 days'], '90d': [0, 90, 'Last 90 days'] };
@@ -30,22 +36,20 @@ async function handleAnalytics(url, ctx, env) {
 
     // skipping the cache is for `wrangler dev` only: in production it would let anyone burn the GA4 quota
     const noCache = url.searchParams.get('nocache') === '1' && ['localhost', '127.0.0.1'].includes(url.hostname);
-    const cacheRequest = new Request(`${url.origin}/analytics?_ck=ga4-v1-${startDate}-${endDate}`);
+    const cacheRequest = new Request(`${url.origin}/analytics?_ck=ga4-v2-${startDate}-${endDate}`);
     if (!noCache) {
       const cached = await caches.default.match(cacheRequest);
       if (cached) { const c = await cached.json(); return jsonResponse({ ...c, cached: true }, 200, remaining(c.fetchTime, CACHE_TTL)); }
     }
 
-    const accessToken = await getAccessToken(env);
-    const apiUrl = `https://analyticsdata.googleapis.com/v1beta/properties/${env.GA4_PROPERTY_ID}:runReport`;
-    const headers = { 'Authorization': `Bearer ${accessToken}`, 'Content-Type': 'application/json' };
+    const staleRequest = new Request(`${url.origin}/analytics?_ck=ga4-stale-v1-${url.searchParams.get('period') || '7d'}`);
+    const accessToken = await getAccessToken(env).catch(e => e);
+    if (accessToken instanceof Error) return (await stale(staleRequest)) || fail(accessToken);
     const dateRanges = [{ startDate, endDate }];
 
-    async function report(body) {
-      const res = await fetch(apiUrl, { method: 'POST', headers, body: JSON.stringify({ dateRanges, ...body }) });
-      if (!res.ok) throw new ApiError(res.status, await res.text());
-      return res.json();
-    }
+    // every report() below only queues its request; runBatches() sends them five to a batch, GA4's limit per batch
+    const queued = [];
+    const report = body => queued.push({ dateRanges, ...body }) - 1;
     const top = (dimension, metric, limit, where) => report({
       dimensions: [{ name: dimension }],
       metrics: [{ name: metric }],
@@ -56,8 +60,7 @@ async function handleAnalytics(url, ctx, env) {
     const sourcesOf = channel => top('sessionSource', 'sessions', 5, ['sessionDefaultChannelGroup', channel]);
     const osOf = device => top('operatingSystem', 'sessions', 5, ['deviceCategory', device]);
 
-    // two batches: GA4 allows ten concurrent requests per property
-    const [totalsData, pagesData, countriesData, channelsData, referrersData, searchData, socialData] = await Promise.all([
+    const ids = [
       report({
         dateRanges: [{ startDate, endDate }, { startDate: prevStartDate, endDate: prevEndDate }],
         metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' }, { name: 'averageSessionDuration' }],
@@ -73,9 +76,7 @@ async function handleAnalytics(url, ctx, env) {
       top('sessionDefaultChannelGroup', 'sessions', 6),
       sourcesOf('Referral'),
       sourcesOf('Organic Search'),
-      sourcesOf('Organic Social')
-    ]);
-    const [videoData, devicesData, osDesktopData, osMobileData, osTabletData, newVsReturningData, dailyData] = await Promise.all([
+      sourcesOf('Organic Social'),
       sourcesOf('Organic Video'),
       top('deviceCategory', 'sessions'),
       osOf('desktop'),
@@ -88,7 +89,12 @@ async function handleAnalytics(url, ctx, env) {
         orderBys: [{ dimension: { dimensionName: 'date' }, desc: false }],
         keepEmptyRows: true
       })
-    ]);
+    ];
+    let reports;
+    try { reports = await runBatches(env, accessToken, queued); }
+    catch (error) { return (await stale(staleRequest)) || fail(error); }
+    const [totalsData, pagesData, countriesData, channelsData, referrersData, searchData, socialData,
+      videoData, devicesData, osDesktopData, osMobileData, osTabletData, newVsReturningData, dailyData] = ids.map(i => reports[i]);
 
     const { current: totals, previous: previousTotals } = parseTotalsWithComparison(totalsData);
     const result = {
@@ -117,12 +123,12 @@ async function handleAnalytics(url, ctx, env) {
       headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${CACHE_TTL}` }
     });
     ctx.waitUntil(caches.default.put(cacheRequest, responseToCache));
+    ctx.waitUntil(keep(staleRequest, result));
 
     return jsonResponse({ ...result, cached: false }, 200, CACHE_TTL);
 
   } catch (error) {
-    if (error instanceof ApiError) return jsonResponse({ error: 'GA4 API error', status: error.status, details: error.message }, error.status);
-    return jsonResponse({ error: 'Internal server error', message: error.message }, 500);
+    return fail(error);
   }
 }
 
@@ -133,25 +139,77 @@ async function handleTotal(url, ctx, env) {
     const cached = await caches.default.match(cacheRequest);
     if (cached) { const c = await cached.json(); return jsonResponse({ ...c, cached: true }, 200, remaining(c.fetchTime, TOTAL_TTL)); }
 
-    const accessToken = await getAccessToken(env);
-    const res = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${env.GA4_PROPERTY_ID}:runReport`, {
-      method: 'POST',
-      headers: { 'Authorization': `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ dateRanges: [{ startDate: LAUNCH_DATE, endDate: 'today' }], metrics: [{ name: 'sessions' }] })
-    });
-    if (!res.ok) throw new ApiError(res.status, await res.text());
-    const data = await res.json();
+    const staleRequest = new Request(`${url.origin}/total?_ck=ga4-total-stale-v1`);
+    let data;
+    try {
+      const accessToken = await getAccessToken(env);
+      const res = await retried(() => fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${env.GA4_PROPERTY_ID}:runReport`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ dateRanges: [{ startDate: LAUNCH_DATE, endDate: 'today' }], metrics: [{ name: 'sessions' }] })
+      }));
+      if (!res.ok) throw new ApiError(res.status, await res.text());
+      data = await res.json();
+    } catch (error) {
+      return (await stale(staleRequest)) || fail(error);
+    }
     const row = (data.rows || [])[0];
     const result = { sessions: parseInt((row && row.metricValues[0].value) || 0), since: LAUNCH_DATE, fetchTime: new Date().toISOString() };
 
     ctx.waitUntil(caches.default.put(cacheRequest, new Response(JSON.stringify(result), {
       headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${TOTAL_TTL}` }
     })));
+    ctx.waitUntil(keep(staleRequest, result));
     return jsonResponse({ ...result, cached: false }, 200, TOTAL_TTL);
   } catch (error) {
-    if (error instanceof ApiError) return jsonResponse({ error: 'GA4 API error', status: error.status, details: error.message }, error.status);
-    return jsonResponse({ error: 'Internal server error', message: error.message }, 500);
+    return fail(error);
   }
+}
+
+// GA4 reports, five to a batchRunReports call, the batches in parallel; answers come back in the order asked
+async function runBatches(env, accessToken, requests) {
+  const url = `https://analyticsdata.googleapis.com/v1beta/properties/${env.GA4_PROPERTY_ID}:batchRunReports`;
+  const batches = [];
+  for (let i = 0; i < requests.length; i += 5) batches.push(requests.slice(i, i + 5));
+  const answers = await Promise.all(batches.map(async b => {
+    const res = await retried(() => fetch(url, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ requests: b })
+    }));
+    if (!res.ok) throw new ApiError(res.status, await res.text());
+    const data = await res.json();
+    if (!data.reports || data.reports.length !== b.length) throw new ApiError(502, 'batchRunReports answered short');
+    return data.reports;
+  }));
+  return answers.flat();
+}
+
+// Google's block on a shared Worker IP and its own hiccups (429, 5xx) usually pass in a second or two
+async function retried(call, tries = 3) {
+  for (let i = 1; ; i++) {
+    const res = await call();
+    if (res.ok || i >= tries || !(res.status === 429 || res.status >= 500)) return res;
+    await new Promise(r => setTimeout(r, 600 * i + Math.random() * 400));
+  }
+}
+
+// the last good answer, kept a day, for when Google won't answer at all
+function keep(staleRequest, result) {
+  return caches.default.put(staleRequest, new Response(JSON.stringify(result), {
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${STALE_TTL}` }
+  }));
+}
+async function stale(staleRequest) {
+  const hit = await caches.default.match(staleRequest);
+  if (!hit) return null;
+  return jsonResponse({ ...(await hit.json()), cached: true, stale: true }, 200, STALE_AGE);
+}
+
+// Google's error page is HTML; the page only needs the status, so only a line of it is passed on
+function fail(error) {
+  if (error instanceof ApiError) return jsonResponse({ error: 'GA4 API error', status: error.status, details: error.message.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300) }, error.status);
+  return jsonResponse({ error: 'Internal server error', message: error.message }, 500);
 }
 
 // seconds the edge will keep an answer fetched at `fetchTime`: the browser's copy expires at the same moment
@@ -275,11 +333,11 @@ function parseTopDimension(data, metricLabel, labelled) {
 
 async function getAccessToken(env) {
   const jwt = await createJWT(env);
-  const response = await fetch(TOKEN_URI, {
+  const response = await retried(() => fetch(TOKEN_URI, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: `grant_type=${encodeURIComponent('urn:ietf:params:oauth:grant-type:jwt-bearer')}&assertion=${jwt}`
-  });
+  }));
 
   if (!response.ok) {
     const err = await response.text();
