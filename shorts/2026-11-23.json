@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-23",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "peloton-hud",
+  "post": {
+    "title": "Peloton wants $49.99 a month for your own bike. Peloton HUD is free.",
+    "caption": "Three fresh grudges: a Peloton screen without the membership, a middle click without BetterTouchTool, and a watch tracker without the bill.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "peloton", "macos"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 23rd.", "say": "November twenty-third.", "step": "date"},
+      {"cap": "Three new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "peloton-hud",
+     "quote": "Use the bike you own, without a subscription.",
+     "cues": [
+      {"cap": "Peloton wants $49.99 a month", "say": "Peloton wants forty-nine ninety-nine a month", "step": "badge"},
+      {"cap": "for the bike you already bought.", "step": "badge"},
+      {"cap": "Andrew Jacon:", "say": "[matter-of-fact] Andrew Jay-kon:", "step": "quote"},
+      {"cap": "“Use the bike you own,", "say": "[sarcastic] Use the bike you own,", "step": "quote"},
+      {"cap": "without a subscription.”", "step": "quote"},
+      {"cap": "So: Peloton HUD. Your watts, your Netflix.", "say": "[quick] So: Peloton HUD. Your watts, your Netflix.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "tripleclick",
+     "quote": "I was a paid user of BetterTouchTool for years",
+     "cut": true,
+     "cues": [
+      {"cap": "BetterTouchTool charges $15", "say": "BetterTouchTool charges fifteen dollars", "step": "badge"},
+      {"cap": "for a whole toolbox.", "step": "badge"},
+      {"cap": "wilu222:", "say": "[matter-of-fact] Wilu two two two:", "step": "quote"},
+      {"cap": "“I was a paid user", "say": "[sarcastic] I was a paid user", "step": "quote"},
+      {"cap": "of BetterTouchTool for years”", "say": "of BetterTouchTool for years.", "step": "quote"},
+      {"cap": "Used it for one gesture. So: TripleClick.", "say": "[quick] Used it for one gesture. So: TripleClick.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "paxtrack", "score": false,
+     "gripe": "Tracking episodes shouldn't cost a subscription.",
+     "quote": "Tired of paying for bloated apps?",
+     "cues": [
+      {"cap": "Episode trackers love a subscription.", "step": "gripe"},
+      {"cap": "Lyeeroy:", "say": "[matter-of-fact] Lyee-roy:", "step": "quote"},
+      {"cap": "“Tired of paying for bloated apps?”", "say": "[sarcastic] Tired of paying for bloated apps?", "step": "quote"},
+      {"cap": "So: Paxtrack.", "say": "[quick] So: Paxtrack.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

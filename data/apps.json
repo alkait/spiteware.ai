@@ -9222,5 +9222,100 @@
     "repo": "",
     "spite_score": 8,
     "added": "2026-11-22"
+  },
+  {
+    "slug": "tripleclick",
+    "name": "TripleClick",
+    "url": "https://github.com/wilu222/tripleclick",
+    "icon": "🖱️",
+    "tagline": "Paid BetterTouchTool for years to get one gesture. TripleClick is that gesture, 220 lines of Swift, for nothing.",
+    "replaces": {
+      "name": "BetterTouchTool Standard License",
+      "product": "BetterTouchTool",
+      "price": "$15 one-time",
+      "source": "https://folivora.ai/buy"
+    },
+    "grudge": {
+      "quote": "I was a paid user of BetterTouchTool for years, but I eventually realized I only used it for one thing: three-finger trackpad click = middle click.",
+      "source": "https://news.ycombinator.com/item?id=50601096"
+    },
+    "builder": {
+      "name": "wilu222",
+      "handle": "wilu222",
+      "url": "https://github.com/wilu222"
+    },
+    "tags": [
+      "macos",
+      "privacy",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "wilu222/tripleclick",
+    "spite_score": 8,
+    "added": "2026-11-23"
+  },
+  {
+    "slug": "peloton-hud",
+    "name": "Peloton HUD",
+    "url": "https://github.com/andrewjacon15-ui/open-peloton-hud",
+    "icon": "🚴",
+    "tagline": "Peloton wants $49.99 a month before the bike you already paid for shows you a class. Peloton HUD puts your watts around Netflix instead.",
+    "replaces": {
+      "name": "Peloton All-Access Membership",
+      "product": "Peloton",
+      "price": "$49.99/mo",
+      "source": "https://www.onepeloton.com/membership"
+    },
+    "grudge": {
+      "quote": "Use the bike you own, without a subscription.",
+      "source": "https://github.com/andrewjacon15-ui/open-peloton-hud"
+    },
+    "builder": {
+      "name": "Andrew Jacon",
+      "handle": "andrewjacon15-ui",
+      "url": "https://github.com/andrewjacon15-ui"
+    },
+    "tags": [
+      "local-first",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "andrewjacon15-ui/open-peloton-hud",
+    "spite_score": 8,
+    "added": "2026-11-23"
+  },
+  {
+    "slug": "paxtrack",
+    "name": "Paxtrack",
+    "url": "https://paxtrack.vercel.app",
+    "icon": "📺",
+    "tagline": "Paying monthly to remember which episode you were on is a choice. Paxtrack remembers for free, offline, in your browser.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Tired of paying for bloated apps?",
+      "source": "https://github.com/Lyeeroy/paxtrack"
+    },
+    "builder": {
+      "name": "Lyeeroy",
+      "handle": "Lyeeroy",
+      "url": "https://github.com/Lyeeroy"
+    },
+    "tags": [
+      "web",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "Lyeeroy/paxtrack",
+    "spite_score": 5,
+    "added": "2026-11-23"
   }
 ]

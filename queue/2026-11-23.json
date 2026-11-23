@@ -1,0 +1,16 @@
+{
+  "run": "2026-11-23",
+  "swept": "hn (48h), github; reddit failed (404/429)",
+  "raw_hits": 246,
+  "triaged": 22,
+  "candidates": [],
+  "dropped": [
+    "RealEditPDF: the GitHub repo its site links 404s, and its About says the reason is privacy; unsure, dropped",
+    "Elephant Walk: $9 price on its own site (gate 2)",
+    "Oyma: pricing page with plans (gate 2)",
+    "CloseFlow, Musset, ILoveNotch 2.0, PocketTransfer, KeyLayers, CVPebble: already dropped on 2026-11-22",
+    "Tina, Nota, ClipForge, Hearth, ProfileOfficer, xPDF, auto-captions, tunes, plainquant, BEYONDconnect, UnfollowX Pro: 'no subscription' as a feature line, no grudge (gate 1)",
+    "OpenNotebook, velocest, Passdroid, PDF ProMaster, scry, CurlGo, Image Squeeze, wydatki, statement-converter, bobalice_books: no price grudge anywhere (gate 1)",
+    "Opencode-free-models-video-generator-skill, Torch-X-Premium, EventNest, tech-deals-india, Skrai-Releases: not an app built against a paid tool"
+  ]
+}
