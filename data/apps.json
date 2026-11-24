@@ -9317,5 +9317,68 @@
     "repo": "Lyeeroy/paxtrack",
     "spite_score": 5,
     "added": "2026-11-23"
+  },
+  {
+    "slug": "anvilcad",
+    "name": "AnvilCAD",
+    "url": "https://swperb.github.io/anvilcad/",
+    "icon": "🔩",
+    "tagline": "SOLIDWORKS charges $2,820 a year and still crashes when you save. AnvilCAD is free, open-source CAD in Rust that keeps your feature trees.",
+    "replaces": {
+      "name": "SOLIDWORKS Standard",
+      "product": "SOLIDWORKS",
+      "price": "$235/mo",
+      "source": "https://www.3ds.com/store/solidworks-design"
+    },
+    "grudge": {
+      "quote": "I hate how expensive it is, especially for 10-year-old bugs to still exist.",
+      "source": "https://news.ycombinator.com/item?id=50611511"
+    },
+    "builder": {
+      "name": "Jay Proctor",
+      "handle": "swperb",
+      "url": "https://github.com/swperb"
+    },
+    "tags": [
+      "desktop",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "swperb/anvilcad",
+    "spite_score": 8,
+    "added": "2026-11-24"
+  },
+  {
+    "slug": "budget",
+    "name": "Budget",
+    "url": "https://hendrikdemir.github.io/budget/",
+    "icon": "💶",
+    "tagline": "Budgeting apps want a fee to tell you you're spending too much. Budget tells you for free, offline, on your own Mac or PC.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "But, they often are either free but with limited features, free but with an obnoxious amount of cookies and/or ads, free but charge money for important features or charge money to be used at all.",
+      "source": "https://news.ycombinator.com/item?id=50619761"
+    },
+    "builder": {
+      "name": "Hendrik",
+      "handle": "hendrikdemir",
+      "url": "https://github.com/hendrikdemir"
+    },
+    "tags": [
+      "desktop",
+      "local-first",
+      "finance"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "hendrikdemir/budget",
+    "spite_score": 7,
+    "added": "2026-11-24"
   }
 ]

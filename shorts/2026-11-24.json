@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-24",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "anvilcad",
+  "post": {
+    "title": "SOLIDWORKS wants $235 a month. AnvilCAD is free.",
+    "caption": "Two fresh grudges: a CAD app for anyone tired of SOLIDWORKS' bill and its crashes, and a budget app that doesn't charge you to see your budget.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "cad", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 24th.", "say": "November twenty-fourth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "anvilcad",
+     "quote": "I hate how expensive it is, especially for 10-year-old bugs to still exist.",
+     "cues": [
+      {"cap": "SOLIDWORKS wants $235 a month", "say": "SolidWorks wants two hundred thirty-five dollars a month", "step": "badge"},
+      {"cap": "and still crashes on save.", "step": "badge"},
+      {"cap": "Jay Proctor:", "say": "[matter-of-fact] Jay Proctor:", "step": "quote"},
+      {"cap": "“I hate how expensive it is,", "say": "[sarcastic] I hate how expensive it is,", "step": "quote"},
+      {"cap": "especially for 10-year-old bugs to still exist.”", "say": "especially for ten-year-old bugs to still exist.", "step": "quote"},
+      {"cap": "So: AnvilCAD. Rust, feature trees, no licence server.", "say": "[quick] So: Anvil CAD. Rust, feature trees, no licence server.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "budget",
+     "gripe": "Budget apps charge you to see you're broke.",
+     "quote": "free but charge money for important features or charge money to be used at all.",
+     "cut": true,
+     "cues": [
+      {"cap": "Budget apps charge you to see you're broke.", "say": "Budget apps charge you to find out you're broke.", "step": "gripe"},
+      {"cap": "Hendrik:", "say": "[matter-of-fact] Hendrik:", "step": "quote"},
+      {"cap": "“free but charge money for important features", "say": "[sarcastic] free, but charge money for important features,", "step": "quote"},
+      {"cap": "or charge money to be used at all.”", "say": "or charge money to be used at all.", "step": "quote"},
+      {"cap": "So: Budget. Offline, on your own computer.", "say": "[quick] So: Budget. Offline, on your own computer.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "run": "2026-11-24",
+  "swept": "hn (48h), github; reddit failed (404/429)",
+  "raw_hits": 318,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "Outloud Reader: grudge is there ('cost too much'), but its own site sells page packs and a Premium subscription (gate 2)",
+    "PureSound: paid subscription for the full library (gate 2)",
+    "Stat Space: $8 a seat team plan and a $9.99 app (gate 2)",
+    "Elephant Walk, WattHacker: priced on their own sites (gate 2)",
+    "RealEditPDF: the GitHub repo its site links still 404s and the grudge is comparison copy; dropped again as on 2026-11-23",
+    "Hermit CRM: free and open, but the per-seat line is a comparison FAQ, not why it was built (gate 1)",
+    "Tina, pendant-mac, unmappable, serifa-music, Get-to-Desk: 'no subscription' or 'free alternative' as a feature line, no grudge (gate 1)",
+    "Klink, UpNext, Mistfall, Lexis World, Sou, Diffie, Pattern Dump, Alter, Penelope: good, but no price grudge anywhere (gate 1)",
+    "OpenNotebook, velocest, PDF ProMaster, scry, CurlGo, Image Squeeze, wydatki, statement-converter: already dropped on 2026-11-23, nothing new",
+    "Top10Q: free trial (gate 2)"
+  ]
+}
