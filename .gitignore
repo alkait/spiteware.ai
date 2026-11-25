@@ -12,3 +12,6 @@ shorts/.build/
 # the monthly episode: scripts are committed, renders and build files are not
 episodes/*.mp4
 episodes/.build/
+
+# share cards: the jpgs and their hashes are committed, the frames they are shot from are not
+cards/.build/

@@ -18,9 +18,14 @@ An app with "status": "dead" (scripts/links.py --bury) is off every list and out
 sitemap, but keeps its page, stamped, so a link someone shared never 404s. Any link in
 an app's `dead_links` points at its Wayback snapshot, or isn't a link any more.
 
-Every build ends with the internal link check from scripts/links.py and fails on a miss.
+Every build starts by drawing any share card that is missing or out of date (scripts/cards.py,
+cards/<slug>.jpg, each app page's og:image), and ends with the internal link check from
+scripts/links.py, failing on a miss.
 """
-import json, re, html, shutil, pathlib, urllib.parse, importlib.util
+import json, re, html, shutil, pathlib, sys, urllib.parse, importlib.util
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import cards
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "hall-of-fame"
@@ -198,7 +203,7 @@ GTAG = '''<!-- Google tag (gtag.js) -->
 </script>'''
 
 
-def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), index=True, here="/hall-of-fame/"):
+def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, og_image="/og.png", ld=(), index=True, here="/hall-of-fame/"):
     url = SITE + path
     # "</" inside JSON would let a tagline close the script tag early
     lds = "".join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for x in ld)
@@ -218,7 +223,9 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
 <meta property="og:url" content="{esc(url)}">
 <meta property="og:title" content="{esc(og_title or title)}">
 <meta property="og:description" content="{esc(og_desc or desc)}">
-<meta property="og:image" content="{SITE}/og.png">
+<meta property="og:image" content="{SITE}{og_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFE600">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -384,9 +391,10 @@ def app_page(a, apps, nxt, linked=()):
   </section>
 '''
     tags = a.get("tags") or []
+    pic = cards.path(a) if not dead else None
     app_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": a["name"],
               "description": a["tagline"], **({"url": get_url} if get_url else {}), "isAccessibleForFree": True,
-              "applicationCategory": next((CATEGORY[t] for t in tags if t in CATEGORY), "UtilitiesApplication"),
+              **({"image": SITE + pic} if pic else {}), "applicationCategory": next((CATEGORY[t] for t in tags if t in CATEGORY), "UtilitiesApplication"),
               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
               "author": {"@type": "Person", "name": b["name"], **({"url": href} if href else {})}}
     if any(t in OS for t in tags): app_ld["operatingSystem"] = ", ".join(dict.fromkeys(OS[t] for t in tags if t in OS))
@@ -395,7 +403,7 @@ def app_page(a, apps, nxt, linked=()):
         {"@type": "ListItem", "position": 2, "name": "Hall of fame", "item": SITE + "/hall-of-fame/"},
         {"@type": "ListItem", "position": 3, "name": a["name"], "item": SITE + path}]}
     return shell(title=title, desc=desc, path=path, body=body, n=n, ld=(app_ld, crumbs), index=not dead,
-                 og_title=f"{a['name']} by {b['name']} · spiteware.ai hall of fame",
+                 og_title=f"{a['name']} by {b['name']} · spiteware.ai hall of fame", og_image=pic or "/og.png",
                  og_desc=f"“{a['grudge']['quote']}”")
 
 
@@ -683,6 +691,8 @@ def build():
 
     # Every list, count and sitemap entry is the living only. The dead keep their page and nothing else.
     live, dead = [a for a in apps if alive(a)], [a for a in apps if not alive(a)]
+    # share cards first, so every page below can point at its own; a missing one falls back to /og.png
+    drawn = cards.ensure(live)
     by = {}
     for a in apps: by.setdefault(author(a), []).append(a)
     pages = lists(live)
@@ -723,9 +733,9 @@ def build():
     broken, _ = L.internal()
     if broken: raise SystemExit(f"{len(broken)} broken internal links:\n" + "\n".join(f"  {ref}  <- {where}" for where, ref in broken[:20])
                                 + ("\n  ... python3 scripts/links.py lists them all" if len(broken) > 20 else ""))
-    return {"apps": len(live), "dead": len(dead), "authors": len(by), "products": len(ranked), "lists": len(pages), "urls": len(urls)}
+    return {"apps": len(live), "dead": len(dead), "authors": len(by), "products": len(ranked), "lists": len(pages), "cards": drawn, "urls": len(urls)}
 
 if __name__ == "__main__":
     r = build()
     print(f"hall of fame: {r['apps']} app pages (+{r['dead']} taken down), {r['authors']} author pages, "
-          f"wall of shame: {r['products']} products, free: {r['lists']} lists, {r['urls']} urls in sitemap.xml, internal links ok")
+          f"wall of shame: {r['products']} products, free: {r['lists']} lists, {r['cards']} share cards drawn, {r['urls']} urls in sitemap.xml, internal links ok")
