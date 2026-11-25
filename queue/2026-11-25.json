@@ -1,0 +1,20 @@
+{
+  "run": "2026-11-25",
+  "swept": "hn (48h), github; reddit failed (404/429 on every sub)",
+  "raw_hits": 406,
+  "triaged": 14,
+  "candidates": [],
+  "dropped": [
+    "Laser Grid: grudge is non-skippable ads, not a price (ads-only, as with Track Pocket on 2026-11-09)",
+    "FrameGloss: $15 once on its own site (gate 2)",
+    "Maverick Builds: free Community edition with an Enterprise tier (open-core)",
+    "Scriptopus: Pro tier (gate 2)",
+    "Freeoffice (amina-singh): a reference page for SoftMaker's commercial FreeOffice, not an app built by its poster",
+    "Tuned in Markets: 'a subscription site that explains a little and sells the rest' is positioning, not why it was built (gate 1)",
+    "Knight Studio, First Line, Forkfold, MacCleaner, pdf-studio: 'no subscription' or 'free alternative' as a feature line, no grudge (gate 1)",
+    "Yolt: 'hosted options are expensive' names no tool and is one aside (unsure, gate 1)",
+    "CadYam: the grudge is CAD's learning curve, not a price; a startup with cofounders",
+    "Libre Terminal, Voxa, FireVoice, Upronix, Kept, Webtools, Chili3D: no price grudge anywhere (gate 1)",
+    "Outloud Reader, Stat Space, Hermit CRM, Top10Q, Klink, UpNext, Mistfall, Diffie, Pattern Dump, Alter, Penelope, Sou: already dropped on 2026-11-24, nothing new"
+  ]
+}

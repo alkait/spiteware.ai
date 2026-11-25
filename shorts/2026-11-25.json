@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-25",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "postwise",
+  "post": {
+    "title": "Later wants $18.75 a month. Postwise is free.",
+    "caption": "Two fresh grudges: a social post scheduler for anyone done paying monthly to press Post, and a team time tracker for everyone Clockify's free plan just left out.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "selfhosted", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 25th.", "say": "November twenty-fifth.", "step": "date"},
+      {"cap": "Two new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "postwise",
+     "quote": "Later and Buffer are good, but they charge monthly and hold your accounts.",
+     "cues": [
+      {"cap": "Later wants $18.75 a month", "say": "Later wants eighteen seventy-five a month", "step": "badge"},
+      {"cap": "to press Post for you.", "step": "badge"},
+      {"cap": "Siddharth Petare:", "say": "[matter-of-fact] Siddharth Petare:", "step": "quote"},
+      {"cap": "“Later and Buffer are good,", "say": "[sarcastic] Later and Buffer are good,", "step": "quote"},
+      {"cap": "but they charge monthly and hold your accounts.”", "say": "but they charge monthly and hold your accounts.", "step": "quote"},
+      {"cap": "So: Postwise. Your server, your keys.", "say": "[quick] So: Postwise. Your server, your keys.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "clockoli",
+     "quote": "We'd been using Clockify for years until they decided to limit their free plan to five users recently.",
+     "cues": [
+      {"cap": "Clockify wants $5.49 a seat", "say": "Clockify wants five forty-nine a seat", "step": "badge"},
+      {"cap": "past user number five.", "step": "badge"},
+      {"cap": "Sergey Nikolaev:", "say": "[matter-of-fact] Sergey Nikolaev:", "step": "quote"},
+      {"cap": "“We'd been using Clockify for years", "say": "[sarcastic] We'd been using Clockify for years", "step": "quote"},
+      {"cap": "until they decided to limit their free plan", "say": "until they decided to limit their free plan", "step": "quote"},
+      {"cap": "to five users recently.”", "say": "to five users recently.", "step": "quote"},
+      {"cap": "So: Clockoli. Time tracking in a Git repo.", "say": "[quick] So: Clock-oh-lee. Time tracking in a Git repo.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

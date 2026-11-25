@@ -9380,5 +9380,69 @@
     "repo": "hendrikdemir/budget",
     "spite_score": 7,
     "added": "2026-11-24"
+  },
+  {
+    "slug": "clockoli",
+    "name": "Clockoli",
+    "url": "https://clockoli.com/",
+    "icon": "⏱️",
+    "tagline": "Clockify capped its free plan at five users, so a whole team moved its stopwatch into a GitHub repo. No seats to buy, ever.",
+    "replaces": {
+      "name": "Clockify Standard",
+      "product": "Clockify",
+      "price": "$5.49/user/mo",
+      "source": "https://clockify.me/pricing"
+    },
+    "grudge": {
+      "quote": "We'd been using Clockify for years until they decided to limit their free plan to five users recently.",
+      "source": "https://news.ycombinator.com/item?id=50627008"
+    },
+    "builder": {
+      "name": "Sergey Nikolaev",
+      "handle": "sanikolaev",
+      "url": "https://github.com/sanikolaev"
+    },
+    "tags": [
+      "browser-extension",
+      "privacy",
+      "productivity"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "clockoli/clockoli",
+    "spite_score": 8,
+    "added": "2026-11-25"
+  },
+  {
+    "slug": "postwise",
+    "name": "Postwise",
+    "url": "https://github.com/themapsdaily/postwise",
+    "icon": "📅",
+    "tagline": "Later charges monthly to press Post for you. Postwise presses it from your own server, and the only bill left is the server.",
+    "replaces": {
+      "name": "Later Starter",
+      "product": "Later",
+      "price": "$18.75/mo",
+      "source": "https://later.com/pricing/"
+    },
+    "grudge": {
+      "quote": "Later and Buffer are good, but they charge monthly and hold your accounts.",
+      "source": "https://github.com/themapsdaily/postwise#why"
+    },
+    "builder": {
+      "name": "Siddharth Petare",
+      "handle": "themapsdaily",
+      "url": "https://github.com/themapsdaily"
+    },
+    "tags": [
+      "web",
+      "self-hosted",
+      "marketing"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "themapsdaily/postwise",
+    "spite_score": 10,
+    "added": "2026-11-25"
   }
 ]
