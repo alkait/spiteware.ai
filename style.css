@@ -481,16 +481,20 @@
   }
   @media (hover:none){.note:hover{transform:rotate(var(--tilt,0deg));box-shadow:6px 6px 0 var(--ink)}
     .note--most-wanted:hover{box-shadow:8px 8px 0 var(--ink)}}
-  .shame__jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-  .shame__jump a{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--ink);
+  .shame__jump,.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .shame__jump a,.jump a{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--ink);
     background:#fff;border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:6px 10px}
-  .shame__jump b{background:var(--pink);color:#fff;padding:0 5px;margin-left:4px}
-  .shame__jump a:hover{box-shadow:3px 3px 0 var(--pink)}
+  .shame__jump b,.jump b{background:var(--pink);color:#fff;padding:0 5px;margin-left:4px}
+  .shame__jump a:hover,.jump a:hover{box-shadow:3px 3px 0 var(--pink)}
   /* a product's cards sit in the middle when there are fewer than a full row; 345px is a third of the wrap */
   .grid--center{grid-template-columns:repeat(auto-fit,minmax(300px,345px));justify-content:center}
   .hero .kills--xl{display:inline-block;margin:0 0 22px;transform:rotate(-2deg)}
   .fame__author{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(28px,5vw,56px)}
   .fame__author .kicker a{text-decoration:none;border-bottom:2px solid var(--pink)}
+  /* on an app's own page a chip is a link to its list in /free/ */
+  a.chip{text-decoration:none;color:var(--ink)}
+  a.chip:hover{box-shadow:2px 2px 0 var(--ink)}
+  .sec__head + .jump{margin-top:0}
   @media (hover:none){.inductee:hover{transform:none;box-shadow:4px 4px 0 var(--ink)}}
   /* hall of fame: the perfect scores as a grid of mixed boxes (sizes are rhythm, not rank; pages.py bento()), the rest folded */
   .bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}

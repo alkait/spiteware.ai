@@ -5,11 +5,12 @@ Usage: python3 scripts/pages.py
 
 Writes hall-of-fame/<author>/<app>/index.html for every app, a page per author, the
 index of inductees, the wall of shame (wall-of-shame/, a leaderboard of the paid products
-by how many times they've been replaced, and a page per product), sitemap.xml, robots.txt and 404.html (GitHub Pages serves that one
+by how many times they've been replaced, and a page per product), the catalog by kind (free/, a page per tag
+and per tag on a platform: "free dictation apps for Mac"), sitemap.xml, robots.txt and 404.html (GitHub Pages serves that one
 for any address that isn't a file, at any depth, hence the root-relative paths). These are real files rather than
 something site.js renders, because link previews and most crawlers don't run JS.
 
-hall-of-fame/ and wall-of-shame/ are wiped and rebuilt on every run, so never edit anything in them by hand.
+hall-of-fame/, wall-of-shame/ and free/ are wiped and rebuilt on every run, so never edit anything in them by hand.
 scripts/merge.py runs this after an approve; run it yourself after hand-editing
 data/apps.json.
 
@@ -24,6 +25,7 @@ import json, re, html, shutil, pathlib, urllib.parse, importlib.util
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "hall-of-fame"
 SHAME = ROOT / "wall-of-shame"
+FREE = ROOT / "free"
 SITE = "https://spiteware.ai"
 MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
 HUES = ["var(--pink)", "var(--yellow)", "var(--blue)", "var(--green)", "var(--orange)", "var(--purple)"]
@@ -33,6 +35,18 @@ CATEGORY = {"games": "GameApplication", "finance": "FinanceApplication", "dev-to
             "health": "HealthApplication", "learning": "EducationalApplication", "images": "MultimediaApplication",
             "video": "MultimediaApplication", "productivity": "BusinessApplication", "marketing": "BusinessApplication",
             "travel": "TravelApplication"}
+# The catalog by kind, /free/<tag>/ and /free/<tag>/<platform>/. The words for each tag of the closed list in
+# criteria.md (SW.FACETS in site.js), plus the two the site derives. A tag missing here still gets a page, as "<tag> apps".
+PLATFORM = {"macos": ("Mac apps", "for Mac"), "ios": ("iOS apps", "for iOS"), "windows": ("Windows apps", "for Windows"),
+            "web": ("web apps", "that run in the browser"), "desktop": ("desktop apps", "for the desktop"),
+            "browser-extension": ("browser extensions", "as browser extensions")}
+ETHOS = {"self-hosted": "self-hosted", "local-first": "local-first", "byo-key": "bring-your-own-key", "privacy": "privacy-first",
+         "open-source": "open-source", "vibe-coded": "vibe-coded"}
+WHAT = {"ai": "AI apps", "career": "career tools", "dev-tools": "developer tools", "dictation": "dictation apps",
+        "finance": "finance apps", "forms": "form tools", "games": "games", "health": "health apps", "images": "image tools",
+        "learning": "learning apps", "marketing": "marketing tools", "productivity": "productivity apps",
+        "travel": "travel apps", "utilities": "utilities", "video": "video tools", "writing": "writing tools"}
+PAIR_MIN = 4  # a tag on a platform gets its own page from this many apps
 OS = {"macos": "macOS", "ios": "iOS", "windows": "Windows", "web": "Web", "browser-extension": "Web"}
 
 
@@ -114,10 +128,41 @@ def avatar(a, px):
     name = a["builder"]["name"] or a["builder"]["handle"]
     return f'<div class="gcard__fb" style="background:{HUES[len(name) % len(HUES)]}">{esc(name[0].upper())}</div>'
 
-def chips(a):
-    return ("".join(f'<span class="chip">{esc(t)}</span>' for t in a.get("tags") or [])
-            + ('<span class="chip">open-source</span>' if a["open_source"] else "")
-            + ('<span class="chip chip--vibe">vibe coded</span>' if a["vibe_coded"] else ""))
+def kinds(a):
+    """Everything a card is filed under: its tags, plus the two the site derives from booleans."""
+    return [*(a.get("tags") or []), *(["open-source"] if a["open_source"] else []), *(["vibe-coded"] if a["vibe_coded"] else [])]
+
+def free(t, p=None):
+    """URL of a tag's page in the catalog by kind, or of the tag on one platform."""
+    if not all(SAFE.fullmatch(x) for x in (t, p or "x")): raise SystemExit(f"tag {t!r} makes no URL")
+    return f"/free/{t}/" + (f"{p}/" if p else "")
+
+def kind(t, p=None):
+    """What a page of the catalog by kind is called: "Free dictation apps for Mac", "Free open-source Mac apps"."""
+    if p: return f"Free {ETHOS[t]} {PLATFORM[p][0]}" if t in ETHOS else f"Free {WHAT.get(t, t + ' apps')} {PLATFORM[p][1]}"
+    return "Free " + (PLATFORM[t][0] if t in PLATFORM else f"{ETHOS[t]} apps" if t in ETHOS else WHAT.get(t, t + " apps"))
+
+def lists(apps):
+    """{url: (tag, platform or None, its apps)} for every page of the catalog by kind: one per tag in use,
+    and one per tag on a platform once PAIR_MIN apps share both."""
+    by = {}
+    for a in apps:
+        ks = kinds(a)
+        for t in ks:
+            by.setdefault((t, None), []).append(a)
+            if t not in PLATFORM:
+                for p in ks:
+                    if p in PLATFORM: by.setdefault((t, p), []).append(a)
+    return {free(t, p): (t, p, theirs) for (t, p), theirs in by.items() if not p or len(theirs) >= PAIR_MIN}
+
+def chips(a, linked=()):
+    """A card's chips. On an app's own page each one links to its list in the catalog by kind, when there is one;
+    inside a card it can't, the whole card being a link already."""
+    def chip(t, text, cls="chip"):
+        return f'<a class="{cls}" href="{free(t)}">{esc(text)}</a>' if free(t) in linked else f'<span class="{cls}">{esc(text)}</span>'
+    return ("".join(chip(t, t) for t in a.get("tags") or [])
+            + (chip("open-source", "open-source") if a["open_source"] else "")
+            + (chip("vibe-coded", "vibe coded", "chip chip--vibe") if a["vibe_coded"] else ""))
 
 def card(a):
     """Mirrors SW.card in site.js. Change one, change the other."""
@@ -251,7 +296,7 @@ def shell(*, title, desc, path, body, n, og_title=None, og_desc=None, ld=(), ind
 '''
 
 
-def app_page(a, apps, nxt):
+def app_page(a, apps, nxt, linked=()):
     b, r, n = a["builder"], a["replaces"], len(apps)
     vname, price = (r.get("name") or "").strip(), (r.get("price") or "").strip().split(" (")[0]
     path, who, dead = fame(a), gh(a), not alive(a)
@@ -312,7 +357,7 @@ def app_page(a, apps, nxt):
             <div class="fcard__what"><h1>{esc(a["name"])}</h1><p>{esc(a["tagline"])}</p></div>
             <div class="kills kills--xl">replaces<s>{esc(victim(a))}</s></div>
           </div>
-          <div class="chips">{chips(a)}</div>
+          <div class="chips">{chips(a, linked)}</div>
           {gone}{f"""<div class="cta">
             {get}
             {repo}
@@ -534,6 +579,80 @@ def shame_page(rank, total, name, theirs, n):
                  og_title=f"{name}: replaced {times(k)}, for free · spiteware.ai wall of shame")
 
 
+def free_page(path, pages, n):
+    """One list of the catalog by kind: every living app under a tag, or under a tag on one platform."""
+    t, p, theirs = pages[path]
+    theirs, name, k = order(theirs), kind(t, p), len(theirs)
+    count = lambda u: f'<b>{len(pages[u][2])}</b>'
+    if p:    # a pair points back up at both of its halves
+        near = [(free(t), kind(t)), (free(p), kind(p))]
+    elif t in PLATFORM:
+        near = [(u, kind(x, y)) for u, (x, y, _) in pages.items() if y == t]
+    else:
+        near = [(u, kind(x, y)) for u, (x, y, _) in pages.items() if x == t and y]
+    near.sort(key=lambda r: (-len(pages[r[0]][2]), r[1]))
+    jump = (f'<nav class="jump" aria-label="{"Wider lists" if p else "Narrower lists"}">'
+            + "".join(f'<a href="{u}">{esc(label.removeprefix("Free "))} {count(u)}</a>' for u, label in near) + "</nav>") if near else ""
+    names = [a["name"] for a in theirs]
+    listed = ", ".join(names[:8]) + (f" and {k - 8} more" if k > 8 else "")
+    title = f"{name}: {k} built out of spite · spiteware.ai" if k > 1 else f"{name}: built out of spite · spiteware.ai"
+    desc = (f"{k} {name[0].lower() + name[1:]}, each built by someone who read a pricing page and said no: {listed}. "
+            "Every one is free, and every grudge is quoted from the person who built it.") if k > 1 else (
+            f"{names[0]}: built by someone who read a pricing page and said no. It is free, and the grudge is quoted from the person who built it.")
+    body = f'''  <section class="hero">
+    <div class="wrap">
+      <span class="kicker"><a href="/free/">Free apps</a> · {k} {"app" if k == 1 else "apps"}</span>
+      <h1>{esc(name)}</h1>
+      <p class="lede">{f"All {k} were" if k > 1 else "It was"} built out of spite, by someone who read a pricing page and said no. {"Each" if k > 1 else "It"} does the job for <b>$0</b>.{" Pettiest first." if k > 1 else ""}</p>
+      {jump}
+    </div>
+  </section>
+  <section class="sec sec--alt">
+    <div class="wrap"><div class="grid grid--center">{"".join(card(a) for a in theirs)}</div></div>
+  </section>
+'''
+    ld = {"@context": "https://schema.org", "@type": "ItemList", "name": name, "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "url": SITE + fame(a), "name": a["name"]} for i, a in enumerate(theirs)]}
+    trail = [("spiteware.ai", "/"), ("Free apps", "/free/"), *([(kind(t), free(t))] if p else []), (name, path)]
+    crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": label, "item": SITE + u} for i, (label, u) in enumerate(trail)]}
+    return shell(title=title, desc=desc, path=path, body=body, n=n, ld=(ld, crumbs), here="")
+
+
+def free_index(pages, n):
+    """The front of the catalog by kind: every list, grouped the way the tag bar on the apps page is."""
+    def row(heading, sub, urls):
+        urls = [u for u in urls if u in pages]
+        if not urls: return ""
+        links = "".join(f'<a href="{u}">{esc(kind(*pages[u][:2]).removeprefix("Free "))} <b>{len(pages[u][2])}</b></a>' for u in urls)
+        return f'''  <section class="sec">
+    <div class="wrap">
+      <div class="sec__head"><h2>{heading}</h2><div class="sec__sub">{sub}</div></div>
+      <nav class="jump" aria-label="{heading}">{links}</nav>
+    </div>
+  </section>
+'''
+    solo = [t for u, (t, p, _) in pages.items() if not p]
+    stray = sorted(t for t in solo if t not in WHAT and t not in PLATFORM and t not in ETHOS)
+    pairs = sorted((u for u, (t, p, _) in pages.items() if p), key=lambda u: (-len(pages[u][2]), u))
+    body = f'''  <section class="hero">
+    <div class="wrap">
+      <span class="kicker">{len(pages)} lists · {n} apps</span>
+      <h1>Free <span class="hl">apps.</span></h1>
+      <p class="lede">The whole catalog, sorted by what it does, where it runs and how it stays free. Every app on every list costs <b>$0</b>, and was built by someone who read a pricing page and said no.</p>
+    </div>
+  </section>
+''' + (row("What it does", "one job each", [free(t) for t in [*WHAT, *stray]])
+       + row("Where it runs", "pick your machine", [free(t) for t in PLATFORM])
+       + row("How it's free", "and stays that way", [free(t) for t in ETHOS])
+       + row("Narrower", f"a job on a platform · {PAIR_MIN} apps or more", pairs))
+    ld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "url": SITE + u, "name": kind(*pages[u][:2])} for i, u in enumerate(pages)]}
+    return shell(title="Free apps by kind: what it does, where it runs, how it's free · spiteware.ai", path="/free/",
+                 desc=f"{n} free apps built out of spite, on {len(pages)} lists: by what they do, by platform (Mac, Windows, iOS, web) and by how they stay free (open-source, self-hosted, local-first).",
+                 body=body, n=n, ld=(ld,), here="")
+
+
 def lost_page(n):
     body = f'''  <section class="hero">
     <div class="wrap">
@@ -559,19 +678,20 @@ def build():
     for a in apps:
         if fame(a) in seen: raise SystemExit(f"{a['slug']} and {seen[fame(a)]} both want {fame(a)}")
         seen[fame(a)] = a["slug"]
-    for d in (OUT, SHAME):
+    for d in (OUT, SHAME, FREE):
         if d.exists(): shutil.rmtree(d)
 
     # Every list, count and sitemap entry is the living only. The dead keep their page and nothing else.
     live, dead = [a for a in apps if alive(a)], [a for a in apps if not alive(a)]
     by = {}
     for a in apps: by.setdefault(author(a), []).append(a)
-    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/wall-of-shame/", None), ("/about.html", None), ("/manifesto.html", None), ("/rules.html", None), ("/submit.html", None), ("/contact.html", None), ("/privacy.html", None)]
+    pages = lists(live)
+    urls = [("/", None), ("/apps.html", None), ("/hall-of-fame/", None), ("/wall-of-shame/", None), ("/free/", None), ("/about.html", None), ("/manifesto.html", None), ("/rules.html", None), ("/submit.html", None), ("/contact.html", None), ("/privacy.html", None)]
     for i, a in enumerate(live):
-        write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[(i + 1) % len(live)]))
+        write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[(i + 1) % len(live)], pages))
         urls.append((fame(a), a["added"]))
     for a in dead:
-        write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[0]))
+        write(ROOT / fame(a).strip("/") / "index.html", app_page(a, live, live[0], pages))
     for handle, theirs in by.items():
         standing = [a for a in theirs if alive(a)]
         solo = len(standing) < 2
@@ -586,6 +706,10 @@ def build():
         write(ROOT / shame(name).strip("/") / "index.html", shame_page(i + 1, sum(1 for _, t in ranked if tier(len(t))), name, theirs, len(live)))
         urls.append((shame(name), max(a["added"] for a in theirs)))
     write(SHAME / "index.html", shame_index(ranked, len(live)))
+    for path in pages:
+        write(ROOT / path.strip("/") / "index.html", free_page(path, pages, len(live)))
+        urls.append((path, max(a["added"] for a in pages[path][2])))
+    write(FREE / "index.html", free_index(pages, len(live)))
     write(ROOT / "404.html", lost_page(len(live)))
 
     (ROOT / "sitemap.xml").write_text(
@@ -599,9 +723,9 @@ def build():
     broken, _ = L.internal()
     if broken: raise SystemExit(f"{len(broken)} broken internal links:\n" + "\n".join(f"  {ref}  <- {where}" for where, ref in broken[:20])
                                 + ("\n  ... python3 scripts/links.py lists them all" if len(broken) > 20 else ""))
-    return {"apps": len(live), "dead": len(dead), "authors": len(by), "products": len(ranked), "urls": len(urls)}
+    return {"apps": len(live), "dead": len(dead), "authors": len(by), "products": len(ranked), "lists": len(pages), "urls": len(urls)}
 
 if __name__ == "__main__":
     r = build()
     print(f"hall of fame: {r['apps']} app pages (+{r['dead']} taken down), {r['authors']} author pages, "
-          f"wall of shame: {r['products']} products, {r['urls']} urls in sitemap.xml, internal links ok")
+          f"wall of shame: {r['products']} products, free: {r['lists']} lists, {r['urls']} urls in sitemap.xml, internal links ok")

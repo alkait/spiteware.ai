@@ -47,7 +47,7 @@ def resolves(ref, page):
 def internal():
     """[(where, ref)] for every local href, src, sitemap entry and card link that points at nothing."""
     bad, n = [], 0
-    for page in [*ROOT.glob("*.html"), *ROOT.glob("hall-of-fame/**/*.html"), *ROOT.glob("wall-of-shame/**/*.html")]:
+    for page in [*ROOT.glob("*.html"), *ROOT.glob("hall-of-fame/**/*.html"), *ROOT.glob("wall-of-shame/**/*.html"), *ROOT.glob("free/**/*.html")]:
         text = page.read_text()
         refs = re.findall(r'(?:href|src)="([^"]+)"', text) + re.findall(r'http-equiv="refresh" content="\d+;url=([^"]+)"', text)
         for ref in refs:

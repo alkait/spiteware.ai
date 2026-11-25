@@ -77,7 +77,7 @@ The default run and the monthly run happen unattended on claude-pi: `scripts/aut
 9. **Commit and push.** If step 7 listed anything, or the inbox fixed a card, stage only the run's own files, never
     whatever else is in the working tree:
     ```
-    git add data/apps.json hall-of-fame wall-of-shame 404.html sitemap.xml robots.txt queue/$(date +%F).json shorts/$(date +%F).json
+    git add data/apps.json hall-of-fame wall-of-shame free 404.html sitemap.xml robots.txt queue/$(date +%F).json shorts/$(date +%F).json
     ```
     Commit in the log's voice, `List A, B and C` (every listed app's name; `Fix the X card` for an
     inbox fix, joined with `and` when there are both), ending with the
