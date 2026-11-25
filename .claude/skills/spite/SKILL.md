@@ -77,8 +77,11 @@ The default run and the monthly run happen unattended on claude-pi: `scripts/aut
 9. **Commit and push.** If step 7 listed anything, or the inbox fixed a card, stage only the run's own files, never
     whatever else is in the working tree:
     ```
-    git add data/apps.json hall-of-fame wall-of-shame free 404.html sitemap.xml robots.txt queue/$(date +%F).json shorts/$(date +%F).json
+    git add data/apps.json hall-of-fame wall-of-shame free cards 404.html sitemap.xml robots.txt queue/$(date +%F).json shorts/$(date +%F).json
     ```
+    `cards` holds each app's share card (`cards/<slug>.jpg` and `.hashes.json`), drawn by `pages.py`
+    on every build. A `cards: ...` warning from the build means a card fell back to `/og.png`: say so in
+    the report, it is never a reason to stop.
     Commit in the log's voice, `List A, B and C` (every listed app's name; `Fix the X card` for an
     inbox fix, joined with `and` when there are both), ending with the
     attribution line, then `git push`. If the push is rejected, `git pull --rebase` once and
@@ -98,6 +101,12 @@ The default run and the monthly run happen unattended on claude-pi: `scripts/aut
     too; a `Thumbnail refused` line does not undo the upload, so report it with the reason. If the pages never come
     up, or the upload refuses (wrong channel, token expired, already uploaded), do not force
     it: report why and the command to run by hand. Never pass `--again` here.
+
+    **Then tell the search engines**, whether or not the short went up, once the day's pages answer
+    200 (the wait above, or the same poll for a fixed card's page): `python3 scripts/indexnow.py`
+    sends every page the sitemap dates today plus the hubs; on a day with only card fixes, pass their
+    pages instead (`python3 scripts/indexnow.py /hall-of-fame/<handle>/<slug>/ ...`). Put its last line
+    in the report. A refusal is a finding to report, never a reason to stop or retry.
 
 11. **Post to TikTok, Instagram and X.** Only if the pages came up in step 10; a refused YouTube
     upload does not stop this step, and a failure on one platform does not stop the others. Follow
