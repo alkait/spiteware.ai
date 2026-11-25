@@ -131,7 +131,7 @@ def hello(slug, to, done):
             f"spiteware.ai keeps a list of software people built instead of paying for something. "
             f"{a['name']} is on it: {a['spite_score']}/10 for spite"
             + (f", as a free alternative to {what}.\n\n" if what else ".\n\n")
-            + f"Your page: https://spiteware.ai{pages.fame(a)}\n\n"
+            + f"Your page: https://spiteware.ai{pages.fame(a)}?utm_source=listing-note&utm_medium=email\n\n"
             "If anything on the card is wrong, or you'd rather not be listed, reply to this email.\n\n"
             "This is the only email we'll send you.\n"
             "spiteware.ai")

@@ -27,6 +27,12 @@ PLATFORMS = ("tiktok", "instagram", "x")
 X_LIMIT, X_URL = 280, 23  # X counts every link as 23 characters
 
 
+def link(path, source, campaign, medium="social"):
+    """A link to the site that says where it was posted, so Google Analytics can tell a visit from a
+    short's description from one off X or a listing note, instead of filing them all under Direct."""
+    return f"{SITE}{path}{'&' if '?' in path else '?'}utm_source={source}&utm_medium={medium}&utm_campaign={campaign}"
+
+
 def show(target):
     """Open a file or URL in the default browser: `open` on macOS, `xdg-open` elsewhere."""
     opener = "open" if sys.platform == "darwin" else "xdg-open"
@@ -57,10 +63,10 @@ def texts(script, apps):
     def credit(a):
         r = a.get("replaces") or {}
         return f"{a['name']} by {a['builder']['name']}" + (f", replaces {pages.victim(a)}" if r.get("name") or r.get("price") else "")
-    fresh = f"{SITE}/apps.html?sort=new"
+    fresh = link("/apps.html?sort=new", "youtube", "short")
     description = "\n\n".join([
         post["caption"],
-        "\n\n".join(f"{credit(a)}\n{SITE}{pages.fame(a)}" for a in chosen),
+        "\n\n".join(f"{credit(a)}\n{link(pages.fame(a), 'youtube', 'short')}" for a in chosen),
         (f"Plus {more} more fresh today: {fresh}" if more else f"The whole catalog, newest first: {fresh}"),
         "Every app is free. Every grudge is quoted from the person who built it.\nThe narrator is an AI voice.",
         tags])
@@ -83,14 +89,14 @@ def social(script):
 def tweet(script):
     """The X post: 280 characters, and a link that works, so it points at the day's apps.
     The caption, then the hashtags, are dropped when it would run over."""
-    post, link = script["post"], f"{SITE}/apps.html?sort=new"
+    post, url = script["post"], link("/apps.html?sort=new", "x", "short")
     tags = " ".join("#" + t for t in post["tags"][:2])
-    for parts in ([post["title"], post["caption"], f"Every app is free: {link}", tags],
-                  [post["title"], post["caption"], f"Every app is free: {link}"],
-                  [post["title"], f"Every app is free: {link}", tags],
-                  [post["title"], f"Every app is free: {link}"]):
+    for parts in ([post["title"], post["caption"], f"Every app is free: {url}", tags],
+                  [post["title"], post["caption"], f"Every app is free: {url}"],
+                  [post["title"], f"Every app is free: {url}", tags],
+                  [post["title"], f"Every app is free: {url}"]):
         text = "\n\n".join(parts)
-        if len(text) - len(link) + X_URL <= X_LIMIT:
+        if len(text) - len(url) + X_URL <= X_LIMIT:
             return text
     sys.exit(f"The X post runs over {X_LIMIT} characters even with only the title")
 
