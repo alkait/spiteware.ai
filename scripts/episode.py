@@ -210,7 +210,7 @@ def app_shot(slug):
     png = BUILD / "shots" / f"{slug}.png"
     if not png.exists():
         url = EP.get("shots", {}).get(slug) or pages.out(APPS[slug], "url", APPS[slug]["url"])
-        with tempfile.TemporaryDirectory() as profiles:
+        with short.profiles() as profiles:
             if not (url and firefox(url, png, "1280,800", profiles)):
                 return ""
         crop(png)
@@ -231,7 +231,7 @@ def site_shot(page, query=""):
         copy = BUILD / f"site-{page}.html"
         copy.write_text(src.replace("<head>", shim, 1))
         srv, base = short.serve()
-        with tempfile.TemporaryDirectory() as profiles:
+        with short.profiles() as profiles:
             ok = firefox(base + web(copy) + (f"?q={query}" if query else ""), png, "1280,800", profiles)
         srv.shutdown()
         if not ok:
@@ -448,7 +448,7 @@ def stills(cues):
     todo = [(p, g) for p, g in jobs.values() if not g.exists()]
     print(f"frames… {len(jobs)} stills, {len(todo)} to shoot", flush=True)
     srv, base = short.serve()
-    with tempfile.TemporaryDirectory() as profiles, cf.ThreadPoolExecutor(4) as ex:
+    with short.profiles() as profiles, cf.ThreadPoolExecutor(4) as ex:
         ok = list(ex.map(lambda job: firefox(base + web(job[0]), job[1], "1920,1080", profiles), todo))
     srv.shutdown()
     if not all(ok):

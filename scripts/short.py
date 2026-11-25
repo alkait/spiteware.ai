@@ -155,6 +155,17 @@ def shoot(job, base, profile_root):
         sys.exit(f"Firefox did not write {png.name}")
 
 
+def profiles():
+    """A folder for throwaway Firefox profiles that Firefox can open. The snap build (Ubuntu's
+    /usr/bin/firefox is a shim for it) has a /tmp of its own and refuses a profile in the real one
+    ("Could not find profile folder"), so on a snap the profiles go under ~/snap/firefox/common."""
+    if pathlib.Path("/snap/bin/firefox").exists():
+        home = pathlib.Path.home() / "snap" / "firefox" / "common" / "tmp"
+        home.mkdir(parents=True, exist_ok=True)
+        return tempfile.TemporaryDirectory(dir=home)
+    return tempfile.TemporaryDirectory()
+
+
 def serve():
     quiet = type("H", (http.server.SimpleHTTPRequestHandler,), {"log_message": lambda *a: None})
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(quiet, directory=str(ROOT)))
@@ -233,8 +244,8 @@ def main():
         stills.append(pair)
     print(f"frames… {len(jobs)} stills")
     srv, base = serve()
-    with tempfile.TemporaryDirectory() as profiles, cf.ThreadPoolExecutor(4) as ex:
-        list(ex.map(lambda job: shoot(job, base, profiles), jobs.values()))
+    with profiles() as profile_root, cf.ThreadPoolExecutor(4) as ex:
+        list(ex.map(lambda job: shoot(job, base, profile_root), jobs.values()))
     srv.shutdown()
     thumb(script, app_segs, cues, stills, build)
 
