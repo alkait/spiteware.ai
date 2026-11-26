@@ -1,0 +1,26 @@
+{
+  "run": "2026-11-26",
+  "swept": "hn (48h), github; reddit failed (404/429 on every sub)",
+  "raw_hits": 416, "triaged": 0,
+  "candidates": [],
+  "dropped": [
+    "BranchShell: the grudge is real ('Termius was asking me for $120 a year'), but it sells for $20 once after a 2-week trial (gate 2)",
+    "TextPin: Pro plans at $2.99/yr and $4.99 lifetime on its own site; the reason given is disliking Stickies, not a price (gates 1 and 2)",
+    "Unbubble: free and open source, but its page sells Grey Mirror's paid conversation reports (lead magnet, gate 2)",
+    "Digisensus Recorder: a company product with a Pricing page and 'Book a demo'; 'open source alternative to Granola' is a description, not why it was built (gates 1 and 2)",
+    "Carry: trial, then a one-time payment (gate 2)",
+    "FlowSpeak: $19 lifetime after 25 free dictations (gate 2)",
+    "Bowerbird: 14-day trial, then a one-time price (gate 2)",
+    "Invader: Pro at $14.99/yr after a 7-day trial; 'Overcast annoyed me' is not a price (gates 1 and 2)",
+    "Living Wall, Zhenzhu, Xenon, Abruf, LineFerry, Am I Productive, PDFTransform, SetScout, StoryPass, Justone.video, Newsstand, AirGallery API: priced on their own sites (gate 2)",
+    "Spendgap: free but capped at 100 invoices a month, and the reason is accuracy, not a price (gate 1)",
+    "Iskra: one-time Pro licence (gate 2)",
+    "suby: a one-line README and no app yet; 'overkill and expensive' names no tool (gates 1 and 2)",
+    "NeXDM: binaries-only releases repo, and 'without trial nag screens' is comparison copy, not why it was built (gate 1)",
+    "LibreBlock, EvictLib, prosaic, ZeroLeft Budget, joes-hunt-map, utility-hub, freefileconverterforever, session-vault, HabitForge: 'no subscription' or 'free forever' as a feature line, no grudge sentence (gate 1)",
+    "Quicktou.ch, Undistracted Me, Proton VPN menu bar, Machete, TransparentGIFMaker, Thatplace, Clary, Kept, HealthBar, AI Usage Menu, Mergeon, Rusty Teams, USBNet, Sweeflow, Digilore: free, but no price grudge anywhere (gate 1)",
+    "4K-Video-Downloader (ShurikenGG): borrows a paid product's name, likely bait, not an app",
+    "Laser Grid, FrameGloss, Scriptopus, Libre Terminal, Upronix, Webtools, Yolt, Maverick Builds, Outloud Reader, Rchive: already dropped on 2026-11-24 or 2026-11-25, nothing new",
+    "Clockoli, Archiver: already listed"
+  ]
+}
