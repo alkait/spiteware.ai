@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-27",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 0,
+  "thumb": "brokenliquid",
+  "post": {
+    "title": "Your CAD seat ends when school does. BrokenLiquid is free.",
+    "caption": "One fresh grudge: parametric 3D CAD for Windows, for everyone who lost the seat when they left school or work and won't rent it back.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "cad", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 27th.", "say": "November twenty-seventh.", "step": "date"},
+      {"cap": "One new grudge.", "step": "count"}]},
+    {"scene": "app", "slug": "brokenliquid", "score": false,
+     "gripe": "Leave school. Lose your CAD.",
+     "quote": "The professional tools cost a lot, many of them now need an online account just to start",
+     "cut": true,
+     "cues": [
+      {"cap": "Leave school. Lose your CAD.", "step": "gripe"},
+      {"cap": "rdproberts:", "say": "[matter-of-fact] R D P Roberts:", "step": "quote"},
+      {"cap": "“The professional tools cost a lot,", "say": "[sarcastic] The professional tools cost a lot,", "step": "quote"},
+      {"cap": "many of them now need an online account", "say": "many of them now need an online account", "step": "quote"},
+      {"cap": "just to start…”", "say": "just to start.", "step": "quote"},
+      {"cap": "So: BrokenLiquid. Your machine, no login.", "say": "[quick] So: BrokenLiquid. Your machine, no login.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "More grudges daily", "say": "[upbeat] More grudges daily,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}

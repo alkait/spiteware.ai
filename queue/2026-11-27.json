@@ -1,0 +1,25 @@
+{
+  "run": "2026-11-27",
+  "swept": "hn (48h), github; reddit failed (404/429 on every sub)",
+  "raw_hits": 349,
+  "triaged": 24,
+  "candidates": [],
+  "dropped": [
+    "BranchShell, TextPin, Unbubble, Carry, FlowSpeak, Bowerbird, Invader, Xenon, Zhenzhu, Abruf, Am I Productive, PDFTransform, AirGallery API, Spendgap: already turned down 2026-11-26, nothing changed (paid tiers, trials or no price grudge)",
+    "FrameGloss: '$15 once' on its own site (gate 2)",
+    "Mime: 'choose a plan inside the app' after creating an account (gate 2, account required)",
+    "Hubris: one-time purchase, subscriptions planned (gate 2)",
+    "Outloud Reader: Pricing page and premium plans (gate 2)",
+    "Glassveil: $19.99 once after 50 free copies (gate 2)",
+    "Sqrin: paid licences from $29.99 (gate 2)",
+    "Happy Wedding: Pricing page with paid plans and a trial (gate 2)",
+    "OpenStock: 'OpenStock Cloud' at $5 a month from the same maker (open-core)",
+    "Fuck_data_brokers.py: free script fronting the maker's paid Agent Garrett subscription (open-core)",
+    "Olumino: inspired by Mochi and Anki's interface, not a price (gate 1)",
+    "MacCallRecorder, Machete, Qutie, Baby Guard, Prosaic, Longyan, Sweeflow, Sleigh Draw, willFlock, SimDrop, Rusty Teams, HealthBar, USBNet, Grind: free, but the reason given is a missing feature or a nicer UX, never a price ('no subscription' as a feature bullet is not a grudge) (gate 1)",
+    "obsidian-github-sync: a one-line README and no code yet (gate 1)",
+    "shopify-blocks: 'if this saves you an app subscription' names no tool and gives no reason of the builder's own (gate 1)",
+    "Omnide: 'Nothing to download yet' (no app)",
+    "Landlord OS Pro: binaries-only 'Pro' edition sold from its website (gate 2)"
+  ]
+}

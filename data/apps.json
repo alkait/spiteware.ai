@@ -9444,5 +9444,37 @@
     "repo": "themapsdaily/postwise",
     "spite_score": 10,
     "added": "2026-11-25"
+  },
+  {
+    "slug": "brokenliquid",
+    "name": "BrokenLiquid",
+    "url": "https://github.com/rdproberts/BrokenLiquid",
+    "icon": "🔩",
+    "tagline": "Lost the CAD seat when you left school or work? BrokenLiquid models parts on your own Windows machine. No login, no subscription, no bank broken.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "The professional tools cost a lot, many of them now need an online account just to start, and the free options usually mean learning a completely different way of working.",
+      "source": "https://github.com/rdproberts/BrokenLiquid#why-brokenliquid"
+    },
+    "builder": {
+      "name": "rdproberts",
+      "handle": "rdproberts",
+      "url": "https://github.com/rdproberts"
+    },
+    "tags": [
+      "windows",
+      "local-first",
+      "utilities"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "rdproberts/BrokenLiquid",
+    "spite_score": 5,
+    "added": "2026-11-27"
   }
 ]
