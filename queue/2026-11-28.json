@@ -1,0 +1,17 @@
+{
+  "run": "2026-11-28",
+  "swept": "hn (48h), github; reddit failed (404/429 on every sub); inbox: nobody wrote",
+  "raw_hits": 262,
+  "triaged": 17,
+  "candidates": [],
+  "dropped": [
+    "OpenStock, Hubris, Olumino, Sqrin, Happy Wedding, willFlock, Grind, obsidian-github-sync, Glassveil, OpenScreen: already turned down on earlier runs, nothing changed",
+    "Brushkin: Google Play edition shows ads with a paid in-app purchase to remove them (gate 2)",
+    "Tab Organizer (jensoltys): its homepage jenbuiltit.com sells a 'Pro pass' for the maker's apps (gate 2, unsure)",
+    "Dimmer Switch: $9 one-time (gate 2)",
+    "grok-x-mcp: rides a paid X Premium plan rather than replacing it (no grudge)",
+    "Drift Lite, Airwave: 'no subscription' as a feature, no reason of the builder's own against a paid tool (gate 1)",
+    "vst.run: 'expensive' is about the builder's own EC2 bill, not a paid tool (gate 1)",
+    "Orcah Studio, SoundEtch, lip-dictation, Peerdeck, docx-to-pdf-converter, TextFix, FileSwiss, AutoCaptions, Grasmere, Liora Tools, Folio, Slash Anywhere: no price grudge in the post or comments (gate 1)"
+  ]
+}

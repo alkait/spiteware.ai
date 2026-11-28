@@ -9476,5 +9476,130 @@
     "repo": "rdproberts/BrokenLiquid",
     "spite_score": 5,
     "added": "2026-11-27"
+  },
+  {
+    "slug": "hopes-voice",
+    "name": "Hope's Voice",
+    "url": "https://github.com/davidgeorgehope/hopes-voice",
+    "icon": "🗣️",
+    "tagline": "A talking board for kids who need one, without the $249.99 toll booth. Proloquo2Go charges by the word. Hope's Voice charges nothing.",
+    "replaces": {
+      "name": "Proloquo2Go",
+      "product": "Proloquo2Go",
+      "price": "$249.99 one-time",
+      "source": "https://apps.apple.com/us/app/proloquo2go/id308368164"
+    },
+    "grudge": {
+      "quote": "A child who needs a talking board should not have to wait on a paid license.",
+      "source": "https://github.com/davidgeorgehope/hopes-voice#readme"
+    },
+    "builder": {
+      "name": "David Hope",
+      "handle": "davidgeorgehope",
+      "url": "https://github.com/davidgeorgehope"
+    },
+    "tags": [
+      "ios",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": true,
+    "repo": "davidgeorgehope/hopes-voice",
+    "spite_score": 10,
+    "added": "2026-11-28"
+  },
+  {
+    "slug": "breakpoint",
+    "name": "Breakpoint",
+    "url": "https://github.com/estrindavid/breakpoint",
+    "icon": "🧘",
+    "tagline": "Every break reminder wanted paying. Breakpoint tells you to stand up for free, and waits until your coding agent is done first.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Every break app I found was paid, so I built a free open source one.",
+      "source": "https://news.ycombinator.com/item?id=50669662"
+    },
+    "builder": {
+      "name": "David Estrine",
+      "handle": "estrindavid",
+      "url": "https://github.com/estrindavid"
+    },
+    "tags": [
+      "macos",
+      "health"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "estrindavid/breakpoint",
+    "spite_score": 5,
+    "added": "2026-11-28"
+  },
+  {
+    "slug": "lelvo",
+    "name": "Lelvo",
+    "url": "https://lelvo.app",
+    "icon": "📸",
+    "tagline": "Free at first, then a monthly plan: the photo cloud deal. Lelvo backs your library up, encrypted, into your own Telegram and never sends a bill.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "Every photo cloud makes the same deal: free at first, then a monthly plan, run by a company that can see your library.",
+      "source": "https://github.com/shahil-kv/Lelvo#why-lelvo"
+    },
+    "builder": {
+      "name": "Muhammed shahil kv",
+      "handle": "shahil-kv",
+      "url": "https://github.com/shahil-kv"
+    },
+    "tags": [
+      "ios",
+      "privacy",
+      "images"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "shahil-kv/Lelvo",
+    "spite_score": 5,
+    "added": "2026-11-28"
+  },
+  {
+    "slug": "nerdbot",
+    "name": "Nerdbot",
+    "url": "https://github.com/NalinDalal/nerdbot",
+    "icon": "🤓",
+    "tagline": "Couldn't afford the Grok bot, so built a whole self-hosted AI workspace with bot teammates instead. Spite, with a docker-compose file.",
+    "replaces": {
+      "name": "",
+      "product": "",
+      "price": "",
+      "source": ""
+    },
+    "grudge": {
+      "quote": "I am one broke developer(got no job and building my own thing) so obviously i couldn't afford the grok bot; and i was like heck it, imma build my own.",
+      "source": "https://news.ycombinator.com/item?id=50669533"
+    },
+    "builder": {
+      "name": "Nalin Dalal",
+      "handle": "NalinDalal",
+      "url": "https://github.com/NalinDalal"
+    },
+    "tags": [
+      "self-hosted",
+      "ai"
+    ],
+    "open_source": true,
+    "vibe_coded": false,
+    "repo": "NalinDalal/nerdbot",
+    "spite_score": 5,
+    "added": "2026-11-28"
   }
 ]

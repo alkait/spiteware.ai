@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-28",
+  "style": "[fast-paced, quick delivery, dry, amused, deadpan]",
+  "more": 1,
+  "thumb": "hopes-voice",
+  "post": {
+    "title": "Proloquo2Go costs $249.99. Hope's Voice costs nothing.",
+    "caption": "Four fresh grudges: a talking board for kids, break reminders, photo backup and an AI workspace, each built by someone who would not pay the toll.",
+    "tags": ["freesoftware", "indiedev", "subscriptions", "aac", "opensource"]
+  },
+  "segments": [
+    {"scene": "hook", "cues": [
+      {"cap": "Fresh spite.", "step": "stamp"},
+      {"cap": "November 28th.", "say": "November twenty-eighth.", "step": "date"},
+      {"cap": "Four new grudges.", "step": "count"}]},
+    {"scene": "app", "slug": "hopes-voice",
+     "quote": "A child who needs a talking board should not have to wait on a paid license.",
+     "cues": [
+      {"cap": "Proloquo2Go wants $249.99", "say": "Pro-low-kwo To Go wants two hundred forty-nine ninety-nine", "step": "badge"},
+      {"cap": "for a talking board.", "step": "badge"},
+      {"cap": "David Hope:", "say": "[matter-of-fact] David Hope:", "step": "quote"},
+      {"cap": "“A child who needs a talking board", "say": "[earnest] A child who needs a talking board", "step": "quote"},
+      {"cap": "should not have to wait on a paid license.”", "say": "should not have to wait on a paid license.", "step": "quote"},
+      {"cap": "So: Hope's Voice.", "say": "[quick] So: Hope's Voice.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "breakpoint", "score": false,
+     "gripe": "Even break reminders want paying.",
+     "quote": "Every break app I found was paid, so I built a free open source one.",
+     "cues": [
+      {"cap": "Even break reminders want paying.", "step": "gripe"},
+      {"cap": "David Estrine:", "say": "[matter-of-fact] David Estreen:", "step": "quote"},
+      {"cap": "“Every break app I found was paid,", "say": "[sarcastic] Every break app I found was paid,", "step": "quote"},
+      {"cap": "so I built a free open source one.”", "say": "so I built a free open source one.", "step": "quote"},
+      {"cap": "So: Breakpoint.", "say": "[quick] So: Breakpoint.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "app", "slug": "lelvo", "score": false,
+     "gripe": "Photo clouds: free, then a bill.",
+     "quote": "Every photo cloud makes the same deal: free at first, then a monthly plan",
+     "cut": true,
+     "cues": [
+      {"cap": "Photo clouds: free, then a bill.", "step": "gripe"},
+      {"cap": "Muhammed shahil kv:", "say": "[matter-of-fact] Muhammed Shahil K V:", "step": "quote"},
+      {"cap": "“Every photo cloud makes the same deal:", "say": "[sarcastic] Every photo cloud makes the same deal:", "step": "quote"},
+      {"cap": "free at first, then a monthly plan…”", "say": "free at first, then a monthly plan.", "step": "quote"},
+      {"cap": "So: Lelvo. Your own Telegram.", "say": "[quick] So: Lelvo. Your own Telegram.", "step": "app"},
+      {"cap": "Free.", "say": "[smug] Free.", "step": "free"}]},
+    {"scene": "outro", "cues": [
+      {"cap": "All free.", "step": "free"},
+      {"cap": "All built out of pure spite.", "step": "spite"},
+      {"cap": "Plus one more", "say": "[upbeat] Plus one more,", "step": "url"},
+      {"cap": "at spiteware.ai", "say": "at spiteware dot A I.", "step": "url"}]}
+  ]
+}
