@@ -308,9 +308,12 @@ other tab alone. A sign-in or a wall works exactly as in Mode: social (sign in o
 stop at any captcha, code or warning); a platform you could not read goes in the summary as
 `<Platform> · not checked: <what the page said>`.
 - **Email:** mail to hello@spiteware.ai lands in iCloud and a rule forwards it to the user's
-  Gmail with its `To:` intact. Search `to:hello@spiteware.ai after:<checked, as epoch seconds>`
-  (work the seconds out with `date -d <checked> +%s`, never by hand) with the Gmail tools if this
-  session has them, or the same search in Gmail in the browser. Never open or search the rest of
+  Gmail with its `To:` intact. Search `to:hello@spiteware.ai after:<the day before checked, YYYY/MM/DD>`
+  (work it out with `date -d "<checked> -1 day" +%Y/%m/%d`, never by hand) with the Gmail tools if
+  this session has them, or the same search in Gmail in the browser. Never use epoch seconds in
+  `after:`: the Gmail tools return nothing for them. The search reaches back past `checked` on
+  purpose, so a message is new only if its date is after `checked`; skip the rest, and skip any
+  message whose Gmail id is already a key in `shorts/.cache/replied.json`. Never open or search the rest of
   that mailbox: it is the user's personal mail. The contact form's mail is From
   `submit@send.spiteware.ai` with the sender's address in the first line of the body; the submit
   form's carries the link, after a `From: <address>` line when the sender left one.
